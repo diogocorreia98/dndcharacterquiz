@@ -1,5 +1,6 @@
-body {font-family: Arial, sans-serif; padding:20px;}
+body {font-family: Arial, sans-serif; padding:20px; position:relative; padding-top:60px;}
 #quiz section {margin-bottom: 20px;}
 label {display:block; margin:5px 0;}
-#quiz-controls {margin-top:20px;}
-#quiz-controls button {margin-right:5px;}
+#restart {position:absolute; top:20px; left:20px;}
+#quiz-controls {margin-top:20px; display:flex; flex-direction:column; align-items:flex-start;}
+#quiz-controls button {margin-bottom:5px;}
