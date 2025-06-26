@@ -451,6 +451,9 @@ function renderQuiz() {
   submitBtn.style.display = 'block';
   backBtn.style.display = stage > 1 ? 'inline-block' : 'none';
   skipBtn.style.display = stage < 3 ? 'inline-block' : 'none';
+  backBtn.textContent = currentLang === 'pt' ? 'Recuar' : 'Back';
+  restartBtn.textContent = currentLang === 'pt' ? 'Recomeçar' : 'Restart';
+  skipBtn.textContent = currentLang === 'pt' ? 'Saltar' : 'Skip';
 }
 
 langSelect.addEventListener('change', () => {

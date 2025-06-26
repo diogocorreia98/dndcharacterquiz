@@ -87,6 +87,8 @@
     });
   }
 
+  restartBtn.textContent = lang === 'pt' ? 'Recomeçar' : 'Restart Quiz';
+
   restartBtn.addEventListener('click', () => {
     sessionStorage.removeItem('dndResults');
     window.location.href = 'index.html';
