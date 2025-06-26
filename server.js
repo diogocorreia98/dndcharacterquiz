@@ -21,6 +21,22 @@ const server = http.createServer((req, res) => {
       });
       return;
     }
+    if (req.url === '/results.html') {
+      fs.readFile('results.html', (err, data) => {
+        if (err) return res.end('Error');
+        res.writeHead(200, {'Content-Type':'text/html'});
+        res.end(data);
+      });
+      return;
+    }
+    if (req.url === '/results.js') {
+      fs.readFile('results.js', (err, data) => {
+        if (err) return res.end('Error');
+        res.writeHead(200, {'Content-Type':'application/javascript'});
+        res.end(data);
+      });
+      return;
+    }
     if (req.url === '/script.js') {
       fs.readFile('script.js', (err, data) => {
         if (err) return res.end('Error');
