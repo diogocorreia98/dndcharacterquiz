@@ -510,9 +510,18 @@ submitBtn.addEventListener('click', async () => {
   if(stage === 2){
     currentResult.class = calculateClass();
     if(currentResult.class === 'N/A'){
-      const background = 'N/A';
-      sessionStorage.setItem('dndResults', JSON.stringify({species:currentResult.species, class:currentResult.class, background, images:[], lang:currentLang}));
-      window.location.href = 'results.html';
+      const msg = currentLang === 'pt'
+        ? 'Nenhuma classe escolhida. Sem uma classe n\u00e3o \u00e9 poss\u00edvel determinar um background. Queres terminar o question\u00e1rio mesmo assim? Carrega em Cancelar para recome\u00e7ar.'
+        : 'No class selected. Without a class it is not possible to determine a background. Would you like to finish the quiz anyway? Press Cancel to restart.';
+      if(confirm(msg)){
+        const background = 'N/A';
+        sessionStorage.setItem('dndResults', JSON.stringify({species:currentResult.species, class:currentResult.class, background, images:[], lang:currentLang}));
+        window.location.href = 'results.html';
+      } else {
+        stage = 1;
+        currentResult = {};
+        renderQuiz();
+      }
       return;
     }
     stage = 3;
