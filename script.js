@@ -515,7 +515,7 @@ submitBtn.addEventListener('click', async () => {
         : 'No class selected. Without a class it is not possible to determine a background. Would you like to finish the quiz anyway? Press Cancel to restart.';
       if(confirm(msg)){
         const background = 'N/A';
-        sessionStorage.setItem('dndResults', JSON.stringify({species:currentResult.species, class:currentResult.class, background, images:[], lang:currentLang}));
+        sessionStorage.setItem('dndResults', JSON.stringify({species:currentResult.species, class:currentResult.class, background, lang:currentLang}));
         window.location.href = 'results.html';
       } else {
         stage = 1;
@@ -530,29 +530,7 @@ submitBtn.addEventListener('click', async () => {
   }
   if(stage === 3){
     const background = calculateBackground(currentResult.class);
-    let images = [];
-    const apiKey = window.OPENAI_API_KEY;
-    if(apiKey){
-      const promptBase = `${currentResult.species} ${currentResult.class}`;
-      const malePrompt = `fantasy illustration of a male ${promptBase}`;
-      const femalePrompt = `fantasy illustration of a female ${promptBase}`;
-      try {
-        const headers = {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${apiKey}`
-        };
-        const body = JSON.stringify({model:'dall-e-3', prompt:malePrompt, n:1, size:'512x512'});
-        const res1 = await fetch('https://api.openai.com/v1/images/generations',{method:'POST',headers,body});
-        const img1 = (await res1.json()).data[0].url;
-        const body2 = JSON.stringify({model:'dall-e-3', prompt:femalePrompt, n:1, size:'512x512'});
-        const res2 = await fetch('https://api.openai.com/v1/images/generations',{method:'POST',headers,body:body2});
-        const img2 = (await res2.json()).data[0].url;
-        images = [img1,img2];
-      } catch(err){
-        console.error(err);
-      }
-    }
-    sessionStorage.setItem('dndResults', JSON.stringify({species:currentResult.species, class:currentResult.class, background, images, lang:currentLang}));
+    sessionStorage.setItem('dndResults', JSON.stringify({species:currentResult.species, class:currentResult.class, background, lang:currentLang}));
     window.location.href = 'results.html';
   }
 });

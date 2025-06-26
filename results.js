@@ -6,7 +6,7 @@
     container.textContent = 'No results available.';
     return;
   }
-  const {species, class:clazz, background, images, lang} = JSON.parse(stored);
+  const {species, class:clazz, background, lang} = JSON.parse(stored);
 
   const speciesInfo = {
     'Aasimar':'Humanoides tocados pelo plano celestial.',
@@ -75,17 +75,6 @@
                  `<strong>Class:</strong> ${clazz} - ${classInfo[clazz] || ''}<br>`+
                  `<strong>Background:</strong> ${background} - ${backgroundInfo[background] || ''}`;
   container.appendChild(p);
-
-  if(images && images.length){
-    images.forEach(url => {
-      const img = document.createElement('img');
-      img.src = url;
-      img.alt = 'character';
-      img.style.maxWidth = '200px';
-      img.style.marginRight = '10px';
-      container.appendChild(img);
-    });
-  }
 
   restartBtn.textContent = lang === 'pt' ? 'Recomeçar' : 'Restart Quiz';
 
