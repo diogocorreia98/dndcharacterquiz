@@ -11,5 +11,3 @@ node server.js
 ```
 
 2. Open `http://localhost:3000` in your browser.
-
-To enable AI image generation, define `OPENAI_API_KEY` in the browser via `window.OPENAI_API_KEY` before submitting the quiz.
