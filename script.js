@@ -400,13 +400,14 @@ const submitBtn = document.getElementById('submit');
 let currentLang = 'pt';
 
 let stage = 1;
-let currentResult = null;
+let currentResult = {};
+
 function renderQuiz() {
   const locale = data[currentLang];
   quizDiv.innerHTML = '';
   let html = '';
   if(stage === 1){
-    let step = locale.step1;
+    const step = locale.step1;
     html += `<h2>${step.title}</h2>`;
     step.questions.forEach((q, qi) => {
       html += `<section><p>${q.text}</p>`;
@@ -416,7 +417,9 @@ function renderQuiz() {
       }
       html += '</section>';
     });
-    step = locale.step2;
+    submitBtn.textContent = currentLang === 'pt' ? 'Avançar' : 'Next';
+  } else if(stage === 2){
+    const step = locale.step2;
     html += `<h2>${step.title}</h2>`;
     step.questions.forEach((q, qi) => {
       html += `<section><p>${q.text}</p>`;
@@ -427,7 +430,7 @@ function renderQuiz() {
       html += '</section>';
     });
     submitBtn.textContent = currentLang === 'pt' ? 'Avançar' : 'Next';
-  } else if(stage === 2){
+  } else if(stage === 3){
     const step = locale.step3;
     const classData = step.classes[currentResult.class];
     html += `<h2>${step.title}</h2><p>${step.intro}</p>`;
@@ -448,32 +451,34 @@ function renderQuiz() {
 langSelect.addEventListener('change', () => {
   currentLang = langSelect.value;
   stage = 1;
-  currentResult = null;
+  currentResult = {};
   renderQuiz();
 });
 
-function calculateResult(){
+function calculateSpecies(){
   const locale = data[currentLang];
   const speciesScores = {};
-  const classScores = {};
   locale.step1.questions.forEach((q, qi) => {
     const val = document.querySelector(`input[name="s1q${qi}"]:checked`);
     if(val){
       speciesScores[val.value] = (speciesScores[val.value] || 0) + 1;
     }
   });
+  const species = Object.entries(speciesScores).sort((a,b)=>b[1]-a[1])[0];
+  return species ? locale.step1.mapping[species[0]] : 'N/A';
+}
+
+function calculateClass(){
+  const locale = data[currentLang];
+  const classScores = {};
   locale.step2.questions.forEach((q, qi) => {
     const val = document.querySelector(`input[name="s2q${qi}"]:checked`);
     if(val){
       classScores[val.value] = (classScores[val.value] || 0) + 1;
     }
   });
-  const species = Object.entries(speciesScores).sort((a,b)=>b[1]-a[1])[0];
   const clazz = Object.entries(classScores).sort((a,b)=>b[1]-a[1])[0];
-  return {
-    species: species ? locale.step1.mapping[species[0]] : 'N/A',
-    class: clazz ? locale.step2.mapping[clazz[0]] : 'N/A'
-  };
+  return clazz ? locale.step2.mapping[clazz[0]] : 'N/A';
 }
 
 function calculateBackground(clazz){
@@ -492,12 +497,18 @@ function calculateBackground(clazz){
 
 submitBtn.addEventListener('click', async () => {
   if(stage === 1){
-    currentResult = calculateResult();
+    currentResult.species = calculateSpecies();
     stage = 2;
     renderQuiz();
     return;
   }
   if(stage === 2){
+    currentResult.class = calculateClass();
+    stage = 3;
+    renderQuiz();
+    return;
+  }
+  if(stage === 3){
     const background = calculateBackground(currentResult.class);
     const resultDiv = document.getElementById('result');
     resultDiv.innerHTML = `<p>${currentLang==='pt' ? 'Espécie' : 'Species'}: ${currentResult.species}</p>`+
