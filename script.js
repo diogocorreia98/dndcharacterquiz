@@ -397,6 +397,9 @@ const data = {
 const langSelect = document.getElementById('lang');
 const quizDiv = document.getElementById('quiz');
 const submitBtn = document.getElementById('submit');
+const backBtn = document.getElementById('back');
+const skipBtn = document.getElementById('skip');
+const restartBtn = document.getElementById('restart');
 let currentLang = 'pt';
 
 let stage = 1;
@@ -446,6 +449,8 @@ function renderQuiz() {
   }
   quizDiv.innerHTML = html;
   submitBtn.style.display = 'block';
+  backBtn.style.display = stage > 1 ? 'inline-block' : 'none';
+  skipBtn.style.display = stage < 3 ? 'inline-block' : 'none';
 }
 
 langSelect.addEventListener('change', () => {
@@ -510,10 +515,7 @@ submitBtn.addEventListener('click', async () => {
   }
   if(stage === 3){
     const background = calculateBackground(currentResult.class);
-    const resultDiv = document.getElementById('result');
-    resultDiv.innerHTML = `<p>${currentLang==='pt' ? 'Espécie' : 'Species'}: ${currentResult.species}</p>`+
-      `<p>${currentLang==='pt' ? 'Classe' : 'Class'}: ${currentResult.class}</p>`+
-      `<p>${currentLang==='pt' ? 'Background' : 'Background'}: ${background}</p>`;
+    let images = [];
     const apiKey = window.OPENAI_API_KEY;
     if(apiKey){
       const promptBase = `${currentResult.species} ${currentResult.class}`;
@@ -530,12 +532,45 @@ submitBtn.addEventListener('click', async () => {
         const body2 = JSON.stringify({model:'dall-e-3', prompt:femalePrompt, n:1, size:'512x512'});
         const res2 = await fetch('https://api.openai.com/v1/images/generations',{method:'POST',headers,body:body2});
         const img2 = (await res2.json()).data[0].url;
-        resultDiv.innerHTML += `<img src="${img1}" alt="male character"/>`+
-          `<img src="${img2}" alt="female character"/>`;
+        images = [img1,img2];
       } catch(err){
         console.error(err);
       }
     }
+    sessionStorage.setItem('dndResults', JSON.stringify({species:currentResult.species, class:currentResult.class, background, images, lang:currentLang}));
+    window.location.href = 'results.html';
   }
+});
+
+backBtn.addEventListener('click', () => {
+  if(stage > 1){
+    stage--;
+    renderQuiz();
+  }
+});
+
+skipBtn.addEventListener('click', async () => {
+  if(stage === 1){
+    stage = 2;
+    renderQuiz();
+    return;
+  }
+  if(stage === 2){
+    if(!currentResult.class) currentResult.class = 'Fighter';
+    stage = 3;
+    renderQuiz();
+    return;
+  }
+  if(stage === 3){
+    const background = 'N/A';
+    sessionStorage.setItem('dndResults', JSON.stringify({species:currentResult.species || 'N/A', class:currentResult.class || 'N/A', background, images:[], lang:currentLang}));
+    window.location.href = 'results.html';
+  }
+});
+
+restartBtn.addEventListener('click', () => {
+  stage = 1;
+  currentResult = {};
+  renderQuiz();
 });
 renderQuiz();
