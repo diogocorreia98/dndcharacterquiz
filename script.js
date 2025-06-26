@@ -448,7 +448,7 @@ function renderQuiz() {
   }
   quizDiv.innerHTML = html;
   submitBtn.style.display = 'block';
-  backBtn.style.display = stage > 1 ? 'inline-block' : 'none';
+  backBtn.style.display = stage > 1 ? 'block' : 'none';
   backBtn.textContent = currentLang === 'pt' ? 'Recuar' : 'Back';
   restartBtn.textContent = currentLang === 'pt' ? 'Recomeçar' : 'Restart';
 }
