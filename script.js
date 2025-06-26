@@ -193,11 +193,7 @@ const data = {
         A: 'Barbarian', B: 'Bard', C: 'Cleric', D: 'Druid', E: 'Fighter', F: 'Monk', G: 'Paladin', H: 'Ranger', I: 'Rogue', J: 'Sorcerer', K: 'Warlock', L: 'Wizard'
       }
     },
-    // Step3 texts are very long; for brevity only a minimal placeholder is provided here.
-    step3: {
-      title: 'Que Background Combina com a Tua Classe?',
-      placeholder: 'Step 3 questions omitted for brevity. Implement similarly to steps 1 and 2.'
-    }
+    step3: step3pt,
   },
   en: {
     step1: {
@@ -403,61 +399,72 @@ const quizDiv = document.getElementById('quiz');
 const submitBtn = document.getElementById('submit');
 let currentLang = 'pt';
 
+let stage = 1;
+let currentResult = null;
 function renderQuiz() {
   const locale = data[currentLang];
   quizDiv.innerHTML = '';
   let html = '';
-
-  let step = locale.step1;
-  html += `<h2>${step.title}</h2>`;
-  step.questions.forEach((q, qi) => {
-    html += `<section><p>${q.text}</p>`;
-    for (const key in q.options) {
-      const id = `s1q${qi}_${key}`;
-      html += `<label><input type="radio" name="s1q${qi}" value="${key}" id="${id}"> ${q.options[key]}</label>`;
-    }
-    html += '</section>';
-  });
-
-  step = locale.step2;
-  html += `<h2>${step.title}</h2>`;
-  step.questions.forEach((q, qi) => {
-    html += `<section><p>${q.text}</p>`;
-    for (const key in q.options) {
-      const id = `s2q${qi}_${key}`;
-      html += `<label><input type="radio" name="s2q${qi}" value="${key}" id="${id}"> ${q.options[key]}</label>`;
-    }
-    html += '</section>';
-  });
-
-  // Step3 placeholder message
-  step = locale.step3;
-  html += `<h2>${step.title}</h2>`;
-  html += `<p>${step.placeholder}</p>`;
-
+  if(stage === 1){
+    let step = locale.step1;
+    html += `<h2>${step.title}</h2>`;
+    step.questions.forEach((q, qi) => {
+      html += `<section><p>${q.text}</p>`;
+      for (const key in q.options) {
+        const id = `s1q${qi}_${key}`;
+        html += `<label><input type="radio" name="s1q${qi}" value="${key}" id="${id}"> ${q.options[key]}</label>`;
+      }
+      html += '</section>';
+    });
+    step = locale.step2;
+    html += `<h2>${step.title}</h2>`;
+    step.questions.forEach((q, qi) => {
+      html += `<section><p>${q.text}</p>`;
+      for (const key in q.options) {
+        const id = `s2q${qi}_${key}`;
+        html += `<label><input type="radio" name="s2q${qi}" value="${key}" id="${id}"> ${q.options[key]}</label>`;
+      }
+      html += '</section>';
+    });
+    submitBtn.textContent = currentLang === 'pt' ? 'Avançar' : 'Next';
+  } else if(stage === 2){
+    const step = locale.step3;
+    const classData = step.classes[currentResult.class];
+    html += `<h2>${step.title}</h2><p>${step.intro}</p>`;
+    classData.questions.forEach((q, qi) => {
+      html += `<section><p>${q.text}</p>`;
+      for(const key in q.options){
+        const id = `s3q${qi}_${key}`;
+        html += `<label><input type="radio" name="s3q${qi}" value="${key}" id="${id}"> ${q.options[key]}</label>`;
+      }
+      html += '</section>';
+    });
+    submitBtn.textContent = currentLang === 'pt' ? 'Concluir' : 'Finish';
+  }
   quizDiv.innerHTML = html;
   submitBtn.style.display = 'block';
 }
 
 langSelect.addEventListener('change', () => {
   currentLang = langSelect.value;
+  stage = 1;
+  currentResult = null;
   renderQuiz();
 });
 
-function calculateResult() {
+function calculateResult(){
   const locale = data[currentLang];
   const speciesScores = {};
   const classScores = {};
-
   locale.step1.questions.forEach((q, qi) => {
     const val = document.querySelector(`input[name="s1q${qi}"]:checked`);
-    if (val) {
+    if(val){
       speciesScores[val.value] = (speciesScores[val.value] || 0) + 1;
     }
   });
   locale.step2.questions.forEach((q, qi) => {
     const val = document.querySelector(`input[name="s2q${qi}"]:checked`);
-    if (val) {
+    if(val){
       classScores[val.value] = (classScores[val.value] || 0) + 1;
     }
   });
@@ -469,36 +476,55 @@ function calculateResult() {
   };
 }
 
-submitBtn.addEventListener('click', async () => {
-  const result = calculateResult();
-  const resultDiv = document.getElementById('result');
-  resultDiv.innerHTML = `<p>${currentLang==='pt' ? 'Espécie' : 'Species'}: ${result.species}</p>`+
-    `<p>${currentLang==='pt' ? 'Classe' : 'Class'}: ${result.class}</p>`+
-    `<p>${currentLang==='pt' ? 'Background' : 'Background'}: TODO</p>`;
+function calculateBackground(clazz){
+  const step3 = data[currentLang].step3.classes[clazz];
+  if(!step3) return 'N/A';
+  const scores = {};
+  step3.questions.forEach((q, qi)=>{
+    const val = document.querySelector(`input[name="s3q${qi}"]:checked`);
+    if(val){
+      scores[val.value] = (scores[val.value] || 0) + 1;
+    }
+  });
+  const res = Object.entries(scores).sort((a,b)=>b[1]-a[1])[0];
+  return res ? step3.mapping[res[0]] : 'N/A';
+}
 
-  // Example call to OpenAI image generation API if OPENAI_API_KEY is provided
-  const apiKey = window.OPENAI_API_KEY; // define OPENAI_API_KEY before using
-  if(apiKey){
-    const promptBase = `${result.species} ${result.class}`;
-    const malePrompt = `fantasy illustration of a male ${promptBase}`;
-    const femalePrompt = `fantasy illustration of a female ${promptBase}`;
-    try {
-      const headers = {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${apiKey}`
-      };
-      const body = JSON.stringify({model:'dall-e-3', prompt:malePrompt, n:1, size:'512x512'});
-      const res1 = await fetch('https://api.openai.com/v1/images/generations',{method:'POST',headers,body});
-      const img1 = (await res1.json()).data[0].url;
-      const body2 = JSON.stringify({model:'dall-e-3', prompt:femalePrompt, n:1, size:'512x512'});
-      const res2 = await fetch('https://api.openai.com/v1/images/generations',{method:'POST',headers,body:body2});
-      const img2 = (await res2.json()).data[0].url;
-      resultDiv.innerHTML += `<img src="${img1}" alt="male character"/>`+
-        `<img src="${img2}" alt="female character"/>`;
-    } catch(err){
-      console.error(err);
+submitBtn.addEventListener('click', async () => {
+  if(stage === 1){
+    currentResult = calculateResult();
+    stage = 2;
+    renderQuiz();
+    return;
+  }
+  if(stage === 2){
+    const background = calculateBackground(currentResult.class);
+    const resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = `<p>${currentLang==='pt' ? 'Espécie' : 'Species'}: ${currentResult.species}</p>`+
+      `<p>${currentLang==='pt' ? 'Classe' : 'Class'}: ${currentResult.class}</p>`+
+      `<p>${currentLang==='pt' ? 'Background' : 'Background'}: ${background}</p>`;
+    const apiKey = window.OPENAI_API_KEY;
+    if(apiKey){
+      const promptBase = `${currentResult.species} ${currentResult.class}`;
+      const malePrompt = `fantasy illustration of a male ${promptBase}`;
+      const femalePrompt = `fantasy illustration of a female ${promptBase}`;
+      try {
+        const headers = {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${apiKey}`
+        };
+        const body = JSON.stringify({model:'dall-e-3', prompt:malePrompt, n:1, size:'512x512'});
+        const res1 = await fetch('https://api.openai.com/v1/images/generations',{method:'POST',headers,body});
+        const img1 = (await res1.json()).data[0].url;
+        const body2 = JSON.stringify({model:'dall-e-3', prompt:femalePrompt, n:1, size:'512x512'});
+        const res2 = await fetch('https://api.openai.com/v1/images/generations',{method:'POST',headers,body:body2});
+        const img2 = (await res2.json()).data[0].url;
+        resultDiv.innerHTML += `<img src="${img1}" alt="male character"/>`+
+          `<img src="${img2}" alt="female character"/>`;
+      } catch(err){
+        console.error(err);
+      }
     }
   }
 });
-
 renderQuiz();
