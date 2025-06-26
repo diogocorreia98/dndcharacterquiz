@@ -70,11 +70,29 @@
     'Wayfarer':'Viajante que não fixa morada.'
   };
 
-  const p = document.createElement('p');
-  p.innerHTML = `<strong>Species:</strong> ${species} - ${speciesInfo[species] || ''}<br>`+
-                 `<strong>Class:</strong> ${clazz} - ${classInfo[clazz] || ''}<br>`+
-                 `<strong>Background:</strong> ${background} - ${backgroundInfo[background] || ''}`;
-  container.appendChild(p);
+  const phbSpecies = new Set([
+    'Aasimar','Dragonborn','Dwarf','Elf','Gnome','Goliath',
+    'Halfling','Human','Orc','Tiefling'
+  ]);
+
+  function makeSection(label, value, info, type, source){
+    const section = document.createElement('div');
+    const text = document.createElement('p');
+    text.innerHTML = `<strong>${label}:</strong> ${value} - ${info}`;
+    const btn = document.createElement('button');
+    btn.textContent = 'See more';
+    const name = value.toLowerCase().replace(/\s+/g,'');
+    const src = source || (phbSpecies.has(value) ? 'xphb' : 'mpmm');
+    const url = `https://5e.tools/${type}.html#${name}_${src}`;
+    btn.addEventListener('click',()=>window.open(url,'_blank'));
+    section.appendChild(text);
+    section.appendChild(btn);
+    container.appendChild(section);
+  }
+
+  makeSection('Species', species, speciesInfo[species] || '', 'races');
+  makeSection('Class', clazz, classInfo[clazz] || '', 'classes', 'xphb');
+  makeSection('Background', background, backgroundInfo[background] || '', 'backgrounds', 'xphb');
 
   restartBtn.textContent = lang === 'pt' ? 'Recomeçar' : 'Restart Quiz';
 
