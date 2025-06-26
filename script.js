@@ -1,7 +1,7 @@
 const data = {
   pt: {
     step1: {
-      title: 'Guia de Criação de Personagem por Questionário',
+      title: 'Que espécie gostarias de jogar?',
       questions: [
         {
           text: '1. O que te parece mais épico ter como traço natural?',
@@ -197,7 +197,7 @@ const data = {
   },
   en: {
     step1: {
-      title: 'Character Creation Guide by Questionnaire',
+      title: 'Which species would you like to play as?',
       questions: [
         {
           text: '1. Which natural trait seems most epic to have?',
