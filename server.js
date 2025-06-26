@@ -50,6 +50,10 @@ const server = http.createServer((req, res) => {
   res.end('Not found');
 });
 
-server.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
-});
+if (require.main === module) {
+  server.listen(port, () => {
+    console.log(`Server running on http://localhost:${port}`);
+  });
+}
+
+module.exports = server;

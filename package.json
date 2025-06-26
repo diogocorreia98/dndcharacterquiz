@@ -4,7 +4,7 @@
   "description": "A quizz to decide your 2024 D&D character",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
   },
   "keywords": [],
   "author": "",
