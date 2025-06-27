@@ -3,13 +3,22 @@ const quizDiv = document.getElementById('quiz');
 const submitBtn = document.getElementById('submit');
 const backBtn = document.getElementById('back');
 const restartBtn = document.getElementById('restart');
+const titleEl = document.querySelector('h1');
+const languageLabel = document.querySelector('#language-select label');
 let currentLang = 'pt';
+
+function updateStaticText(){
+  document.title = miscText[currentLang].quizTitle;
+  titleEl.textContent = miscText[currentLang].quizTitle;
+  languageLabel.textContent = miscText[currentLang].language;
+}
 
 let stage = 1;
 let currentResult = {};
 
 function renderQuiz() {
   const locale = data[currentLang];
+  updateStaticText();
   quizDiv.innerHTML = '';
   let html = '';
   if(stage === 1){
@@ -54,13 +63,14 @@ function renderQuiz() {
   submitBtn.style.display = 'block';
   backBtn.style.display = stage > 1 ? 'block' : 'none';
   backBtn.textContent = currentLang === 'pt' ? 'Recuar' : 'Back';
-  restartBtn.textContent = currentLang === 'pt' ? 'Recomeçar' : 'Restart';
+  restartBtn.textContent = labels[currentLang].restart;
 }
 
 langSelect.addEventListener('change', () => {
   currentLang = langSelect.value;
   stage = 1;
   currentResult = {};
+  updateStaticText();
   renderQuiz();
 });
 
