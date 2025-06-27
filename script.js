@@ -132,9 +132,7 @@ submitBtn.addEventListener('click', async () => {
         sessionStorage.setItem('dndResults', JSON.stringify({species:currentResult.species, class:currentResult.class, background, lang:currentLang}));
         window.location.href = 'results.html';
       } else {
-        stage = 1;
-        currentResult = {};
-        renderQuiz();
+        restartQuiz();
       }
       return;
     }
@@ -156,9 +154,11 @@ backBtn.addEventListener('click', () => {
   }
 });
 
-restartBtn.addEventListener('click', () => {
+function restartQuiz(){
   stage = 1;
   currentResult = {};
   renderQuiz();
-});
+}
+
+restartBtn.addEventListener('click', restartQuiz);
 renderQuiz();

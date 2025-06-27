@@ -668,6 +668,9 @@ const step3pt = {
     }
   }
 };
+const step3en = JSON.parse(JSON.stringify(step3pt));
+step3en.title = "Which Background Fits Your Class?";
+step3en.intro = "After you know your class, use the corresponding quiz to find the ideal background. Only backgrounds compatible with your class's main traits will be presented.";
 const data = {
   pt: {
     step1: {
@@ -1057,10 +1060,7 @@ const data = {
         A: 'Barbarian', B: 'Bard', C: 'Cleric', D: 'Druid', E: 'Fighter', F: 'Monk', G: 'Paladin', H: 'Ranger', I: 'Rogue', J: 'Sorcerer', K: 'Warlock', L: 'Wizard'
       }
     },
-    step3: {
-      title: 'Which Background Fits Your Class?',
-      placeholder: 'Step 3 questions omitted for brevity. Implement similarly to steps 1 and 2.'
-    }
+    step3: step3en,
   }
 };
   const speciesInfo = {
@@ -1202,6 +1202,7 @@ const miscText = {
     noResults: 'Sem resultados disponíveis.',
     seeMore: 'Ver mais',
     language: 'Idioma:',
+    notChosen: 'Por escolher',
     quizTitle: 'Questionário de Personagem de D&D',
     resultsTitle: 'Resultados do Questionário'
   },
@@ -1209,6 +1210,7 @@ const miscText = {
     noResults: 'No results available.',
     seeMore: 'See more',
     language: 'Language:',
+    notChosen: 'Yet to be chosen',
     quizTitle: 'D&D Character Quiz',
     resultsTitle: 'Quiz Results'
   }
