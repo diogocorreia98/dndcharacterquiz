@@ -21,15 +21,19 @@
   function makeSection(label, value, info, type, source){
     const section = document.createElement('div');
     const text = document.createElement('p');
-    text.innerHTML = `<strong>${label}:</strong> ${value} - ${info}`;
-    const btn = document.createElement('button');
-    btn.textContent = miscText[lang].seeMore;
-    const name = value.toLowerCase().replace(/\s+/g,'');
-    const src = source || (phbSpecies.has(value) ? 'xphb' : 'mpmm');
-    const url = `https://5e.tools/${type}.html#${name}_${src}`;
-    btn.addEventListener('click',()=>window.open(url,'_blank'));
+    const displayValue = value && value !== 'N/A' ? value : miscText[lang].notChosen;
+    const displayInfo = info || '';
+    text.innerHTML = `<strong>${label}:</strong> ${displayValue}${displayInfo ? ' - ' + displayInfo : ''}`;
     section.appendChild(text);
-    section.appendChild(btn);
+    if(value && value !== 'N/A'){
+      const btn = document.createElement('button');
+      btn.textContent = miscText[lang].seeMore;
+      const name = value.toLowerCase().replace(/\s+/g,'');
+      const src = source || (phbSpecies.has(value) ? 'xphb' : 'mpmm');
+      const url = `https://5e.tools/${type}.html#${name}_${src}`;
+      btn.addEventListener('click',()=>window.open(url,'_blank'));
+      section.appendChild(btn);
+    }
     container.appendChild(section);
   }
 
