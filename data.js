@@ -1371,6 +1371,7 @@ const data = {
             W: 'Movimentar-me com agilidade felina. (Tabaxi)',
             X: 'Proteger os mares com poder e nobreza. (Triton)',
             Y: 'Olhos de serpente e alma manipuladora. (Yuan-ti Pureblood)'
+            ,Z: 'Mudar de aparência e identidade à vontade. (Changeling)'
           }
         },
         {
@@ -1401,6 +1402,7 @@ const data = {
             W: 'Procurar segredos e maravilhas exóticas. (Tabaxi)',
             X: 'Lutar para manter o mundo aquático seguro. (Triton)',
             Y: 'Controlar com inteligência fria e superioridade. (Yuan-ti)'
+            ,Z: 'Experimentar diferentes rostos em cada aventura. (Changeling)'
           }
         },
         {
@@ -1431,13 +1433,14 @@ const data = {
             W: 'Ágil e curioso. (Tabaxi)',
             X: 'Nobre e guardião. (Triton)',
             Y: 'Inteligente e manipulador. (Yuan-ti)'
+            ,Z: 'Misterioso e sempre diferente. (Changeling)'
           }
         }
       ],
       mapping: {
         A: 'Aasimar', B: 'Dragonborn', C: 'Dwarf', D: 'Elf', E: 'Gnome', F: 'Goliath', G: 'Halfling', H: 'Human', I: 'Orc', J: 'Tiefling',
         K: 'Aarakocra', L: 'Bugbear', M: 'Centaur', N: 'Firbolg', O: 'Githyanki', P: 'Githzerai', Q: 'Goblin', R: 'Hobgoblin', S: 'Kobold', T: 'Lizardfolk',
-        U: 'Minotaur', V: 'Satyr', W: 'Tabaxi', X: 'Triton', Y: 'Yuan-ti'
+        U: 'Minotaur', V: 'Satyr', W: 'Tabaxi', X: 'Triton', Y: 'Yuan-ti', Z: 'Changeling'
       }
     },
     step2: {
@@ -1527,6 +1530,23 @@ const data = {
             K: 'Magia de pactos, segredos e poderes estranhos. (Warlock)',
             L: 'Magia estudada com precisão e conhecimento. (Wizard)'
           }
+        },
+        {
+          text: '6. Qual o nível de complexidade que estás disposto a enfrentar?',
+          options: {
+            A: 'Gestão simples da fúria, mas alguma estratégia. (Barbarian - complexidade média)',
+            B: 'Várias magias e opções de apoio. (Bard - complexidade alta)',
+            C: 'Equilibrar magias divinas e dever. (Cleric - complexidade média)',
+            D: 'Muitas transformações e feitiços. (Druid - complexidade alta)',
+            E: 'Direto e fácil de dominar. (Fighter - complexidade baixa)',
+            F: 'Movimentos rápidos e muitos detalhes. (Monk - complexidade alta)',
+            G: 'Combate e magia sagrada em dose moderada. (Paladin - complexidade média)',
+            H: 'Diversas habilidades e magias a gerir. (Ranger - complexidade média)',
+            I: 'Táticas objetivas e simples. (Rogue - complexidade baixa)',
+            J: 'Magia explosiva com muitas escolhas. (Sorcerer - complexidade alta)',
+            K: 'Pactos e feitiços únicos exigentes. (Warlock - complexidade alta)',
+            L: 'Planeamento e lista extensa de magias. (Wizard - complexidade média)'
+          }
         }
       ],
       mapping: {
@@ -1566,7 +1586,8 @@ const data = {
             V: 'Living with music and laughter, always partying. (Satyr)',
             W: 'Move with feline agility. (Tabaxi)',
             X: 'Guard the seas with power and nobility. (Triton)',
-            Y: 'Serpent eyes and a manipulative soul. (Yuan-ti Pureblood)'
+            Y: 'Serpent eyes and a manipulative soul. (Yuan-ti Pureblood)',
+            Z: 'Change appearance and identity at will. (Changeling)'
           }
         },
         {
@@ -1596,7 +1617,8 @@ const data = {
             V: 'Living each day like an epic party. (Satyr)',
             W: 'Seeking secrets and exotic wonders. (Tabaxi)',
             X: 'Fighting to keep the aquatic world safe. (Triton)',
-            Y: 'Controlling with cold intellect and superiority. (Yuan-ti)'
+            Y: 'Controlling with cold intellect and superiority. (Yuan-ti)',
+            Z: 'Living different roles whenever you desire. (Changeling)'
           }
         },
         {
@@ -1626,12 +1648,13 @@ const data = {
             V: 'Charming and unpredictable. (Satyr)',
             W: 'Agile and curious. (Tabaxi)',
             X: 'Noble and guardian. (Triton)',
-            Y: 'Intelligent and manipulative. (Yuan-ti)'
+            Y: 'Intelligent and manipulative. (Yuan-ti)',
+            Z: 'Mysterious and ever-changing. (Changeling)'
           }
         }
       ],
       mapping: {
-        A: 'Aasimar', B: 'Dragonborn', C: 'Dwarf', D: 'Elf', E: 'Gnome', F: 'Goliath', G: 'Halfling', H: 'Human', I: 'Orc', J: 'Tiefling', K: 'Aarakocra', L: 'Bugbear', M: 'Centaur', N: 'Firbolg', O: 'Githyanki', P: 'Githzerai', Q: 'Goblin', R: 'Hobgoblin', S: 'Kobold', T: 'Lizardfolk', U: 'Minotaur', V: 'Satyr', W: 'Tabaxi', X: 'Triton', Y: 'Yuan-ti'
+        A: 'Aasimar', B: 'Dragonborn', C: 'Dwarf', D: 'Elf', E: 'Gnome', F: 'Goliath', G: 'Halfling', H: 'Human', I: 'Orc', J: 'Tiefling', K: 'Aarakocra', L: 'Bugbear', M: 'Centaur', N: 'Firbolg', O: 'Githyanki', P: 'Githzerai', Q: 'Goblin', R: 'Hobgoblin', S: 'Kobold', T: 'Lizardfolk', U: 'Minotaur', V: 'Satyr', W: 'Tabaxi', X: 'Triton', Y: 'Yuan-ti', Z: 'Changeling'
       }
     },
     step2: {
@@ -1720,6 +1743,23 @@ const data = {
             J: 'Innate, explosive and unpredictable magic. (Sorcerer)',
             K: 'Magic of pacts, secrets and strange powers. (Warlock)',
             L: 'Magic studied with precision and knowledge. (Wizard)'
+          }
+        },
+        {
+          text: '6. How challenging do you want your class to be?',
+          options: {
+            A: 'Simple rage management yet mostly direct. (Barbarian - average complexity)',
+            B: 'Many spells and support options to juggle. (Bard - high complexity)',
+            C: 'Balancing spells and devotion. (Cleric - average complexity)',
+            D: 'Shape-shifting and numerous spells to track. (Druid - high complexity)',
+            E: 'Very straightforward and easy to master. (Fighter - low complexity)',
+            F: 'Fast moves with several features to monitor. (Monk - high complexity)',
+            G: 'Mixing combat and holy magic. (Paladin - average complexity)',
+            H: 'Various abilities and spells to manage. (Ranger - average complexity)',
+            I: 'Clear and simple stealth tactics. (Rogue - low complexity)',
+            J: 'Chaotic magic with plenty of options. (Sorcerer - high complexity)',
+            K: 'Pacts and unique spells demanding focus. (Warlock - high complexity)',
+            L: 'Versatile magic that requires planning. (Wizard - average complexity)'
           }
         }
       ],
