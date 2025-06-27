@@ -1198,6 +1198,18 @@ const data = {
   };
 
 const miscText = {
-  noResults: "No results available.",
-  seeMore: "See more"
+  pt: {
+    noResults: 'Sem resultados disponíveis.',
+    seeMore: 'Ver mais',
+    language: 'Idioma:',
+    quizTitle: 'Questionário de Personagem de D&D',
+    resultsTitle: 'Resultados do Questionário'
+  },
+  en: {
+    noResults: 'No results available.',
+    seeMore: 'See more',
+    language: 'Language:',
+    quizTitle: 'D&D Character Quiz',
+    resultsTitle: 'Quiz Results'
+  }
 };

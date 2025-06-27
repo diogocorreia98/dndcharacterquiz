@@ -1,12 +1,16 @@
 (function(){
   const container = document.getElementById('results');
   const restartBtn = document.getElementById('restart');
+  const titleEl = document.querySelector('h1');
   const stored = sessionStorage.getItem('dndResults');
+  const {species, class:clazz, background, lang = 'en'} = stored ? JSON.parse(stored) : {lang:'en'};
+  document.title = miscText[lang].resultsTitle;
+  titleEl.textContent = miscText[lang].resultsTitle;
   if(!stored){
-    container.textContent = miscText.noResults;
+    container.textContent = miscText[lang].noResults;
+    restartBtn.textContent = labels[lang].restart;
     return;
   }
-  const {species, class:clazz, background, lang} = JSON.parse(stored);
 
 
   const phbSpecies = new Set([
@@ -19,7 +23,7 @@
     const text = document.createElement('p');
     text.innerHTML = `<strong>${label}:</strong> ${value} - ${info}`;
     const btn = document.createElement('button');
-    btn.textContent = miscText.seeMore;
+    btn.textContent = miscText[lang].seeMore;
     const name = value.toLowerCase().replace(/\s+/g,'');
     const src = source || (phbSpecies.has(value) ? 'xphb' : 'mpmm');
     const url = `https://5e.tools/${type}.html#${name}_${src}`;
