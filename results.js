@@ -18,10 +18,13 @@
     'Halfling','Human','Orc','Tiefling'
   ]);
 
-  function makeSection(label, value, info, type, source){
+  function makeSection(label, value, info, type, source, cat){
     const section = document.createElement('div');
     const text = document.createElement('p');
-    const displayValue = value && value !== 'N/A' ? value : miscText[lang].notChosen;
+    let displayValue = value && value !== 'N/A' ? value : miscText[lang].notChosen;
+    if(value && value !== 'N/A' && nameMap[lang] && nameMap[lang][cat]){
+      displayValue = nameMap[lang][cat][value] || value;
+    }
     const displayInfo = info || '';
     text.innerHTML = `<strong>${label}:</strong> ${displayValue}${displayInfo ? ' - ' + displayInfo : ''}`;
     section.appendChild(text);
@@ -37,9 +40,9 @@
     container.appendChild(section);
   }
 
-  makeSection(labels[lang].Species, species, speciesInfo[lang][species] || '', 'races');
-  makeSection(labels[lang].Class, clazz, classInfo[lang][clazz] || '', 'classes', 'xphb');
-  makeSection(labels[lang].Background, background, backgroundInfo[lang][background] || '', 'backgrounds', 'xphb');
+  makeSection(labels[lang].Species, species, speciesInfo[lang][species] || '', 'races', undefined, 'species');
+  makeSection(labels[lang].Class, clazz, classInfo[lang][clazz] || '', 'classes', 'xphb', 'classes');
+  makeSection(labels[lang].Background, background, backgroundInfo[lang][background] || '', 'backgrounds', 'xphb', 'backgrounds');
 
   restartBtn.textContent = labels[lang].restart;
 

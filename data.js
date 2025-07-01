@@ -1934,3 +1934,83 @@ const miscText = {
     resultsTitle: 'Quiz Results'
   }
 };
+
+const nameMap = {
+  pt: {
+    species: {
+      'Aasimar':'Aasimar',
+      'Dragonborn':'Dragonborn',
+      'Dwarf':'Anão',
+      'Elf':'Elfo',
+      'Gnome':'Gnomo',
+      'Goliath':'Goliath',
+      'Halfling':'Halfling',
+      'Human':'Humano',
+      'Orc':'Orc',
+      'Tiefling':'Tiefling',
+      'Aarakocra':'Aarakocra',
+      'Bugbear':'Bugbear',
+      'Centaur':'Centauro',
+      'Changeling':'Changeling',
+      'Firbolg':'Firbolg',
+      'Githyanki':'Githyanki',
+      'Githzerai':'Githzerai',
+      'Goblin':'Goblin',
+      'Hobgoblin':'Hobgoblin',
+      'Kobold':'Kobold',
+      'Lizardfolk':'Lizardfolk',
+      'Minotaur':'Minotauro',
+      'Satyr':'Sátiro',
+      'Tabaxi':'Tabaxi',
+      'Triton':'Tritão',
+      'Yuan-ti':'Yuan-ti',
+      'Deep Gnome':'Gnomo das Profundezas',
+      'Duergar':'Duergar',
+      'Eladrin':'Eladrin',
+      'Fairy':'Fada',
+      'Genasi':'Genasi',
+      'Geppettin (Marionette)':'Geppettin (Marioneta)',
+      'Geppettin (Plushie or Bisque)':'Geppettin (Pelúcia ou Porcelana)',
+      'Harengon':'Harengon',
+      'Kenku':'Kenku',
+      'Mandrake':'Mandrágora',
+      'Sea Elf':'Elfo do Mar',
+      'Shadar-kai':'Shadar-kai',
+      'Shifter':'Metamorfo',
+      'Tortle':'Tortle'
+    },
+    classes: {
+      'Barbarian':'Bárbaro',
+      'Bard':'Bardo',
+      'Cleric':'Clérigo',
+      'Druid':'Druida',
+      'Fighter':'Guerreiro',
+      'Monk':'Monge',
+      'Paladin':'Paladino',
+      'Ranger':'Patrulheiro',
+      'Rogue':'Ladino',
+      'Sorcerer':'Feiticeiro',
+      'Warlock':'Bruxo',
+      'Wizard':'Mago'
+    },
+    backgrounds: {
+      'Acolyte':'Acólito',
+      'Artisan':'Artesão',
+      'Charlatan':'Charlatão',
+      'Criminal':'Criminoso',
+      'Entertainer':'Artista',
+      'Farmer':'Camponês',
+      'Guard':'Guarda',
+      'Guide':'Guia',
+      'Hermit':'Eremita',
+      'Merchant':'Mercador',
+      'Noble':'Nobre',
+      'Sage':'Sábio',
+      'Sailor':'Marinheiro',
+      'Scribe':'Escrivão',
+      'Soldier':'Soldado',
+      'Wayfarer':'Errante'
+    }
+  },
+  en: { species:{}, classes:{}, backgrounds:{} }
+};
