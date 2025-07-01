@@ -1522,103 +1522,130 @@ const data = {
   en: {
     step1: {
       title: 'Which species would you like to play as?',
-      questions: [
-        {
-          text: '1. Which epic physical trait or look would you want your character to have?',
-          options: {
-            A: 'A celestial glow, radiant eyes and temporary spectral wings. (Aasimar)',
-            B: 'Scales, draconic eyes, no wings, but clearly draconic appearance. (Dragonborn)',
-            C: 'Short, stout, thick beard and a physical bond to stone. (Dwarf)',
-            D: 'Pointed ears, delicate features and a keen gaze. (Elf)',
-            E: 'Small with expressive traits and lively eyes. (Gnome)',
-            F: 'Huge and muscular, skin tough as rock with tribal markings. (Goliath)',
-            G: 'Very small, bare feet, smiling face and cozy look. (Halfling)',
-            H: 'Normal human appearance adaptable to any role. (Human)',
-            I: 'Tall and broad, gray skin, tusks and a fierce look. (Orc)',
-            J: 'Horns, tail, intense eyes and infernal features. (Tiefling)',
-            K: 'Body covered in feathers and functional wings, like a bird person. (Aarakocra)',
-            L: 'Furry body, large, long arms and a sneaky gait despite the size. (Bugbear)',
-            M: 'Humanoid upper body with a horse lower half. (Centaur)',
-            N: 'Long ears, kind features, bluish skin. (Firbolg)',
-            O: 'Slender body with alien features, yellowish skin. (Githyanki)',
-            P: 'Slim and serene body in greenish and brown tones. (Githzerai)',
-            Q: 'Small, big eyes and pointed ears. (Goblin)',
-            R: 'Medium build with armor and a military stance. (Hobgoblin)',
-            S: 'Small, scaly, with bright eyes and a tail. (Kobold)',
-            T: 'Reptilian, colorful scales and lizard-like face. (Lizardfolk)',
-            U: 'Bull head, carved horns and hoofed legs. (Minotaur)',
-            V: 'Goat legs, small horns and a relaxed posture. (Satyr)',
-            W: 'Feline body with claws and whiskers. (Tabaxi)',
-            X: 'Blue-green skin, gills and fins. (Triton)',
-            Y: 'Serpentine eyes, forked tongue and mystical features. (Yuan-ti)',
-            Z: 'Changeable face and flexible body shape. (Changeling)'
-          }
-        },
-        {
-          text: '2. What kind of special ability would you like from the start of the adventure?',
-          options: {
-            A: 'Use a temporary frightening aura and resist necrotic and radiant damage. (Aasimar)',
-            B: 'Draconic breath and resistance to its damage type. (Dragonborn)',
-            C: 'Poison resistance, darkvision and weapon training. (Dwarf)',
-            D: 'Advantage against being charmed and darkvision. (Elf)',
-            E: 'Innate magic like minor illusion and resistance to illusions. (Gnome)',
-            F: 'Damage reduction through Stone\'s Endurance. (Goliath)',
-            G: 'Reroll a natural 1 on tests—pure luck. (Halfling)',
-            H: 'Heroic inspiration after resting and an extra proficiency. (Human)',
-            I: 'Dash with temporary hit points and stand after being knocked down. (Orc)',
-            J: 'Innate spells (such as Hellish Rebuke) depending on the legacy. (Tiefling)',
-            K: 'Natural flight and wind magic. (Aarakocra)',
-            L: 'Long arms increase reach and grant stealth prowess. (Bugbear)',
-            M: 'Charging hooves and a magical sense of direction. (Centaur)',
-            N: 'Magical invisibility and communication with aquatic animals. (Firbolg)',
-            O: 'Astral projection granting temporary proficiencies. (Githyanki)',
-            P: 'Psionic spells like Shield and resistance to fear/charm. (Githzerai)',
-            Q: 'Attacks deal extra damage to larger foes and stealthiness. (Goblin)',
-            R: 'Tactical benefits and magic tied to reciprocity. (Hobgoblin)',
-            S: 'Draconic cry and a choice among three useful heritages. (Kobold)',
-            T: 'Natural bite, swimming and natural armor. (Lizardfolk)',
-            U: 'Goring Rush to push enemies with horns, natural navigation. (Minotaur)',
-            V: 'Magical jumps and resistance to magic. (Satyr)',
-            W: 'Feline speed and stealth skill. (Tabaxi)',
-            X: 'Aquatic spells, underwater breathing and cold resistance. (Triton)',
-            Y: 'Resistance to poison and magic. (Yuan-ti)',
-            Z: 'Completely change your appearance. (Changeling)'
-          }
-        },
-        {
-          text: '3. What personality or culture would you like your character to have?',
-          options: {
-            A: 'Protective, guided by an inner light and divine duty. (Aasimar)',
-            B: 'Honorable, proud and connected to an ancestral heritage. (Dragonborn)',
-            C: 'Stubborn, hardworking, traditionalist. (Dwarf)',
-            D: 'Aesthetic, contemplative, with centuries of wisdom. (Elf)',
-            E: 'Playful, curious, creative. (Gnome)',
-            F: 'Competitive, determined, valuing self-improvement. (Goliath)',
-            G: 'Good-natured, cautious and community-minded. (Halfling)',
-            H: 'Versatile, ambitious, shaped by their choices. (Human)',
-            I: 'Fierce, brave and defies expectations. (Orc)',
-            J: 'Torn between accepting or resisting infernal heritage. (Tiefling)',
-            K: 'Free, adventurous and curious like a true spirit of the skies. (Aarakocra)',
-            L: 'Cautious, resilient, showing hidden strength. (Bugbear)',
-            M: 'Instinctive, noble, protective of their herd. (Centaur)',
-            N: 'Kind, introspective, connected to nature. (Firbolg)',
-            O: 'Martial, proud, with a psychic and astral legacy. (Githyanki)',
-            P: 'Disciplined, spiritual, self-contained. (Githzerai)',
-            Q: 'Mischievous, clever, always with a plan B. (Goblin)',
-            R: 'Rigid, fair, obsessed with honor. (Hobgoblin)',
-            S: 'Underestimated yet loyal with draconic ties. (Kobold)',
-            T: 'Pragmatic, calm, protector of the natural order. (Lizardfolk)',
-            U: 'Proud, straightforward, driven to explore. (Minotaur)',
-            V: 'Festive, spontaneous, loyal to life\'s pleasures. (Satyr)',
-            W: 'Curious, solitary, always seeking wonders. (Tabaxi)',
-            X: 'Protector of the seas, respects order and harmony. (Triton)',
-            Y: 'Cold, logical, a born strategist. (Yuan-ti)',
-            Z: 'Ambiguous, versatile, with a mutable identity. (Changeling)'
-          }
+      tree: {
+        question: 'How tall is your character?',
+        options: {
+          A: { label: 'Very short', next: {
+            question: 'Human-like or animalistic or object-like?',
+            options: {
+              A: { label: 'Human-like', next: {
+                question: 'Which description fits best?',
+                options: {
+                  A: { label: 'Big ears, sharp grin, wiry frame?', result: 'Goblin' },
+                  B: { label: 'Tiny and glowing with insect wings?', result: 'Fairy' },
+                  C: { label: 'Small gray-skinned gnome with large eyes?', result: 'Deep Gnome' }
+                }
+              }},
+              B: { label: 'Animalistic or object-like', next: {
+                question: 'Which description fits best?',
+                options: {
+                  A: { label: 'Small, hunched flightless birdlike humanoid with beak and feathers?', result: 'Kenku' },
+                  B: { label: 'Red-scaled, lizard-like, dragon-snouted?', result: 'Kobold' },
+                  C: { label: 'Toy-like — plush or porcelain-bodied?', result: 'Geppettin (Plushie or Bisque)' }
+                }
+              }}
+            }
+          }},
+          B: { label: 'Short', next: {
+            question: 'Are they animal-like or human-like?',
+            options: {
+              A: { label: 'Animal-like', next: {
+                question: 'Which description fits best?',
+                options: {
+                  A: { label: 'Bunny-headed, twitchy and fast?', result: 'Harengon' },
+                  B: { label: 'Hunched, feathered and mimicking?', result: 'Kenku' },
+                  C: { label: 'Small dragon-faced lizardling?', result: 'Kobold' }
+                }
+              }},
+              B: { label: 'Human-like', next: {
+                question: 'Which description fits best?',
+                options: {
+                  A: { label: 'Broad-bodied, armored and bearded?', result: 'Dwarf' },
+                  B: { label: 'Grim and ashen dwarf with heavy gear?', result: 'Duergar' },
+                  C: { label: 'Barefoot and round-faced, full of joy?', result: 'Halfling' },
+                  D: { label: 'Curious tinkerer with tools and bright clothes?', result: 'Gnome' },
+                  E: { label: 'Deep-dwelling gnome with gray skin?', result: 'Deep Gnome' }
+                }
+              }}
+            }
+          }},
+          C: { label: 'Average height', next: {
+            question: 'What is their nature?',
+            options: {
+              A: { label: 'Humanlike or slightly magical', next: {
+                question: 'Which description fits best?',
+                options: {
+                  A: { label: 'Completely ordinary?', result: 'Human' },
+                  B: { label: 'Radiant aura, glowing eyes?', result: 'Aasimar' },
+                  C: { label: 'Horns, tail, red or purple skin?', result: 'Tiefling' },
+                  D: { label: 'Tusks, greenish-gray skin, primal look?', result: 'Orc' },
+                  E: { label: 'Pale and smooth-skinned shapeshifter?', result: 'Changeling' },
+                  F: { label: 'Red skin, disciplined and postured?', result: 'Hobgoblin' }
+                }
+              }},
+              B: { label: 'Clearly animalistic', next: {
+                question: 'Which description fits best?',
+                options: {
+                  A: { label: 'Feline body and face, long tail?', result: 'Tabaxi' },
+                  B: { label: 'Beast-like changes (fangs, claws)?', result: 'Shifter' },
+                  C: { label: 'Goat legs, horns, mischievous spirit?', result: 'Satyr' },
+                  D: { label: 'Serpentine face, slitted eyes, hypnotic calm?', result: 'Yuan-ti' },
+                  E: { label: 'Shell on back, strong limbs, peaceful look?', result: 'Tortle' }
+                }
+              }},
+              C: { label: 'Elven', next: {
+                question: 'Which description fits best?',
+                options: {
+                  A: { label: 'Classic graceful elf with long ears?', result: 'Elf' },
+                  B: { label: 'Elf whose look shifts with the seasons?', result: 'Eladrin' },
+                  C: { label: 'Pale or shadowy elf with grim expression?', result: 'Shadar-kai' }
+                }
+              }},
+              D: { label: 'Aquatic', next: {
+                question: 'Which description fits best?',
+                options: {
+                  A: { label: 'Sleek elf with fins or gills?', result: 'Sea Elf' },
+                  B: { label: 'Scaled oceanic warrior with trident?', result: 'Triton' }
+                }
+              }},
+              E: { label: 'Constructed, elemental, or plant-based', next: {
+                question: 'Which description fits best?',
+                options: {
+                  A: { label: 'Puppet-like body, wood or jointed limbs?', result: 'Geppettin (Marionette)' },
+                  B: { label: 'Skin like bark or covered in leaves?', result: 'Mandrake' },
+                  C: { label: 'Body made of flame, mist, rock or water?', result: 'Genasi' }
+                }
+              }}
+            }
+          }},
+          D: { label: 'Tall', next: {
+            question: 'Choose the best description:',
+            options: {
+              A: { label: 'Dragon-headed with breath weapon?', result: 'Dragonborn' },
+              B: { label: 'Lizard-faced with tail and frill?', result: 'Lizardfolk' },
+              C: { label: 'Upright with snake features?', result: 'Yuan-ti' },
+              D: { label: 'Tall, tusked tribal warrior?', result: 'Orc' },
+              E: { label: 'Bull-headed, horned, hoofed but with human torso and hands?', result: 'Minotaur' },
+              F: { label: 'Goat legs, horns, musical joy?', result: 'Satyr' },
+              G: { label: 'Pale warrior with sharp features?', result: 'Githyanki' },
+              H: { label: 'Calm with yellow-green skin?', result: 'Githzerai' },
+              I: { label: 'Plant-bodied humanoid with bark skin?', result: 'Mandrake' },
+              J: { label: 'Elf with changing seasonal look?', result: 'Eladrin' }
+            }
+          }},
+          E: { label: 'Very tall', next: {
+            question: 'Choose the best description:',
+            options: {
+              A: { label: 'Hairy giant with long arms and fangs?', result: 'Bugbear' },
+              B: { label: 'Horse body and human torso?', result: 'Centaur' },
+              C: { label: 'Muscular and marked like stone?', result: 'Goliath' },
+              D: { label: 'Mossy, blue-skinned forest giant?', result: 'Firbolg' },
+              E: { label: 'Fully grown walking tree or bark-covered humanoid?', result: 'Mandrake' }
+            }
+          }}
         }
-      ],
-      mapping: { A: "Aasimar", B: "Dragonborn", C: "Dwarf", D: "Elf", E: "Gnome", F: "Goliath", G: "Halfling", H: "Human", I: "Orc", J: "Tiefling", K: "Aarakocra", L: "Bugbear", M: "Centaur", N: "Firbolg", O: "Githyanki", P: "Githzerai", Q: "Goblin", R: "Hobgoblin", S: "Kobold", T: "Lizardfolk", U: "Minotaur", V: "Satyr", W: "Tabaxi", X: "Triton", Y: "Yuan-ti", Z: "Changeling" }
-      },
+      }
+    },
     step2: {
       title: 'Which Class Fits You?',
       questions: [
@@ -1727,7 +1754,21 @@ const data = {
       'Satyr':'Festeiros e encantadores, os satyrs dançam e tocam música como parte da sua magia. São difíceis de manipular, rápidos nos saltos e ótimos em socializar.',
       'Tabaxi':'Felinos ágeis e curiosos, os tabaxi movem-se rapidamente e conseguem escalar com facilidade. Estão sempre em busca de coisas novas e adoram explorar.',
       'Triton':'Seres aquáticos nobres, os tritons vivem bem debaixo de água. Sabem nadar com mestria, comunicar com criaturas marinhas e controlar pequenos efeitos mágicos ligados ao mar.',
-      'Yuan-ti':'Com traços de serpente, os yuan-ti são frios e manipuladores. Imunes a venenos e difíceis de influenciar, usam magia para controlar os outros ou causar medo.'
+      'Yuan-ti':'Com traços de serpente, os yuan-ti são frios e manipuladores. Imunes a venenos e difíceis de influenciar, usam magia para controlar os outros ou causar medo.',
+      'Deep Gnome':'Gnomos subterrâneos de pele cinzenta e olhos grandes. Resistentes e dotados de magia para se ocultarem.',
+      'Duergar':'Anões cinzentos do Subterrâneo, resistentes a ilusões e capazes de crescer ou ficar invisíveis por instantes.',
+      'Eladrin':'Elfos ligados à Feywild cujo aspeto e poderes mudam com as estações.',
+      'Fairy':'Pequenas fadas aladas com magia inata e muita travessura.',
+      'Genasi':'Seres imbuídos de poder elemental — ar, terra, fogo ou água.',
+      'Geppettin (Marionette)':'Boneco vivo de madeira que não precisa dormir, muitas vezes artista ou espião.',
+      'Geppettin (Plushie or Bisque)':'Boneco de pano ou porcelana que vive sem comer ou dormir, adorados por miúdos e graúdos.',
+      'Harengon':'Povo-coelho famoso pela rapidez e energia.',
+      'Kenku':'Criaturas semelhantes a corvos que se comunicam por imitação e são mestres da furtividade.',
+      'Mandrake':'Um intermediário entre animal e planta. Um icor rubro corre-lhe nas veias-raiz e pode alimentar-se de seres vivos ou apenas da luz do sol. A sua forma varia de rebento frondoso a tronco lenhoso e os druidas reverenciam-no como emissário da natureza.',
+      'Sea Elf':'Elfos adaptados ao mar, com guelras e capacidade de nadar rapidamente.',
+      'Shadar-kai':'Elfos sombrios ligados à Rainha Corvo, viajando entre mundos.',
+      'Shifter':'Humanoides com sangue bestial que assumem traços animais temporariamente.',
+      'Tortle':'Povo tartaruga pacífico com carapaças duras e talento para sobreviver.'
     },
     en: {
       'Aasimar':'With divine appearance and radiant traits, Aasimar are seen as heaven-sent. They can heal with a touch and, when needed, unleash true celestial power, gaining wings or a powerful aura to protect or destroy.',
@@ -1755,7 +1796,21 @@ const data = {
       'Satyr':'Festive and charming, satyrs dance and play music as part of their magic. Hard to manipulate, quick on their feet and sociable.',
       'Tabaxi':'Feline and curious, tabaxi move swiftly and can climb with ease. Always seeking new things, they love to explore.',
       'Triton':'Noble aquatic beings who thrive underwater. They swim expertly, communicate with sea creatures and wield minor magic tied to the ocean.',
-      'Yuan-ti':'With serpent traits, yuan-ti are cold and manipulative. Immune to poison and hard to influence, they use magic to control others or instill fear.'
+      'Yuan-ti':'With serpent traits, yuan-ti are cold and manipulative. Immune to poison and hard to influence, they use magic to control others or instill fear.',
+      'Deep Gnome':'Small underground gnomes with gray skin and keen eyes. Tough miners who use natural magic to avoid danger.',
+      'Duergar':'Gray-skinned dwarves of the Underdark. Resistant to illusions and able to grow or turn invisible briefly.',
+      'Eladrin':'Elves attuned to the Feywild whose look and powers shift with the seasons.',
+      'Fairy':'Tiny fey with delicate wings and innate magic, brimming with mischief.',
+      'Genasi':'Humanoids infused with elemental power, their bodies showing traits of air, earth, fire or water.',
+      'Geppettin (Marionette)':'Living puppet crafted from wood. These constructs never tire and often excel as performers or spies.',
+      'Geppettin (Plushie or Bisque)':'Living plaything of cloth or porcelain. They require no food or sleep and delight children and adults alike.',
+      'Harengon':'Rabbitfolk known for quick reflexes and boundless energy.',
+      'Kenku':'Crow-like beings who communicate by mimicry and excel at stealth.',
+      'Mandrake':'A midway between animal and plant. Ruby ichor flows through their roots, letting them feast or photosynthesize. Their form ranges from leafy sapling to woody tree, and druids revere them as emissaries of nature.',
+      'Sea Elf':'Elves adapted to the ocean with gills and a swimming speed.',
+      'Shadar-kai':'Shadow-touched elves bound to the Raven Queen, traveling between worlds.',
+      'Shifter':'Humans with bestial heritage who briefly assume animal traits.',
+      'Tortle':'Peaceful turtlefolk with hard shells and practical survival skills.'
     }
   };
 
