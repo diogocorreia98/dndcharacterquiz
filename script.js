@@ -20,6 +20,7 @@ const speciesStack = [];
 
 function renderQuiz() {
   const locale = data[currentLang];
+  const strip = txt => txt.replace(/\s*\([^)]*\)\s*$/, '');
   updateStaticText();
   quizDiv.innerHTML = '';
   let html = '';
@@ -31,7 +32,7 @@ function renderQuiz() {
       html += `<section><p>${speciesNode.question}</p>`;
       for(const key in speciesNode.options){
         const id = `s1_${key}`;
-        html += `<label><input type="radio" name="s1" value="${key}" id="${id}"> ${speciesNode.options[key].label}</label>`;
+        html += `<label><input type="radio" name="s1" value="${key}" id="${id}"> ${strip(speciesNode.options[key].label)}</label>`;
       }
       html += '</section>';
     } else {
@@ -39,7 +40,7 @@ function renderQuiz() {
         html += `<section><p>${q.text}</p>`;
         for (const key in q.options) {
           const id = `s1q${qi}_${key}`;
-          html += `<label><input type="radio" name="s1q${qi}" value="${key}" id="${id}"> ${q.options[key]}</label>`;
+        html += `<label><input type="radio" name="s1q${qi}" value="${key}" id="${id}"> ${strip(q.options[key])}</label>`;
         }
         html += '</section>';
       });
@@ -52,7 +53,7 @@ function renderQuiz() {
       html += `<section><p>${q.text}</p>`;
       for (const key in q.options) {
         const id = `s2q${qi}_${key}`;
-        html += `<label><input type="radio" name="s2q${qi}" value="${key}" id="${id}"> ${q.options[key]}</label>`;
+        html += `<label><input type="radio" name="s2q${qi}" value="${key}" id="${id}"> ${strip(q.options[key])}</label>`;
       }
       html += '</section>';
     });
@@ -65,7 +66,7 @@ function renderQuiz() {
       html += `<section><p>${q.text}</p>`;
       for(const key in q.options){
         const id = `s3q${qi}_${key}`;
-        html += `<label><input type="radio" name="s3q${qi}" value="${key}" id="${id}"> ${q.options[key]}</label>`;
+        html += `<label><input type="radio" name="s3q${qi}" value="${key}" id="${id}"> ${strip(q.options[key])}</label>`;
       }
       html += '</section>';
     });
