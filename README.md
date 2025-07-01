@@ -1,6 +1,9 @@
 # dndcharacterquiz
 
-Simple web app for choosing a D&D character species, class and background. Includes PT-PT and EN translations.
+Simple web app for choosing a D&D character species, class and background. Includes PT‑PT and EN translations.
+
+* Both the English and Portuguese species quizzes now begin with a question about character height, leading through identical decision trees in each language.
+* Questions in the class and background sections are shown one at a time, letting you advance through the quiz page by page.
 
 ## Usage
 
