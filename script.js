@@ -15,23 +15,36 @@ function updateStaticText(){
 
 let stage = 1;
 let currentResult = {};
+let speciesNode = null;
+const speciesStack = [];
 
 function renderQuiz() {
   const locale = data[currentLang];
+  const strip = txt => txt.replace(/\s*\([^)]*\)\s*$/, '');
   updateStaticText();
   quizDiv.innerHTML = '';
   let html = '';
   if(stage === 1){
     const step = locale.step1;
     html += `<h2>${step.title}</h2>`;
-    step.questions.forEach((q, qi) => {
-      html += `<section><p>${q.text}</p>`;
-      for (const key in q.options) {
-        const id = `s1q${qi}_${key}`;
-        html += `<label><input type="radio" name="s1q${qi}" value="${key}" id="${id}"> ${q.options[key]}</label>`;
+    if(step.tree){
+      if(!speciesNode) speciesNode = step.tree;
+      html += `<section><p>${speciesNode.question}</p>`;
+      for(const key in speciesNode.options){
+        const id = `s1_${key}`;
+        html += `<label><input type="radio" name="s1" value="${key}" id="${id}"> ${strip(speciesNode.options[key].label)}</label>`;
       }
       html += '</section>';
-    });
+    } else {
+      step.questions.forEach((q, qi) => {
+        html += `<section><p>${q.text}</p>`;
+        for (const key in q.options) {
+          const id = `s1q${qi}_${key}`;
+        html += `<label><input type="radio" name="s1q${qi}" value="${key}" id="${id}"> ${strip(q.options[key])}</label>`;
+        }
+        html += '</section>';
+      });
+    }
     submitBtn.textContent = currentLang === 'pt' ? 'Avançar' : 'Next';
   } else if(stage === 2){
     const step = locale.step2;
@@ -40,7 +53,7 @@ function renderQuiz() {
       html += `<section><p>${q.text}</p>`;
       for (const key in q.options) {
         const id = `s2q${qi}_${key}`;
-        html += `<label><input type="radio" name="s2q${qi}" value="${key}" id="${id}"> ${q.options[key]}</label>`;
+        html += `<label><input type="radio" name="s2q${qi}" value="${key}" id="${id}"> ${strip(q.options[key])}</label>`;
       }
       html += '</section>';
     });
@@ -53,7 +66,7 @@ function renderQuiz() {
       html += `<section><p>${q.text}</p>`;
       for(const key in q.options){
         const id = `s3q${qi}_${key}`;
-        html += `<label><input type="radio" name="s3q${qi}" value="${key}" id="${id}"> ${q.options[key]}</label>`;
+        html += `<label><input type="radio" name="s3q${qi}" value="${key}" id="${id}"> ${strip(q.options[key])}</label>`;
       }
       html += '</section>';
     });
@@ -70,12 +83,20 @@ langSelect.addEventListener('change', () => {
   currentLang = langSelect.value;
   stage = 1;
   currentResult = {};
+  speciesNode = null;
+  speciesStack.length = 0;
   updateStaticText();
   renderQuiz();
 });
 
 function calculateSpecies(){
   const locale = data[currentLang];
+  if(locale.step1.tree){
+    const val = document.querySelector('input[name="s1"]:checked');
+    if(!val) return null;
+    const choice = speciesNode.options[val.value];
+    return choice.result || null;
+  }
   const speciesScores = {};
   locale.step1.questions.forEach((q, qi) => {
     const val = document.querySelector(`input[name="s1q${qi}"]:checked`);
@@ -115,7 +136,28 @@ function calculateBackground(clazz){
 }
 
 submitBtn.addEventListener('click', async () => {
+  const locale = data[currentLang];
   if(stage === 1){
+    if(locale.step1.tree){
+      const val = document.querySelector('input[name="s1"]:checked');
+      if(!val) return;
+      const choice = speciesNode.options[val.value];
+      if(choice.next){
+        speciesStack.push(speciesNode);
+        speciesNode = choice.next;
+        renderQuiz();
+        return;
+      }
+      if(choice.result){
+        currentResult.species = choice.result;
+        speciesNode = null;
+        speciesStack.length = 0;
+        stage = 2;
+        renderQuiz();
+        return;
+      }
+      return;
+    }
     currentResult.species = calculateSpecies();
     stage = 2;
     renderQuiz();
@@ -148,8 +190,17 @@ submitBtn.addEventListener('click', async () => {
 });
 
 backBtn.addEventListener('click', () => {
+  if(stage === 1 && speciesStack.length > 0){
+    speciesNode = speciesStack.pop();
+    renderQuiz();
+    return;
+  }
   if(stage > 1){
     stage--;
+    if(stage === 1){
+      speciesNode = data[currentLang].step1.tree;
+      speciesStack.length = 0;
+    }
     renderQuiz();
   }
 });
@@ -157,6 +208,8 @@ backBtn.addEventListener('click', () => {
 function restartQuiz(){
   stage = 1;
   currentResult = {};
+  speciesNode = null;
+  speciesStack.length = 0;
   renderQuiz();
 }
 
