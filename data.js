@@ -1342,102 +1342,129 @@ const data = {
   pt: {
     step1: {
       title: 'Que espécie gostarias de jogar?',
-      questions: [
-        {
-          text: '1. Que traço físico ou origem visual mais épica gostarias que a tua personagem tivesse?',
-          options: {
-            A: 'Um brilho celestial, olhos radiantes e asas espectrais temporárias. (Aasimar)',
-            B: 'Escamas, olhos dracónicos e ausência de asas, mas aparência claramente dracónica. (Dragonborn)',
-            C: 'Baixo, robusto, barba espessa e ligação física à pedra. (Dwarf)',
-            D: 'Orelhas pontiagudas, feições delicadas e olhar atento. (Elf)',
-            E: 'Pequeno, com traços expressivos e olhos vivos. (Gnome)',
-            F: 'Enorme e musculado, com pele dura como rocha e traços tribais. (Goliath)',
-            G: 'Muito pequeno, com pés descalços, cara sorridente e aspeto acolhedor. (Halfling)',
-            H: 'Aparência humana normal, adaptável a qualquer função ou papel. (Human)',
-            I: 'Alto, largo, pele cinzenta, presas e um olhar feroz. (Orc)',
-            J: 'Chifres, cauda, olhos intensos e feições infernais. (Tiefling)',
-            K: 'Corpo coberto de penas e asas funcionais, parecendo um pássaro humanóide. (Aarakocra)',
-            L: 'Corpo peludo, grande, braços longos e andar furtivo apesar da estatura. (Bugbear)',
-            M: 'Parte superior humanoide, parte inferior de cavalo. (Centaur)',
-            N: 'Orelhas longas, traços bondosos, pele azulada. (Firbolg)',
-            O: 'Corpo esguio com feições alienígenas, pele amarelada. (Githyanki)',
-            P: 'Corpo delgado e sereno com tons esverdeados e castanhos. (Githzerai)',
-            Q: 'Pequeno, de olhos grandes e orelhas pontiagudas. (Goblin)',
-            R: 'Estatura média com armadura e postura militar. (Hobgoblin)',
-            S: 'Pequeno, escamoso, com olhos vivos e cauda. (Kobold)',
-            T: 'Reptiliano, escamas coloridas e feições semelhantes a lagarto. (Lizardfolk)',
-            U: 'Cabeça de touro, chifres esculpidos e pernas com cascos. (Minotaur)',
-            V: 'Pernas de cabra, cornos pequenos e postura descontraída. (Satyr)',
-            W: 'Corpo felino com garras e bigodes. (Tabaxi)',
-            X: 'Pele azul-esverdeada, guelras e barbatanas. (Triton)',
-            Y: 'Olhos de serpente, língua bifurcada e feições místicas. (Yuan-ti)',
-            Z: 'Rosto mutável e forma física flexível. (Changeling)'
-          }
-        },
-        {
-          text: '2. Que tipo de habilidade especial gostarias de ter desde o início da aventura?',
-          options: {
-            A: 'Usar uma aura assustadora temporária e resistir a dano necrótico e radiante. (Aasimar)',
-            B: 'Sopro dracónico e resistência ao tipo de dano associado. (Dragonborn)',
-            C: 'Resistência a veneno, visão no escuro, treino com armas. (Dwarf)',
-            D: 'Vantagem contra ser encantado e visão no escuro. (Elf)',
-            E: 'Magia inata como minor illusion e resistência a ilusões. (Gnome)',
-            F: 'Redução de dano com Stone\'s Endurance. (Goliath)',
-            G: 'Repetição de rolagem 1 em testes — pura sorte. (Halfling)',
-            H: 'Inspiração heroica após descanso e proficiência extra. (Human)',
-            I: 'Sprint com pontos de vida temporários e ficar de pé após ser derrubado. (Orc)',
-            J: 'Magias inatas (como Hellish Rebuke) dependendo do legado. (Tiefling)',
-            K: 'Voo natural e magia de vento. (Aarakocra)',
-            L: 'Braços longos aumentam alcance e habilidade em furtividade. (Bugbear)',
-            M: 'Investida com os cascos e instinto de navegação mágico. (Centaur)',
-            N: 'Invisibility por magia, comunicação com animais aquáticos. (Firbolg)',
-            O: 'Projeção astral para obter proficiências temporárias. (Githyanki)',
-            P: 'Magias psiónicas como Shield e resistência a medo/charme. (Githzerai)',
-            Q: 'Ataques com dano extra a criaturas maiores e furtividade. (Goblin)',
-            R: 'Benefícios táticos e magia ligada a reciprocidade. (Hobgoblin)',
-            S: 'Grito dracónico e escolha entre três heranças úteis. (Kobold)',
-            T: 'Mordida natural, natação e armadura natural. (Lizardfolk)',
-            U: 'Goring Rush, empurrar inimigos com chifres, navegação natural. (Minotaur)',
-            V: 'Saltos mágicos e resistência a magia. (Satyr)',
-            W: 'Velocidade felina e habilidade furtiva. (Tabaxi)',
-            X: 'Magias aquáticas, respiração subaquática, resistência ao frio. (Triton)',
-            Y: 'Resistência a veneno e magia. (Yuan-ti)',
-            Z: 'Mudar completamente de aparência. (Changeling)'
-          }
-        },
-        {
-          text: '3. Que tipo de personalidade ou cultura gostarias que a tua personagem tivesse?',
-          options: {
-            A: 'Protetora, guiada por uma luz interior e dever divino. (Aasimar)',
-            B: 'Honrada, orgulhosa, ligada a uma herança ancestral. (Dragonborn)',
-            C: 'Teimoso, trabalhador, tradicionalista. (Dwarf)',
-            D: 'Esteta, contemplativo, com séculos de sabedoria. (Elf)',
-            E: 'Brincalhão, curioso, criativo. (Gnome)',
-            F: 'Competitivo, determinado, valoriza a superação. (Goliath)',
-            G: 'Bem-disposto, prudente, de espírito comunitário. (Halfling)',
-            H: 'Versátil, ambicioso, moldado pelas suas escolhas. (Human)',
-            I: 'Feroz, corajoso, desafia expectativas. (Orc)',
-            J: 'Em conflito entre aceitar ou resistir à herança infernal. (Tiefling)',
-            K: 'Livre, aventureiro, curioso como um verdadeiro espírito dos céus. (Aarakocra)',
-            L: 'Cauteloso, resiliente, exibe força oculta. (Bugbear)',
-            M: 'Instintivo, nobre, protetor da sua manada. (Centaur)',
-            N: 'Gentil, introspectivo, conectado à natureza. (Firbolg)',
-            O: 'Marcial, orgulhoso, com legado psíquico e astral. (Githyanki)',
-            P: 'Disciplinado, espiritual, autocontido. (Githzerai)',
-            Q: 'Travesso, esperto, sempre com plano B. (Goblin)',
-            R: 'Rígido, justo, obcecado com honra. (Hobgoblin)',
-            S: 'Subestimado, mas leal e com laços dracónicos. (Kobold)',
-            T: 'Pragmático, calmo, protetor da ordem natural. (Lizardfolk)',
-            U: 'Orgulhoso, direto, com instinto de exploração. (Minotaur)',
-            V: 'Festivo, espontâneo, leal aos prazeres da vida. (Satyr)',
-            W: 'Curioso, solitário, sempre à procura de maravilhas. (Tabaxi)',
-            X: 'Protetor dos mares, respeita a ordem e a harmonia. (Triton)',
-            Y: 'Frio, lógico, estratega nato. (Yuan-ti)',
-            Z: 'Ambíguo, versátil, com identidade mutável. (Changeling)'
-          }
+      tree: {
+        question: 'Qual é a altura da tua personagem?',
+        options: {
+          A: { label: 'Muito baixa', next: {
+            question: 'É mais humanoide ou tem traços animais/objeto?',
+            options: {
+              A: { label: 'Humanoide', next: {
+                question: 'Qual descrição se encaixa melhor?',
+                options: {
+                  A: { label: 'Orelhas grandes, sorriso malandro e corpo esguio?', result: 'Goblin' },
+                  B: { label: 'Pequena e brilhante com asas de inseto?', result: 'Fairy' },
+                  C: { label: 'Pequeno gnomo de pele cinzenta e olhos grandes?', result: 'Deep Gnome' }
+                }
+              }},
+              B: { label: 'Animal ou objeto', next: {
+                question: 'Qual descrição se encaixa melhor?',
+                options: {
+                  A: { label: 'Pequeno, corcunda, parecido com um pássaro sem voo, com bico e penas?', result: 'Kenku' },
+                  B: { label: 'Escamas vermelhas, aspecto de lagarto, focinho de dragão?', result: 'Kobold' },
+                  C: { label: 'Semelhante a brinquedo — corpo de peluche ou porcelana?', result: 'Geppettin (Plushie or Bisque)' }
+                }
+              }}
+            }
+          }},
+          B: { label: 'Baixa', next: {
+            question: 'É mais animal ou humanoide?',
+            options: {
+              A: { label: 'Animal', next: {
+                question: 'Qual descrição se encaixa melhor?',
+                options: {
+                  A: { label: 'Cabeça de coelho, irrequieto e rápido?', result: 'Harengon' },
+                  B: { label: 'Curvado, cheio de penas e a imitar sons?', result: 'Kenku' },
+                  C: { label: 'Pequeno lagarto com rosto de dragão?', result: 'Kobold' }
+                }
+              }},
+              B: { label: 'Humanoide', next: {
+                question: 'Qual descrição se encaixa melhor?',
+                options: {
+                  A: { label: 'Corpo largo, armadura e barba?', result: 'Dwarf' },
+                  B: { label: 'Anão sombrio de pele acinzentada com equipamento pesado?', result: 'Duergar' },
+                  C: { label: 'Pés descalços, rosto redondo e cheio de alegria?', result: 'Halfling' },
+                  D: { label: 'Curioso inventor com ferramentas e roupas coloridas?', result: 'Gnome' },
+                  E: { label: 'Gnomo subterrâneo de pele cinzenta?', result: 'Deep Gnome' }
+                }
+              }}
+            }
+          }},
+          C: { label: 'Altura média', next: {
+            question: 'Qual é a sua natureza?',
+            options: {
+              A: { label: 'Humanoide ou ligeiramente mágica', next: {
+                question: 'Qual descrição se encaixa melhor?',
+                options: {
+                  A: { label: 'Completamente comum?', result: 'Human' },
+                  B: { label: 'Aura radiante, olhos brilhantes?', result: 'Aasimar' },
+                  C: { label: 'Chifres, cauda, pele vermelha ou roxa?', result: 'Tiefling' },
+                  D: { label: 'Presas, pele cinzento-esverdeada, ar selvagem?', result: 'Orc' },
+                  E: { label: 'Forma mutável e pele lisa e pálida?', result: 'Changeling' },
+                  F: { label: 'Pele vermelha, postura disciplinada?', result: 'Hobgoblin' }
+                }
+              }},
+              B: { label: 'Claramente animal', next: {
+                question: 'Qual descrição se encaixa melhor?',
+                options: {
+                  A: { label: 'Corpo e rosto felino, cauda longa?', result: 'Tabaxi' },
+                  B: { label: 'Transformações bestiais (presas, garras)?', result: 'Shifter' },
+                  C: { label: 'Pernas de cabra, cornos, espírito travesso?', result: 'Satyr' },
+                  D: { label: 'Face de serpente, olhos fendidos, calma hipnótica?', result: 'Yuan-ti' },
+                  E: { label: 'Carapaça nas costas, membros fortes, ar pacífico?', result: 'Tortle' }
+                }
+              }},
+              C: { label: 'Élfica', next: {
+                question: 'Qual descrição se encaixa melhor?',
+                options: {
+                  A: { label: 'Elfo gracioso clássico de orelhas longas?', result: 'Elf' },
+                  B: { label: 'Elfo cujo visual muda com as estações?', result: 'Eladrin' },
+                  C: { label: 'Elfo pálido ou sombrio com expressão séria?', result: 'Shadar-kai' }
+                }
+              }},
+              D: { label: 'Aquático', next: {
+                question: 'Qual descrição se encaixa melhor?',
+                options: {
+                  A: { label: 'Elfo esguio com barbatanas ou guelras?', result: 'Sea Elf' },
+                  B: { label: 'Guerreiro escamado do oceano com tridente?', result: 'Triton' }
+                }
+              }},
+              E: { label: 'Construto, elemental ou planta', next: {
+                question: 'Qual descrição se encaixa melhor?',
+                options: {
+                  A: { label: 'Corpo de marioneta, madeira ou membros articulados?', result: 'Geppettin (Marionette)' },
+                  B: { label: 'Pele como casca ou coberta de folhas?', result: 'Mandrake' },
+                  C: { label: 'Corpo feito de fogo, névoa, pedra ou água?', result: 'Genasi' }
+                }
+              }}
+            }
+          }},
+          D: { label: 'Alta', next: {
+            question: 'Escolhe a descrição que melhor se adequa:',
+            options: {
+              A: { label: 'Cabeça de dragão com arma de sopro?', result: 'Dragonborn' },
+              B: { label: 'Rosto de lagarto com cauda e crista?', result: 'Lizardfolk' },
+              C: { label: 'Postura ereta com traços de cobra?', result: 'Yuan-ti' },
+              D: { label: 'Guerreiro tribal alto de presas?', result: 'Orc' },
+              E: { label: 'Cabeça de touro, com chifres e cascos mas tronco humano?', result: 'Minotaur' },
+              F: { label: 'Pernas de cabra, cornos, alegria musical?', result: 'Satyr' },
+              G: { label: 'Guerreiro pálido de traços afiados?', result: 'Githyanki' },
+              H: { label: 'Calmo, de pele amarelada-esverdeada?', result: 'Githzerai' },
+              I: { label: 'Humanoide de corpo vegetal com pele de casca?', result: 'Mandrake' },
+              J: { label: 'Elfo com aparência sazonal mutável?', result: 'Eladrin' }
+            }
+          }},
+          E: { label: 'Muito alta', next: {
+            question: 'Escolhe a descrição que melhor se adequa:',
+            options: {
+              A: { label: 'Gigante peludo de braços longos e presas?', result: 'Bugbear' },
+              B: { label: 'Corpo de cavalo e torso humano?', result: 'Centaur' },
+              C: { label: 'Musculado e marcado como pedra?', result: 'Goliath' },
+              D: { label: 'Gigante da floresta de pele azul musgosa?', result: 'Firbolg' },
+              E: { label: 'Árvore andante adulta ou humanoide coberto de casca?', result: 'Mandrake' }
+            }
+          }}
         }
-      ],
-      mapping: { A: "Aasimar", B: "Dragonborn", C: "Dwarf", D: "Elf", E: "Gnome", F: "Goliath", G: "Halfling", H: "Human", I: "Orc", J: "Tiefling", K: "Aarakocra", L: "Bugbear", M: "Centaur", N: "Firbolg", O: "Githyanki", P: "Githzerai", Q: "Goblin", R: "Hobgoblin", S: "Kobold", T: "Lizardfolk", U: "Minotaur", V: "Satyr", W: "Tabaxi", X: "Triton", Y: "Yuan-ti", Z: "Changeling" }
+      }
     },
     step2: {
       title: 'Que Classe Combina Contigo?',

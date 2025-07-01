@@ -83,6 +83,8 @@ langSelect.addEventListener('change', () => {
   currentLang = langSelect.value;
   stage = 1;
   currentResult = {};
+  speciesNode = null;
+  speciesStack.length = 0;
   updateStaticText();
   renderQuiz();
 });
