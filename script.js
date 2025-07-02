@@ -820,10 +820,24 @@ submitBtn.addEventListener('click', async () => {
     const val = document.querySelector('input[name="subclass"]:checked');
     if(!val) return;
     currentResult.subclass = val.value;
-    stage = 4;
-    step3Index = 0;
-    step3Answers = {};
-    renderQuiz();
+    if(data[currentLang].step3 && data[currentLang].step3.classes[currentResult.class]){
+      stage = 4;
+      step3Index = 0;
+      step3Answers = {};
+      renderQuiz();
+    } else {
+      const background = 'N/A';
+      sessionStorage.setItem('dndResults', JSON.stringify({
+        species: currentResult.species,
+        class: currentResult.class,
+        subclass: currentResult.subclass,
+        background,
+        gender: currentResult.gender,
+        height: currentResult.height,
+        lang: currentLang
+      }));
+      window.location.href = 'results.html';
+    }
     return;
   }
   if(stage === 4){
