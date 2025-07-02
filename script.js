@@ -473,6 +473,9 @@ let classNode = null;
 const classStack = [];
 let step3Index = 0;
 let step3Answers = {};
+const speciesPath = [];
+const classPath = [];
+let subQuestionSpecies = null;
 
 function renderQuiz() {
   const locale = data[currentLang];
@@ -578,17 +581,34 @@ function renderQuiz() {
 
 langSelect.addEventListener('change', () => {
   currentLang = langSelect.value;
-  stage = 0;
-  currentResult = { gender:null, height:null, species:null, class:null, subclass:null, background:null };
-  speciesNode = null;
-  subSpeciesNode = null;
-  speciesStack.length = 0;
-  step2Index = 0;
-  step2Answers = {};
-  classNode = null;
-  classStack.length = 0;
-  step3Index = 0;
-  step3Answers = {};
+  const locale = data[currentLang];
+  if(locale.step1.tree){
+    speciesNode = locale.step1.tree;
+    speciesStack.length = 0;
+    for(const key of speciesPath){
+      const choice = speciesNode.options[key];
+      if(!choice) break;
+      speciesStack.push(speciesNode);
+      if(choice.next){
+        speciesNode = choice.next;
+      }
+    }
+  }
+  if(subQuestionSpecies){
+    subSpeciesNode = subSpeciesQuestions[currentLang][subQuestionSpecies];
+  }
+  if(locale.step2.tree){
+    classNode = locale.step2.tree;
+    classStack.length = 0;
+    for(const key of classPath){
+      const choice = classNode.options[key];
+      if(!choice) break;
+      classStack.push(classNode);
+      if(choice.next){
+        classNode = choice.next;
+      }
+    }
+  }
   updateStaticText();
   renderQuiz();
 });
@@ -652,12 +672,13 @@ submitBtn.addEventListener('click', async () => {
       if(!val) return;
       currentResult.species = val.value;
       subSpeciesNode = null;
-      speciesNode = null;
-      speciesStack.length = 0;
+      subQuestionSpecies = null;
+      speciesPath.push(val.value);
       step2Index = 0;
       step2Answers = {};
       classNode = locale.step2.tree;
       classStack.length = 0;
+      classPath.length = 0;
       step3Index = 0;
       step3Answers = {};
       stage = 2;
@@ -674,6 +695,7 @@ submitBtn.addEventListener('click', async () => {
       }
       if(choice.next){
         speciesStack.push(speciesNode);
+        speciesPath.push(val.value);
         speciesNode = choice.next;
         renderQuiz();
         return;
@@ -681,12 +703,12 @@ submitBtn.addEventListener('click', async () => {
       if(choice.result){
         if(choice.result === 'Geppettin (Marionette)'){
           currentResult.species = 'Marionette Geppettin';
-          speciesNode = null;
-          speciesStack.length = 0;
+          speciesPath.push(val.value);
           step2Index = 0;
           step2Answers = {};
           classNode = locale.step2.tree;
           classStack.length = 0;
+          classPath.length = 0;
           step3Index = 0;
           step3Answers = {};
           stage = 2;
@@ -696,18 +718,18 @@ submitBtn.addEventListener('click', async () => {
         const sub = subSpeciesQuestions[currentLang][choice.result];
         if(sub){
           subSpeciesNode = sub;
-          speciesNode = null;
-          speciesStack.length = 0;
+          subQuestionSpecies = choice.result;
+          speciesPath.push(val.value);
           renderQuiz();
           return;
         }
         currentResult.species = choice.result;
-        speciesNode = null;
-        speciesStack.length = 0;
+        speciesPath.push(val.value);
         step2Index = 0;
         step2Answers = {};
         classNode = locale.step2.tree;
         classStack.length = 0;
+        classPath.length = 0;
         step3Index = 0;
         step3Answers = {};
         stage = 2;
@@ -723,9 +745,7 @@ submitBtn.addEventListener('click', async () => {
       const sub = subSpeciesQuestions[currentLang][currentResult.species];
       if(sub){
         subSpeciesNode = sub;
-        speciesNode = null;
-        speciesStack.length = 0;
-        stage = 1;
+        subQuestionSpecies = currentResult.species;
         renderQuiz();
         return;
       }
@@ -747,14 +767,14 @@ submitBtn.addEventListener('click', async () => {
       const choice = classNode.options[val.value];
       if(choice.next){
         classStack.push(classNode);
+        classPath.push(val.value);
         classNode = choice.next;
         renderQuiz();
         return;
       }
       if(choice.result){
         currentResult.class = choice.result;
-        classNode = null;
-        classStack.length = 0;
+        classPath.push(val.value);
         stage = 3;
         renderQuiz();
         return;
@@ -791,7 +811,6 @@ submitBtn.addEventListener('click', async () => {
       }
       return;
     }
-    step2Index = 0;
     stage = 3;
     renderQuiz();
     return;
@@ -834,8 +853,8 @@ submitBtn.addEventListener('click', async () => {
 backBtn.addEventListener('click', () => {
   if(stage === 1 && subSpeciesNode){
     subSpeciesNode = null;
-    speciesNode = data[currentLang].step1.tree;
-    speciesStack.length = 0;
+    subQuestionSpecies = null;
+    speciesPath.pop();
     renderQuiz();
     return;
   }
@@ -846,6 +865,7 @@ backBtn.addEventListener('click', () => {
   }
   if(stage === 1 && speciesStack.length > 0){
     speciesNode = speciesStack.pop();
+    speciesPath.pop();
     renderQuiz();
     return;
   }
@@ -853,14 +873,11 @@ backBtn.addEventListener('click', () => {
     if(locale.step2.tree){
       if(classStack.length > 0){
         classNode = classStack.pop();
+        classPath.pop();
         renderQuiz();
         return;
       }
       stage = 1;
-      speciesNode = data[currentLang].step1.tree;
-      speciesStack.length = 0;
-      classNode = null;
-      classStack.length = 0;
       renderQuiz();
       return;
     }
@@ -870,17 +887,11 @@ backBtn.addEventListener('click', () => {
       return;
     }
     stage = 1;
-    speciesNode = data[currentLang].step1.tree;
-    speciesStack.length = 0;
     renderQuiz();
     return;
   }
   if(stage === 3){
     stage = 2;
-    if(locale.step2.tree){
-      classNode = locale.step2.tree;
-      classStack.length = 0;
-    }
     renderQuiz();
     return;
   }
@@ -902,12 +913,15 @@ function restartQuiz(){
   speciesNode = null;
   subSpeciesNode = null;
   speciesStack.length = 0;
+  speciesPath.length = 0;
   step2Index = 0;
   step2Answers = {};
   classNode = null;
   classStack.length = 0;
+  classPath.length = 0;
   step3Index = 0;
   step3Answers = {};
+  subQuestionSpecies = null;
   renderQuiz();
 }
 
