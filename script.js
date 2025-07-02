@@ -38,11 +38,10 @@ const subQuestionsEN = {
       'Water Genasi': 'Flowing and fluid, able to breathe underwater and swim with ease.'
     }
   },
-  Geppettin: {
+  'Geppettin (Plushie or Bisque)': {
     question: 'What kind of living toy are you?',
     options: {
       'Bisque Geppettin': 'A porcelain doll with magical elegance and vintage charm.',
-      'Marionette Geppettin': 'A lanky wooden puppet with nimble limbs and flexible joints.',
       'Plushie Geppettin': 'A soft and cuddly stuffed toy with surprising resilience.'
     }
   },
@@ -125,11 +124,10 @@ const subQuestionsPT = {
       'Water Genasi': 'Fluido e flexível, respira debaixo de água e nada com facilidade.'
     }
   },
-  Geppettin: {
+  'Geppettin (Plushie or Bisque)': {
     question: 'Que tipo de brinquedo vivo és?',
     options: {
       'Bisque Geppettin': 'Boneca de porcelana com charme antigo e magia elegante.',
-      'Marionette Geppettin': 'Marioneta esguia de madeira com membros flexíveis.',
       'Plushie Geppettin': 'Boneco de peluche fofinho e surpreendentemente resistente.'
     }
   },
@@ -386,6 +384,18 @@ submitBtn.addEventListener('click', async () => {
         return;
       }
       if(choice.result){
+        if(choice.result === 'Geppettin (Marionette)'){
+          currentResult.species = 'Marionette Geppettin';
+          speciesNode = null;
+          speciesStack.length = 0;
+          step2Index = 0;
+          step2Answers = {};
+          step3Index = 0;
+          step3Answers = {};
+          stage = 2;
+          renderQuiz();
+          return;
+        }
         const sub = subSpeciesQuestions[currentLang][choice.result];
         if(sub){
           subSpeciesNode = sub;
@@ -408,14 +418,18 @@ submitBtn.addEventListener('click', async () => {
       return;
     }
     currentResult.species = calculateSpecies();
-    const sub = subSpeciesQuestions[currentLang][currentResult.species];
-    if(sub){
-      subSpeciesNode = sub;
-      speciesNode = null;
-      speciesStack.length = 0;
-      stage = 1;
-      renderQuiz();
-      return;
+    if(currentResult.species === 'Geppettin (Marionette)'){
+      currentResult.species = 'Marionette Geppettin';
+    } else {
+      const sub = subSpeciesQuestions[currentLang][currentResult.species];
+      if(sub){
+        subSpeciesNode = sub;
+        speciesNode = null;
+        speciesStack.length = 0;
+        stage = 1;
+        renderQuiz();
+        return;
+      }
     }
     step2Index = 0;
     step2Answers = {};
