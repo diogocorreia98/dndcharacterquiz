@@ -194,6 +194,242 @@ const subQuestionsPT = {
 
 const subSpeciesQuestions = { en: subQuestionsEN, pt: subQuestionsPT };
 
+const subClassEN = {
+  Barbarian: {
+    question: 'What fuels your rage?',
+    options: {
+      'Path of the Berserker': 'I let loose in a frenzy, hitting harder the more I bleed.',
+      'Path of the Wild Heart': 'I channel the primal power of beasts to fight like wolf, bear or eagle.',
+      'Path of the World Tree': 'I draw strength from the World Tree, teleporting and healing mid-battle.',
+      'Path of the Zealot': 'I blaze with divine fury, shouting radiant oaths between strikes.',
+      'Path of the Muscle Wizard': 'I am the strongest wizard alive — my fists are spells and my rage is proof.'
+    }
+  },
+  Bard: {
+    question: 'What kind of performer are you?',
+    options: {
+      'College of Dance': 'I dance through combat with grace and power.',
+      'College of Glamour': 'I enchant crowds with glamour and dazzling charm.',
+      'College of Lore': 'I wield deadly knowledge and cutting words as weapons.',
+      'College of Valor': 'I lead warriors with bold songs and blade in hand.'
+    }
+  },
+  Cleric: {
+    question: 'What aspect of the divine do you serve?',
+    options: {
+      'Life Domain': 'I heal the broken and bring light to the dying.',
+      'Light Domain': 'I ignite darkness with holy flame and brilliance.',
+      'Trickery Domain': 'I weave divine illusions and trick my foes into defeat.',
+      'War Domain': 'I stride into battle as a warpriest of divine justice.'
+    }
+  },
+  Druid: {
+    question: 'How do you commune with nature?',
+    options: {
+      'Circle of the Land': 'I cast nature\u2019s spells drawn from forests, deserts or tundra.',
+      'Circle of the Moon': 'I become the beasts — claws, fangs, and fury.',
+      'Circle of the Storm': 'I call the tides and unleash crashing storms.',
+      'Circle of Stars': 'I glow with celestial starlight and guide through constellations.'
+    }
+  },
+  Fighter: {
+    question: 'What defines your combat style?',
+    options: {
+      Champion: 'I rely on raw skill and score brutal critical hits.',
+      'Battle Master': 'I outmaneuver my foes with tactics and precision.',
+      'Eldritch Knight': 'I mix sword and spell with arcane discipline.',
+      'Psi Warrior': 'I shape my strikes with psychic force.',
+      'Monster Hunter': 'I survive traps, monsters and dungeons with instinct and superstition.'
+    }
+  },
+  Monk: {
+    question: 'What path shapes your martial discipline?',
+    options: {
+      'Way of the Open Hand': 'I master balance and knock enemies off their feet.',
+      'Way of Shadow': 'I vanish in shadows and strike from silence.',
+      'Way of the Four Elements': 'I wield the four elements through martial motion.',
+      'Way of Mercy': 'I wear a mask, healing with one hand and punishing with the other.',
+      'Way of the Arcade': 'I fight like an arcade legend — combos, uppercuts, and air dashes.'
+    }
+  },
+  Paladin: {
+    question: 'What oath have you sworn?',
+    options: {
+      'Oath of Devotion': 'I stand for justice, honor and protection.',
+      'Oath of Glory': 'I fight with radiant glory and live to inspire.',
+      'Oath of the Ancients': 'I protect joy and nature from all that threatens it.',
+      'Oath of Vengeance': 'I hunt down evil with relentless vengeance.',
+      'Oath of Celebration': 'I bring divine partying to every battlefield.'
+    }
+  },
+  Ranger: {
+    question: 'What kind of wilderness guide are you?',
+    options: {
+      'Beast Master': 'I fight beside a loyal beast companion.',
+      'Fey Wanderer': 'I move with otherworldly charm from the Feywild.',
+      'Gloom Stalker': 'I strike unseen from the deepest shadows.',
+      Hunter: 'I adapt to every threat and dominate the terrain.'
+    }
+  },
+  Rogue: {
+    question: 'What defines your stealthy skillset?',
+    options: {
+      Spider: 'I web enemies and climb walls like a deadly spider.',
+      'Arcane Trickster': 'I blend arcane trickery with swift hands.',
+      Assassin: 'I strike before anyone knows I was there.',
+      Soulknife: 'I summon blades from thought and vanish like a ghost.',
+      Swashbuckler: 'I\u2019m fast, clever, and gone before the alarms sound.'
+    }
+  },
+  Sorcerer: {
+    question: 'Where does your power come from?',
+    options: {
+      'Aberrant Mind': 'I was touched by a mind-breaking alien force.',
+      'Clockwork Soul': 'I channel the gears of reality to enforce magical order.',
+      'Draconic Bloodline': 'My dragon blood burns with elemental power.',
+      'Wild Magic': 'I am a walking arcane explosion — wild and unpredictable.'
+    }
+  },
+  Warlock: {
+    question: 'Who grants your arcane pact?',
+    options: {
+      'Archfey Patron': 'A fey trickster blessed me with mischief and magic.',
+      'Celestial Patron': 'A radiant being gave me healing flame and hope.',
+      'Fiend Patron': 'A devil\u2019s contract fuels me with fire and fury.',
+      'Future Self': 'I\u2019m mentored by my future self — I know what comes next.',
+      'Great Old One': 'I speak to an ancient god of madness that whispers truths.'
+    }
+  },
+  Wizard: {
+    question: 'What arcane school do you specialize in?',
+    options: {
+      Abjuration: 'I shield my allies and block the worst magic.',
+      Divination: 'I twist fate and always know what\u2019s coming.',
+      Evocation: 'I unleash elemental devastation like a living spell.',
+      Illusion: 'I deceive, distract and dominate through illusion.'
+    }
+  }
+};
+
+const subClassPT = {
+  Barbarian: {
+    question: 'O que alimenta a tua f\u00faria?',
+    options: {
+      'Path of the Berserker': 'Entrego-me a uma f\u00faria desenfreada e bato mais forte quanto mais sangrar. (Path of the Berserker)',
+      'Path of the Wild Heart': 'Canalizo o poder primal das feras para lutar como lobo, urso ou \u00e1guia. (Path of the Wild Heart)',
+      'Path of the World Tree': 'Extraio for\u00e7a da \u00c1rvore do Mundo, teleportando-me e curando-me em plena batalha. (Path of the World Tree)',
+      'Path of the Zealot': 'Ardo com f\u00faria divina, gritando juramentos radiantes entre os golpes. (Path of the Zealot)',
+      'Path of the Muscle Wizard': 'Sou o feiticeiro mais forte do mundo — os meus punhos s\u00e3o feiti\u00e7os e a minha f\u00faria prova-o. (Path of the Muscle Wizard)'
+    }
+  },
+  Bard: {
+    question: 'Que tipo de artista \u00e9s?',
+    options: {
+      'College of Dance': 'Dan\u00e7o em combate com gra\u00e7a e poder. (College of Dance)',
+      'College of Glamour': 'Encanto multid\u00f5es com glamour e charme. (College of Glamour)',
+      'College of Lore': 'Uso conhecimento e palavras afiadas como armas. (College of Lore)',
+      'College of Valor': 'Lidero guerreiros com can\u00e7\u00f5es ousadas e espada em punho. (College of Valor)'
+    }
+  },
+  Cleric: {
+    question: 'Que aspecto do divino serves?',
+    options: {
+      'Life Domain': 'Curo os feridos e levo luz aos moribundos. (Life Domain)',
+      'Light Domain': 'Ateio fogo \u00e0 escurid\u00e3o com chama sagrada. (Light Domain)',
+      'Trickery Domain': 'Tecelo ilus\u00f5es divinas e engano os inimigos. (Trickery Domain)',
+      'War Domain': 'Marcho para a guerra como sacerdote da justi\u00e7a. (War Domain)'
+    }
+  },
+  Druid: {
+    question: 'Como comunicas com a natureza?',
+    options: {
+      'Circle of the Land': 'Lan\u00e7o feiti\u00e7os inspirados em florestas, desertos ou tundra. (Circle of the Land)',
+      'Circle of the Moon': 'Torno-me nas feras — garras, presas e f\u00faria. (Circle of the Moon)',
+      'Circle of the Storm': 'Invoco as mar\u00e9s e lan\u00e7o tempestades violentas. (Circle of the Storm)',
+      'Circle of Stars': 'Brilho com luz estelar e guio pelas constela\u00e7\u00f5es. (Circle of Stars)'
+    }
+  },
+  Fighter: {
+    question: 'O que define o teu estilo de combate?',
+    options: {
+      Champion: 'Confio na habilidade pura e acerto golpes brutais. (Champion)',
+      'Battle Master': 'Supero inimigos com t\u00e1tica e precis\u00e3o. (Battle Master)',
+      'Eldritch Knight': 'Misturo espada e magia com disciplina arcana. (Eldritch Knight)',
+      'Psi Warrior': 'Moldo os golpes com for\u00e7a ps\u00edquica. (Psi Warrior)',
+      'Monster Hunter': 'Sobrevivo a armadilhas e monstros por instinto. (Monster Hunter)'
+    }
+  },
+  Monk: {
+    question: 'Que caminho guia a tua disciplina marcial?',
+    options: {
+      'Way of the Open Hand': 'Domino o equil\u00edbrio e derrubo advers\u00e1rios. (Way of the Open Hand)',
+      'Way of Shadow': 'Desapare\u00e7o nas sombras e ataco do silêncio. (Way of Shadow)',
+      'Way of the Four Elements': 'Control\u00f5 os quatro elementos com o movimento. (Way of the Four Elements)',
+      'Way of Mercy': 'Uso uma m\u00e1scara, curando e punindo. (Way of Mercy)',
+      'Way of the Arcade': 'Luto como uma lenda dos arcades — combos e uppercuts. (Way of the Arcade)'
+    }
+  },
+  Paladin: {
+    question: 'Que juramento fizeste?',
+    options: {
+      'Oath of Devotion': 'Defendo a justi\u00e7a, a honra e a prote\u00e7\u00e3o. (Oath of Devotion)',
+      'Oath of Glory': 'Combato com gl\u00f3ria radiante e inspiro. (Oath of Glory)',
+      'Oath of the Ancients': 'Protejo a alegria e a natureza de todo o mal. (Oath of the Ancients)',
+      'Oath of Vengeance': 'Ca\u00e7o o mal com vingan\u00e7a implac\u00e1vel. (Oath of Vengeance)',
+      'Oath of Celebration': 'Levo a festa divina a todos os campos de batalha. (Oath of Celebration)'
+    }
+  },
+  Ranger: {
+    question: 'Que tipo de guia selvagem és?',
+    options: {
+      'Beast Master': 'Combato ao lado de um companheiro animal fiel. (Beast Master)',
+      'Fey Wanderer': 'Movo-me com charme sobrenatural do Feywild. (Fey Wanderer)',
+      'Gloom Stalker': 'Ataque invis\u00edvel das sombras profundas. (Gloom Stalker)',
+      Hunter: 'Adapto-me a todas as amea\u00e7as e domino o terreno. (Hunter)'
+    }
+  },
+  Rogue: {
+    question: 'O que define as tuas habilidades furtivas?',
+    options: {
+      Spider: 'Enredo inimigos e escalo paredes como uma aranha mortal. (Spider)',
+      'Arcane Trickster': 'Misturo travessuras arcanas com m\u00e3os r\u00e1pidas. (Arcane Trickster)',
+      Assassin: 'Golpeio antes que percebam a minha presen\u00e7a. (Assassin)',
+      Soulknife: 'Invoco l\u00e2minas do pensamento e desvane\u00e7o-me como um fantasma. (Soulknife)',
+      Swashbuckler: 'Sou r\u00e1pido, esperto e desapare\u00e7o antes do alarme soar. (Swashbuckler)'
+    }
+  },
+  Sorcerer: {
+    question: 'De onde vem o teu poder?',
+    options: {
+      'Aberrant Mind': 'Fui tocado por uma for\u00e7a alien\u00edgena e enlouquecedora. (Aberrant Mind)',
+      'Clockwork Soul': 'Canalizo as engrenagens da realidade para impor ordem m\u00e1gica. (Clockwork Soul)',
+      'Draconic Bloodline': 'O meu sangue drac\u00f3nico arde com poder elemental. (Draconic Bloodline)',
+      'Wild Magic': 'Sou uma explos\u00e3o arcana ambulante — ca\u00f3tica e imprevis\u00edvel. (Wild Magic)'
+    }
+  },
+  Warlock: {
+    question: 'Quem te concedeu o pacto arcano?',
+    options: {
+      'Archfey Patron': 'Uma fada trapaceira aben\u00e7oou-me com magia e travessura. (Archfey Patron)',
+      'Celestial Patron': 'Um ser radiante concedeu-me chamas curativas e esperan\u00e7a. (Celestial Patron)',
+      'Fiend Patron': 'Um pacto demon\u00edaco alimenta-me com fogo e f\u00faria. (Fiend Patron)',
+      'Future Self': 'Sou orientado pelo meu futuro eu — sei o que est\u00e1 para vir. (Future Self)',
+      'Great Old One': 'Falo com um deus antigo de loucura que sussurra verdades. (Great Old One)'
+    }
+  },
+  Wizard: {
+    question: 'Em que escola arcana te especializaste?',
+    options: {
+      Abjuration: 'Protejo aliados e bloqueio a pior magia. (Abjuration)',
+      Divination: 'Tor\u00e7o o destino e sei sempre o que est\u00e1 para acontecer. (Divination)',
+      Evocation: 'Liberto devasta\u00e7\u00e3o elemental como uma magia viva. (Evocation)',
+      Illusion: 'Engano, distraio e domino atrav\u00e9s de ilus\u00e3o. (Illusion)'
+    }
+  }
+};
+
+const subClassQuestions = { en: subClassEN, pt: subClassPT };
+
 function updateStaticText(){
   document.title = miscText[currentLang].quizTitle;
   titleEl.textContent = miscText[currentLang].quizTitle;
@@ -268,6 +504,17 @@ function renderQuiz() {
     html += '</section>';
     submitBtn.textContent = step2Index === step.questions.length - 1 ? (currentLang === 'pt' ? 'Avançar' : 'Next') : (currentLang === 'pt' ? 'Avançar' : 'Next');
   } else if(stage === 3){
+    const sub = subClassQuestions[currentLang][currentResult.class];
+    html += `<h2>${currentLang === 'pt' ? 'Subclasse' : 'Subclass'}</h2>`;
+    html += `<section><p>${sub.question}</p>`;
+    for(const key in sub.options){
+      const id = `sc_${key}`;
+      const checked = currentResult.subclass === key ? ' checked' : '';
+      html += `<label><input type="radio" name="subclass" value="${key}" id="${id}"${checked}> ${strip(sub.options[key])}</label>`;
+    }
+    html += '</section>';
+    submitBtn.textContent = currentLang === 'pt' ? 'Avançar' : 'Next';
+  } else if(stage === 4){
     const step = locale.step3;
     const classData = step.classes[currentResult.class];
     const q = classData.questions[step3Index];
@@ -469,6 +716,17 @@ submitBtn.addEventListener('click', async () => {
     return;
   }
   if(stage === 3){
+    const sub = subClassQuestions[currentLang][currentResult.class];
+    const val = document.querySelector('input[name="subclass"]:checked');
+    if(!val) return;
+    currentResult.subclass = val.value;
+    stage = 4;
+    step3Index = 0;
+    step3Answers = {};
+    renderQuiz();
+    return;
+  }
+  if(stage === 4){
     const classData = locale.step3.classes[currentResult.class];
     const val = document.querySelector(`input[name="s3q${step3Index}"]:checked`);
     if(!val) return;
@@ -479,7 +737,7 @@ submitBtn.addEventListener('click', async () => {
       return;
     }
     const background = calculateBackground(currentResult.class);
-    sessionStorage.setItem('dndResults', JSON.stringify({species:currentResult.species, class:currentResult.class, background, lang:currentLang}));
+    sessionStorage.setItem('dndResults', JSON.stringify({species:currentResult.species, class:currentResult.class, subclass:currentResult.subclass, background, lang:currentLang}));
     window.location.href = 'results.html';
   }
 });
@@ -515,13 +773,17 @@ backBtn.addEventListener('click', () => {
     return;
   }
   if(stage === 3){
+    stage = 2;
+    renderQuiz();
+    return;
+  }
+  if(stage === 4){
     if(step3Index > 0){
       step3Index--;
       renderQuiz();
       return;
     }
-    stage = 2;
-    step2Index = data[currentLang].step2.questions.length - 1;
+    stage = 3;
     renderQuiz();
     return;
   }
