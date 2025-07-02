@@ -469,6 +469,8 @@ const speciesStack = [];
 let subSpeciesNode = null;
 let step2Index = 0;
 let step2Answers = {};
+let classNode = null;
+const classStack = [];
 let step3Index = 0;
 let step3Answers = {};
 
@@ -519,16 +521,28 @@ function renderQuiz() {
     }
   } else if(stage === 2){
     const step = locale.step2;
-    const q = step.questions[step2Index];
     html += `<h2>${step.title}</h2>`;
-    html += `<section><p>${q.text}</p>`;
-    for (const key in q.options) {
-      const id = `s2q${step2Index}_${key}`;
-      const checked = step2Answers[step2Index] === key ? ' checked' : '';
-      html += `<label><input type="radio" name="s2q${step2Index}" value="${key}" id="${id}"${checked}> ${strip(q.options[key])}</label>`;
+    if(step.tree){
+      if(!classNode) classNode = step.tree;
+      html += `<section><p>${classNode.question}</p>`;
+      for(const key in classNode.options){
+        const id = `s2_${key}`;
+        const opt = classNode.options[key];
+        html += `<label><input type="radio" name="s2" value="${key}" id="${id}"> ${strip(opt.label)}</label>`;
+      }
+      html += '</section>';
+      submitBtn.textContent = currentLang === 'pt' ? 'Avançar' : 'Next';
+    } else {
+      const q = step.questions[step2Index];
+      html += `<section><p>${q.text}</p>`;
+      for (const key in q.options) {
+        const id = `s2q${step2Index}_${key}`;
+        const checked = step2Answers[step2Index] === key ? ' checked' : '';
+        html += `<label><input type="radio" name="s2q${step2Index}" value="${key}" id="${id}"${checked}> ${strip(q.options[key])}</label>`;
+      }
+      html += '</section>';
+      submitBtn.textContent = step2Index === step.questions.length - 1 ? (currentLang === 'pt' ? 'Avançar' : 'Next') : (currentLang === 'pt' ? 'Avançar' : 'Next');
     }
-    html += '</section>';
-    submitBtn.textContent = step2Index === step.questions.length - 1 ? (currentLang === 'pt' ? 'Avançar' : 'Next') : (currentLang === 'pt' ? 'Avançar' : 'Next');
   } else if(stage === 3){
     const sub = subClassQuestions[currentLang][currentResult.class];
     html += `<h2>${currentLang === 'pt' ? 'Subclasse' : 'Subclass'}</h2>`;
@@ -557,7 +571,7 @@ function renderQuiz() {
   quizDiv.innerHTML = html;
   window.scrollTo(0,0);
   submitBtn.style.display = 'block';
-  backBtn.style.display = stage > 0 || speciesStack.length > 0 || subSpeciesNode ? 'block' : 'none';
+  backBtn.style.display = stage > 0 || speciesStack.length > 0 || subSpeciesNode || classStack.length > 0 ? 'block' : 'none';
   backBtn.textContent = currentLang === 'pt' ? 'Recuar' : 'Back';
   restartBtn.textContent = labels[currentLang].restart;
 }
@@ -571,6 +585,8 @@ langSelect.addEventListener('change', () => {
   speciesStack.length = 0;
   step2Index = 0;
   step2Answers = {};
+  classNode = null;
+  classStack.length = 0;
   step3Index = 0;
   step3Answers = {};
   updateStaticText();
@@ -640,6 +656,8 @@ submitBtn.addEventListener('click', async () => {
       speciesStack.length = 0;
       step2Index = 0;
       step2Answers = {};
+      classNode = locale.step2.tree;
+      classStack.length = 0;
       step3Index = 0;
       step3Answers = {};
       stage = 2;
@@ -667,6 +685,8 @@ submitBtn.addEventListener('click', async () => {
           speciesStack.length = 0;
           step2Index = 0;
           step2Answers = {};
+          classNode = locale.step2.tree;
+          classStack.length = 0;
           step3Index = 0;
           step3Answers = {};
           stage = 2;
@@ -686,6 +706,8 @@ submitBtn.addEventListener('click', async () => {
         speciesStack.length = 0;
         step2Index = 0;
         step2Answers = {};
+        classNode = locale.step2.tree;
+        classStack.length = 0;
         step3Index = 0;
         step3Answers = {};
         stage = 2;
@@ -710,6 +732,8 @@ submitBtn.addEventListener('click', async () => {
     }
     step2Index = 0;
     step2Answers = {};
+    classNode = locale.step2.tree;
+    classStack.length = 0;
     step3Index = 0;
     step3Answers = {};
     stage = 2;
@@ -717,6 +741,26 @@ submitBtn.addEventListener('click', async () => {
     return;
   }
   if(stage === 2){
+    if(locale.step2.tree){
+      const val = document.querySelector('input[name="s2"]:checked');
+      if(!val) return;
+      const choice = classNode.options[val.value];
+      if(choice.next){
+        classStack.push(classNode);
+        classNode = choice.next;
+        renderQuiz();
+        return;
+      }
+      if(choice.result){
+        currentResult.class = choice.result;
+        classNode = null;
+        classStack.length = 0;
+        stage = 3;
+        renderQuiz();
+        return;
+      }
+      return;
+    }
     const q = locale.step2.questions[step2Index];
     const val = document.querySelector(`input[name="s2q${step2Index}"]:checked`);
     if(!val) return;
@@ -806,6 +850,20 @@ backBtn.addEventListener('click', () => {
     return;
   }
   if(stage === 2){
+    if(locale.step2.tree){
+      if(classStack.length > 0){
+        classNode = classStack.pop();
+        renderQuiz();
+        return;
+      }
+      stage = 1;
+      speciesNode = data[currentLang].step1.tree;
+      speciesStack.length = 0;
+      classNode = null;
+      classStack.length = 0;
+      renderQuiz();
+      return;
+    }
     if(step2Index > 0){
       step2Index--;
       renderQuiz();
@@ -819,6 +877,10 @@ backBtn.addEventListener('click', () => {
   }
   if(stage === 3){
     stage = 2;
+    if(locale.step2.tree){
+      classNode = locale.step2.tree;
+      classStack.length = 0;
+    }
     renderQuiz();
     return;
   }
@@ -842,6 +904,8 @@ function restartQuiz(){
   speciesStack.length = 0;
   step2Index = 0;
   step2Answers = {};
+  classNode = null;
+  classStack.length = 0;
   step3Index = 0;
   step3Answers = {};
   renderQuiz();

@@ -1468,84 +1468,41 @@ const data = {
     },
     step2: {
       title: 'Que Classe Combina Contigo?',
-      questions: [
-        {
-          text: '1. Qual o nível de complexidade que preferes ao jogar?',
-          options: {
-            A: 'Quero algo direto — entrar em combate, causar estragos e seguir em frente. (Barbarian — complexidade média)',
-            B: 'Gosto de ter várias formas de apoiar a equipa e lançar feitiços criativos. (Bard — complexidade alta)',
-            C: 'Quero um bom equilíbrio entre ajudar os outros e lançar magias poderosas. (Cleric — complexidade média)',
-            D: 'Gosto de ter muitas opções e adaptar o meu estilo à situação. (Druid — complexidade alta)',
-            E: 'Prefiro ações simples e eficazes, sem complicações. (Fighter — complexidade baixa)',
-            F: 'Quero um desafio técnico, com movimentos rápidos e decisões táticas. (Monk — complexidade alta)',
-            G: 'Gosto de combinar combate físico com poderes sagrados de forma equilibrada. (Paladin — complexidade média)',
-            H: 'Quero ter habilidades práticas, alguma magia útil e um papel versátil. (Ranger — complexidade média)',
-            I: 'Prefiro ser rápido, discreto e eficaz — sem perder tempo. (Rogue — complexidade baixa)',
-            J: 'Quero lançar magias intensas e únicas com estilo. (Sorcerer — complexidade alta)',
-            K: 'Gosto de escolhas únicas e poderes misteriosos com impacto. (Warlock — complexidade alta)',
-            L: 'Quero acesso a muitas magias diferentes e planear cada jogada. (Wizard — complexidade média)'
-          }
-        },
-        {
-          text: '2. Em combate, que tipo de experiência gostarias de ter?',
-          options: {
-            A: 'Avançar de cabeça, sentir o impacto de cada golpe e estar sempre na linha da frente. (Barbarian — direto e brutal)',
-            B: 'Usar música ou palavras para ajudar os aliados e brilhar com estilo. (Bard — criativo e social)',
-            C: 'Ser o pilar da equipa: proteger, curar e castigar com magia divina. (Cleric — firme e equilibrado)',
-            D: 'Transformar-me, controlar o campo e adaptar-me a tudo. (Druid — versátil e natural)',
-            E: 'Atuar com precisão, usar qualquer arma e nunca ser apanhado desprevenido. (Fighter — técnico e fiável)',
-            F: 'Atacar com velocidade e desaparecer antes que me toquem. (Monk — ágil e desafiante)',
-            G: 'Lutar com honra, proteger aliados e aplicar justiça sagrada. (Paladin — nobre e poderoso)',
-            H: 'Controlar o campo à distância e caçar com precisão. (Ranger — tático e calculista)',
-            I: 'Atacar no momento certo e desaparecer nas sombras. (Rogue — furtivo e oportunista)',
-            J: 'Lançar feitiços explosivos e sentir o poder a vibrar em mim. (Sorcerer — intenso e imprevisível)',
-            K: 'Usar magias únicas e sentir que cada feitiço tem peso e estilo. (Warlock — misterioso e focado)',
-            L: 'Controlar tudo à distância com magia bem escolhida e precisa. (Wizard — cerebral e estratégico)'
-          }
-        },
-        {
-          text: '3. Fora de combate, que papel gostarias de assumir?',
-          options: {
-            A: 'Intimidar, abrir caminho e resolver as coisas com força bruta. (Barbarian)',
-            B: 'Encantar com palavras, animar o grupo e liderar com carisma. (Bard)',
-            C: 'Partilhar sabedoria, aconselhar com fé e proteger espiritualmente. (Cleric)',
-            D: 'Guiar pelos caminhos da natureza, cuidar e resolver com calma. (Druid)',
-            E: 'Tomar decisões táticas e ser o braço forte do grupo. (Fighter)',
-            F: 'Ser o mensageiro silencioso ou o protetor ágil dos segredos. (Monk)',
-            G: 'Representar os valores do grupo com firmeza e inspiração. (Paladin)',
-            H: 'Liderar em explorações, rastrear inimigos e sobreviver em qualquer ambiente. (Ranger)',
-            I: 'Desarmar armadilhas, roubar discretamente ou infiltrar-me. (Rogue)',
-            J: 'Ser o improvisador mágico que encontra soluções inesperadas. (Sorcerer)',
-            K: 'Investigar mistérios, negociar com entidades e manipular forças ocultas. (Warlock)',
-            L: 'Decifrar enigmas, planear estratégias e resolver desafios com lógica. (Wizard)'
-          }
-        },
-        {
-          text: '4. Que tipo de magia (ou poder especial) gostarias que a tua personagem tivesse, tendo em conta quantas vezes a podes usar e quantas magias diferentes podes aprender?',
-          options: {
-            A: 'Nenhuma — prefiro resolver tudo com as minhas próprias mãos. (Barbarian)',
-            B: 'Quero ter acesso a muitos truques diferentes e usá-los de forma criativa para ajudar a equipa. (Bard)',
-            C: 'Quero ter várias magias úteis, especialmente para curar, proteger e expulsar o mal. (Cleric)',
-            D: 'Gosto da ideia de ter muitas magias ligadas à natureza e poder escolher as mais úteis a cada dia. (Druid)',
-            E: 'Não me interessa magia — prefiro dominar armas e usar tática pura. (Fighter)',
-            F: 'Não lanço feitiços normais, mas gosto de usar energia interior para fazer coisas incríveis com o corpo. (Monk)',
-            G: 'Quero ter alguns poderes sagrados para reforçar os meus ataques com luz divina. (Paladin)',
-            H: 'Quero magias simples que me ajudem a explorar e enfrentar a natureza. (Ranger)',
-            I: 'Não quero saber de feitiços — prefiro agir com engenho e rapidez. (Rogue)',
-            J: 'Quero lançar magias poderosas muitas vezes por dia, mesmo que tenha poucas para escolher. (Sorcerer)',
-            K: 'Gosto de ter magias especiais que posso usar poucas vezes de cada vez, mas que recuperam rápido. (Warlock)',
-            L: 'Quero ter acesso a uma enorme variedade de magias e preparar o que for mais útil todos os dias. (Wizard)'
-          }
+      tree: {
+        question: 'Qual o nível de complexidade que preferes para a tua personagem?',
+        options: {
+          A: { label: 'O mínimo possível — quero algo simples e direto.', next: {
+            question: 'Que estilo te atrai mais?',
+            options: {
+              A: { label: 'Força bruta e fúria pura. (Barbarian)', result: 'Barbarian' },
+              B: { label: 'Perícia marcial e adaptabilidade. (Fighter)', result: 'Fighter' },
+              C: { label: 'Furtividade, velocidade e precisão. (Rogue)', result: 'Rogue' }
+            }
+          }},
+          B: { label: 'Uma abordagem equilibrada — gosto de variedade sem demasiada complexidade.', next: {
+            question: 'Que estilo equilibrado soa mais apelativo?',
+            options: {
+              A: { label: 'Cura e apoio divino em combate. (Cleric)', result: 'Cleric' },
+              B: { label: 'Um guerreiro sagrado que inspira e defende. (Paladin)', result: 'Paladin' },
+              C: { label: 'Um rastreador habilidoso com magia prática. (Ranger)', result: 'Ranger' },
+              D: { label: 'Um mestre de muitas magias com boa preparação. (Wizard)', result: 'Wizard' }
+            }
+          }},
+          C: { label: 'Gosto de dominar sistemas complexos e desafios.', next: {
+            question: 'Que papel complexo te atrai?',
+            options: {
+              A: { label: 'Um mago da natureza que muda de forma. (Druid)', result: 'Druid' },
+              B: { label: 'Um artista marcial rápido com poder interior. (Monk)', result: 'Monk' },
+              C: { label: 'Um artista estiloso que lança feitiços com charme. (Bard)', result: 'Bard' },
+              D: { label: 'Um poderoso conjurador inato. (Sorcerer)', result: 'Sorcerer' },
+              E: { label: 'Um conjurador ligado a um pacto com magia misteriosa. (Warlock)', result: 'Warlock' }
+            }
+          }}
         }
-      ],
-      mapping: {
-        A: 'Barbarian', B: 'Bard', C: 'Cleric', D: 'Druid', E: 'Fighter',
-        F: 'Monk', G: 'Paladin', H: 'Ranger', I: 'Rogue', J: 'Sorcerer',
-        K: 'Warlock', L: 'Wizard'
       }
     },
-    step3: step3pt,
   },
+    step3: step3pt,
   en: {
     step1: {
       title: 'Which species would you like to play as?',
@@ -1630,125 +1587,40 @@ const data = {
               }},
               D: { label: 'Aquatic', next: {
                 question: 'Which description fits best?',
-                options: {
-                  A: { label: 'Sleek elf with fins or gills?', result: 'Sea Elf' },
-                  B: { label: 'Scaled oceanic warrior with trident?', result: 'Triton' }
-                }
-              }},
-              E: { label: 'Constructed, elemental, or plant-based', next: {
-                question: 'Which description fits best?',
-                options: {
-                  A: { label: 'Puppet-like body, wood or jointed limbs?', result: 'Geppettin (Marionette)' },
-                  B: { label: 'Skin like bark or covered in leaves?', result: 'Mandrake' },
-                  C: { label: 'Body made of flame, mist, rock or water?', result: 'Genasi' }
-                }
-              }}
-            }
-          }},
-          D: { label: 'Tall', next: {
-            question: 'Choose the best description:',
-            options: {
-              A: { label: 'Dragon-headed with breath weapon?', result: 'Dragonborn' },
-              B: { label: 'Lizard-faced with tail and frill?', result: 'Lizardfolk' },
-              C: { label: 'Upright with snake features?', result: 'Yuan-ti' },
-              D: { label: 'Tall, tusked tribal warrior?', result: 'Orc' },
-              E: { label: 'Bull-headed, horned, hoofed but with human torso and hands?', result: 'Minotaur' },
-              F: { label: 'Goat legs, horns, musical joy?', result: 'Satyr' },
-              G: { label: 'Pale warrior with sharp features?', result: 'Githyanki' },
-              H: { label: 'Calm with yellow-green skin?', result: 'Githzerai' },
-              I: { label: 'Plant-bodied humanoid with bark skin?', result: 'Mandrake' },
-              J: { label: 'Elf with changing seasonal look?', result: 'Eladrin' }
-            }
-          }},
-          E: { label: 'Very tall', next: {
-            question: 'Choose the best description:',
-            options: {
-              A: { label: 'Hairy giant with long arms and fangs?', result: 'Bugbear' },
-              B: { label: 'Horse body and human torso?', result: 'Centaur' },
-              C: { label: 'Muscular and marked like stone?', result: 'Goliath' },
-              D: { label: 'Mossy, blue-skinned forest giant?', result: 'Firbolg' },
-              E: { label: 'Fully grown walking tree or bark-covered humanoid?', result: 'Mandrake' }
-            }
-          }}
-        }
-      }
     },
     step2: {
       title: 'Which Class Fits You?',
-      questions: [
-        {
-          text: '1. What level of complexity do you prefer when playing?',
-          options: {
-            A: 'I want something straightforward—charge into combat, wreak havoc and move on. (Barbarian — medium complexity)',
-            B: 'I enjoy having many ways to support the party and cast creative spells. (Bard — high complexity)',
-            C: 'I want a good balance between helping others and casting powerful magic. (Cleric — medium complexity)',
-            D: 'I like having many options and adapting my style to the situation. (Druid — high complexity)',
-            E: 'I prefer simple and effective actions, no fuss. (Fighter — low complexity)',
-            F: 'I want a technical challenge with quick moves and tactical decisions. (Monk — high complexity)',
-            G: 'I like mixing physical combat with holy powers in a balanced way. (Paladin — medium complexity)',
-            H: 'I want practical skills, some useful magic and a versatile role. (Ranger — medium complexity)',
-            I: "I'd rather be quick, stealthy and efficient—no time to waste. (Rogue — low complexity)",
-            J: 'I want to cast intense, unique spells with flair. (Sorcerer — high complexity)',
-            K: 'I like unique choices and mysterious powers that make an impact. (Warlock — high complexity)',
-            L: 'I want access to many different spells and plan every move. (Wizard — medium complexity)'
-          }
-        },
-        {
-          text: '2. In combat, what kind of experience would you like?',
-          options: {
-            A: 'Charge in, feel each blow and always be on the frontline. (Barbarian — direct and brutal)',
-            B: 'Use music or words to aid allies and shine with style. (Bard — creative and social)',
-            C: "Be the team's pillar: protect, heal and smite with divine magic. (Cleric — steady and balanced)",
-            D: 'Shape-shift, control the field and adapt to anything. (Druid — versatile and natural)',
-            E: 'Act with precision, wield any weapon and never be caught off-guard. (Fighter — technical and reliable)',
-            F: 'Strike quickly and vanish before they can touch me. (Monk — agile and challenging)',
-            G: 'Fight with honor, shield allies and deliver righteous justice. (Paladin — noble and powerful)',
-            H: 'Control the field from afar and hunt with precision. (Ranger — tactical and calculating)',
-            I: 'Strike at the right moment and disappear in the shadows. (Rogue — stealthy and opportunistic)',
-            J: 'Cast explosive spells and feel power thrumming within. (Sorcerer — intense and unpredictable)',
-            K: 'Use unique spells and feel that each one carries weight and style. (Warlock — mysterious and focused)',
-            L: 'Control everything from afar with well-chosen and precise magic. (Wizard — cerebral and strategic)'
-          }
-        },
-        {
-          text: '3. Outside combat, what role would you like to take?',
-          options: {
-            A: 'Intimidate, clear the way and solve things with brute force. (Barbarian)',
-            B: 'Charm with words, cheer the group and lead with charisma. (Bard)',
-            C: 'Share wisdom, advise faithfully and offer spiritual protection. (Cleric)',
-            D: "Guide through nature's paths, care and resolve calmly. (Druid)",
-            E: 'Make tactical decisions and be the strong arm of the party. (Fighter)',
-            F: 'Be the silent messenger or agile guardian of secrets. (Monk)',
-            G: 'Represent the group\'s values with firmness and inspiration. (Paladin)',
-            H: 'Lead explorations, track foes and survive in any environment. (Ranger)',
-            I: 'Disarm traps, steal discreetly or infiltrate. (Rogue)',
-            J: 'Be the magical improviser who finds unexpected solutions. (Sorcerer)',
-            K: 'Investigate mysteries, bargain with entities and manipulate occult forces. (Warlock)',
-            L: 'Decipher puzzles, plan strategies and tackle challenges logically. (Wizard)'
-          }
-        },
-        {
-          text: '4. What kind of magic (or special power) would you like your character to have, considering how often you can use it and how many different spells you can learn?',
-          options: {
-            A: 'None—I prefer to solve everything with my own hands. (Barbarian)',
-            B: 'I want access to many different tricks and use them creatively to help the team. (Bard)',
-            C: 'I want several useful spells, mainly to heal, protect and drive away evil. (Cleric)',
-            D: 'I like the idea of having many nature-related spells and being able to pick the most useful each day. (Druid)',
-            E: "I'm not interested in magic—I prefer mastering weapons and pure tactics. (Fighter)",
-            F: "I don't cast normal spells but I enjoy using inner energy to achieve amazing feats. (Monk)",
-            G: 'I want a few holy powers to enhance my attacks with divine light. (Paladin)',
-            H: 'I want simple spells that help me explore and face the wilderness. (Ranger)',
-            I: "I don't care for spells—I prefer acting with skill and speed. (Rogue)",
-            J: 'I want to cast powerful spells many times a day, even if I have few choices. (Sorcerer)',
-            K: 'I like special spells I can use a few times at a time but that recharge quickly. (Warlock)',
-            L: 'I want access to a huge variety of spells and prepare what is most useful each day. (Wizard)'
-          }
+      tree: {
+        question: 'What level of complexity do you prefer in your character?',
+        options: {
+          A: { label: 'As little as possible — I want something simple and direct.', next: {
+            question: 'Which style appeals most to you?',
+            options: {
+              A: { label: 'Brutal force and raw rage. (Barbarian)', result: 'Barbarian' },
+              B: { label: 'Martial expertise and adaptability. (Fighter)', result: 'Fighter' },
+              C: { label: 'Stealth, speed, and precision. (Rogue)', result: 'Rogue' }
+            }
+          }},
+          B: { label: 'A balanced approach — I enjoy variety without too much complexity.', next: {
+            question: 'Which balanced style sounds most appealing?',
+            options: {
+              A: { label: 'Healing and divine support in battle. (Cleric)', result: 'Cleric' },
+              B: { label: 'A holy warrior who inspires and defends. (Paladin)', result: 'Paladin' },
+              C: { label: 'A skilled tracker with practical magic. (Ranger)', result: 'Ranger' },
+              D: { label: 'A master of many spells with good preparation. (Wizard)', result: 'Wizard' }
+            }
+          }},
+          C: { label: 'I enjoy mastering complex systems and challenges.', next: {
+            question: 'Which complex role are you drawn to?',
+            options: {
+              A: { label: 'A shape-shifting nature mage. (Druid)', result: 'Druid' },
+              B: { label: 'A fast-paced martial artist with inner power. (Monk)', result: 'Monk' },
+              C: { label: 'A stylish performer who casts spells with flair. (Bard)', result: 'Bard' },
+              D: { label: 'A powerful innate spellcaster. (Sorcerer)', result: 'Sorcerer' },
+              E: { label: 'A pact-bound spellcaster with mysterious magic. (Warlock)', result: 'Warlock' }
+            }
+          }}
         }
-      ],
-      mapping: {
-        A: 'Barbarian', B: 'Bard', C: 'Cleric', D: 'Druid', E: 'Fighter',
-        F: 'Monk', G: 'Paladin', H: 'Ranger', I: 'Rogue', J: 'Sorcerer',
-        K: 'Warlock', L: 'Wizard'
       }
     },
     step3: step3en,
