@@ -41,7 +41,21 @@
     container.appendChild(section);
   }
 
-  makeSection(labels[lang].Species, species, speciesInfo[lang][species] || '', 'races', undefined, 'species');
+  function localizeInfo(info, cat){
+    if(lang !== 'pt' || !info) return info;
+    const map = nameMap[lang] && nameMap[lang][cat];
+    if(!map) return info;
+    return info.replace(/\b([A-Za-z'()\- ]+)\b/g, m => map[m] || m);
+  }
+
+  makeSection(
+    labels[lang].Species,
+    species,
+    localizeInfo(speciesInfo[lang][species] || '', 'species'),
+    'races',
+    undefined,
+    'species'
+  );
   const className = nameMap[lang].classes[clazz] || clazz;
   let subclassName = subclass ? subclass : '';
   if(subclass && nameMap[lang].subclasses){
@@ -53,8 +67,23 @@
       ? `${className} ${subclassName}`
       : `${subclassName} ${className}`;
   }
-  makeSection(labels[lang].Class, clazz, classInfo[lang][clazz] || '', 'classes', 'xphb', 'classes', displayClass);
-  makeSection(labels[lang].Background, background, backgroundInfo[lang][background] || '', 'backgrounds', 'xphb', 'backgrounds');
+  makeSection(
+    labels[lang].Class,
+    clazz,
+    localizeInfo(classInfo[lang][clazz] || '', 'classes'),
+    'classes',
+    'xphb',
+    'classes',
+    displayClass
+  );
+  makeSection(
+    labels[lang].Background,
+    background,
+    localizeInfo(backgroundInfo[lang][background] || '', 'backgrounds'),
+    'backgrounds',
+    'xphb',
+    'backgrounds'
+  );
 
   const genderMap = {F:'female', M:'male', A:'androgynous'};
   const poseHints = {
@@ -110,12 +139,23 @@
     'Way of the Open Hand':'balanced stance, one hand open and extended in peace, the other clenched and ready'
   };
 
-  const heightText = height || 'average height';
+  const heightMapEn = {
+    'Muito baixa':'very short',
+    'Baixa':'short',
+    'Altura média':'average height',
+    'Alta':'tall',
+    'Muito alta':'very tall'
+  };
+  const heightText = heightMapEn[height] || height || 'average height';
   const pose = poseHints[subclass] ? ', ' + poseHints[subclass] : '';
-  const speciesName = nameMap[lang].species[species] || species;
-  const backgroundName = nameMap[lang].backgrounds[background] || background;
-  const promptClass = displayClass;
-  const prompt = `A ${genderMap[gender] || ''} ${speciesName}, standing ${heightText}, dressed in a way that reflects their role as a ${promptClass}. Their look shows traits of a ${backgroundName} — with appropriate gear or attitude. Dynamic fantasy character portrait${pose}, high detail, cinematic lighting, full body or 3/4 view. Dungeons & Dragons-inspired.`;
+
+  const classNameEn = clazz;
+  const subclassNameEn = subclass || '';
+  const displayClassEn = subclass ? `${subclassNameEn} ${classNameEn}` : classNameEn;
+
+  const promptSpecies = species;
+  const promptBackground = background;
+  const prompt = `A ${genderMap[gender] || ''} ${promptSpecies}, standing ${heightText}, dressed in a way that reflects their role as a ${displayClassEn}. Their look shows traits of a ${promptBackground} — with appropriate gear or attitude. Dynamic fantasy character portrait${pose}, high detail, cinematic lighting, full body or 3/4 view. Dungeons & Dragons-inspired.`;
 
   const promptTitle = document.createElement('h2');
   promptTitle.textContent = miscText[lang].promptIntro;
