@@ -3,7 +3,7 @@
   const restartBtn = document.getElementById('restart');
   const titleEl = document.querySelector('h1');
   const stored = sessionStorage.getItem('dndResults');
-  const {species, class:clazz, background, lang = 'en'} = stored ? JSON.parse(stored) : {lang:'en'};
+  const {species, class:clazz, subclass, background, lang = 'en'} = stored ? JSON.parse(stored) : {lang:'en'};
   document.title = miscText[lang].resultsTitle;
   titleEl.textContent = miscText[lang].resultsTitle;
   if(!stored){
@@ -18,13 +18,14 @@
     'Halfling','Human','Orc','Tiefling'
   ]);
 
-  function makeSection(label, value, info, type, source, cat){
+  function makeSection(label, value, info, type, source, cat, displayOverride){
     const section = document.createElement('div');
     const text = document.createElement('p');
     let displayValue = value && value !== 'N/A' ? value : miscText[lang].notChosen;
     if(value && value !== 'N/A' && nameMap[lang] && nameMap[lang][cat]){
       displayValue = nameMap[lang][cat][value] || value;
     }
+    if(displayOverride) displayValue = displayOverride;
     const displayInfo = info || '';
     text.innerHTML = `<strong>${label}:</strong> ${displayValue}${displayInfo ? ' - ' + displayInfo : ''}`;
     section.appendChild(text);
@@ -41,7 +42,13 @@
   }
 
   makeSection(labels[lang].Species, species, speciesInfo[lang][species] || '', 'races', undefined, 'species');
-  makeSection(labels[lang].Class, clazz, classInfo[lang][clazz] || '', 'classes', 'xphb', 'classes');
+  const className = nameMap[lang].classes[clazz] || clazz;
+  let subclassName = subclass ? subclass : '';
+  if(subclass && nameMap[lang].subclasses){
+    subclassName = nameMap[lang].subclasses[subclass] || subclass;
+  }
+  const displayClass = subclass ? `${subclassName} ${className}` : className;
+  makeSection(labels[lang].Class, clazz, classInfo[lang][clazz] || '', 'classes', 'xphb', 'classes', displayClass);
   makeSection(labels[lang].Background, background, backgroundInfo[lang][background] || '', 'backgrounds', 'xphb', 'backgrounds');
 
   restartBtn.textContent = labels[lang].restart;
