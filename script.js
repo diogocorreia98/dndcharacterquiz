@@ -72,6 +72,15 @@ const subQuestionsEN = {
       'Winter Mandrake': 'Your vines deal a blast of chilling damage.'
     }
   },
+  Eladrin: {
+    question: 'Which season best reflects your nature?',
+    options: {
+      'Spring Eladrin': 'Your Fey Step can teleport an ally instead of you.',
+      'Summer Eladrin': 'Your Fey Step burns foes around you.',
+      'Autumn Eladrin': 'Your Fey Step charms nearby creatures.',
+      'Winter Eladrin': 'Your Fey Step frightens a nearby enemy.'
+    }
+  },
   Shifter: {
     question: 'What animalistic trait emerges when you shift?',
     options: {
@@ -156,6 +165,15 @@ const subQuestionsPT = {
       'Summer Mandrake': 'Reposicionas inimigos com vinhas poderosas e diretas.',
       'Autumn Mandrake': 'Prendes mais de uma criatura numa única explosão.',
       'Winter Mandrake': 'As tuas vinhas lançam uma rajada de dano gelado.'
+    }
+  },
+  Eladrin: {
+    question: 'Que estação reflete melhor a tua natureza?',
+    options: {
+      'Spring Eladrin': 'O teu Passo Feérico pode teletransportar um aliado.',
+      'Summer Eladrin': 'O teu Passo Feérico queima inimigos ao redor.',
+      'Autumn Eladrin': 'O teu Passo Feérico encanta criaturas próximas.',
+      'Winter Eladrin': 'O teu Passo Feérico provoca medo num inimigo.'
     }
   },
   Shifter: {
