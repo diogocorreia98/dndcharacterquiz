@@ -20,7 +20,7 @@ const genderQuestions = {
   }
 };
 
-const subQuestionsBase = {
+const subQuestionsEN = {
   Elf: {
     question: 'What kind of elf are you?',
     options: {
@@ -107,7 +107,94 @@ const subQuestionsBase = {
   }
 };
 
-const subSpeciesQuestions = { en: subQuestionsBase, pt: subQuestionsBase };
+const subQuestionsPT = {
+  Elf: {
+    question: 'Que tipo de elfo és?',
+    options: {
+      'High Elf': 'Elegante e refinado, com talento natural para magia arcana.',
+      'Wood Elf': 'Discreto e ágil, move-se facilmente pelos ambientes naturais.',
+      'Drow Elf': 'Pele escura e cabelo prateado, com sentidos aguçados e magia inata do Subterrâneo.'
+    }
+  },
+  Genasi: {
+    question: 'Que elemento corre no teu corpo?',
+    options: {
+      'Air Genasi': 'Ligeiro e rápido, com o vento sempre a favor.',
+      'Earth Genasi': 'Pele de pedra e firmeza, resiste mesmo em terreno difícil.',
+      'Fire Genasi': 'Brilhante e quente, com aura ardente e toque abrasador.',
+      'Water Genasi': 'Fluido e flexível, respira debaixo de água e nada com facilidade.'
+    }
+  },
+  Geppettin: {
+    question: 'Que tipo de brinquedo vivo és?',
+    options: {
+      'Bisque Geppettin': 'Boneca de porcelana com charme antigo e magia elegante.',
+      'Marionette Geppettin': 'Marioneta esguia de madeira com membros flexíveis.',
+      'Plushie Geppettin': 'Boneco de peluche fofinho e surpreendentemente resistente.'
+    }
+  },
+  Gnome: {
+    question: 'Que tipo de gnomo és?',
+    options: {
+      'Forest Gnome': 'Ligado à natureza e animais, com ilusões e empatia.',
+      'Rock Gnome': 'Inventor engenhocas que cria pequenas máquinas divertidas ou úteis.'
+    }
+  },
+  Goliath: {
+    question: 'Que sangue de gigante corre em ti?',
+    options: {
+      'Hill Goliath': 'Largo e bruto, empurrando inimigos com pura força.',
+      'Stone Goliath': 'Sólido como rocha, resiste a dano com vigor estoico.',
+      'Frost Goliath': 'Frio e inflexível, entorpece inimigos com força gélida.',
+      'Fire Goliath': 'Radiante de calor, ataca com fúria ardente.',
+      'Cloud Goliath': 'Gracioso e evasivo, move-se como névoa e evita dano.',
+      'Storm Goliath': 'Carregado de energia, invoca trovões e relâmpagos a seu lado.'
+    }
+  },
+  Mandrake: {
+    question: 'Em que estação foste colhido?',
+    options: {
+      'Spring Mandrake': 'As tuas vinhas fazem cair inimigos voadores com suavidade.',
+      'Summer Mandrake': 'Reposicionas inimigos com vinhas poderosas e diretas.',
+      'Autumn Mandrake': 'Prendes mais de uma criatura numa única explosão.',
+      'Winter Mandrake': 'As tuas vinhas lançam uma rajada de dano gelado.'
+    }
+  },
+  Shifter: {
+    question: 'Que traço animal surge quando te transformas?',
+    options: {
+      'Beasthide Shifter': 'Robusto e resistente, ignorando golpes com pele bestial.',
+      'Longtooth Shifter': 'Feroz e selvagem, rasga inimigos com presas alongadas.',
+      'Swiftstride Shifter': 'Rápido e reativo, contorna adversários como um felino.',
+      'Wildhunt Shifter': 'Instintivo e atento, nunca surpreendido e sempre em perseguição.'
+    }
+  },
+  Tiefling: {
+    question: 'Que tipo de ascendência demoníaca carregas?',
+    options: {
+      'Abyssal Tiefling': 'Caótico e explosivo, descendente de demónios e destruição.',
+      'Infernal Tiefling': 'Ordenado e impiedoso, tocado pelas chamas do Inferno.',
+      'Chthonic Tiefling': 'Sombrio e necromântico, ligado à morte e ao poder das sombras.'
+    }
+  },
+  Dragonborn: {
+    question: 'De que tipo de dragão descendes?',
+    options: {
+      'Black Dragonborn': 'Resistente e ácido, exala jatos de ácido ardente.',
+      'Blue Dragonborn': 'Orgulhoso e feroz, lança rajadas de relâmpago.',
+      'Brass Dragonborn': 'Falador e fogoso, usa sopro de fogo com charme.',
+      'Bronze Dragonborn': 'Leal e nobre, exala relâmpagos controlados.',
+      'Copper Dragonborn': 'Brincalhão e ágil, cospe spray ácido.',
+      'Gold Dragonborn': 'Sábio e régio, liberta potentes rajadas de fogo.',
+      'Green Dragonborn': 'Astuto e perigoso, exala veneno.',
+      'Red Dragonborn': 'Ousado e agressivo, com o fogo mais intenso.',
+      'Silver Dragonborn': 'Bondoso e forte, exala frio para abrandar inimigos.',
+      'White Dragonborn': 'Selvagem e primitivo, solta gelo gélido sobre os inimigos.'
+    }
+  }
+};
+
+const subSpeciesQuestions = { en: subQuestionsEN, pt: subQuestionsPT };
 
 function updateStaticText(){
   document.title = miscText[currentLang].quizTitle;
