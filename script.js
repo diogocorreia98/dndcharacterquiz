@@ -7,16 +7,119 @@ const titleEl = document.querySelector('h1');
 const languageLabel = document.querySelector('#language-select label');
 let currentLang = 'pt';
 
+const genderQuestions = {
+  pt: {
+    title: 'Apresentação de Género',
+    text: 'Como se apresenta a tua personagem em termos de género?',
+    options: { F: 'Feminina', M: 'Masculina', A: 'Andrógina' }
+  },
+  en: {
+    title: 'Gender Presentation',
+    text: 'How does your character present gender-wise?',
+    options: { F: 'Female', M: 'Male', A: 'Androgynous' }
+  }
+};
+
+const subQuestionsBase = {
+  Elf: {
+    question: 'What kind of elf are you?',
+    options: {
+      'High Elf': 'Elegant and refined, with a natural gift for arcane magic.',
+      'Wood Elf': 'Stealthy and swift, blending easily into natural environments.',
+      'Drow Elf': 'Dark-skinned and silver-haired, with keen senses and innate magic from the Underdark.'
+    }
+  },
+  Genasi: {
+    question: 'Which element flows through your body?',
+    options: {
+      'Air Genasi': 'Light-footed and fast, with wind ever at your back.',
+      'Earth Genasi': 'Stone-skinned and solid, steady even in rough terrain.',
+      'Fire Genasi': 'Glowing and warm, with a fiery aura and searing touch.',
+      'Water Genasi': 'Flowing and fluid, able to breathe underwater and swim with ease.'
+    }
+  },
+  Geppettin: {
+    question: 'What kind of living toy are you?',
+    options: {
+      'Bisque Geppettin': 'A porcelain doll with magical elegance and vintage charm.',
+      'Marionette Geppettin': 'A lanky wooden puppet with nimble limbs and flexible joints.',
+      'Plushie Geppettin': 'A soft and cuddly stuffed toy with surprising resilience.'
+    }
+  },
+  Gnome: {
+    question: 'What type of gnome are you?',
+    options: {
+      'Forest Gnome': 'Connected to nature and animals, with illusions and empathy.',
+      'Rock Gnome': 'Tinkering inventor who crafts tiny mechanical gadgets for fun or utility.'
+    }
+  },
+  Goliath: {
+    question: 'What kind of giant blood flows through you?',
+    options: {
+      'Hill Goliath': 'Broad and brutal, shoving enemies aside with pure power.',
+      'Stone Goliath': 'Solid as a rock, resisting damage with stoic might.',
+      'Frost Goliath': 'Cold and unyielding, numbing foes with chilling strength.',
+      'Fire Goliath': 'Radiating heat and striking with burning fury.',
+      'Cloud Goliath': 'Graceful and elusive, moving like mist and evading harm.',
+      'Storm Goliath': 'Crackling with energy, calling thunder and lightning to your side.'
+    }
+  },
+  Mandrake: {
+    question: 'What season were you harvested in?',
+    options: {
+      'Spring Mandrake': 'Your vines gently bring flying foes to the ground.',
+      'Summer Mandrake': 'You reposition enemies with powerful, directed vines.',
+      'Autumn Mandrake': 'You entangle more than one creature in a single burst.',
+      'Winter Mandrake': 'Your vines deal a blast of chilling damage.'
+    }
+  },
+  Shifter: {
+    question: 'What animalistic trait emerges when you shift?',
+    options: {
+      'Beasthide Shifter': 'Tough and sturdy, shrugging off blows with a beast\u2019s hide.',
+      'Longtooth Shifter': 'Ferocious and wild, tearing into foes with elongated fangs.',
+      'Swiftstride Shifter': 'Fast and reactive, darting around opponents like a wildcat.',
+      'Wildhunt Shifter': 'Instinctive and alert, never surprised and always tracking.'
+    }
+  },
+  Tiefling: {
+    question: 'What kind of fiendish ancestry do you bear?',
+    options: {
+      'Abyssal Tiefling': 'Chaotic and explosive, born of demons and destruction.',
+      'Infernal Tiefling': 'Ordered and ruthless, touched by the flames of Hell.',
+      'Chthonic Tiefling': 'Eerie and necrotic, rooted in death and shadowy power.'
+    }
+  },
+  Dragonborn: {
+    question: 'Which type of dragon is your ancestor?',
+    options: {
+      'Black Dragonborn': 'Tough and acidic, exhaling streams of burning acid.',
+      'Blue Dragonborn': 'Proud and fierce, breathing blasts of lightning.',
+      'Brass Dragonborn': 'Talkative and fiery, using fire breath with charm.',
+      'Bronze Dragonborn': 'Loyal and noble, breathing controlled lightning.',
+      'Copper Dragonborn': 'Trickster and agile, breathing acidic spray.',
+      'Gold Dragonborn': 'Wise and regal, releasing mighty fire blasts.',
+      'Green Dragonborn': 'Cunning and dangerous, exhaling poison.',
+      'Red Dragonborn': 'Bold and aggressive, with the fiercest fire breath.',
+      'Silver Dragonborn': 'Kind and strong, breathing cold to slow enemies.',
+      'White Dragonborn': 'Savage and primal, exhaling icy frost at foes.'
+    }
+  }
+};
+
+const subSpeciesQuestions = { en: subQuestionsBase, pt: subQuestionsBase };
+
 function updateStaticText(){
   document.title = miscText[currentLang].quizTitle;
   titleEl.textContent = miscText[currentLang].quizTitle;
   languageLabel.textContent = miscText[currentLang].language;
 }
 
-let stage = 1;
+let stage = 0;
 let currentResult = {};
 let speciesNode = null;
 const speciesStack = [];
+let subSpeciesNode = null;
 let step2Index = 0;
 let step2Answers = {};
 let step3Index = 0;
@@ -28,10 +131,28 @@ function renderQuiz() {
   updateStaticText();
   quizDiv.innerHTML = '';
   let html = '';
-  if(stage === 1){
+  if(stage === 0){
+    const q = genderQuestions[currentLang];
+    html += `<h2>${q.title}</h2>`;
+    html += `<section><p>${q.text}</p>`;
+    for(const key in q.options){
+      const id = `g_${key}`;
+      const checked = currentResult.gender === key ? ' checked' : '';
+      html += `<label><input type="radio" name="gender" value="${key}" id="${id}"${checked}> ${q.options[key]}</label>`;
+    }
+    html += '</section>';
+    submitBtn.textContent = currentLang === 'pt' ? 'Avançar' : 'Next';
+  } else if(stage === 1){
     const step = locale.step1;
     html += `<h2>${step.title}</h2>`;
-    if(step.tree){
+    if(subSpeciesNode){
+      html += `<section><p>${subSpeciesNode.question}</p>`;
+      for(const key in subSpeciesNode.options){
+        const id = `sub_${key}`;
+        html += `<label><input type="radio" name="sub" value="${key}" id="${id}"> ${strip(subSpeciesNode.options[key])}</label>`;
+      }
+      html += '</section>';
+    } else if(step.tree){
       if(!speciesNode) speciesNode = step.tree;
       html += `<section><p>${speciesNode.question}</p>`;
       for(const key in speciesNode.options){
@@ -44,12 +165,11 @@ function renderQuiz() {
         html += `<section><p>${q.text}</p>`;
         for (const key in q.options) {
           const id = `s1q${qi}_${key}`;
-        html += `<label><input type="radio" name="s1q${qi}" value="${key}" id="${id}"> ${strip(q.options[key])}</label>`;
+          html += `<label><input type="radio" name="s1q${qi}" value="${key}" id="${id}"> ${strip(q.options[key])}</label>`;
         }
         html += '</section>';
       });
     }
-    submitBtn.textContent = currentLang === 'pt' ? 'Avançar' : 'Next';
   } else if(stage === 2){
     const step = locale.step2;
     const q = step.questions[step2Index];
@@ -79,16 +199,17 @@ function renderQuiz() {
   quizDiv.innerHTML = html;
   window.scrollTo(0,0);
   submitBtn.style.display = 'block';
-  backBtn.style.display = stage > 1 || speciesStack.length > 0 ? 'block' : 'none';
+  backBtn.style.display = stage > 0 || speciesStack.length > 0 || subSpeciesNode ? 'block' : 'none';
   backBtn.textContent = currentLang === 'pt' ? 'Recuar' : 'Back';
   restartBtn.textContent = labels[currentLang].restart;
 }
 
 langSelect.addEventListener('change', () => {
   currentLang = langSelect.value;
-  stage = 1;
+  stage = 0;
   currentResult = {};
   speciesNode = null;
+  subSpeciesNode = null;
   speciesStack.length = 0;
   step2Index = 0;
   step2Answers = {};
@@ -140,7 +261,33 @@ function calculateBackground(clazz){
 
 submitBtn.addEventListener('click', async () => {
   const locale = data[currentLang];
+  if(stage === 0){
+    const val = document.querySelector('input[name="gender"]:checked');
+    if(!val) return;
+    currentResult.gender = val.value;
+    speciesNode = locale.step1.tree;
+    speciesStack.length = 0;
+    subSpeciesNode = null;
+    stage = 1;
+    renderQuiz();
+    return;
+  }
   if(stage === 1){
+    if(subSpeciesNode){
+      const val = document.querySelector('input[name="sub"]:checked');
+      if(!val) return;
+      currentResult.species = val.value;
+      subSpeciesNode = null;
+      speciesNode = null;
+      speciesStack.length = 0;
+      step2Index = 0;
+      step2Answers = {};
+      step3Index = 0;
+      step3Answers = {};
+      stage = 2;
+      renderQuiz();
+      return;
+    }
     if(locale.step1.tree){
       const val = document.querySelector('input[name="s1"]:checked');
       if(!val) return;
@@ -152,6 +299,14 @@ submitBtn.addEventListener('click', async () => {
         return;
       }
       if(choice.result){
+        const sub = subSpeciesQuestions[currentLang][choice.result];
+        if(sub){
+          subSpeciesNode = sub;
+          speciesNode = null;
+          speciesStack.length = 0;
+          renderQuiz();
+          return;
+        }
         currentResult.species = choice.result;
         speciesNode = null;
         speciesStack.length = 0;
@@ -166,6 +321,15 @@ submitBtn.addEventListener('click', async () => {
       return;
     }
     currentResult.species = calculateSpecies();
+    const sub = subSpeciesQuestions[currentLang][currentResult.species];
+    if(sub){
+      subSpeciesNode = sub;
+      speciesNode = null;
+      speciesStack.length = 0;
+      stage = 1;
+      renderQuiz();
+      return;
+    }
     step2Index = 0;
     step2Answers = {};
     step3Index = 0;
@@ -220,6 +384,18 @@ submitBtn.addEventListener('click', async () => {
 });
 
 backBtn.addEventListener('click', () => {
+  if(stage === 1 && subSpeciesNode){
+    subSpeciesNode = null;
+    speciesNode = data[currentLang].step1.tree;
+    speciesStack.length = 0;
+    renderQuiz();
+    return;
+  }
+  if(stage === 1 && speciesStack.length === 0){
+    stage = 0;
+    renderQuiz();
+    return;
+  }
   if(stage === 1 && speciesStack.length > 0){
     speciesNode = speciesStack.pop();
     renderQuiz();
@@ -251,9 +427,10 @@ backBtn.addEventListener('click', () => {
 });
 
 function restartQuiz(){
-  stage = 1;
+  stage = 0;
   currentResult = {};
   speciesNode = null;
+  subSpeciesNode = null;
   speciesStack.length = 0;
   step2Index = 0;
   step2Answers = {};
