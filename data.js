@@ -1345,7 +1345,7 @@ const data = {
       tree: {
         question: 'Qual é a altura da tua personagem?',
         options: {
-          A: { label: 'Muito baixa', next: {
+          A: { label: 'Muito Baixa – Tão pequena como um banco de taverna ou uma mochila', next: {
             question: 'É mais humanoide ou tem traços animais/objeto?',
             options: {
               A: { label: 'Humanoide', next: {
@@ -1366,7 +1366,7 @@ const data = {
               }}
             }
           }},
-          B: { label: 'Baixa', next: {
+          B: { label: 'Baixa – Da altura de uma mesa de taverna ou do peito de um humano comum.', next: {
             question: 'É mais animal ou humanoide?',
             options: {
               A: { label: 'Animal', next: {
@@ -1389,7 +1389,7 @@ const data = {
               }}
             }
           }},
-          C: { label: 'Altura média', next: {
+          C: { label: 'Média – Aproximadamente da altura de um humano comum.', next: {
             question: 'Qual é a sua natureza?',
             options: {
               A: { label: 'Humanoide ou ligeiramente mágica', next: {
@@ -1438,7 +1438,7 @@ const data = {
               }}
             }
           }},
-          D: { label: 'Alta', next: {
+          D: { label: 'Alta – Acima da altura comum de um humano como um estandarte de guerra ou um armário de armas.', next: {
             question: 'Escolhe a descrição que melhor se adequa:',
             options: {
               A: { label: 'Cabeça de dragão com arma de sopro?', result: 'Dragonborn' },
@@ -1453,7 +1453,7 @@ const data = {
               J: { label: 'Elfo com aparência sazonal mutável?', result: 'Eladrin' }
             }
           }},
-          E: { label: 'Muito alta', next: {
+          E: { label: 'Muito Alta – Tão alta como uma carroça empilhada ou uma estante de uma biblioteca arcana.', next: {
             question: 'Escolhe a descrição que melhor se adequa:',
             options: {
               A: { label: 'Gigante peludo de braços longos e presas?', result: 'Bugbear' },
