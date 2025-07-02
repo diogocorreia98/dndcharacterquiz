@@ -2009,7 +2009,8 @@ const miscText = {
     language: 'Idioma:',
     notChosen: 'Por escolher',
     quizTitle: 'Questionário de Personagem de D&D',
-    resultsTitle: 'Resultados do Questionário'
+    resultsTitle: 'Resultados do Questionário',
+    promptIntro: 'Cola este prompt num gerador de arte IA para visualizares a tua personagem!'
   },
   en: {
     noResults: 'No results available.',
@@ -2017,7 +2018,8 @@ const miscText = {
     language: 'Language:',
     notChosen: 'Yet to be chosen',
     quizTitle: 'D&D Character Quiz',
-    resultsTitle: 'Quiz Results'
+    resultsTitle: 'Quiz Results',
+    promptIntro: 'Paste this prompt into an AI art generator to visualize your character!'
   }
 };
 
@@ -2095,10 +2097,10 @@ const nameMap = {
       'Harengon':'Harengon',
       'Kenku':'Kenku',
       'Mandrake':'Mandrágora',
-      'Spring Mandrake':'Mandrágora da Primavera',
-      'Summer Mandrake':'Mandrágora do Verão',
-      'Autumn Mandrake':'Mandrágora do Outono',
-      'Winter Mandrake':'Mandrágora do Inverno',
+      'Spring Mandrake':'Mandrágora Primaveril',
+      'Summer Mandrake':'Mandrágora Estival',
+      'Autumn Mandrake':'Mandrágora Outonal',
+      'Winter Mandrake':'Mandrágora Invernal',
       'Sea Elf':'Elfo do Mar',
       'Shadar-kai':'Shadar-kai',
       'Shifter':'Metamorfo',
