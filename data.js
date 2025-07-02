@@ -1587,12 +1587,53 @@ const data = {
               }},
               D: { label: 'Aquatic', next: {
                 question: 'Which description fits best?',
-    },
-    step2: {
-      title: 'Which Class Fits You?',
-      tree: {
-        question: 'What level of complexity do you prefer in your character?',
-        options: {
+                options: {
+                  A: { label: 'Sleek elf with fins or gills?', result: 'Sea Elf' },
+                  B: { label: 'Scaled oceanic warrior with trident?', result: 'Triton' }
+                }
+              }},
+              E: { label: 'Constructed, elemental, or plant-based', next: {
+                question: 'Which description fits best?',
+                options: {
+                  A: { label: 'Puppet-like body, wood or jointed limbs?', result: 'Geppettin (Marionette)' },
+                  B: { label: 'Skin like bark or covered in leaves?', result: 'Mandrake' },
+                  C: { label: 'Body made of flame, mist, rock or water?', result: 'Genasi' }
+                }
+              }}
+            }
+          }},
+          D: { label: 'Tall', next: {
+            question: 'Choose the best description:',
+            options: {
+              A: { label: 'Dragon-headed with breath weapon?', result: 'Dragonborn' },
+              B: { label: 'Lizard-faced with tail and frill?', result: 'Lizardfolk' },
+              C: { label: 'Upright with snake features?', result: 'Yuan-ti' },
+              D: { label: 'Tall, tusked tribal warrior?', result: 'Orc' },
+              E: { label: 'Bull-headed, horned, hoofed but with human torso and hands?', result: 'Minotaur' },
+              F: { label: 'Goat legs, horns, musical joy?', result: 'Satyr' },
+              G: { label: 'Pale warrior with sharp features?', result: 'Githyanki' },
+              H: { label: 'Calm with yellow-green skin?', result: 'Githzerai' },
+              I: { label: 'Plant-bodied humanoid with bark skin?', result: 'Mandrake' },
+              J: { label: 'Elf with changing seasonal look?', result: 'Eladrin' }
+            }
+          }},
+          E: { label: 'Very tall', next: {
+            question: 'Choose the best description:',
+            options: {
+              A: { label: 'Hairy giant with long arms and fangs?', result: 'Bugbear' },
+              B: { label: 'Horse body and human torso?', result: 'Centaur' },
+              C: { label: 'Muscular and marked like stone?', result: 'Goliath' },
+              D: { label: 'Mossy, blue-skinned forest giant?', result: 'Firbolg' },
+              E: { label: 'Fully grown walking tree or bark-covered humanoid?', result: 'Mandrake' }
+            }
+          }}
+        }
+      }},
+      step2: {
+        title: 'Which Class Fits You?',
+        tree: {
+          question: 'What level of complexity do you prefer in your character?',
+          options: {
           A: { label: 'As little as possible — I want something simple and direct.', next: {
             question: 'Which style appeals most to you?',
             options: {
