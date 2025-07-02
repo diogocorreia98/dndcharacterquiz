@@ -112,10 +112,14 @@
 
   const heightText = height || 'average height';
   const pose = poseHints[subclass] ? ', ' + poseHints[subclass] : '';
-  const speciesName = nameMap[lang].species[species] || species;
-  const backgroundName = nameMap[lang].backgrounds[background] || background;
-  const promptClass = displayClass;
-  const prompt = `A ${genderMap[gender] || ''} ${speciesName}, standing ${heightText}, dressed in a way that reflects their role as a ${promptClass}. Their look shows traits of a ${backgroundName} — with appropriate gear or attitude. Dynamic fantasy character portrait${pose}, high detail, cinematic lighting, full body or 3/4 view. Dungeons & Dragons-inspired.`;
+
+  const classNameEn = clazz;
+  const subclassNameEn = subclass || '';
+  const displayClassEn = subclass ? `${subclassNameEn} ${classNameEn}` : classNameEn;
+
+  const promptSpecies = species;
+  const promptBackground = background;
+  const prompt = `A ${genderMap[gender] || ''} ${promptSpecies}, standing ${heightText}, dressed in a way that reflects their role as a ${displayClassEn}. Their look shows traits of a ${promptBackground} — with appropriate gear or attitude. Dynamic fantasy character portrait${pose}, high detail, cinematic lighting, full body or 3/4 view. Dungeons & Dragons-inspired.`;
 
   const promptTitle = document.createElement('h2');
   promptTitle.textContent = miscText[lang].promptIntro;
