@@ -47,7 +47,12 @@
   if(subclass && nameMap[lang].subclasses){
     subclassName = nameMap[lang].subclasses[subclass] || subclass;
   }
-  const displayClass = subclass ? `${subclassName} ${className}` : className;
+  let displayClass = className;
+  if(subclass){
+    displayClass = lang === 'pt'
+      ? `${className} ${subclassName}`
+      : `${subclassName} ${className}`;
+  }
   makeSection(labels[lang].Class, clazz, classInfo[lang][clazz] || '', 'classes', 'xphb', 'classes', displayClass);
   makeSection(labels[lang].Background, background, backgroundInfo[lang][background] || '', 'backgrounds', 'xphb', 'backgrounds');
 
@@ -107,10 +112,18 @@
 
   const heightText = height || 'average height';
   const pose = poseHints[subclass] ? ', ' + poseHints[subclass] : '';
-  const prompt = `A ${genderMap[gender] || ''} ${species}, standing ${heightText}, dressed in a way that reflects their role as a ${clazz}${subclass ? ` (${subclass} subclass)` : ''}. Their look shows traits of a ${background} — with appropriate gear or attitude. Dynamic fantasy character portrait${pose}, high detail, cinematic lighting, full body or 3/4 view. Dungeons & Dragons-inspired.`;
+  const speciesName = nameMap[lang].species[species] || species;
+  const backgroundName = nameMap[lang].backgrounds[background] || background;
+  const promptClass = displayClass;
+  const prompt = `A ${genderMap[gender] || ''} ${speciesName}, standing ${heightText}, dressed in a way that reflects their role as a ${promptClass}. Their look shows traits of a ${backgroundName} — with appropriate gear or attitude. Dynamic fantasy character portrait${pose}, high detail, cinematic lighting, full body or 3/4 view. Dungeons & Dragons-inspired.`;
 
-  const promptEl = document.createElement('p');
-  promptEl.textContent = prompt;
+  const promptTitle = document.createElement('h2');
+  promptTitle.textContent = miscText[lang].promptIntro;
+  const promptEl = document.createElement('textarea');
+  promptEl.id = 'ai-prompt';
+  promptEl.readOnly = true;
+  promptEl.value = prompt;
+  container.appendChild(promptTitle);
   container.appendChild(promptEl);
 
   restartBtn.textContent = labels[lang].restart;
