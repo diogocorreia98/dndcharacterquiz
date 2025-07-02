@@ -3,7 +3,7 @@
   const restartBtn = document.getElementById('restart');
   const titleEl = document.querySelector('h1');
   const stored = sessionStorage.getItem('dndResults');
-  const {species, class:clazz, subclass, background, lang = 'en'} = stored ? JSON.parse(stored) : {lang:'en'};
+  const {species, class:clazz, subclass, background, gender, height, lang = 'en'} = stored ? JSON.parse(stored) : {lang:'en'};
   document.title = miscText[lang].resultsTitle;
   titleEl.textContent = miscText[lang].resultsTitle;
   if(!stored){
@@ -50,6 +50,68 @@
   const displayClass = subclass ? `${subclassName} ${className}` : className;
   makeSection(labels[lang].Class, clazz, classInfo[lang][clazz] || '', 'classes', 'xphb', 'classes', displayClass);
   makeSection(labels[lang].Background, background, backgroundInfo[lang][background] || '', 'backgrounds', 'xphb', 'backgrounds');
+
+  const genderMap = {F:'female', M:'male', A:'androgynous'};
+  const poseHints = {
+    'Aberrant Mind':'twitching hands raised to the sky, wide-eyed, haunted expression as alien energy warps the air',
+    'Clockwork Soul':'standing tall and composed, arms symmetrically extended, surrounded by floating golden cogs',
+    'Draconic Bloodline':'roaring in mid-cast, arms flared wide, dragon wings unfolding behind them',
+    'Wild Magic':'mid-explosion of chaotic magic, hair lifted by static, surprised or gleeful expression',
+    Abjuration:'holding up a glowing warding sigil with a protective stance, calm and focused',
+    Divination:'gazing into a crystal or orb, eyes glowing, in a meditative or prophetic trance',
+    Evocation:'arms extended in a blast, flames or lightning erupting forward, battle-ready and fierce',
+    Illusion:'one hand behind their back, the other casting an illusory double, sly smile on their lips',
+    'Archfey Patron':'graceful posture, mid-spin, trailing glamoured leaves and vines, an amused smirk',
+    'Celestial Patron':'bathed in radiant light, arms open as if delivering a blessing, serene expression',
+    'Fiend Patron':'casting fire with a devilish grin, surrounded by hellish chains or infernal runes',
+    'Great Old One':'clutching their head as invisible tendrils reach from behind, whispering madness in their posture',
+    'Future Self':'staring at a cracked mirror or time portal, one hand reaching forward, expression torn between fear and resolve',
+    Spider:'crouched on a vertical wall or web, blades drawn, emotionless and predatory',
+    'Arcane Trickster':'leaning on a glowing magical dagger, winking, mid-flick of an illusion',
+    Assassin:'emerging from shadow behind a target, blade poised, cold and focused gaze',
+    Soulknife:'holding psychic blades mid-air in telekinetic grip, crouched with eyes narrowed in concentration',
+    Swashbuckler:'mid-leap with a bag of gold, cheeky grin, fingers reaching for another trinket',
+    'Battle Master':'commanding pose on a battlefield, pointing sword forward, calculating gaze',
+    Champion:'lifting a weapon in victory, confident smile, surrounded by fallen enemies',
+    Dungeoneer:'torch in one hand, sword in the other, eyes alert in a claustrophobic corridor',
+    'Eldritch Knight':'summoning a weapon with one hand, casting with the other, intense magical focus',
+    'Psi Warrior':'floating slightly above the ground, energy pulsing around head and limbs, calm but deadly expression',
+    'Beast Master':'back-to-back with their beast companion, bow drawn, loyal determination in their eyes',
+    'Fey Wanderer':'skipping over glowing mushrooms, dreamy and whimsical, with a mischievous smirk',
+    'Gloom Stalker':'emerging from total darkness, crossbow aimed, emotionless hunter\'s focus',
+    Hunter:'mid-volley of arrows, eyes locked on prey, breath held in a moment of precision',
+    'Circle of the Land':'kneeling in a field or grove, channeling magic through plants, peaceful and grounded',
+    'Circle of the Moon':'shifting mid-form into a beast, glowing eyes, primal snarl or focused intensity',
+    'Circle of the Sea':'conjuring a tidal wave, hair and robes flowing like water, commanding and serene',
+    'Circle of Stars':'casting constellations into the sky with their hands, starlight in their gaze',
+    'College of Dance':'caught mid-leap in a graceful spin, joyful expression, surrounded by motion blur',
+    'College of Glamour':'striking a dramatic pose, cloak flowing, surrounded by dazzled onlookers',
+    'College of Lore':'gesturing to a floating tome with a smirk, one eyebrow raised in challenge',
+    'College of Valor':'performing while swordfighting, playing a lute with one hand, bold and heroic grin',
+    'Oath of Devotion':'raising a sword and holy symbol toward the heavens, radiant and resolute',
+    'Oath of Glory':'mid-charge, cloak flaring behind, grin full of charisma and challenge',
+    'Oath of Revelry':'laughing mid-battle, ale sloshing in one hand, weapon raised high',
+    'Oath of the Ancients':'surrounded by green glow and blooming vines, peaceful yet imposing stance',
+    'Oath of Vengeance':'pointing at a fleeing foe, eyes burning with judgment, blade crackling with divine power',
+    'Path of the Berserker':'screaming mid-rage with bloodied axe overhead, feral eyes wide open',
+    'Path of the Muscle Wizard':'flexing dramatically while casting magic with biceps, exaggerated heroic grin',
+    'Path of the Wild Heart':'mid-roar, animal spirit glowing behind them, primal rage in their posture',
+    'Path of the World Tree':'roots coiling around their feet, hammer raised, aura of eternal strength',
+    'Path of the Zealot':'battle cry to the heavens, glowing with divine wrath, wings of light unfurling',
+    'Warrior of the Street':'relaxed stance, leaning against a wall, chewing a straw, fists glowing faintly',
+    'Way of Mercy':'gently cradling a wounded creature in one hand, fist clenched in the other, face full of compassion and fury',
+    'Way of Shadow':'crouched in silhouette, barely visible, eyes glowing faintly in the dark',
+    'Way of the Four Elements':'arms raised in elemental flow, surrounded by swirling fire, water, wind, or earth',
+    'Way of the Open Hand':'balanced stance, one hand open and extended in peace, the other clenched and ready'
+  };
+
+  const heightText = height || 'average height';
+  const pose = poseHints[subclass] ? ', ' + poseHints[subclass] : '';
+  const prompt = `A ${genderMap[gender] || ''} ${species}, standing ${heightText}, dressed in a way that reflects their role as a ${clazz}${subclass ? ` (${subclass} subclass)` : ''}. Their look shows traits of a ${background} — with appropriate gear or attitude. Dynamic fantasy character portrait${pose}, high detail, cinematic lighting, full body or 3/4 view. Dungeons & Dragons-inspired.`;
+
+  const promptEl = document.createElement('p');
+  promptEl.textContent = prompt;
+  container.appendChild(promptEl);
 
   restartBtn.textContent = labels[lang].restart;
 

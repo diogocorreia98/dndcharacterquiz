@@ -455,7 +455,15 @@ function updateStaticText(){
 }
 
 let stage = 0;
-let currentResult = {};
+// holds current quiz selections
+let currentResult = {
+  gender: null,
+  height: null,
+  species: null,
+  class: null,
+  subclass: null,
+  background: null
+};
 let speciesNode = null;
 const speciesStack = [];
 let subSpeciesNode = null;
@@ -557,7 +565,7 @@ function renderQuiz() {
 langSelect.addEventListener('change', () => {
   currentLang = langSelect.value;
   stage = 0;
-  currentResult = {};
+  currentResult = { gender:null, height:null, species:null, class:null, subclass:null, background:null };
   speciesNode = null;
   subSpeciesNode = null;
   speciesStack.length = 0;
@@ -642,6 +650,10 @@ submitBtn.addEventListener('click', async () => {
       const val = document.querySelector('input[name="s1"]:checked');
       if(!val) return;
       const choice = speciesNode.options[val.value];
+      if(speciesStack.length === 0 && speciesNode === locale.step1.tree){
+        const hMap = {A:'very short',B:'short',C:'average height',D:'tall',E:'very tall'};
+        currentResult.height = hMap[val.value];
+      }
       if(choice.next){
         speciesStack.push(speciesNode);
         speciesNode = choice.next;
@@ -721,7 +733,14 @@ submitBtn.addEventListener('click', async () => {
         : 'No class selected. Without a class it is not possible to determine a background. Would you like to finish the quiz anyway? Press Cancel to restart.';
       if(confirm(msg)){
         const background = 'N/A';
-        sessionStorage.setItem('dndResults', JSON.stringify({species:currentResult.species, class:currentResult.class, background, lang:currentLang}));
+        sessionStorage.setItem('dndResults', JSON.stringify({
+          species: currentResult.species,
+          class: currentResult.class,
+          background,
+          gender: currentResult.gender,
+          height: currentResult.height,
+          lang: currentLang
+        }));
         window.location.href = 'results.html';
       } else {
         restartQuiz();
@@ -755,7 +774,15 @@ submitBtn.addEventListener('click', async () => {
       return;
     }
     const background = calculateBackground(currentResult.class);
-    sessionStorage.setItem('dndResults', JSON.stringify({species:currentResult.species, class:currentResult.class, subclass:currentResult.subclass, background, lang:currentLang}));
+    sessionStorage.setItem('dndResults', JSON.stringify({
+      species: currentResult.species,
+      class: currentResult.class,
+      subclass: currentResult.subclass,
+      background,
+      gender: currentResult.gender,
+      height: currentResult.height,
+      lang: currentLang
+    }));
     window.location.href = 'results.html';
   }
 });
@@ -809,7 +836,7 @@ backBtn.addEventListener('click', () => {
 
 function restartQuiz(){
   stage = 0;
-  currentResult = {};
+  currentResult = { gender:null, height:null, species:null, class:null, subclass:null, background:null };
   speciesNode = null;
   subSpeciesNode = null;
   speciesStack.length = 0;
