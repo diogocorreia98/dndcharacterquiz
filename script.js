@@ -448,6 +448,15 @@ const subClassPT = {
 
 const subClassQuestions = { en: subClassEN, pt: subClassPT };
 
+function getClassKey(name){
+  if(currentLang !== 'pt') return name;
+  const map = nameMap?.pt?.classes || {};
+  for(const [en, ptName] of Object.entries(map)){
+    if(ptName === name) return en;
+  }
+  return name;
+}
+
 function updateStaticText(){
   document.title = miscText[currentLang].quizTitle;
   titleEl.textContent = miscText[currentLang].quizTitle;
@@ -547,7 +556,8 @@ function renderQuiz() {
       submitBtn.textContent = step2Index === step.questions.length - 1 ? (currentLang === 'pt' ? 'Avançar' : 'Next') : (currentLang === 'pt' ? 'Avançar' : 'Next');
     }
   } else if(stage === 3){
-    const sub = subClassQuestions[currentLang][currentResult.class];
+    const classKey = getClassKey(currentResult.class);
+    const sub = subClassQuestions[currentLang][classKey];
     html += `<h2>${currentLang === 'pt' ? 'Subclasse' : 'Subclass'}</h2>`;
     html += `<section><p>${sub.question}</p>`;
     for(const key in sub.options){
@@ -559,7 +569,8 @@ function renderQuiz() {
     submitBtn.textContent = currentLang === 'pt' ? 'Avançar' : 'Next';
   } else if(stage === 4){
     const step = locale.step3;
-    const classData = step.classes[currentResult.class];
+    const classKey = getClassKey(currentResult.class);
+    const classData = step.classes[classKey];
     const q = classData.questions[step3Index];
     html += `<h2>${step.title}</h2><p>${step.intro}</p>`;
     html += `<section><p>${q.text}</p>`;
@@ -643,7 +654,8 @@ function calculateClass(){
 }
 
 function calculateBackground(clazz){
-  const step3 = data[currentLang].step3.classes[clazz];
+  const classKey = getClassKey(clazz);
+  const step3 = data[currentLang].step3.classes[classKey];
   if(!step3) return 'N/A';
   const scores = {};
   Object.values(step3Answers).forEach(val => {
@@ -816,11 +828,13 @@ submitBtn.addEventListener('click', async () => {
     return;
   }
   if(stage === 3){
-    const sub = subClassQuestions[currentLang][currentResult.class];
+    const classKey = getClassKey(currentResult.class);
+    const sub = subClassQuestions[currentLang][classKey];
     const val = document.querySelector('input[name="subclass"]:checked');
     if(!val) return;
     currentResult.subclass = val.value;
-    if(data[currentLang].step3 && data[currentLang].step3.classes[currentResult.class]){
+    const hasStep3 = data[currentLang].step3 && data[currentLang].step3.classes[classKey];
+    if(hasStep3){
       stage = 4;
       step3Index = 0;
       step3Answers = {};
@@ -841,7 +855,8 @@ submitBtn.addEventListener('click', async () => {
     return;
   }
   if(stage === 4){
-    const classData = locale.step3.classes[currentResult.class];
+    const classKey = getClassKey(currentResult.class);
+    const classData = locale.step3.classes[classKey];
     const val = document.querySelector(`input[name="s3q${step3Index}"]:checked`);
     if(!val) return;
     step3Answers[step3Index] = val.value;
@@ -850,7 +865,7 @@ submitBtn.addEventListener('click', async () => {
       renderQuiz();
       return;
     }
-    const background = calculateBackground(currentResult.class);
+    const background = calculateBackground(classKey);
     sessionStorage.setItem('dndResults', JSON.stringify({
       species: currentResult.species,
       class: currentResult.class,
