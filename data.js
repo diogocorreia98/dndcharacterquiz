@@ -1346,7 +1346,7 @@ const data = {
         question: 'Qual é a altura da tua personagem?',
         options: {
           A: { label: 'Muito Baixa – Tão pequena como um banco de taverna ou uma mochila', next: {
-            question: 'É mais humanoide ou tem traços animais/objeto?',
+            question: 'Aspeto humanoide ou animalesco/inorgânico?',
             options: {
               A: { label: 'Humanoide', next: {
                 question: 'Qual descrição se encaixa melhor?',
@@ -1356,7 +1356,7 @@ const data = {
                   C: { label: 'Pequeno gnomo de pele cinzenta e olhos grandes?', result: 'Deep Gnome' }
                 }
               }},
-              B: { label: 'Animal ou objeto', next: {
+              B: { label: 'Animalesco ou inorgânico', next: {
                 question: 'Qual descrição se encaixa melhor?',
                 options: {
                   A: { label: 'Pequeno, corcunda, parecido com um pássaro sem voo, com bico e penas?', result: 'Kenku' },
@@ -1367,7 +1367,7 @@ const data = {
             }
           }},
           B: { label: 'Baixa – Da altura de uma mesa de taverna ou do peito de um humano comum.', next: {
-            question: 'É mais animal ou humanoide?',
+            question: 'Aspeto animalesco ou humanoide?',
             options: {
               A: { label: 'Animal', next: {
                 question: 'Qual descrição se encaixa melhor?',
@@ -1392,7 +1392,7 @@ const data = {
           C: { label: 'Média – Aproximadamente da altura de um humano comum.', next: {
             question: 'Qual é a sua natureza?',
             options: {
-              A: { label: 'Humanoide ou ligeiramente mágica', next: {
+              A: { label: 'Humanoide ou ligeiramente monstruosa', next: {
                 question: 'Qual descrição se encaixa melhor?',
                 options: {
                   A: { label: 'Completamente comum?', result: 'Human' },
