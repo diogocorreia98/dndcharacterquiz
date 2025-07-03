@@ -246,7 +246,7 @@ const subClassEN = {
     options: {
       'Circle of the Land': 'I cast nature\u2019s spells drawn from forests, deserts or tundra.',
       'Circle of the Moon': 'I become the beasts — claws, fangs, and fury.',
-      'Circle of the Storm': 'I call the tides and unleash crashing storms.',
+      'Circle of the Sea': 'I call the tides and unleash crashing storms.',
       'Circle of Stars': 'I glow with celestial starlight and guide through constellations.'
     }
   },
@@ -257,7 +257,7 @@ const subClassEN = {
       'Battle Master': 'I outmaneuver my foes with tactics and precision.',
       'Eldritch Knight': 'I mix sword and spell with arcane discipline.',
       'Psi Warrior': 'I shape my strikes with psychic force.',
-      'Monster Hunter': 'I survive traps, monsters and dungeons with instinct and superstition.'
+      Dungeoneer: 'I survive traps, monsters and dungeons with instinct and superstition.'
     }
   },
   Monk: {
@@ -265,9 +265,9 @@ const subClassEN = {
     options: {
       'Way of the Open Hand': 'I master balance and knock enemies off their feet.',
       'Way of Shadow': 'I vanish in shadows and strike from silence.',
-      'Way of the Four Elements': 'I wield the four elements through martial motion.',
+      'Way of the Elements': 'I wield the four elements through martial motion.',
       'Way of Mercy': 'I wear a mask, healing with one hand and punishing with the other.',
-      'Way of the Arcade': 'I fight like an arcade legend — combos, uppercuts, and air dashes.'
+      'Warrior of the Street': 'I fight with dirty, improvised moves learned on the streets.'
     }
   },
   Paladin: {
@@ -277,7 +277,7 @@ const subClassEN = {
       'Oath of Glory': 'I fight with radiant glory and live to inspire.',
       'Oath of the Ancients': 'I protect joy and nature from all that threatens it.',
       'Oath of Vengeance': 'I hunt down evil with relentless vengeance.',
-      'Oath of Celebration': 'I bring divine partying to every battlefield.'
+      'Oath of Revelry': 'I bring divine partying to every battlefield.'
     }
   },
   Ranger: {
@@ -292,19 +292,19 @@ const subClassEN = {
   Rogue: {
     question: 'What defines your stealthy skillset?',
     options: {
-      Spider: 'I web enemies and climb walls like a deadly spider.',
+      'Arachnoid Stalker': 'I web enemies and climb walls like a deadly spider.',
       'Arcane Trickster': 'I blend arcane trickery with swift hands.',
       Assassin: 'I strike before anyone knows I was there.',
       Soulknife: 'I summon blades from thought and vanish like a ghost.',
-      Swashbuckler: 'I\u2019m fast, clever, and gone before the alarms sound.'
+      Thief: 'I\u2019m fast, clever, and gone before the alarms sound.'
     }
   },
   Sorcerer: {
     question: 'Where does your power come from?',
     options: {
-      'Aberrant Mind': 'I was touched by a mind-breaking alien force.',
-      'Clockwork Soul': 'I channel the gears of reality to enforce magical order.',
-      'Draconic Bloodline': 'My dragon blood burns with elemental power.',
+      'Aberrant Sorcery': 'I was touched by a mind-breaking alien force.',
+      'Clockwork Sorcery': 'I channel the gears of reality to enforce magical order.',
+      'Draconic Sorcery': 'My dragon blood burns with elemental power.',
       'Wild Magic': 'I am a walking arcane explosion — wild and unpredictable.'
     }
   },
@@ -314,17 +314,17 @@ const subClassEN = {
       'Archfey Patron': 'A fey trickster blessed me with mischief and magic.',
       'Celestial Patron': 'A radiant being gave me healing flame and hope.',
       'Fiend Patron': 'A devil\u2019s contract fuels me with fire and fury.',
-      'Future Self': 'I\u2019m mentored by my future self — I know what comes next.',
-      'Great Old One': 'I speak to an ancient god of madness that whispers truths.'
+      'Future You': 'I\u2019m mentored by my future self — I know what comes next.',
+      'Great Old One Patron': 'I speak to an ancient god of madness that whispers truths.'
     }
   },
   Wizard: {
     question: 'What arcane school do you specialize in?',
     options: {
-      Abjuration: 'I shield my allies and block the worst magic.',
-      Divination: 'I twist fate and always know what\u2019s coming.',
-      Evocation: 'I unleash elemental devastation like a living spell.',
-      Illusion: 'I deceive, distract and dominate through illusion.'
+      Abjurer: 'I shield my allies and block the worst magic.',
+      Diviner: 'I twist fate and always know what\u2019s coming.',
+      Evoker: 'I unleash elemental devastation like a living spell.',
+      Illusionist: 'I deceive, distract and dominate through illusion.'
     }
   }
 };
@@ -363,7 +363,7 @@ const subClassPT = {
     options: {
       'Circle of the Land': 'Lan\u00e7o feiti\u00e7os inspirados em florestas, desertos ou tundra. (Circle of the Land)',
       'Circle of the Moon': 'Torno-me nas feras — garras, presas e f\u00faria. (Circle of the Moon)',
-      'Circle of the Storm': 'Invoco as mar\u00e9s e lan\u00e7o tempestades violentas. (Circle of the Storm)',
+      'Circle of the Sea': 'Invoco o poder do mar e lan\u00e7o tempestades violentas. (Circle of the Sea)',
       'Circle of Stars': 'Brilho com luz estelar e guio pelas constela\u00e7\u00f5es. (Circle of Stars)'
     }
   },
@@ -374,7 +374,7 @@ const subClassPT = {
       'Battle Master': 'Supero inimigos com t\u00e1tica e precis\u00e3o. (Battle Master)',
       'Eldritch Knight': 'Misturo espada e magia com disciplina arcana. (Eldritch Knight)',
       'Psi Warrior': 'Moldo os golpes com for\u00e7a ps\u00edquica. (Psi Warrior)',
-      'Monster Hunter': 'Sobrevivo a armadilhas e monstros por instinto. (Monster Hunter)'
+      Dungeoneer: 'Sobrevivo a armadilhas e monstros por instinto. (Dungeoneer)'
     }
   },
   Monk: {
@@ -382,9 +382,9 @@ const subClassPT = {
     options: {
       'Way of the Open Hand': 'Domino o equil\u00edbrio e derrubo advers\u00e1rios. (Way of the Open Hand)',
       'Way of Shadow': 'Desapare\u00e7o nas sombras e ataco do silêncio. (Way of Shadow)',
-      'Way of the Four Elements': 'Control\u00f5 os quatro elementos com o movimento. (Way of the Four Elements)',
+      'Way of the Elements': 'Control\u00f5 os quatro elementos com o movimento. (Way of the Four Elements)',
       'Way of Mercy': 'Uso uma m\u00e1scara, curando e punindo. (Way of Mercy)',
-      'Way of the Arcade': 'Luto como uma lenda dos arcades — combos e uppercuts. (Way of the Arcade)'
+      'Warrior of the Street': 'Combato com t\u00e9cnicas improvisadas das ruas. (Warrior of the Street)'
     }
   },
   Paladin: {
@@ -394,7 +394,7 @@ const subClassPT = {
       'Oath of Glory': 'Combato com gl\u00f3ria radiante e inspiro. (Oath of Glory)',
       'Oath of the Ancients': 'Protejo a alegria e a natureza de todo o mal. (Oath of the Ancients)',
       'Oath of Vengeance': 'Ca\u00e7o o mal com vingan\u00e7a implac\u00e1vel. (Oath of Vengeance)',
-      'Oath of Celebration': 'Levo a festa divina a todos os campos de batalha. (Oath of Celebration)'
+      'Oath of Revelry': 'Levo a festa divina a todos os campos de batalha. (Oath of Revelry)'
     }
   },
   Ranger: {
@@ -409,19 +409,19 @@ const subClassPT = {
   Rogue: {
     question: 'O que define as tuas habilidades furtivas?',
     options: {
-      Spider: 'Enredo inimigos e escalo paredes como uma aranha mortal. (Spider)',
+      'Arachnoid Stalker': 'Enredo inimigos e escalo paredes como uma aranha mortal. (Arachnoid Stalker)',
       'Arcane Trickster': 'Misturo travessuras arcanas com m\u00e3os r\u00e1pidas. (Arcane Trickster)',
       Assassin: 'Golpeio antes que percebam a minha presen\u00e7a. (Assassin)',
       Soulknife: 'Invoco l\u00e2minas do pensamento e desvane\u00e7o-me como um fantasma. (Soulknife)',
-      Swashbuckler: 'Sou r\u00e1pido, esperto e desapare\u00e7o antes do alarme soar. (Swashbuckler)'
+      Thief: 'Sou r\u00e1pido, esperto e desapare\u00e7o antes do alarme soar. (Thief)'
     }
   },
   Sorcerer: {
     question: 'De onde vem o teu poder?',
     options: {
-      'Aberrant Mind': 'Fui tocado por uma for\u00e7a alien\u00edgena e enlouquecedora. (Aberrant Mind)',
-      'Clockwork Soul': 'Canalizo as engrenagens da realidade para impor ordem m\u00e1gica. (Clockwork Soul)',
-      'Draconic Bloodline': 'O meu sangue drac\u00f3nico arde com poder elemental. (Draconic Bloodline)',
+      'Aberrant Sorcery': 'Fui tocado por uma for\u00e7a alien\u00edgena e enlouquecedora. (Aberrant Sorcery)',
+      'Clockwork Sorcery': 'Canalizo as engrenagens da realidade para impor ordem m\u00e1gica. (Clockwork Sorcery)',
+      'Draconic Sorcery': 'O meu sangue drac\u00f3nico arde com poder elemental. (Draconic Sorcery)',
       'Wild Magic': 'Sou uma explos\u00e3o arcana ambulante — ca\u00f3tica e imprevis\u00edvel. (Wild Magic)'
     }
   },
@@ -431,17 +431,17 @@ const subClassPT = {
       'Archfey Patron': 'Uma fada trapaceira aben\u00e7oou-me com magia e travessura. (Archfey Patron)',
       'Celestial Patron': 'Um ser radiante concedeu-me chamas curativas e esperan\u00e7a. (Celestial Patron)',
       'Fiend Patron': 'Um pacto demon\u00edaco alimenta-me com fogo e f\u00faria. (Fiend Patron)',
-      'Future Self': 'Sou orientado pelo meu futuro eu — sei o que est\u00e1 para vir. (Future Self)',
-      'Great Old One': 'Falo com um deus antigo de loucura que sussurra verdades. (Great Old One)'
+      'Future You': 'Sou orientado pelo meu futuro eu — sei o que est\u00e1 para vir. (Future You)',
+      'Great Old One Patron': 'Falo com um deus antigo de loucura que sussurra verdades. (Great Old One Patron)'
     }
   },
   Wizard: {
     question: 'Em que escola arcana te especializaste?',
     options: {
-      Abjuration: 'Protejo aliados e bloqueio a pior magia. (Abjuration)',
-      Divination: 'Tor\u00e7o o destino e sei sempre o que est\u00e1 para acontecer. (Divination)',
-      Evocation: 'Liberto devasta\u00e7\u00e3o elemental como uma magia viva. (Evocation)',
-      Illusion: 'Engano, distraio e domino atrav\u00e9s de ilus\u00e3o. (Illusion)'
+      Abjurer: 'Protejo aliados e bloqueio a pior magia. (Abjurer)',
+      Diviner: 'Tor\u00e7o o destino e sei sempre o que est\u00e1 para acontecer. (Diviner)',
+      Evoker: 'Liberto devasta\u00e7\u00e3o elemental como uma magia viva. (Evoker)',
+      Illusionist: 'Engano, distraio e domino atrav\u00e9s de ilus\u00e3o. (Illusionist)'
     }
   }
 };
