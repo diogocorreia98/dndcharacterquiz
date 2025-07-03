@@ -1431,7 +1431,7 @@ const data = {
               E: { label: 'Construto, elemental ou planta', next: {
                 question: 'Qual descrição se encaixa melhor?',
                 options: {
-                  A: { label: 'Corpo de marioneta, madeira ou membros articulados?', result: 'Geppettin (Marionette)' },
+                  A: { label: 'Corpo de marioneta, madeira e membros articulados?', result: 'Geppettin (Marionette)' },
                   B: { label: 'Pele como casca ou coberta de folhas?', result: 'Mandrake' },
                   C: { label: 'Corpo feito de fogo, névoa, pedra ou água?', result: 'Genasi' }
                 }
@@ -1441,7 +1441,7 @@ const data = {
           D: { label: 'Alta – Acima da altura comum de um humano como um estandarte de guerra ou um armário de armas.', next: {
             question: 'Escolhe a descrição que melhor se adequa:',
             options: {
-              A: { label: 'Cabeça de dragão com arma de sopro?', result: 'Dragonborn' },
+              A: { label: 'Cabeça de dragão com sopro elemental?', result: 'Dragonborn' },
               B: { label: 'Rosto de lagarto com cauda e crista?', result: 'Lizardfolk' },
               C: { label: 'Postura ereta com traços de cobra?', result: 'Yuan-ti' },
               D: { label: 'Guerreiro tribal alto de presas?', result: 'Orc' },
@@ -1449,7 +1449,7 @@ const data = {
               F: { label: 'Pernas de cabra, cornos, alegria musical?', result: 'Satyr' },
               G: { label: 'Guerreiro pálido de traços afiados?', result: 'Githyanki' },
               H: { label: 'Calmo, de pele amarelada-esverdeada?', result: 'Githzerai' },
-              I: { label: 'Humanoide de corpo vegetal com pele de casca?', result: 'Mandrake' },
+              I: { label: 'Ser vegetal andante com pele de casca?', result: 'Mandrake' },
               J: { label: 'Elfo com aparência sazonal mutável?', result: 'Eladrin' }
             }
           }},
@@ -1458,7 +1458,7 @@ const data = {
             options: {
               A: { label: 'Gigante peludo de braços longos e presas?', result: 'Bugbear' },
               B: { label: 'Corpo de cavalo e torso humano?', result: 'Centaur' },
-              C: { label: 'Musculado e marcado como pedra?', result: 'Goliath' },
+              C: { label: 'Humanoide entroncado com ascendência elemental de gigante?', result: 'Goliath' },
               D: { label: 'Gigante da floresta de pele azul musgosa?', result: 'Firbolg' },
               E: { label: 'Árvore andante adulta ou humanoide coberto de casca?', result: 'Mandrake' }
             }
