@@ -1501,8 +1501,8 @@ const data = {
         }
       }
     },
+    step3: step3pt
   },
-    step3: step3pt,
   en: {
     step1: {
       title: 'Which species would you like to play as?',
