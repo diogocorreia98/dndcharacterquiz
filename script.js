@@ -20,9 +20,6 @@ const genderQuestions = {
   }
 };
 
-const subSpeciesQuestions = { en: subQuestionsEN, pt: subQuestionsPT };
-
-const subClassQuestions = { en: subClassEN, pt: subClassPT };
 
 function updateStaticText(){
   document.title = miscText[currentLang].quizTitle;
