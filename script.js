@@ -49,6 +49,8 @@ let step3Answers = {};
 const speciesPath = [];
 const classPath = [];
 let subQuestionSpecies = null;
+let backgroundNode = null;
+const backgroundStack = [];
 
 function renderQuiz() {
   const locale = data[currentLang];
@@ -133,21 +135,44 @@ function renderQuiz() {
   } else if(stage === 4){
     const step = locale.step3;
     const classData = step.classes[currentResult.class];
-    const q = classData.questions[step3Index];
     html += `<h2>${step.title}</h2><p>${step.intro}</p>`;
-    html += `<section><p>${q.text}</p>`;
-    for(const key in q.options){
-      const id = `s3q${step3Index}_${key}`;
-      const checked = step3Answers[step3Index] === key ? ' checked' : '';
-      html += `<label><input type="radio" name="s3q${step3Index}" value="${key}" id="${id}"${checked}> ${strip(q.options[key])}</label>`;
+    if(classData.tree || classData.subclasses){
+      if(!backgroundNode){
+        if(classData.subclasses){
+          backgroundNode = classData.subclasses[currentResult.subclass];
+          if(!backgroundNode){
+            const firstKey = Object.keys(classData.subclasses)[0];
+            backgroundNode = classData.subclasses[firstKey];
+          }
+        } else {
+          backgroundNode = classData.tree;
+        }
+      }
+      html += `<section><p>${backgroundNode.question}</p>`;
+      for(const key in backgroundNode.options){
+        const id = `s3_${key}`;
+        const opt = backgroundNode.options[key];
+        const label = opt.label || key;
+        html += `<label><input type="radio" name="s3" value="${key}" id="${id}"> ${strip(label)}</label>`;
+      }
+      html += '</section>';
+      submitBtn.textContent = currentLang === 'pt' ? 'Avançar' : 'Next';
+    } else {
+      const q = classData.questions[step3Index];
+      html += `<section><p>${q.text}</p>`;
+      for(const key in q.options){
+        const id = `s3q${step3Index}_${key}`;
+        const checked = step3Answers[step3Index] === key ? ' checked' : '';
+        html += `<label><input type="radio" name="s3q${step3Index}" value="${key}" id="${id}"${checked}> ${strip(q.options[key])}</label>`;
+      }
+      html += '</section>';
+      submitBtn.textContent = step3Index === classData.questions.length - 1 ? (currentLang === 'pt' ? 'Concluir' : 'Finish') : (currentLang === 'pt' ? 'Avançar' : 'Next');
     }
-    html += '</section>';
-    submitBtn.textContent = step3Index === classData.questions.length - 1 ? (currentLang === 'pt' ? 'Concluir' : 'Finish') : (currentLang === 'pt' ? 'Avançar' : 'Next');
   }
   quizDiv.innerHTML = html;
   window.scrollTo(0,0);
   submitBtn.style.display = 'block';
-  backBtn.style.display = stage > 0 || speciesStack.length > 0 || subSpeciesNode || classStack.length > 0 ? 'block' : 'none';
+  backBtn.style.display = stage > 0 || speciesStack.length > 0 || subSpeciesNode || classStack.length > 0 || backgroundStack.length > 0 ? 'block' : 'none';
   backBtn.textContent = currentLang === 'pt' ? 'Recuar' : 'Back';
   restartBtn.textContent = labels[currentLang].restart;
 }
@@ -182,6 +207,8 @@ langSelect.addEventListener('change', () => {
       }
     }
   }
+  backgroundNode = null;
+  backgroundStack.length = 0;
   updateStaticText();
   renderQuiz();
 });
@@ -397,6 +424,8 @@ submitBtn.addEventListener('click', async () => {
       stage = 4;
       step3Index = 0;
       step3Answers = {};
+      backgroundNode = null;
+      backgroundStack.length = 0;
       renderQuiz();
     } else {
       const background = 'N/A';
@@ -415,6 +444,32 @@ submitBtn.addEventListener('click', async () => {
   }
   if(stage === 4){
     const classData = locale.step3.classes[currentResult.class];
+    if(classData.tree || classData.subclasses){
+      const val = document.querySelector('input[name="s3"]:checked');
+      if(!val) return;
+      const choice = backgroundNode.options[val.value];
+      if(choice.next){
+        backgroundStack.push(backgroundNode);
+        backgroundNode = choice.next;
+        renderQuiz();
+        return;
+      }
+      if(choice.result){
+        const background = choice.result;
+        sessionStorage.setItem('dndResults', JSON.stringify({
+          species: currentResult.species,
+          class: currentResult.class,
+          subclass: currentResult.subclass,
+          background,
+          gender: currentResult.gender,
+          height: currentResult.height,
+          lang: currentLang
+        }));
+        window.location.href = 'results.html';
+        return;
+      }
+      return;
+    }
     const val = document.querySelector(`input[name="s3q${step3Index}"]:checked`);
     if(!val) return;
     step3Answers[step3Index] = val.value;
@@ -483,6 +538,18 @@ backBtn.addEventListener('click', () => {
     return;
   }
   if(stage === 4){
+    const classData = locale.step3.classes[currentResult.class];
+    if(classData.tree || classData.subclasses){
+      if(backgroundStack.length > 0){
+        backgroundNode = backgroundStack.pop();
+        renderQuiz();
+        return;
+      }
+      backgroundNode = null;
+      stage = 3;
+      renderQuiz();
+      return;
+    }
     if(step3Index > 0){
       step3Index--;
       renderQuiz();
@@ -508,6 +575,8 @@ function restartQuiz(){
   classPath.length = 0;
   step3Index = 0;
   step3Answers = {};
+  backgroundNode = null;
+  backgroundStack.length = 0;
   subQuestionSpecies = null;
   renderQuiz();
 }
