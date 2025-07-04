@@ -99,12 +99,11 @@
     );
     const baseBg = background ? background.replace(/\s*\(.*?\)\s*$/, '').trim() : background;
     const bgDesc = localizeInfo(backgroundInfo[currentLang][baseBg] || '', 'backgrounds');
-    let displayBg = background;
+    let displayBg = baseBg;
     if(nameMap[currentLang] && nameMap[currentLang].backgrounds && baseBg){
       const translated = nameMap[currentLang].backgrounds[baseBg];
-      if(translated){
-        const extra = background && background.includes('(') ? background.slice(background.indexOf('(')) : '';
-        displayBg = translated + extra;
+      if(translated) {
+        displayBg = translated;
       }
     }
     makeSection(
