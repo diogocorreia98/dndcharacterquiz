@@ -670,7 +670,7 @@ const step3pt = {
 };
 const step3en = {
   title: 'Which Background Fits Your Class?',
-  intro: "After you know your class, use the corresponding quiz to find the ideal background. Only backgrounds compatible with your class's main traits will be presented.",
+  intro: '',
   classes: {
     Barbarian: {
       questions: [
