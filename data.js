@@ -1,362 +1,45 @@
 // step3pt and step3en loaded from backgroundQuestions.js
 const data = {
   pt: {
-    step1: {
-      title: 'Que espécie gostarias de jogar?',
-      tree: {
-        question: 'Qual é a altura da tua personagem?',
-        options: {
-          A: { label: 'Muito Baixa – Tão pequena como um banco de taverna ou uma mochila', next: {
-            question: 'Aspeto humanoide ou animalesco/inorgânico?',
-            options: {
-              A: { label: 'Humanoide', next: {
-                question: 'Qual descrição se encaixa melhor?',
-                options: {
-                  A: { label: 'Orelhas grandes, sorriso malandro e corpo esguio?', result: 'Goblin' },
-                  B: { label: 'Pequena e brilhante com asas de inseto?', result: 'Fairy' },
-                  C: { label: 'Pequeno gnomo de pele cinzenta e olhos grandes?', result: 'Deep Gnome' }
-                }
-              }},
-              B: { label: 'Animalesco ou inorgânico', next: {
-                question: 'Qual descrição se encaixa melhor?',
-                options: {
-                  A: { label: 'Pequeno, corcunda, parecido com um pássaro sem voo, com bico e penas?', result: 'Kenku' },
-                  B: { label: 'Escamas vermelhas, aspecto de lagarto, focinho de dragão?', result: 'Kobold' },
-                  C: { label: 'Semelhante a brinquedo — corpo de peluche ou porcelana?', result: 'Geppettin (Plushie or Bisque)' }
-                }
-              }}
-            }
-          }},
-          B: { label: 'Baixa – Da altura de uma mesa de taverna ou do peito de um humano comum.', next: {
-            question: 'Aspeto animalesco ou humanoide?',
-            options: {
-              A: { label: 'Animal', next: {
-                question: 'Qual descrição se encaixa melhor?',
-                options: {
-                  A: { label: 'Cabeça de coelho, irrequieto e rápido?', result: 'Harengon' },
-                  B: { label: 'Curvado, cheio de penas e a imitar sons?', result: 'Kenku' },
-                  C: { label: 'Pequeno lagarto com rosto de dragão?', result: 'Kobold' }
-                }
-              }},
-              B: { label: 'Humanoide', next: {
-                question: 'Qual descrição se encaixa melhor?',
-                options: {
-                  A: { label: 'Corpo largo, armadura e barba?', result: 'Dwarf' },
-                  B: { label: 'Anão sombrio de pele acinzentada com equipamento pesado?', result: 'Duergar' },
-                  C: { label: 'Pés descalços, rosto redondo e cheio de alegria?', result: 'Halfling' },
-                  D: { label: 'Curioso inventor com ferramentas e roupas coloridas?', result: 'Gnome' },
-                  E: { label: 'Gnomo subterrâneo de pele cinzenta?', result: 'Deep Gnome' }
-                }
-              }}
-            }
-          }},
-          C: { label: 'Média – Aproximadamente da altura de um humano comum.', next: {
-            question: 'Qual é a sua natureza?',
-            options: {
-              A: { label: 'Humanoide ou ligeiramente monstruosa', next: {
-                question: 'Qual descrição se encaixa melhor?',
-                options: {
-                  A: { label: 'Completamente comum?', result: 'Human' },
-                  B: { label: 'Aura radiante, olhos brilhantes?', result: 'Aasimar' },
-                  C: { label: 'Chifres, cauda, pele vermelha ou roxa?', result: 'Tiefling' },
-                  D: { label: 'Presas, pele cinzento-esverdeada, ar selvagem?', result: 'Orc' },
-                  E: { label: 'Forma mutável e pele lisa e pálida?', result: 'Changeling' },
-                  F: { label: 'Pele vermelha, postura disciplinada?', result: 'Hobgoblin' }
-                }
-              }},
-              B: { label: 'Claramente animal', next: {
-                question: 'Qual descrição se encaixa melhor?',
-                options: {
-                  A: { label: 'Corpo e rosto felino, cauda longa?', result: 'Tabaxi' },
-                  B: { label: 'Transformações bestiais (presas, garras)?', result: 'Shifter' },
-                  C: { label: 'Pernas de cabra, cornos, espírito travesso?', result: 'Satyr' },
-                  D: { label: 'Face de serpente, olhos fendidos, calma hipnótica?', result: 'Yuan-ti' },
-                  E: { label: 'Carapaça nas costas, membros fortes, ar pacífico?', result: 'Tortle' }
-                }
-              }},
-              C: { label: 'Élfica', next: {
-                question: 'Qual descrição se encaixa melhor?',
-                options: {
-                  A: { label: 'Elfo gracioso clássico de orelhas longas?', result: 'Elf' },
-                  B: { label: 'Elfo cujo visual muda com as estações?', result: 'Eladrin' },
-                  C: { label: 'Elfo pálido ou sombrio com expressão séria?', result: 'Shadar-kai' }
-                }
-              }},
-              D: { label: 'Aquático', next: {
-                question: 'Qual descrição se encaixa melhor?',
-                options: {
-                  A: { label: 'Elfo esguio com barbatanas ou guelras?', result: 'Sea Elf' },
-                  B: { label: 'Guerreiro escamado do oceano com tridente?', result: 'Triton' }
-                }
-              }},
-              E: { label: 'Construto, elemental ou planta', next: {
-                question: 'Qual descrição se encaixa melhor?',
-                options: {
-                  A: { label: 'Corpo de marioneta, madeira e membros articulados?', result: 'Geppettin (Marionette)' },
-                  B: { label: 'Pele como casca ou coberta de folhas?', result: 'Mandrake' },
-                  C: { label: 'Corpo feito de fogo, névoa, pedra ou água?', result: 'Genasi' }
-                }
-              }}
-            }
-          }},
-          D: { label: 'Alta – Acima da altura comum de um humano como um estandarte de guerra ou um armário de armas.', next: {
-            question: 'Escolhe a descrição que melhor se adequa:',
-            options: {
-              A: { label: 'Cabeça de dragão com sopro elemental?', result: 'Dragonborn' },
-              B: { label: 'Rosto de lagarto com cauda e crista?', result: 'Lizardfolk' },
-              C: { label: 'Postura ereta com traços de cobra?', result: 'Yuan-ti' },
-              D: { label: 'Guerreiro tribal alto de presas?', result: 'Orc' },
-              E: { label: 'Cabeça de touro, com chifres e cascos mas tronco humano?', result: 'Minotaur' },
-              F: { label: 'Pernas de cabra, cornos, alegria musical?', result: 'Satyr' },
-              G: { label: 'Guerreiro pálido de traços afiados?', result: 'Githyanki' },
-              H: { label: 'Calmo, de pele amarelada-esverdeada?', result: 'Githzerai' },
-              I: { label: 'Ser vegetal andante com pele de casca?', result: 'Mandrake' },
-              J: { label: 'Elfo com aparência sazonal mutável?', result: 'Eladrin' }
-            }
-          }},
-          E: { label: 'Muito Alta – Tão alta como uma carroça empilhada ou uma estante de uma biblioteca arcana.', next: {
-            question: 'Escolhe a descrição que melhor se adequa:',
-            options: {
-              A: { label: 'Gigante peludo de braços longos e presas?', result: 'Bugbear' },
-              B: { label: 'Corpo de cavalo e torso humano?', result: 'Centaur' },
-              C: { label: 'Humanoide entroncado com ascendência elemental de gigante?', result: 'Goliath' },
-              D: { label: 'Gigante da floresta de pele azul musgosa?', result: 'Firbolg' },
-              E: { label: 'Árvore andante adulta ou humanoide coberto de casca?', result: 'Mandrake' }
-            }
-          }}
-        }
-      }
-    },
-    step2: {
-      title: 'Que Classe Combina Contigo?',
-      tree: {
-        question: 'Qual o nível de complexidade que preferes para a tua personagem?',
-        options: {
-          A: { label: 'O mínimo possível — quero algo simples e direto.', next: {
-            question: 'Que estilo te atrai mais?',
-            options: {
-              A: { label: 'Força bruta e fúria pura. (Barbarian)', result: 'Barbarian' },
-              B: { label: 'Perícia marcial e adaptabilidade. (Fighter)', result: 'Fighter' },
-              C: { label: 'Furtividade, velocidade e precisão. (Rogue)', result: 'Rogue' }
-            }
-          }},
-          B: { label: 'Uma abordagem equilibrada — gosto de variedade sem demasiada complexidade.', next: {
-            question: 'Que estilo equilibrado soa mais apelativo?',
-            options: {
-              A: { label: 'Cura e apoio divino em combate. (Cleric)', result: 'Cleric' },
-              B: { label: 'Um guerreiro sagrado que inspira e defende. (Paladin)', result: 'Paladin' },
-              C: { label: 'Um rastreador habilidoso com magia prática. (Ranger)', result: 'Ranger' },
-              D: { label: 'Um mestre de muitas magias com boa preparação. (Wizard)', result: 'Wizard' }
-            }
-          }},
-          C: { label: 'Gosto de dominar sistemas complexos e desafios.', next: {
-            question: 'Que papel complexo te atrai?',
-            options: {
-              A: { label: 'Um mago da natureza que muda de forma. (Druid)', result: 'Druid' },
-              B: { label: 'Um artista marcial rápido com poder interior. (Monk)', result: 'Monk' },
-              C: { label: 'Um artista estiloso que lança feitiços com charme. (Bard)', result: 'Bard' },
-              D: { label: 'Um poderoso conjurador inato. (Sorcerer)', result: 'Sorcerer' },
-              E: { label: 'Um conjurador ligado a um pacto com magia misteriosa. (Warlock)', result: 'Warlock' }
-            }
-          }}
-        }
-      }
-    },
+    step1: step1pt,
+    step2: step2pt,
     step3: step3pt
   },
   en: {
-    step1: {
-      title: 'Which species would you like to play as?',
-      tree: {
-        question: 'How tall is your character?',
-        options: {
-          A: { label: 'Very short', next: {
-            question: 'Human-like or animalistic or object-like?',
-            options: {
-              A: { label: 'Human-like', next: {
-                question: 'Which description fits best?',
-                options: {
-                  A: { label: 'Big ears, sharp grin, wiry frame?', result: 'Goblin' },
-                  B: { label: 'Tiny and glowing with insect wings?', result: 'Fairy' },
-                  C: { label: 'Small gray-skinned gnome with large eyes?', result: 'Deep Gnome' }
-                }
-              }},
-              B: { label: 'Animalistic or object-like', next: {
-                question: 'Which description fits best?',
-                options: {
-                  A: { label: 'Small, hunched flightless birdlike humanoid with beak and feathers?', result: 'Kenku' },
-                  B: { label: 'Red-scaled, lizard-like, dragon-snouted?', result: 'Kobold' },
-                  C: { label: 'Toy-like — plush or porcelain-bodied?', result: 'Geppettin (Plushie or Bisque)' }
-                }
-              }}
-            }
-          }},
-          B: { label: 'Short', next: {
-            question: 'Are they animal-like or human-like?',
-            options: {
-              A: { label: 'Animal-like', next: {
-                question: 'Which description fits best?',
-                options: {
-                  A: { label: 'Bunny-headed, twitchy and fast?', result: 'Harengon' },
-                  B: { label: 'Hunched, feathered and mimicking?', result: 'Kenku' },
-                  C: { label: 'Small dragon-faced lizardling?', result: 'Kobold' }
-                }
-              }},
-              B: { label: 'Human-like', next: {
-                question: 'Which description fits best?',
-                options: {
-                  A: { label: 'Broad-bodied, armored and bearded?', result: 'Dwarf' },
-                  B: { label: 'Grim and ashen dwarf with heavy gear?', result: 'Duergar' },
-                  C: { label: 'Barefoot and round-faced, full of joy?', result: 'Halfling' },
-                  D: { label: 'Curious tinkerer with tools and bright clothes?', result: 'Gnome' },
-                  E: { label: 'Deep-dwelling gnome with gray skin?', result: 'Deep Gnome' }
-                }
-              }}
-            }
-          }},
-          C: { label: 'Average height', next: {
-            question: 'What is their nature?',
-            options: {
-              A: { label: 'Humanlike or slightly magical', next: {
-                question: 'Which description fits best?',
-                options: {
-                  A: { label: 'Completely ordinary?', result: 'Human' },
-                  B: { label: 'Radiant aura, glowing eyes?', result: 'Aasimar' },
-                  C: { label: 'Horns, tail, red or purple skin?', result: 'Tiefling' },
-                  D: { label: 'Tusks, greenish-gray skin, primal look?', result: 'Orc' },
-                  E: { label: 'Pale and smooth-skinned shapeshifter?', result: 'Changeling' },
-                  F: { label: 'Red skin, disciplined and postured?', result: 'Hobgoblin' }
-                }
-              }},
-              B: { label: 'Clearly animalistic', next: {
-                question: 'Which description fits best?',
-                options: {
-                  A: { label: 'Feline body and face, long tail?', result: 'Tabaxi' },
-                  B: { label: 'Beast-like changes (fangs, claws)?', result: 'Shifter' },
-                  C: { label: 'Goat legs, horns, mischievous spirit?', result: 'Satyr' },
-                  D: { label: 'Serpentine face, slitted eyes, hypnotic calm?', result: 'Yuan-ti' },
-                  E: { label: 'Shell on back, strong limbs, peaceful look?', result: 'Tortle' }
-                }
-              }},
-              C: { label: 'Elven', next: {
-                question: 'Which description fits best?',
-                options: {
-                  A: { label: 'Classic graceful elf with long ears?', result: 'Elf' },
-                  B: { label: 'Elf whose look shifts with the seasons?', result: 'Eladrin' },
-                  C: { label: 'Pale or shadowy elf with grim expression?', result: 'Shadar-kai' }
-                }
-              }},
-              D: { label: 'Aquatic', next: {
-                question: 'Which description fits best?',
-                options: {
-                  A: { label: 'Sleek elf with fins or gills?', result: 'Sea Elf' },
-                  B: { label: 'Scaled oceanic warrior with trident?', result: 'Triton' }
-                }
-              }},
-              E: { label: 'Constructed, elemental, or plant-based', next: {
-                question: 'Which description fits best?',
-                options: {
-                  A: { label: 'Puppet-like body, wood or jointed limbs?', result: 'Geppettin (Marionette)' },
-                  B: { label: 'Skin like bark or covered in leaves?', result: 'Mandrake' },
-                  C: { label: 'Body made of flame, mist, rock or water?', result: 'Genasi' }
-                }
-              }}
-            }
-          }},
-          D: { label: 'Tall', next: {
-            question: 'Choose the best description:',
-            options: {
-              A: { label: 'Dragon-headed with breath weapon?', result: 'Dragonborn' },
-              B: { label: 'Lizard-faced with tail and frill?', result: 'Lizardfolk' },
-              C: { label: 'Upright with snake features?', result: 'Yuan-ti' },
-              D: { label: 'Tall, tusked tribal warrior?', result: 'Orc' },
-              E: { label: 'Bull-headed, horned, hoofed but with human torso and hands?', result: 'Minotaur' },
-              F: { label: 'Goat legs, horns, musical joy?', result: 'Satyr' },
-              G: { label: 'Pale warrior with sharp features?', result: 'Githyanki' },
-              H: { label: 'Calm with yellow-green skin?', result: 'Githzerai' },
-              I: { label: 'Plant-bodied humanoid with bark skin?', result: 'Mandrake' },
-              J: { label: 'Elf with changing seasonal look?', result: 'Eladrin' }
-            }
-          }},
-          E: { label: 'Very tall', next: {
-            question: 'Choose the best description:',
-            options: {
-              A: { label: 'Hairy giant with long arms and fangs?', result: 'Bugbear' },
-              B: { label: 'Horse body and human torso?', result: 'Centaur' },
-              C: { label: 'Muscular and marked like stone?', result: 'Goliath' },
-              D: { label: 'Mossy, blue-skinned forest giant?', result: 'Firbolg' },
-              E: { label: 'Fully grown walking tree or bark-covered humanoid?', result: 'Mandrake' }
-            }
-          }}
-        }
-      }},
-      step2: {
-        title: 'Which Class Fits You?',
-        tree: {
-          question: 'What level of complexity do you prefer in your character?',
-          options: {
-          A: { label: 'As little as possible — I want something simple and direct.', next: {
-            question: 'Which style appeals most to you?',
-            options: {
-              A: { label: 'Brutal force and raw rage. (Barbarian)', result: 'Barbarian' },
-              B: { label: 'Martial expertise and adaptability. (Fighter)', result: 'Fighter' },
-              C: { label: 'Stealth, speed, and precision. (Rogue)', result: 'Rogue' }
-            }
-          }},
-          B: { label: 'A balanced approach — I enjoy variety without too much complexity.', next: {
-            question: 'Which balanced style sounds most appealing?',
-            options: {
-              A: { label: 'Healing and divine support in battle. (Cleric)', result: 'Cleric' },
-              B: { label: 'A holy warrior who inspires and defends. (Paladin)', result: 'Paladin' },
-              C: { label: 'A skilled tracker with practical magic. (Ranger)', result: 'Ranger' },
-              D: { label: 'A master of many spells with good preparation. (Wizard)', result: 'Wizard' }
-            }
-          }},
-          C: { label: 'I enjoy mastering complex systems and challenges.', next: {
-            question: 'Which complex role are you drawn to?',
-            options: {
-              A: { label: 'A shape-shifting nature mage. (Druid)', result: 'Druid' },
-              B: { label: 'A fast-paced martial artist with inner power. (Monk)', result: 'Monk' },
-              C: { label: 'A stylish performer who casts spells with flair. (Bard)', result: 'Bard' },
-              D: { label: 'A powerful innate spellcaster. (Sorcerer)', result: 'Sorcerer' },
-              E: { label: 'A pact-bound spellcaster with mysterious magic. (Warlock)', result: 'Warlock' }
-            }
-          }}
-        }
-      }
-    },
+    step1: step1en,
+    step2: step2en,
     step3: step3en,
   }
 };
   const speciesInfo = {
     pt: {
     "Aasimar": "Radiantes e de aparência humana, os Aasimar destacam-se pelos olhos brilhantes, traços perfeitos e uma aura que parece sagrada. A sua natureza celestial concede-lhes poderes de cura e a capacidade de invocar explosões de energia divina, por vezes até manifestando asas espectrais.",
-    "Dragonborn": "Os Dragonborn assemelham-se a dragões bípedes com corpos poderosos, pele escamosa em cores vibrantes e cabeças dracónicas imponentes. Conseguem libertar um sopro de poder elemental—como fogo, relâmpago ou gelo—e são naturalmente resistentes a esse mesmo elemento.",
-    "Black Dragonborn": "Os Dragonborn têm corpos musculados e escamosos e cabeças reptilianas imponentes. Os Black Dragonborn partilham esta forma mas têm escamas escuras e oleosas e olhos amarelos penetrantes. Cospem ácido e são naturalmente resistentes a ele.",
-    "Blue Dragonborn": "Os Dragonborn têm corpos musculados e escamosos e cabeças reptilianas imponentes. Os Blue Dragonborn brilham com escamas de cobalto e cristas orgulhosas, respirando relâmpagos e resistindo à sua força.",
-    "Brass Dragonborn": "Os Dragonborn têm corpos musculados e escamosos e cabeças reptilianas imponentes. Os Brass Dragonborn têm escamas quentes e arenosas e expressões amigáveis, respirando fogo e encantando com facilidade conversadora.",
-    "Bronze Dragonborn": "Os Dragonborn têm corpos musculados e escamosos e cabeças reptilianas imponentes. Os Bronze Dragonborn cintilam com escamas metálicas de bronze, canalizando relâmpagos com nobreza.",
-    "Copper Dragonborn": "Os Dragonborn têm corpos musculados e escamosos e cabeças reptilianas imponentes. Os Copper Dragonborn são cobertos por escamas avermelhadas e douradas, respirando ácido e mostrando um espírito brincalhão.",
-    "Gold Dragonborn": "Os Dragonborn têm corpos musculados e escamosos e cabeças reptilianas imponentes. Os Gold Dragonborn brilham com escamas douradas e exalam fogo intenso, mantendo uma postura digna e calma.",
-    "Green Dragonborn": "Os Dragonborn têm corpos musculados e escamosos e cabeças reptilianas imponentes. Os Green Dragonborn têm escamas verde-esmeralda e olhos astutos, exalando nuvens venenosas que combinam com a sua astúcia.",
-    "Red Dragonborn": "Os Dragonborn têm corpos musculados e escamosos e cabeças reptilianas imponentes. Os Red Dragonborn brilham com escamas carmesim, libertando chamas ferozes e ambição intensa.",
-    "Silver Dragonborn": "Os Dragonborn têm corpos musculados e escamosos e cabeças reptilianas imponentes. Os Silver Dragonborn reluzem com escamas prateadas, exalando hálito gelado e protegendo aliados com força tranquila.",
-    "White Dragonborn": "Os Dragonborn têm corpos musculados e escamosos e cabeças reptilianas imponentes. Os White Dragonborn têm escamas brancas como neve e expressões primitivas, respirando frio intenso com instinto puro.",
+    "Dragonborn": "Os Draconatos assemelham-se a dragões bípedes com corpos poderosos, pele escamosa em cores vibrantes e cabeças dracónicas imponentes. Conseguem libertar um sopro de poder elemental—como fogo, relâmpago ou gelo—e são naturalmente resistentes a esse mesmo elemento.",
+    "Black Dragonborn": "Os Draconatos têm corpos musculados e escamosos e cabeças reptilianas imponentes. Os Draconatos Negros partilham esta forma mas têm escamas escuras e oleosas e olhos amarelos penetrantes. Cospem ácido e são naturalmente resistentes a ele.",
+    "Blue Dragonborn": "Os Draconatos têm corpos musculados e escamosos e cabeças reptilianas imponentes. Os Draconatos Azuis brilham com escamas de cobalto e cristas orgulhosas, respirando relâmpagos e resistindo à sua força.",
+    "Brass Dragonborn": "Os Draconatos têm corpos musculados e escamosos e cabeças reptilianas imponentes. Os Draconatos de Latão têm escamas quentes e arenosas e expressões amigáveis, respirando fogo e encantando com facilidade conversadora.",
+    "Bronze Dragonborn": "Os Draconatos têm corpos musculados e escamosos e cabeças reptilianas imponentes. Os Draconatos de Bronze cintilam com escamas metálicas de bronze, canalizando relâmpagos com nobreza.",
+    "Copper Dragonborn": "Os Draconatos têm corpos musculados e escamosos e cabeças reptilianas imponentes. Os Draconatos de Cobre são cobertos por escamas avermelhadas e douradas, respirando ácido e mostrando um espírito brincalhão.",
+    "Gold Dragonborn": "Os Draconatos têm corpos musculados e escamosos e cabeças reptilianas imponentes. Os Draconatos Ouro brilham com escamas douradas e exalam fogo intenso, mantendo uma postura digna e calma.",
+    "Green Dragonborn": "Os Draconatos têm corpos musculados e escamosos e cabeças reptilianas imponentes. Os Draconatos Verdes têm escamas verde-esmeralda e olhos astutos, exalando nuvens venenosas que combinam com a sua astúcia.",
+    "Red Dragonborn": "Os Draconatos têm corpos musculados e escamosos e cabeças reptilianas imponentes. Os Draconatos Vermelhos brilham com escamas carmesim, libertando chamas ferozes e ambição intensa.",
+    "Silver Dragonborn": "Os Draconatos têm corpos musculados e escamosos e cabeças reptilianas imponentes. Os Draconatos de Prata reluzem com escamas prateadas, exalando hálito gelado e protegendo aliados com força tranquila.",
+    "White Dragonborn": "Os Draconatos têm corpos musculados e escamosos e cabeças reptilianas imponentes. Os Draconatos Brancos têm escamas brancas como neve e expressões primitivas, respirando frio intenso com instinto puro.",
     "Dwarf": "Baixos, robustos e resistentes, os anões têm barbas espessas, corpos poderosos e olhos firmes. Resistentes a venenos, veem no subsolo e são difíceis de derrubar.",
     "Elf": "Altos e esguios, os elfos têm orelhas alongadas, traços angulosos e uma postura graciosa. Veem na escuridão, resistem a encantamentos e apenas precisam de meditar para descansar.",
-    "Drow Elf": "Os elfos são altos e esguios, com orelhas pontiagudas e traços intemporais. Os Drow partilham esta forma mas têm pele de obsidiana e olhos luminosos, usando magia inata e misturando sedução com perigo.",
-    "High Elf": "Os elfos são altos e elegantes, com orelhas longas e postura graciosa. Os High Elves têm traços refinados, tons de pele mais claros e um ar de nobreza. São naturalmente dotados de magia arcana e intelecto aguçado.",
-    "Wood Elf": "Os elfos são altos e elegantes, com orelhas longas e postura graciosa. Os Wood Elves fundem-se nas sombras da floresta com tons terrosos e movimentos silenciosos. São rápidos, furtivos e profundamente ligados à natureza.",
+    "Drow Elf": "Os elfos são altos e esguios, com orelhas pontiagudas e traços intemporais. Os Elfos Drow partilham esta forma mas têm pele de obsidiana e olhos luminosos, usando magia inata e misturando sedução com perigo.",
+    "High Elf": "Os elfos são altos e elegantes, com orelhas longas e postura graciosa. Os Altos Elfos têm traços refinados, tons de pele mais claros e um ar de nobreza. São naturalmente dotados de magia arcana e intelecto aguçado.",
+    "Wood Elf": "Os elfos são altos e elegantes, com orelhas longas e postura graciosa. Os Elfos dos Bosques fundem-se nas sombras da floresta com tons terrosos e movimentos silenciosos. São rápidos, furtivos e profundamente ligados à natureza.",
     "Gnome": "Os gnomos são pequenos e enérgicos, com traços exagerados e olhos expressivos. São curiosos e inteligentes, frequentemente resistindo a magias mentais e inventando pequenas maravilhas.",
-    "Forest Gnome": "Os gnomos são pequenos e enérgicos, com traços exagerados e olhos expressivos. Os Forest Gnomes preferem cores naturais e adornos de folhas, comunicando com animais e escondendo-se com ilusões mágicas.",
-    "Rock Gnome": "Os gnomos são pequenos e enérgicos, com traços exagerados e olhos expressivos. Os Rock Gnomes transportam ferramentas, lentes e engenhocas, criando dispositivos que realizam pequenos truques mágicos.",
-    "Goliath": "Os Goliath são enormes e atléticos, mais altos do que a maioria dos mortais. A sua pele é frequentemente pedregosa ou tatuada, e a sua força permite-lhes suportar dores que outros não aguentam.",
-    "Cloud Goliath": "Os Goliath são humanoides altos e largos, com ascendência elemental. Os Cloud Goliath têm tez pálida e enevoada e conseguem teletransportar-se brevemente como se montassem o vento.",
-    "Fire Goliath": "Os Goliath são humanoides altos e largos, com ascendência elemental. Os Fire Goliath brilham com calor interno, revidando com explosões de fogo quando feridos.",
-    "Frost Goliath": "Os Goliath são humanoides altos e largos, com ascendência elemental. Os Frost Goliath têm pele azulada e olhos gelados, irradiando frio que abranda os inimigos.",
-    "Hill Goliath": "Os Goliath são humanoides altos e largos, com ascendência elemental. Os Hill Goliath são ossudos e corpulentos, derrubando inimigos com pura massa.",
-    "Stone Goliath": "Os Goliath são humanoides altos e largos, com ascendência elemental. Os Stone Goliath têm pele cor de ardósia e resistência incomparável a golpes.",
-    "Storm Goliath": "Os Goliath são humanoides altos e largos, com ascendência elemental. Os Storm Goliath crepitam com energia estática, libertando trovões quando são atingidos.",
+    "Forest Gnome": "Os gnomos são pequenos e enérgicos, com traços exagerados e olhos expressivos. Os Gnomos da Floresta preferem cores naturais e adornos de folhas, comunicando com animais e escondendo-se com ilusões mágicas.",
+    "Rock Gnome": "Os gnomos são pequenos e enérgicos, com traços exagerados e olhos expressivos. Os Gnomos das Rochas transportam ferramentas, lentes e engenhocas, criando dispositivos que realizam pequenos truques mágicos.",
+    "Goliath": "Os Golias são enormes e atléticos, mais altos do que a maioria dos mortais. A sua pele é frequentemente pedregosa ou tatuada, e a sua força permite-lhes suportar dores que outros não aguentam.",
+    "Cloud Goliath": "Os Golias são humanoides altos e largos, com ascendência elemental. Os Golias das Nuvens têm tez pálida e enevoada e conseguem teletransportar-se brevemente como se montassem o vento.",
+    "Fire Goliath": "Os Golias são humanoides altos e largos, com ascendência elemental. Os Golias do Fogo brilham com calor interno, revidando com explosões de fogo quando feridos.",
+    "Frost Goliath": "Os Golias são humanoides altos e largos, com ascendência elemental. Os Golias da Geada têm pele azulada e olhos gelados, irradiando frio que abranda os inimigos.",
+    "Hill Goliath": "Os Golias são humanoides altos e largos, com ascendência elemental. Os Golias das Colinas são ossudos e corpulentos, derrubando inimigos com pura massa.",
+    "Stone Goliath": "Os Golias são humanoides altos e largos, com ascendência elemental. Os Golias de Pedra têm pele cor de ardósia e resistência incomparável a golpes.",
+    "Storm Goliath": "Os Golias são humanoides altos e largos, com ascendência elemental. Os Golias da Tempestade crepitam com energia estática, libertando trovões quando são atingidos.",
     "Halfling": "Os Halflings são pequenos e de rosto redondo, com alegria natural e postura humilde. São incrivelmente sortudos, difíceis de apanhar e frequentemente sobrevivem ao perigo com um sorriso.",
     "Human": "Os humanos assemelham-se aos do nosso mundo, mas em D&D são conhecidos pela sua adaptabilidade. Começam com uma vantagem extra, permitindo-lhes sobressair cedo em qualquer papel.",
     "Orc": "Os orcs são altos, musculados e de aparência selvagem, com presas e pele esverdeada ou acinzentada. São brutalmente fortes, podem investir em combate e recuperam mais depressa após serem atingidos.",
@@ -365,54 +48,54 @@ const data = {
     "Chthonic Tiefling": "Os Tieflings são humanoides com cornos, caudas e pele tocada por magia infernal ou demoníaca. Os Chthonic Tieflings têm aspeto pálido e sombrio, resistem a forças necróticas e canalizam poderes dos reinos da morte.",
     "Infernal Tiefling": "Os Tieflings são humanoides com cornos, caudas e pele tocada por magia infernal ou demoníaca. Os Infernal Tieflings têm cornos mais afiados, pele avermelhada e olhos ardentes. Comandam o fogo e suportam punições infernais.",
     "Aarakocra": "Os Aarakocra assemelham-se a aves humanoides com penas, garras e asas que lhes permitem voar desde o início. Os seus corpos ágeis e instintos aviários tornam-nos excelentes batedores, atacantes em mergulho e vigias dos céus.",
-    "Bugbear": "Os Bugbears são altos, largos e peludos, com traços goblinoides e membros longos. Apesar do tamanho, movem-se com silêncio assustador, atacando das sombras com força bruta e furtividade surpreendente.",
-    "Centaur": "Os Centaur combinam a parte superior do corpo humana com a parte inferior de um cavalo poderoso. Rápidos, fortes e majestosos, podem galopar para a batalha, atropelar inimigos e percorrer terrenos selvagens com facilidade.",
+    "Bugbear": "Os Bichos-papão são altos, largos e peludos, com traços goblinoides e membros longos. Apesar do tamanho, movem-se com silêncio assustador, atacando das sombras com força bruta e furtividade surpreendente.",
+    "Centaur": "Os Centauros combinam a parte superior do corpo humana com a parte inferior de um cavalo poderoso. Rápidos, fortes e majestosos, podem galopar para a batalha, atropelar inimigos e percorrer terrenos selvagens com facilidade.",
     "Changeling": "Os Changelings têm pele pálida e traços suaves em repouso, mas conseguem mudar de rosto e forma à vontade. Mestres do disfarce, transitam entre identidades e adaptam-se a qualquer papel social.",
     "Firbolg": "Os Firbolgs são gigantes gentis com pele azul, cabelo musgoso e olhos profundos que refletem a floresta. Falam com animais e plantas, fundem-se na natureza e usam magia subtil para proteger o bosque.",
     "Githyanki": "Os Githyanki são magros e de pele amarela, com traços longos e olhos penetrantes. Oriundos de reinos astrais, são guerreiros ferozes que atacam com poder psíquico e perícia marcial.",
     "Githzerai": "Os Githzerai partilham o aspeto magro e alongado dos seus parentes Gith mas irradiam calma interior. Mestres da mente sobre a matéria, movem-se com quietude e agem com precisão.",
-    "Goblin": "Os Goblins são pequenos, magros e de dentes afiados, com orelhas grandes e dedos ágeis. São rápidos, difíceis de apanhar e recuperam rapidamente após derrotar inimigos.",
+    "Goblin": "Os Duendes são pequenos, magros e de dentes afiados, com orelhas grandes e dedos ágeis. São rápidos, difíceis de apanhar e recuperam rapidamente após derrotar inimigos.",
     "Hobgoblin": "Os Hobgoblins são goblinoides mais altos e robustos, com pele castanho-avermelhada e postura militar. Lutam em formação, fortalecem aliados e valorizam ordem e honra.",
     "Kobold": "Os Kobolds são pequenos humanoides reptilianos com focinho canino e pele escamosa. Apesar de frágeis, superam inimigos com truques e ganham força lutando em grupo.",
     "Lizardfolk": "Os Lizardfolk são altos e de sangue frio, com peles escamosas, caudas e olhos reptilianos. Mantêm-se calmos sob pressão, fabricam ferramentas de osso e madeira e sobrevivem nos ambientes mais duros.",
     "Minotaur": "Os Minotauros são touros bípedes com torso humanoide, cornos e cascos. Investem com força aterradora, suportam dor e são excelentes rastreadores.",
-    "Satyr": "Os Satyrs parecem humanos com pernas de cabra, cornos enrolados e olhos selvagens. O seu charme brincalhão e magia feérica protegem-nos de manipulação e dão-lhes velocidade, ritmo e graça social.",
+    "Satyr": "Os Sátiros parecem humanos com pernas de cabra, cornos enrolados e olhos selvagens. O seu charme brincalhão e magia feérica protegem-nos de manipulação e dão-lhes velocidade, ritmo e graça social.",
     "Tabaxi": "Os Tabaxi são felinos humanoides com pelo, cauda, rosto de gato e orelhas inquietas. Ágeis e curiosos, escalam facilmente, escapam ao perigo e perseguem segredos e histórias.",
-    "Triton": "Os Tritons são humanoides aquáticos de aspeto régio, com pele escamosa, cristas semelhantes a barbatanas e guelras no pescoço. Respiram debaixo de água, comunicam com criaturas marinhas e usam magia oceânica poderosa.",
+    "Triton": "Os Tritões são humanoides aquáticos de aspeto régio, com pele escamosa, cristas semelhantes a barbatanas e guelras no pescoço. Respiram debaixo de água, comunicam com criaturas marinhas e usam magia oceânica poderosa.",
     "Tortle": "Os Tortles assemelham-se a tartarugas humanoides com carapaças pesadas, garras e olhos pacientes. A sua carapaça protege-os naturalmente e destacam-se em tarefas de sobrevivência graças à disciplina e sabedoria prática.",
     "Yuan-ti": "Os Yuan-ti são humanoides de pele lisa com olhos de serpente, línguas bifurcadas e, por vezes, escamas subtis. Imunes a venenos e difíceis de manipular, usam magia inquietante para dominar ou assustar.",
-    "Deep Gnome": "Os gnomos são pequenos, de cabeças grandes, olhos brilhantes e mãos ocupadas. Os Deep Gnomes são primos subterrâneos com pele cinzenta, olhos grandes e resistência forjada na pedra. Veem na escuridão e escondem-se com magia engenhosa.",
+    "Deep Gnome": "Os gnomos são pequenos, de cabeças grandes, olhos brilhantes e mãos ocupadas. Os Gnomos das Profundezas são primos subterrâneos com pele cinzenta, olhos grandes e resistência forjada na pedra. Veem na escuridão e escondem-se com magia engenhosa.",
     "Duergar": "Os anões são baixos, robustos e barbudos, com membros sólidos e expressões severas. Os Duergar são os seus parentes cinzentos do Subterrâneo—estoicos, sombrios e dotados de magia que lhes permite crescer ou desaparecer por breves instantes.",
     "Eladrin": "Os elfos são altos, de orelhas longas e postura eterna. Os Eladrin partilham esta graça, mas a sua pele e aura mudam com as estações do Feywild. A sua magia de teletransporte ganha um novo efeito consoante a estação com que o seu espírito se alinha.",
-    "Autumn Eladrin": "Os Eladrin são elfos cuja cor e humor mudam com as estações. Os Autumn Eladrin irradiam calor e charme, e quando se teletransportam, os inimigos próximos podem ficar demasiado encantados para retaliar.",
-    "Winter Eladrin": "Os Eladrin são elfos cuja cor e humor mudam com as estações. Os Winter Eladrin são pálidos, distantes e frios como a geada—quando se teletransportam, assustam os inimigos a recuar.",
-    "Spring Eladrin": "Os Eladrin são elfos cuja cor e humor mudam com as estações. Os Spring Eladrin florescem com energia e bondade, podendo teletransportar outros em vez de si próprios.",
-    "Summer Eladrin": "Os Eladrin são elfos cuja cor e humor mudam com as estações. Os Summer Eladrin brilham com paixão dourada e, ao teletransportarem-se, queimam inimigos à volta com calor radiante.",
-    "Fairy": "As Fairies são fadas do tamanho da palma da mão, com asas delicadas de inseto, pele cintilante e olhos luminosos. Conseguem voar, lançar magia inata e deslumbrar o mundo com uma mistura de fantasia e travessura.",
+    "Autumn Eladrin": "Os Eladrin são elfos cuja cor e humor mudam com as estações. Os Eladrin Outonais irradiam calor e charme, e quando se teletransportam, os inimigos próximos podem ficar demasiado encantados para retaliar.",
+    "Winter Eladrin": "Os Eladrin são elfos cuja cor e humor mudam com as estações. Os Eladrin Invernais são pálidos, distantes e frios como a geada—quando se teletransportam, assustam os inimigos a recuar.",
+    "Spring Eladrin": "Os Eladrin são elfos cuja cor e humor mudam com as estações. Os Eladrin Primaveris florescem com energia e bondade, podendo teletransportar outros em vez de si próprios.",
+    "Summer Eladrin": "Os Eladrin são elfos cuja cor e humor mudam com as estações. Os Eladrin Estivais brilham com paixão dourada e, ao teletransportarem-se, queimam inimigos à volta com calor radiante.",
+    "Fairy": "As Fadas são criaturas do tamanho da palma da mão, com asas delicadas de inseto, pele cintilante e olhos luminosos. Conseguem voar, lançar magia inata e deslumbrar o mundo com uma mistura de fantasia e travessura.",
     "Genasi": "Os Genasi são humanoides infundidos com energia elemental, os seus corpos marcados por características como cabelo eletrificado, pele de pedra, olhos ardentes ou padrões fluidos. Resistentes ao seu elemento, controlam-no com facilidade.",
-    "Air Genasi": "Os Genasi exibem traços visuais de magia elemental. Os Air Genasi têm cabelo esvoaçante, pele azul-cinzenta e andar leve. Deslizam suavemente, resistem a relâmpagos e movem-se como se fossem levados pelo vento.",
-    "Earth Genasi": "Os Genasi exibem traços visuais de magia elemental. Os Earth Genasi têm pele semelhante a rocha, passos pesados e traços de cristal ou mineral. Mantêm-se firmes, ignoram deslocamentos e terrenos difíceis.",
-    "Fire Genasi": "Os Genasi exibem traços visuais de magia elemental. Os Fire Genasi irradiam calor, com olhos incandescentes e cabelo de brasa. Suportam chamas e podem invocar luz ardente à vontade.",
-    "Water Genasi": "Os Genasi exibem traços visuais de magia elemental. Os Water Genasi têm pele húmida e brilhante, cabelo cor de algas e movimentos fluidos. Respirando debaixo de água, nadam com graça e moldam água facilmente.",
-    "Geppettin (Marionette)": "Os Geppettin assemelham-se a brinquedos vivos—constructos animados com designs distintos. Os Marionette Geppettin são de madeira e articulados como marionetas, frequentemente com rostos pintados e vozes ocas. Não sentem fome nem fadiga, e muitos destacam-se no teatro ou espionagem.",
-    "Geppettin (Plushie or Bisque)": "Os Geppettin assemelham-se a brinquedos vivos—constructos animados com designs distintos. Os Plushie ou Bisque Geppettin parecem peluches macios ou bonecas de porcelana animadas. São incansáveis, imortais e evocam conforto e curiosidade.",
-    "Marionette Geppettin": "Os Geppettin são brinquedos animados com formas e personalidades distintas. Os Marionette são de madeira, com membros articulados como marionetas e expressões pintadas. São ágeis, expressivos e não precisam de descanso ou alimento.",
-    "Bisque Geppettin": "Os Geppettin são brinquedos animados com formas e personalidades distintas. Os Bisque Geppettin parecem bonecas de porcelana com traços elegantes e olhos vidrados. São incansáveis e intemporais, muitas vezes graciosos ou inquietantes.",
-    "Plushie Geppettin": "Os Geppettin são brinquedos animados com formas e personalidades distintas. Os Plushie Geppettin são fofos e recheados, com olhos de botão e sorrisos costurados. Surpreendentemente resistentes, são acolhedores e estranhos.",
+    "Air Genasi": "Os Genasi exibem traços visuais de magia elemental. Os Genasi do Ar têm cabelo esvoaçante, pele azul-cinzenta e andar leve. Deslizam suavemente, resistem a relâmpagos e movem-se como se fossem levados pelo vento.",
+    "Earth Genasi": "Os Genasi exibem traços visuais de magia elemental. Os Genasi da Terra têm pele semelhante a rocha, passos pesados e traços de cristal ou mineral. Mantêm-se firmes, ignoram deslocamentos e terrenos difíceis.",
+    "Fire Genasi": "Os Genasi exibem traços visuais de magia elemental. Os Genasi do Fogo irradiam calor, com olhos incandescentes e cabelo de brasa. Suportam chamas e podem invocar luz ardente à vontade.",
+    "Water Genasi": "Os Genasi exibem traços visuais de magia elemental. Os Genasi da Água têm pele húmida e brilhante, cabelo cor de algas e movimentos fluidos. Respirando debaixo de água, nadam com graça e moldam água facilmente.",
+    "Geppettin (Marionette)": "Os Geppettin assemelham-se a brinquedos vivos—constructos animados com designs distintos. Os Geppettin Marioneta são de madeira e articulados como marionetas, frequentemente com rostos pintados e vozes ocas. Não sentem fome nem fadiga, e muitos destacam-se no teatro ou espionagem.",
+    "Geppettin (Plushie or Bisque)": "Os Geppettin assemelham-se a brinquedos vivos—constructos animados com designs distintos. Os Geppettin de Peluche ou Porcelana parecem peluches macios ou bonecas de porcelana animadas. São incansáveis, imortais e evocam conforto e curiosidade.",
+    "Marionette Geppettin": "Os Geppettin são brinquedos animados com formas e personalidades distintas. Os Geppettin Marioneta são de madeira, com membros articulados como marionetas e expressões pintadas. São ágeis, expressivos e não precisam de descanso ou alimento.",
+    "Bisque Geppettin": "Os Geppettin são brinquedos animados com formas e personalidades distintas. Os Geppettin de Porcelana parecem bonecas de porcelana com traços elegantes e olhos vidrados. São incansáveis e intemporais, muitas vezes graciosos ou inquietantes.",
+    "Plushie Geppettin": "Os Geppettin são brinquedos animados com formas e personalidades distintas. Os Geppettin de Peluche são fofos e recheados com olhos de botão e sorrisos costurados. Surpreendentemente resistentes, são acolhedores e estranhos.",
     "Harengon": "Os Harengon são coelhos humanoides com orelhas longas, pernas fortes e energia nervosa. Reagem com velocidade impressionante, saltam grandes distâncias e irradiam curiosidade sem limites.",
     "Kenku": "Os Kenku são humanoides semelhantes a corvos, com corpos emplumados, rostos bicudos e olhos escuros. Falam imitando sons e vozes, sendo mestres da furtividade e memória.",
-    "Mandrake": "Os Mandrake têm pele semelhante a casca, membros folhosos e rostos que mudam com as estações. Sobrevivem à base de luz solar ou carne, enraízam-se para descansar e podem prender inimigos com vinhas vivas.",
-    "Spring Mandrake": "Os Mandrake assemelham-se a plantas humanoides com pele de casca e cabelo de folhas. Os Spring Mandrake florescem com verdes frescos e conseguem puxar inimigos voadores para o chão em segurança.",
-    "Summer Mandrake": "Os Mandrake assemelham-se a plantas humanoides com pele de casca e cabelo de folhas. Os Summer Mandrake são densos em folhagem e conseguem empurrar inimigos com vinhas cheias de força.",
-    "Autumn Mandrake": "Os Mandrake assemelham-se a plantas humanoides com pele de casca e cabelo de folhas. Os Autumn Mandrake usam folhas douradas e vermelhas e conseguem prender dois inimigos ao mesmo tempo numa armadilha retorcida.",
-    "Winter Mandrake": "Os Mandrake assemelham-se a plantas humanoides com pele de casca e cabelo de folhas. Os Winter Mandrake são retorcidos e gelados, atacando com vinhas que causam uma explosão de frio.",
-    "Sea Elf": "Os Sea Elves têm a estrutura esguia e traços afiados dos outros elfos, mas com dedos palmados, guelras e pele em tons marinhos. Respirando e nadando debaixo de água, sentem o apelo do oceano no sangue.",
+    "Mandrake": "As Mandrágoras têm pele semelhante a casca, membros folhosos e rostos que mudam com as estações. Sobrevivem à base de luz solar ou carne, enraízam-se para descansar e podem prender inimigos com vinhas vivas.",
+    "Spring Mandrake": "As Mandrágoras Primaveris assemelham-se a plantas humanoides com pele de casca e cabelo de folhas. Florescem com verdes frescos e conseguem puxar inimigos voadores para o chão em segurança.",
+    "Summer Mandrake": "As Mandrágoras Estivais assemelham-se a plantas humanoides com pele de casca e cabelo de folhas. São densas em folhagem e conseguem empurrar inimigos com vinhas cheias de força.",
+    "Autumn Mandrake": "As Mandrágoras Outonais assemelham-se a plantas humanoides com pele de casca e cabelo de folhas. Usam folhas douradas e vermelhas e conseguem prender dois inimigos ao mesmo tempo numa armadilha retorcida.",
+    "Winter Mandrake": "As Mandrágoras Invernais assemelham-se a plantas humanoides com pele de casca e cabelo de folhas. São retorcidas e geladas, atacando com vinhas que causam uma explosão de frio.",
+    "Sea Elf": "Os Elfos do Mar têm a estrutura esguia e traços afiados dos outros elfos, mas com dedos palmados, guelras e pele em tons marinhos. Respirando e nadando debaixo de água, sentem o apelo do oceano no sangue.",
     "Shadar-kai": "Os Shadar-kai são elfos pálidos, marcados pela sombra e ligados à Rainha dos Corvos. Caminham entre mundos e podem tornar-se insubstanciais por breves instantes, escapando ao perigo com foco sombrio.",
-    "Shifter": "Os Shifters parecem humanos mas com traços animais—presas, pelo, garras ou olhos brilhantes. Quando mudam, o seu lado animal emerge, desbloqueando habilidades aprimoradas.",
-    "Beasthide Shifter": "Os Shifters assemelham-se a humanos com traços animais. Os Beasthide Shifters tornam-se mais resistentes ao transformar-se, com pele que se espessa como a de um rinoceronte para suportar golpes.",
-    "Longtooth Shifter": "Os Shifters assemelham-se a humanos com traços animais. Os Longtooth Shifters desenvolvem presas de lobo ao mudar, mordendo ferozmente e avançando para o perigo.",
-    "Swiftstride Shifter": "Os Shifters assemelham-se a humanos com traços animais. Os Swiftstride Shifters tornam-se esguios e rápidos ao transformar-se, movendo-se entre inimigos com graça felina.",
-    "Wildhunt Shifter": "Os Shifters assemelham-se a humanos com traços animais. Os Wildhunt Shifters aguçam os sentidos e instintos, tornando-se quase impossíveis de surpreender e rastreadores perfeitos no seu estado bestial."
+    "Shifter": "Os Metamorfos parecem humanos mas com traços animais—presas, pelo, garras ou olhos brilhantes. Quando mudam, o seu lado animal emerge, desbloqueando habilidades aprimoradas.",
+    "Beasthide Shifter": "Os Metamorfos assemelham-se a humanos com traços animais. Os Metamorfos Encouraçados tornam-se mais resistentes ao transformar-se, com pele que se espessa como a de um rinoceronte para suportar golpes.",
+    "Longtooth Shifter": "Os Metamorfos assemelham-se a humanos com traços animais. Os Metamorfos Lupinos desenvolvem presas de lobo ao mudar, mordendo ferozmente e avançando para o perigo.",
+    "Swiftstride Shifter": "Os Metamorfos assemelham-se a humanos com traços animais. Os Metamorfos Velozes tornam-se esguios e rápidos ao transformar-se, movendo-se entre inimigos com graça felina.",
+    "Wildhunt Shifter": "Os Metamorfos assemelham-se a humanos com traços animais. Os Metamorfos Canídeos aguçam os sentidos e instintos, tornando-se quase impossíveis de surpreender e rastreadores perfeitos no seu estado bestial."
     },
     en: {
     "Aasimar": "Radiant and human-like, Aasimar stand out with glowing eyes, flawless features, and an aura that feels holy. Their celestial nature grants them healing powers and the ability to summon bursts of divine energy, sometimes even manifesting spectral wings.",
@@ -534,61 +217,61 @@ const data = {
 
   const subclassInfo = {
     pt: {
-      'Path of the Berserker': 'Liberta uma fúria brutal no combate, ignorando dor ou medo.',
-      'Path of the Wild Heart': 'Liga-te a espíritos animais e luta com ferocidade primal.',
-      'Path of the World Tree': 'Invoca o poder da Árvore do Mundo para curar e mover-te pelo campo de batalha.',
-      'Path of the Zealot': 'Converte a raiva em poder divino e continua a lutar até ao fim.',
-      'Path of the Muscle Wizard': 'Finges conjurar feitiços enquanto esmagas com força pura.',
-      'College of Dance': 'Dança mágica que inspira aliados e confunde inimigos.',
-      'College of Glamour': 'Encanto feérico que cativa todos à tua volta.',
-      'College of Lore': 'Conhecimento e música dão-te truques e magias variadas.',
-      'College of Valor': 'Empunhas espada e canção, liderando na linha da frente.',
-      'Life Domain': 'Dedica-te a curar e proteger com energia sagrada.',
-      'Light Domain': 'Invocas luz radiante para dissipar as trevas.',
-      'Trickery Domain': 'Usas ilusões divinas e manhas para enganar adversários.',
-      'War Domain': 'Batalhas com fervor religioso, fortalecendo aliados.',
-      'Circle of the Land': 'Retiras poder de lugares antigos da natureza.',
-      'Circle of the Moon': 'Transformas-te em feras para combater.',
-      'Circle of the Sea': 'Controlas marés e tempestades com magia oceânica.',
-      'Circle of Stars': 'Manipulas constelações para orientar e potenciar feitiços.',
-      'Battle Master': 'Usas manobras táticas para dominar qualquer duelo.',
-      'Champion': 'Confias em proezas físicas e golpes críticos devastadores.',
-      'Eldritch Knight': 'Combinas armas e magia arcana no campo de batalha.',
-      'Psi Warrior': 'Emprega poder psíquico para mover e ferir com a mente.',
-      Dungeoneer: 'Especialista em masmorras e armadilhas.',
-      'Way of Mercy': 'Equilibra curas e castigos com golpes precisos.',
-      'Way of Shadow': 'Atacas das sombras sem seres visto.',
-      'Way of the Elements': 'Canaliza fogo, água, ar e terra através do ki.',
-      'Way of the Open Hand': 'Técnica perfeita que derruba e desarma adversários.',
-      'Warrior of the Street': 'Combate com técnicas acrobáticas das ruas.',
-      'Oath of Devotion': 'Juraste defender a justiça e a luz.',
-      'Oath of Glory': 'Realizas feitos lendários que inspiram aliados.',
-      'Oath of the Ancients': 'Proteges a beleza natural com magia feérica.',
-      'Oath of Vengeance': 'Persegues sem piedade os malfeitores.',
-      'Oath of Revelry': 'Lutas celebrando e espalhando alegria.',
-      'Beast Master': 'Combates lado a lado com um companheiro animal.',
-      'Fey Wanderer': 'Caminhas entre o mundo e o Feywild com charme sobrenatural.',
-      'Gloom Stalker': 'Caças nas sombras onde poucos se aventuram.',
-      Hunter: 'Ajustas as tuas técnicas para derrotar qualquer presa.',
-      'Arcane Trickster': 'Misturas furtividade com truques mágicos.',
-      Assassin: 'Elimina inimigos com ataques rápidos e silenciosos.',
-      Soulknife: 'Materializas lâminas psiónicas para golpear.',
-      Thief: 'Escalas e abres fechaduras com incrível destreza.',
-      'Arachnoid Stalker': 'Escalas paredes e enredas adversários como uma aranha.',
-      'Aberrant Sorcery': 'Poder alienígena distorce a realidade à tua volta.',
-      'Clockwork Sorcery': 'Invocas ordem mecânica para proteger e atacar.',
-      'Draconic Sorcery': 'O sangue dracónico concede-te resistência e sopros devastadores.',
-      'Wild Magic': 'A tua magia é caótica e imprevisível.',
-      'Archfey Patron': 'Um patrono feérico dá-te encanto e ilusões.',
-      'Celestial Patron': 'Curas aliados e queimas inimigos com luz celestial.',
-      'Fiend Patron': 'Um ser infernal alimenta-te com fogo e maldições.',
-      'Great Old One Patron': 'Poderes cósmicos concedem-te segredos e loucura.',
-      'Future You': 'Recebeste poder da tua própria versão futura.',
-      Abjurer: 'Especialista em defesa mágica e banimentos.',
-      Diviner: 'Prevês o futuro e manipulas o destino.',
-      Evoker: 'Desatas energia elemental em rajadas destrutivas.',
-      Illusionist: 'Cria ilusões perfeitas que confundem qualquer um.'
-    },
+      'Path of the Berserker': 'Os Bárbaros são o poder físico em forma pura—guerreiros furiosos movidos por emoções primordiais. O Caminho da Ira leva essa ferocidade ao extremo, libertando violência incontrolável em combate e ignorando interferências mentais, tornando-te uma força da natureza aterradora com brutalidade incomparável.',
+      'Path of the Wild Heart': 'Os Bárbaros são guerreiros primordiais que canalizam a sua fúria em poder. O Caminho do Coração Selvagem liga-te a espíritos animais, permitindo que enfureças como um urso, águia ou lobo e ganhes garras, asas e sentidos que ecoam os predadores mais selvagens—lutando como uma besta entre homens.',
+      'Path of the World Tree': 'Os Bárbaros lutam com raiva primordial, e os que seguem o Caminho da Árvore do Mundo canalizam raízes cósmicas que atravessam os reinos. Estes guerreiros canalizam a energia de Yggdrasil para curar, aumentar o alcance, invocar ramos para prender inimigos e teletransportar-se pelo campo de batalha como um mito vivo.',
+      'Path of the Zealot': 'Os Bárbaros canalizam fúria bruta em combate, e os do Caminho do Fanático transformam essa raiva em poder divino. Tornas-te um berserker sagrado, castigando inimigos com ira sagrada, curando pela fé e até desafiando a morte para lutar em nome do teu deus.',
+      'Path of the Muscle Wizard': 'Os Bárbaros lutam com força e fúria, e o Caminho do Mago Musculado permite fingir que és um lançador de feitiços—enquanto na verdade pulverizas inimigos com pura força. Intimidas com o teu "poder arcano", lanças "truques" como murros poderosos e conjuras o feitiço supremo: Punho. Não és só forte, és magicamente forte (e ninguém ousa dizer o contrário).',
+      'College of Dance': 'Os Bardos são mestres da performance e magia, transformando música e movimento em poder. Os do Colégio da Dança lutam com graça rodopiante, misturando batalha com ballet—deslizando pelo campo de batalha, inspirando aliados a cada pirueta e esquivando-se do perigo ao seu próprio ritmo.',
+      'College of Glamour': 'Os Bardos usam música e carisma como armas mágicas, e os do Colégio do Deslumbre especializam-se em encantamentos feéricos. Tornas-te uma lenda viva, deslumbrando inimigos com ilusões e charme enquanto inspiras aliados com a majestade radiante do Feywild.',
+      'College of Lore': 'Os Bardos são versáteis e mestres da magia através da música e conhecimento. O Colégio do Conhecimento transforma-te num colecionador de segredos, permitindo aprender qualquer feitiço, cortar ataques inimigos com astúcia e revelar verdades e enganos com cada frase engenhosa.',
+      'College of Valor': 'Os Bardos entrelaçam magia e aço em performances heroicas. O Colégio da Bravura permite-te lutar na linha da frente—cantando lendas antigas, atacando com espada e canção, e mudando o rumo da batalha com magia inspiradora e poder marcial.',
+      'Life Domain': 'Os Clérigos canalizam poder divino para curar, proteger e castigar em nome da sua divindade. O Domínio da Vida torna-te o curandeiro supremo, potenciando cada feitiço de cura para restaurar mais saúde e permitindo-te ser um farol radiante de resistência e restauração.',
+      'Light Domain': 'Os Clérigos são conjuradores divinos que invocam milagres. O Domínio da Luz equipa-te com radiação intensa, permitindo-te atacar inimigos com fogo e expor ameaças ocultas, queimando a escuridão e a falsidade com a fúria do sol.',
+      'Trickery Domain': 'Os Clérigos obtêm poder de patronos divinos, e o Domínio da Trapaça favorece a astúcia e a ilusão. Com bênçãos furtivas, magia enganadora e travessuras divinas, tornas-te um trapaceiro sagrado—confundindo inimigos e transformando a graça divina numa ferramenta de caos.',
+      'War Domain': 'Os Clérigos usam poder divino ao serviço dos deuses, e os do Domínio da Guerra prosperam em combate. Avanças para a batalha armado de fé, atacando com fúria divina e abençoando aliados com poder justo, tornando-te uma arma viva do teu deus.',
+      'Circle of the Land': 'Os Druidas moldam o mundo com a magia da natureza, e os do Círculo da Terra tornam-se guardiões de lugares antigos. Retiras força de florestas, desertos e tundras, lançando feitiços poderosos e canalizando a energia elemental da terra sob os teus pés.',
+      'Circle of the Moon': 'Os Druidas comandam o selvagem, e o Círculo da Lua desbloqueia a tua besta interior. Transformas-te em criaturas temíveis, mudando de forma em combate, aguentando golpes e dilacerando inimigos como um avatar primordial da natureza.',
+      'Circle of the Sea': 'Os Druidas canalizam a força da natureza, e o Círculo do Mar controla o poder bruto dos oceanos. Conjuras tempestades, avanças com energia das marés e atacas como uma onda viva—comandando as profundezas para esmagar os inimigos com fúria aquática.',
+      'Circle of Stars': 'Os Druidas moldam magia do mundo natural, e o Círculo das Estrelas alcança os céus. Usas padrões celestes para guiar o destino, transformas-te em formas radiantes e lanças magia estrelada que dobra o destino à tua vontade.',
+      'Battle Master': 'Os Guerreiros são mestres do combate em todas as formas, e os Mestres de Batalha elevam isso a uma arte. Com manobras experientes e superioridade tática, controlas o campo de batalha, desarmas inimigos, fazes tropeçar adversários e guias aliados como um general veterano.',
+      'Champion': 'Os Guerreiros dominam o combate marcial, e os Campeões ultrapassam os limites físicos além do humano. Atacas com mais força, acertas golpes críticos com mais frequência e tornas-te um símbolo de poder heroico puro que domina qualquer arena.',
+      'Eldritch Knight': 'Os Guerreiros prosperam no combate corpo a corpo, e o Místico funde proeza marcial com magia arcana. Teleportas-te pelo campo, encantas a tua lâmina e lanças fogo e força juntamente com a espada—usando magia como uma arma.',
+      'Psi Warrior': 'Os Guerreiros são peritos táticos, e os Psiónicos afiam a mente como arma. Com empurrões telecinéticos, ataques psíquicos e defesas mentais, tornas-te um monge guerreiro da mente, dobrando a realidade e os inimigos com pura força de vontade.',
+      'Dungeoneer': 'Os Guerreiros são mestres da batalha, e o Explorador de Masmorras transforma cada exploração numa vitória tática. Com instintos supersticiosos, reflexos para evitar armadilhas e bónus para descobrir segredos de monstros, tornas-te um guia vivo de sobrevivência e caça ao tesouro—explorando onde outros não ousam e vivendo para contar.',
+      'Way of Mercy': 'Os Monges canalizam paz interior e golpes mortais, e a Técnica da Misericórdia caminha entre curandeiro e executor. Com um toque, podes curar feridas ou infligir dor—movendo-te como um agente mascarado de equilíbrio, julgamento e restauração.',
+      'Way of Shadow': 'Os Monges movem-se com velocidade e precisão, e os da Técnica da Sombra misturam habilidade marcial com furtividade sobrenatural. Atacas das sombras, desapareces em fumo e tornas-te a personificação do medo e silêncio.',
+      'Way of the Elements': 'Os Monges dominam o corpo como arma, e a Técnica dos Elementos permite-te controlar fogo, água, ar e terra com o teu ki. Libertarás fúria elemental com socos, conjurando rajadas de fogo, chicotes de água e mais a cada golpe.',
+      'Way of the Open Hand': 'Os Monges aperfeiçoam as artes marciais numa força da natureza, e a Técnica da Mão Aberta é a forma mais pura de mestria desarmada. Derrubas inimigos, empurras adversários e atacas com precisão cirúrgica—intocável e imparável.',
+      'Warrior of the Street': 'Os Monges canalizam força interior em perfeição física, e o Lutador das Ruas combate com combos rápidos e movimentos especiais dignos de videojogo. Atiras inimigos ao ar, lanças rajadas de energia e desferes uppercuts imparáveis—transformando cada combate num espetáculo de estilo e perícia.',
+      'Oath of Devotion': 'Os Paladinos são campeões divinos ligados a juramentos sagrados. O Juramento da Devoção prende-te a ideais de justiça, honra e luz—permitindo-te castigar o mal com força radiante e proteger os inocentes com determinação inabalável.',
+      'Oath of Glory': 'Os Paladinos usam poder sagrado em combate, e o Juramento da Glória transforma-te num paradigma de heroísmo. Inspiras aliados com feitos épicos, avanças como um campeão mítico e encarnas a centelha divina da grandeza lendária.',
+      'Oath of the Ancients': 'Os Paladinos são cruzados armados por uma causa maior, e o Juramento dos Ancestrais liga-te à beleza da natureza e alegria. Usas energia radiante para proteger aliados, resistir à escuridão e preservar a vida com poder feérico.',
+      'Oath of Vengeance': 'Os Paladinos cumprem votos sagrados, e o Juramento da Vingança jura perseguição implacável dos malfeitores. Caças os ímpios com fúria sobrenatural, acorrentando inimigos, teletransportando-te pelo campo de batalha e tornando-te a mão imparável da retribuição.',
+      'Oath of Revelry': 'Os Paladinos são guerreiros divinos ligados a votos sagrados, e os do Juramento da Celebração dedicam-se à alegria, camaradagem e festa sem fim. Conjuras bebidas encantadas, festejas apesar da dor e inspiras aliados com a tua celebração contagiante—lutando pelo direito sagrado de festejar.',
+      'Beast Master': 'Os Patrulheiros misturam proeza marcial com magia da natureza, e os Mestres das Feras ligam-se a um companheiro primal. Tu e a tua besta lutam como um só—coordenando ataques, protegendo-se mutuamente e libertando fúria selvagem em harmonia com a natureza.',
+      'Fey Wanderer': 'Os Patrulheiros sobrevivem onde outros temem, e os Viajantes Feéricos trazem a beleza caótica do Feywild consigo. Com encantos, lâminas psíquicas e explosões de alegria estranha, moves-te como um cavaleiro trapaceiro entre dois mundos.',
+      'Gloom Stalker': 'Os Patrulheiros são caçadores peritos, e os Viajantes das Sombras prosperam na escuridão. Atacas sem ser visto, moves-te como um fantasma pelo Subterrâneo ou noite e destróis inimigos antes que saibam que estás lá.',
+      'Hunter': 'Os Patrulheiros protegem a natureza e eliminam ameaças com precisão cirúrgica. Como Caçador, adaptas as tuas habilidades para destruir a presa escolhida—disparando flechas, esquivando ataques e controlando o campo de batalha com eficiência implacável.',
+      'Arcane Trickster': 'Os Ladinos são mestres da furtividade e precisão, e o Trapaceiro Arcano adiciona magia ao seu arsenal. Misturas ilusões e encantamentos com ataques furtivos—desarmando armadilhas, desaparecendo à vista e superando inimigos com astúcia arcana.',
+      'Assassin': 'Os Ladinos são exímios em emboscada e fuga, e os Assassinos aperfeiçoam a arte da morte. Atacas das sombras com precisão letal, infliges dano massivo a inimigos surpreendidos e moves-te pelo mundo como um fantasma com o toque de uma adaga.',
+      'Soulknife': 'Os Ladinos operam nas margens, e os da Lâmina Psíquica usam energia psiónica para se tornarem assassinos mentais. Manifestas lâminas do pensamento, saltas entre mentes e matas com precisão silenciosa—sem depender de aço ou sombra.',
+      'Thief': 'Os Ladinos atravessam defesas como fumo, e os Ladrões elevam a infiltração a uma arte. Escalas paredes, desarmas armadilhas, abres fechaduras num instante e roubas tesouros antes que alguém repare—verdadeiros mestres da velocidade e subtileza.',
+      'Arachnoid Stalker': 'Os Ladinos prosperam nas sombras, e o Predador Aracnídeo usa poderes de aranha para escalar paredes, lançar teias e envenenar presas. Quer rastejes pelo teto, ataques de cima ou paralises inimigos com veneno, és uma mistura aterradora de furtividade, precisão e agilidade aracnídea.',
+      'Aberrant Sorcery': 'Os Feiticeiros usam magia que nasce da sua essência, e os da Magia Aberrante são moldados por poderes alienígenas. Libertam força psiónica, desenvolvem habilidades bizarras e distorcem a realidade—canalizando uma mutação mágica aterradora.',
+      'Clockwork Sorcery': 'Os Feiticeiros moldam magia por talento inato, e os da Magia Mecânica personificam a ordem universal. Estabilizas o caos, proteges aliados com timing perfeito e invocas energia tão precisa como um mecanismo cósmico.',
+      'Draconic Sorcery': 'Os Feiticeiros têm magia no sangue, e a Magia Dracónica provém do poder ancestral dos dragões. Cresces escamas, resistes a forças elementais e libertas rajadas devastadoras—tornando-te realeza dracónica em forma humana.',
+      'Wild Magic': 'Os Feiticeiros lançam feitiços pela força de vontade, e a Magia Caótica é imprevisível. Libertam surtos mágicos que podem mudar o rumo—ou a mesa—em algo maravilhoso, aterrador ou simplesmente bizarro.',
+      'Archfey Patron': 'Os Bruxos canalizam poder de patronos de outros mundos, e os ligados ao Arqui-feérico obtêm magia de maravilha e terror. Encantas e confundes com truques feéricos, teletransportas-te numa névoa e usas glamour que dobra mentes e realidade.',
+      'Celestial Patron': 'Os Bruxos fazem pactos por poder, e os que servem um Patrono Celestial trazem luz em vez de trevas. Curas com energia radiante, proteges aliados e queimas inimigos com fogo divino—canalizando estrelas e luz estelar pela tua alma.',
+      'Fiend Patron': 'Os Bruxos fazem pactos com entidades poderosas, e o Patrono Infernal oferece poder flamejante em troca. Lançam chamas, absorvem vida de inimigos derrotados e comandam magia infernal com cada maldição e bola de fogo.',
+      'Great Old One Patron': 'Os Bruxos obtêm poder de fontes insondáveis, e o Patrono Grande Ancião oferece loucura em troca de poder. Lês pensamentos, falas nas mentes e enlouqueces inimigos—canalizando o horror incompreensível do cosmos.',
+      'Future You': 'Os Bruxos fazem pactos com poderes estranhos, e o teu é a tua própria versão futura. Com conhecimento do que está para vir, manipulas o destino, controlas o tempo, esquivas ataques que "já sabias que vinham" e infliges dano psíquico com paradoxos—desvendando um destino só teu.',
+      'Abjurer': 'Os Magos dominam o conhecimento arcano pelo estudo, e os Abjuradores especializam-se em defesa mágica. Erguem escudos, banem ameaças e tornam-se fortalezas ambulantes—transformando feitiços em muralhas e proteções para aliados.',
+      'Diviner': 'Os Magos moldam a realidade com feitiços, e os Divinadores dobram o tempo e o destino. Antecipam o futuro, manipulam resultados com dados proféticos e estão sempre no sítio certo com conhecimento sobrenatural.',
+      'Evoker': 'Os Magos comandam força arcana pura, e os Evocadores moldam-na em destruição. Esculpem bolas de fogo, relâmpagos e explosões trovejantes—libertando devastação elemental com controlo absoluto.',
+      'Illusionist': 'Os Magos reescrevem a perceção, e os Ilusionistas são mestres do engano. Criam imagens tão reais que enganam dragões, desaparecem nas próprias ilusões e manipulam crenças tão facilmente como a realidade.'
+      },
     en: {
       'Path of the Berserker': 'Barbarians are raw physical power given form\u2014raging warriors fueled by primal emotion. The Path of the Berserker takes that ferocity to the next level, unleashing uncontrollable violence in battle and shrugging off mental interference, turning you into a terrifying force of nature with unmatched brutality.',
       'Path of the Wild Heart': 'Barbarians are primal warriors who channel their rage into power. The Path of the Wild Heart bonds you with animal spirits, letting you rage like a bear, eagle, or wolf and grow claws, wings, and senses that echo the wildest predators\u2014fighting as a beast among men.',
@@ -719,13 +402,13 @@ const nameMap = {
       'Dragonborn':'Draconato',
       'Black Dragonborn':'Draconato Negro',
       'Blue Dragonborn':'Draconato Azul',
-      'Brass Dragonborn':'Draconato Latão',
-      'Bronze Dragonborn':'Draconato Bronze',
-      'Copper Dragonborn':'Draconato Cobre',
+      'Brass Dragonborn':'Draconato de Latão',
+      'Bronze Dragonborn':'Draconato de Bronze',
+      'Copper Dragonborn':'Draconato de Cobre',
       'Gold Dragonborn':'Draconato Ouro',
       'Green Dragonborn':'Draconato Verde',
       'Red Dragonborn':'Draconato Vermelho',
-      'Silver Dragonborn':'Draconato Prata',
+      'Silver Dragonborn':'Draconato de Prata',
       'White Dragonborn':'Draconato Branco',
       'Dwarf':'Anão',
       'Elf':'Elfo',
