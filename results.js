@@ -83,10 +83,15 @@
         ? `${className} ${subclassName}`
         : `${subclassName} ${className}`;
     }
+    const classDesc = subclass
+      ? subclassInfo[currentLang][subclass] || classInfo[currentLang][clazz]
+      : classInfo[currentLang][clazz];
+    let localized = localizeInfo(classDesc || '', 'classes');
+    localized = localizeInfo(localized, 'subclasses');
     makeSection(
       labels[currentLang].Class,
       clazz,
-      localizeInfo(classInfo[currentLang][clazz] || '', 'classes'),
+      localized,
       'classes',
       'xphb',
       'classes',
