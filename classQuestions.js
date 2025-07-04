@@ -304,4 +304,10 @@ const subClassPT = {
   }
 };
 
-const subClassQuestions = { en: subClassEN, pt: subClassPT };
+// The subclass questions are also exposed globally so that the main quiz
+// script can access them. Using `||=` avoids redeclaration errors if this
+// file gets included multiple times.
+window.subClassQuestions = window.subClassQuestions || {
+  en: subClassEN,
+  pt: subClassPT
+};

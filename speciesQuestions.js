@@ -441,4 +441,10 @@ const subQuestionsPT = {
   }
 };
 
-const subSpeciesQuestions = { en: subQuestionsEN, pt: subQuestionsPT };
+// expose the sub-species data on the global object. Using a conditional
+// assignment prevents errors if this script is accidentally loaded more
+// than once in the browser.
+window.subSpeciesQuestions = window.subSpeciesQuestions || {
+  en: subQuestionsEN,
+  pt: subQuestionsPT
+};
