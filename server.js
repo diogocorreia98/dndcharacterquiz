@@ -37,6 +37,22 @@ const server = http.createServer((req, res) => {
       });
       return;
     }
+    if (req.url === '/speciesQuestions.js') {
+      fs.readFile('speciesQuestions.js', (err, data) => {
+        if (err) return res.end('Error');
+        res.writeHead(200, {'Content-Type':'application/javascript'});
+        res.end(data);
+      });
+      return;
+    }
+    if (req.url === '/classQuestions.js') {
+      fs.readFile('classQuestions.js', (err, data) => {
+        if (err) return res.end('Error');
+        res.writeHead(200, {'Content-Type':'application/javascript'});
+        res.end(data);
+      });
+      return;
+    }
     if (req.url === '/backgroundQuestions.js') {
       fs.readFile('backgroundQuestions.js', (err, data) => {
         if (err) return res.end('Error');
