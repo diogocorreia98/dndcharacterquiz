@@ -1,75 +1,194 @@
 const step2pt = {
-      title: 'Que Classe Combina Contigo?',
-      tree: {
-        question: 'Qual o nível de complexidade que preferes para a tua personagem?',
-        options: {
-          A: { label: 'O mínimo possível — quero algo simples e direto.', next: {
-            question: 'Que estilo te atrai mais?',
-            options: {
-              A: { label: 'Força bruta e fúria pura. (Barbarian)', result: 'Barbarian' },
-              B: { label: 'Perícia marcial e adaptabilidade. (Fighter)', result: 'Fighter' },
-              C: { label: 'Furtividade, velocidade e precisão. (Rogue)', result: 'Rogue' }
+  title: 'Que Classe Combina Contigo?',
+  tree: {
+    question: 'Com que nível de complexidade te sentes confortável?',
+    options: {
+      A: {
+        label: 'Só o básico — quero algo simples e direto.',
+        next: {
+          question: 'Que estilo te atrai mais?',
+          options: {
+            A: { label: 'Fúria bruta e força primal. (Barbarian)', result: 'Barbarian' },
+            B: { label: 'Mestre versátil de armas. (Fighter)', result: 'Fighter' },
+            C: { label: 'Atacante furtivo e preciso. (Rogue)', result: 'Rogue' }
+          }
+        }
+      },
+      B: {
+        label: 'Alguma variedade — não me importo com um pouco mais de profundidade.',
+        next: {
+          question: 'Que tipo de estilo de jogo soa melhor para ti?',
+          options: {
+            A: {
+              label: 'Físico e direto.',
+              next: {
+                question: 'Escolhe o teu estilo:',
+                options: {
+                  A: { label: 'Fúria bruta e resiliência. (Barbarian)', result: 'Barbarian' },
+                  B: { label: 'Mestre de armas com flexibilidade. (Fighter)', result: 'Fighter' },
+                  C: { label: 'Golpeador furtivo e ágil. (Rogue)', result: 'Rogue' }
+                }
+              }
+            },
+            B: {
+              label: 'Algo com um pouco de magia ou poder divino.',
+              next: {
+                question: 'Escolhe o teu estilo:',
+                options: {
+                  A: { label: 'Curandeiro divino e apoio em batalha. (Cleric)', result: 'Cleric' },
+                  B: { label: 'Guerreiro sagrado inspirador. (Paladin)', result: 'Paladin' },
+                  C: { label: 'Rastreador habilidoso e sobrevivente. (Ranger)', result: 'Ranger' },
+                  D: { label: 'Mestre de magias arcanas através de estudo. (Wizard)', result: 'Wizard' }
+                }
+              }
             }
-          }},
-          B: { label: 'Uma abordagem equilibrada — gosto de variedade sem demasiada complexidade.', next: {
-            question: 'Que estilo equilibrado soa mais apelativo?',
-            options: {
-              A: { label: 'Cura e apoio divino em combate. (Cleric)', result: 'Cleric' },
-              B: { label: 'Um guerreiro sagrado que inspira e defende. (Paladin)', result: 'Paladin' },
-              C: { label: 'Um rastreador habilidoso com magia prática. (Ranger)', result: 'Ranger' },
-              D: { label: 'Um mestre de muitas magias com boa preparação. (Wizard)', result: 'Wizard' }
+          }
+        }
+      },
+      C: {
+        label: 'Complexidade total — quero explorar todas as classes.',
+        next: {
+          question: 'Que tipo de personagem mais te entusiasma?',
+          options: {
+            A: {
+              label: 'Poder marcial e físico',
+              next: {
+                question: 'Escolhe o teu estilo:',
+                options: {
+                  A: { label: 'Fúria bruta e resiliência. (Barbarian)', result: 'Barbarian' },
+                  B: { label: 'Mestre de armas com flexibilidade. (Fighter)', result: 'Fighter' },
+                  C: { label: 'Golpeador furtivo e ágil. (Rogue)', result: 'Rogue' },
+                  D: { label: 'Artista marcial com poder interior. (Monk)', result: 'Monk' }
+                }
+              }
+            },
+            B: {
+              label: 'Conjuração completa e foco em magia',
+              next: {
+                question: 'Escolhe o sabor da magia:',
+                options: {
+                  A: { label: 'Estudo arcano e preparação. (Wizard)', result: 'Wizard' },
+                  B: { label: 'Magia que vem de dentro. (Sorcerer)', result: 'Sorcerer' },
+                  C: { label: 'Magia divina e cura. (Cleric)', result: 'Cleric' },
+                  D: { label: 'Feitiços da natureza e metamorfose. (Druid)', result: 'Druid' }
+                }
+              }
+            },
+            C: {
+              label: 'Estilos mistos ou incomuns',
+              next: {
+                question: 'Escolhe a mistura que preferes:',
+                options: {
+                  A: { label: 'Guerreiro sagrado com alguma magia. (Paladin)', result: 'Paladin' },
+                  B: { label: 'Explorador com habilidades marciais e feitiços. (Ranger)', result: 'Ranger' },
+                  C: { label: 'Artista que conjura magias através da inspiração. (Bard)', result: 'Bard' },
+                  D: { label: 'Conjurador habilitado por um pacto. (Warlock)', result: 'Warlock' }
+                }
+              }
             }
-          }},
-          C: { label: 'Gosto de dominar sistemas complexos e desafios.', next: {
-            question: 'Que papel complexo te atrai?',
-            options: {
-              A: { label: 'Um mago da natureza que muda de forma. (Druid)', result: 'Druid' },
-              B: { label: 'Um artista marcial rápido com poder interior. (Monk)', result: 'Monk' },
-              C: { label: 'Um artista estiloso que lança feitiços com charme. (Bard)', result: 'Bard' },
-              D: { label: 'Um poderoso conjurador inato. (Sorcerer)', result: 'Sorcerer' },
-              E: { label: 'Um conjurador ligado a um pacto com magia misteriosa. (Warlock)', result: 'Warlock' }
-            }
-          }}
+          }
         }
       }
-    };
+    }
+  }
+};
+
+
 
 const step2en = {
-        title: 'Which Class Fits You?',
-        tree: {
-          question: 'What level of complexity do you prefer in your character?',
+  title: 'Which Class Fits You?',
+  tree: {
+    question: 'What level of complexity are you comfortable with?',
+    options: {
+      A: {
+        label: 'Just the basics — I want simple and straightforward.',
+        next: {
+          question: 'Which style appeals most to you?',
           options: {
-          A: { label: 'As little as possible — I want something simple and direct.', next: {
-            question: 'Which style appeals most to you?',
-            options: {
-              A: { label: 'Brutal force and raw rage. (Barbarian)', result: 'Barbarian' },
-              B: { label: 'Martial expertise and adaptability. (Fighter)', result: 'Fighter' },
-              C: { label: 'Stealth, speed, and precision. (Rogue)', result: 'Rogue' }
+            A: { label: 'Raw rage and primal strength. (Barbarian)', result: 'Barbarian' },
+            B: { label: 'Versatile master of weapons. (Fighter)', result: 'Fighter' },
+            C: { label: 'Stealthy and precise attacker. (Rogue)', result: 'Rogue' }
+          }
+        }
+      },
+      B: {
+        label: "Some variety — I'm okay with a bit more depth.",
+        next: {
+          question: 'What kind of playstyle sounds better to you?',
+          options: {
+            A: {
+              label: 'Physical and straightforward.',
+              next: {
+                question: 'Choose your style:',
+                options: {
+                  A: { label: 'Raw rage and resilience. (Barbarian)', result: 'Barbarian' },
+                  B: { label: 'Weapon master with flexibility. (Fighter)', result: 'Fighter' },
+                  C: { label: 'Stealthy and agile striker. (Rogue)', result: 'Rogue' }
+                }
+              }
+            },
+            B: {
+              label: 'Something with a bit of magic or divine power.',
+              next: {
+                question: 'Choose your style:',
+                options: {
+                  A: { label: 'Divine healer and battle support. (Cleric)', result: 'Cleric' },
+                  B: { label: 'Inspiring holy warrior. (Paladin)', result: 'Paladin' },
+                  C: { label: 'Skilled tracker and survivor. (Ranger)', result: 'Ranger' },
+                  D: { label: 'Master of arcane spells through study. (Wizard)', result: 'Wizard' }
+                }
+              }
             }
-          }},
-          B: { label: 'A balanced approach — I enjoy variety without too much complexity.', next: {
-            question: 'Which balanced style sounds most appealing?',
-            options: {
-              A: { label: 'Healing and divine support in battle. (Cleric)', result: 'Cleric' },
-              B: { label: 'A holy warrior who inspires and defends. (Paladin)', result: 'Paladin' },
-              C: { label: 'A skilled tracker with practical magic. (Ranger)', result: 'Ranger' },
-              D: { label: 'A master of many spells with good preparation. (Wizard)', result: 'Wizard' }
+          }
+        }
+      },
+      C: {
+        label: 'Full depth — I want to explore all the classes.',
+        next: {
+          question: 'What type of character excites you most?',
+          options: {
+            A: {
+              label: 'Martial & physical power',
+              next: {
+                question: 'Choose your style:',
+                options: {
+                  A: { label: 'Raw rage and resilience. (Barbarian)', result: 'Barbarian' },
+                  B: { label: 'Weapon master with flexibility. (Fighter)', result: 'Fighter' },
+                  C: { label: 'Stealthy and agile striker. (Rogue)', result: 'Rogue' },
+                  D: { label: 'Martial artist with inner power. (Monk)', result: 'Monk' }
+                }
+              }
+            },
+            B: {
+              label: 'Full spellcasting & magic focus',
+              next: {
+                question: 'Pick your spellcasting flavor:',
+                options: {
+                  A: { label: 'Arcane study and preparation. (Wizard)', result: 'Wizard' },
+                  B: { label: 'Magic from within. (Sorcerer)', result: 'Sorcerer' },
+                  C: { label: 'Divine magic and healing. (Cleric)', result: 'Cleric' },
+                  D: { label: 'Nature spells and shapeshifting. (Druid)', result: 'Druid' }
+                }
+              }
+            },
+            C: {
+              label: 'Mixed or unusual playstyles',
+              next: {
+                question: 'Choose the blend you prefer:',
+                options: {
+                  A: { label: 'Holy warrior with some magic. (Paladin)', result: 'Paladin' },
+                  B: { label: 'Explorer with martial and spell skills. (Ranger)', result: 'Ranger' },
+                  C: { label: 'Performer who casts spells through inspiration. (Bard)', result: 'Bard' },
+                  D: { label: 'Spellcaster empowered by a pact. (Warlock)', result: 'Warlock' }
+                }
+              }
             }
-          }},
-          C: { label: 'I enjoy mastering complex systems and challenges.', next: {
-            question: 'Which complex role are you drawn to?',
-            options: {
-              A: { label: 'A shape-shifting nature mage. (Druid)', result: 'Druid' },
-              B: { label: 'A fast-paced martial artist with inner power. (Monk)', result: 'Monk' },
-              C: { label: 'A stylish performer who casts spells with flair. (Bard)', result: 'Bard' },
-              D: { label: 'A powerful innate spellcaster. (Sorcerer)', result: 'Sorcerer' },
-              E: { label: 'A pact-bound spellcaster with mysterious magic. (Warlock)', result: 'Warlock' }
-            }
-          }}
+          }
         }
       }
-    };
-
+    }
+  }
+};
 const subClassEN = {
   Barbarian: {
     question: 'What fuels your rage?',
