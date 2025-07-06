@@ -139,11 +139,12 @@ function renderQuiz() {
     if(classData.tree || classData.subclasses){
       if(!backgroundNode){
         if(classData.subclasses){
-          backgroundNode = classData.subclasses[currentResult.subclass];
-          if(!backgroundNode){
+          let sub = classData.subclasses[currentResult.subclass];
+          if(!sub){
             const firstKey = Object.keys(classData.subclasses)[0];
-            backgroundNode = classData.subclasses[firstKey];
+            sub = classData.subclasses[firstKey];
           }
+          backgroundNode = sub.tree;
         } else {
           backgroundNode = classData.tree;
         }
