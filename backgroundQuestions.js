@@ -298,6 +298,28 @@ const step3pt = {
                 } }
             }
           }
+        },
+        'Dungeoneer': {
+          tree: {
+            question: 'Qual é o teu estilo de combate físico?',
+            options: {
+              A: { label: 'Armas pesadas, escudo, armadura pesada', next: {
+                  question: 'O que gostarias de fazer fora do combate?',
+                  options: {
+                    A: { label: 'Habilidades úteis', result: 'Artisan (Crafter)' },
+                    B: { label: 'Iniciativa rápida', result: 'Guard (Alert)' },
+                    C: { label: 'Sorte e improviso', result: 'Noble (Skilled)' }
+                  }
+                } },
+              B: { label: 'Armas leves, arco, mobilidade', next: {
+                  question: 'O que gostarias de fazer fora do combate?',
+                  options: {
+                    A: { label: 'Habilidades úteis', result: 'Scribe (Skilled)' },
+                    B: { label: 'Magia extra', result: 'Guide (Magic Initiate - Druid)' }
+                  }
+                } }
+            }
+          }
         }
       }
     }
@@ -583,6 +605,28 @@ const step3en = {
           }
         },
         'Psi Warrior': {
+          tree: {
+            question: 'What is your physical fighting style?',
+            options: {
+              A: { label: 'Heavy weapons, shield, heavy armour', next: {
+                  question: 'What would you like to do outside combat?',
+                  options: {
+                    A: { label: 'Useful skills', result: 'Artisan (Crafter)' },
+                    B: { label: 'Quick initiative', result: 'Guard (Alert)' },
+                    C: { label: 'Luck and improvisation', result: 'Noble (Skilled)' }
+                  }
+                } },
+              B: { label: 'Light weapons, bow, mobility', next: {
+                  question: 'What would you like to do outside combat?',
+                  options: {
+                    A: { label: 'Useful skills', result: 'Scribe (Skilled)' },
+                    B: { label: 'Extra magic', result: 'Guide (Magic Initiate - Druid)' }
+                  }
+                } }
+            }
+          }
+        },
+        'Dungeoneer': {
           tree: {
             question: 'What is your physical fighting style?',
             options: {
