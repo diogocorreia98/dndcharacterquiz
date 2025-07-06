@@ -15,7 +15,7 @@ const step2pt = {
         }
       },
       B: {
-        label: 'Alguma variedade — não me importo com um pouco mais de profundidade.',
+        label: 'Alguma variedade — aceito ver opções de baixa e média complexidade.',
         next: {
           question: 'Que tipo de estilo de jogo soa melhor para ti?',
           options: {
@@ -46,7 +46,7 @@ const step2pt = {
         }
       },
       C: {
-        label: 'Complexidade total — quero explorar todas as classes.',
+        label: 'Quero explorar todas as classes, até as mais complexas.',
         next: {
           question: 'Que tipo de personagem mais te entusiasma?',
           options: {
