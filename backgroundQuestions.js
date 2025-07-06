@@ -213,7 +213,7 @@ const step3pt = {
           tree: {
             question: 'Qual é o teu atributo principal?',
             options: {
-              A: { label: 'Strength', next: {
+              A: { label: 'Força – estilo direto e muita robustez', next: {
                   question: 'O que gostarias de fazer fora do combate?',
                   options: {
                     A: { label: 'Habilidades úteis', result: 'Artisan (Crafter)' },
@@ -222,7 +222,7 @@ const step3pt = {
                     D: { label: 'Dano físico', result: 'Soldier (Savage Attacker)' }
                   }
                 } },
-              B: { label: 'Dexterity', next: {
+              B: { label: 'Destreza – movimentos ágeis e precisão', next: {
                   question: 'O que gostarias de fazer fora do combate?',
                   options: {
                     A: { label: 'Habilidades úteis', result: 'Charlatan (Skilled)' },
@@ -237,14 +237,14 @@ const step3pt = {
           tree: {
             question: 'Qual é o teu atributo principal?',
             options: {
-              A: { label: 'Strength', next: {
+              A: { label: 'Força – golpes poderosos e robustez', next: {
                   question: 'O que gostarias de fazer fora do combate?',
                   options: {
                     A: { label: 'Vida extra', result: 'Farmer (Tough)' },
                     B: { label: 'Dano físico', result: 'Soldier (Savage Attacker)' }
                   }
                 } },
-              B: { label: 'Dexterity', next: {
+              B: { label: 'Destreza – agilidade e mira certeira', next: {
                   question: 'O que gostarias de fazer fora do combate?',
                   options: {
                     A: { label: 'Habilidades úteis', result: 'Charlatan (Skilled)' },
@@ -540,7 +540,7 @@ const step3en = {
           tree: {
             question: 'What is your main attribute?',
             options: {
-              A: { label: 'Strength', next: {
+              A: { label: 'Strength – brawn and staying power', next: {
                   question: 'What would you like to do outside combat?',
                   options: {
                     A: { label: 'Useful skills', result: 'Artisan (Crafter)' },
@@ -549,7 +549,7 @@ const step3en = {
                     D: { label: 'Deal physical damage', result: 'Soldier (Savage Attacker)' }
                   }
                 } },
-              B: { label: 'Dexterity', next: {
+              B: { label: 'Dexterity – speed and precision', next: {
                   question: 'What would you like to do outside combat?',
                   options: {
                     A: { label: 'Useful skills', result: 'Charlatan (Skilled)' },
@@ -564,14 +564,14 @@ const step3en = {
           tree: {
             question: 'What is your main attribute?',
             options: {
-              A: { label: 'Strength', next: {
+              A: { label: 'Strength – power and endurance', next: {
                   question: 'What would you like to do outside combat?',
                   options: {
                     A: { label: 'Extra hit points', result: 'Farmer (Tough)' },
                     B: { label: 'Deal physical damage', result: 'Soldier (Savage Attacker)' }
                   }
                 } },
-              B: { label: 'Dexterity', next: {
+              B: { label: 'Dexterity – agility and accuracy', next: {
                   question: 'What would you like to do outside combat?',
                   options: {
                     A: { label: 'Useful skills', result: 'Charlatan (Skilled)' },
