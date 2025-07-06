@@ -379,32 +379,32 @@ const subQuestionsPT = {
     }
   },
   Goliath: {
-    question: 'Que sangue de gigante corre em ti?',
+    question: 'Que traços carrega o teu sangue de gigante?',
     options: {
       'Hill Goliath': 'Largo e bruto, empurrando inimigos com pura força.',
       'Stone Goliath': 'Sólido como rocha, resiste a dano com vigor estoico.',
       'Frost Goliath': 'Frio e inflexível, entorpece inimigos com força gélida.',
       'Fire Goliath': 'Radiante de calor, ataca com fúria ardente.',
       'Cloud Goliath': 'Gracioso e evasivo, move-se como névoa e evita dano.',
-      'Storm Goliath': 'Carregado de energia, invoca trovões e relâmpagos a seu lado.'
+      'Storm Goliath': 'Carregado de energia, retalio com o estrondo da trovoada.'
     }
   },
   Mandrake: {
-    question: 'Em que estação foste colhido?',
+    question: 'Que poder sazonal tens tu?',
     options: {
-      'Spring Mandrake': 'As tuas vinhas fazem cair inimigos voadores com suavidade.',
+      'Spring Mandrake': 'As tuas vinhas fazem cair inimigos voadores.',
       'Summer Mandrake': 'Reposicionas inimigos com vinhas poderosas e diretas.',
       'Autumn Mandrake': 'Prendes mais de uma criatura numa única explosão.',
       'Winter Mandrake': 'As tuas vinhas lançam uma rajada de dano gelado.'
     }
   },
   Eladrin: {
-    question: 'Que estação reflete melhor a tua natureza?',
+    question: 'Que poder sazonal se ativa quando te teletransportas?',
     options: {
-      'Spring Eladrin': 'O teu Passo Feérico pode teletransportar um aliado.',
-      'Summer Eladrin': 'O teu Passo Feérico queima inimigos ao redor.',
-      'Autumn Eladrin': 'O teu Passo Feérico encanta criaturas próximas.',
-      'Winter Eladrin': 'O teu Passo Feérico provoca medo num inimigo.'
+      'Spring Eladrin': 'Teletransporto um aliado.',
+      'Summer Eladrin': 'Queimo inimigos ao redor.',
+      'Autumn Eladrin': 'Encanto criaturas próximas.',
+      'Winter Eladrin': 'Aterrorizo um inimigo.'
     }
   },
   Shifter: {
@@ -417,7 +417,7 @@ const subQuestionsPT = {
     }
   },
   Tiefling: {
-    question: 'Que tipo de ascendência demoníaca carregas?',
+    question: 'Que tipo de ascendência carregas?',
     options: {
       'Abyssal Tiefling': 'Caótico e explosivo, descendente de demónios e destruição.',
       'Infernal Tiefling': 'Ordenado e impiedoso, tocado pelas chamas do Inferno.',
@@ -431,12 +431,12 @@ const subQuestionsPT = {
       'Blue Dragonborn': 'Orgulhoso e feroz, lança rajadas de relâmpago.',
       'Brass Dragonborn': 'Falador e fogoso, usa sopro de fogo com charme.',
       'Bronze Dragonborn': 'Leal e nobre, exala relâmpagos controlados.',
-      'Copper Dragonborn': 'Brincalhão e ágil, cospe spray ácido.',
+      'Copper Dragonborn': 'Brincalhão e ágil, cospe uma rajada de ácido.',
       'Gold Dragonborn': 'Sábio e régio, liberta potentes rajadas de fogo.',
       'Green Dragonborn': 'Astuto e perigoso, exala veneno.',
       'Red Dragonborn': 'Ousado e agressivo, com o fogo mais intenso.',
       'Silver Dragonborn': 'Bondoso e forte, exala frio para abrandar inimigos.',
-      'White Dragonborn': 'Selvagem e primitivo, solta gelo gélido sobre os inimigos.'
+      'White Dragonborn': 'Selvagem e primitivo, solta ar gélido sobre os inimigos.'
     }
   }
 };
