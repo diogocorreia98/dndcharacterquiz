@@ -493,6 +493,7 @@ submitBtn.addEventListener('click', async () => {
 });
 
 backBtn.addEventListener('click', () => {
+  const locale = data[currentLang];
   if(stage === 1 && subSpeciesNode){
     subSpeciesNode = null;
     subQuestionSpecies = null;
