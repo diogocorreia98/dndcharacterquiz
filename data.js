@@ -370,8 +370,8 @@ const data = {
   };
 
   const labels = {
-    pt: { Species:'Espécie', Class:'Classe', Background:'Antecedente', restart:'Recomeçar' },
-    en: { Species:'Species', Class:'Class', Background:'Background', restart:'Restart Quiz' }
+    pt: { Species:'Espécie', Class:'Classe', Style:'Estilo de Jogo', Background:'Antecedente', restart:'Recomeçar' },
+    en: { Species:'Species', Class:'Class', Style:'Playing Style', Background:'Background', restart:'Restart Quiz' }
   };
 
 const miscText = {
