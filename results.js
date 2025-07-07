@@ -7,7 +7,7 @@
 
   const stored = sessionStorage.getItem('dndResults');
   const parsed = stored ? JSON.parse(stored) : {lang:'en'};
-  const {species, class:clazz, subclass, background, gender, height} = parsed;
+  const {species, class:clazz, subclass, style, background, gender, height} = parsed;
   let currentLang = parsed.lang || 'en';
 
   const phbSpecies = new Set([
@@ -97,6 +97,17 @@
       'classes',
       displayClass
     );
+    if(style){
+      makeSection(
+        labels[currentLang].Style,
+        style,
+        '',
+        '',
+        undefined,
+        '',
+        style
+      );
+    }
     const baseBg = background ? background.replace(/\s*\(.*?\)\s*$/, '').trim() : background;
     const bgDesc = localizeInfo(backgroundInfo[currentLang][baseBg] || '', 'backgrounds');
     let displayBg = baseBg;

@@ -35,6 +35,7 @@ let currentResult = {
   species: null,
   class: null,
   subclass: null,
+  style: null,
   background: null
 };
 let speciesNode = null;
@@ -44,13 +45,11 @@ let step2Index = 0;
 let step2Answers = {};
 let classNode = null;
 const classStack = [];
-let step3Index = 0;
-let step3Answers = {};
 const speciesPath = [];
 const classPath = [];
 let subQuestionSpecies = null;
-let backgroundNode = null;
-const backgroundStack = [];
+let styleNode = null;
+const styleStack = [];
 
 function renderQuiz() {
   const locale = data[currentLang];
@@ -133,47 +132,39 @@ function renderQuiz() {
     html += '</section>';
     submitBtn.textContent = currentLang === 'pt' ? 'Avançar' : 'Next';
   } else if(stage === 4){
-    const step = locale.step3;
-    const classData = step.classes[currentResult.class];
-    html += `<h2>${step.title}</h2><p>${step.intro}</p>`;
-    if(classData.tree || classData.subclasses){
-      if(!backgroundNode){
-        if(classData.subclasses){
-          let sub = classData.subclasses[currentResult.subclass];
-          if(!sub){
-            const firstKey = Object.keys(classData.subclasses)[0];
-            sub = classData.subclasses[firstKey];
-          }
-          backgroundNode = sub.tree;
-        } else {
-          backgroundNode = classData.tree;
-        }
-      }
-      html += `<section><p>${backgroundNode.question}</p>`;
-      for(const key in backgroundNode.options){
-        const id = `s3_${key}`;
-        const opt = backgroundNode.options[key];
-        const label = opt.label || key;
-        html += `<label><input type="radio" name="s3" value="${key}" id="${id}"> ${strip(label)}</label>`;
+    const style = getStyleRoot();
+    html += `<h2>${currentLang === 'pt' ? 'Estilo de Jogo' : 'Playing Style'}</h2>`;
+    if(!styleNode) styleNode = style;
+    if(style){
+      html += `<section><p>${styleNode.question}</p>`;
+      for(const key in styleNode.options){
+        const id = `style_${key}`;
+        html += `<label><input type="radio" name="style" value="${key}" id="${id}"> ${strip(styleNode.options[key].label)}</label>`;
       }
       html += '</section>';
       submitBtn.textContent = currentLang === 'pt' ? 'Avançar' : 'Next';
     } else {
-      const q = classData.questions[step3Index];
-      html += `<section><p>${q.text}</p>`;
-      for(const key in q.options){
-        const id = `s3q${step3Index}_${key}`;
-        const checked = step3Answers[step3Index] === key ? ' checked' : '';
-        html += `<label><input type="radio" name="s3q${step3Index}" value="${key}" id="${id}"${checked}> ${strip(q.options[key])}</label>`;
-      }
-      html += '</section>';
-      submitBtn.textContent = step3Index === classData.questions.length - 1 ? (currentLang === 'pt' ? 'Concluir' : 'Finish') : (currentLang === 'pt' ? 'Avançar' : 'Next');
+      stage = 5;
+      renderQuiz();
+      return;
     }
+  } else if(stage === 5){
+    const step = locale.step3;
+    const key = canonicalAbility(currentResult.style);
+    const list = step.combos[key] || [];
+    html += `<h2>${step.title}</h2>`;
+    html += `<section><p>${step.question}</p>`;
+    list.forEach((bg, i) => {
+      const id = `bg_${i}`;
+      html += `<label><input type="radio" name="bg" value="${bg}" id="${id}"> ${strip(bg)}</label>`;
+    });
+    html += '</section>';
+    submitBtn.textContent = currentLang === 'pt' ? 'Concluir' : 'Finish';
   }
   quizDiv.innerHTML = html;
   window.scrollTo(0,0);
   submitBtn.style.display = 'block';
-  backBtn.style.display = stage > 0 || speciesStack.length > 0 || subSpeciesNode || classStack.length > 0 || backgroundStack.length > 0 ? 'block' : 'none';
+  backBtn.style.display = stage > 0 || speciesStack.length > 0 || subSpeciesNode || classStack.length > 0 || styleStack.length > 0 ? 'block' : 'none';
   backBtn.textContent = currentLang === 'pt' ? 'Recuar' : 'Back';
   restartBtn.textContent = labels[currentLang].restart;
 }
@@ -208,8 +199,16 @@ langSelect.addEventListener('change', () => {
       }
     }
   }
-  backgroundNode = null;
-  backgroundStack.length = 0;
+  if(styleQuiz && styleQuiz[currentLang] && currentResult.class){
+    const root = getStyleRoot();
+    if(root){
+      styleNode = root;
+      styleStack.length = 0;
+    } else {
+      styleNode = null;
+      styleStack.length = 0;
+    }
+  }
   updateStaticText();
   renderQuiz();
 });
@@ -243,15 +242,22 @@ function calculateClass(){
   return clazz ? locale.step2.mapping[clazz[0]] : 'N/A';
 }
 
-function calculateBackground(clazz){
-  const step3 = data[currentLang].step3.classes[clazz];
-  if(!step3) return 'N/A';
-  const scores = {};
-  Object.values(step3Answers).forEach(val => {
-    scores[val] = (scores[val] || 0) + 1;
-  });
-  const res = Object.entries(scores).sort((a,b)=>b[1]-a[1])[0];
-  return res ? step3.mapping[res[0]] : 'N/A';
+
+function getStyleRoot(){
+  if(!styleQuiz || !styleQuiz[currentLang] || !currentResult.class) return null;
+  const quiz = styleQuiz[currentLang];
+  if(currentResult.subclass){
+    const key = `${currentResult.subclass} ${currentResult.class}`;
+    if(quiz[key]) return quiz[key];
+    if(currentResult.class === 'Rogue' && quiz['Other Subclass Rogue']) return quiz['Other Subclass Rogue'];
+  }
+  return quiz[currentResult.class] || null;
+}
+
+function canonicalAbility(str){
+  if(!str) return '';
+  const parts = str.split('+').map(s => s.trim()).sort();
+  return parts.join(' + ');
 }
 
 submitBtn.addEventListener('click', async () => {
@@ -280,8 +286,6 @@ submitBtn.addEventListener('click', async () => {
       classNode = locale.step2.tree;
       classStack.length = 0;
       classPath.length = 0;
-      step3Index = 0;
-      step3Answers = {};
       stage = 2;
       renderQuiz();
       return;
@@ -310,8 +314,6 @@ submitBtn.addEventListener('click', async () => {
           classNode = locale.step2.tree;
           classStack.length = 0;
           classPath.length = 0;
-          step3Index = 0;
-          step3Answers = {};
           stage = 2;
           renderQuiz();
           return;
@@ -331,8 +333,6 @@ submitBtn.addEventListener('click', async () => {
         classNode = locale.step2.tree;
         classStack.length = 0;
         classPath.length = 0;
-        step3Index = 0;
-        step3Answers = {};
         stage = 2;
         renderQuiz();
         return;
@@ -355,8 +355,6 @@ submitBtn.addEventListener('click', async () => {
     step2Answers = {};
     classNode = locale.step2.tree;
     classStack.length = 0;
-    step3Index = 0;
-    step3Answers = {};
     stage = 2;
     renderQuiz();
     return;
@@ -401,6 +399,7 @@ submitBtn.addEventListener('click', async () => {
         sessionStorage.setItem('dndResults', JSON.stringify({
           species: currentResult.species,
           class: currentResult.class,
+          style: currentResult.style,
           background,
           gender: currentResult.gender,
           height: currentResult.height,
@@ -421,69 +420,46 @@ submitBtn.addEventListener('click', async () => {
     const val = document.querySelector('input[name="subclass"]:checked');
     if(!val) return;
     currentResult.subclass = val.value;
-    if(data[currentLang].step3 && data[currentLang].step3.classes[currentResult.class]){
+    const styleRoot = getStyleRoot();
+    if(styleRoot){
+      styleNode = styleRoot;
+      styleStack.length = 0;
       stage = 4;
-      step3Index = 0;
-      step3Answers = {};
-      backgroundNode = null;
-      backgroundStack.length = 0;
       renderQuiz();
     } else {
-      const background = 'N/A';
-      sessionStorage.setItem('dndResults', JSON.stringify({
-        species: currentResult.species,
-        class: currentResult.class,
-        subclass: currentResult.subclass,
-        background,
-        gender: currentResult.gender,
-        height: currentResult.height,
-        lang: currentLang
-      }));
-      window.location.href = 'results.html';
+      stage = 5;
+      renderQuiz();
     }
     return;
   }
   if(stage === 4){
-    const classData = locale.step3.classes[currentResult.class];
-    if(classData.tree || classData.subclasses){
-      const val = document.querySelector('input[name="s3"]:checked');
-      if(!val) return;
-      const choice = backgroundNode.options[val.value];
-      if(choice.next){
-        backgroundStack.push(backgroundNode);
-        backgroundNode = choice.next;
-        renderQuiz();
-        return;
-      }
-      if(choice.result){
-        const background = choice.result;
-        sessionStorage.setItem('dndResults', JSON.stringify({
-          species: currentResult.species,
-          class: currentResult.class,
-          subclass: currentResult.subclass,
-          background,
-          gender: currentResult.gender,
-          height: currentResult.height,
-          lang: currentLang
-        }));
-        window.location.href = 'results.html';
-        return;
-      }
-      return;
-    }
-    const val = document.querySelector(`input[name="s3q${step3Index}"]:checked`);
+    const val = document.querySelector('input[name="style"]:checked');
     if(!val) return;
-    step3Answers[step3Index] = val.value;
-    if(step3Index < classData.questions.length - 1){
-      step3Index++;
+    const choice = styleNode.options[val.value];
+    if(choice.next){
+      styleStack.push(styleNode);
+      styleNode = choice.next;
       renderQuiz();
       return;
     }
-    const background = calculateBackground(currentResult.class);
+    if(choice.result){
+      currentResult.style = choice.result;
+      styleNode = null;
+      styleStack.length = 0;
+      stage = 5;
+      renderQuiz();
+    }
+    return;
+  }
+  if(stage === 5){
+    const val = document.querySelector('input[name="bg"]:checked');
+    if(!val) return;
+    const background = val.value;
     sessionStorage.setItem('dndResults', JSON.stringify({
       species: currentResult.species,
       class: currentResult.class,
       subclass: currentResult.subclass,
+      style: currentResult.style,
       background,
       gender: currentResult.gender,
       height: currentResult.height,
@@ -540,24 +516,18 @@ backBtn.addEventListener('click', () => {
     return;
   }
   if(stage === 4){
-    const classData = locale.step3.classes[currentResult.class];
-    if(classData.tree || classData.subclasses){
-      if(backgroundStack.length > 0){
-        backgroundNode = backgroundStack.pop();
-        renderQuiz();
-        return;
-      }
-      backgroundNode = null;
-      stage = 3;
+    if(styleStack.length > 0){
+      styleNode = styleStack.pop();
       renderQuiz();
       return;
     }
-    if(step3Index > 0){
-      step3Index--;
-      renderQuiz();
-      return;
-    }
+    styleNode = null;
     stage = 3;
+    renderQuiz();
+    return;
+  }
+  if(stage === 5){
+    stage = 4;
     renderQuiz();
     return;
   }
@@ -565,7 +535,7 @@ backBtn.addEventListener('click', () => {
 
 function restartQuiz(){
   stage = 0;
-  currentResult = { gender:null, height:null, species:null, class:null, subclass:null, background:null };
+  currentResult = { gender:null, height:null, species:null, class:null, subclass:null, style:null, background:null };
   speciesNode = null;
   subSpeciesNode = null;
   speciesStack.length = 0;
@@ -575,10 +545,8 @@ function restartQuiz(){
   classNode = null;
   classStack.length = 0;
   classPath.length = 0;
-  step3Index = 0;
-  step3Answers = {};
-  backgroundNode = null;
-  backgroundStack.length = 0;
+  styleNode = null;
+  styleStack.length = 0;
   subQuestionSpecies = null;
   renderQuiz();
 }
