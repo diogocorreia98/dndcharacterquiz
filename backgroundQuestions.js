@@ -9,8 +9,8 @@ const step3pt = {
           A: { label: 'Mais vida e resistência', result: 'Farmer (Tough)' },
           B: { label: 'Dano físico extra', result: 'Soldier (Savage Attacker)' },
           C: { label: 'Sorte e improviso', result: 'Wayfarer (Lucky)' },
-          D: { label: 'Atacar antecipadamente', result: 'Guard (Alert)' },
-          E: { label: 'Boas competências e/ou ofícios', result: 'Artisan (Skilled)' }
+          D: { label: 'Reagir rapidamente', result: 'Guard (Alert)' },
+          E: { label: 'Jeito para comprar e fazer objetos úteis', result: 'Artisan (Crafter)' }
         }
       }
     },
@@ -115,7 +115,7 @@ const step3pt = {
                 B: { label: 'Engano, trapaça', result: 'Charlatan (Skilled)' }
               }
             } },
-          D: { label: 'Iniciativa rápida', result: 'Guard (Alert)' },
+          D: { label: 'Reagir rapidamente', result: 'Guard (Alert)' },
           E: { label: 'Capacidade de curar', result: 'Hermit (Healer)' }
         }
       }
@@ -142,7 +142,7 @@ const step3pt = {
           C: { label: 'Prefiro focar-me só na clareza mental e percepção.', next: {
               question: 'Que tipo de talento te parece mais interessante?',
               options: {
-                A: { label: 'Perceção e intuição', result: 'Guard (Alert)' },
+                A: { label: 'Reagir rapidamente', result: 'Guard (Alert)' },
                 B: { label: 'Apoiar e curar', result: 'Hermit (Healer)' }
               }
             } }
@@ -218,7 +218,7 @@ const step3pt = {
                   options: {
                     A: { label: 'Habilidades úteis', result: 'Artisan (Crafter)' },
                     B: { label: 'Vida extra', result: 'Farmer (Tough)' },
-                    C: { label: 'Iniciativa rápida', result: 'Guard (Alert)' },
+                    C: { label: 'Reagir rapidamente', result: 'Guard (Alert)' },
                     D: { label: 'Dano físico', result: 'Soldier (Savage Attacker)' }
                   }
                 } },
@@ -262,8 +262,8 @@ const step3pt = {
               A: { label: 'Armas pesadas, escudo, armadura pesada', next: {
                   question: 'Que tipo de talento te parece mais interessante?',
                   options: {
-                    A: { label: 'Habilidades úteis', result: 'Artisan (Crafter)' },
-                    B: { label: 'Iniciativa rápida', result: 'Guard (Alert)' },
+                    A: { label: 'Jeito para comprar e fazer objetos', result: 'Artisan (Crafter)' },
+                    B: { label: 'Reagir rapidamente', result: 'Guard (Alert)' },
                     C: { label: 'Sorte e improviso', result: 'Noble (Skilled)' }
                   }
                 } },
@@ -284,7 +284,7 @@ const step3pt = {
               A: { label: 'Armas pesadas, escudo, armadura pesada', next: {
                   question: 'Que tipo de talento te parece mais interessante?',
                   options: {
-                    A: { label: 'Habilidades úteis', result: 'Artisan (Crafter)' },
+                    A: { label: 'Jeito para comprar e fazer objetos', result: 'Artisan (Crafter)' },
                     B: { label: 'Iniciativa rápida', result: 'Guard (Alert)' },
                     C: { label: 'Sorte e improviso', result: 'Noble (Skilled)' }
                   }
