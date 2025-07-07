@@ -97,17 +97,6 @@
       'classes',
       displayClass
     );
-    if(style){
-      makeSection(
-        labels[currentLang].Style,
-        style,
-        '',
-        '',
-        undefined,
-        '',
-        style
-      );
-    }
     const baseBg = background ? background.replace(/\s*\(.*?\)\s*$/, '').trim() : background;
     const bgDesc = localizeInfo(backgroundInfo[currentLang][baseBg] || '', 'backgrounds');
     let displayBg = baseBg;

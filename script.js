@@ -156,7 +156,8 @@ function renderQuiz() {
     html += `<section><p>${step.question}</p>`;
     list.forEach((bg, i) => {
       const id = `bg_${i}`;
-      html += `<label><input type="radio" name="bg" value="${bg}" id="${id}"> ${strip(bg)}</label>`;
+      const desc = (bgDescriptions[currentLang] && bgDescriptions[currentLang][bg]) || strip(bg);
+      html += `<label><input type="radio" name="bg" value="${bg}" id="${id}"> ${desc}</label>`;
     });
     html += '</section>';
     submitBtn.textContent = currentLang === 'pt' ? 'Concluir' : 'Finish';
