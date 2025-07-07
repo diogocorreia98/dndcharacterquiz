@@ -9,8 +9,8 @@ const step3pt = {
           A: { label: 'Mais vida e resistência', result: 'Farmer (Tough)' },
           B: { label: 'Dano físico extra', result: 'Soldier (Savage Attacker)' },
           C: { label: 'Sorte e improviso', result: 'Wayfarer (Lucky)' },
-          D: { label: 'Iniciativa rápida', result: 'Guard (Alert)' },
-          E: { label: 'Várias habilidades', result: 'Artisan (Skilled)' }
+          D: { label: 'Atacar antecipadamente', result: 'Guard (Alert)' },
+          E: { label: 'Boas competências e/ou ofícios', result: 'Artisan (Skilled)' }
         }
       }
     },
@@ -20,7 +20,7 @@ const step3pt = {
         options: {
           A: { label: 'Iniciativa e reação rápida', result: 'Criminal (Alert)' },
           B: { label: 'Magia básica e suporte', result: 'Guide (Magic Initiate - Druid)' },
-          C: { label: 'Várias habilidades', next: {
+          C: { label: 'Boas competências e/ou ofícios', next: {
               question: 'Que tipo de habilidades te interessam?',
               options: {
                 A: { label: 'Engano, trapaça', result: 'Charlatan (Skilled)' },
@@ -39,7 +39,7 @@ const step3pt = {
           B: { label: 'Cura habilidosa', result: 'Hermit (Healer)' },
           C: { label: 'Reagir rapidamente', result: 'Guard (Alert)' },
           D: { label: 'Sorte e versatilidade', result: 'Wayfarer (Lucky)' },
-          E: { label: 'Várias habilidades', result: 'Scribe (Skilled)' }
+          E: { label: 'Boas competências e/ou ofícios', result: 'Scribe (Skilled)' }
         }
       }
     },
@@ -51,7 +51,7 @@ const step3pt = {
           B: { label: 'Cura habilidosa', result: 'Hermit (Healer)' },
           C: { label: 'Reagir rapidamente', result: 'Guard (Alert)' },
           D: { label: 'Sorte e versatilidade', result: 'Wayfarer (Lucky)' },
-          E: { label: 'Várias habilidades', result: 'Farmer (Skilled)' }
+          E: { label: 'Boas competências e/ou ofícios', result: 'Farmer (Skilled)' }
         }
       }
     },
@@ -63,7 +63,7 @@ const step3pt = {
           B: { label: 'Sorte e improviso', result: 'Wayfarer (Lucky)' },
           C: { label: 'Habilidades sociais fortes', result: 'Charlatan (Skilled)' },
           D: { label: 'Ser músico ou artista', result: 'Entertainer (Musician)' },
-          E: { label: 'Várias habilidades', result: 'Scribe (Skilled)' }
+          E: { label: 'Boas competências e/ou ofícios', result: 'Scribe (Skilled)' }
         }
       }
     },
@@ -74,7 +74,7 @@ const step3pt = {
           A: { label: 'Magia complementar', result: 'Sage (Magic Initiate - Wizard)' },
           B: { label: 'Sorte e improviso', result: 'Merchant (Lucky)' },
           C: { label: 'Habilidades sociais fortes', result: 'Charlatan (Skilled)' },
-          D: { label: 'Várias habilidades', result: 'Scribe (Skilled)' }
+          D: { label: 'Boas competências e/ou ofícios', result: 'Scribe (Skilled)' }
         }
       }
     },
@@ -85,7 +85,7 @@ const step3pt = {
           A: { label: 'Magia complementar', result: 'Acolyte (Magic Initiate - Cleric)' },
           B: { label: 'Sorte e improviso', result: 'Wayfarer (Lucky)' },
           C: { label: 'Habilidades sociais fortes', result: 'Charlatan (Skilled)' },
-          D: { label: 'Várias habilidades', result: 'Scribe (Skilled)' }
+          D: { label: 'Boas competências e/ou ofícios', result: 'Scribe (Skilled)' }
         }
       }
     },
@@ -108,7 +108,7 @@ const step3pt = {
                 B: { label: 'Exploração e negócios', result: 'Merchant (Lucky)' }
               }
             } },
-          C: { label: 'Várias habilidades', next: {
+          C: { label: 'Boas competências e/ou ofícios', next: {
               question: 'Que tipo de habilidades te interessam?',
               options: {
                 A: { label: 'Conhecimento e escrita', result: 'Scribe (Skilled)' },
@@ -129,7 +129,7 @@ const step3pt = {
               options: {
                 A: { label: 'Movimento e velocidade', result: 'Wayfarer (Lucky)' },
                 B: { label: 'Consciência e suporte', result: 'Hermit (Healer)' },
-                C: { label: 'Várias habilidades', result: 'Scribe (Skilled)' }
+                C: { label: 'Boas competências e/ou ofícios', result: 'Scribe (Skilled)' }
               }
             } },
           B: { label: 'Prefiro focar-me só na agilidade física.', next: {
@@ -158,7 +158,7 @@ const step3pt = {
               options: {
                 A: { label: 'Curar e proteger aliados', result: 'Acolyte (Magic Initiate - Cleric)' },
                 B: { label: 'Ter presença e sorte', result: 'Wayfarer (Lucky)' },
-                C: { label: 'Várias habilidades úteis', result: 'Charlatan (Skilled)' }
+                C: { label: 'Boas competências e/ou ofícios úteis', result: 'Charlatan (Skilled)' }
               }
             } },
           B: { label: 'Prefiro ser um defensor forte e direto.', next: {
@@ -185,15 +185,15 @@ const step3pt = {
           A: { label: 'Quero ser rápido e atento à natureza.', next: {
               question: 'Que tipo de talento te parece mais interessante?',
               options: {
-                A: { label: 'Explorar e sobreviver', result: 'Guide (Magic Initiate - Druid)' },
-                B: { label: 'Agir rápido e com sorte', result: 'Wayfarer (Lucky)' },
-                C: { label: 'Várias habilidades úteis', result: 'Scribe (Skilled)' }
+                A: { label: 'Um pouco de magia natural', result: 'Guide (Magic Initiate - Druid)' },
+                B: { label: 'Ter muita sorte', result: 'Wayfarer (Lucky)' },
+                C: { label: 'Boas competências e/ou ofícios', result: 'Scribe (Skilled)' }
               }
             } },
           B: { label: 'Prefiro mover-me com leveza e rapidez.', next: {
               question: 'Que tipo de talento te parece mais interessante?',
               options: {
-                A: { label: 'Furtividade e ferramentas', result: 'Criminal (Alert)' },
+                A: { label: 'Furtividade, desarmar fechaduras e armadilhas', result: 'Criminal (Alert)' },
                 B: { label: 'Movimento e sorte', result: 'Wayfarer (Lucky)' }
               }
             } },
@@ -211,10 +211,10 @@ const step3pt = {
       subclasses: {
         'Battle Master': {
           tree: {
-            question: 'Qual é o teu atributo principal?',
+            question: 'Qual é o teu estilo de combate físico?',
             options: {
-              A: { label: 'Strength', next: {
-                  question: 'O que gostarias de fazer fora do combate?',
+              A: { label: 'Armas pesadas, escudo, armadura pesada', next: {
+                  question: 'Que tipo de talento te parece mais interessante?',
                   options: {
                     A: { label: 'Habilidades úteis', result: 'Artisan (Crafter)' },
                     B: { label: 'Vida extra', result: 'Farmer (Tough)' },
@@ -222,8 +222,8 @@ const step3pt = {
                     D: { label: 'Dano físico', result: 'Soldier (Savage Attacker)' }
                   }
                 } },
-              B: { label: 'Dexterity', next: {
-                  question: 'O que gostarias de fazer fora do combate?',
+              B: { label: 'Armas leves, arco, mobilidade', next: {
+                  question: 'Que tipo de talento te parece mais interessante?',
                   options: {
                     A: { label: 'Habilidades úteis', result: 'Charlatan (Skilled)' },
                     B: { label: 'Iniciativa rápida', result: 'Criminal (Alert)' },
@@ -235,17 +235,17 @@ const step3pt = {
         },
         'Champion': {
           tree: {
-            question: 'Qual é o teu atributo principal?',
+            question: 'Qual é o teu estilo de combate físico?',
             options: {
-              A: { label: 'Strength', next: {
-                  question: 'O que gostarias de fazer fora do combate?',
+              A: { label: 'Armas pesadas, escudo, armadura pesada', next: {
+                  question: 'Que tipo de talento te parece mais interessante?',
                   options: {
                     A: { label: 'Vida extra', result: 'Farmer (Tough)' },
                     B: { label: 'Dano físico', result: 'Soldier (Savage Attacker)' }
                   }
                 } },
-              B: { label: 'Dexterity', next: {
-                  question: 'O que gostarias de fazer fora do combate?',
+              B: { label: 'Armas leves, arco, mobilidade', next: {
+                  question: 'Que tipo de talento te parece mais interessante?',
                   options: {
                     A: { label: 'Habilidades úteis', result: 'Charlatan (Skilled)' },
                     B: { label: 'Iniciativa rápida', result: 'Criminal (Alert)' },
@@ -260,7 +260,7 @@ const step3pt = {
             question: 'Qual é o teu estilo de combate físico?',
             options: {
               A: { label: 'Armas pesadas, escudo, armadura pesada', next: {
-                  question: 'O que gostarias de fazer fora do combate?',
+                  question: 'Que tipo de talento te parece mais interessante?',
                   options: {
                     A: { label: 'Habilidades úteis', result: 'Artisan (Crafter)' },
                     B: { label: 'Iniciativa rápida', result: 'Guard (Alert)' },
@@ -268,7 +268,7 @@ const step3pt = {
                   }
                 } },
               B: { label: 'Armas leves, arco, mobilidade', next: {
-                  question: 'O que gostarias de fazer fora do combate?',
+                  question: 'Que tipo de talento te parece mais interessante?',
                   options: {
                     A: { label: 'Habilidades úteis', result: 'Scribe (Skilled)' },
                     B: { label: 'Magia extra', result: 'Guide (Magic Initiate - Druid)' }
@@ -282,7 +282,7 @@ const step3pt = {
             question: 'Qual é o teu estilo de combate físico?',
             options: {
               A: { label: 'Armas pesadas, escudo, armadura pesada', next: {
-                  question: 'O que gostarias de fazer fora do combate?',
+                  question: 'Que tipo de talento te parece mais interessante?',
                   options: {
                     A: { label: 'Habilidades úteis', result: 'Artisan (Crafter)' },
                     B: { label: 'Iniciativa rápida', result: 'Guard (Alert)' },
@@ -290,7 +290,7 @@ const step3pt = {
                   }
                 } },
               B: { label: 'Armas leves, arco, mobilidade', next: {
-                  question: 'O que gostarias de fazer fora do combate?',
+                  question: 'Que tipo de talento te parece mais interessante?',
                   options: {
                     A: { label: 'Habilidades úteis', result: 'Scribe (Skilled)' },
                     B: { label: 'Magia extra', result: 'Guide (Magic Initiate - Druid)' }
@@ -304,7 +304,7 @@ const step3pt = {
             question: 'Qual é o teu estilo de combate físico?',
             options: {
               A: { label: 'Armas pesadas, escudo, armadura pesada', next: {
-                  question: 'O que gostarias de fazer fora do combate?',
+                  question: 'Que tipo de talento te parece mais interessante?',
                   options: {
                     A: { label: 'Habilidades úteis', result: 'Artisan (Crafter)' },
                     B: { label: 'Iniciativa rápida', result: 'Guard (Alert)' },
@@ -312,7 +312,7 @@ const step3pt = {
                   }
                 } },
               B: { label: 'Armas leves, arco, mobilidade', next: {
-                  question: 'O que gostarias de fazer fora do combate?',
+                  question: 'Que tipo de talento te parece mais interessante?',
                   options: {
                     A: { label: 'Habilidades úteis', result: 'Scribe (Skilled)' },
                     B: { label: 'Magia extra', result: 'Guide (Magic Initiate - Druid)' }
