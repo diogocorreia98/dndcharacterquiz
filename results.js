@@ -7,7 +7,7 @@
 
   const stored = sessionStorage.getItem('dndResults');
   const parsed = stored ? JSON.parse(stored) : {lang:'en'};
-  const {species, class:clazz, subclass, style, background, gender, height} = parsed;
+  const {species, class:clazz, subclass, style, background, gender, height, subcategoryName, subcategory, familiar} = parsed;
   let currentLang = parsed.lang || 'en';
 
   const phbSpecies = new Set([
@@ -186,7 +186,12 @@
 
     const promptSpecies = species;
     const promptBackground = background;
-    const prompt = `A ${genderMap[gender] || ''} ${promptSpecies}, standing ${heightText}, dressed in a way that reflects their role as a ${displayClassEn}. Their look shows traits of a ${promptBackground} — with appropriate gear or attitude. Dynamic fantasy character portrait${pose}, high detail, cinematic lighting, full body or 3/4 view. Dungeons & Dragons-inspired.`;
+    const promptSubcategory = subcategory || '';
+    const promptFamiliar = familiar || '';
+    const familiarSize = familiar ? (familiar === 'Skeleton' ? 'Medium' : 'Tiny') : '';
+    const subText = subcategoryName && promptSubcategory ? ` with ${subcategoryName} ${promptSubcategory}` : '';
+    const famText = promptFamiliar ? ` and a ${familiarSize} ${promptFamiliar} familiar` : '';
+    const prompt = `A ${genderMap[gender] || ''} ${promptSpecies}, standing ${heightText}, dressed in a way that reflects their role as a ${displayClassEn}${subText}${famText}. Their look shows traits of a ${promptBackground} — with appropriate gear or attitude. Dynamic fantasy character portrait${pose}, high detail, cinematic lighting, full body or 3/4 view. Dungeons & Dragons-inspired.`;
 
     const promptTitle = document.createElement('h2');
     promptTitle.textContent = miscText[currentLang].promptIntro;
