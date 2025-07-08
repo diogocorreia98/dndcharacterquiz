@@ -72,6 +72,30 @@
       'species'
     );
 
+    const baseBg = background ? background.replace(/\s*\(.*?\)\s*$/, '').trim() : background;
+    const bgDesc = localizeInfo(backgroundInfo[currentLang][baseBg] || '', 'backgrounds');
+    let displayBg = baseBg;
+    if(nameMap[currentLang] && nameMap[currentLang].backgrounds && baseBg){
+      const translated = nameMap[currentLang].backgrounds[baseBg];
+      if(translated) {
+        displayBg = translated;
+      }
+    }
+    const abilityText = style || '';
+    const prefix = baseBg ? (currentLang === 'pt'
+      ? `Cultivaste a tua ${abilityText} como ${displayBg}. `
+      : `You cultivated your ${abilityText} as a ${displayBg}. `)
+      : '';
+    makeSection(
+      labels[currentLang].Background,
+      baseBg,
+      prefix + bgDesc,
+      'backgrounds',
+      'xphb',
+      'backgrounds',
+      displayBg
+    );
+
     const className = nameMap[currentLang].classes[clazz] || clazz;
     let subclassName = subclass ? subclass : '';
     if(subclass && nameMap[currentLang].subclasses){
@@ -96,24 +120,6 @@
       'xphb',
       'classes',
       displayClass
-    );
-    const baseBg = background ? background.replace(/\s*\(.*?\)\s*$/, '').trim() : background;
-    const bgDesc = localizeInfo(backgroundInfo[currentLang][baseBg] || '', 'backgrounds');
-    let displayBg = baseBg;
-    if(nameMap[currentLang] && nameMap[currentLang].backgrounds && baseBg){
-      const translated = nameMap[currentLang].backgrounds[baseBg];
-      if(translated) {
-        displayBg = translated;
-      }
-    }
-    makeSection(
-      labels[currentLang].Background,
-      baseBg,
-      bgDesc,
-      'backgrounds',
-      'xphb',
-      'backgrounds',
-      displayBg
     );
 
     const genderMap = {F:'female', M:'male', A:'androgynous'};
@@ -199,8 +205,15 @@
     promptEl.id = 'ai-prompt';
     promptEl.readOnly = true;
     promptEl.value = prompt;
+    const copyBtn = document.createElement('button');
+    copyBtn.textContent = currentLang === 'pt' ? 'Copiar' : 'Copy';
+    copyBtn.addEventListener('click', ()=>{
+      promptEl.select();
+      document.execCommand('copy');
+    });
     container.appendChild(promptTitle);
     container.appendChild(promptEl);
+    container.appendChild(copyBtn);
   }
 
   langSelect.addEventListener('change', () => {
