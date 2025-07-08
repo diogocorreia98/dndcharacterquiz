@@ -15,6 +15,33 @@
     'Halfling','Human','Orc','Tiefling'
   ]);
 
+  const abilityMap = {
+    en: {
+      Strength: 'strength',
+      Dexterity: 'dexterity',
+      Constitution: 'constitution',
+      Intelligence: 'intelligence',
+      Wisdom: 'wisdom',
+      Charisma: 'charisma'
+    },
+    pt: {
+      Strength: 'força',
+      Dexterity: 'destreza',
+      Constitution: 'constituição',
+      Intelligence: 'inteligência',
+      Wisdom: 'sabedoria',
+      Charisma: 'carisma'
+    }
+  };
+
+  function formatAbilityText(str){
+    if(!str) return '';
+    const map = abilityMap[currentLang] || abilityMap.en;
+    return str.split('+')
+      .map(s => map[s.trim()] || s.trim().toLowerCase())
+      .join(currentLang === 'pt' ? ' e ' : ' and ');
+  }
+
   function makeSection(label, value, info, type, source, cat, displayOverride){
     const section = document.createElement('div');
     const text = document.createElement('p');
@@ -81,9 +108,13 @@
         displayBg = translated;
       }
     }
-    const abilityText = style || '';
+    const abilityText = formatAbilityText(style || '');
+    const firstAbility = (style || '').split('+')[0].trim();
+    const pronoun = currentLang === 'pt'
+      ? (firstAbility === 'Charisma' ? 'o teu' : 'a tua')
+      : 'your';
     const prefix = baseBg ? (currentLang === 'pt'
-      ? `Cultivaste a tua ${abilityText} como ${displayBg}. `
+      ? `Cultivaste ${pronoun} ${abilityText} como ${displayBg}. `
       : `You cultivated your ${abilityText} as a ${displayBg}. `)
       : '';
     makeSection(
@@ -195,7 +226,10 @@
     const promptSubcategory = subcategory || '';
     const promptFamiliar = familiar || '';
     const familiarSize = familiar ? (familiar === 'Skeleton' ? 'Medium' : 'Tiny') : '';
-    const subText = subcategoryName && promptSubcategory ? ` with ${subcategoryName} ${promptSubcategory}` : '';
+    const subCatEnName = subCategoryQuiz && subCategoryQuiz.en && subCategoryQuiz.en[clazz]
+      ? subCategoryQuiz.en[clazz].name
+      : subcategoryName;
+    const subText = subcategoryName && promptSubcategory ? ` with ${subCatEnName} ${promptSubcategory}` : '';
     const famText = promptFamiliar ? ` and a ${familiarSize} ${promptFamiliar} familiar` : '';
     const prompt = `A ${genderMap[gender] || ''} ${promptSpecies}, standing ${heightText}, dressed in a way that reflects their role as a ${displayClassEn}${subText}${famText}. Their look shows traits of a ${promptBackground} — with appropriate gear or attitude. Dynamic fantasy character portrait${pose}, high detail, cinematic lighting, full body or 3/4 view. Dungeons & Dragons-inspired.`;
 
