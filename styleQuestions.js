@@ -647,3 +647,84 @@ const styleQuizEN = {
 };
 
 window.styleQuiz = window.styleQuiz || { pt: styleQuizPT, en: styleQuizEN };
+
+const subCategoryPT = {
+  Druid: {
+    name: 'Ordem Primal',
+    question: 'Qual é a tua Ordem Primal?',
+    options: { Warden: 'Warden', Magician: 'Magician' }
+  },
+  Cleric: {
+    name: 'Ordem Divina',
+    question: 'Qual é a tua Ordem Divina?',
+    options: { Protector: 'Protetor', Thaumaturge: 'Taumaturgo' }
+  },
+  Warlock: {
+    name: 'Pactos de Invocação',
+    question: 'Que Pacto potencia as tuas invocações?',
+    options: {
+      'Pact of the Tome': 'Pacto do Tomo',
+      'Pact of the Chain': 'Pacto da Corrente',
+      'Pact of the Blade': 'Pacto da Lâmina',
+      None: 'Nenhum'
+    }
+  }
+};
+
+const subCategoryEN = {
+  Druid: {
+    name: 'Primal Order',
+    question: 'Which Primal Order do you follow?',
+    options: { Warden: 'Warden', Magician: 'Magician' }
+  },
+  Cleric: {
+    name: 'Divine Order',
+    question: 'Which Divine Order do you serve?',
+    options: { Protector: 'Protector', Thaumaturge: 'Thaumaturge' }
+  },
+  Warlock: {
+    name: 'Pact Eldritch Invocations',
+    question: 'Which Pact boon empowers your invocations?',
+    options: {
+      'Pact of the Tome': 'Pact of the Tome',
+      'Pact of the Chain': 'Pact of the Chain',
+      'Pact of the Blade': 'Pact of the Blade',
+      None: 'None'
+    }
+  }
+};
+
+const familiarPT = {
+  question: 'Que familiar te acompanha?',
+  options: {
+    Imp: 'Imp',
+    Pseudodragon: 'Pseudodragon',
+    Quasit: 'Quasit',
+    Skeleton: 'Skeleton',
+    'Slaad Tadpole': 'Slaad Tadpole',
+    'Sphinx of Wonder': 'Sphinx of Wonder',
+    Sprite: 'Sprite',
+    'Venomous Snake': 'Venomous Snake'
+  }
+};
+
+const familiarEN = {
+  question: 'Which familiar accompanies you?',
+  options: {
+    Imp: 'Imp',
+    Pseudodragon: 'Pseudodragon',
+    Quasit: 'Quasit',
+    Skeleton: 'Skeleton',
+    'Slaad Tadpole': 'Slaad Tadpole',
+    'Sphinx of Wonder': 'Sphinx of Wonder',
+    Sprite: 'Sprite',
+    'Venomous Snake': 'Venomous Snake'
+  }
+};
+
+window.subCategoryQuiz = window.subCategoryQuiz || {
+  pt: subCategoryPT,
+  en: subCategoryEN
+};
+
+window.familiarQuiz = window.familiarQuiz || { pt: familiarPT, en: familiarEN };
