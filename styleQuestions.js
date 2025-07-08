@@ -653,7 +653,7 @@ const subCategoryPT = {
     name: 'Ordem Divina',
     question: 'Que caminho sagrado melhor reflete a tua devoção?',
     options: {
-      Protector: 'Proteger e inspirar quem te rodeia',
+      Protector: 'Defender e inspirar quem te rodeia',
       Thaumaturge: 'Invocar milagres para curar e apoiar'
     }
   },
@@ -661,7 +661,7 @@ const subCategoryPT = {
     name: 'Ordem Primal',
     question: 'Que tipo de ligação natural define o teu caminho?',
     options: {
-      Warden: 'Guarda a vida selvagem com dedicação',
+      Warden: 'Guarda a vida selvagem com dedicação feroz',
       Magician: 'Domina os segredos e rituais da natureza'
     }
   },
@@ -670,7 +670,7 @@ const subCategoryPT = {
     question: 'Que laço profundo te liga ao teu patrono?',
     options: {
       'Pact of the Tome': 'Um tomo antigo cheio de mistérios',
-      'Pact of the Chain': 'Uma corrente etérea que chama um aliado',
+      'Pact of the Chain': 'Uma corrente etérea que invoca uma criatura aliada',
       'Pact of the Blade': 'Uma arma consagrada ao teu patrono',
       None: 'Prefiro um acordo simples, sem laços extras'
     }
@@ -746,14 +746,14 @@ const specialStylePT = {
     question: 'Como usas as tuas habilidades naturais?',
     options: {
       Yes: 'Tenho uma ligação mágica com a natureza.',
-      No: 'Sou um caçador ágil e prático.'
+      No: 'Sou um caçador ágil, experiente e prático.'
     }
   },
   Paladin: {
     question: 'Qual é a origem do teu poder sagrado?',
     options: {
-      Yes: 'A minha fé oferece-me proteção divina.',
-      No: 'O meu estilo de combate define-me.'
+      Yes: 'A minha fé oferece-me um pocuo de magia divina.',
+      No: 'O meu estilo de combate e proeza militar define-me.'
     }
   }
 };
