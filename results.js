@@ -45,6 +45,34 @@
     return info.replace(/\b([A-Za-z'()\- ]+)\b/g, m => map[m] || m);
   }
 
+  const abilityNames = {
+    en: {
+      Strength: 'strength',
+      Dexterity: 'dexterity',
+      Constitution: 'constitution',
+      Intelligence: 'intelligence',
+      Wisdom: 'wisdom',
+      Charisma: 'charisma'
+    },
+    pt: {
+      Strength: 'força',
+      Dexterity: 'destreza',
+      Constitution: 'constituição',
+      Intelligence: 'inteligência',
+      Wisdom: 'sabedoria',
+      Charisma: 'carisma'
+    }
+  };
+
+  function formatAbilities(str, lang){
+    if(!str) return '';
+    const map = abilityNames[lang] || abilityNames.en;
+    const abilities = str.split('+').map(s => s.trim());
+    const localized = abilities.map(a => map[a] || a.toLowerCase());
+    const joiner = lang === 'pt' ? ' e ' : ' and ';
+    return localized.join(joiner);
+  }
+
   function updateStatic(){
     document.documentElement.lang = currentLang;
     document.title = miscText[currentLang].resultsTitle;
@@ -81,7 +109,7 @@
         displayBg = translated;
       }
     }
-    const abilityText = style || '';
+    const abilityText = formatAbilities(style, currentLang);
     const prefix = baseBg ? (currentLang === 'pt'
       ? `Cultivaste a tua ${abilityText} como ${displayBg}. `
       : `You cultivated your ${abilityText} as a ${displayBg}. `)
