@@ -15,6 +15,33 @@
     'Halfling','Human','Orc','Tiefling'
   ]);
 
+  const abilityMap = {
+    en: {
+      Strength: 'strength',
+      Dexterity: 'dexterity',
+      Constitution: 'constitution',
+      Intelligence: 'intelligence',
+      Wisdom: 'wisdom',
+      Charisma: 'charisma'
+    },
+    pt: {
+      Strength: 'força',
+      Dexterity: 'destreza',
+      Constitution: 'constituição',
+      Intelligence: 'inteligência',
+      Wisdom: 'sabedoria',
+      Charisma: 'carisma'
+    }
+  };
+
+  function formatAbilityText(str){
+    if(!str) return '';
+    const map = abilityMap[currentLang] || abilityMap.en;
+    return str.split('+')
+      .map(s => map[s.trim()] || s.trim().toLowerCase())
+      .join(currentLang === 'pt' ? ' e ' : ' and ');
+  }
+
   function makeSection(label, value, info, type, source, cat, displayOverride){
     const section = document.createElement('div');
     const text = document.createElement('p');
@@ -81,7 +108,7 @@
         displayBg = translated;
       }
     }
-    const abilityText = style || '';
+    const abilityText = formatAbilityText(style || '');
     const prefix = baseBg ? (currentLang === 'pt'
       ? `Cultivaste a tua ${abilityText} como ${displayBg}. `
       : `You cultivated your ${abilityText} as a ${displayBg}. `)
