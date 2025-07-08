@@ -309,8 +309,11 @@ function getStyleRoot(){
 
 function canonicalAbility(str){
   if(!str) return '';
-  const parts = str.split('+').map(s => s.trim()).sort();
-  return parts.join(' + ');
+  // Normalize spacing but keep the original order of abilities
+  return str
+    .split('+')
+    .map(s => s.trim())
+    .join(' + ');
 }
 
 submitBtn.addEventListener('click', async () => {
