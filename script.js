@@ -321,6 +321,14 @@ function getStyleRoot(){
         return base.options.B.next;
     }
   }
+  if(currentResult.specialStyle){
+    switch(currentResult.class){
+      case 'Ranger':
+        return currentResult.specialStyle === 'Yes' ? base.options.A.next : base.options.B.next;
+      case 'Paladin':
+        return currentResult.specialStyle === 'Yes' ? base.options.A.next : base.options.B.next;
+    }
+  }
   return base;
 }
 
