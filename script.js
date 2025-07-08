@@ -591,6 +591,12 @@ if(stage === 3){
       }
       if(choice.result){
         currentResult.style = choice.result;
+        if(choice.subcategory){
+          currentResult.subcategory = choice.subcategory;
+          currentResult.subcategoryName = currentLang === 'pt'
+            ? 'Ordem Divina'
+            : 'Divine Order';
+        }
         styleNode = null;
         stage = 5;
         renderQuiz();

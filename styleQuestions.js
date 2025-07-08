@@ -9,11 +9,13 @@ const styleQuizPT = {
           options: {
             A: {
               label: "Sou o escudo do grupo — mantenho todos seguros.",
-              result: "Wisdom + Strength"
+              result: "Wisdom + Strength",
+              subcategory: 'Protector'
             },
             B: {
               label: "Ofereço orientação espiritual e magia útil.",
-              result: "Wisdom"
+              result: "Wisdom",
+              subcategory: 'Protector'
             }
           }
         }
@@ -25,11 +27,13 @@ const styleQuizPT = {
           options: {
             A: {
               label: "Através da sabedoria e cura.",
-              result: "Wisdom"
+              result: "Wisdom",
+              subcategory: 'Thaumaturge'
             },
             B: {
               label: "Com fé e fortaleza interior.",
-              result: "Wisdom + Constitution"
+              result: "Wisdom + Constitution",
+              subcategory: 'Thaumaturge'
             }
           }
         }
@@ -333,11 +337,13 @@ const styleQuizEN = {
           options: {
             A: {
               label: "I'm the party's shield—keeping everyone safe.",
-              result: "Wisdom + Strength"
+              result: "Wisdom + Strength",
+              subcategory: 'Protector'
             },
             B: {
               label: "I offer spiritual guidance and helpful magic.",
-              result: "Wisdom"
+              result: "Wisdom",
+              subcategory: 'Protector'
             }
           }
         }
@@ -349,11 +355,13 @@ const styleQuizEN = {
           options: {
             A: {
               label: "Through wisdom and healing.",
-              result: "Wisdom"
+              result: "Wisdom",
+              subcategory: 'Thaumaturge'
             },
             B: {
               label: "With faith and inner fortitude.",
-              result: "Wisdom + Constitution"
+              result: "Wisdom + Constitution",
+              subcategory: 'Thaumaturge'
             }
           }
         }
@@ -654,11 +662,10 @@ const subCategoryPT = {
     question: 'Qual é a tua Ordem Primal?',
     options: { Warden: 'Warden', Magician: 'Magician' }
   },
-  Cleric: {
-    name: 'Ordem Divina',
-    question: 'Qual é a tua Ordem Divina?',
-    options: { Protector: 'Protetor', Thaumaturge: 'Taumaturgo' }
-  },
+  /*
+   * Removed separate Divine Order question. The Cleric style question now
+   * determines the subcategory.
+   */
   Warlock: {
     name: 'Pactos de Invocação',
     question: 'Que Pacto potencia as tuas invocações?',
@@ -677,11 +684,7 @@ const subCategoryEN = {
     question: 'Which Primal Order do you follow?',
     options: { Warden: 'Warden', Magician: 'Magician' }
   },
-  Cleric: {
-    name: 'Divine Order',
-    question: 'Which Divine Order do you serve?',
-    options: { Protector: 'Protector', Thaumaturge: 'Thaumaturge' }
-  },
+  // The Cleric subcategory is chosen during the style question.
   Warlock: {
     name: 'Pact Eldritch Invocations',
     question: 'Which Pact boon empowers your invocations?',
