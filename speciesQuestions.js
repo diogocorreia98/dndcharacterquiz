@@ -9,17 +9,17 @@ const step1pt = {
               A: { label: 'Humanoide', next: {
                 question: 'Qual descrição se encaixa melhor?',
                 options: {
-                  A: { label: 'Orelhas grandes, sorriso malandro e corpo esguio?', result: 'Goblin' },
-                  B: { label: 'Pequena e brilhante com asas de inseto?', result: 'Fairy' },
-                  C: { label: 'Pequeno gnomo de pele cinzenta e olhos grandes?', result: 'Deep Gnome' }
+                  A: { label: 'Orelhas grandes, sorriso malandro e corpo esguio.', result: 'Goblin' },
+                  B: { label: 'Pequena e brilhante com asas de inseto.', result: 'Fairy' },
+                  C: { label: 'Pequeno gnomo de pele cinzenta e olhos grandes.', result: 'Deep Gnome' }
                 }
               }},
               B: { label: 'Animalesco ou inorgânico', next: {
                 question: 'Qual descrição se encaixa melhor?',
                 options: {
-                  A: { label: 'Pequeno, corcunda, parecido com um pássaro sem voo, com bico e penas?', result: 'Kenku' },
-                  B: { label: 'Escamas vermelhas, aspecto de lagarto, focinho de dragão?', result: 'Kobold' },
-                  C: { label: 'Semelhante a brinquedo — corpo de peluche ou porcelana?', result: 'Geppettin (Plushie or Bisque)' }
+                  A: { label: 'Pequeno, corcunda, parecido com um pássaro sem voo, com bico e penas.', result: 'Kenku' },
+                  B: { label: 'Escamas vermelhas, aspecto de lagarto, focinho de dragão.', result: 'Kobold' },
+                  C: { label: 'Semelhante a brinquedo — corpo de peluche ou porcelana.', result: 'Geppettin (Plushie or Bisque)' }
                 }
               }}
             }
@@ -30,19 +30,19 @@ const step1pt = {
               A: { label: 'Animal', next: {
                 question: 'Qual descrição se encaixa melhor?',
                 options: {
-                  A: { label: 'Cabeça de coelho, irrequieto e rápido?', result: 'Harengon' },
-                  B: { label: 'Curvado, cheio de penas e a imitar sons?', result: 'Kenku' },
-                  C: { label: 'Pequeno lagarto com rosto de dragão?', result: 'Kobold' }
+                  A: { label: 'Cabeça de coelho, irrequieto e rápido.', result: 'Harengon' },
+                  B: { label: 'Curvado, cheio de penas e a imitar sons.', result: 'Kenku' },
+                  C: { label: 'Pequeno lagarto com rosto de dragão.', result: 'Kobold' }
                 }
               }},
               B: { label: 'Humanoide', next: {
                 question: 'Qual descrição se encaixa melhor?',
                 options: {
-                  A: { label: 'Corpo largo, armadura e barba?', result: 'Dwarf' },
-                  B: { label: 'Anão sombrio de pele acinzentada com equipamento pesado?', result: 'Duergar' },
-                  C: { label: 'Pés descalços, rosto redondo e cheio de alegria?', result: 'Halfling' },
-                  D: { label: 'Curioso inventor com ferramentas e roupas coloridas?', result: 'Gnome' },
-                  E: { label: 'Gnomo subterrâneo de pele cinzenta?', result: 'Deep Gnome' }
+                  A: { label: 'Corpo largo, armadura e barba.', result: 'Dwarf' },
+                  B: { label: 'Anão sombrio de pele acinzentada com equipamento pesado.', result: 'Duergar' },
+                  C: { label: 'Pés descalços, rosto redondo e cheio de alegria.', result: 'Halfling' },
+                  D: { label: 'Curioso inventor com ferramentas e roupas coloridas.', result: 'Gnome' },
+                  E: { label: 'Gnomo subterrâneo de pele cinzenta.', result: 'Deep Gnome' }
                 }
               }}
             }
@@ -53,45 +53,45 @@ const step1pt = {
               A: { label: 'Humanoide ou ligeiramente monstruosa', next: {
                 question: 'Qual descrição se encaixa melhor?',
                 options: {
-                  A: { label: 'Completamente comum?', result: 'Human' },
-                  B: { label: 'Aura radiante, olhos brilhantes?', result: 'Aasimar' },
-                  C: { label: 'Chifres, cauda, pele vermelha ou roxa?', result: 'Tiefling' },
-                  D: { label: 'Presas, pele cinzento-esverdeada, ar selvagem?', result: 'Orc' },
-                  E: { label: 'Forma mutável e pele lisa e pálida?', result: 'Changeling' },
-                  F: { label: 'Pele vermelha, postura disciplinada?', result: 'Hobgoblin' }
+                  A: { label: 'Completamente comum.', result: 'Human' },
+                  B: { label: 'Aura radiante, olhos brilhantes.', result: 'Aasimar' },
+                  C: { label: 'Chifres, cauda, pele vermelha ou roxa.', result: 'Tiefling' },
+                  D: { label: 'Presas, pele cinzento-esverdeada, ar selvagem.', result: 'Orc' },
+                  E: { label: 'Forma mutável e pele lisa e pálida.', result: 'Changeling' },
+                  F: { label: 'Pele vermelha, postura disciplinada.', result: 'Hobgoblin' }
                 }
               }},
               B: { label: 'Claramente animal', next: {
                 question: 'Qual descrição se encaixa melhor?',
                 options: {
-                  A: { label: 'Corpo e rosto felino, cauda longa?', result: 'Tabaxi' },
-                  B: { label: 'Transformações bestiais (presas, garras)?', result: 'Shifter' },
-                  C: { label: 'Pernas de cabra, cornos, espírito travesso?', result: 'Satyr' },
-                  D: { label: 'Face de serpente, olhos fendidos, calma hipnótica?', result: 'Yuan-ti' },
-                  E: { label: 'Carapaça nas costas, membros fortes, ar pacífico?', result: 'Tortle' }
+                  A: { label: 'Corpo e rosto felino, cauda longa.', result: 'Tabaxi' },
+                  B: { label: 'Transformações bestiais (presas, garras).', result: 'Shifter' },
+                  C: { label: 'Pernas de cabra, cornos, espírito travesso.', result: 'Satyr' },
+                  D: { label: 'Face de serpente, olhos fendidos, calma hipnótica.', result: 'Yuan-ti' },
+                  E: { label: 'Carapaça nas costas, membros fortes, ar pacífico.', result: 'Tortle' }
                 }
               }},
               C: { label: 'Élfica', next: {
                 question: 'Qual descrição se encaixa melhor?',
                 options: {
-                  A: { label: 'Elfo gracioso clássico de orelhas longas?', result: 'Elf' },
-                  B: { label: 'Elfo cujo visual muda com as estações?', result: 'Eladrin' },
-                  C: { label: 'Elfo pálido ou sombrio com expressão séria?', result: 'Shadar-kai' }
+                  A: { label: 'Elfo gracioso clássico de orelhas longas.', result: 'Elf' },
+                  B: { label: 'Elfo cujo visual muda com as estações.', result: 'Eladrin' },
+                  C: { label: 'Elfo pálido ou sombrio com expressão séria.', result: 'Shadar-kai' }
                 }
               }},
               D: { label: 'Aquático', next: {
                 question: 'Qual descrição se encaixa melhor?',
                 options: {
-                  A: { label: 'Elfo esguio com barbatanas ou guelras?', result: 'Sea Elf' },
-                  B: { label: 'Guerreiro escamado do oceano com tridente?', result: 'Triton' }
+                  A: { label: 'Elfo esguio com barbatanas ou guelras.', result: 'Sea Elf' },
+                  B: { label: 'Guerreiro escamado do oceano com tridente.', result: 'Triton' }
                 }
               }},
               E: { label: 'Construto, elemental ou planta', next: {
                 question: 'Qual descrição se encaixa melhor?',
                 options: {
-                  A: { label: 'Corpo de marioneta, madeira e membros articulados?', result: 'Geppettin (Marionette)' },
-                  B: { label: 'Pele como casca ou coberta de folhas?', result: 'Mandrake' },
-                  C: { label: 'Corpo feito de fogo, névoa, pedra ou água?', result: 'Genasi' }
+                  A: { label: 'Corpo de marioneta, madeira e membros articulados.', result: 'Geppettin (Marionette)' },
+                  B: { label: 'Pele como casca ou coberta de folhas.', result: 'Mandrake' },
+                  C: { label: 'Corpo feito de fogo, névoa, pedra ou água.', result: 'Genasi' }
                 }
               }}
             }
@@ -99,26 +99,26 @@ const step1pt = {
           D: { label: 'Alta – Acima da altura comum de um humano como um estandarte de guerra ou um armário de armas.', next: {
             question: 'Escolhe a descrição que melhor se adequa:',
             options: {
-              A: { label: 'Cabeça de dragão com sopro elemental?', result: 'Dragonborn' },
-              B: { label: 'Rosto de lagarto com cauda e crista?', result: 'Lizardfolk' },
-              C: { label: 'Postura ereta com traços de cobra?', result: 'Yuan-ti' },
-              D: { label: 'Guerreiro tribal alto de presas?', result: 'Orc' },
-              E: { label: 'Cabeça de touro, com chifres e cascos mas tronco humano?', result: 'Minotaur' },
-              F: { label: 'Pernas de cabra, cornos, alegria musical?', result: 'Satyr' },
-              G: { label: 'Guerreiro pálido de traços afiados?', result: 'Githyanki' },
-              H: { label: 'Calmo, de pele amarelada-esverdeada?', result: 'Githzerai' },
-              I: { label: 'Ser vegetal andante com pele de casca?', result: 'Mandrake' },
-              J: { label: 'Elfo com aparência sazonal mutável?', result: 'Eladrin' }
+              A: { label: 'Cabeça de dragão com sopro elemental.', result: 'Dragonborn' },
+              B: { label: 'Rosto de lagarto com cauda e crista.', result: 'Lizardfolk' },
+              C: { label: 'Postura ereta com traços de cobra.', result: 'Yuan-ti' },
+              D: { label: 'Guerreiro tribal alto de presas.', result: 'Orc' },
+              E: { label: 'Cabeça de touro, com chifres e cascos mas tronco humano.', result: 'Minotaur' },
+              F: { label: 'Pernas de cabra, cornos, alegria musical.', result: 'Satyr' },
+              G: { label: 'Guerreiro pálido de traços afiados.', result: 'Githyanki' },
+              H: { label: 'Calmo, de pele amarelada-esverdeada.', result: 'Githzerai' },
+              I: { label: 'Ser vegetal andante com pele de casca.', result: 'Mandrake' },
+              J: { label: 'Elfo com aparência sazonal mutável.', result: 'Eladrin' }
             }
           }},
           E: { label: 'Muito Alta – Tão alta como uma carroça empilhada ou uma estante de uma biblioteca arcana.', next: {
             question: 'Escolhe a descrição que melhor se adequa:',
             options: {
-              A: { label: 'Gigante peludo de braços longos e presas?', result: 'Bugbear' },
-              B: { label: 'Corpo de cavalo e torso humano?', result: 'Centaur' },
-              C: { label: 'Humanoide entroncado com ascendência elemental de gigante?', result: 'Goliath' },
-              D: { label: 'Gigante da floresta de pele azul musgosa?', result: 'Firbolg' },
-              E: { label: 'Árvore andante adulta ou humanoide coberto de casca?', result: 'Mandrake' }
+              A: { label: 'Gigante peludo de braços longos e presas.', result: 'Bugbear' },
+              B: { label: 'Corpo de cavalo e torso humano.', result: 'Centaur' },
+              C: { label: 'Humanoide entroncado com ascendência elemental de gigante.', result: 'Goliath' },
+              D: { label: 'Gigante da floresta de pele azul musgosa.', result: 'Firbolg' },
+              E: { label: 'Árvore andante adulta ou humanoide coberto de casca.', result: 'Mandrake' }
             }
           }}
         }
@@ -136,17 +136,17 @@ const step1en = {
               A: { label: 'Humanoid', next: {
                 question: 'Which description fits best?',
                 options: {
-                  A: { label: 'Large ears, roguish grin and a wiry body?', result: 'Goblin' },
-                  B: { label: 'Tiny and glowing with insect wings?', result: 'Fairy' },
-                  C: { label: 'Small grey-skinned gnome with big eyes?', result: 'Deep Gnome' }
+                  A: { label: 'Large ears, roguish grin and a wiry body.', result: 'Goblin' },
+                  B: { label: 'Tiny and glowing with insect wings.', result: 'Fairy' },
+                  C: { label: 'Small grey-skinned gnome with big eyes.', result: 'Deep Gnome' }
                 }
               }},
               B: { label: 'Animalistic or inorganic', next: {
                 question: 'Which description fits best?',
                 options: {
-                  A: { label: 'Small, hunched, birdlike creature with beak and feathers but cannot fly?', result: 'Kenku' },
-                  B: { label: 'Red scales, lizard-like with a dragon snout?', result: 'Kobold' },
-                  C: { label: 'Toy‑like body made of plush or porcelain?', result: 'Geppettin (Plushie or Bisque)' }
+                  A: { label: 'Small, hunched, birdlike creature with beak and feathers but cannot fly.', result: 'Kenku' },
+                  B: { label: 'Red scales, lizard-like with a dragon snout.', result: 'Kobold' },
+                  C: { label: 'Toy‑like body made of plush or porcelain.', result: 'Geppettin (Plushie or Bisque)' }
                 }
               }}
             }
@@ -157,19 +157,19 @@ const step1en = {
               A: { label: 'Animal', next: {
                 question: 'Which description fits best?',
                 options: {
-                  A: { label: 'Rabbit head, restless and quick?', result: 'Harengon' },
-                  B: { label: 'Hunched, feathered and mimics sounds?', result: 'Kenku' },
-                  C: { label: 'Small lizard with a dragon face?', result: 'Kobold' }
+                  A: { label: 'Rabbit head, restless and quick.', result: 'Harengon' },
+                  B: { label: 'Hunched, feathered and mimics sounds.', result: 'Kenku' },
+                  C: { label: 'Small lizard with a dragon face.', result: 'Kobold' }
                 }
               }},
               B: { label: 'Humanoid', next: {
                 question: 'Which description fits best?',
                 options: {
-                  A: { label: 'Broad build, armored and bearded?', result: 'Dwarf' },
-                  B: { label: 'Dark dwarf with gray skin and heavy gear?', result: 'Duergar' },
-                  C: { label: 'Barefoot, round-faced and joyful?', result: 'Halfling' },
-                  D: { label: 'Curious inventor with tools and bright clothes?', result: 'Gnome' },
-                  E: { label: 'Subterranean gnome with grey skin?', result: 'Deep Gnome' }
+                  A: { label: 'Broad build, armored and bearded.', result: 'Dwarf' },
+                  B: { label: 'Dark dwarf with gray skin and heavy gear.', result: 'Duergar' },
+                  C: { label: 'Barefoot, round-faced and joyful.', result: 'Halfling' },
+                  D: { label: 'Curious inventor with tools and bright clothes.', result: 'Gnome' },
+                  E: { label: 'Subterranean gnome with grey skin.', result: 'Deep Gnome' }
                 }
               }}
             }
@@ -180,45 +180,45 @@ const step1en = {
               A: { label: 'Humanoid or slightly monstrous', next: {
                 question: 'Which description fits best?',
                 options: {
-                  A: { label: 'Completely ordinary?', result: 'Human' },
-                  B: { label: 'Radiant aura, shining eyes?', result: 'Aasimar' },
-                  C: { label: 'Horns, tail, red or purple skin?', result: 'Tiefling' },
-                  D: { label: 'Tusks, green‑gray skin, feral look?', result: 'Orc' },
-                  E: { label: 'Shapeshifter with smooth pale skin?', result: 'Changeling' },
-                  F: { label: 'Red-skinned with disciplined bearing?', result: 'Hobgoblin' }
+                  A: { label: 'Completely ordinary.', result: 'Human' },
+                  B: { label: 'Radiant aura, shining eyes.', result: 'Aasimar' },
+                  C: { label: 'Horns, tail, red or purple skin.', result: 'Tiefling' },
+                  D: { label: 'Tusks, green‑gray skin, feral look.', result: 'Orc' },
+                  E: { label: 'Shapeshifter with smooth pale skin.', result: 'Changeling' },
+                  F: { label: 'Red-skinned with disciplined bearing.', result: 'Hobgoblin' }
                 }
               }},
               B: { label: 'Clearly animal', next: {
                 question: 'Which description fits best?',
                 options: {
-                  A: { label: 'Feline body and face, long tail?', result: 'Tabaxi' },
-                  B: { label: 'Bestial transformations like fangs or claws?', result: 'Shifter' },
-                  C: { label: 'Goat legs, horns and mischievous spirit?', result: 'Satyr' },
-                  D: { label: 'Serpentine face, slit eyes, hypnotic calm?', result: 'Yuan-ti' },
-                  E: { label: 'Shell on the back, strong limbs, peaceful air?', result: 'Tortle' }
+                  A: { label: 'Feline body and face, long tail.', result: 'Tabaxi' },
+                  B: { label: 'Bestial transformations like fangs or claws.', result: 'Shifter' },
+                  C: { label: 'Goat legs, horns and mischievous spirit.', result: 'Satyr' },
+                  D: { label: 'Serpentine face, slit eyes, hypnotic calm.', result: 'Yuan-ti' },
+                  E: { label: 'Shell on the back, strong limbs, peaceful air.', result: 'Tortle' }
                 }
               }},
               C: { label: 'Elven', next: {
                 question: 'Which description fits best?',
                 options: {
-                  A: { label: 'Graceful classic elf with long ears?', result: 'Elf' },
-                  B: { label: 'Elf whose appearance shifts with the seasons?', result: 'Eladrin' },
-                  C: { label: 'Pale or shadowy elf with a serious expression?', result: 'Shadar-kai' }
+                  A: { label: 'Graceful classic elf with long ears.', result: 'Elf' },
+                  B: { label: 'Elf whose appearance shifts with the seasons.', result: 'Eladrin' },
+                  C: { label: 'Pale or shadowy elf with a serious expression.', result: 'Shadar-kai' }
                 }
               }},
               D: { label: 'Aquatic', next: {
                 question: 'Which description fits best?',
                 options: {
-                  A: { label: 'Slim elf with fins or gills?', result: 'Sea Elf' },
-                  B: { label: 'Scaled ocean warrior wielding a trident?', result: 'Triton' }
+                  A: { label: 'Slim elf with fins or gills.', result: 'Sea Elf' },
+                  B: { label: 'Scaled ocean warrior wielding a trident.', result: 'Triton' }
                 }
               }},
               E: { label: 'Construct, elemental or plant', next: {
                 question: 'Which description fits best?',
                 options: {
-                  A: { label: 'Marionette body of wood and hinged limbs?', result: 'Geppettin (Marionette)' },
-                  B: { label: 'Skin like bark or covered in leaves?', result: 'Mandrake' },
-                  C: { label: 'Body made of flame, mist, stone or water?', result: 'Genasi' }
+                  A: { label: 'Marionette body of wood and hinged limbs.', result: 'Geppettin (Marionette)' },
+                  B: { label: 'Skin like bark or covered in leaves.', result: 'Mandrake' },
+                  C: { label: 'Body made of flame, mist, stone or water.', result: 'Genasi' }
                 }
               }}
             }
@@ -226,26 +226,26 @@ const step1en = {
           D: { label: 'Tall – taller than a typical human, like a war banner or weapons rack', next: {
             question: 'Choose the description that fits best:',
             options: {
-              A: { label: 'Dragon head with elemental breath?', result: 'Dragonborn' },
-              B: { label: 'Lizard face with tail and frill?', result: 'Lizardfolk' },
-              C: { label: 'Upright with serpent features?', result: 'Yuan-ti' },
-              D: { label: 'Tall tribal warrior with tusks?', result: 'Orc' },
-              E: { label: 'Bull head with horns and hooves but human torso?', result: 'Minotaur' },
-              F: { label: 'Goat legs, horns, musical joy?', result: 'Satyr' },
-              G: { label: 'Pale warrior with sharp features?', result: 'Githyanki' },
-              H: { label: 'Calm with yellow‑green skin?', result: 'Githzerai' },
-              I: { label: 'Walking plant creature with bark skin?', result: 'Mandrake' },
-              J: { label: 'Elf whose look changes with the seasons?', result: 'Eladrin' }
+              A: { label: 'Dragon head with elemental breath.', result: 'Dragonborn' },
+              B: { label: 'Lizard face with tail and frill.', result: 'Lizardfolk' },
+              C: { label: 'Upright with serpent features.', result: 'Yuan-ti' },
+              D: { label: 'Tall tribal warrior with tusks.', result: 'Orc' },
+              E: { label: 'Bull head with horns and hooves but human torso.', result: 'Minotaur' },
+              F: { label: 'Goat legs, horns, musical joy.', result: 'Satyr' },
+              G: { label: 'Pale warrior with sharp features.', result: 'Githyanki' },
+              H: { label: 'Calm with yellow‑green skin.', result: 'Githzerai' },
+              I: { label: 'Walking plant creature with bark skin.', result: 'Mandrake' },
+              J: { label: 'Elf whose look changes with the seasons.', result: 'Eladrin' }
             }
           }},
           E: { label: 'Very Tall – as tall as a stacked wagon or a library shelf', next: {
             question: 'Choose the description that fits best:',
             options: {
-              A: { label: 'Hairy giant with long arms and fangs?', result: 'Bugbear' },
-              B: { label: 'Horse body with human torso?', result: 'Centaur' },
-              C: { label: 'Burly humanoid with giant elemental heritage?', result: 'Goliath' },
-              D: { label: 'Forest giant with mossy blue skin?', result: 'Firbolg' },
-              E: { label: 'Adult walking tree or bark‑covered humanoid?', result: 'Mandrake' }
+              A: { label: 'Hairy giant with long arms and fangs.', result: 'Bugbear' },
+              B: { label: 'Horse body with human torso.', result: 'Centaur' },
+              C: { label: 'Burly humanoid with giant elemental heritage.', result: 'Goliath' },
+              D: { label: 'Forest giant with mossy blue skin.', result: 'Firbolg' },
+              E: { label: 'Adult walking tree or bark‑covered humanoid.', result: 'Mandrake' }
             }
           }}
         }
