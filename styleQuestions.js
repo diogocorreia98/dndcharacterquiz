@@ -10,12 +10,10 @@ const styleQuizPT = {
             A: {
               label: "Sou o escudo do grupo — mantenho todos seguros.",
               result: "Wisdom + Strength",
-              subcategory: 'Protector'
             },
             B: {
               label: "Ofereço orientação espiritual e magia útil.",
               result: "Wisdom",
-              subcategory: 'Protector'
             }
           }
         }
@@ -28,12 +26,10 @@ const styleQuizPT = {
             A: {
               label: "Através da sabedoria e cura.",
               result: "Wisdom",
-              subcategory: 'Thaumaturge'
             },
             B: {
               label: "Com fé e fortaleza interior.",
               result: "Wisdom + Constitution",
-              subcategory: 'Thaumaturge'
             }
           }
         }
@@ -338,12 +334,10 @@ const styleQuizEN = {
             A: {
               label: "I'm the party's shield—keeping everyone safe.",
               result: "Wisdom + Strength",
-              subcategory: 'Protector'
             },
             B: {
               label: "I offer spiritual guidance and helpful magic.",
               result: "Wisdom",
-              subcategory: 'Protector'
             }
           }
         }
@@ -356,12 +350,10 @@ const styleQuizEN = {
             A: {
               label: "Through wisdom and healing.",
               result: "Wisdom",
-              subcategory: 'Thaumaturge'
             },
             B: {
               label: "With faith and inner fortitude.",
               result: "Wisdom + Constitution",
-              subcategory: 'Thaumaturge'
             }
           }
         }
@@ -657,71 +649,88 @@ const styleQuizEN = {
 window.styleQuiz = window.styleQuiz || { pt: styleQuizPT, en: styleQuizEN };
 
 const subCategoryPT = {
+  Cleric: {
+    name: 'Ordem Divina',
+    question: 'Que caminho sagrado melhor reflete a tua devoção?',
+    options: {
+      Protector: 'Proteger e inspirar quem te rodeia',
+      Thaumaturge: 'Invocar milagres para curar e apoiar'
+    }
+  },
   Druid: {
     name: 'Ordem Primal',
-    question: 'Qual é a tua Ordem Primal?',
-    options: { Warden: 'Warden', Magician: 'Magician' }
-  },
-  /*
-   * Removed separate Divine Order question. The Cleric style question now
-   * determines the subcategory.
-   */
-  Warlock: {
-    name: 'Pactos de Invocação',
-    question: 'Que Pacto potencia as tuas invocações?',
+    question: 'Que tipo de ligação natural define o teu caminho?',
     options: {
-      'Pact of the Tome': 'Pacto do Tomo',
-      'Pact of the Chain': 'Pacto da Corrente',
-      'Pact of the Blade': 'Pacto da Lâmina',
-      None: 'Nenhum'
+      Warden: 'Guarda a vida selvagem com dedicação',
+      Magician: 'Domina os segredos e rituais da natureza'
+    }
+  },
+  Warlock: {
+    name: 'Vínculo Sombrio',
+    question: 'Que laço profundo te liga ao teu patrono?',
+    options: {
+      'Pact of the Tome': 'Um tomo antigo cheio de mistérios',
+      'Pact of the Chain': 'Uma corrente etérea que chama um aliado',
+      'Pact of the Blade': 'Uma arma consagrada ao teu patrono',
+      None: 'Prefiro um acordo simples, sem laços extras'
     }
   }
 };
 
 const subCategoryEN = {
+  Cleric: {
+    name: 'Divine Order',
+    question: 'Which sacred path best reflects your devotion?',
+    options: {
+      Protector: 'Shield and inspire those around you',
+      Thaumaturge: 'Call forth miracles to heal and aid'
+    }
+  },
   Druid: {
     name: 'Primal Order',
-    question: 'Which Primal Order do you follow?',
-    options: { Warden: 'Warden', Magician: 'Magician' }
-  },
-  // The Cleric subcategory is chosen during the style question.
-  Warlock: {
-    name: 'Pact Eldritch Invocations',
-    question: 'Which Pact boon empowers your invocations?',
+    question: 'What kind of natural bond defines your path?',
     options: {
-      'Pact of the Tome': 'Pact of the Tome',
-      'Pact of the Chain': 'Pact of the Chain',
-      'Pact of the Blade': 'Pact of the Blade',
-      None: 'None'
+      Warden: 'Guard the wilds with unwavering dedication',
+      Magician: 'Master nature\'s secrets and rituals'
+    }
+  },
+  Warlock: {
+    name: 'Mystic Bond',
+    question: 'What deep bond ties you to your patron?',
+    options: {
+      'Pact of the Tome': 'An ancient tome filled with secrets',
+      'Pact of the Chain': 'An ethereal chain granting a companion',
+      'Pact of the Blade': 'A dedicated weapon channelling power',
+      None: 'I prefer a simpler deal without extra ties'
     }
   }
 };
 
 const familiarPT = {
-  question: 'Que familiar te acompanha?',
+  question: 'Que tipo de companheiro mágico te segue?',
   options: {
-    Imp: 'Imp',
-    Pseudodragon: 'Pseudodragon',
-    Quasit: 'Quasit',
-    Skeleton: 'Skeleton',
-    'Slaad Tadpole': 'Slaad Tadpole',
-    'Sphinx of Wonder': 'Sphinx of Wonder',
-    Sprite: 'Sprite',
-    'Venomous Snake': 'Venomous Snake'
+    Imp: 'Um diabrete travesso de asas escuras',
+    Pseudodragon: 'Um pequeno dragão de escamas cintilantes',
+    Quasit: 'Criatura diminuta de garras e risos sinistros',
+    Skeleton: 'Esqueleto obediente que nunca se cansa',
+    'Slaad Tadpole': 'Girino estranho de olhos curiosos',
+    'Sphinx of Wonder': 'Miniatura de esfinge que guarda enigmas',
+    Sprite: 'Fada luminosa de voo gracioso',
+    'Venomous Snake': 'Serpente elegante de olhar hipnótico'
   }
 };
 
 const familiarEN = {
-  question: 'Which familiar accompanies you?',
+  question: 'Which magical companion follows you?',
   options: {
-    Imp: 'Imp',
-    Pseudodragon: 'Pseudodragon',
-    Quasit: 'Quasit',
-    Skeleton: 'Skeleton',
-    'Slaad Tadpole': 'Slaad Tadpole',
-    'Sphinx of Wonder': 'Sphinx of Wonder',
-    Sprite: 'Sprite',
-    'Venomous Snake': 'Venomous Snake'
+    Imp: 'A mischievous fiend with leathery wings',
+    Pseudodragon: 'A tiny dragon with shimmering scales',
+    Quasit: 'A small clawed creature that giggles wickedly',
+    Skeleton: 'An obedient skeleton that never tires',
+    'Slaad Tadpole': 'A curious tadpole with quick jumps',
+    'Sphinx of Wonder': 'A miniature sphinx whispering riddles',
+    Sprite: 'A glowing sprite fluttering with grace',
+    'Venomous Snake': 'A sleek serpent with a mesmerizing gaze'
   }
 };
 
@@ -734,23 +743,35 @@ window.familiarQuiz = window.familiarQuiz || { pt: familiarPT, en: familiarEN };
 
 const specialStylePT = {
   Ranger: {
-    question: 'Vais escolher o estilo de combate Druidic Warrior?',
-    options: { Yes: 'Sim', No: 'Não' }
+    question: 'Queres misturar magia natural ao teu modo de lutar?',
+    options: {
+      Yes: 'Sim, quero golpes guiados pela natureza',
+      No: 'Prefiro manter o combate tradicional'
+    }
   },
   Paladin: {
-    question: 'Vais escolher o estilo de combate Blessed Warrior?',
-    options: { Yes: 'Sim', No: 'Não' }
+    question: 'Queres envolver a tua fé em cada ataque?',
+    options: {
+      Yes: 'Sim, desejo lutar com poder abençoado',
+      No: 'Prefiro confiar apenas na minha técnica'
+    }
   }
 };
 
 const specialStyleEN = {
   Ranger: {
-    question: 'Will you take the Druidic Warrior fighting style?',
-    options: { Yes: 'Yes', No: 'No' }
+    question: 'Do you want to weave natural magic into your fighting style?',
+    options: {
+      Yes: 'Yes, let my strikes be guided by nature',
+      No: 'No, I\'ll stick to traditional tactics'
+    }
   },
   Paladin: {
-    question: 'Will you take the Blessed Warrior fighting style?',
-    options: { Yes: 'Yes', No: 'No' }
+    question: 'Do you wish to infuse each attack with your faith?',
+    options: {
+      Yes: 'Yes, I want to fight with blessed power',
+      No: 'No, I prefer relying purely on skill'
+    }
   }
 };
 
