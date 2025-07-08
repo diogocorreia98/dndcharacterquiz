@@ -39,7 +39,8 @@ let currentResult = {
   background: null,
   subcategoryName: null,
   subcategory: null,
-  familiar: null
+  familiar: null,
+  specialStyle: null
 };
 let speciesNode = null;
 const speciesStack = [];
@@ -55,6 +56,7 @@ let styleNode = null;
 const styleStack = [];
 let subCategoryNode = null;
 let familiarNode = null;
+let specialStyleNode = null;
 
 function renderQuiz() {
   const locale = data[currentLang];
@@ -138,19 +140,19 @@ function renderQuiz() {
     submitBtn.textContent = currentLang === 'pt' ? 'Avançar' : 'Next';
   } else if(stage === 4){
     html += `<h2>${currentLang === 'pt' ? 'Estilo de Jogo' : 'Playing Style'}</h2>`;
-    if(styleNode){
-      html += `<section><p>${styleNode.question}</p>`;
-      for(const key in styleNode.options){
-        const id = `style_${key}`;
-        html += `<label><input type="radio" name="style" value="${key}" id="${id}"> ${strip(styleNode.options[key].label)}</label>`;
-      }
-      html += '</section>';
-      submitBtn.textContent = currentLang === 'pt' ? 'Avançar' : 'Next';
-    } else if(subCategoryNode){
+    if(subCategoryNode){
       html += `<section><p>${subCategoryNode.question}</p>`;
       for(const key in subCategoryNode.options){
         const id = `subc_${key}`;
         html += `<label><input type="radio" name="subcategory" value="${key}" id="${id}"> ${strip(subCategoryNode.options[key])}</label>`;
+      }
+      html += '</section>';
+      submitBtn.textContent = currentLang === 'pt' ? 'Avançar' : 'Next';
+    } else if(specialStyleNode){
+      html += `<section><p>${specialStyleNode.question}</p>`;
+      for(const key in specialStyleNode.options){
+        const id = `ss_${key}`;
+        html += `<label><input type="radio" name="specialstyle" value="${key}" id="${id}"> ${strip(specialStyleNode.options[key])}</label>`;
       }
       html += '</section>';
       submitBtn.textContent = currentLang === 'pt' ? 'Avançar' : 'Next';
@@ -159,6 +161,14 @@ function renderQuiz() {
       for(const key in familiarNode.options){
         const id = `fam_${key.replace(/\s/g,'')}`;
         html += `<label><input type="radio" name="familiar" value="${key}" id="${id}"> ${strip(familiarNode.options[key])}</label>`;
+      }
+      html += '</section>';
+      submitBtn.textContent = currentLang === 'pt' ? 'Avançar' : 'Next';
+    } else if(styleNode){
+      html += `<section><p>${styleNode.question}</p>`;
+      for(const key in styleNode.options){
+        const id = `style_${key}`;
+        html += `<label><input type="radio" name="style" value="${key}" id="${id}"> ${strip(styleNode.options[key].label)}</label>`;
       }
       html += '</section>';
       submitBtn.textContent = currentLang === 'pt' ? 'Avançar' : 'Next';
@@ -196,7 +206,7 @@ function renderQuiz() {
   quizDiv.innerHTML = html;
   window.scrollTo(0,0);
   submitBtn.style.display = 'block';
-  backBtn.style.display = stage > 0 || speciesStack.length > 0 || subSpeciesNode || classStack.length > 0 || styleStack.length > 0 || subCategoryNode || familiarNode ? 'block' : 'none';
+  backBtn.style.display = stage > 0 || speciesStack.length > 0 || subSpeciesNode || classStack.length > 0 || styleStack.length > 0 || subCategoryNode || familiarNode || specialStyleNode ? 'block' : 'none';
   backBtn.textContent = currentLang === 'pt' ? 'Recuar' : 'Back';
   restartBtn.textContent = labels[currentLang].restart;
 }
@@ -245,6 +255,11 @@ langSelect.addEventListener('change', () => {
     subCategoryNode = subCategoryQuiz[currentLang][currentResult.class];
   } else {
     subCategoryNode = null;
+  }
+  if(specialStyleQuiz && specialStyleQuiz[currentLang] && currentResult.class){
+    specialStyleNode = specialStyleQuiz[currentLang][currentResult.class];
+  } else {
+    specialStyleNode = null;
   }
   familiarNode = null;
   updateStaticText();
@@ -412,6 +427,11 @@ submitBtn.addEventListener('click', async () => {
       if(choice.result){
         currentResult.class = choice.result;
         classPath.push(val.value);
+        styleNode = null;
+        styleStack.length = 0;
+        subCategoryNode = null;
+        specialStyleNode = null;
+        familiarNode = null;
         stage = 3;
         renderQuiz();
         return;
@@ -452,6 +472,11 @@ submitBtn.addEventListener('click', async () => {
       }
       return;
     }
+    styleNode = null;
+    styleStack.length = 0;
+    subCategoryNode = null;
+    specialStyleNode = null;
+    familiarNode = null;
     stage = 3;
     renderQuiz();
     return;
@@ -461,6 +486,23 @@ submitBtn.addEventListener('click', async () => {
     const val = document.querySelector('input[name="subclass"]:checked');
     if(!val) return;
     currentResult.subclass = val.value;
+    styleNode = null;
+    styleStack.length = 0;
+    specialStyleNode = null;
+    subCategoryNode = null;
+    familiarNode = null;
+    if(subCategoryQuiz && subCategoryQuiz[currentLang] && subCategoryQuiz[currentLang][currentResult.class]){
+      subCategoryNode = subCategoryQuiz[currentLang][currentResult.class];
+      stage = 4;
+      renderQuiz();
+      return;
+    }
+    if(specialStyleQuiz && specialStyleQuiz[currentLang] && specialStyleQuiz[currentLang][currentResult.class]){
+      specialStyleNode = specialStyleQuiz[currentLang][currentResult.class];
+      stage = 4;
+      renderQuiz();
+      return;
+    }
     const styleRoot = getStyleRoot();
     if(styleRoot){
       styleNode = styleRoot;
@@ -474,6 +516,66 @@ submitBtn.addEventListener('click', async () => {
     return;
   }
   if(stage === 4){
+    if(subCategoryNode){
+      const val = document.querySelector('input[name="subcategory"]:checked');
+      if(!val) return;
+      currentResult.subcategoryName = subCategoryNode.name;
+      currentResult.subcategory = val.value;
+      subCategoryNode = null;
+      if(currentResult.subcategory === 'Pact of the Chain' && familiarQuiz){
+        familiarNode = familiarQuiz[currentLang];
+        renderQuiz();
+        return;
+      }
+      if(specialStyleQuiz && specialStyleQuiz[currentLang] && specialStyleQuiz[currentLang][currentResult.class]){
+        specialStyleNode = specialStyleQuiz[currentLang][currentResult.class];
+        renderQuiz();
+        return;
+      }
+      const styleRoot = getStyleRoot();
+      if(styleRoot){
+        styleNode = styleRoot;
+        styleStack.length = 0;
+        renderQuiz();
+        return;
+      }
+      styleStack.length = 0;
+      stage = 5;
+      renderQuiz();
+      return;
+    }
+    if(specialStyleNode){
+      const val = document.querySelector('input[name="specialstyle"]:checked');
+      if(!val) return;
+      currentResult.specialStyle = val.value;
+      specialStyleNode = null;
+      const styleRoot = getStyleRoot();
+      if(styleRoot){
+        styleNode = styleRoot;
+        styleStack.length = 0;
+        renderQuiz();
+        return;
+      }
+      stage = 5;
+      renderQuiz();
+      return;
+    }
+    if(familiarNode){
+      const val = document.querySelector('input[name="familiar"]:checked');
+      if(!val) return;
+      currentResult.familiar = val.value;
+      familiarNode = null;
+      const styleRoot = getStyleRoot();
+      if(styleRoot){
+        styleNode = styleRoot;
+        styleStack.length = 0;
+        renderQuiz();
+        return;
+      }
+      stage = 5;
+      renderQuiz();
+      return;
+    }
     if(styleNode){
       const val = document.querySelector('input[name="style"]:checked');
       if(!val) return;
@@ -487,41 +589,9 @@ submitBtn.addEventListener('click', async () => {
       if(choice.result){
         currentResult.style = choice.result;
         styleNode = null;
-        if(subCategoryQuiz && subCategoryQuiz[currentLang] && subCategoryQuiz[currentLang][currentResult.class]){
-          subCategoryNode = subCategoryQuiz[currentLang][currentResult.class];
-          renderQuiz();
-          return;
-        }
-        styleStack.length = 0;
         stage = 5;
         renderQuiz();
       }
-      return;
-    }
-    if(subCategoryNode){
-      const val = document.querySelector('input[name="subcategory"]:checked');
-      if(!val) return;
-      currentResult.subcategoryName = subCategoryNode.name;
-      currentResult.subcategory = val.value;
-      subCategoryNode = null;
-      if(currentResult.subcategory === 'Pact of the Chain' && familiarQuiz){
-        familiarNode = familiarQuiz[currentLang];
-        renderQuiz();
-        return;
-      }
-      styleStack.length = 0;
-      stage = 5;
-      renderQuiz();
-      return;
-    }
-    if(familiarNode){
-      const val = document.querySelector('input[name="familiar"]:checked');
-      if(!val) return;
-      currentResult.familiar = val.value;
-      familiarNode = null;
-      styleStack.length = 0;
-      stage = 5;
-      renderQuiz();
       return;
     }
   }
@@ -599,10 +669,23 @@ backBtn.addEventListener('click', () => {
       renderQuiz();
       return;
     }
+    if(specialStyleNode){
+      specialStyleNode = null;
+      if(subCategoryQuiz && subCategoryQuiz[currentLang] && subCategoryQuiz[currentLang][currentResult.class]){
+        subCategoryNode = subCategoryQuiz[currentLang][currentResult.class];
+      }
+      renderQuiz();
+      return;
+    }
     if(subCategoryNode){
       subCategoryNode = null;
       if(styleStack.length > 0){
         styleNode = styleStack.pop();
+        renderQuiz();
+        return;
+      }
+      if(specialStyleQuiz && specialStyleQuiz[currentLang] && specialStyleQuiz[currentLang][currentResult.class]){
+        specialStyleNode = specialStyleQuiz[currentLang][currentResult.class];
         renderQuiz();
         return;
       }
@@ -616,6 +699,16 @@ backBtn.addEventListener('click', () => {
       return;
     }
     styleNode = null;
+    if(specialStyleQuiz && specialStyleQuiz[currentLang] && specialStyleQuiz[currentLang][currentResult.class]){
+      specialStyleNode = specialStyleQuiz[currentLang][currentResult.class];
+      renderQuiz();
+      return;
+    }
+    if(subCategoryQuiz && subCategoryQuiz[currentLang] && subCategoryQuiz[currentLang][currentResult.class]){
+      subCategoryNode = subCategoryQuiz[currentLang][currentResult.class];
+      renderQuiz();
+      return;
+    }
     stage = 3;
     renderQuiz();
     return;
@@ -639,7 +732,8 @@ function restartQuiz(){
     background:null,
     subcategoryName:null,
     subcategory:null,
-    familiar:null
+    familiar:null,
+    specialStyle:null
   };
   speciesNode = null;
   subSpeciesNode = null;
@@ -654,6 +748,7 @@ function restartQuiz(){
   styleStack.length = 0;
   subCategoryNode = null;
   familiarNode = null;
+  specialStyleNode = null;
   subQuestionSpecies = null;
   renderQuiz();
 }
