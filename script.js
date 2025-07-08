@@ -430,6 +430,11 @@ submitBtn.addEventListener('click', async () => {
       if(choice.result){
         currentResult.class = choice.result;
         classPath.push(val.value);
+        styleNode = null;
+        styleStack.length = 0;
+        subCategoryNode = null;
+        specialStyleNode = null;
+        familiarNode = null;
         stage = 3;
         renderQuiz();
         return;
@@ -470,15 +475,25 @@ submitBtn.addEventListener('click', async () => {
       }
       return;
     }
+    styleNode = null;
+    styleStack.length = 0;
+    subCategoryNode = null;
+    specialStyleNode = null;
+    familiarNode = null;
     stage = 3;
     renderQuiz();
     return;
   }
-  if(stage === 3){
+if(stage === 3){
     const sub = subClassQuestions[currentLang][currentResult.class];
     const val = document.querySelector('input[name="subclass"]:checked');
     if(!val) return;
     currentResult.subclass = val.value;
+    styleNode = null;
+    styleStack.length = 0;
+    specialStyleNode = null;
+    subCategoryNode = null;
+    familiarNode = null;
     if(subCategoryQuiz && subCategoryQuiz[currentLang] && subCategoryQuiz[currentLang][currentResult.class]){
       subCategoryNode = subCategoryQuiz[currentLang][currentResult.class];
       stage = 4;
