@@ -743,17 +743,17 @@ window.familiarQuiz = window.familiarQuiz || { pt: familiarPT, en: familiarEN };
 
 const specialStylePT = {
   Ranger: {
-    question: 'Queres misturar magia natural ao teu modo de lutar?',
+    question: 'Como usas as tuas habilidades naturais?',
     options: {
-      Yes: 'Sim, quero golpes guiados pela natureza',
-      No: 'Prefiro manter o combate tradicional'
+      Yes: 'Tenho uma ligação mágica com a natureza.',
+      No: 'Sou um caçador ágil e prático.'
     }
   },
   Paladin: {
-    question: 'Queres envolver a tua fé em cada ataque?',
+    question: 'Qual é a origem do teu poder sagrado?',
     options: {
-      Yes: 'Sim, desejo lutar com poder abençoado',
-      No: 'Prefiro confiar apenas na minha técnica'
+      Yes: 'A minha fé oferece-me proteção divina.',
+      No: 'O meu estilo de combate define-me.'
     }
   }
 };
