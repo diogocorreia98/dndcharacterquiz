@@ -19,6 +19,43 @@ const step3pt = {
     'Strength + Charisma': ['Entertainer','Noble'],
     'Wisdom + Strength': ['Farmer','Guard','Sailor'],
     'Intelligence': ['Acolyte','Artisan','Criminal','Guard','Merchant','Noble','Sage','Scribe']
+  },
+  branches: {
+    Intelligence: {
+      question: 'Que caminho marcou mais o teu passado?',
+      options: {
+        A: { label: 'Estudo ou f\u00e9.', list: ['Acolyte','Sage','Scribe'] },
+        B: { label: 'Trabalho ou vida mundana.', list: ['Artisan','Criminal','Guard','Merchant','Noble'] }
+      }
+    },
+    Dexterity: {
+      question: 'Como usas a tua agilidade?',
+      options: {
+        A: { label: 'Furtividade e truques.', list: ['Charlatan','Criminal','Wayfarer'] },
+        B: { label: 'Of\u00edcio ou explora\u00e7\u00e3o.', list: ['Artisan','Entertainer','Guide','Sailor','Scribe','Soldier'] }
+      }
+    },
+    Strength: {
+      question: 'De onde vem a tua for\u00e7a?',
+      options: {
+        A: { label: 'Trabalho duro e combate.', list: ['Farmer','Guard','Sailor','Soldier','Artisan'] },
+        B: { label: 'Performance ou nobreza.', list: ['Entertainer','Noble'] }
+      }
+    },
+    Charisma: {
+      question: 'Como influencias os outros?',
+      options: {
+        A: { label: 'Carisma e espet\u00e1culo.', list: ['Charlatan','Entertainer','Merchant','Noble','Wayfarer'] },
+        B: { label: 'Convic\u00e7\u00e3o ou isolamento.', list: ['Acolyte','Hermit'] }
+      }
+    },
+    Wisdom: {
+      question: 'O que guia os teus instintos?',
+      options: {
+        A: { label: 'F\u00e9 ou estudo.', list: ['Acolyte','Hermit','Sage','Scribe'] },
+        B: { label: 'Vida pr\u00e1tica ou viajante.', list: ['Farmer','Guard','Guide','Sailor','Wayfarer'] }
+      }
+    }
   }
 };
 
@@ -43,6 +80,43 @@ const step3en = {
     'Strength + Charisma': ['Entertainer','Noble'],
     'Wisdom + Strength': ['Farmer','Guard','Sailor'],
     'Intelligence': ['Acolyte','Artisan','Criminal','Guard','Merchant','Noble','Sage','Scribe']
+  },
+  branches: {
+    Intelligence: {
+      question: 'Which path shaped you more?',
+      options: {
+        A: { label: 'Study or faith.', list: ['Acolyte','Sage','Scribe'] },
+        B: { label: 'Trade or worldly life.', list: ['Artisan','Criminal','Guard','Merchant','Noble'] }
+      }
+    },
+    Dexterity: {
+      question: 'How do you use your agility?',
+      options: {
+        A: { label: 'Stealth and trickery.', list: ['Charlatan','Criminal','Wayfarer'] },
+        B: { label: 'Craft or exploration.', list: ['Artisan','Entertainer','Guide','Sailor','Scribe','Soldier'] }
+      }
+    },
+    Strength: {
+      question: 'Where does your strength come from?',
+      options: {
+        A: { label: 'Hard work and battle training.', list: ['Farmer','Guard','Sailor','Soldier','Artisan'] },
+        B: { label: 'Performance or noble upbringing.', list: ['Entertainer','Noble'] }
+      }
+    },
+    Charisma: {
+      question: 'How do you sway others?',
+      options: {
+        A: { label: 'Charm and showmanship.', list: ['Charlatan','Entertainer','Merchant','Noble','Wayfarer'] },
+        B: { label: 'Conviction or solitude.', list: ['Acolyte','Hermit'] }
+      }
+    },
+    Wisdom: {
+      question: 'What guides your instincts?',
+      options: {
+        A: { label: 'Faith or scholarship.', list: ['Acolyte','Hermit','Sage','Scribe'] },
+        B: { label: 'Hands-on or wandering life.', list: ['Farmer','Guard','Guide','Sailor','Wayfarer'] }
+      }
+    }
   }
 };
 

@@ -57,6 +57,7 @@ const styleStack = [];
 let subCategoryNode = null;
 let familiarNode = null;
 let specialStyleNode = null;
+let bgBranch = null;
 
 function renderQuiz() {
   const locale = data[currentLang];
@@ -184,6 +185,7 @@ function renderQuiz() {
         html += '</section>';
         submitBtn.textContent = currentLang === 'pt' ? 'Avançar' : 'Next';
       } else {
+        bgBranch = null;
         stage = 5;
         renderQuiz();
         return;
@@ -192,16 +194,31 @@ function renderQuiz() {
   } else if(stage === 5){
     const step = locale.step3;
     const key = canonicalAbility(currentResult.style);
-    const list = step.combos[key] || [];
-    html += `<h2>${step.title}</h2>`;
-    html += `<section><p>${step.question}</p>`;
-    list.forEach((bg, i) => {
-      const id = `bg_${i}`;
-      const desc = (bgDescriptions[currentLang] && bgDescriptions[currentLang][bg]) || strip(bg);
-      html += `<label><input type="radio" name="bg" value="${bg}" id="${id}"> ${desc}</label>`;
-    });
-    html += '</section>';
-    submitBtn.textContent = currentLang === 'pt' ? 'Concluir' : 'Finish';
+    if(step.branches && step.branches[key] && !bgBranch){
+      const branch = step.branches[key];
+      html += `<h2>${step.title}</h2>`;
+      html += `<section><p>${branch.question}</p>`;
+      for(const opt in branch.options){
+        const id = `branch_${opt}`;
+        html += `<label><input type="radio" name="bgbranch" value="${opt}" id="${id}"> ${strip(branch.options[opt].label)}</label>`;
+      }
+      html += '</section>';
+      submitBtn.textContent = currentLang === 'pt' ? 'Avançar' : 'Next';
+    } else {
+      let list = step.combos[key] || [];
+      if(step.branches && step.branches[key] && bgBranch){
+        list = step.branches[key].options[bgBranch].list || list;
+      }
+      html += `<h2>${step.title}</h2>`;
+      html += `<section><p>${step.question}</p>`;
+      list.forEach((bg, i) => {
+        const id = `bg_${i}`;
+        const desc = (bgDescriptions[currentLang] && bgDescriptions[currentLang][bg]) || strip(bg);
+        html += `<label><input type="radio" name="bg" value="${bg}" id="${id}"> ${desc}</label>`;
+      });
+      html += '</section>';
+      submitBtn.textContent = currentLang === 'pt' ? 'Concluir' : 'Finish';
+    }
   }
   quizDiv.innerHTML = html;
   window.scrollTo(0,0);
@@ -538,6 +555,7 @@ if(stage === 3){
       stage = 4;
       renderQuiz();
     } else {
+      bgBranch = null;
       stage = 5;
       renderQuiz();
     }
@@ -568,6 +586,7 @@ if(stage === 3){
         return;
       }
       styleStack.length = 0;
+      bgBranch = null;
       stage = 5;
       renderQuiz();
       return;
@@ -623,6 +642,7 @@ if(stage === 3){
             : 'Divine Order';
         }
         styleNode = null;
+        bgBranch = null;
         stage = 5;
         renderQuiz();
       }
@@ -630,6 +650,15 @@ if(stage === 3){
     }
   }
   if(stage === 5){
+    const step = data[currentLang].step3;
+    const key = canonicalAbility(currentResult.style);
+    if(step.branches && step.branches[key] && !bgBranch){
+      const bval = document.querySelector('input[name="bgbranch"]:checked');
+      if(!bval) return;
+      bgBranch = bval.value;
+      renderQuiz();
+      return;
+    }
     const val = document.querySelector('input[name="bg"]:checked');
     if(!val) return;
     const background = val.value;
@@ -748,6 +777,13 @@ backBtn.addEventListener('click', () => {
     return;
   }
   if(stage === 5){
+    const step = data[currentLang].step3;
+    const key = canonicalAbility(currentResult.style);
+    if(step.branches && step.branches[key] && bgBranch){
+      bgBranch = null;
+      renderQuiz();
+      return;
+    }
     stage = 4;
     renderQuiz();
     return;
@@ -783,6 +819,7 @@ function restartQuiz(){
   subCategoryNode = null;
   familiarNode = null;
   specialStyleNode = null;
+  bgBranch = null;
   subQuestionSpecies = null;
   renderQuiz();
 }
