@@ -481,7 +481,7 @@ submitBtn.addEventListener('click', async () => {
     renderQuiz();
     return;
   }
-  if(stage === 3){
+if(stage === 3){
     const sub = subClassQuestions[currentLang][currentResult.class];
     const val = document.querySelector('input[name="subclass"]:checked');
     if(!val) return;
