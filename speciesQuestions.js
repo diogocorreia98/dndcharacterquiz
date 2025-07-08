@@ -99,16 +99,27 @@ const step1pt = {
           D: { label: 'Alta – Acima da altura comum de um humano como um estandarte de guerra ou um armário de armas.', next: {
             question: 'Escolhe a descrição que melhor se adequa:',
             options: {
-              A: { label: 'Cabeça de dragão com sopro elemental.', result: 'Dragonborn' },
-              B: { label: 'Rosto de lagarto com cauda e crista.', result: 'Lizardfolk' },
-              C: { label: 'Postura ereta com traços de cobra.', result: 'Yuan-ti' },
-              D: { label: 'Guerreiro tribal alto de presas.', result: 'Orc' },
-              E: { label: 'Cabeça de touro, com chifres e cascos mas tronco humano.', result: 'Minotaur' },
-              F: { label: 'Pernas de cabra, cornos, alegria musical.', result: 'Satyr' },
-              G: { label: 'Guerreiro pálido de traços afiados.', result: 'Githyanki' },
-              H: { label: 'Calmo, de pele amarelada-esverdeada.', result: 'Githzerai' },
-              I: { label: 'Ser vegetal andante com pele de casca.', result: 'Mandrake' },
-              J: { label: 'Elfo com aparência sazonal mutável.', result: 'Eladrin' }
+              A: { label: 'Traços reptilianos ou mamíferos', next: {
+                question: 'Qual descrição se encaixa melhor?',
+                options: {
+                  A: { label: 'Cabeça de dragão com sopro elemental.', result: 'Dragonborn' },
+                  B: { label: 'Rosto de lagarto com cauda e crista.', result: 'Lizardfolk' },
+                  C: { label: 'Postura ereta com traços de cobra.', result: 'Yuan-ti' },
+                  D: { label: 'Cabeça de touro, com chifres e cascos mas tronco humano.', result: 'Minotaur' },
+                  E: { label: 'Pernas de cabra, cornos, alegria musical.', result: 'Satyr' },
+                
+                }
+              }},
+              B: { label: 'Guerreiros ancestrais ou seres florestais', next: {
+                question: 'Qual descrição se encaixa melhor?',
+                options: {
+                  A: { label: 'Guerreiro tribal alto de presas.', result: 'Orc' },
+                  B: { label: 'Guerreiro pálido de traços afiados.', result: 'Githyanki' },
+                  C: { label: 'Calmo, de pele amarelada-esverdeada.', result: 'Githzerai' },
+                  D: { label: 'Ser vegetal andante com pele de casca.', result: 'Mandrake' },
+                  E: { label: 'Elfo com aparência sazonal mutável.', result: 'Eladrin' }
+                }
+              }},
             }
           }},
           E: { label: 'Muito Alta – Tão alta como uma carroça empilhada ou uma estante de uma biblioteca arcana.', next: {
@@ -223,21 +234,40 @@ const step1en = {
               }}
             }
           }},
-          D: { label: 'Tall – taller than a typical human, like a war banner or weapons rack', next: {
-            question: 'Choose the description that fits best:',
-            options: {
-              A: { label: 'Dragon head with elemental breath.', result: 'Dragonborn' },
-              B: { label: 'Lizard face with tail and frill.', result: 'Lizardfolk' },
-              C: { label: 'Upright with serpent features.', result: 'Yuan-ti' },
-              D: { label: 'Tall tribal warrior with tusks.', result: 'Orc' },
-              E: { label: 'Bull head with horns and hooves but human torso.', result: 'Minotaur' },
-              F: { label: 'Goat legs, horns, musical joy.', result: 'Satyr' },
-              G: { label: 'Pale warrior with sharp features.', result: 'Githyanki' },
-              H: { label: 'Calm with yellow‑green skin.', result: 'Githzerai' },
-              I: { label: 'Walking plant creature with bark skin.', result: 'Mandrake' },
-              J: { label: 'Elf whose look changes with the seasons.', result: 'Eladrin' }
-            }
-          }},
+            D: {
+              label: 'Tall – Taller than a typical human, like a war banner or a walking arsenal.',
+              next: {
+                question: 'Choose the description that fits best:',
+                options: {
+                  A: {
+                    label: 'Reptilian or mammalian traits',
+                    next: {
+                      question: 'Which description fits best?',
+                      options: {
+                        A: { label: 'Dragon head with elemental breath.', result: 'Dragonborn' },
+                        B: { label: 'Lizard face with tail and crest.', result: 'Lizardfolk' },
+                        C: { label: 'Upright posture with snake-like features.', result: 'Yuan-ti' },
+                        D: { label: 'Bull’s head with horns and hooves, but human torso.', result: 'Minotaur' },
+                        E: { label: 'Goat legs, horns, joyful and musical nature.', result: 'Satyr' },
+                      }
+                    }
+                  },
+                  B: {
+                    label: 'Ancestral warriors or forest beings',
+                    next: {
+                      question: 'Which description fits best?',
+                      options: {
+                        A: { label: 'Tall tribal warrior with tusks.', result: 'Orc' },
+                        B: { label: 'Pale warrior with sharp features.', result: 'Githyanki' },
+                        C: { label: 'Calm, with yellow-greenish skin.', result: 'Githzerai' },
+                        D: { label: 'Walking plant creature with bark-like skin.', result: 'Mandrake' },
+                        E: { label: 'Elf with changeable seasonal appearance.', result: 'Eladrin' }
+                      }
+                    }
+                  }
+                }
+              }
+            },
           E: { label: 'Very Tall – as tall as a stacked wagon or a library shelf', next: {
             question: 'Choose the description that fits best:',
             options: {
