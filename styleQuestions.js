@@ -709,30 +709,83 @@ const subCategoryEN = {
 const familiarPT = {
   question: 'Que tipo de companheiro mágico te segue?',
   options: {
-    Imp: 'Um diabrete travesso de asas escuras',
-    Pseudodragon: 'Um pequeno dragão de escamas cintilantes',
-    Quasit: 'Criatura diminuta de garras e risos sinistros',
-    Skeleton: 'Esqueleto obediente que nunca se cansa',
-    'Slaad Tadpole': 'Girino estranho de olhos curiosos',
-    'Sphinx of Wonder': 'Miniatura de esfinge que guarda enigmas',
-    Sprite: 'Fada luminosa de voo gracioso',
-    'Venomous Snake': 'Serpente elegante de olhar hipnótico'
+    A: {
+        label: "Uma criatura mística ou venenosa.",
+        next: {
+          question: "Que criatura preferes como companheiro mágico?",
+          options: {
+            Imp: 'Um diabrete travesso de asas escuras',
+            Pseudodragon: 'Um pequeno dragão de escamas cintilantes',
+            Quasit: 'Criatura diminuta de garras e risos sinistros',
+            Skeleton: 'Esqueleto obediente que nunca se cansa',
+            'Slaad Tadpole': 'Girino estranho de olhos curiosos',
+            'Sphinx of Wonder': 'Miniatura de esfinge que guarda enigmas',
+            Sprite: 'Fada luminosa de voo gracioso',
+            'Venomous Snake': 'Serpente elegante de olhar hipnótico'
+  }}
+},
+B: {
+        label: "Um animal.",
+        next: {
+          question: "Que animal preferes como companheiro mágico?",
+          options: {
+            Bat: 'Um morcego',
+            Cat: 'Um gato',
+            Frog: 'Um sapo',
+            Hawk: 'Um gavião',
+            Lizard: 'Um lagarto',
+            Octopus: 'Um polvo',
+            Owl: 'Um mocho',
+            Rat: 'Um rato',
+            Raven: 'Um corvo',
+            Spider: 'Uma aranha',
+            Weasel: 'Uma doninha'
+
+  }}
+},
+}};
+
+const familiarEN = {
+  question: 'What kind of magical companion follows you?',
+  options: {
+    A: {
+      label: "A mystical or venomous creature.",
+      next: {
+        question: "Which creature do you prefer as a magical companion?",
+        options: {
+          Imp: 'A mischievous imp with dark wings',
+          Pseudodragon: 'A tiny dragon with shimmering scales',
+          Quasit: 'A small clawed creature with sinister giggles',
+          Skeleton: 'An obedient skeleton that never tires',
+          'Slaad Tadpole': 'A strange tadpole with curious eyes',
+          'Sphinx of Wonder': 'A miniature sphinx guarding riddles',
+          Sprite: 'A glowing fairy with graceful flight',
+          'Venomous Snake': 'An elegant serpent with a hypnotic gaze'
+        }
+      }
+    },
+    B: {
+      label: "An animal.",
+      next: {
+        question: "Which animal do you prefer as a magical companion?",
+        options: {
+          Bat: 'A bat',
+          Cat: 'A cat',
+          Frog: 'A frog',
+          Hawk: 'A hawk',
+          Lizard: 'A lizard',
+          Octopus: 'An octopus',
+          Owl: 'An owl',
+          Rat: 'A rat',
+          Raven: 'A raven',
+          Spider: 'A spider',
+          Weasel: 'A weasel'
+        }
+      }
+    }
   }
 };
 
-const familiarEN = {
-  question: 'Which magical companion follows you?',
-  options: {
-    Imp: 'A mischievous fiend with leathery wings',
-    Pseudodragon: 'A tiny dragon with shimmering scales',
-    Quasit: 'A small clawed creature that giggles wickedly',
-    Skeleton: 'An obedient skeleton that never tires',
-    'Slaad Tadpole': 'A curious tadpole with quick jumps',
-    'Sphinx of Wonder': 'A miniature sphinx whispering riddles',
-    Sprite: 'A glowing sprite fluttering with grace',
-    'Venomous Snake': 'A sleek serpent with a mesmerizing gaze'
-  }
-};
 
 window.subCategoryQuiz = window.subCategoryQuiz || {
   pt: subCategoryPT,
