@@ -728,3 +728,27 @@ window.subCategoryQuiz = window.subCategoryQuiz || {
 };
 
 window.familiarQuiz = window.familiarQuiz || { pt: familiarPT, en: familiarEN };
+
+const specialStylePT = {
+  Ranger: {
+    question: 'Vais escolher o estilo de combate Druidic Warrior?',
+    options: { Yes: 'Sim', No: 'Não' }
+  },
+  Paladin: {
+    question: 'Vais escolher o estilo de combate Blessed Warrior?',
+    options: { Yes: 'Sim', No: 'Não' }
+  }
+};
+
+const specialStyleEN = {
+  Ranger: {
+    question: 'Will you take the Druidic Warrior fighting style?',
+    options: { Yes: 'Yes', No: 'No' }
+  },
+  Paladin: {
+    question: 'Will you take the Blessed Warrior fighting style?',
+    options: { Yes: 'Yes', No: 'No' }
+  }
+};
+
+window.specialStyleQuiz = window.specialStyleQuiz || { pt: specialStylePT, en: specialStyleEN };
