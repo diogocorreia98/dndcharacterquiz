@@ -56,6 +56,7 @@ let styleNode = null;
 const styleStack = [];
 let subCategoryNode = null;
 let familiarNode = null;
+const familiarStack = [];
 let specialStyleNode = null;
 let bgBranch = null;
 
@@ -161,7 +162,9 @@ function renderQuiz() {
       html += `<section><p>${familiarNode.question}</p>`;
       for(const key in familiarNode.options){
         const id = `fam_${key.replace(/\s/g,'')}`;
-        html += `<label><input type="radio" name="familiar" value="${key}" id="${id}"> ${strip(familiarNode.options[key])}</label>`;
+        const opt = familiarNode.options[key];
+        const label = typeof opt === 'string' ? opt : opt.label;
+        html += `<label><input type="radio" name="familiar" value="${key}" id="${id}"> ${strip(label)}</label>`;
       }
       html += '</section>';
       submitBtn.textContent = currentLang === 'pt' ? 'Avançar' : 'Next';
@@ -223,7 +226,7 @@ function renderQuiz() {
   quizDiv.innerHTML = html;
   window.scrollTo(0,0);
   submitBtn.style.display = 'block';
-  backBtn.style.display = stage > 0 || speciesStack.length > 0 || subSpeciesNode || classStack.length > 0 || styleStack.length > 0 || subCategoryNode || familiarNode || specialStyleNode ? 'block' : 'none';
+  backBtn.style.display = stage > 0 || speciesStack.length > 0 || subSpeciesNode || classStack.length > 0 || styleStack.length > 0 || subCategoryNode || familiarNode || familiarStack.length > 0 || specialStyleNode ? 'block' : 'none';
   backBtn.textContent = currentLang === 'pt' ? 'Recuar' : 'Back';
   restartBtn.textContent = labels[currentLang].restart;
 }
@@ -279,6 +282,7 @@ langSelect.addEventListener('change', () => {
     specialStyleNode = null;
   }
   familiarNode = null;
+  familiarStack.length = 0;
   updateStaticText();
   renderQuiz();
 });
@@ -477,6 +481,7 @@ submitBtn.addEventListener('click', async () => {
         subCategoryNode = null;
         specialStyleNode = null;
         familiarNode = null;
+        familiarStack.length = 0;
         stage = 3;
         renderQuiz();
         return;
@@ -522,6 +527,7 @@ submitBtn.addEventListener('click', async () => {
     subCategoryNode = null;
     specialStyleNode = null;
     familiarNode = null;
+    familiarStack.length = 0;
     stage = 3;
     renderQuiz();
     return;
@@ -536,6 +542,7 @@ if(stage === 3){
     specialStyleNode = null;
     subCategoryNode = null;
     familiarNode = null;
+    familiarStack.length = 0;
     if(subCategoryQuiz && subCategoryQuiz[currentLang] && subCategoryQuiz[currentLang][currentResult.class]){
       subCategoryNode = subCategoryQuiz[currentLang][currentResult.class];
       stage = 4;
@@ -570,6 +577,7 @@ if(stage === 3){
       subCategoryNode = null;
       if(currentResult.subcategory === 'Pact of the Chain' && familiarQuiz){
         familiarNode = familiarQuiz[currentLang];
+        familiarStack.length = 0;
         renderQuiz();
         return;
       }
@@ -610,8 +618,16 @@ if(stage === 3){
     if(familiarNode){
       const val = document.querySelector('input[name="familiar"]:checked');
       if(!val) return;
+      const choice = familiarNode.options[val.value];
+      if(choice && choice.next){
+        familiarStack.push(familiarNode);
+        familiarNode = choice.next;
+        renderQuiz();
+        return;
+      }
       currentResult.familiar = val.value;
       familiarNode = null;
+      familiarStack.length = 0;
       const styleRoot = getStyleRoot();
       if(styleRoot){
         styleNode = styleRoot;
@@ -727,8 +743,12 @@ backBtn.addEventListener('click', () => {
   }
   if(stage === 4){
     if(familiarNode){
-      familiarNode = null;
-      subCategoryNode = subCategoryQuiz[currentLang][currentResult.class];
+      if(familiarStack.length > 0){
+        familiarNode = familiarStack.pop();
+      } else {
+        familiarNode = null;
+        subCategoryNode = subCategoryQuiz[currentLang][currentResult.class];
+      }
       renderQuiz();
       return;
     }
@@ -818,6 +838,7 @@ function restartQuiz(){
   styleStack.length = 0;
   subCategoryNode = null;
   familiarNode = null;
+  familiarStack.length = 0;
   specialStyleNode = null;
   bgBranch = null;
   subQuestionSpecies = null;
