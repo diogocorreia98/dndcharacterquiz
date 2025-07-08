@@ -304,7 +304,24 @@ function getStyleRoot(){
     if(quiz[key]) return quiz[key];
     if(currentResult.class === 'Rogue' && quiz['Other Subclass Rogue']) return quiz['Other Subclass Rogue'];
   }
-  return quiz[currentResult.class] || null;
+  const base = quiz[currentResult.class];
+  if(!base) return null;
+  if(currentResult.subcategory){
+    switch(currentResult.class){
+      case 'Cleric':
+        if(currentResult.subcategory === 'Protector') return base.options.A.next;
+        if(currentResult.subcategory === 'Thaumaturge') return base.options.B.next;
+        break;
+      case 'Druid':
+        if(currentResult.subcategory === 'Warden') return base.options.A.next;
+        if(currentResult.subcategory === 'Magician') return base.options.B.next;
+        break;
+      case 'Warlock':
+        if(currentResult.subcategory === 'Pact of the Blade') return base.options.A.next;
+        return base.options.B.next;
+    }
+  }
+  return base;
 }
 
 function canonicalAbility(str){
