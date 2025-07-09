@@ -1,5 +1,5 @@
 const step1pt = {
-  title: 'Que espécie gostarias de jogar?',
+  title: 'Que espécie é a tua personagem?',
   tree: {
     question: 'Qual é a altura da tua personagem?',
     options: {
@@ -333,7 +333,7 @@ const step1pt = {
 };
 
 const step1en = {
-  title: 'What species would you like to play?',
+  title: 'Which species is your character?',
   tree: {
     question: 'How tall is your character?',
     options: {
@@ -668,193 +668,195 @@ const step1en = {
 
 const subQuestionsEN = {
   Elf: {
-    question: 'What kind of elf are you?',
+    question: 'What kind of elf is the character?',
     options: {
-      'High Elf': 'Elegant and refined, with a natural gift for arcane magic.',
-      'Wood Elf': 'Stealthy and swift, blending easily into natural environments.',
-      'Drow Elf': 'Dark-skinned and silver-haired, with keen senses and innate magic from the Underdark.'
+      'High Elf': 'Graceful and learned, with an innate gift for arcane magic and ancient knowledge.',
+      'Wood Elf': 'Swift and stealthy, in tune with the forest and able to vanish into the wild.',
+      'Drow Elf': 'Skin dark as night, hair like silver; enchants with shadow magic and razor-sharp senses.'
     }
   },
   Genasi: {
-    question: 'Which element flows through your body?',
+    question: 'What is the character’s elemental essence?',
     options: {
-      'Air Genasi': 'Light-footed and fast, with wind ever at your back.',
-      'Earth Genasi': 'Stone-skinned and solid, steady even in rough terrain.',
-      'Fire Genasi': 'Glowing and warm, with a fiery aura and searing touch.',
-      'Water Genasi': 'Flowing and fluid, able to breathe underwater and swim with ease.'
+      'Air Genasi': 'Light as the breeze, moves with effortless speed and breathes freedom.',
+      'Earth Genasi': 'Solid and unshakable, with stone-like skin and an unstoppable stride.',
+      'Fire Genasi': 'Fiery and impulsive, radiates heat and burns with a blazing touch.',
+      'Water Genasi': 'Fluid and adaptable, breathes underwater and flows with grace.'
     }
   },
   'Geppettin (Plushie or Bisque)': {
-    question: 'What kind of living toy are you?',
+    question: 'What kind of living toy is the character?',
     options: {
-      'Bisque Geppettin': 'A porcelain doll with magical elegance and vintage charm.',
-      'Plushie Geppettin': 'A soft and cuddly stuffed toy with surprising resilience.'
+      'Bisque Geppettin': 'A porcelain doll with timeless elegance and a magical presence.',
+      'Plushie Geppettin': 'A cuddly plush doll, adorable yet surprisingly resilient.'
     }
   },
   Gnome: {
-    question: 'What type of gnome are you?',
+    question: 'What kind of gnome is the character?',
     options: {
-      'Forest Gnome': 'Connected to nature and animals, with illusions and empathy.',
-      'Rock Gnome': 'Tinkering inventor who crafts tiny mechanical gadgets for fun or utility.'
+      'Forest Gnome': 'Connected to nature and animals, skilled in illusions and empathy.',
+      'Rock Gnome': 'Inventive and curious, builds magical trinkets with joy and cleverness.'
     }
   },
   Goliath: {
-    question: 'What kind of giant blood flows through you?',
+    question: 'What trait has the character inherited from the giants?',
     options: {
-      'Hill Goliath': 'Broad and brutal, shoving enemies aside with pure power.',
-      'Stone Goliath': 'Solid as a rock, resisting damage with stoic might.',
-      'Frost Goliath': 'Cold and unyielding, numbing foes with chilling strength.',
-      'Fire Goliath': 'Radiating heat and striking with burning fury.',
-      'Cloud Goliath': 'Graceful and elusive, moving like mist and evading harm.',
-      'Storm Goliath': 'Crackling with energy, calling thunder and lightning to your side.'
+      'Hill Goliath': 'As strong as an avalanche, knocks smaller foes down with brute force.',
+      'Stone Goliath': 'Tough as granite, shrugs off harm with stoic endurance.',
+      'Frost Goliath': 'Cold and relentless, slows enemies with a freezing blow.',
+      'Fire Goliath': 'Burns from within, adding fire to every furious strike.',
+      'Cloud Goliath': 'Elusive as mist, vanishes in a blink and slips away from harm.',
+      'Storm Goliath': 'Crackling with thunder, strikes back with the roar of the storm.'
     }
   },
   Mandrake: {
-    question: 'What season were you harvested in?',
+    question: 'What seasonal power does the character embody?',
     options: {
-      'Spring Mandrake': 'Your vines gently bring flying foes to the ground.',
-      'Summer Mandrake': 'You reposition enemies with powerful, directed vines.',
-      'Autumn Mandrake': 'You entangle more than one creature in a single burst.',
-      'Winter Mandrake': 'Your vines deal a blast of chilling damage.'
+      'Spring Mandrake': 'Its vines drag flying foes from the sky to the earth.',
+      'Summer Mandrake': 'Pulls enemies closer with forceful, vine-wrapped fury.',
+      'Autumn Mandrake': 'Entangles multiple foes at once in a burst of foliage.',
+      'Winter Mandrake': 'Its vines unleash a chilling blast of frost and ice.'
     }
   },
   Eladrin: {
-    question: 'Which season best reflects your nature?',
+    question: 'What power awakens when the character teleports?',
     options: {
-      'Spring Eladrin': 'Your Fey Step can teleport an ally instead of you.',
-      'Summer Eladrin': 'Your Fey Step burns foes around you.',
-      'Autumn Eladrin': 'Your Fey Step charms nearby creatures.',
-      'Winter Eladrin': 'Your Fey Step frightens a nearby enemy.'
+      'Spring Eladrin': 'Teleports an ally along when shifting between realms.',
+      'Summer Eladrin': 'Radiates searing heat that scorches nearby enemies.',
+      'Autumn Eladrin': 'Charms nearby creatures with autumnal grace.',
+      'Winter Eladrin': 'Instills deep fear in a foe upon appearing.'
     }
   },
   Shifter: {
-    question: 'What animalistic trait emerges when you shift?',
+    question: 'What primal trait emerges when the character shifts?',
     options: {
-      'Beasthide Shifter': 'Tough and sturdy, shrugging off blows with a beast\u2019s hide.',
-      'Longtooth Shifter': 'Ferocious and wild, tearing into foes with elongated fangs.',
-      'Swiftstride Shifter': 'Fast and reactive, darting around opponents like a wildcat.',
-      'Wildhunt Shifter': 'Instinctive and alert, never surprised and always tracking.'
+      'Beasthide Shifter': 'Thick and powerful, absorbs blows with beastly hide.',
+      'Longtooth Shifter': 'Savage and instinctual, tears foes apart with elongated fangs.',
+      'Swiftstride Shifter': 'Agile and evasive, glides around enemies like a feline.',
+      'Wildhunt Shifter': 'Watchful and unyielding, sees the unseen and tracks without fail.'
     }
   },
   Tiefling: {
-    question: 'What kind of fiendish ancestry do you bear?',
+    question: 'What infernal lineage shapes the character’s blood?',
     options: {
-      'Abyssal Tiefling': 'Chaotic and explosive, born of demons and destruction.',
-      'Infernal Tiefling': 'Ordered and ruthless, touched by the flames of Hell.',
-      'Chthonic Tiefling': 'Eerie and necrotic, rooted in death and shadowy power.'
+      'Abyssal Tiefling': 'Chaotic and destructive, a descendant of demons and raw ruin.',
+      'Infernal Tiefling': 'Disciplined and relentless, touched by the ordered fire of Hell.',
+      'Chthonic Tiefling': 'Dark and necromantic, bound to death and the power of shadow.'
     }
   },
   Dragonborn: {
-    question: 'Which type of dragon is your ancestor?',
+    question: 'What kind of dragon does the character descend from?',
     options: {
-      'Black Dragonborn': 'Tough and acidic, exhaling streams of burning acid.',
-      'Blue Dragonborn': 'Proud and fierce, breathing blasts of lightning.',
-      'Brass Dragonborn': 'Talkative and fiery, using fire breath with charm.',
-      'Bronze Dragonborn': 'Loyal and noble, breathing controlled lightning.',
-      'Copper Dragonborn': 'Trickster and agile, breathing acidic spray.',
-      'Gold Dragonborn': 'Wise and regal, releasing mighty fire blasts.',
-      'Green Dragonborn': 'Cunning and dangerous, exhaling poison.',
-      'Red Dragonborn': 'Bold and aggressive, with the fiercest fire breath.',
-      'Silver Dragonborn': 'Kind and strong, breathing cold to slow enemies.',
-      'White Dragonborn': 'Savage and primal, exhaling icy frost at foes.'
+      'Black Dragonborn': 'Corrosive and menacing, breathes a stream of searing acid.',
+      'Blue Dragonborn': 'Proud and fierce, unleashes bolts of lightning.',
+      'Brass Dragonborn': 'Talkative and fiery, breathes flames with charm and wit.',
+      'Bronze Dragonborn': 'Loyal and noble, exhales controlled blasts of lightning.',
+      'Copper Dragonborn': 'Playful and nimble, sprays acid with a mischievous grin.',
+      'Gold Dragonborn': 'Regal and wise, incinerates foes with radiant fire.',
+      'Green Dragonborn': 'Cunning and poisonous, exhales toxic fumes and deceit.',
+      'Red Dragonborn': 'Bold and ruthless, wields the fiercest fire of all.',
+      'Silver Dragonborn': 'Kind yet mighty, breathes cold that slows and subdues.',
+      'White Dragonborn': 'Wild and primal, exhales frost in savage bursts.'
     }
   }
 };
 
+
 const subQuestionsPT = {
   Elf: {
-    question: 'Que tipo de elfo és?',
+    question: 'Que tipo de elfo é a personagem?',
     options: {
-      'High Elf': 'Elegante e refinado, com talento natural para magia arcana.',
-      'Wood Elf': 'Discreto e ágil, move-se facilmente pelos ambientes naturais.',
-      'Drow Elf': 'Pele escura e cabelo prateado, com sentidos aguçados e magia inata do Subterrâneo.'
+      'High Elf': 'Graciosa e culta, com um dom inato para a magia arcana e a erudição antiga.',
+      'Wood Elf': 'Ágil e furtiva, vive em harmonia com a floresta e move-se sem deixar rasto.',
+      'Drow Elf': 'Pele escura como a noite e cabelo prateado; enfeitiça com poder sombrio e sentidos aguçados.'
     }
   },
   Genasi: {
-    question: 'Que elemento corre no teu corpo?',
+    question: 'Qual é a essência elemental da personagem?',
     options: {
-      'Air Genasi': 'Ligeiro e rápido, com o vento sempre a favor.',
-      'Earth Genasi': 'Pele de pedra e firmeza, resiste mesmo em terreno difícil.',
-      'Fire Genasi': 'Brilhante e quente, com aura ardente e toque abrasador.',
-      'Water Genasi': 'Fluido e flexível, respira debaixo de água e nada com facilidade.'
+      'Air Genasi': 'Leve como o vento, move-se com graça veloz e respira liberdade.',
+      'Earth Genasi': 'Firme e inabalável, de pele pétrea e passo imperturbável.',
+      'Fire Genasi': 'Ardente e impetuosa, irradia calor e destrói com um toque flamejante.',
+      'Water Genasi': 'Fluída e adaptável, respira debaixo de água e funde-se com os rios.'
     }
   },
   'Geppettin (Plushie or Bisque)': {
-    question: 'Que tipo de brinquedo vivo és?',
+    question: 'Que tipo de brinquedo vivo é a personagem?',
     options: {
-      'Bisque Geppettin': 'Boneca de porcelana com charme antigo e magia elegante.',
-      'Plushie Geppettin': 'Boneco de peluche fofinho e surpreendentemente resistente.'
+      'Bisque Geppettin': 'Boneca de porcelana com elegância antiga e traços encantadores.',
+      'Plushie Geppettin': 'Boneco de peluche macio, adorável e surpreendentemente resiliente.'
     }
   },
   Gnome: {
-    question: 'Que tipo de gnomo és?',
+    question: 'Que tipo de gnomo é a personagem?',
     options: {
-      'Forest Gnome': 'Ligado à natureza e animais, com ilusões e empatia.',
-      'Rock Gnome': 'Inventor engenhocas que cria pequenas máquinas divertidas ou úteis.'
+      'Forest Gnome': 'Ligada ao mundo natural, entende os animais e domina ilusões subtis.',
+      'Rock Gnome': 'Inventiva e curiosa, cria engenhocas mágicas com alegria e engenho.'
     }
   },
   Goliath: {
-    question: 'Que traços carrega o teu sangue de gigante?',
+    question: 'Que traço ancestral herdou dos gigantes?',
     options: {
-      'Hill Goliath': 'Largo e bruto, empurrando inimigos com pura força.',
-      'Stone Goliath': 'Sólido como rocha, resiste a dano com vigor estoico.',
-      'Frost Goliath': 'Frio e inflexível, entorpece inimigos com força gélida.',
-      'Fire Goliath': 'Radiante de calor, ataca com fúria ardente.',
-      'Cloud Goliath': 'Gracioso e evasivo, move-se como névoa e evita dano.',
-      'Storm Goliath': 'Carregado de energia, retalio com o estrondo da trovoada.'
+      'Hill Goliath': 'Forte como uma avalanche, derruba os mais pequenos com pura força.',
+      'Stone Goliath': 'Dura como granito, resiste a golpes com serenidade monumental.',
+      'Frost Goliath': 'Gélida e implacável, abranda os inimigos com uma só pancada.',
+      'Fire Goliath': 'Arde por dentro, acrescentando fogo a cada ataque feroz.',
+      'Cloud Goliath': 'Ágil como névoa, desaparece num sopro e escapa ao perigo.',
+      'Storm Goliath': 'Treme com trovões interiores, devolvendo dano com estrondo celeste.'
     }
   },
   Mandrake: {
-    question: 'Que poder sazonal tens tu?',
+    question: 'Que poder cresce com a estação da personagem?',
     options: {
-      'Spring Mandrake': 'As tuas vinhas fazem cair inimigos voadores.',
-      'Summer Mandrake': 'Reposicionas inimigos com vinhas poderosas e diretas.',
-      'Autumn Mandrake': 'Prendes mais de uma criatura numa única explosão.',
-      'Winter Mandrake': 'As tuas vinhas lançam uma rajada de dano gelado.'
+      'Spring Mandrake': 'As suas vinhas derrubam inimigos que se elevam acima do chão.',
+      'Summer Mandrake': 'Puxa os inimigos para junto de si com força vigorosa.',
+      'Autumn Mandrake': 'Enreda vários inimigos de uma só vez numa explosão de folhagem.',
+      'Winter Mandrake': 'As suas vinhas libertam rajadas de frio cortante.'
     }
   },
   Eladrin: {
-    question: 'Que poder sazonal se ativa quando te teletransportas?',
+    question: 'Que poder se manifesta quando a personagem se transporta?',
     options: {
-      'Spring Eladrin': 'Teletransporto um aliado.',
-      'Summer Eladrin': 'Queimo inimigos ao redor.',
-      'Autumn Eladrin': 'Encanto criaturas próximas.',
-      'Winter Eladrin': 'Aterrorizo um inimigo.'
+      'Spring Eladrin': 'Leva consigo um aliado ao saltar entre planos.',
+      'Summer Eladrin': 'Liberta uma aura ardente que queima quem a rodeia.',
+      'Autumn Eladrin': 'Cativa os corações à sua volta com encanto outonal.',
+      'Winter Eladrin': 'Inspira medo profundo num inimigo ao surgir do vazio.'
     }
   },
   Shifter: {
-    question: 'Que traço animal surge quando te transformas?',
+    question: 'Que traço selvagem desperta na transformação da personagem?',
     options: {
-      'Beasthide Shifter': 'Robusto e resistente, ignorando golpes com pele bestial.',
-      'Longtooth Shifter': 'Feroz e selvagem, rasga inimigos com presas alongadas.',
-      'Swiftstride Shifter': 'Rápido e reativo, contorna adversários como um felino.',
-      'Wildhunt Shifter': 'Instintivo e atento, nunca surpreendido e sempre em perseguição.'
+      'Beasthide Shifter': 'Densa e musculada, aguenta feridas com a força de uma fera protegida.',
+      'Longtooth Shifter': 'Furiosa e instintiva, dilacera com presas como um predador alfa.',
+      'Swiftstride Shifter': 'Ágil e escorregadia, evita ataques e dança entre inimigos.',
+      'Wildhunt Shifter': 'Atenta e focada, vê o invisível e persegue sem ser surpreendida.'
     }
   },
   Tiefling: {
-    question: 'Que tipo de ascendência carregas?',
+    question: 'Que linhagem infernal corre no sangue da personagem?',
     options: {
-      'Abyssal Tiefling': 'Caótico e explosivo, descendente de demónios e destruição.',
-      'Infernal Tiefling': 'Ordenado e impiedoso, tocado pelas chamas do Inferno.',
-      'Chthonic Tiefling': 'Sombrio e necromântico, ligado à morte e ao poder das sombras.'
+      'Abyssal Tiefling': 'Caótica e destrutiva, herdeira do poder bruto dos demónios.',
+      'Infernal Tiefling': 'Calculista e ardente, moldada pelas chamas ordenadas do Inferno.',
+      'Chthonic Tiefling': 'Sombria e silenciosa, sintonizada com a morte e as forças do além.'
     }
   },
   Dragonborn: {
-    question: 'De que tipo de dragão descendes?',
+    question: 'De que tipo de dragão descende a personagem?',
     options: {
-      'Black Dragonborn': 'Resistente e ácido, exala jatos de ácido ardente.',
-      'Blue Dragonborn': 'Orgulhoso e feroz, lança rajadas de relâmpago.',
-      'Brass Dragonborn': 'Falador e fogoso, usa sopro de fogo com charme.',
-      'Bronze Dragonborn': 'Leal e nobre, exala relâmpagos controlados.',
-      'Copper Dragonborn': 'Brincalhão e ágil, cospe uma rajada de ácido.',
-      'Gold Dragonborn': 'Sábio e régio, liberta potentes rajadas de fogo.',
-      'Green Dragonborn': 'Astuto e perigoso, exala veneno.',
-      'Red Dragonborn': 'Ousado e agressivo, com o fogo mais intenso.',
-      'Silver Dragonborn': 'Bondoso e forte, exala frio para abrandar inimigos.',
-      'White Dragonborn': 'Selvagem e primitivo, solta ar gélido sobre os inimigos.'
+      'Black Dragonborn': 'Corrosiva e imponente, cospe ácido devastador.',
+      'Blue Dragonborn': 'Dominadora e elétrica, liberta raios com precisão letal.',
+      'Brass Dragonborn': 'Faladora e ardente, envolve o combate com chamas e charme.',
+      'Bronze Dragonborn': 'Nobre e destemida, lança relâmpagos para proteger os seus.',
+      'Copper Dragonborn': 'Brincalhona e ágil, desfere ácido com um sorriso trocista.',
+      'Gold Dragonborn': 'Majestosa e sábia, incinera com sopros dignos de reis.',
+      'Green Dragonborn': 'Persuasiva e venenosa, contamina o ar com palavras e veneno.',
+      'Red Dragonborn': 'Ardente e impiedosa, cospe fogo mais feroz que qualquer outro.',
+      'Silver Dragonborn': 'Gentil mas imponente, abranda inimigos com um sopro gélido.',
+      'White Dragonborn': 'Instintiva e selvagem, cobre os oponentes com geada implacável.'
     }
   }
 };
+
 
 // expose the sub-species data on the global object. Using a conditional
 // assignment prevents errors if this script is accidentally loaded more
