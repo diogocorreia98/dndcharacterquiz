@@ -121,41 +121,43 @@ const step3en = {
 };
 
 const bgDescriptionsPT = {
-  Acolyte: 'Conhecedor de tradições sagradas e serviço comunitário',
-  Artisan: 'Trabalhador manual habilidoso',
-  Charlatan: 'Mestre em enganar com astúcia',
-  Criminal: 'Habituado a agir nas sombras e longe da lei',
-  Entertainer: 'Vive do aplauso e sabe cativar o público',
-  Farmer: 'Fortalecido pela vida campestre e trabulho duro',
-  Guard: 'Treinado para vigiar e proteger',
-  Guide: 'Especialista em trilhos e regiões perigosas',
-  Hermit: 'Costuma viver em isolamento e reflexão',
-  Merchant: 'Negociante experiente em trocas',
-  Noble: 'Conhecedor de etiqueta e círculos de poder',
-  Sage: 'Dedicado ao estudo e à busca de conhecimento',
-  Sailor: 'Adaptado à vida entre embarcações e tabernas',
-  Scribe: 'Habituado a copiar e guardar textos',
-  Soldier: 'Treinado para combate organizado',
-  Wayfarer: 'Sobrevivente de rua que se move silenciosamente'
+  Acolyte: 'Serviste um templo com devoção e ganhaste acesso a magia divina básica e rituais sagrados.',
+  Artisan: 'Aprendeste um ofício artesanal e desenvolveste olho clínico e talento para criar objetos úteis.',
+  Charlatan: 'Consegues mentir com charme e mãos rápidas — és um mestre da fraude e manipulação social.',
+  Criminal: 'Sobrevivente furtivo das sombras urbanas, treinado para escapar, roubar e antecipar perigo.',
+  Entertainer: 'Brilhas em palco com talento físico ou musical e sabes como impressionar qualquer multidão.',
+  Farmer: 'Criado na terra e endurecido pelo esforço, és resiliente, prático e conheces bem a natureza.',
+  Guard: 'Vigilante treinado para manter a ordem, com sentidos aguçados e espírito de defesa.',
+  Guide: 'Explorador nato, habituado a ambientes selvagens e conhecedor de magia natural rudimentar.',
+  Hermit: 'Afastaste-te do mundo para refletir e curar — agora possuis sabedoria e habilidades médicas.',
+  Merchant: 'Especialista em viagens e negócios, sorte e persuasão estão do teu lado nas trocas comerciais.',
+  Noble: 'Nasceste entre privilégios e aprendeste a comandar, negociar e dominar jogos de influência.',
+  Sage: 'Passaste anos a estudar magia e história — o teu conhecimento é tão vasto quanto a tua curiosidade.',
+  Sailor: 'Viveste entre ondas e tabernas, és ágil, resistente e pronto para a luta em qualquer porto.',
+  Scribe: 'Trabalhas com precisão e detalhe, dominando tanto a palavra escrita como a observação cuidada.',
+  Soldier: 'Veterano de treino militar rigoroso, és forte, imponente e letal em campo de batalha.',
+  Wayfarer: 'Cresceste nas ruas, movendo-te sem ser visto — sabes sobreviver, infiltrar-te e manter esperança.'
 };
 
+
 const bgDescriptionsEN = {
-  Acolyte: 'Familiar with sacred rites and community duties',
-  Artisan: 'Skilled manual worker',
-  Charlatan: 'Expert at deceiving others',
-  Criminal: 'Used to acting from the shadows and outside the law',
-  Entertainer: 'Lives for applause and charming crowds',
-  Farmer: 'Toughness from a life of hard field work',
-  Guard: 'Trained to watch and protect',
-  Guide: 'Knows dangerous trails and wild regions',
-  Hermit: 'Accustomed to isolation and introspection',
-  Merchant: 'Seasoned in negotiation and trade',
-  Noble: 'Understands etiquette and circles of influence',
-  Sage: 'Devoted to study and knowledge',
-  Sailor: 'Adapted to life aboard ships and drinking at pubs',
-  Scribe: 'Works with copying and preserving texts',
-  Soldier: 'Trained for organized combat',
-  Wayfarer: 'Street survivor who moves unseen'
+  Acolyte: 'You served a temple with devotion, gaining sacred knowledge and minor divine magic.',
+  Artisan: 'You learned a craft, honing your skills to create useful gear and spot fine details.',
+  Charlatan: 'You lie with flair and act with sleight — a master of deception and social manipulation.',
+  Criminal: 'A sneaky survivor of the streets, trained in stealth, theft, and anticipating threats.',
+  Entertainer: 'You thrive on stage, dazzling with acrobatics or music and charming any audience.',
+  Farmer: 'Raised on the land, you’re tough, grounded, and deeply connected to nature’s rhythms.',
+  Guard: 'A vigilant defender trained to watch for danger and maintain order with sharp instincts.',
+  Guide: 'A wilderness expert, you know wild lands, walk unseen, and wield simple druidic magic.',
+  Hermit: 'You withdrew from society to reflect and heal — now you wield wisdom and medical skills.',
+  Merchant: 'A seasoned trader and traveler, your charm and luck make you excel in negotiation.',
+  Noble: 'Born to privilege, you learned to lead, persuade, and thrive in courts and politics.',
+  Sage: 'Years of study in ancient tomes granted you deep knowledge and a spark of arcane talent.',
+  Sailor: 'Hardened by the sea and the tavern, you’re nimble, perceptive, and brawl-ready anywhere.',
+  Scribe: 'You write with care and precision, skilled in research and spotting the smallest detail.',
+  Soldier: 'A disciplined warrior forged by military training, strong and fearless in organized combat.',
+  Wayfarer: 'You grew up on the streets, moving unseen and surviving with stealth, skill, and will.'
 };
+
 
 window.bgDescriptions = { pt: bgDescriptionsPT, en: bgDescriptionsEN };
