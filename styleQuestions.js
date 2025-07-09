@@ -624,28 +624,32 @@ const styleQuizEN = {
   "College of Glamour Bard": {
     question: "What is your greatest strength?",
     options: {
-      A: { label: "Striking presence and magic.", result: "Charisma" }
+      A: { label: "Striking presence and magic.", result: "Charisma" },
+      B: { label: "Magic and vitality.", result: "Charisma + Constitution" }
     }
   },
 
   "College of Lore Bard": {
     question: "What is your greatest strength?",
     options: {
-      A: { label: "Striking presence and magic.", result: "Charisma" }
+      A: { label: "Striking presence and magic.", result: "Charisma" },
+      B: { label: "Magic and vitality.", result: "Charisma + Constitution" }
     }
   },
 
   "College of Dance Bard": {
     question: "What is your style on stage and in battle?",
     options: {
-      A: { label: "Expressive and versatile.", result: "Charisma + Dexterity" }
+      A: { label: "Expressive and versatile.", result: "Charisma + Dexterity" },
+      B: { label: "Striking presence and magic.", result: "Charisma" }
     }
   },
 
   "College of Valor Bard": {
     question: "What is your style on stage and in battle?",
     options: {
-      A: { label: "Expressive and versatile.", result: "Charisma + Dexterity" }
+      A: { label: "Expressive and versatile.", result: "Charisma + Dexterity" },
+      B: { label: "Striking presence and magic.", result: "Charisma" }
     }
   }
 };
