@@ -196,7 +196,7 @@ const styleQuizPT = {
               result: "Charisma + Dexterity"
             },
             B: {
-              label: "Com fé inabalável e magia versátil.",
+              label: "Com carisma e magia versátil.",
               result: "Charisma"
             }
           }
@@ -289,35 +289,39 @@ const styleQuizPT = {
     question: "Como preferes resolver problemas?",
     options: {
       A: { label: "Com velocidade e reflexos.", result: "Dexterity" },
-      B: { label: "Com resistência e persistência.", result: "Dexterity + Constitution" }
+      B: { label: "Com resistência e agilidade.", result: "Dexterity + Constitution" }
     }
   },
 
   "College of Glamour Bard": {
     question: "Qual é o teu ponto forte?",
     options: {
-      A: { label: "Presença marcante e magia.", result: "Charisma" }
+      A: { label: "Presença marcante e magia.", result: "Charisma" },
+      B: { label: "Magia e vitalidade.", result: "Charisma + Constitution" }
     }
   },
 
   "College of Lore Bard": {
     question: "Qual é o teu ponto forte?",
     options: {
-      A: { label: "Presença marcante e magia.", result: "Charisma" }
+      A: { label: "Presença marcante e magia.", result: "Charisma" },
+      B: { label: "Magia e vitalidade.", result: "Charisma + Constitution" }
     }
   },
 
   "College of Dance Bard": {
     question: "Como é o teu estilo em palco e em combate?",
     options: {
-      A: { label: "Expressivo e versátil.", result: "Charisma + Dexterity" }
+      A: { label: "Mágico e veloz.", result: "Charisma + Dexterity" },
+      B: { label: "Presença marcante e magia.", result: "Charisma" }
     }
   },
 
   "College of Valor Bard": {
     question: "Como é o teu estilo em palco e em combate?",
     options: {
-      A: { label: "Expressivo e versátil.", result: "Charisma + Dexterity" }
+      A: { label: "Mágico e combativo.", result: "Charisma + Dexterity" },
+      B: { label: "Presença marcante e magia.", result: "Charisma" }
     }
   }
 };
@@ -672,7 +676,7 @@ const subCategoryPT = {
       'Pact of the Tome': 'Um tomo antigo cheio de mistérios',
       'Pact of the Chain': 'Uma corrente etérea que invoca uma criatura aliada',
       'Pact of the Blade': 'Uma arma consagrada ao teu patrono',
-      None: 'Prefiro um acordo simples, sem laços extras'
+      None: 'Prefiro um acordo com outros privilégios'
     }
   }
 };
@@ -701,7 +705,7 @@ const subCategoryEN = {
       'Pact of the Tome': 'An ancient tome filled with secrets',
       'Pact of the Chain': 'An ethereal chain granting a companion',
       'Pact of the Blade': 'A dedicated weapon channelling power',
-      None: 'I prefer a simpler deal without extra ties'
+      None: 'I prefer a deal with different privileges'
     }
   }
 };
