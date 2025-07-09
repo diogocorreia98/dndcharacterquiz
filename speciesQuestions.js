@@ -3,135 +3,331 @@ const step1pt = {
       tree: {
         question: 'Qual é a altura da tua personagem?',
         options: {
-          A: { label: 'Muito Baixa – Tão pequena como um banco de taverna ou uma mochila', next: {
-            question: 'Aspeto humanoide ou animalesco/inorgânico?',
-            options: {
-              A: { label: 'Humanoide', next: {
-                question: 'Qual descrição se encaixa melhor?',
-                options: {
-                  A: { label: 'Orelhas grandes, sorriso malandro e corpo esguio.', result: 'Goblin' },
-                  B: { label: 'Pequena e brilhante com asas de inseto.', result: 'Fairy' },
-                  C: { label: 'Pequeno gnomo de pele cinzenta e olhos grandes.', result: 'Deep Gnome' }
-                }
-              }},
-              B: { label: 'Animalesco ou inorgânico', next: {
-                question: 'Qual descrição se encaixa melhor?',
-                options: {
-                  A: { label: 'Pequeno, corcunda, parecido com um pássaro sem voo, com bico e penas.', result: 'Kenku' },
-                  B: { label: 'Escamas vermelhas, aspecto de lagarto, focinho de dragão.', result: 'Kobold' },
-                  C: { label: 'Semelhante a brinquedo — corpo de peluche ou porcelana.', result: 'Geppettin (Plushie or Bisque)' }
-                }
-              }}
+          A: {
+  label: 'Muito Baixa – Tão pequena como um banco de taverna ou uma mochila',
+  next: {
+    question: 'Aspeto humanoide ou animalesco/inorgânico?',
+    options: {
+      A: {
+        label: 'Humanoide',
+        next: {
+          question: 'Qual descrição se encaixa melhor?',
+          options: {
+            A: {
+              label: 'Orelhas pontiagudas, olhos travessos e pés ligeiros; escapa facilmente ao perigo e surpreende com ataques astutos.',
+              result: 'Goblin'
+            },
+            B: {
+              label: 'Minúscula criatura alada, envolta em brilho etéreo; dança pelos ares e invoca encantamentos feéricos.',
+              result: 'Fairy'
+            },
+            C: {
+              label: 'Pele cinzenta e olhos grandes como pedras preciosas; move-se sem ser visto e resiste ao toque da magia.',
+              result: 'Deep Gnome'
             }
-          }},
-          B: { label: 'Baixa – Da altura de uma mesa de taverna ou do peito de um humano comum.', next: {
-            question: 'Aspeto animalesco ou humanoide?',
-            options: {
-              A: { label: 'Animal', next: {
-                question: 'Qual descrição se encaixa melhor?',
-                options: {
-                  A: { label: 'Cabeça de coelho, irrequieto e rápido.', result: 'Harengon' },
-                  B: { label: 'Curvado, cheio de penas e a imitar sons.', result: 'Kenku' },
-                  C: { label: 'Pequeno lagarto com rosto de dragão.', result: 'Kobold' }
-                }
-              }},
-              B: { label: 'Humanoide', next: {
-                question: 'Qual descrição se encaixa melhor?',
-                options: {
-                  A: { label: 'Corpo largo, armadura e barba.', result: 'Dwarf' },
-                  B: { label: 'Anão sombrio de pele acinzentada com equipamento pesado.', result: 'Duergar' },
-                  C: { label: 'Pés descalços, rosto redondo e cheio de alegria.', result: 'Halfling' },
-                  D: { label: 'Curioso inventor com ferramentas e roupas coloridas.', result: 'Gnome' },
-                  E: { label: 'Gnomo subterrâneo de pele cinzenta.', result: 'Deep Gnome' }
-                }
-              }}
+          }
+        }
+      },
+      B: {
+        label: 'Animalesco ou inorgânico',
+        next: {
+          question: 'Qual descrição se encaixa melhor?',
+          options: {
+            A: {
+              label: 'Figura encurvada, coberta de penas escuras e olhar astuto; mestre da imitação e da memória perfeita.',
+              result: 'Kenku'
+            },
+            B: {
+              label: 'Reptilóide pequeno com olhar ardente; grita com fervor dracónico e inspira ataques certeiros.',
+              result: 'Kobold'
+            },
+            C: {
+              label: 'Forma encantadora de brinquedo antigo — feita de pano ou porcelana; surpreendentemente capaz e cheia de alma.',
+              result: 'Geppettin (Plushie or Bisque)'
             }
-          }},
-          C: { label: 'Média – Aproximadamente da altura de um humano comum.', next: {
-            question: 'Qual é a sua natureza?',
-            options: {
-              A: { label: 'Humanoide ou ligeiramente monstruosa', next: {
-                question: 'Qual descrição se encaixa melhor?',
-                options: {
-                  A: { label: 'Completamente comum.', result: 'Human' },
-                  B: { label: 'Aura radiante, olhos brilhantes.', result: 'Aasimar' },
-                  C: { label: 'Chifres, cauda, pele vermelha ou roxa.', result: 'Tiefling' },
-                  D: { label: 'Presas, pele cinzento-esverdeada, ar selvagem.', result: 'Orc' },
-                  E: { label: 'Forma mutável e pele lisa e pálida.', result: 'Changeling' },
-                  F: { label: 'Pele vermelha, postura disciplinada.', result: 'Hobgoblin' }
-                }
-              }},
-              B: { label: 'Claramente animal', next: {
-                question: 'Qual descrição se encaixa melhor?',
-                options: {
-                  A: { label: 'Corpo e rosto felino, cauda longa.', result: 'Tabaxi' },
-                  B: { label: 'Transformações bestiais (presas, garras).', result: 'Shifter' },
-                  C: { label: 'Pernas de cabra, cornos, espírito travesso.', result: 'Satyr' },
-                  D: { label: 'Face de serpente, olhos fendidos, calma hipnótica.', result: 'Yuan-ti' },
-                  E: { label: 'Carapaça nas costas, membros fortes, ar pacífico.', result: 'Tortle' }
-                }
-              }},
-              C: { label: 'Élfica', next: {
-                question: 'Qual descrição se encaixa melhor?',
-                options: {
-                  A: { label: 'Elfo gracioso clássico de orelhas longas.', result: 'Elf' },
-                  B: { label: 'Elfo cujo visual muda com as estações.', result: 'Eladrin' },
-                  C: { label: 'Elfo pálido ou sombrio com expressão séria.', result: 'Shadar-kai' }
-                }
-              }},
-              D: { label: 'Aquático', next: {
-                question: 'Qual descrição se encaixa melhor?',
-                options: {
-                  A: { label: 'Elfo esguio com barbatanas ou guelras.', result: 'Sea Elf' },
-                  B: { label: 'Guerreiro escamado do oceano com tridente.', result: 'Triton' }
-                }
-              }},
-              E: { label: 'Construto, elemental ou planta', next: {
-                question: 'Qual descrição se encaixa melhor?',
-                options: {
-                  A: { label: 'Corpo de marioneta, madeira e membros articulados.', result: 'Geppettin (Marionette)' },
-                  B: { label: 'Pele como casca ou coberta de folhas.', result: 'Mandrake' },
-                  C: { label: 'Corpo feito de fogo, névoa, pedra ou água.', result: 'Genasi' }
-                }
-              }}
+          }
+        }
+      }
+    }
+  }
+},
+
+          B: {
+  label: 'Baixa – Da altura de uma mesa de taverna ou do peito de um humano comum.',
+  next: {
+    question: 'Aspeto animalesco ou humanoide?',
+    options: {
+      A: {
+        label: 'Animal',
+        next: {
+          question: 'Qual descrição se encaixa melhor?',
+          options: {
+            A: {
+              label: 'Pernas fortes de coelho e energia irrequieta; reage num piscar de olhos e salta para longe do perigo.',
+              result: 'Harengon'
+            },
+            B: {
+              label: 'Corpo encurvado e coberto de penas escuras; observa tudo, imita tudo, esquece nada.',
+              result: 'Kenku'
+            },
+            C: {
+              label: 'Reptilóide pequeno com olhos atentos e garras nervosas; solta um grito ancestral que fortalece aliados.',
+              result: 'Kobold'
             }
-          }},
-          D: { label: 'Alta – Acima da altura comum de um humano como um estandarte de guerra ou um armário de armas.', next: {
-            question: 'Escolhe a descrição que melhor se adequa:',
-            options: {
-              A: { label: 'Traços reptilianos ou mamíferos', next: {
-                question: 'Qual descrição se encaixa melhor?',
-                options: {
-                  A: { label: 'Cabeça de dragão com sopro elemental.', result: 'Dragonborn' },
-                  B: { label: 'Rosto de lagarto com cauda e crista.', result: 'Lizardfolk' },
-                  C: { label: 'Postura ereta com traços de cobra.', result: 'Yuan-ti' },
-                  D: { label: 'Cabeça de touro, com chifres e cascos mas tronco humano.', result: 'Minotaur' },
-                  E: { label: 'Pernas de cabra, cornos, alegria musical.', result: 'Satyr' },
-                
-                }
-              }},
-              B: { label: 'Guerreiros ancestrais ou seres florestais', next: {
-                question: 'Qual descrição se encaixa melhor?',
-                options: {
-                  A: { label: 'Guerreiro tribal alto de presas.', result: 'Orc' },
-                  B: { label: 'Guerreiro pálido de traços afiados.', result: 'Githyanki' },
-                  C: { label: 'Calmo, de pele amarelada-esverdeada.', result: 'Githzerai' },
-                  D: { label: 'Ser vegetal andante com pele de casca.', result: 'Mandrake' },
-                  E: { label: 'Elfo com aparência sazonal mutável.', result: 'Eladrin' }
-                }
-              }},
+          }
+        }
+      },
+      B: {
+        label: 'Humanoide',
+        next: {
+          question: 'Qual descrição se encaixa melhor?',
+          options: {
+            A: {
+              label: 'Corpo robusto, barba cerrada e olhos que já viram muita pedra; firme como rocha e resistente como ferro.',
+              result: 'Dwarf'
+            },
+            B: {
+              label: 'Pele acinzentada, olhos duros e expressão desconfiada; cresce em poder psiónico nas sombras profundas.',
+              result: 'Duergar'
+            },
+            C: {
+              label: 'Pés descalços, sorriso caloroso e coração leve; move-se com graça e surpreende com sorte inesperada.',
+              result: 'Halfling'
+            },
+            D: {
+              label: 'Mãos manchadas de tinta e ferramentas nos bolsos; engenhoso criador de bugigangas encantadas.',
+              result: 'Gnome'
+            },
+            E: {
+              label: 'Rosto sério, pele de pedra e olhos que brilham como cristais; move-se nas sombras e resiste à magia.',
+              result: 'Deep Gnome'
             }
-          }},
-          E: { label: 'Muito Alta – Tão alta como uma carroça empilhada ou uma estante de uma biblioteca arcana.', next: {
-            question: 'Escolhe a descrição que melhor se adequa:',
-            options: {
-              A: { label: 'Gigante peludo de braços longos e presas.', result: 'Bugbear' },
-              B: { label: 'Corpo de cavalo e torso humano.', result: 'Centaur' },
-              C: { label: 'Humanoide entroncado com ascendência elemental de gigante.', result: 'Goliath' },
-              D: { label: 'Gigante da floresta de pele azul musgosa.', result: 'Firbolg' },
-              E: { label: 'Árvore andante adulta ou humanoide coberto de casca.', result: 'Mandrake' }
+          }
+        }
+      }
+    }
+  }
+},
+
+          C: {
+  label: 'Média – Aproximadamente da altura de um humano comum.',
+  next: {
+    question: 'Qual é a sua natureza?',
+    options: {
+      A: {
+        label: 'Humanoide ou ligeiramente monstruosa',
+        next: {
+          question: 'Qual descrição se encaixa melhor?',
+          options: {
+            A: {
+              label: 'Figura comum, mas moldável a qualquer papel; aprende depressa e adapta-se a qualquer aventura.',
+              result: 'Human'
+            },
+            B: {
+              label: 'Presença serena com olhos que irradiam luz; cura feridas com um toque e brilha com poder celestial.',
+              result: 'Aasimar'
+            },
+            C: {
+              label: 'Pele de tons vivos, chifres elegantes e cauda serpenteante; canaliza magia interior com intensidade ardente.',
+              result: 'Tiefling'
+            },
+            D: {
+              label: 'Corpo forte e pele acinzentada; avança com fúria primal e ruge com poder brutal.',
+              result: 'Orc'
+            },
+            E: {
+              label: 'Silhueta andrógina de pele lisa e olhos inexpressivos; muda de forma como quem troca de máscara.',
+              result: 'Changeling'
+            },
+            F: {
+              label: 'Postura disciplinada e olhos calculistas; um estratega natural com laços mágicos ancestrais.',
+              result: 'Hobgoblin'
             }
-          }}
+          }
+        }
+      },
+      B: {
+        label: 'Claramente animal',
+        next: {
+          question: 'Qual descrição se encaixa melhor?',
+          options: {
+            A: {
+              label: 'Rosto felino e movimentos silenciosos; olhos atentos e garras afiadas prontas para escalar ou atacar.',
+              result: 'Tabaxi'
+            },
+            B: {
+              label: 'Traços ferozes e garras prontas a surgir; transforma-se em fera viva quando o perigo chama.',
+              result: 'Shifter'
+            },
+            C: {
+              label: 'Pernas de cabra, sorriso travesso e energia saltitante; encanta multidões com charme e música.',
+              result: 'Satyr'
+            },
+            D: {
+              label: 'Olhos de serpente e presença enigmática; resiste à magia e envenena com palavras suaves.',
+              result: 'Yuan-ti'
+            },
+            E: {
+              label: 'Casco duro e olhos sábios; nada e respira como uma tartaruga ancestral e resiste pacientemente ao mundo.',
+              result: 'Tortle'
+            }
+          }
+        }
+      },
+      C: {
+        label: 'Élfica',
+        next: {
+          question: 'Qual descrição se encaixa melhor?',
+          options: {
+            A: {
+              label: 'Figura graciosa de orelhas longas e olhos atentos; move-se com leveza e dorme em meditação.',
+              result: 'Elf'
+            },
+            B: {
+              label: 'Beleza feérica em constante mutação; muda com as estações e transporta-se em clarões mágicos.',
+              result: 'Eladrin'
+            },
+            C: {
+              label: 'Pele pálida e olhar distante; move-se como uma sombra entre mundos e torna-se brevemente invulnerável.',
+              result: 'Shadar-kai'
+            }
+          }
+        }
+      },
+      D: {
+        label: 'Aquático',
+        next: {
+          question: 'Qual descrição se encaixa melhor?',
+          options: {
+            A: {
+              label: 'Silhueta elegante com guelras e barbatanas; vive entre as marés e comunica com as criaturas do mar.',
+              result: 'Sea Elf'
+            },
+            B: {
+              label: 'Guerreiro de pele azulada e tridente à mão; comanda o mar, resiste ao frio e anda sobre as águas.',
+              result: 'Triton'
+            }
+          }
+        }
+      },
+      E: {
+        label: 'Construto, elemental ou planta',
+        next: {
+          question: 'Qual descrição se encaixa melhor?',
+          options: {
+            A: {
+              label: 'Corpo articulado feito de madeira e cordas; parece uma marioneta animada com brilho curioso.',
+              result: 'Geppettin (Marionette)'
+            },
+            B: {
+              label: 'Pele de casca e olhos como botões florais; nutre-se da luz e cresce em força com as estações.',
+              result: 'Mandrake'
+            },
+            C: {
+              label: 'Corpo forjado de pedra, fogo, ar ou água; cada passo ecoa com poder elemental ancestral.',
+              result: 'Genasi'
+            }
+          }
+        }
+      }
+    }
+  }
+}
+,
+          D: {
+  label: 'Alta – Acima da altura comum de um humano como um estandarte de guerra ou um armário de armas.',
+  next: {
+    question: 'Escolhe a descrição que melhor se adequa:',
+    options: {
+      A: {
+        label: 'Traços reptilianos ou mamíferos',
+        next: {
+          question: 'Qual descrição se encaixa melhor?',
+          options: {
+            A: {
+              label: 'Corpo escamoso e imponente com sopro mágico; resiste a elementos e impõe-se em combate.',
+              result: 'Dragonborn'
+            },
+            B: {
+              label: 'Rosto de lagarto e crista dorsal; caça com calma instintiva e pele tão dura quanto couro.',
+              result: 'Lizardfolk'
+            },
+            C: {
+              label: 'Olhos hipnóticos e corpo esguio como serpente; resiste a venenos e encanta com palavras sibilantes.',
+              result: 'Yuan-ti'
+            },
+            D: {
+              label: 'Cabeça de touro e corpo de guerreiro; investe com força bruta e nunca se perde no labirinto.',
+              result: 'Minotaur'
+            },
+            E: {
+              label: 'Cornos enrolados e pernas de cabra; salta alegremente e encanta com presença feérica.',
+              result: 'Satyr'
+            }
+          }
+        }
+      },
+      B: {
+        label: 'Guerreiros ancestrais ou seres florestais',
+        next: {
+          question: 'Qual descrição se encaixa melhor?',
+          options: {
+            A: {
+              label: 'Figura tribal de músculos salientes e presas à mostra; sobrevive com instinto e força crua.',
+              result: 'Orc'
+            },
+            B: {
+              label: 'Pele pálida e olhar distante; mistura acrobacia com magia psiónica vinda do além.',
+              result: 'Githyanki'
+            },
+            C: {
+              label: 'Movimentos meditativos e aura disciplinada; molda a realidade com pura força mental.',
+              result: 'Githzerai'
+            },
+            D: {
+              label: 'Corpo vegetal de casca viva; enraizado na floresta, move-se com graça e cresce com luz.',
+              result: 'Mandrake'
+            },
+            E: {
+              label: 'Silhueta élfica mutável como o vento; salta entre planos com a leveza de uma estação em mudança.',
+              result: 'Eladrin'
+            }
+          }
+        }
+      }
+    }
+  }
+}
+,
+        E: {
+  label: 'Muito Alta – Tão alta como uma carroça empilhada ou uma estante de uma biblioteca arcana.',
+  next: {
+    question: 'Escolhe a descrição que melhor se adequa:',
+    options: {
+      A: {
+        label: 'Gigante peludo de braços longos e presas afiadas; move-se nas sombras e ataca antes de ser visto.',
+        result: 'Bugbear'
+      },
+      B: {
+        label: 'Metade humano, metade cavalo; galopa sobre o campo de batalha com arco ou lança em punho.',
+        result: 'Centaur'
+      },
+      C: {
+        label: 'Corpo maciço como montanha; desafia o gelo e o vento com força ancestral herdada dos gigantes.',
+        result: 'Goliath'
+      },
+      D: {
+        label: 'Pele azul musgosa e olhos calmos; liga-se à floresta como um guardião antigo e discreto.',
+        result: 'Firbolg'
+      },
+      E: {
+        label: 'Tronco vivo coberto de casca; cresce com as estações e enraíza-se na magia da terra.',
+        result: 'Mandrake'
+      }
+    }
+  }
+}
+
         }
       }
     };
