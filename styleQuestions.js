@@ -714,86 +714,6 @@ const subCategoryEN = {
   }
 };
 
-const familiarPT = {
-  question: "Que tipo de familiar mágico te acompanha nas tuas aventuras?",
-  options: {
-    A: {
-      label: "Uma criatura mágica, exótica ou venenosa — algo fora do comum.",
-      next: {
-        question: "Preferes que o teu familiar tenha...?",
-        options: {
-          A1: {
-            label: "Um lado diabólico, com poderes infernais ou demoníacos.",
-            next: {
-              question: "Qual destes seres das trevas preferes como familiar?",
-              options: {
-                Imp: "Um diabrete alado de olhos traiçoeiros, capaz de desaparecer num piscar de olhos.",
-                Quasit: "Um demónio minúsculo de garras afiadas e um riso inquietante — mestre da invisibilidade.",
-                Skeleton: "Um esqueleto silencioso que nunca dorme, pronto a obedecer a cada comando teu.",
-                "Slaad Tadpole": "Um girino aberrante com pele viscosa e resistência mágica — estranho, mas leal."
-              }
-            }
-          },
-          A2: {
-            label: "Um toque encantado, misterioso ou celestial.",
-            next: {
-              question: "Qual destas criaturas mágicas e fascinantes escolhes?",
-              options: {
-                Pseudodragon: "Um dragãozinho telepático com escamas cintilantes e um ferrão adormecedor.",
-                "Sphinx of Wonder": "Uma mini-esfinge voadora, sábia e enigmática, sempre pronta a ajudar com um toque de génio.",
-                Sprite: "Uma fada ágil com asas translúcidas e arco encantado — doce, mas perigosa.",
-                "Venomous Snake": "Uma serpente esguia e silenciosa, cujos dentes trazem veneno e morte."
-              }
-            }
-          }
-        }
-      }
-    },
-    B: {
-      label: "Um animal natural — discreto, astuto ou adorável.",
-      next: {
-        question: "O teu familiar ideal vive...?",
-        options: {
-          B1: {
-            label: "Nos céus ou entre os ramos — voador e atento.",
-            next: {
-              question: "Qual destas criaturas aéreas te acompanha?",
-              options: {
-                Bat: "Um morcego de voo furtivo, ideal para explorar lugares escuros e apertados.",
-                Hawk: "Um gavião veloz de olhos penetrantes, perfeito para vigiar os céus.",
-                Owl: "Um mocho silencioso de visão noturna aguçada, sempre vigilante.",
-                Raven: "Um corvo inteligente e observador, que pode imitar sons humanos."
-              }
-            }
-          },
-          B2: {
-            label: "Na terra — rápido, sorrateiro ou escalador.",
-            next: {
-              question: "Qual destes animais terrestres partilha a tua jornada?",
-              options: {
-                Cat: "Um gato ágil e atento, com reflexos rápidos e faro para problemas mágicos.",
-                Lizard: "Um lagarto discreto e trepador, capaz de se esgueirar por onde ninguém passa.",
-                Rat: "Um rato veloz e esquivo, ideal para explorações furtivas e infiltrações.",
-                Spider: "Uma aranha paciente e venenosa, capaz de se mover em qualquer superfície.",
-                Weasel: "Uma doninha pequena e esperta, que se move com graça e rapidez nas sombras."
-              }
-            }
-          },
-          B3: {
-            label: "Na água — estranho, furtivo e versátil.",
-            next: {
-              question: "Qual destas criaturas aquáticas é tua aliada?",
-              options: {
-                Frog: "Um sapo saltitante, pequeno mas surpreendentemente atento ao que o rodeia.",
-                Octopus: "Um polvo curioso e engenhoso, mestre do disfarce aquático e da fuga."
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-};
 
 const familiarPT = {
   question: "Que tipo de familiar mágico te acompanha nas tuas aventuras?",
@@ -876,7 +796,46 @@ const familiarPT = {
   }
 };
 
-
+const familiarEN = {
+  question: 'What kind of magical companion follows you?',
+  options: {
+    A: {
+      label: "A mystical or venomous creature.",
+      next: {
+        question: "Which creature do you prefer as a magical companion?",
+        options: {
+          Imp: 'A mischievous imp with dark wings',
+          Pseudodragon: 'A tiny dragon with shimmering scales',
+          Quasit: 'A small clawed creature with sinister giggles',
+          Skeleton: 'An obedient skeleton that never tires',
+          'Slaad Tadpole': 'A strange tadpole with curious eyes',
+          'Sphinx of Wonder': 'A miniature sphinx guarding riddles',
+          Sprite: 'A glowing fairy with graceful flight',
+          'Venomous Snake': 'An elegant serpent with a hypnotic gaze'
+        }
+      }
+    },
+    B: {
+      label: "An animal.",
+      next: {
+        question: "Which animal do you prefer as a magical companion?",
+        options: {
+          Bat: 'A bat',
+          Cat: 'A cat',
+          Frog: 'A frog',
+          Hawk: 'A hawk',
+          Lizard: 'A lizard',
+          Octopus: 'An octopus',
+          Owl: 'An owl',
+          Rat: 'A rat',
+          Raven: 'A raven',
+          Spider: 'A spider',
+          Weasel: 'A weasel'
+        }
+      }
+    }
+  }
+};
 
 window.subCategoryQuiz = window.subCategoryQuiz || {
   pt: subCategoryPT,
