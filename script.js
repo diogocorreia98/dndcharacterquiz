@@ -45,6 +45,7 @@ let currentResult = {
 let speciesNode = null;
 const speciesStack = [];
 let subSpeciesNode = null;
+const subSpeciesStack = [];
 let step2Index = 0;
 let step2Answers = {};
 let classNode = null;
@@ -83,8 +84,10 @@ function renderQuiz() {
     if(subSpeciesNode){
       html += `<section><p>${subSpeciesNode.question}</p>`;
       for(const key in subSpeciesNode.options){
+        const opt = subSpeciesNode.options[key];
         const id = `sub_${key}`;
-        html += `<label><input type="radio" name="sub" value="${key}" id="${id}"> ${strip(subSpeciesNode.options[key])}</label>`;
+        const label = typeof opt === 'object' ? key : strip(opt);
+        html += `<label><input type="radio" name="sub" value="${key}" id="${id}"> ${label}</label>`;
       }
       html += '</section>';
     } else if(step.tree){
@@ -248,6 +251,7 @@ langSelect.addEventListener('change', () => {
   }
   if(subQuestionSpecies){
     subSpeciesNode = subSpeciesQuestions[currentLang][subQuestionSpecies];
+    subSpeciesStack.length = 0;
   }
   if(locale.step2.tree){
     classNode = locale.step2.tree;
@@ -379,10 +383,18 @@ submitBtn.addEventListener('click', async () => {
     if(subSpeciesNode){
       const val = document.querySelector('input[name="sub"]:checked');
       if(!val) return;
-      currentResult.species = val.value;
+      const choice = subSpeciesNode.options[val.value];
+      if(choice && typeof choice === 'object'){
+        subSpeciesStack.push(subSpeciesNode);
+        subSpeciesNode = choice;
+        renderQuiz();
+        return;
+      }
+      currentResult.species = choice && choice !== val.value ? choice : val.value;
       subSpeciesNode = null;
+      subSpeciesStack.length = 0;
       subQuestionSpecies = null;
-      speciesPath.push(val.value);
+      speciesPath.push(currentResult.species);
       step2Index = 0;
       step2Answers = {};
       classNode = locale.step2.tree;
@@ -698,6 +710,11 @@ if(stage === 3){
 backBtn.addEventListener('click', () => {
   const locale = data[currentLang];
   if(stage === 1 && subSpeciesNode){
+    if(subSpeciesStack.length > 0){
+      subSpeciesNode = subSpeciesStack.pop();
+      renderQuiz();
+      return;
+    }
     subSpeciesNode = null;
     subQuestionSpecies = null;
     speciesPath.pop();
@@ -827,6 +844,7 @@ function restartQuiz(){
   };
   speciesNode = null;
   subSpeciesNode = null;
+  subSpeciesStack.length = 0;
   speciesStack.length = 0;
   speciesPath.length = 0;
   step2Index = 0;
