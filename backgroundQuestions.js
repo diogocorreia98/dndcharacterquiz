@@ -32,7 +32,13 @@ const step3pt = {
       question: 'Como usas a tua agilidade?',
       options: {
         A: { label: 'Furtividade e truques.', list: ['Charlatan','Criminal','Wayfarer'] },
-        B: { label: 'Of\u00edcio ou explora\u00e7\u00e3o.', list: ['Artisan','Entertainer','Guide','Sailor','Scribe','Soldier'] }
+        B: {
+          question: 'Qual destes caminhos descreve melhor a tua experi\u00eancia?',
+          options: {
+            A: { label: 'Profiss\u00f5es pr\u00e1ticas ou art\u00edsticas.', list: ['Artisan','Entertainer','Scribe'] },
+            B: { label: 'Explora\u00e7\u00e3o ou treino f\u00edsico.', list: ['Guide','Sailor','Soldier'] }
+          }
+        }
       }
     },
     Strength: {
@@ -93,7 +99,13 @@ const step3en = {
       question: 'How do you use your agility?',
       options: {
         A: { label: 'Stealth and trickery.', list: ['Charlatan','Criminal','Wayfarer'] },
-        B: { label: 'Craft or exploration.', list: ['Artisan','Entertainer','Guide','Sailor','Scribe','Soldier'] }
+        B: {
+          question: 'Which of these paths best describes your experience?',
+          options: {
+            A: { label: 'Practical or artistic trades.', list: ['Artisan','Entertainer','Scribe'] },
+            B: { label: 'Exploration or physical training.', list: ['Guide','Sailor','Soldier'] }
+          }
+        }
       }
     },
     Strength: {

@@ -60,6 +60,7 @@ let familiarNode = null;
 const familiarStack = [];
 let specialStyleNode = null;
 let bgBranch = null;
+let bgSubBranch = null;
 
 function renderQuiz() {
   const locale = data[currentLang];
@@ -192,6 +193,7 @@ function renderQuiz() {
         submitBtn.textContent = currentLang === 'pt' ? 'Avançar' : 'Next';
       } else {
         bgBranch = null;
+        bgSubBranch = null;
         stage = 5;
         renderQuiz();
         return;
@@ -200,21 +202,52 @@ function renderQuiz() {
   } else if(stage === 5){
     const step = locale.step3;
     const key = canonicalAbility(currentResult.style);
-    if(step.branches && step.branches[key] && !bgBranch){
-      const branch = step.branches[key];
-      html += `<h2>${step.title}</h2>`;
-      html += `<section><p>${branch.question}</p>`;
-      for(const opt in branch.options){
-        const id = `branch_${opt}`;
-        html += `<label><input type="radio" name="bgbranch" value="${opt}" id="${id}"> ${strip(branch.options[opt].label)}</label>`;
+    const branchRoot = step.branches && step.branches[key];
+    if(branchRoot){
+      if(bgBranch === null){
+        html += `<h2>${step.title}</h2>`;
+        html += `<section><p>${branchRoot.question}</p>`;
+        for(const opt in branchRoot.options){
+          const id = `branch_${opt}`;
+          const optObj = branchRoot.options[opt];
+          const label = optObj.label || optObj.question;
+          html += `<label><input type="radio" name="bgbranch" value="${opt}" id="${id}"> ${strip(label)}</label>`;
+        }
+        html += '</section>';
+        submitBtn.textContent = currentLang === 'pt' ? 'Avançar' : 'Next';
+      } else {
+        const choice = branchRoot.options[bgBranch];
+        if(choice.question && bgSubBranch === null){
+          html += `<h2>${step.title}</h2>`;
+          html += `<section><p>${choice.question}</p>`;
+          for(const opt in choice.options){
+            const id = `bgsub_${opt}`;
+            html += `<label><input type="radio" name="bgsub" value="${opt}" id="${id}"> ${strip(choice.options[opt].label)}</label>`;
+          }
+          html += '</section>';
+          submitBtn.textContent = currentLang === 'pt' ? 'Avançar' : 'Next';
+        } else {
+          let list = step.combos[key] || [];
+          if(choice.question){
+            if(bgSubBranch !== null){
+              list = choice.options[bgSubBranch].list || list;
+            }
+          } else {
+            list = choice.list || list;
+          }
+          html += `<h2>${step.title}</h2>`;
+          html += `<section><p>${step.question}</p>`;
+          list.forEach((bg, i) => {
+            const id = `bg_${i}`;
+            const desc = (bgDescriptions[currentLang] && bgDescriptions[currentLang][bg]) || strip(bg);
+            html += `<label><input type="radio" name="bg" value="${bg}" id="${id}"> ${desc}</label>`;
+          });
+          html += '</section>';
+          submitBtn.textContent = currentLang === 'pt' ? 'Concluir' : 'Finish';
+        }
       }
-      html += '</section>';
-      submitBtn.textContent = currentLang === 'pt' ? 'Avançar' : 'Next';
     } else {
       let list = step.combos[key] || [];
-      if(step.branches && step.branches[key] && bgBranch){
-        list = step.branches[key].options[bgBranch].list || list;
-      }
       html += `<h2>${step.title}</h2>`;
       html += `<section><p>${step.question}</p>`;
       list.forEach((bg, i) => {
@@ -287,6 +320,8 @@ langSelect.addEventListener('change', () => {
   }
   familiarNode = null;
   familiarStack.length = 0;
+  bgBranch = null;
+  bgSubBranch = null;
   updateStaticText();
   renderQuiz();
 });
@@ -573,11 +608,12 @@ if(stage === 3){
       styleStack.length = 0;
       stage = 4;
       renderQuiz();
-    } else {
-      bgBranch = null;
-      stage = 5;
-      renderQuiz();
-    }
+      } else {
+        bgBranch = null;
+        bgSubBranch = null;
+        stage = 5;
+        renderQuiz();
+      }
     return;
   }
   if(stage === 4){
@@ -607,6 +643,7 @@ if(stage === 3){
       }
       styleStack.length = 0;
       bgBranch = null;
+      bgSubBranch = null;
       stage = 5;
       renderQuiz();
       return;
@@ -669,10 +706,11 @@ if(stage === 3){
             ? 'Ordem Divina'
             : 'Divine Order';
         }
-        styleNode = null;
-        bgBranch = null;
-        stage = 5;
-        renderQuiz();
+      styleNode = null;
+      bgBranch = null;
+      bgSubBranch = null;
+      stage = 5;
+      renderQuiz();
       }
       return;
     }
@@ -680,12 +718,23 @@ if(stage === 3){
   if(stage === 5){
     const step = data[currentLang].step3;
     const key = canonicalAbility(currentResult.style);
-    if(step.branches && step.branches[key] && !bgBranch){
-      const bval = document.querySelector('input[name="bgbranch"]:checked');
-      if(!bval) return;
-      bgBranch = bval.value;
-      renderQuiz();
-      return;
+    const branchRoot = step.branches && step.branches[key];
+    if(branchRoot){
+      if(bgBranch === null){
+        const bval = document.querySelector('input[name="bgbranch"]:checked');
+        if(!bval) return;
+        bgBranch = bval.value;
+        renderQuiz();
+        return;
+      }
+      const choice = branchRoot.options[bgBranch];
+      if(choice.question && bgSubBranch === null){
+        const sval = document.querySelector('input[name="bgsub"]:checked');
+        if(!sval) return;
+        bgSubBranch = sval.value;
+        renderQuiz();
+        return;
+      }
     }
     const val = document.querySelector('input[name="bg"]:checked');
     if(!val) return;
@@ -816,10 +865,17 @@ backBtn.addEventListener('click', () => {
   if(stage === 5){
     const step = data[currentLang].step3;
     const key = canonicalAbility(currentResult.style);
-    if(step.branches && step.branches[key] && bgBranch){
-      bgBranch = null;
-      renderQuiz();
-      return;
+    if(step.branches && step.branches[key]){
+      if(bgSubBranch !== null){
+        bgSubBranch = null;
+        renderQuiz();
+        return;
+      }
+      if(bgBranch !== null){
+        bgBranch = null;
+        renderQuiz();
+        return;
+      }
     }
     stage = 4;
     renderQuiz();
@@ -859,6 +915,7 @@ function restartQuiz(){
   familiarStack.length = 0;
   specialStyleNode = null;
   bgBranch = null;
+  bgSubBranch = null;
   subQuestionSpecies = null;
   renderQuiz();
 }
