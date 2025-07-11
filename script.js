@@ -425,7 +425,9 @@ submitBtn.addEventListener('click', async () => {
         renderQuiz();
         return;
       }
-      currentResult.species = choice && choice !== val.value ? choice : val.value;
+      // Store the selected species key rather than the descriptive text
+      // so the results (and AI prompt) always use the English name
+      currentResult.species = val.value;
       subSpeciesNode = null;
       subSpeciesStack.length = 0;
       subQuestionSpecies = null;
