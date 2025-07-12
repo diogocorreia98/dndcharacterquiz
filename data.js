@@ -395,6 +395,19 @@ const miscText = {
   }
 };
 
+const startText = {
+  pt: {
+    title: 'Descobre a tua personagem ideal de Dungeons & Dragons!',
+    button: 'Começar',
+    footnote: 'Este quiz visa as mais recentes regras de Dungeons & Dragons e assume as seguintes opções de criação de personagem: todo o conteúdo do Player\'s Handbook 2024, todas as espécies do Mordenkainen Presents: Monsters of the Multiverse exceto as que foram revistas pelo Player\'s Handbook 2024 e todas as subclasses e espécies introduzidas pelo Valda’s Spire of Secrets: Player Pack conforme publicado pelo D&D Beyond.'
+  },
+  en: {
+    title: 'Discover your ideal Dungeons & Dragons character!',
+    button: 'Start',
+    footnote: 'This quiz uses the latest Dungeons & Dragons rules and assumes the following character creation options: all content from the 2024 Player\'s Handbook, all species from Mordenkainen Presents: Monsters of the Multiverse except those revised by the 2024 Player\'s Handbook, and all subclasses and species introduced by Valda\u2019s Spire of Secrets: Player Pack as published by D&D Beyond.'
+  }
+};
+
 const nameMap = {
   pt: {
     species: {

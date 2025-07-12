@@ -257,7 +257,7 @@
 
   restartBtn.addEventListener('click', () => {
     sessionStorage.removeItem('dndResults');
-    window.location.href = 'index.html';
+    window.location.href = 'index.html?start=1';
   });
 
   render();

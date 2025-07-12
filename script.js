@@ -3,8 +3,11 @@ const quizDiv = document.getElementById('quiz');
 const submitBtn = document.getElementById('submit');
 const backBtn = document.getElementById('back');
 const restartBtn = document.getElementById('restart');
-const titleEl = document.querySelector('h1');
+const startBtn = document.getElementById('start');
+const startScreen = document.getElementById('start-screen');
+const titleEl = document.getElementById('quiz-title');
 const languageLabel = document.querySelector('#language-select label');
+let started = false;
 let currentLang = 'pt';
 
 const genderQuestions = {
@@ -25,6 +28,13 @@ function updateStaticText(){
   document.title = miscText[currentLang].quizTitle;
   titleEl.textContent = miscText[currentLang].quizTitle;
   languageLabel.textContent = miscText[currentLang].language;
+}
+
+function updateStartScreenText(){
+  document.getElementById('start-title').textContent = startText[currentLang].title;
+  startBtn.textContent = startText[currentLang].button;
+  document.getElementById('footnote').textContent = startText[currentLang].footnote;
+  document.documentElement.lang = currentLang;
 }
 
 let stage = 0;
@@ -269,6 +279,10 @@ function renderQuiz() {
 
 langSelect.addEventListener('change', () => {
   currentLang = langSelect.value;
+  if(!started){
+    updateStartScreenText();
+    return;
+  }
   const locale = data[currentLang];
   if(locale.step1.tree){
     speciesNode = locale.step1.tree;
@@ -919,8 +933,46 @@ function restartQuiz(){
   bgBranch = null;
   bgSubBranch = null;
   subQuestionSpecies = null;
+  started = true;
+  startScreen.style.display = 'none';
+  quizDiv.style.display = 'block';
+  document.getElementById('quiz-controls').style.display = 'block';
+  restartBtn.style.display = 'block';
+  titleEl.style.display = 'block';
+  document.body.insertBefore(document.getElementById('language-select'), quizDiv);
   renderQuiz();
 }
 
 restartBtn.addEventListener('click', restartQuiz);
-renderQuiz();
+
+function showStartScreen(){
+  startScreen.style.display = 'block';
+  quizDiv.style.display = 'none';
+  document.getElementById('quiz-controls').style.display = 'none';
+  restartBtn.style.display = 'none';
+  titleEl.style.display = 'none';
+  startScreen.appendChild(document.getElementById('language-select'));
+  updateStartScreenText();
+  started = false;
+}
+
+function startQuiz(){
+  started = true;
+  startScreen.style.display = 'none';
+  quizDiv.style.display = 'block';
+  document.getElementById('quiz-controls').style.display = 'block';
+  restartBtn.style.display = 'block';
+  titleEl.style.display = 'block';
+  document.body.insertBefore(document.getElementById('language-select'), quizDiv);
+  updateStaticText();
+  renderQuiz();
+}
+
+startBtn.addEventListener('click', startQuiz);
+
+const params = new URLSearchParams(window.location.search);
+if(params.get('start') === '1'){
+  startQuiz();
+} else {
+  showStartScreen();
+}
