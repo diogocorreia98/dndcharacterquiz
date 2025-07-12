@@ -7,17 +7,23 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<button id="restart">Restart</button>
-<h1>D&D Character Quiz</h1>
-<div id="language-select">
-<label for="lang">Language:</label>
-<select id="lang">
-<option value="pt">Português</option>
-<option value="en">English</option>
-</select>
+<div id="start-screen">
+  <h1 id="start-title">Descobre a tua personagem ideal de Dungeons & Dragons!</h1>
+  <div id="language-select">
+    <label for="lang">Language:</label>
+    <select id="lang">
+      <option value="pt">Português</option>
+      <option value="en">English</option>
+    </select>
+  </div>
+  <button id="start">Começar</button>
+  <p id="footnote">Este quiz visa as mais recentes regras de Dungeons & Dragons e assume as seguintes opções de criação de personagem: todo o conteúdo do Player's Handbook 2024, todas as espécies do Mordenkainen Presents: Monsters of the Multiverse exceto as que foram revistas pelo Player's Handbook 2024 e todas as subclasses e espécies introduzidas pelo Valda’s Spire of Secrets: Player Pack conforme publicado pelo D&D Beyond.</p>
 </div>
-<div id="quiz"></div>
-<div id="quiz-controls">
+
+<button id="restart" style="display:none;">Restart</button>
+<h1 id="quiz-title" style="display:none;">D&D Character Quiz</h1>
+<div id="quiz" style="display:none;"></div>
+<div id="quiz-controls" style="display:none;">
   <button id="submit" style="display:none;">Submit</button>
   <button id="back" style="display:none;">Back</button>
 </div>
