@@ -7,3 +7,18 @@ label {display:block; margin:5px 0;}
 #ai-prompt {width:100%; height:150px;}
 #start-screen {text-align:center;}
 #footnote {margin-top:20px; font-size:0.9em;}
+#start {
+  font-size: 1.5em;      /* aumenta o tamanho do texto */
+  padding: 15px 40px;    /* aumenta o espaçamento interno do botão */
+  border-radius: 8px;    /* deixa os cantos arredondados */
+  margin-top: 20px;      /* espaço acima do botão */
+  background: #4B79A1;   /* cor de fundo, opcional */
+  color: white;          /* cor do texto */
+  border: none;          /* remove a borda padrão */
+  cursor: pointer;       /* cursor de mão ao passar o mouse */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* sombra leve, opcional */
+  transition: background 0.2s;
+}
+#start:hover {
+  background: #283E51;   /* cor diferente ao passar o mouse, opcional */
+}
