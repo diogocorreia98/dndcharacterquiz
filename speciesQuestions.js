@@ -543,7 +543,16 @@ const subQuestionsEN = {
       'High Elf': 'Elegant and fine-featured, naturally attuned to arcane magic.',
       'Wood Elf': 'Agile and discreet with bronzed skin and keen eyes, moves easily in nature.',
       'Drow Elf': 'Dark-skinned with white hair, sees in the dark and wields Underdark magic.',
-      'Eladrin': 'Fey beauty in constant flux; shifts with the seasons and teleports in flashes of magic.',
+      'Eladrin': {
+        label: 'Fey beauty in constant flux; shifts with the seasons and teleports in flashes of magic.',
+        question: 'Which power blossoms when the character teleports?',
+        options: {
+          'Spring Eladrin': 'Lively and springlike in appearance, brings an ally along when teleporting.',
+          'Summer Eladrin': 'Flaming hair and a warm aura, burns foes upon arrival.',
+          'Autumn Eladrin': 'Golden tones and calm stride, charms those nearby.',
+          'Winter Eladrin': 'Pale skin and cold eyes, induces fear when appearing.'
+        }
+      },
       'Shadar-kai': 'Pale skin and distant gaze; moves like a shadow between worlds and becomes briefly invulnerable.',
       'Sea Elf': 'Slender silhouette with gills and fins; dwells among the tides and speaks with sea creatures.'
     }
@@ -602,15 +611,6 @@ const subQuestionsEN = {
       'Summer Mandrake': 'Dense, sturdy foliage pulls enemies close.',
       'Autumn Mandrake': 'Golden leaves and dry branches ensnare multiple targets at once.',
       'Winter Mandrake': 'Covered in ice and cold sap, unleashes frigid blasts with its vines.'
-    }
-  },
-  Eladrin: {
-    question: 'Which power blossoms when the character teleports?',
-    options: {
-      'Spring Eladrin': 'Lively and springlike in appearance, brings an ally along when teleporting.',
-      'Summer Eladrin': 'Flaming hair and a warm aura, burns foes upon arrival.',
-      'Autumn Eladrin': 'Golden tones and calm stride, charms those nearby.',
-      'Winter Eladrin': 'Pale skin and cold eyes, induces fear when appearing.'
     }
   },
   Shifter: {
@@ -681,7 +681,16 @@ const subQuestionsPT = {
       'High Elf': 'Elegante e de feições finas, tem afinidade natural com a magia arcana.',
       'Wood Elf': 'Ágil e discreta, de pele bronzeada e olhar atento, move-se com facilidade na natureza.',
       'Drow Elf': 'De pele escura e cabelo branco, vê no escuro e domina magia do Subterrâneo.',
-      'Eladrin': 'Beleza feérica em constante mutação; muda com as estações e transporta-se em clarões mágicos.',
+      'Eladrin': {
+        label: 'Beleza feérica em constante mutação; muda com as estações e transporta-se em clarões mágicos.',
+        question: 'Que poder floresce quando a personagem se teleporta?',
+        options: {
+          'Spring Eladrin': 'De aparência viva e primaveril, leva um aliado consigo ao teletransportar-se.',
+          'Summer Eladrin': 'Com cabelo flamejante e aura quente, queima inimigos ao chegar.',
+          'Autumn Eladrin': 'De tons dourados e andar calmo, encanta os que estão por perto.',
+          'Winter Eladrin': 'De pele pálida e olhos frios, provoca medo quando aparece.'
+        }
+      },
       'Shadar-kai': 'Pele pálida e olhar distante; move-se como uma sombra entre mundos e torna-se brevemente invulnerável.',
       'Sea Elf': 'Silhueta elegante com guelras e barbatanas; vive entre as marés e comunica com as criaturas do mar.'
     }
@@ -740,15 +749,6 @@ const subQuestionsPT = {
       'Summer Mandrake': 'De folhagem densa e robusta, puxa os inimigos para junto de si.',
       'Autumn Mandrake': 'Com folhas douradas e galhos secos, prende vários alvos de uma vez.',
       'Winter Mandrake': 'Coberta de gelo e seiva fria, liberta rajadas geladas com as suas vinhas.'
-    }
-  },
-  Eladrin: {
-    question: 'Que poder floresce quando a personagem se teleporta?',
-    options: {
-      'Spring Eladrin': 'De aparência viva e primaveril, leva um aliado consigo ao teletransportar-se.',
-      'Summer Eladrin': 'Com cabelo flamejante e aura quente, queima inimigos ao chegar.',
-      'Autumn Eladrin': 'De tons dourados e andar calmo, encanta os que estão por perto.',
-      'Winter Eladrin': 'De pele pálida e olhos frios, provoca medo quando aparece.'
     }
   },
   Shifter: {
