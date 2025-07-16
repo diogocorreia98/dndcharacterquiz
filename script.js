@@ -8,7 +8,7 @@ const startScreen = document.getElementById('start-screen');
 const titleEl = document.getElementById('quiz-title');
 const languageLabel = document.querySelector('#language-select label');
 const startTitleEl = document.getElementById('start-title');
-const footnoteEl = document.getElementById('footnote');
+let footnoteEl = null;
 let started = false;
 let currentLang = 'pt';
 
@@ -967,9 +967,12 @@ function startQuiz(){
 
 startBtn.addEventListener('click', startQuiz);
 
-const params = new URLSearchParams(window.location.search);
-if(params.get('start') === '1'){
-  startQuiz();
-} else {
-  showStartScreen();
-}
+document.addEventListener('DOMContentLoaded', () => {
+  footnoteEl = document.getElementById('footnote');
+  const params = new URLSearchParams(window.location.search);
+  if(params.get('start') === '1'){
+    startQuiz();
+  } else {
+    showStartScreen();
+  }
+});
