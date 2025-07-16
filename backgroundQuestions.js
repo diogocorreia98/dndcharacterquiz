@@ -32,15 +32,10 @@ const step3pt = {
       question: 'Como usas a tua agilidade?',
       options: {
         A: { label: 'Furtividade e truques.', list: ['Charlatan','Criminal','Wayfarer'] },
-        B: {
-          question: 'Qual destes caminhos descreve melhor a tua experi\u00eancia?',
-          options: {
-            A: { label: 'Profiss\u00f5es pr\u00e1ticas ou art\u00edsticas.', list: ['Artisan','Entertainer','Scribe'] },
-            B: { label: 'Explora\u00e7\u00e3o ou treino f\u00edsico.', list: ['Guide','Sailor','Soldier'] }
+        B: { label: 'Profiss\u00f5es pr\u00e1ticas ou art\u00edsticas.', list: ['Artisan','Entertainer','Scribe'] },
+        C: { label: 'Explora\u00e7\u00e3o ou treino f\u00edsico.', list: ['Guide','Sailor','Soldier'] }
           }
-        }
-      }
-    },
+        },
     Strength: {
       question: 'De onde vem a tua for\u00e7a?',
       options: {
