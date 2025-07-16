@@ -90,7 +90,7 @@ function renderQuiz() {
       for(const key in subSpeciesNode.options){
         const opt = subSpeciesNode.options[key];
         const id = `sub_${key}`;
-        const label = typeof opt === 'object' ? key : strip(opt);
+        const label = typeof opt === 'object' ? (opt.label || key) : strip(opt);
         html += `<label><input type="radio" name="sub" value="${key}" id="${id}"> ${label}</label>`;
       }
       html += '</section>';
