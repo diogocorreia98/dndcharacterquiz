@@ -67,12 +67,7 @@ let bgSubBranch = null;
 
 function renderQuiz() {
   const locale = data[currentLang];
-  const strip = txt => {
-    if (typeof txt !== 'string') {
-      return txt ? String(txt) : '';
-    }
-    return txt.replace(/\s*\([^)]*\)\s*$/, '');
-  };
+  const strip = txt => txt.replace(/\s*\([^)]*\)\s*$/, '');
   updateStaticText();
   quizDiv.innerHTML = '';
   let html = '';
