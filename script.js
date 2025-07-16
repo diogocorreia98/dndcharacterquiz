@@ -23,11 +23,30 @@ const genderQuestions = {
   }
 };
 
+const startText = {
+  pt: {
+    title: 'Descobre a tua personagem ideal de Dungeons & Dragons!',
+    button: 'Começar',
+    footnote: 'Este quiz visa as mais recentes regras de Dungeons & Dragons e assume as seguintes opções de criação de personagem: todo o conteúdo do Player\'s Handbook 2024, todas as espécies do Mordenkainen Presents: Monsters of the Multiverse exceto as que foram revistas pelo Player\'s Handbook 2024 e todas as subclasses e espécies introduzidas pelo Valda\u2019s Spire of Secrets: Player Pack conforme publicado pelo D&D Beyond. Quiz feito por Diogo Correia, 2025.'
+  },
+  en: {
+    title: 'Discover your ideal Dungeons & Dragons character!',
+    button: 'Start',
+    footnote: 'This quiz uses the latest Dungeons & Dragons rules and assumes the following character creation options: all content from the Player\'s Handbook 2024, all species from Mordenkainen Presents: Monsters of the Multiverse except those revised by the Player\'s Handbook 2024, and all subclasses and species introduced by Valda\u2019s Spire of Secrets: Player Pack as published by D&D Beyond. Quiz by Diogo Correia, 2025.'
+  }
+};
+
 
 function updateStaticText(){
+  document.documentElement.lang = currentLang;
   document.title = miscText[currentLang].quizTitle;
   titleEl.textContent = miscText[currentLang].quizTitle;
   languageLabel.textContent = miscText[currentLang].language;
+  document.getElementById('start-title').textContent = startText[currentLang].title;
+  startBtn.textContent = startText[currentLang].button;
+  document.getElementById('footnote').textContent = startText[currentLang].footnote;
+  restartBtn.textContent = labels[currentLang].restart;
+  langSelect.value = currentLang;
 }
 
 let stage = 0;
@@ -67,7 +86,12 @@ let bgSubBranch = null;
 
 function renderQuiz() {
   const locale = data[currentLang];
-  const strip = txt => txt.replace(/\s*\([^)]*\)\s*$/, '');
+  const strip = txt => {
+    if (typeof txt !== 'string') {
+      return txt ? String(txt) : '';
+    }
+    return txt.replace(/\s*\([^)]*\)\s*$/, '');
+  };
   updateStaticText();
   quizDiv.innerHTML = '';
   let html = '';
@@ -272,6 +296,7 @@ function renderQuiz() {
 
 langSelect.addEventListener('change', () => {
   currentLang = langSelect.value;
+  updateStaticText();
   if(!started) return;
   const locale = data[currentLang];
   if(locale.step1.tree){
@@ -942,6 +967,7 @@ function showStartScreen(){
   restartBtn.style.display = 'none';
   titleEl.style.display = 'none';
   startScreen.appendChild(document.getElementById('language-select'));
+  updateStaticText();
 }
 
 function startQuiz(){
