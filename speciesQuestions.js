@@ -34,6 +34,7 @@ const step1pt =
           "question": "Que tipo de criatura se aproxima mais do teu aspeto?",
           "options": {
             "Animal": {
+              "label": "Animal",
               "question": "Qual destas descrições corresponde melhor à tua personagem?",
               "options": {
                 "Harengon": {
@@ -51,6 +52,7 @@ const step1pt =
               }
             },
             "Humanoide": {
+              "label": "Humanoide",
               "question": "Qual destas descrições corresponde melhor à tua personagem?",
               "options": {
                 "Dwarf": {
@@ -79,6 +81,7 @@ const step1pt =
               "question": "Qual é a origem ou inclinação da tua personagem?",
               "options": {
                 "Normal ou Adaptável": {
+                  "label": "Normal ou Adaptável",
                   "question": "Qual destas descrições corresponde melhor à tua personagem?",
                   "options": {
                     "Human": {
@@ -96,6 +99,7 @@ const step1pt =
                   }
                 },
                 "Celestial ou Infernal": {
+                  "label": "Celestial ou Infernal",
                   "question": "Qual destas descrições corresponde melhor à tua personagem?",
                   "options": {
                     "Aasimar": {
@@ -109,6 +113,7 @@ const step1pt =
                   }
                 },
                 "Feroz ou Tribal": {
+                  "label": "Feroz ou Tribal",
                   "question": "Qual destas descrições corresponde melhor à tua personagem?",
                   "options": {
                     "Orc": {
@@ -124,6 +129,7 @@ const step1pt =
               }
             },
             "Animal ou híbrido": {
+              "label": "Animal ou híbrido",
               "question": "Qual destas descrições corresponde melhor à tua personagem?",
               "options": {
                 "Tabaxi": {
@@ -149,6 +155,7 @@ const step1pt =
               }
             },
             "Construto, elemental ou planta": {
+              "label": "Construto, elemental ou planta",
               "question": "Qual destas descrições corresponde melhor à tua personagem?",
               "options": {
                 "Genasi": {
@@ -174,6 +181,7 @@ const step1pt =
           "question": "Qual é a origem ou natureza da personagem?",
           "options": {
             "Reptiliana ou bestial": {
+              "label": "Reptiliana ou bestial",
               "question": "Qual destas descrições corresponde melhor à tua personagem?",
               "options": {
                 "Dragonborn": {
@@ -199,6 +207,7 @@ const step1pt =
               }
             },
             "Psiónica ou exótica": {
+              "label": "Psiónica ou exótica",
               "question": "Qual destas descrições corresponde melhor à tua personagem?",
               "options": {
                 "Orc": {
@@ -232,6 +241,7 @@ const step1pt =
           "question": "Que tipo de figura representa melhor a personagem?",
           "options": {
             "Monstruosa ou feroz": {
+              "label": "Monstruosa ou feroz",
               "question": "Qual destas descrições corresponde melhor à tua personagem?",
               "options": {
                 "Bugbear": {
@@ -245,6 +255,7 @@ const step1pt =
               }
             },
             "Gigante ou mística": {
+              "label": "Gigante ou mística",
               "question": "Qual destas descrições corresponde melhor à tua personagem?",
               "options": {
                 "Goliath": {
@@ -303,6 +314,7 @@ const step1en = {
           question: 'What type of creature most resembles your appearance?',
           options: {
             Animal: {
+              label: 'Animal',
               question: 'Which of these descriptions best matches your character?',
               options: {
                 Harengon: {
@@ -320,6 +332,7 @@ const step1en = {
               }
             },
             Humanoid: {
+              label: 'Humanoid',
               question: 'Which of these descriptions best matches your character?',
               options: {
                 Dwarf: {
@@ -345,9 +358,11 @@ const step1en = {
           question: 'Which of these categories best describes your character?',
           options: {
             Humanoid: {
+              label: 'Humanoid',
               question: "What is your character's origin or leaning?",
               options: {
                 'Normal or Adaptable': {
+                  label: 'Normal or Adaptable',
                   question: 'Which of these descriptions best matches your character?',
                   options: {
                     Human: {
@@ -365,6 +380,7 @@ const step1en = {
                   }
                 },
                 'Celestial or Infernal': {
+                  label: 'Celestial or Infernal',
                   question: 'Which of these descriptions best matches your character?',
                   options: {
                     Aasimar: {
@@ -378,6 +394,7 @@ const step1en = {
                   }
                 },
                 'Fierce or Tribal': {
+                  label: 'Fierce or Tribal',
                   question: 'Which of these descriptions best matches your character?',
                   options: {
                     Orc: {
@@ -393,6 +410,7 @@ const step1en = {
               }
             },
             'Animal or hybrid': {
+              label: 'Animal or hybrid',
               question: 'Which of these descriptions best matches your character?',
               options: {
                 Tabaxi: {
@@ -418,6 +436,7 @@ const step1en = {
               }
             },
             'Construct, elemental or plant': {
+              label: 'Construct, elemental or plant',
               question: 'Which of these descriptions best matches your character?',
               options: {
                 Genasi: {
@@ -443,6 +462,7 @@ const step1en = {
           question: "What is the character's origin or nature?",
           options: {
             'Reptilian or bestial': {
+              label: 'Reptilian or bestial',
               question: 'Which of these descriptions best matches your character?',
               options: {
                 Dragonborn: {
@@ -468,6 +488,7 @@ const step1en = {
               }
             },
             'Psionic or exotic': {
+              label: 'Psionic or exotic',
               question: 'Which of these descriptions best matches your character?',
               options: {
                 Orc: {
@@ -501,6 +522,7 @@ const step1en = {
           question: 'What type of figure best represents the character?',
           options: {
             'Monstrous or fierce': {
+              label: 'Monstrous or fierce',
               question: 'Which of these descriptions best matches your character?',
               options: {
                 Bugbear: {
@@ -514,6 +536,7 @@ const step1en = {
               }
             },
             'Giant or mystical': {
+              label: 'Giant or mystical',
               question: 'Which of these descriptions best matches your character?',
               options: {
                 Goliath: {
