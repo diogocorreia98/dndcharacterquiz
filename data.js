@@ -382,7 +382,10 @@ const miscText = {
     notChosen: 'Por escolher',
     quizTitle: 'Questionário de Personagem de D&D',
     resultsTitle: 'Resultados do Questionário',
-    promptIntro: 'Cola este prompt num gerador de arte IA para visualizares a tua personagem!'
+    promptIntro: 'Cola este prompt num gerador de arte IA para visualizares a tua personagem!',
+    startTitle: 'Descobre a tua personagem ideal de Dungeons & Dragons!',
+    startButton: 'Começar',
+    footnote: 'Este quiz visa as mais recentes regras de Dungeons & Dragons e assume as seguintes opções de criação de personagem: todo o conteúdo do Player\'s Handbook 2024, todas as espécies do Mordenkainen Presents: Monsters of the Multiverse exceto as que foram revistas pelo Player\'s Handbook 2024 e todas as subclasses e espécies introduzidas pelo Valda’s Spire of Secrets: Player Pack conforme publicado pelo D&D Beyond. Quiz feito por Diogo Correia, 2025.'
   },
   en: {
     noResults: 'No results available.',
@@ -391,7 +394,10 @@ const miscText = {
     notChosen: 'Yet to be chosen',
     quizTitle: 'D&D Character Quiz',
     resultsTitle: 'Quiz Results',
-    promptIntro: 'Paste this prompt into an AI art generator to visualize your character!'
+    promptIntro: 'Paste this prompt into an AI art generator to visualize your character!',
+    startTitle: 'Discover your ideal Dungeons & Dragons character!',
+    startButton: 'Start',
+    footnote: 'This quiz targets the latest Dungeons & Dragons rules and assumes the following character creation options: all content from the Player\'s Handbook 2024, all species from Mordenkainen Presents: Monsters of the Multiverse except those revised by the Player\'s Handbook 2024 and all subclasses and species introduced in Valda’s Spire of Secrets: Player Pack as published on D&D Beyond. Quiz by Diogo Correia, 2025.'
   }
 };
 

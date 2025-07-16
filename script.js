@@ -7,6 +7,8 @@ const startBtn = document.getElementById('start');
 const startScreen = document.getElementById('start-screen');
 const titleEl = document.getElementById('quiz-title');
 const languageLabel = document.querySelector('#language-select label');
+const startTitleEl = document.getElementById('start-title');
+const footnoteEl = document.getElementById('footnote');
 let started = false;
 let currentLang = 'pt';
 
@@ -28,6 +30,9 @@ function updateStaticText(){
   document.title = miscText[currentLang].quizTitle;
   titleEl.textContent = miscText[currentLang].quizTitle;
   languageLabel.textContent = miscText[currentLang].language;
+  if(startTitleEl) startTitleEl.textContent = miscText[currentLang].startTitle;
+  if(startBtn) startBtn.textContent = miscText[currentLang].startButton;
+  if(footnoteEl) footnoteEl.textContent = miscText[currentLang].footnote;
 }
 
 let stage = 0;
@@ -272,6 +277,7 @@ function renderQuiz() {
 
 langSelect.addEventListener('change', () => {
   currentLang = langSelect.value;
+  updateStaticText();
   if(!started) return;
   const locale = data[currentLang];
   if(locale.step1.tree){
@@ -930,6 +936,7 @@ function restartQuiz(){
   restartBtn.style.display = 'block';
   titleEl.style.display = 'block';
   document.body.insertBefore(document.getElementById('language-select'), quizDiv);
+  if(footnoteEl) footnoteEl.style.display = 'none';
   renderQuiz();
 }
 
@@ -941,7 +948,9 @@ function showStartScreen(){
   document.getElementById('quiz-controls').style.display = 'none';
   restartBtn.style.display = 'none';
   titleEl.style.display = 'none';
+  if(footnoteEl) footnoteEl.style.display = 'block';
   startScreen.appendChild(document.getElementById('language-select'));
+  updateStaticText();
 }
 
 function startQuiz(){
@@ -952,6 +961,7 @@ function startQuiz(){
   restartBtn.style.display = 'block';
   titleEl.style.display = 'block';
   document.body.insertBefore(document.getElementById('language-select'), quizDiv);
+  if(footnoteEl) footnoteEl.style.display = 'none';
   renderQuiz();
 }
 
