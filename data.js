@@ -397,7 +397,7 @@ const miscText = {
     promptIntro: 'Paste this prompt into an AI art generator to visualize your character!',
     startTitle: 'Discover your ideal Dungeons & Dragons character!',
     startButton: 'Start',
-    footnote: 'This quiz targets the latest Dungeons & Dragons rules and assumes the following character creation options: all content from the Player\'s Handbook 2024, all species from Mordenkainen Presents: Monsters of the Multiverse except those revised by the Player\'s Handbook 2024 and all subclasses and species introduced in Valda’s Spire of Secrets: Player Pack as published on D&D Beyond. Quiz by Diogo Correia, 2025.'
+    footnote: 'This quiz uses the latest Dungeons & Dragons rules and assumes the following character creation options: all content from the Player\'s Handbook 2024, all species from Mordenkainen Presents: Monsters of the Multiverse except those revised by the Player\'s Handbook 2024, and all subclasses and species introduced by Valda\u2019s Spire of Secrets: Player Pack as published by D&D Beyond. Quiz by Diogo Correia, 2025.'
   }
 };
 
