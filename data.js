@@ -570,7 +570,7 @@ const nameMap = {
       'Celestial Patron': 'com Patrono Celestial',
       'Fiend Patron': 'com Patrono Infernal',
       'Future You': 'com A Sua Versão Futura como Patrono',
-      'Great Old One Patron': 'com Patrono Grande Ancião',
+      'Great Old One Patron': 'com Patrono Ancião Cósmico',
       Abjurer: 'Abjurador',
       Diviner: 'Divinador',
       Evoker: 'Evocador',
