@@ -68,7 +68,7 @@ const step2pt = {
                 question: 'Que tipo de magia pretendes?',
                 options: {
                   A: { label: 'Estudo arcano e preparação. (Wizard)', result: 'Wizard' },
-                  B: { label: 'Magia que vem de dentro. (Sorcerer)', result: 'Sorcerer' },
+                  B: { label: 'Magia maleável que vem de dentro. (Sorcerer)', result: 'Sorcerer' },
                   C: { label: 'Magia divina e cura. (Cleric)', result: 'Cleric' },
                   D: { label: 'Feitiços da natureza e metamorfose. (Druid)', result: 'Druid' }
                 }
@@ -81,7 +81,7 @@ const step2pt = {
                 options: {
                   A: { label: 'Guerreiro sagrado com alguma magia. (Paladin)', result: 'Paladin' },
                   B: { label: 'Explorador com habilidades marciais e alguma magia. (Ranger)', result: 'Ranger' },
-                  C: { label: 'Artista inspirador que conjura magias pela sua arte. (Bard)', result: 'Bard' },
+                  C: { label: 'Ídolo astuto que conjura magias pela sua arte. (Bard)', result: 'Bard' },
                   D: { label: 'Conjurador misterioso habilitado por um pacto. (Warlock)', result: 'Warlock' }
                 }
               }
@@ -314,7 +314,7 @@ const subClassPT = {
       'Path of the Wild Heart': 'Canalizo o poder primal das feras para lutar como lobo, urso ou \u00e1guia. (Path of the Wild Heart)',
       'Path of the World Tree': 'Extraio for\u00e7a da \u00c1rvore do Mundo, teleportando-me e curando-me em plena batalha. (Path of the World Tree)',
       'Path of the Zealot': 'Ardo com f\u00faria divina, gritando juramentos radiantes entre os golpes. (Path of the Zealot)',
-      'Path of the Muscle Wizard': 'Sou o feiticeiro mais forte do mundo — os meus punhos s\u00e3o feiti\u00e7os e a minha f\u00faria prova-o. (Path of the Muscle Wizard)'
+      'Path of the Muscle Wizard': 'Sou o feiticeiro mais forte do mundo — os meus punhos s\u00e3o feiti\u00e7os e a minha f\u00faria provam-no. (Path of the Muscle Wizard)'
     }
   },
   Bard: {
@@ -331,14 +331,14 @@ const subClassPT = {
     options: {
       'Life Domain': 'Curo os feridos e levo luz aos moribundos. (Life Domain)',
       'Light Domain': 'Ateio fogo \u00e0 escurid\u00e3o com chama sagrada. (Light Domain)',
-      'Trickery Domain': 'Tecelo ilus\u00f5es divinas e engano os inimigos. (Trickery Domain)',
+      'Trickery Domain': 'Teço ilus\u00f5es divinas e engano os inimigos. (Trickery Domain)',
       'War Domain': 'Marcho para a guerra como sacerdote da justi\u00e7a. (War Domain)'
     }
   },
   Druid: {
     question: 'Como comunicas com a natureza?',
     options: {
-      'Circle of the Land': 'Lan\u00e7o feiti\u00e7os inspirados em florestas, desertos ou tundra. (Circle of the Land)',
+      'Circle of the Land': 'Lan\u00e7o feiti\u00e7os inspirados em florestas, desertos ou pólos árticos. (Circle of the Land)',
       'Circle of the Moon': 'Torno-me nas feras — garras, presas e f\u00faria. (Circle of the Moon)',
       'Circle of the Sea': 'Invoco o poder do mar e lan\u00e7o tempestades violentas. (Circle of the Sea)',
       'Circle of Stars': 'Brilho com luz estelar e guio pelas constela\u00e7\u00f5es. (Circle of Stars)'
@@ -348,7 +348,7 @@ const subClassPT = {
     question: 'O que define o teu estilo de combate?',
     options: {
       Champion: 'Confio na habilidade pura e acerto golpes brutais. (Champion)',
-      'Battle Master': 'Supero inimigos com t\u00e1tica e precis\u00e3o. (Battle Master)',
+      'Battle Master': 'Supero inimigos com t\u00e1ticas e manobras de precis\u00e3o. (Battle Master)',
       'Eldritch Knight': 'Misturo espada e magia com disciplina arcana. (Eldritch Knight)',
       'Psi Warrior': 'Moldo os golpes com for\u00e7a ps\u00edquica. (Psi Warrior)',
       Dungeoneer: 'Sobrevivo a armadilhas e monstros por instinto. (Dungeoneer)'
@@ -357,7 +357,7 @@ const subClassPT = {
   Monk: {
     question: 'Que caminho guia a tua disciplina marcial?',
     options: {
-      'Way of the Open Hand': 'Domino o equil\u00edbrio e derrubo advers\u00e1rios. (Way of the Open Hand)',
+      'Way of the Open Hand': 'Domino o equil\u00edbrio e derrubo advers\u00e1rios pelo meu punho. (Way of the Open Hand)',
       'Way of Shadow': 'Desapare\u00e7o nas sombras e ataco do silêncio. (Way of Shadow)',
       'Way of the Elements': 'Control\u00f5 os quatro elementos com o movimento. (Way of the Four Elements)',
       'Way of Mercy': 'Uso uma m\u00e1scara, curando e punindo. (Way of Mercy)',
@@ -377,18 +377,18 @@ const subClassPT = {
   Ranger: {
     question: 'Que tipo de guia selvagem és?',
     options: {
-      'Beast Master': 'Combato ao lado de um companheiro animal fiel. (Beast Master)',
-      'Fey Wanderer': 'Movo-me com charme sobrenatural do Feywild. (Fey Wanderer)',
-      'Gloom Stalker': 'Ataque invis\u00edvel das sombras profundas. (Gloom Stalker)',
-      Hunter: 'Adapto-me a todas as amea\u00e7as e domino o terreno. (Hunter)'
+      'Beast Master': 'Combato ao lado de um feroz companheiro animal. (Beast Master)',
+      'Fey Wanderer': 'Movo-me com magia e charme sobrenatural feérico. (Fey Wanderer)',
+      'Gloom Stalker': 'Ataco invis\u00edvel, navegando as sombras profundas. (Gloom Stalker)',
+      Hunter: 'Adapto-me a todas as amea\u00e7as e domino o terreno em busca da minha presa. (Hunter)'
     }
   },
   Rogue: {
     question: 'O que define as tuas habilidades furtivas?',
     options: {
-      'Arachnoid Stalker': 'Enredo inimigos e escalo paredes como uma aranha mortal. (Arachnoid Stalker)',
+      'Arachnoid Stalker': 'Enredo inimigos e escalo paredes como uma aranha mortífera. (Arachnoid Stalker)',
       'Arcane Trickster': 'Misturo travessuras arcanas com m\u00e3os r\u00e1pidas. (Arcane Trickster)',
-      Assassin: 'Golpeio antes que percebam a minha presen\u00e7a. (Assassin)',
+      Assassin: 'Golpeio letalmente antes que percebam a minha presen\u00e7a. (Assassin)',
       Soulknife: 'Invoco l\u00e2minas do pensamento e desvane\u00e7o-me como um fantasma. (Soulknife)',
       Thief: 'Sou r\u00e1pido, esperto e desapare\u00e7o antes do alarme soar. (Thief)'
     }
@@ -396,7 +396,7 @@ const subClassPT = {
   Sorcerer: {
     question: 'De onde vem o teu poder?',
     options: {
-      'Aberrant Sorcery': 'Fui tocado por uma for\u00e7a alien\u00edgena e enlouquecedora. (Aberrant Sorcery)',
+      'Aberrant Sorcery': 'Fui influenciado por uma for\u00e7a alien\u00edgena e enlouquecedora. (Aberrant Sorcery)',
       'Clockwork Sorcery': 'Canalizo as engrenagens da realidade para impor ordem m\u00e1gica. (Clockwork Sorcery)',
       'Draconic Sorcery': 'O meu sangue drac\u00f3nico arde com poder elemental. (Draconic Sorcery)',
       'Wild Magic': 'Sou uma explos\u00e3o arcana ambulante — ca\u00f3tica e imprevis\u00edvel. (Wild Magic)'
@@ -407,9 +407,9 @@ const subClassPT = {
     options: {
       'Archfey Patron': 'Uma fada trapaceira aben\u00e7oou-me com magia e travessura. (Archfey Patron)',
       'Celestial Patron': 'Um ser radiante concedeu-me chamas curativas e esperan\u00e7a. (Celestial Patron)',
-      'Fiend Patron': 'Um pacto demon\u00edaco alimenta-me com fogo e f\u00faria. (Fiend Patron)',
+      'Fiend Patron': 'Um pacto diabólico alimenta-me com fogo e f\u00faria. (Fiend Patron)',
       'Future You': 'Sou orientado pelo meu futuro eu — sei o que est\u00e1 para vir. (Future You)',
-      'Great Old One Patron': 'Falo com um deus antigo de loucura que sussurra verdades. (Great Old One Patron)'
+      'Great Old One Patron': 'Falo com um deus antigo de loucura que me sussurra verdades. (Great Old One Patron)'
     }
   },
   Wizard: {
@@ -417,7 +417,7 @@ const subClassPT = {
     options: {
       Abjurer: 'Protejo aliados e bloqueio a pior magia. (Abjurer)',
       Diviner: 'Tor\u00e7o o destino e sei sempre o que est\u00e1 para acontecer. (Diviner)',
-      Evoker: 'Liberto devasta\u00e7\u00e3o elemental como uma magia viva. (Evoker)',
+      Evoker: 'Controlo devasta\u00e7\u00e3o elemental. (Evoker)',
       Illusionist: 'Engano, distraio e domino atrav\u00e9s de ilus\u00e3o. (Illusionist)'
     }
   }
