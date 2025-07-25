@@ -25,7 +25,7 @@ const step2pt = {
                 question: 'Escolhe o teu estilo:',
                 options: {
                   A: { label: 'Fúria bruta e resiliência. (Barbarian)', result: 'Barbarian' },
-                  B: { label: 'Mestre de armas com flexibilidade. (Fighter)', result: 'Fighter' },
+                  B: { label: 'Mestre versátil de armas. (Fighter)', result: 'Fighter' },
                   C: { label: 'Golpeador furtivo e ágil. (Rogue)', result: 'Rogue' }
                 }
               }
@@ -35,7 +35,7 @@ const step2pt = {
               next: {
                 question: 'Escolhe o teu estilo:',
                 options: {
-                  A: { label: 'Curandeiro divino e apoio em batalha. (Cleric)', result: 'Cleric' },
+                  A: { label: 'Curandeiro divino que apoia em batalha. (Cleric)', result: 'Cleric' },
                   B: { label: 'Guerreiro sagrado inspirador. (Paladin)', result: 'Paladin' },
                   C: { label: 'Rastreador habilidoso e sobrevivente. (Ranger)', result: 'Ranger' },
                   D: { label: 'Mestre de magias arcanas através de estudo. (Wizard)', result: 'Wizard' }
@@ -56,16 +56,16 @@ const step2pt = {
                 question: 'Escolhe o teu estilo:',
                 options: {
                   A: { label: 'Fúria bruta e resiliência. (Barbarian)', result: 'Barbarian' },
-                  B: { label: 'Mestre de armas com flexibilidade. (Fighter)', result: 'Fighter' },
+                  B: { label: 'Mestre versátil de armas. (Fighter)', result: 'Fighter' },
                   C: { label: 'Golpeador furtivo e ágil. (Rogue)', result: 'Rogue' },
-                  D: { label: 'Artista marcial com poder interior. (Monk)', result: 'Monk' }
+                  D: { label: 'Perito em artes marciais com poder interior. (Monk)', result: 'Monk' }
                 }
               }
             },
             B: {
               label: 'Conjuração completa e foco em magia',
               next: {
-                question: 'Escolhe o sabor da magia:',
+                question: 'Que tipo de magia pretendes?',
                 options: {
                   A: { label: 'Estudo arcano e preparação. (Wizard)', result: 'Wizard' },
                   B: { label: 'Magia que vem de dentro. (Sorcerer)', result: 'Sorcerer' },
@@ -80,9 +80,9 @@ const step2pt = {
                 question: 'Escolhe a mistura que preferes:',
                 options: {
                   A: { label: 'Guerreiro sagrado com alguma magia. (Paladin)', result: 'Paladin' },
-                  B: { label: 'Explorador com habilidades marciais e feitiços. (Ranger)', result: 'Ranger' },
-                  C: { label: 'Artista que conjura magias através da inspiração. (Bard)', result: 'Bard' },
-                  D: { label: 'Conjurador habilitado por um pacto. (Warlock)', result: 'Warlock' }
+                  B: { label: 'Explorador com habilidades marciais e alguma magia. (Ranger)', result: 'Ranger' },
+                  C: { label: 'Artista inspirador que conjura magias pela sua arte. (Bard)', result: 'Bard' },
+                  D: { label: 'Conjurador misterioso habilitado por um pacto. (Warlock)', result: 'Warlock' }
                 }
               }
             }
