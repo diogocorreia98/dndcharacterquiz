@@ -529,7 +529,7 @@ const subQuestionsPT = {
     question: 'Que tipo de elfo é a personagem?',
     options: {
       'High Elf': 'Elegante e de feições finas, tem afinidade natural com a magia arcana.',
-      'Wood Elf': 'Ágil e discreta, de pele bronzeada e olhar atento, move-se com facilidade na natureza.',
+      'Wood Elf': 'Ágil e discreto, de pele bronzeada e olhar atento, move-se com facilidade na natureza.',
       'Drow Elf': 'De pele escura e cabelo branco, vê no escuro e domina magia do Subterrâneo.',
       'Eladrin': {
         label: 'Beleza feérica em constante mutação; muda com as estações e transporta-se em clarões mágicos.',
@@ -546,7 +546,7 @@ const subQuestionsPT = {
     }
   },
   Genasi: {
-    question: 'Qual é a essência elemental da personagem?',
+    question: 'Que tipo de Genasi é a personagem?',
     options: {
       'Air Genasi': 'Cabelos flutuantes e passos leves, desloca-se com facilidade e respira ar puro mesmo em altitude.',
       'Earth Genasi': 'Pele rugosa como pedra, resiste a terreno difícil e mantém-se firme sob pressão.',
@@ -557,16 +557,16 @@ const subQuestionsPT = {
   'Geppettin (Plushie or Bisque)': {
     question: 'Que tipo de brinquedo vivo é a personagem?',
     options: {
-      'Bisque Geppettin': 'Feita de porcelana pintada, é delicada mas lança magia com estilo e graça.',
-      'Plushie Geppettin': 'Feita de peluche macio, é adorável e aguenta mais do que parece.'
+      'Bisque Geppettin': 'Feito de porcelana pintada, delicado mas lança magia com estilo e graça.',
+      'Plushie Geppettin': 'Feito de peluche macio, é adorável e aguenta mais do que parece.'
     }
   },
   Gnome: {
     question: 'Que tipo de gnomo é a personagem?',
     options: {
-      'Forest Gnome': 'Pequena e curiosa, entende os animais e cria ilusões simples.',
+      'Forest Gnome': 'Pequeno e curioso, entende os animais e cria ilusões simples.',
       'Rock Gnome': 'Com mãos sujas de graxa, inventa engenhocas mágicas e práticas.',
-      'Deep Gnome': 'Pele cinzenta e olhos grandes como pedras preciosas; move-se sem ser visto e resiste ao toque da magia.'
+      'Deep Gnome': 'De pele cinzenta e olhos grandes como pedras preciosas; move-se sem ser visto e resiste ao toque da magia.'
     }
   },
   Goliath: {
@@ -593,7 +593,7 @@ const subQuestionsPT = {
     }
   },
   Mandrake: {
-    question: 'Que poder cresce com a estação da personagem?',
+    question: 'Que tipo de Mandrágora é a tua personagem?',
     options: {
       'Spring Mandrake': 'Com flores frescas e vinhas leves, derruba inimigos no ar.',
       'Summer Mandrake': 'De folhagem densa e robusta, puxa os inimigos para junto de si.',
@@ -611,7 +611,7 @@ const subQuestionsPT = {
     }
   },
   Tiefling: {
-    question: 'Que linhagem infernal corre no sangue da personagem?',
+    question: 'Que tipo de Tiefling é a tua personagem?',
     options: {
       'Abyssal Tiefling': 'Com chifres animalescos e aura instável, liberta energia caótica.',
       'Infernal Tiefling': 'De pele vermelha e olhos intensos, canaliza fogo com precisão.',
@@ -622,7 +622,7 @@ const subQuestionsPT = {
     question: 'Que tipo de sopro dracónico possui a personagem?',
     options: {
       'Ácido': {
-        question: 'Qual é a aparência da personagem?',
+        question: 'Que tipo de Draconato é a personagem?',
         options: {
           'Black Dragonborn': 'Escamas negras e olhar duro, cospe ácido que corrói tudo à frente.',
           'Copper Dragonborn': 'Escamas brilhantes e ar brincalhão, cospe ácido com um sorriso trocista.'
