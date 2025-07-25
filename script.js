@@ -404,10 +404,11 @@ function getStyleRoot(){
 
 function canonicalAbility(str){
   if(!str) return '';
-  // Normalize spacing but keep the original order of abilities
+  // Normalize spacing and order abilities alphabetically
   return str
     .split('+')
     .map(s => s.trim())
+    .sort((a,b)=>a.localeCompare(b))
     .join(' + ');
 }
 
