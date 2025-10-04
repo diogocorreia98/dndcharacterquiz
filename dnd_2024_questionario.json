@@ -1,0 +1,392 @@
+{
+  "version": "1.3",
+  "title": "Descobre a tua personagem de Dungeons & Dragons 2024",
+  "locale": "pt-PT",
+  "root": "q_gender",
+  "nodes": {
+    "q_gender": {
+      "type": "question",
+      "section": "gender",
+      "question": "Como se apresenta a tua personagem em termos de género?",
+      "options": [
+        {
+          "label": "Feminina",
+          "value": "A",
+          "set": [
+            {
+              "var": "gender",
+              "op": "set",
+              "value": "A"
+            }
+          ],
+          "next": "q_species_exoticness"
+        },
+        {
+          "label": "Masculina",
+          "value": "B",
+          "set": [
+            {
+              "var": "gender",
+              "op": "set",
+              "value": "B"
+            }
+          ],
+          "next": "q_species_exoticness"
+        },
+        {
+          "label": "Andrógina",
+          "value": "C",
+          "set": [
+            {
+              "var": "gender",
+              "op": "set",
+              "value": "C"
+            }
+          ],
+          "next": "q_species_exoticness"
+        }
+      ]
+    },
+    "q_species_exoticness": {
+      "type": "question",
+      "section": "species",
+      "question": "Quão exótica pretendes que a espécie da tua personagem seja?",
+      "options": [
+        {
+          "label": "A espécie humana",
+          "value": "A",
+          "set": [
+            {
+              "var": "species_commonality",
+              "op": "set",
+              "value": "A"
+            },
+            {
+              "var": "species",
+              "op": "set",
+              "value": "A"
+            }
+          ],
+          "next": "q_class_complexity"
+        },
+        {
+          "label": "Uma espécie não humana, conhecida à generalidade da população",
+          "value": "B",
+          "set": [
+            {
+              "var": "species_commonality",
+              "op": "set",
+              "value": "B"
+            }
+          ],
+          "next": "q_height"
+        },
+        {
+          "label": "Uma espécie não humana e estranha a algumas pessoas",
+          "value": "C",
+          "set": [
+            {
+              "var": "species_commonality",
+              "op": "set",
+              "value": "C"
+            }
+          ],
+          "next": "q_height"
+        },
+        {
+          "label": "Uma espécie não humana e estranha à generalidade da população",
+          "value": "D",
+          "set": [
+            {
+              "var": "species_commonality",
+              "op": "set",
+              "value": "D"
+            }
+          ],
+          "next": "q_height"
+        }
+      ]
+    },
+    "q_height": {
+      "type": "question",
+      "section": "species",
+      "question": "Em que faixa de alturas se encaixa a tua personagem?",
+      "options": [
+        {
+          "label": "Minúscula – Entre 0,6 m e 0,9 m (como um banco de taverna ou um pinguim adulto)",
+          "value": "A",
+          "set": [
+            {
+              "var": "height",
+              "op": "set",
+              "value": "A"
+            }
+          ],
+          "next": "q_species_animal_likeness"
+        },
+        {
+          "label": "Baixa – Cerca de 1,2 m (como uma criança humana ou um pónei de carga)",
+          "value": "B",
+          "set": [
+            {
+              "var": "height",
+              "op": "set",
+              "value": "B"
+            }
+          ],
+          "next": "q_species_animal_likeness"
+        },
+        {
+          "label": "Média – Entre 1,5 m e 1,8 m (altura típica de um humano adulto)",
+          "value": "C",
+          "set": [
+            {
+              "var": "height",
+              "op": "set",
+              "value": "C"
+            }
+          ],
+          "next": "q_species_animal_likeness"
+        },
+        {
+          "label": "Alta – Entre 2,1 m e 2,4 m (como uma carroça de transporte carregada ou um urso polar)",
+          "value": "D",
+          "set": [
+            {
+              "var": "height",
+              "op": "set",
+              "value": "D"
+            }
+          ],
+          "next": "q_species_animal_likeness"
+        }
+      ]
+    },
+    "q_species_animal_likeness": {
+      "type": "question",
+      "section": "species",
+      "question": "A tua personagem tem traços de animal?",
+      "options": [
+        {
+          "label": "Sim",
+          "value": "A",
+          "set": [
+            {
+              "var": "animal_likeness",
+              "op": "set",
+              "value": "A"
+            }
+          ],
+          "next": "q_class_complexity"
+        },
+        {
+          "label": "Não",
+          "value": "B",
+          "set": [
+            {
+              "var": "animal_likeness",
+              "op": "set",
+              "value": "B"
+            }
+          ],
+          "next": "q_class_complexity"
+        }
+      ]
+    },
+    "q_class_complexity": {
+      "type": "question",
+      "section": "class",
+      "question": "Até que nível de complexidade pode a tua classe pertencer?",
+      "options": [
+        {
+          "label": "Só tenho interesse nas classes mais simples.",
+          "value": "A",
+          "set": [
+            {
+              "var": "class_complexity",
+              "op": "set",
+              "value": "A"
+            }
+          ]
+        },
+        {
+          "label": "Só não tenho interesse nas classes mais complexas.",
+          "value": "B",
+          "set": [
+            {
+              "var": "class_complexity",
+              "op": "set",
+              "value": "B"
+            }
+          ]
+        },
+        {
+          "label": "A complexidade não me aflige.",
+          "value": "C",
+          "set": [
+            {
+              "var": "class_complexity",
+              "op": "set",
+              "value": "C"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "sections": {
+      "gender": {
+        "pt": "Género",
+        "en": "Gender"
+      },
+      "species": {
+        "pt": "Espécie",
+        "en": "Species"
+      },
+      "class": {
+        "pt": "Classe",
+        "en": "Class"
+      }
+    },
+    "variables": {
+      "gender": {
+        "type": "enum",
+        "symbols": [
+          "A",
+          "B",
+          "C"
+        ]
+      },
+      "species_commonality": {
+        "type": "enum",
+        "symbols": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ]
+      },
+      "species": {
+        "type": "enum",
+        "symbols": [
+          "A",
+          "B1",
+          "C1",
+          "D1"
+        ]
+      },
+      "height": {
+        "type": "enum",
+        "symbols": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ]
+      },
+      "animal_likeness": {
+        "type": "enum",
+        "symbols": [
+          "A",
+          "B"
+        ]
+      },
+      "class_complexity": {
+        "type": "enum",
+        "symbols": [
+          "A",
+          "B",
+          "C"
+        ]
+      }
+    },
+    "value_map": {
+      "gender": {
+        "A": {
+          "pt": "Feminina",
+          "en": "Female"
+        },
+        "B": {
+          "pt": "Masculina",
+          "en": "Male"
+        },
+        "C": {
+          "pt": "Andrógina",
+          "en": "Androgynous"
+        }
+      },
+      "species_commonality": {
+        "A": {
+          "pt": "Humano",
+          "en": "Human"
+        },
+        "B": {
+          "pt": "Não humano — comum/conhecido",
+          "en": "Non-human — well-known"
+        },
+        "C": {
+          "pt": "Não humano — estranho para alguns",
+          "en": "Non-human — odd to some"
+        },
+        "D": {
+          "pt": "Não humano — estranho para a maioria",
+          "en": "Non-human — odd to most"
+        }
+      },
+      "species": {
+        "A": {
+          "pt": "Humano",
+          "en": "Human"
+        }
+      },
+      "height": {
+        "A": {
+          "pt": "Minúscula — 0,6–0,9 m",
+          "en": "Tiny — 0.6–0.9 m"
+        },
+        "B": {
+          "pt": "Baixa — ~1,2 m",
+          "en": "Short — ~1.2 m"
+        },
+        "C": {
+          "pt": "Média — 1,5–1,8 m",
+          "en": "Medium — 1.5–1.8 m"
+        },
+        "D": {
+          "pt": "Alta — 2,1–2,4 m",
+          "en": "Tall — 2.1–2.4 m"
+        }
+      },
+      "animal_likeness": {
+        "A": {
+          "pt": "Tem traços de animal",
+          "en": "Has animal traits"
+        },
+        "B": {
+          "pt": "Não tem traços de animal",
+          "en": "No animal traits"
+        }
+      },
+      "class_complexity": {
+        "A": {
+          "pt": "Apenas classes simples",
+          "en": "Only the simplest classes"
+        },
+        "B": {
+          "pt": "Evitar as mais complexas",
+          "en": "Avoid only the most complex"
+        },
+        "C": {
+          "pt": "Qualquer nível de complexidade",
+          "en": "Any complexity is fine"
+        }
+      }
+    },
+    "supported_locales": [
+      "pt-PT",
+      "en"
+    ],
+    "initial_state": {}
+  }
+}
