@@ -1,5 +1,5 @@
 {
-  "version": "1.5",
+  "version": "1.7",
   "title": "Descobre a tua personagem de Dungeons & Dragons 2024",
   "locale": "pt-PT",
   "root": "q_gender",
@@ -160,7 +160,21 @@
           ],
           "next": "q_species_animal_likeness"
         }
-      ]
+      ],
+      "skip_if_single_viable": {
+        "dataset": "species",
+        "option_field": "height",
+        "filters": [
+          {
+            "field": "species_commonality",
+            "var": "species_commonality",
+            "op": "contains",
+            "optional": false
+          }
+        ],
+        "skip_to": "q_species_pick",
+        "set_var_to_viable_option": true
+      }
     },
     "q_species_animal_likeness": {
       "type": "question",
@@ -191,7 +205,27 @@
           ],
           "next": "q_species_pick"
         }
-      ]
+      ],
+      "skip_if_single_viable": {
+        "dataset": "species",
+        "option_field": "animal_likeness",
+        "filters": [
+          {
+            "field": "species_commonality",
+            "var": "species_commonality",
+            "op": "contains",
+            "optional": false
+          },
+          {
+            "field": "height",
+            "var": "height",
+            "op": "contains",
+            "optional": false
+          }
+        ],
+        "skip_to": "q_species_pick",
+        "set_var_to_viable_option": true
+      }
     },
     "q_species_pick": {
       "type": "question",
@@ -207,17 +241,20 @@
           {
             "field": "species_commonality",
             "var": "species_commonality",
-            "op": "contains"
+            "op": "contains",
+            "optional": true
           },
           {
             "field": "height",
             "var": "height",
-            "op": "contains"
+            "op": "contains",
+            "optional": true
           },
           {
             "field": "animal_likeness",
             "var": "animal_likeness",
-            "op": "contains"
+            "op": "contains",
+            "optional": true
           }
         ]
       },
