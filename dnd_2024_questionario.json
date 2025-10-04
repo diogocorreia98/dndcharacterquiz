@@ -1,5 +1,5 @@
 {
-  "version": "1.3",
+  "version": "1.5",
   "title": "Descobre a tua personagem de Dungeons & Dragons 2024",
   "locale": "pt-PT",
   "root": "q_gender",
@@ -177,7 +177,7 @@
               "value": "A"
             }
           ],
-          "next": "q_class_complexity"
+          "next": "q_species_pick"
         },
         {
           "label": "Não",
@@ -189,9 +189,46 @@
               "value": "B"
             }
           ],
-          "next": "q_class_complexity"
+          "next": "q_species_pick"
         }
       ]
+    },
+    "q_species_pick": {
+      "type": "question",
+      "section": "species",
+      "question": "Que espécie preferes jogar?",
+      "options_source": {
+        "type": "inline",
+        "dataset": "species",
+        "label_field": "pt",
+        "value_field": "code",
+        "distinct": true,
+        "filters": [
+          {
+            "field": "species_commonality",
+            "var": "species_commonality",
+            "op": "contains"
+          },
+          {
+            "field": "height",
+            "var": "height",
+            "op": "contains"
+          },
+          {
+            "field": "animal_likeness",
+            "var": "animal_likeness",
+            "op": "contains"
+          }
+        ]
+      },
+      "on_select": [
+        {
+          "var": "species",
+          "op": "set",
+          "value_from_option": true
+        }
+      ],
+      "next": "q_class_complexity"
     },
     "q_class_complexity": {
       "type": "question",
@@ -271,9 +308,42 @@
         "type": "enum",
         "symbols": [
           "A",
-          "B1",
-          "C1",
-          "D1"
+          "S001",
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014",
+          "S015",
+          "S016",
+          "S017",
+          "S018",
+          "S019",
+          "S020",
+          "S021",
+          "S022",
+          "S023",
+          "S024",
+          "S025",
+          "S026",
+          "S027",
+          "S028",
+          "S029",
+          "S030",
+          "S031",
+          "S032",
+          "S033",
+          "S034",
+          "S035",
+          "S036"
         ]
       },
       "height": {
@@ -338,6 +408,150 @@
         "A": {
           "pt": "Humano",
           "en": "Human"
+        },
+        "S001": {
+          "pt": "Aarakocra",
+          "en": "Aarakocra"
+        },
+        "S002": {
+          "pt": "Aasimar",
+          "en": "Aasimar"
+        },
+        "S003": {
+          "pt": "Bugbear",
+          "en": "Bugbear"
+        },
+        "S004": {
+          "pt": "Centaur",
+          "en": "Centaur"
+        },
+        "S005": {
+          "pt": "Changeling",
+          "en": "Changeling"
+        },
+        "S006": {
+          "pt": "Custom Lineage",
+          "en": "Custom Lineage"
+        },
+        "S007": {
+          "pt": "Dragonborn",
+          "en": "Dragonborn"
+        },
+        "S008": {
+          "pt": "Dwarf",
+          "en": "Dwarf"
+        },
+        "S009": {
+          "pt": "Elf",
+          "en": "Elf"
+        },
+        "S010": {
+          "pt": "Fairy",
+          "en": "Fairy"
+        },
+        "S011": {
+          "pt": "Firbolg",
+          "en": "Firbolg"
+        },
+        "S012": {
+          "pt": "Genasi",
+          "en": "Genasi"
+        },
+        "S013": {
+          "pt": "Geppettin",
+          "en": "Geppettin"
+        },
+        "S014": {
+          "pt": "Gith",
+          "en": "Gith"
+        },
+        "S015": {
+          "pt": "Gnome",
+          "en": "Gnome"
+        },
+        "S016": {
+          "pt": "Goblin",
+          "en": "Goblin"
+        },
+        "S017": {
+          "pt": "Goliath",
+          "en": "Goliath"
+        },
+        "S018": {
+          "pt": "Grung",
+          "en": "Grung"
+        },
+        "S019": {
+          "pt": "Halfling",
+          "en": "Halfling"
+        },
+        "S020": {
+          "pt": "Harengon",
+          "en": "Harengon"
+        },
+        "S021": {
+          "pt": "Hobgoblin",
+          "en": "Hobgoblin"
+        },
+        "S022": {
+          "pt": "Human",
+          "en": "Human"
+        },
+        "S023": {
+          "pt": "Kenku",
+          "en": "Kenku"
+        },
+        "S024": {
+          "pt": "Kobold",
+          "en": "Kobold"
+        },
+        "S025": {
+          "pt": "Lizardfolk",
+          "en": "Lizardfolk"
+        },
+        "S026": {
+          "pt": "Mandrake",
+          "en": "Mandrake"
+        },
+        "S027": {
+          "pt": "Minotaur",
+          "en": "Minotaur"
+        },
+        "S028": {
+          "pt": "Orc",
+          "en": "Orc"
+        },
+        "S029": {
+          "pt": "Satyr",
+          "en": "Satyr"
+        },
+        "S030": {
+          "pt": "Shifter",
+          "en": "Shifter"
+        },
+        "S031": {
+          "pt": "Tabaxi",
+          "en": "Tabaxi"
+        },
+        "S032": {
+          "pt": "Tiefling",
+          "en": "Tiefling"
+        },
+        "S033": {
+          "pt": "Tortle",
+          "en": "Tortle"
+        },
+        "S034": {
+          "pt": "Triton",
+          "en": "Triton"
+        },
+        "S035": {
+          "pt": "Verdan",
+          "en": "Verdan"
+        },
+        "S036": {
+          "pt": "Yuan-ti",
+          "en": "Yuan-ti"
         }
       },
       "height": {
@@ -382,6 +596,558 @@
           "en": "Any complexity is fine"
         }
       }
+    },
+    "datasets": {
+      "species": [
+        {
+          "code": "S001",
+          "pt": "Aarakocra",
+          "en": "Aarakocra",
+          "species_commonality": [
+            "D"
+          ],
+          "height": [
+            "C"
+          ],
+          "animal_likeness": [
+            "A"
+          ]
+        },
+        {
+          "code": "S002",
+          "pt": "Aasimar",
+          "en": "Aasimar",
+          "species_commonality": [
+            "B"
+          ],
+          "height": [
+            "B",
+            "C",
+            "D"
+          ],
+          "animal_likeness": [
+            "B"
+          ]
+        },
+        {
+          "code": "S003",
+          "pt": "Bugbear",
+          "en": "Bugbear",
+          "species_commonality": [
+            "C"
+          ],
+          "height": [
+            "C",
+            "D"
+          ],
+          "animal_likeness": [
+            "A"
+          ]
+        },
+        {
+          "code": "S004",
+          "pt": "Centaur",
+          "en": "Centaur",
+          "species_commonality": [
+            "C"
+          ],
+          "height": [
+            "C",
+            "D"
+          ],
+          "animal_likeness": [
+            "A"
+          ]
+        },
+        {
+          "code": "S005",
+          "pt": "Changeling",
+          "en": "Changeling",
+          "species_commonality": [
+            "D"
+          ],
+          "height": [
+            "A",
+            "B",
+            "C"
+          ],
+          "animal_likeness": [
+            "B"
+          ]
+        },
+        {
+          "code": "S006",
+          "pt": "Custom Lineage",
+          "en": "Custom Lineage",
+          "species_commonality": [
+            "D"
+          ],
+          "height": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "animal_likeness": [
+            "B"
+          ]
+        },
+        {
+          "code": "S007",
+          "pt": "Dragonborn",
+          "en": "Dragonborn",
+          "species_commonality": [
+            "B"
+          ],
+          "height": [
+            "C",
+            "D"
+          ],
+          "animal_likeness": [
+            "A"
+          ]
+        },
+        {
+          "code": "S008",
+          "pt": "Dwarf",
+          "en": "Dwarf",
+          "species_commonality": [
+            "B",
+            "C"
+          ],
+          "height": [
+            "B",
+            "C"
+          ],
+          "animal_likeness": [
+            "B"
+          ]
+        },
+        {
+          "code": "S009",
+          "pt": "Elf",
+          "en": "Elf",
+          "species_commonality": [
+            "B",
+            "C"
+          ],
+          "height": [
+            "C"
+          ],
+          "animal_likeness": [
+            "B"
+          ]
+        },
+        {
+          "code": "S010",
+          "pt": "Fairy",
+          "en": "Fairy",
+          "species_commonality": [
+            "D"
+          ],
+          "height": [
+            "A"
+          ],
+          "animal_likeness": [
+            "A"
+          ]
+        },
+        {
+          "code": "S011",
+          "pt": "Firbolg",
+          "en": "Firbolg",
+          "species_commonality": [
+            "D"
+          ],
+          "height": [
+            "D"
+          ],
+          "animal_likeness": [
+            "A"
+          ]
+        },
+        {
+          "code": "S012",
+          "pt": "Genasi",
+          "en": "Genasi",
+          "species_commonality": [
+            "C"
+          ],
+          "height": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "animal_likeness": [
+            "B"
+          ]
+        },
+        {
+          "code": "S013",
+          "pt": "Geppettin",
+          "en": "Geppettin",
+          "species_commonality": [
+            "D"
+          ],
+          "height": [
+            "A",
+            "C"
+          ],
+          "animal_likeness": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "code": "S014",
+          "pt": "Gith",
+          "en": "Gith",
+          "species_commonality": [
+            "D"
+          ],
+          "height": [
+            "C",
+            "D"
+          ],
+          "animal_likeness": [
+            "B"
+          ]
+        },
+        {
+          "code": "S015",
+          "pt": "Gnome",
+          "en": "Gnome",
+          "species_commonality": [
+            "B",
+            "C"
+          ],
+          "height": [
+            "A",
+            "B"
+          ],
+          "animal_likeness": [
+            "B"
+          ]
+        },
+        {
+          "code": "S016",
+          "pt": "Goblin",
+          "en": "Goblin",
+          "species_commonality": [
+            "C"
+          ],
+          "height": [
+            "A",
+            "B"
+          ],
+          "animal_likeness": [
+            "B"
+          ]
+        },
+        {
+          "code": "S017",
+          "pt": "Goliath",
+          "en": "Goliath",
+          "species_commonality": [
+            "B"
+          ],
+          "height": [
+            "D"
+          ],
+          "animal_likeness": [
+            "B"
+          ]
+        },
+        {
+          "code": "S018",
+          "pt": "Grung",
+          "en": "Grung",
+          "species_commonality": [
+            "D"
+          ],
+          "height": [
+            "A"
+          ],
+          "animal_likeness": [
+            "A"
+          ]
+        },
+        {
+          "code": "S019",
+          "pt": "Halfling",
+          "en": "Halfling",
+          "species_commonality": [
+            "B",
+            "C"
+          ],
+          "height": [
+            "A"
+          ],
+          "animal_likeness": [
+            "B"
+          ]
+        },
+        {
+          "code": "S020",
+          "pt": "Harengon",
+          "en": "Harengon",
+          "species_commonality": [
+            "D"
+          ],
+          "height": [
+            "A",
+            "B",
+            "C"
+          ],
+          "animal_likeness": [
+            "A"
+          ]
+        },
+        {
+          "code": "S021",
+          "pt": "Hobgoblin",
+          "en": "Hobgoblin",
+          "species_commonality": [
+            "C"
+          ],
+          "height": [
+            "C"
+          ],
+          "animal_likeness": [
+            "B"
+          ]
+        },
+        {
+          "code": "S022",
+          "pt": "Human",
+          "en": "Human",
+          "species_commonality": [
+            "A"
+          ],
+          "height": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "animal_likeness": [
+            "B"
+          ]
+        },
+        {
+          "code": "S023",
+          "pt": "Kenku",
+          "en": "Kenku",
+          "species_commonality": [
+            "C"
+          ],
+          "height": [
+            "A",
+            "B",
+            "C"
+          ],
+          "animal_likeness": [
+            "A"
+          ]
+        },
+        {
+          "code": "S024",
+          "pt": "Kobold",
+          "en": "Kobold",
+          "species_commonality": [
+            "C"
+          ],
+          "height": [
+            "A"
+          ],
+          "animal_likeness": [
+            "A"
+          ]
+        },
+        {
+          "code": "S025",
+          "pt": "Lizardfolk",
+          "en": "Lizardfolk",
+          "species_commonality": [
+            "C"
+          ],
+          "height": [
+            "C",
+            "D"
+          ],
+          "animal_likeness": [
+            "A"
+          ]
+        },
+        {
+          "code": "S026",
+          "pt": "Mandrake",
+          "en": "Mandrake",
+          "species_commonality": [
+            "D"
+          ],
+          "height": [
+            "D"
+          ],
+          "animal_likeness": [
+            "B"
+          ]
+        },
+        {
+          "code": "S027",
+          "pt": "Minotaur",
+          "en": "Minotaur",
+          "species_commonality": [
+            "C"
+          ],
+          "height": [
+            "C",
+            "D"
+          ],
+          "animal_likeness": [
+            "A"
+          ]
+        },
+        {
+          "code": "S028",
+          "pt": "Orc",
+          "en": "Orc",
+          "species_commonality": [
+            "B"
+          ],
+          "height": [
+            "C",
+            "D"
+          ],
+          "animal_likeness": [
+            "B"
+          ]
+        },
+        {
+          "code": "S029",
+          "pt": "Satyr",
+          "en": "Satyr",
+          "species_commonality": [
+            "D"
+          ],
+          "height": [
+            "C"
+          ],
+          "animal_likeness": [
+            "A"
+          ]
+        },
+        {
+          "code": "S030",
+          "pt": "Shifter",
+          "en": "Shifter",
+          "species_commonality": [
+            "D"
+          ],
+          "height": [
+            "C",
+            "D"
+          ],
+          "animal_likeness": [
+            "A"
+          ]
+        },
+        {
+          "code": "S031",
+          "pt": "Tabaxi",
+          "en": "Tabaxi",
+          "species_commonality": [
+            "D"
+          ],
+          "height": [
+            "A",
+            "B",
+            "C"
+          ],
+          "animal_likeness": [
+            "A"
+          ]
+        },
+        {
+          "code": "S032",
+          "pt": "Tiefling",
+          "en": "Tiefling",
+          "species_commonality": [
+            "B"
+          ],
+          "height": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "animal_likeness": [
+            "B"
+          ]
+        },
+        {
+          "code": "S033",
+          "pt": "Tortle",
+          "en": "Tortle",
+          "species_commonality": [
+            "D"
+          ],
+          "height": [
+            "A",
+            "B",
+            "C"
+          ],
+          "animal_likeness": [
+            "A"
+          ]
+        },
+        {
+          "code": "S034",
+          "pt": "Triton",
+          "en": "Triton",
+          "species_commonality": [
+            "D"
+          ],
+          "height": [
+            "C"
+          ],
+          "animal_likeness": [
+            "A"
+          ]
+        },
+        {
+          "code": "S035",
+          "pt": "Verdan",
+          "en": "Verdan",
+          "species_commonality": [
+            "D"
+          ],
+          "height": [
+            "A",
+            "B"
+          ],
+          "animal_likeness": [
+            "B"
+          ]
+        },
+        {
+          "code": "S036",
+          "pt": "Yuan-ti",
+          "en": "Yuan-ti",
+          "species_commonality": [
+            "D"
+          ],
+          "height": [
+            "A",
+            "B",
+            "C"
+          ],
+          "animal_likeness": [
+            "A"
+          ]
+        }
+      ]
     },
     "supported_locales": [
       "pt-PT",
