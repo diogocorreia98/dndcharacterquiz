@@ -1,5 +1,5 @@
 {
-  "version": "1.7",
+  "version": "1.8",
   "title": "Descobre a tua personagem de Dungeons & Dragons 2024",
   "locale": "pt-PT",
   "root": "q_gender",
@@ -111,6 +111,20 @@
       "type": "question",
       "section": "species",
       "question": "Em que faixa de alturas se encaixa a tua personagem?",
+      "skip_if_single_viable": {
+        "dataset": "species",
+        "option_field": "height",
+        "filters": [
+          {
+            "field": "species_commonality",
+            "var": "species_commonality",
+            "op": "contains",
+            "optional": false
+          }
+        ],
+        "skip_to": "q_species_pick",
+        "set_var_to_viable_option": true
+      },
       "options": [
         {
           "label": "Minúscula – Entre 0,6 m e 0,9 m (como um banco de taverna ou um pinguim adulto)",
@@ -160,52 +174,12 @@
           ],
           "next": "q_species_animal_likeness"
         }
-      ],
-      "skip_if_single_viable": {
-        "dataset": "species",
-        "option_field": "height",
-        "filters": [
-          {
-            "field": "species_commonality",
-            "var": "species_commonality",
-            "op": "contains",
-            "optional": false
-          }
-        ],
-        "skip_to": "q_species_pick",
-        "set_var_to_viable_option": true
-      }
+      ]
     },
     "q_species_animal_likeness": {
       "type": "question",
       "section": "species",
       "question": "A tua personagem tem traços de animal?",
-      "options": [
-        {
-          "label": "Sim",
-          "value": "A",
-          "set": [
-            {
-              "var": "animal_likeness",
-              "op": "set",
-              "value": "A"
-            }
-          ],
-          "next": "q_species_pick"
-        },
-        {
-          "label": "Não",
-          "value": "B",
-          "set": [
-            {
-              "var": "animal_likeness",
-              "op": "set",
-              "value": "B"
-            }
-          ],
-          "next": "q_species_pick"
-        }
-      ],
       "skip_if_single_viable": {
         "dataset": "species",
         "option_field": "animal_likeness",
@@ -225,7 +199,191 @@
         ],
         "skip_to": "q_species_pick",
         "set_var_to_viable_option": true
-      }
+      },
+      "options": [
+        {
+          "label": "Sim",
+          "value": "A",
+          "set": [
+            {
+              "var": "animal_likeness",
+              "op": "set",
+              "value": "A"
+            }
+          ],
+          "next": "q_followup_flow1"
+        },
+        {
+          "label": "Não",
+          "value": "B",
+          "set": [
+            {
+              "var": "animal_likeness",
+              "op": "set",
+              "value": "B"
+            }
+          ],
+          "next": "q_followup_flow1"
+        }
+      ]
+    },
+    "q_followup_flow1": {
+      "type": "question",
+      "section": "species",
+      "when": {
+        "all": [
+          {
+            "var": "species_commonality",
+            "op": "eq",
+            "value": "D"
+          },
+          {
+            "var": "height",
+            "op": "eq",
+            "value": "A"
+          },
+          {
+            "var": "animal_likeness",
+            "op": "eq",
+            "value": "A"
+          }
+        ]
+      },
+      "question": "Que tema preferes?",
+      "options": [
+        {
+          "label": "Anfíbio/Reptiliano",
+          "value": "A",
+          "set": [
+            {
+              "var": "species_theme",
+              "op": "set",
+              "value": "A"
+            },
+            {
+              "var": "species_whitelist",
+              "op": "set",
+              "value": [
+                "S018",
+                "S033",
+                "S036"
+              ]
+            }
+          ],
+          "next": "q_species_pick"
+        },
+        {
+          "label": "Mamífero",
+          "value": "B",
+          "set": [
+            {
+              "var": "species_theme",
+              "op": "set",
+              "value": "B"
+            },
+            {
+              "var": "species_whitelist",
+              "op": "set",
+              "value": [
+                "S020",
+                "S031"
+              ]
+            }
+          ],
+          "next": "q_species_pick"
+        },
+        {
+          "label": "Fairy",
+          "value": "C",
+          "set": [
+            {
+              "var": "species_theme",
+              "op": "set",
+              "value": "C"
+            },
+            {
+              "var": "species_whitelist",
+              "op": "set",
+              "value": [
+                "S010"
+              ]
+            }
+          ],
+          "next": "q_species_pick"
+        }
+      ],
+      "next": "q_followup_flow2"
+    },
+    "q_followup_flow2": {
+      "type": "question",
+      "section": "species",
+      "when": {
+        "all": [
+          {
+            "var": "species_commonality",
+            "op": "eq",
+            "value": "D"
+          },
+          {
+            "var": "height",
+            "op": "eq",
+            "value": "C"
+          },
+          {
+            "var": "animal_likeness",
+            "op": "eq",
+            "value": "A"
+          }
+        ]
+      },
+      "question": "A tua personagem possui traços de um animal peludo?",
+      "options": [
+        {
+          "label": "Não (penas ou escamas)",
+          "value": "A",
+          "set": [
+            {
+              "var": "species_theme",
+              "op": "set",
+              "value": "A"
+            },
+            {
+              "var": "species_whitelist",
+              "op": "set",
+              "value": [
+                "S001",
+                "S033",
+                "S034",
+                "S036"
+              ]
+            }
+          ],
+          "next": "q_species_pick"
+        },
+        {
+          "label": "Sim",
+          "value": "B",
+          "set": [
+            {
+              "var": "species_theme",
+              "op": "set",
+              "value": "B"
+            },
+            {
+              "var": "species_whitelist",
+              "op": "set",
+              "value": [
+                "S020",
+                "S029",
+                "S030",
+                "S031"
+              ]
+            }
+          ],
+          "next": "q_species_pick"
+        }
+      ],
+      "next": "q_species_pick"
     },
     "q_species_pick": {
       "type": "question",
@@ -254,6 +412,12 @@
             "field": "animal_likeness",
             "var": "animal_likeness",
             "op": "contains",
+            "optional": true
+          },
+          {
+            "field": "code",
+            "var": "species_whitelist",
+            "op": "in_list",
             "optional": true
           }
         ]
@@ -406,6 +570,18 @@
           "B",
           "C"
         ]
+      },
+      "species_theme": {
+        "type": "enum",
+        "symbols": [
+          "A",
+          "B",
+          "C"
+        ]
+      },
+      "species_whitelist": {
+        "type": "array",
+        "items": "string"
       }
     },
     "value_map": {
@@ -631,6 +807,20 @@
         "C": {
           "pt": "Qualquer nível de complexidade",
           "en": "Any complexity is fine"
+        }
+      },
+      "species_theme": {
+        "A": {
+          "pt": "Tema Aquático/Reptiliano",
+          "en": "Aquatic/Reptilian Theme"
+        },
+        "B": {
+          "pt": "Mamífero",
+          "en": "Mammalian"
+        },
+        "C": {
+          "pt": "Fada (Fairy)",
+          "en": "Fairy"
         }
       }
     },
