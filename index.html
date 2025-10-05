@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>D&D 2024 Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app" class="app">
+      <header class="app__header">
+        <h1 class="app__title">Descobre a tua personagem de D&D 2024</h1>
+        <p class="app__subtitle">
+          Responde às perguntas para encontrares a combinação ideal de género, espécie e classe.
+        </p>
+      </header>
+      <main class="app__main">
+        <section id="question-screen" class="card" aria-live="polite">
+          <div class="card__progress" id="progress-indicator"></div>
+          <h2 class="card__question" id="question-text"></h2>
+          <form class="options" id="options-form" role="radiogroup" aria-describedby="question-text"></form>
+          <p class="options__empty" id="no-options-message" hidden>
+            Não encontrámos opções compatíveis com as tuas escolhas. Volta atrás e ajusta as respostas anteriores.
+          </p>
+          <div class="card__actions">
+            <button type="button" class="btn btn--secondary" id="back-button">&larr; Anterior</button>
+            <button type="button" class="btn btn--primary" id="next-button" disabled>Seguinte &rarr;</button>
+          </div>
+        </section>
+        <section id="result-screen" class="card card--hidden" hidden>
+          <h2 class="card__question">Resultados</h2>
+          <p class="card__intro">
+            Eis as tuas escolhas ao longo do questionário. Podes voltar atrás para alterar respostas ou recomeçar.
+          </p>
+          <div id="results-container" class="results"></div>
+          <div class="card__actions card__actions--center">
+            <button type="button" class="btn btn--secondary" id="restart-button">Recomeçar</button>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
