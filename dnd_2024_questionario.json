@@ -1,5 +1,5 @@
 {
-  "version": "1.8",
+  "version": "2.0",
   "title": "Descobre a tua personagem de Dungeons & Dragons 2024",
   "locale": "pt-PT",
   "root": "q_gender",
@@ -19,7 +19,7 @@
               "value": "A"
             }
           ],
-          "next": "q_species_exoticness"
+          "next": "q_height"
         },
         {
           "label": "Masculina",
@@ -31,7 +31,7 @@
               "value": "B"
             }
           ],
-          "next": "q_species_exoticness"
+          "next": "q_height"
         },
         {
           "label": "Andrógina",
@@ -41,6 +41,61 @@
               "var": "gender",
               "op": "set",
               "value": "C"
+            }
+          ],
+          "next": "q_height"
+        }
+      ]
+    },
+    "q_height": {
+      "type": "question",
+      "section": "species",
+      "question": "Em que faixa de alturas se encaixa a tua personagem?",
+      "options": [
+        {
+          "label": "Minúscula – Entre 0,6 m e 0,9 m (como um banco de taverna ou um pinguim adulto)",
+          "value": "A",
+          "set": [
+            {
+              "var": "height",
+              "op": "set",
+              "value": "A"
+            }
+          ],
+          "next": "q_species_exoticness"
+        },
+        {
+          "label": "Baixa – Cerca de 1,2 m (como uma criança humana ou um pónei de carga)",
+          "value": "B",
+          "set": [
+            {
+              "var": "height",
+              "op": "set",
+              "value": "B"
+            }
+          ],
+          "next": "q_species_exoticness"
+        },
+        {
+          "label": "Média – Entre 1,5 m e 1,8 m (altura típica de um humano adulto)",
+          "value": "C",
+          "set": [
+            {
+              "var": "height",
+              "op": "set",
+              "value": "C"
+            }
+          ],
+          "next": "q_species_exoticness"
+        },
+        {
+          "label": "Alta – Entre 2,1 m e 2,4 m (como uma carroça de transporte carregada ou um urso polar)",
+          "value": "D",
+          "set": [
+            {
+              "var": "height",
+              "op": "set",
+              "value": "D"
             }
           ],
           "next": "q_species_exoticness"
@@ -79,7 +134,7 @@
               "value": "B"
             }
           ],
-          "next": "q_height"
+          "next": "q_species_animal_likeness"
         },
         {
           "label": "Uma espécie não humana e estranha a algumas pessoas",
@@ -91,7 +146,7 @@
               "value": "C"
             }
           ],
-          "next": "q_height"
+          "next": "q_species_animal_likeness"
         },
         {
           "label": "Uma espécie não humana e estranha à generalidade da população",
@@ -99,75 +154,6 @@
           "set": [
             {
               "var": "species_commonality",
-              "op": "set",
-              "value": "D"
-            }
-          ],
-          "next": "q_height"
-        }
-      ]
-    },
-    "q_height": {
-      "type": "question",
-      "section": "species",
-      "question": "Em que faixa de alturas se encaixa a tua personagem?",
-      "skip_if_single_viable": {
-        "dataset": "species",
-        "option_field": "height",
-        "filters": [
-          {
-            "field": "species_commonality",
-            "var": "species_commonality",
-            "op": "contains",
-            "optional": false
-          }
-        ],
-        "skip_to": "q_species_pick",
-        "set_var_to_viable_option": true
-      },
-      "options": [
-        {
-          "label": "Minúscula – Entre 0,6 m e 0,9 m (como um banco de taverna ou um pinguim adulto)",
-          "value": "A",
-          "set": [
-            {
-              "var": "height",
-              "op": "set",
-              "value": "A"
-            }
-          ],
-          "next": "q_species_animal_likeness"
-        },
-        {
-          "label": "Baixa – Cerca de 1,2 m (como uma criança humana ou um pónei de carga)",
-          "value": "B",
-          "set": [
-            {
-              "var": "height",
-              "op": "set",
-              "value": "B"
-            }
-          ],
-          "next": "q_species_animal_likeness"
-        },
-        {
-          "label": "Média – Entre 1,5 m e 1,8 m (altura típica de um humano adulto)",
-          "value": "C",
-          "set": [
-            {
-              "var": "height",
-              "op": "set",
-              "value": "C"
-            }
-          ],
-          "next": "q_species_animal_likeness"
-        },
-        {
-          "label": "Alta – Entre 2,1 m e 2,4 m (como uma carroça de transporte carregada ou um urso polar)",
-          "value": "D",
-          "set": [
-            {
-              "var": "height",
               "op": "set",
               "value": "D"
             }
@@ -397,14 +383,14 @@
         "distinct": true,
         "filters": [
           {
-            "field": "species_commonality",
-            "var": "species_commonality",
+            "field": "height",
+            "var": "height",
             "op": "contains",
             "optional": true
           },
           {
-            "field": "height",
-            "var": "height",
+            "field": "species_commonality",
+            "var": "species_commonality",
             "op": "contains",
             "optional": true
           },
@@ -421,6 +407,44 @@
             "optional": true
           }
         ]
+      },
+      "autoselect_if_single": {
+        "dataset": "species",
+        "filters": [
+          {
+            "field": "height",
+            "var": "height",
+            "op": "contains",
+            "optional": true
+          },
+          {
+            "field": "species_commonality",
+            "var": "species_commonality",
+            "op": "contains",
+            "optional": true
+          },
+          {
+            "field": "animal_likeness",
+            "var": "animal_likeness",
+            "op": "contains",
+            "optional": true
+          },
+          {
+            "field": "code",
+            "var": "species_whitelist",
+            "op": "in_list",
+            "optional": true
+          }
+        ],
+        "value_field": "code",
+        "set": [
+          {
+            "var": "species",
+            "op": "set",
+            "value_from_result": true
+          }
+        ],
+        "skip_to": "q_class_complexity"
       },
       "on_select": [
         {
@@ -496,6 +520,15 @@
           "C"
         ]
       },
+      "height": {
+        "type": "enum",
+        "symbols": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ]
+      },
       "species_commonality": {
         "type": "enum",
         "symbols": [
@@ -503,6 +536,13 @@
           "B",
           "C",
           "D"
+        ]
+      },
+      "animal_likeness": {
+        "type": "enum",
+        "symbols": [
+          "A",
+          "B"
         ]
       },
       "species": {
@@ -547,22 +587,6 @@
           "S036"
         ]
       },
-      "height": {
-        "type": "enum",
-        "symbols": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ]
-      },
-      "animal_likeness": {
-        "type": "enum",
-        "symbols": [
-          "A",
-          "B"
-        ]
-      },
       "class_complexity": {
         "type": "enum",
         "symbols": [
@@ -599,6 +623,24 @@
           "en": "Androgynous"
         }
       },
+      "height": {
+        "A": {
+          "pt": "Minúscula — 0,6–0,9 m",
+          "en": "Tiny — 0.6–0.9 m"
+        },
+        "B": {
+          "pt": "Baixa — ~1,2 m",
+          "en": "Short — ~1.2 m"
+        },
+        "C": {
+          "pt": "Média — 1,5–1,8 m",
+          "en": "Medium — 1.5–1.8 m"
+        },
+        "D": {
+          "pt": "Alta — 2,1–2,4 m",
+          "en": "Tall — 2.1–2.4 m"
+        }
+      },
       "species_commonality": {
         "A": {
           "pt": "Humano",
@@ -615,6 +657,16 @@
         "D": {
           "pt": "Não humano — estranho para a maioria",
           "en": "Non-human — odd to most"
+        }
+      },
+      "animal_likeness": {
+        "A": {
+          "pt": "Tem traços de animal",
+          "en": "Has animal traits"
+        },
+        "B": {
+          "pt": "Não tem traços de animal",
+          "en": "No animal traits"
         }
       },
       "species": {
@@ -765,34 +817,6 @@
         "S036": {
           "pt": "Yuan-ti",
           "en": "Yuan-ti"
-        }
-      },
-      "height": {
-        "A": {
-          "pt": "Minúscula — 0,6–0,9 m",
-          "en": "Tiny — 0.6–0.9 m"
-        },
-        "B": {
-          "pt": "Baixa — ~1,2 m",
-          "en": "Short — ~1.2 m"
-        },
-        "C": {
-          "pt": "Média — 1,5–1,8 m",
-          "en": "Medium — 1.5–1.8 m"
-        },
-        "D": {
-          "pt": "Alta — 2,1–2,4 m",
-          "en": "Tall — 2.1–2.4 m"
-        }
-      },
-      "animal_likeness": {
-        "A": {
-          "pt": "Tem traços de animal",
-          "en": "Has animal traits"
-        },
-        "B": {
-          "pt": "Não tem traços de animal",
-          "en": "No animal traits"
         }
       },
       "class_complexity": {
