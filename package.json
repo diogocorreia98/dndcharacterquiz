@@ -1,0 +1,10 @@
+{
+  "name": "dndcharacterquiz",
+  "version": "1.0.0",
+  "description": "Quiz web app para o questionário D&D 2024",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "MIT"
+}
