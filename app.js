@@ -148,24 +148,46 @@ class QuizApp {
         continue;
       }
 
-      if (node.autoselect_if_single) {
-        const autoOptions = this.buildOptions(node, { includeDatasetEntry: true });
-        if (autoOptions.length === 1) {
-          const result = autoOptions[0];
-          this.applyActions(node.autoselect_if_single.set, {
-            resultValue: result.value,
-            result: result.datasetEntry,
-          });
-          nodeId = node.autoselect_if_single.skip_to ?? node.next ?? null;
-          continue;
-        }
-      }
+      let options = this.buildOptions(node, { includeDatasetEntry: true });
 
-      const options = this.buildOptions(node, { includeDatasetEntry: true });
+      const skipOutcome = this.processSkipIfSingleViable(node, options);
+      if (skipOutcome?.skip) {
+        nodeId = skipOutcome.nextNodeId;
+        continue;
+      }
+      options = skipOutcome?.options ?? options;
+
+      const autoOutcome = this.tryAutoselect(node, options);
+      if (autoOutcome?.skip) {
+        nodeId = autoOutcome.nextNodeId;
+        continue;
+      }
+      options = autoOutcome?.options ?? options;
+
       return { nodeId, node, options };
     }
 
     return null;
+  }
+
+  tryAutoselect(node, options) {
+    const rule = node.autoselect_if_single;
+    if (!rule || options.length !== 1) {
+      return { options };
+    }
+
+    const selectedOption = options[0];
+    this.applyActions(selectedOption.set, { option: selectedOption });
+    this.applyActions(node.on_select, { option: selectedOption });
+    this.applyActions(rule.set, {
+      resultValue: selectedOption.value,
+      result: selectedOption.datasetEntry,
+    });
+
+    return {
+      skip: true,
+      nextNodeId: rule.skip_to ?? node.next ?? null,
+    };
   }
 
   buildOptions(node, { includeDatasetEntry = false } = {}) {
@@ -215,6 +237,49 @@ class QuizApp {
     return options;
   }
 
+  processSkipIfSingleViable(node, options) {
+    const rule = node.skip_if_single_viable;
+    if (!rule || !rule.dataset || !rule.option_field) {
+      return { options };
+    }
+
+    const datasetInfo = this.getDatasetInfo(rule);
+    if (!datasetInfo) {
+      return { options };
+    }
+
+    const { entries, viableValues } = datasetInfo;
+    const prunedOptions = options.filter((option) => viableValues.has(option.value));
+
+    if (!entries.length) {
+      return {
+        skip: true,
+        nextNodeId: rule.skip_to ?? node.next ?? null,
+      };
+    }
+
+    if (!prunedOptions.length) {
+      return {
+        skip: true,
+        nextNodeId: rule.skip_to ?? node.next ?? null,
+      };
+    }
+
+    if (prunedOptions.length === 1 && viableValues.size === 1) {
+      const chosen = prunedOptions[0];
+      if (rule.set_var_to_viable_option) {
+        this.applyActions(chosen.set, { option: chosen });
+        this.applyActions(node.on_select, { option: chosen });
+      }
+      return {
+        skip: true,
+        nextNodeId: rule.skip_to ?? node.next ?? null,
+      };
+    }
+
+    return { options: prunedOptions };
+  }
+
   passesFilters(entry, filters) {
     if (!filters?.length) {
       return true;
@@ -224,11 +289,11 @@ class QuizApp {
       const { field, var: variableName, op, optional } = filter;
       const variableValue = this.state.variables[variableName];
 
-      if ((variableValue === undefined || variableValue === null || variableValue === '') && optional) {
+      if (!this.hasValue(variableValue) && optional) {
         return true;
       }
 
-      if (variableValue === undefined || variableValue === null || variableValue === '') {
+      if (!this.hasValue(variableValue)) {
         return false;
       }
 
@@ -250,6 +315,39 @@ class QuizApp {
           return false;
       }
     });
+  }
+
+  getDatasetInfo(rule) {
+    const dataset = this.quizData.metadata?.datasets?.[rule.dataset];
+    if (!Array.isArray(dataset)) {
+      return null;
+    }
+
+    const filters = rule.filters ?? [];
+    for (const filter of filters) {
+      const variableValue = this.state.variables[filter.var];
+      if (!this.hasValue(variableValue) && !filter.optional) {
+        return null;
+      }
+    }
+
+    const filteredEntries = dataset.filter((entry) => this.passesFilters(entry, filters));
+    const viableValues = new Set();
+
+    filteredEntries.forEach((entry) => {
+      const value = entry[rule.option_field];
+      if (Array.isArray(value)) {
+        value.forEach((item) => {
+          if (this.hasValue(item)) {
+            viableValues.add(item);
+          }
+        });
+      } else if (this.hasValue(value)) {
+        viableValues.add(value);
+      }
+    });
+
+    return { entries: filteredEntries, viableValues };
   }
 
   evaluateCondition(condition) {
@@ -472,6 +570,22 @@ class QuizApp {
     }
 
     return JSON.parse(JSON.stringify(value));
+  }
+
+  hasValue(value) {
+    if (value === null || value === undefined) {
+      return false;
+    }
+
+    if (Array.isArray(value)) {
+      return value.length > 0;
+    }
+
+    if (typeof value === 'string') {
+      return value.trim() !== '';
+    }
+
+    return true;
   }
 }
 
