@@ -1,0 +1,44 @@
+{
+  "nodes": {
+    "q_class_complexity": {
+      "type": "question",
+      "section": "class",
+      "question": "At\u00e9 que n\u00edvel de complexidade pode a tua classe pertencer?",
+      "options": [
+        {
+          "label": "S\u00f3 tenho interesse nas classes mais simples.",
+          "value": "A",
+          "set": [
+            {
+              "var": "class_complexity",
+              "op": "set",
+              "value": "A"
+            }
+          ]
+        },
+        {
+          "label": "S\u00f3 n\u00e3o tenho interesse nas classes mais complexas.",
+          "value": "B",
+          "set": [
+            {
+              "var": "class_complexity",
+              "op": "set",
+              "value": "B"
+            }
+          ]
+        },
+        {
+          "label": "A complexidade n\u00e3o me aflige.",
+          "value": "C",
+          "set": [
+            {
+              "var": "class_complexity",
+              "op": "set",
+              "value": "C"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

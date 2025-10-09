@@ -589,15 +589,72 @@ class QuizApp {
   }
 }
 
+const fetchJson = async (url, description) => {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`Falha ao carregar ${description ?? 'o recurso'}: ${response.status}`);
+  }
+  return response.json();
+};
+
+const loadQuizData = async (manifestUrl) => {
+  const manifest = await fetchJson(manifestUrl, 'o questionário');
+
+  if (manifest.nodes) {
+    return manifest;
+  }
+
+  const questionEntries = Object.entries(manifest.question_files ?? {});
+  if (!questionEntries.length) {
+    throw new Error('O manifesto não define ficheiros de perguntas.');
+  }
+  const questionPayloads = await Promise.all(
+    questionEntries.map(async ([key, filePath]) => ({
+      key,
+      data: await fetchJson(filePath, `as perguntas (${key})`),
+    }))
+  );
+
+  const nodes = questionPayloads.reduce((acc, { data }) => {
+    if (data && data.nodes) {
+      Object.assign(acc, data.nodes);
+    }
+    return acc;
+  }, {});
+
+  if (!Object.keys(nodes).length) {
+    throw new Error('Não foi possível carregar nenhuma pergunta do questionário.');
+  }
+
+  let metadata = manifest.metadata ?? {};
+  if (manifest.metadata_file) {
+    metadata = await fetchJson(manifest.metadata_file, 'os mapeamentos');
+  }
+
+  const merged = {
+    ...manifest,
+    nodes,
+    metadata,
+  };
+
+  delete merged.question_files;
+  delete merged.metadata_file;
+
+  if (!merged.root) {
+    const rootFromPayload = questionPayloads.find(({ data }) => data?.root)?.data?.root;
+    if (rootFromPayload) {
+      merged.root = rootFromPayload;
+    }
+  }
+
+  return merged;
+};
+
 const bootstrap = async () => {
   const loadingMessage = 'A carregar questionário…';
   document.getElementById('question-text').textContent = loadingMessage;
   try {
-    const response = await fetch('dnd_2024_questionario.json');
-    if (!response.ok) {
-      throw new Error(`Falha ao carregar o questionário: ${response.status}`);
-    }
-    const data = await response.json();
+    const data = await loadQuizData('dnd_2024_questionario.json');
     new QuizApp(data);
   } catch (error) {
     const message = document.createElement('p');
