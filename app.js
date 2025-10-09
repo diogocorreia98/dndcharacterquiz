@@ -150,6 +150,16 @@ class QuizApp {
 
       let options = this.buildOptions(node, { includeDatasetEntry: true });
 
+      const pruneOutcome = this.pruneZeroViableOptions(node, options);
+      options = pruneOutcome?.options ?? options;
+
+      const skipNoOptionsOutcome = this.processSkipIfNoOptions(node, options);
+      if (skipNoOptionsOutcome?.skip) {
+        nodeId = skipNoOptionsOutcome.nextNodeId;
+        continue;
+      }
+      options = skipNoOptionsOutcome?.options ?? options;
+
       const skipOutcome = this.processSkipIfSingleViable(node, options);
       if (skipOutcome?.skip) {
         nodeId = skipOutcome.nextNodeId;
@@ -237,6 +247,24 @@ class QuizApp {
     return options;
   }
 
+  pruneZeroViableOptions(node, options) {
+    const rule = node.prune_zero_viable_options;
+    if (!rule || !rule.dataset || !rule.option_field) {
+      return { options };
+    }
+
+    const datasetInfo = this.getDatasetInfo(rule);
+    if (!datasetInfo) {
+      return { options };
+    }
+
+    const exclusions = new Set(rule.exclude_values ?? []);
+    const allowedValues = new Set([...datasetInfo.viableValues, ...exclusions]);
+
+    const prunedOptions = options.filter((option) => allowedValues.has(option.value));
+    return { options: prunedOptions };
+  }
+
   processSkipIfSingleViable(node, options) {
     const rule = node.skip_if_single_viable;
     if (!rule || !rule.dataset || !rule.option_field) {
@@ -280,6 +308,22 @@ class QuizApp {
     return { options: prunedOptions };
   }
 
+  processSkipIfNoOptions(node, options) {
+    const rule = node.skip_if_no_options;
+    if (!rule) {
+      return { options };
+    }
+
+    if (options.length > 0) {
+      return { options };
+    }
+
+    return {
+      skip: true,
+      nextNodeId: rule.next ?? node.next ?? null,
+    };
+  }
+
   passesFilters(entry, filters) {
     if (!filters?.length) {
       return true;
@@ -299,11 +343,26 @@ class QuizApp {
 
       const entryValue = entry[field];
       switch (op) {
+        case 'eq': {
+          if (Array.isArray(entryValue)) {
+            return entryValue.includes(variableValue);
+          }
+          return entryValue === variableValue;
+        }
         case 'contains': {
           if (!Array.isArray(entryValue)) {
             return false;
           }
           return entryValue.includes(variableValue);
+        }
+        case 'in': {
+          if (!Array.isArray(variableValue)) {
+            return false;
+          }
+          if (Array.isArray(entryValue)) {
+            return entryValue.some((item) => variableValue.includes(item));
+          }
+          return variableValue.includes(entryValue);
         }
         case 'in_list': {
           if (!Array.isArray(variableValue)) {
@@ -355,18 +414,45 @@ class QuizApp {
       return true;
     }
 
-    if (Array.isArray(condition.all)) {
-      return condition.all.every((c) => this.evaluateCondition(c));
-    }
+    const hasLogicalGroups =
+      Array.isArray(condition.all) || Array.isArray(condition.any) || Array.isArray(condition.none);
+    if (hasLogicalGroups) {
+      let result = true;
 
-    if (Array.isArray(condition.any)) {
-      return condition.any.some((c) => this.evaluateCondition(c));
+      if (Array.isArray(condition.all)) {
+        result = result && condition.all.every((c) => this.evaluateCondition(c));
+      }
+
+      if (!result) {
+        return false;
+      }
+
+      if (Array.isArray(condition.any)) {
+        result = result && condition.any.some((c) => this.evaluateCondition(c));
+      }
+
+      if (!result) {
+        return false;
+      }
+
+      if (Array.isArray(condition.none)) {
+        result = result && condition.none.every((c) => !this.evaluateCondition(c));
+      }
+
+      return result;
     }
 
     const variableValue = this.state.variables[condition.var];
     switch (condition.op) {
       case 'eq':
         return variableValue === condition.value;
+      case 'in':
+        if (!Array.isArray(condition.value)) {
+          return false;
+        }
+        return condition.value.includes(variableValue);
+      case 'is_set':
+        return this.hasValue(variableValue);
       default:
         return true;
     }
