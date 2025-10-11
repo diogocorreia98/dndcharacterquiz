@@ -18,6 +18,7 @@ class QuizApp {
       questionScreen: document.getElementById('question-screen'),
       resultScreen: document.getElementById('result-screen'),
       progress: document.getElementById('progress-indicator'),
+      statusSummary: document.getElementById('status-summary'),
       questionText: document.getElementById('question-text'),
       optionsForm: document.getElementById('options-form'),
       noOptionsMessage: document.getElementById('no-options-message'),
@@ -119,6 +120,8 @@ class QuizApp {
     if (!options.length) {
       this.dom.nextButton.disabled = true;
     }
+
+    this.renderStatusSummary();
 
     if (!fromHistory) {
       this.dom.optionsForm.focus?.();
@@ -543,6 +546,76 @@ class QuizApp {
     });
   }
 
+  renderStatusSummary() {
+    const container = this.dom.statusSummary;
+    if (!container) {
+      return;
+    }
+
+    const localeKey = this.language === 'pt' ? 'pt' : 'en';
+    const sectionsMeta = this.quizData.metadata?.sections ?? {};
+    const valueMap = this.quizData.metadata?.value_map ?? {};
+    const variableSchemas = this.quizData.metadata?.variables ?? {};
+
+    container.innerHTML = '';
+    let hasContent = false;
+
+    this.sectionVariables.forEach((variables, sectionKey) => {
+      const variableList = Array.from(variables).filter((variableName) => {
+        const schema = variableSchemas[variableName];
+        if (schema?.type === 'array') {
+          return false;
+        }
+        return this.state.variables[variableName] !== undefined;
+      });
+
+      if (!variableList.length) {
+        return;
+      }
+
+      hasContent = true;
+
+      const sectionElement = document.createElement('section');
+      sectionElement.className = 'status-summary__section';
+
+      const title = document.createElement('h3');
+      title.className = 'status-summary__title';
+      const translations = sectionsMeta[sectionKey];
+      title.textContent =
+        translations?.[localeKey] ??
+        translations?.pt ??
+        this.formatSectionFallback(sectionKey);
+      sectionElement.appendChild(title);
+
+      variableList.forEach((variableName) => {
+        const item = document.createElement('div');
+        item.className = 'status-summary__item';
+
+        const label = document.createElement('span');
+        label.className = 'status-summary__label';
+        label.textContent = this.formatVariableLabel(variableName);
+
+        const value = document.createElement('span');
+        value.className = 'status-summary__value';
+        const rawValue = this.state.variables[variableName];
+        value.textContent = this.formatVariableValue(
+          variableName,
+          rawValue,
+          valueMap,
+          localeKey,
+        );
+
+        item.append(label, value);
+        sectionElement.appendChild(item);
+      });
+
+      container.appendChild(sectionElement);
+    });
+
+    container.toggleAttribute('hidden', !hasContent);
+    container.classList.toggle('status-summary--hidden', !hasContent);
+  }
+
   formatVariableLabel(variableName) {
     const map = {
       gender: 'Género',
@@ -554,6 +627,15 @@ class QuizApp {
       class_complexity: 'Complexidade da classe',
     };
     return map[variableName] ?? variableName;
+  }
+
+  formatSectionFallback(sectionKey) {
+    const map = {
+      gender: 'Género',
+      species: 'Espécie',
+      class: 'Classe',
+    };
+    return map[sectionKey] ?? sectionKey;
   }
 
   formatVariableValue(variableName, rawValue, valueMap, localeKey) {
