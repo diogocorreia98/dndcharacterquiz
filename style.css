@@ -89,6 +89,67 @@ body {
   }
 }
 
+.status-summary {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  background: color-mix(in srgb, var(--card) 88%, transparent);
+  display: grid;
+  gap: 0.75rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .status-summary {
+    border-color: var(--border-dark);
+    background: color-mix(in srgb, var(--card-dark) 94%, transparent);
+  }
+}
+
+.status-summary--hidden {
+  display: none;
+}
+
+.status-summary__section {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.status-summary__title {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+@media (prefers-color-scheme: dark) {
+  .status-summary__title {
+    color: var(--muted-dark);
+  }
+}
+
+.status-summary__item {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.95rem;
+}
+
+.status-summary__label {
+  font-weight: 600;
+}
+
+.status-summary__value {
+  color: var(--text);
+}
+
+@media (prefers-color-scheme: dark) {
+  .status-summary__value {
+    color: var(--text-dark);
+  }
+}
+
 .card__question {
   margin: 0;
   font-size: clamp(1.25rem, 1vw + 1.2rem, 1.7rem);
