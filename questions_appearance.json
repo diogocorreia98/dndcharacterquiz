@@ -281,13 +281,211 @@
             "var": "species",
             "op": "set",
             "value_from_result": true
+          },
+          {
+            "var": "subspecies",
+            "op": "set",
+            "value": null
+          },
+          {
+            "var": "subsubspecies",
+            "op": "set",
+            "value": null
+          }
+        ],
+        "skip_to": "q_subspecies_pick"
+      },
+      "on_select": [
+        {
+          "var": "species",
+          "op": "set",
+          "value_from_option": true
+        },
+        {
+          "var": "subspecies",
+          "op": "set",
+          "value": null
+        },
+        {
+          "var": "subsubspecies",
+          "op": "set",
+          "value": null
+        }
+      ],
+      "next": "q_subspecies_pick"
+    },
+    "q_subspecies_pick": {
+      "type": "question",
+      "section": "species",
+      "question": "Que subespécie prefere a tua personagem?",
+      "when": {
+        "var": "species",
+        "op": "in",
+        "value": [
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S012",
+          "S013",
+          "S014",
+          "S015",
+          "S017",
+          "S019",
+          "S024",
+          "S026",
+          "S030",
+          "S032"
+        ]
+      },
+      "options_source": {
+        "type": "inline",
+        "dataset": "subspecies",
+        "label_field": "pt",
+        "value_field": "code",
+        "filters": [
+          {
+            "field": "species_code",
+            "var": "species",
+            "op": "eq",
+            "optional": false
+          },
+          {
+            "field": "height",
+            "var": "height",
+            "op": "contains",
+            "optional": true
+          },
+          {
+            "field": "animal_likeness",
+            "var": "animal_likeness",
+            "op": "contains",
+            "optional": true
+          }
+        ]
+      },
+      "skip_if_no_options": {
+        "next": "q_class_complexity"
+      },
+      "autoselect_if_single": {
+        "dataset": "subspecies",
+        "filters": [
+          {
+            "field": "species_code",
+            "var": "species",
+            "op": "eq",
+            "optional": false
+          },
+          {
+            "field": "height",
+            "var": "height",
+            "op": "contains",
+            "optional": true
+          },
+          {
+            "field": "animal_likeness",
+            "var": "animal_likeness",
+            "op": "contains",
+            "optional": true
+          }
+        ],
+        "value_field": "code",
+        "set": [
+          {
+            "var": "subspecies",
+            "op": "set",
+            "value_from_result": true
+          },
+          {
+            "var": "subsubspecies",
+            "op": "set",
+            "value": null
+          }
+        ],
+        "skip_to": "q_subsubspecies_pick"
+      },
+      "on_select": [
+        {
+          "var": "subspecies",
+          "op": "set",
+          "value_from_option": true
+        },
+        {
+          "var": "subsubspecies",
+          "op": "set",
+          "value": null
+        }
+      ],
+      "next": "q_subsubspecies_pick"
+    },
+    "q_subsubspecies_pick": {
+      "type": "question",
+      "section": "species",
+      "question": "Qual é a variação específica da subespécie?",
+      "options_source": {
+        "type": "inline",
+        "dataset": "subsubspecies",
+        "label_field": "pt",
+        "value_field": "code",
+        "filters": [
+          {
+            "field": "subspecies_code",
+            "var": "subspecies",
+            "op": "eq",
+            "optional": false
+          },
+          {
+            "field": "height",
+            "var": "height",
+            "op": "contains",
+            "optional": true
+          },
+          {
+            "field": "animal_likeness",
+            "var": "animal_likeness",
+            "op": "contains",
+            "optional": true
+          }
+        ]
+      },
+      "skip_if_no_options": {
+        "next": "q_class_complexity"
+      },
+      "autoselect_if_single": {
+        "dataset": "subsubspecies",
+        "filters": [
+          {
+            "field": "subspecies_code",
+            "var": "subspecies",
+            "op": "eq",
+            "optional": false
+          },
+          {
+            "field": "height",
+            "var": "height",
+            "op": "contains",
+            "optional": true
+          },
+          {
+            "field": "animal_likeness",
+            "var": "animal_likeness",
+            "op": "contains",
+            "optional": true
+          }
+        ],
+        "value_field": "code",
+        "set": [
+          {
+            "var": "subsubspecies",
+            "op": "set",
+            "value_from_result": true
           }
         ],
         "skip_to": "q_class_complexity"
       },
       "on_select": [
         {
-          "var": "species",
+          "var": "subsubspecies",
           "op": "set",
           "value_from_option": true
         }
