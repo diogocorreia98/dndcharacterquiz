@@ -351,6 +351,12 @@
             "optional": false
           },
           {
+            "field": "species_commonality",
+            "var": "species_commonality",
+            "op": "contains",
+            "optional": false
+          },
+          {
             "field": "height",
             "var": "height",
             "op": "contains",
@@ -374,6 +380,12 @@
             "field": "species_code",
             "var": "species",
             "op": "eq",
+            "optional": false
+          },
+          {
+            "field": "species_commonality",
+            "var": "species_commonality",
+            "op": "contains",
             "optional": false
           },
           {
