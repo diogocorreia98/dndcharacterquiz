@@ -291,9 +291,19 @@
             "var": "subsubspecies",
             "op": "set",
             "value": null
+          },
+          {
+            "var": "goliath_power_type",
+            "op": "set",
+            "value": null
+          },
+          {
+            "var": "dragonborn_ancestry_type",
+            "op": "set",
+            "value": null
           }
         ],
-        "skip_to": "q_subspecies_pick"
+        "skip_to": "q_dragonborn_ancestry_type"
       },
       "on_select": [
         {
@@ -310,6 +320,102 @@
           "var": "subsubspecies",
           "op": "set",
           "value": null
+        },
+        {
+          "var": "goliath_power_type",
+          "op": "set",
+          "value": null
+        },
+        {
+          "var": "dragonborn_ancestry_type",
+          "op": "set",
+          "value": null
+        }
+      ],
+      "next": "q_dragonborn_ancestry_type"
+    },
+    "q_dragonborn_ancestry_type": {
+      "type": "question",
+      "section": "species",
+      "question": "Que tipo de ancestralidade dracónica define a tua personagem?",
+      "when": {
+        "var": "species",
+        "op": "eq",
+        "value": "S007"
+      },
+      "options": [
+        {
+          "label": "Cromática (escamas reptilianas, aspeto feroz)",
+          "value": "chromatic",
+          "set": [
+            {
+              "var": "dragonborn_ancestry_type",
+              "op": "set",
+              "value": "chromatic"
+            }
+          ],
+          "next": "q_goliath_power_type"
+        },
+        {
+          "label": "Metálica (escamas metálicas, aspeto polido)",
+          "value": "metallic",
+          "set": [
+            {
+              "var": "dragonborn_ancestry_type",
+              "op": "set",
+              "value": "metallic"
+            }
+          ],
+          "next": "q_goliath_power_type"
+        }
+      ],
+      "next": "q_goliath_power_type"
+    },
+    "q_goliath_power_type": {
+      "type": "question",
+      "section": "species",
+      "question": "Que tipo de poder de ancestralidade gigante melhor descreve a tua personagem?",
+      "when": {
+        "var": "species",
+        "op": "eq",
+        "value": "S017"
+      },
+      "options": [
+        {
+          "label": "Poderes Defensivos",
+          "value": "defensive",
+          "set": [
+            {
+              "var": "goliath_power_type",
+              "op": "set",
+              "value": "defensive"
+            }
+          ],
+          "next": "q_subspecies_pick"
+        },
+        {
+          "label": "Poderes de Mobilidade",
+          "value": "mobility",
+          "set": [
+            {
+              "var": "goliath_power_type",
+              "op": "set",
+              "value": "mobility"
+            }
+          ],
+          "next": "q_subspecies_pick"
+        },
+        {
+          "label": "Poderes Ofensivos",
+          "value": "offensive",
+          "set": [
+            {
+              "var": "goliath_power_type",
+              "op": "set",
+              "value": "offensive"
+            }
+          ],
+          "next": "q_subspecies_pick"
         }
       ],
       "next": "q_subspecies_pick"
@@ -367,6 +473,18 @@
             "var": "animal_likeness",
             "op": "contains",
             "optional": true
+          },
+          {
+            "field": "goliath_power_type",
+            "var": "goliath_power_type",
+            "op": "contains",
+            "optional": true
+          },
+          {
+            "field": "dragonborn_ancestry_type",
+            "var": "dragonborn_ancestry_type",
+            "op": "contains",
+            "optional": true
           }
         ]
       },
@@ -397,6 +515,18 @@
           {
             "field": "animal_likeness",
             "var": "animal_likeness",
+            "op": "contains",
+            "optional": true
+          },
+          {
+            "field": "goliath_power_type",
+            "var": "goliath_power_type",
+            "op": "contains",
+            "optional": true
+          },
+          {
+            "field": "dragonborn_ancestry_type",
+            "var": "dragonborn_ancestry_type",
             "op": "contains",
             "optional": true
           }
