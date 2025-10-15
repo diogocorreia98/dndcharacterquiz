@@ -625,6 +625,8 @@ class QuizApp {
       species_theme: 'Tema',
       species: 'Espécie',
       class_complexity: 'Complexidade da classe',
+      class_style: 'Estilo de jogo da classe',
+      class: 'Classe',
     };
     return map[variableName] ?? variableName;
   }

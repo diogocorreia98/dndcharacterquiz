@@ -164,6 +164,34 @@
         "B",
         "C"
       ]
+    },
+    "class_style": {
+      "type": "enum",
+      "symbols": [
+        "SIMPLE_MARTIAL",
+        "MARTIAL_DIRECT",
+        "MIXED_MAGIC",
+        "MARTIAL_POWER",
+        "FULL_CASTER",
+        "UNUSUAL"
+      ]
+    },
+    "class": {
+      "type": "enum",
+      "symbols": [
+        "BARBARIAN",
+        "FIGHTER",
+        "ROGUE",
+        "CLERIC",
+        "PALADIN",
+        "RANGER",
+        "WIZARD",
+        "MONK",
+        "SORCERER",
+        "DRUID",
+        "BARD",
+        "WARLOCK"
+      ]
     }
   },
   "value_map": {
@@ -625,6 +653,82 @@
       "C": {
         "pt": "Qualquer nível de complexidade",
         "en": "Any complexity is fine"
+      }
+    },
+    "class_style": {
+      "SIMPLE_MARTIAL": {
+        "pt": "Estilo marcial simples",
+        "en": "Simple martial style"
+      },
+      "MARTIAL_DIRECT": {
+        "pt": "Físico e direto",
+        "en": "Physical and direct"
+      },
+      "MIXED_MAGIC": {
+        "pt": "Com um toque de magia",
+        "en": "With a touch of magic"
+      },
+      "MARTIAL_POWER": {
+        "pt": "Poder marcial e físico",
+        "en": "Martial might and power"
+      },
+      "FULL_CASTER": {
+        "pt": "Conjurador completo",
+        "en": "Full spellcaster"
+      },
+      "UNUSUAL": {
+        "pt": "Estilos mistos ou incomuns",
+        "en": "Hybrid or unusual styles"
+      }
+    },
+    "class": {
+      "BARBARIAN": {
+        "pt": "Barbarian",
+        "en": "Barbarian"
+      },
+      "FIGHTER": {
+        "pt": "Fighter",
+        "en": "Fighter"
+      },
+      "ROGUE": {
+        "pt": "Rogue",
+        "en": "Rogue"
+      },
+      "CLERIC": {
+        "pt": "Cleric",
+        "en": "Cleric"
+      },
+      "PALADIN": {
+        "pt": "Paladin",
+        "en": "Paladin"
+      },
+      "RANGER": {
+        "pt": "Ranger",
+        "en": "Ranger"
+      },
+      "WIZARD": {
+        "pt": "Wizard",
+        "en": "Wizard"
+      },
+      "MONK": {
+        "pt": "Monk",
+        "en": "Monk"
+      },
+      "SORCERER": {
+        "pt": "Sorcerer",
+        "en": "Sorcerer"
+      },
+      "DRUID": {
+        "pt": "Druid",
+        "en": "Druid"
+      },
+      "BARD": {
+        "pt": "Bard",
+        "en": "Bard"
+      },
+      "WARLOCK": {
+        "pt": "Warlock",
+        "en": "Warlock"
       }
     }
   },

@@ -1,23 +1,30 @@
 {
+  "root": "q_class_complexity",
   "nodes": {
     "q_class_complexity": {
       "type": "question",
       "section": "class",
-      "question": "At\u00e9 que n\u00edvel de complexidade pode a tua classe pertencer?",
+      "question": "Com que nível de complexidade te sentes confortável?",
       "options": [
         {
-          "label": "S\u00f3 tenho interesse nas classes mais simples.",
+          "label": "Só tenho interesse nas classes mais simples.",
           "value": "A",
           "set": [
             {
               "var": "class_complexity",
               "op": "set",
               "value": "A"
+            },
+            {
+              "var": "class_style",
+              "op": "set",
+              "value": "SIMPLE_MARTIAL"
             }
-          ]
+          ],
+          "next": "q_class_simple_choice"
         },
         {
-          "label": "S\u00f3 n\u00e3o tenho interesse nas classes mais complexas.",
+          "label": "Só não tenho interesse nas classes mais complexas.",
           "value": "B",
           "set": [
             {
@@ -25,16 +32,376 @@
               "op": "set",
               "value": "B"
             }
-          ]
+          ],
+          "next": "q_class_medium_style"
         },
         {
-          "label": "A complexidade n\u00e3o me aflige.",
+          "label": "A complexidade não me aflige.",
           "value": "C",
           "set": [
             {
               "var": "class_complexity",
               "op": "set",
               "value": "C"
+            }
+          ],
+          "next": "q_class_high_style"
+        }
+      ]
+    },
+    "q_class_simple_choice": {
+      "type": "question",
+      "section": "class",
+      "question": "Que classe preferes jogar?",
+      "options": [
+        {
+          "label": "Barbarian",
+          "value": "BARBARIAN",
+          "set": [
+            {
+              "var": "class",
+              "op": "set",
+              "value": "BARBARIAN"
+            }
+          ]
+        },
+        {
+          "label": "Fighter",
+          "value": "FIGHTER",
+          "set": [
+            {
+              "var": "class",
+              "op": "set",
+              "value": "FIGHTER"
+            }
+          ]
+        },
+        {
+          "label": "Rogue",
+          "value": "ROGUE",
+          "set": [
+            {
+              "var": "class",
+              "op": "set",
+              "value": "ROGUE"
+            }
+          ]
+        }
+      ]
+    },
+    "q_class_medium_style": {
+      "type": "question",
+      "section": "class",
+      "question": "Que tipo de estilo de jogo soa melhor para ti?",
+      "options": [
+        {
+          "label": "Físico e direto.",
+          "value": "A",
+          "set": [
+            {
+              "var": "class_style",
+              "op": "set",
+              "value": "MARTIAL_DIRECT"
+            }
+          ],
+          "next": "q_class_medium_martial_choice"
+        },
+        {
+          "label": "Algo com um pouco de magia ou poder divino.",
+          "value": "B",
+          "set": [
+            {
+              "var": "class_style",
+              "op": "set",
+              "value": "MIXED_MAGIC"
+            }
+          ],
+          "next": "q_class_medium_magic_choice"
+        }
+      ]
+    },
+    "q_class_medium_martial_choice": {
+      "type": "question",
+      "section": "class",
+      "question": "Que classe preferes jogar?",
+      "options": [
+        {
+          "label": "Barbarian",
+          "value": "BARBARIAN",
+          "set": [
+            {
+              "var": "class",
+              "op": "set",
+              "value": "BARBARIAN"
+            }
+          ]
+        },
+        {
+          "label": "Fighter",
+          "value": "FIGHTER",
+          "set": [
+            {
+              "var": "class",
+              "op": "set",
+              "value": "FIGHTER"
+            }
+          ]
+        },
+        {
+          "label": "Rogue",
+          "value": "ROGUE",
+          "set": [
+            {
+              "var": "class",
+              "op": "set",
+              "value": "ROGUE"
+            }
+          ]
+        }
+      ]
+    },
+    "q_class_medium_magic_choice": {
+      "type": "question",
+      "section": "class",
+      "question": "Que classe preferes jogar?",
+      "options": [
+        {
+          "label": "Cleric",
+          "value": "CLERIC",
+          "set": [
+            {
+              "var": "class",
+              "op": "set",
+              "value": "CLERIC"
+            }
+          ]
+        },
+        {
+          "label": "Paladin",
+          "value": "PALADIN",
+          "set": [
+            {
+              "var": "class",
+              "op": "set",
+              "value": "PALADIN"
+            }
+          ]
+        },
+        {
+          "label": "Ranger",
+          "value": "RANGER",
+          "set": [
+            {
+              "var": "class",
+              "op": "set",
+              "value": "RANGER"
+            }
+          ]
+        },
+        {
+          "label": "Wizard",
+          "value": "WIZARD",
+          "set": [
+            {
+              "var": "class",
+              "op": "set",
+              "value": "WIZARD"
+            }
+          ]
+        }
+      ]
+    },
+    "q_class_high_style": {
+      "type": "question",
+      "section": "class",
+      "question": "Que tipo de personagem mais te entusiasma?",
+      "options": [
+        {
+          "label": "Poder marcial e físico",
+          "value": "A",
+          "set": [
+            {
+              "var": "class_style",
+              "op": "set",
+              "value": "MARTIAL_POWER"
+            }
+          ],
+          "next": "q_class_high_martial_choice"
+        },
+        {
+          "label": "Conjuração completa e foco em magia",
+          "value": "B",
+          "set": [
+            {
+              "var": "class_style",
+              "op": "set",
+              "value": "FULL_CASTER"
+            }
+          ],
+          "next": "q_class_high_magic_choice"
+        },
+        {
+          "label": "Estilos mistos ou incomuns",
+          "value": "C",
+          "set": [
+            {
+              "var": "class_style",
+              "op": "set",
+              "value": "UNUSUAL"
+            }
+          ],
+          "next": "q_class_high_unusual_choice"
+        }
+      ]
+    },
+    "q_class_high_martial_choice": {
+      "type": "question",
+      "section": "class",
+      "question": "Que classe preferes jogar?",
+      "options": [
+        {
+          "label": "Barbarian",
+          "value": "BARBARIAN",
+          "set": [
+            {
+              "var": "class",
+              "op": "set",
+              "value": "BARBARIAN"
+            }
+          ]
+        },
+        {
+          "label": "Fighter",
+          "value": "FIGHTER",
+          "set": [
+            {
+              "var": "class",
+              "op": "set",
+              "value": "FIGHTER"
+            }
+          ]
+        },
+        {
+          "label": "Rogue",
+          "value": "ROGUE",
+          "set": [
+            {
+              "var": "class",
+              "op": "set",
+              "value": "ROGUE"
+            }
+          ]
+        },
+        {
+          "label": "Monk",
+          "value": "MONK",
+          "set": [
+            {
+              "var": "class",
+              "op": "set",
+              "value": "MONK"
+            }
+          ]
+        }
+      ]
+    },
+    "q_class_high_magic_choice": {
+      "type": "question",
+      "section": "class",
+      "question": "Que classe preferes jogar?",
+      "options": [
+        {
+          "label": "Wizard",
+          "value": "WIZARD",
+          "set": [
+            {
+              "var": "class",
+              "op": "set",
+              "value": "WIZARD"
+            }
+          ]
+        },
+        {
+          "label": "Sorcerer",
+          "value": "SORCERER",
+          "set": [
+            {
+              "var": "class",
+              "op": "set",
+              "value": "SORCERER"
+            }
+          ]
+        },
+        {
+          "label": "Cleric",
+          "value": "CLERIC",
+          "set": [
+            {
+              "var": "class",
+              "op": "set",
+              "value": "CLERIC"
+            }
+          ]
+        },
+        {
+          "label": "Druid",
+          "value": "DRUID",
+          "set": [
+            {
+              "var": "class",
+              "op": "set",
+              "value": "DRUID"
+            }
+          ]
+        }
+      ]
+    },
+    "q_class_high_unusual_choice": {
+      "type": "question",
+      "section": "class",
+      "question": "Que classe preferes jogar?",
+      "options": [
+        {
+          "label": "Paladin",
+          "value": "PALADIN",
+          "set": [
+            {
+              "var": "class",
+              "op": "set",
+              "value": "PALADIN"
+            }
+          ]
+        },
+        {
+          "label": "Ranger",
+          "value": "RANGER",
+          "set": [
+            {
+              "var": "class",
+              "op": "set",
+              "value": "RANGER"
+            }
+          ]
+        },
+        {
+          "label": "Bard",
+          "value": "BARD",
+          "set": [
+            {
+              "var": "class",
+              "op": "set",
+              "value": "BARD"
+            }
+          ]
+        },
+        {
+          "label": "Warlock",
+          "value": "WARLOCK",
+          "set": [
+            {
+              "var": "class",
+              "op": "set",
+              "value": "WARLOCK"
             }
           ]
         }
