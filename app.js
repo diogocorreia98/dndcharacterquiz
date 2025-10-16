@@ -627,6 +627,8 @@ class QuizApp {
       class_complexity: 'Complexidade da classe',
       class_style: 'Estilo de jogo da classe',
       class: 'Classe',
+      subclass_group: 'Tipo de subclasse',
+      subclass: 'Subclasse',
     };
     return map[variableName] ?? variableName;
   }
@@ -657,6 +659,14 @@ class QuizApp {
 
     if (variableName === 'species') {
       const dataset = this.quizData.metadata?.datasets?.species ?? [];
+      const match = dataset.find((entry) => entry.code === rawValue);
+      if (match) {
+        return match[localeKey] ?? match.pt ?? rawValue;
+      }
+    }
+
+    if (variableName === 'subclass') {
+      const dataset = this.quizData.metadata?.datasets?.subclasses ?? [];
       const match = dataset.find((entry) => entry.code === rawValue);
       if (match) {
         return match[localeKey] ?? match.pt ?? rawValue;
