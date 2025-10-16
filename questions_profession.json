@@ -560,6 +560,17 @@
       "question": "Que classe preferes jogar?",
       "options": [
         {
+          "label": "Artificer",
+          "value": "ARTIFICER",
+          "set": [
+            {
+              "var": "class",
+              "op": "set",
+              "value": "ARTIFICER"
+            }
+          ]
+        },
+        {
           "label": "Paladin",
           "value": "PALADIN",
           "set": [
