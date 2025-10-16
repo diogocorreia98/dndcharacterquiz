@@ -82,7 +82,8 @@ const step2pt = {
                   A: { label: 'Guerreiro sagrado com alguma magia. (Paladin)', result: 'Paladin' },
                   B: { label: 'Explorador com habilidades marciais e alguma magia. (Ranger)', result: 'Ranger' },
                   C: { label: 'Ídolo astuto que conjura magias pela sua arte. (Bard)', result: 'Bard' },
-                  D: { label: 'Conjurador misterioso habilitado por um pacto. (Warlock)', result: 'Warlock' }
+                  D: { label: 'Conjurador misterioso habilitado por um pacto. (Warlock)', result: 'Warlock' },
+                  E: { label: 'Inventor genial que mistura magia e tecnologia. (Artificer)', result: 'Artificer' }
                 }
               }
             }
@@ -179,7 +180,8 @@ const step2en = {
                   A: { label: 'Holy warrior with some magic. (Paladin)', result: 'Paladin' },
                   B: { label: 'Explorer with martial and spell skills. (Ranger)', result: 'Ranger' },
                   C: { label: 'Performer who casts spells through inspiration. (Bard)', result: 'Bard' },
-                  D: { label: 'Spellcaster empowered by a pact. (Warlock)', result: 'Warlock' }
+                  D: { label: 'Spellcaster empowered by a pact. (Warlock)', result: 'Warlock' },
+                  E: { label: 'Inventive genius blending magic and technology. (Artificer)', result: 'Artificer' }
                 }
               }
             }
@@ -293,6 +295,15 @@ const subClassEN = {
       'Fiend Patron': 'A devil\u2019s contract fuels me with fire and fury.',
       'Future You': 'I\u2019m mentored by my future self — I know what comes next.',
       'Great Old One Patron': 'I speak to an ancient god of madness that whispers truths.'
+    }
+  },
+  Artificer: {
+    question: 'What sparks your inventions?',
+    options: {
+      Alchemist: 'I distill experimental elixirs and transmute matter with science-magic.',
+      Armorer: 'I forge arcane armor that adapts to any battlefield.',
+      Artillerist: 'I unleash arcane cannons and explosive gadgets.',
+      'Battle Smith': 'I fight alongside a steel defender I crafted myself.'
     }
   },
   Wizard: {
@@ -410,6 +421,15 @@ const subClassPT = {
       'Fiend Patron': 'Um pacto diabólico alimenta-me com fogo e f\u00faria. (Fiend Patron)',
       'Future You': 'Sou orientado pelo meu futuro eu — sei o que est\u00e1 para vir. (Future You)',
       'Great Old One Patron': 'Falo com um deus antigo de loucura que me sussurra verdades. (Great Old One Patron)'
+    }
+  },
+  Artificer: {
+    question: 'O que alimenta as tuas inven\u00e7\u00f5es?',
+    options: {
+      Alchemist: 'Destilo elixires experimentais e transmuto mat\u00e9ria com ci\u00eancia e magia. (Alchemist)',
+      Armorer: 'Forjo armaduras arcanas que se moldam a qualquer batalha. (Armorer)',
+      Artillerist: 'Disparo canh\u00f5es arcanos e engenhocas explosivas. (Artillerist)',
+      'Battle Smith': 'Combato ao lado de um defensor de a\u00e7o criado por mim. (Battle Smith)'
     }
   },
   Wizard: {

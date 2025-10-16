@@ -75,6 +75,24 @@ const styleQuizPT = {
     }
   },
 
+  "Artificer": {
+    question: "Como descreves o teu processo de invenção?",
+    options: {
+      A: {
+        label: "Misturo reagentes e elixires que resolvem qualquer problema.",
+        result: "Intelligence"
+      },
+      B: {
+        label: "Reforço armaduras e engenhocas para aguentar qualquer batalha.",
+        result: "Intelligence + Constitution"
+      },
+      C: {
+        label: "Construo armas precisas e gadgets engenhosos.",
+        result: "Intelligence + Dexterity"
+      }
+    }
+  },
+
   "Paladin": {
     question: "Qual é a origem do teu poder sagrado?",
     options: {
@@ -399,6 +417,24 @@ const styleQuizEN = {
             }
           }
         }
+      }
+    }
+  },
+
+  "Artificer": {
+    question: "How do you approach your inventions?",
+    options: {
+      A: {
+        label: "I brew solutions and elixirs for every situation.",
+        result: "Intelligence"
+      },
+      B: {
+        label: "I engineer armor and tools that withstand any fight.",
+        result: "Intelligence + Constitution"
+      },
+      C: {
+        label: "I craft precise weapons and ingenious gadgets.",
+        result: "Intelligence + Dexterity"
       }
     }
   },

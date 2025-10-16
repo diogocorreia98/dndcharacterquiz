@@ -186,6 +186,7 @@ const data = {
 
   const classInfo = {
     pt: {
+      'Artificer':'O Artífice é um inventor mágico. Usa ferramentas, elixires e engenhocas infundidas de magia para reforçar aliados, controlar o campo de batalha e resolver problemas com criatividade. Pode criar armaduras arcanas, canhões portáteis ou companheiros mecânicos, adaptando-se a qualquer desafio com inteligência e engenho.',
       'Barbarian':'O Bárbaro é a força bruta da natureza. Combate com fúria selvagem, ignorando a dor e libertando ataques devastadores. Quando entra em Rage, torna-se mais difícil de ferir e mais poderoso nos seus golpes. Não usa magia, mas compensa com pura resistência e instinto. É ideal para quem quer estar na linha da frente, a levar e causar pancada sem hesitar.',
       'Bard':'O Bardo é um artista mágico — um contador de histórias, músico ou dançarino que inspira aliados e confunde inimigos. Usa magia através da sua arte, seja ela música, poesia ou dança. É extremamente versátil: pode curar, lançar feitiços, manipular emoções e ainda ter talento para lidar com quase qualquer situação fora de combate.',
       'Cleric':'O Clérigo é o canal de poder divino. Serve uma divindade e invoca milagres para curar, proteger ou castigar. É um pilar de suporte, mas também um combatente eficaz quando necessário. Usa armadura e pode ser tão temido como um guerreiro ou tão vital como um curandeiro, dependendo do domínio divino que escolhe seguir.',
@@ -200,6 +201,7 @@ const data = {
       'Wizard':'O Mago é o verdadeiro estudioso da magia. Aprende através de livros e pesquisa, tendo acesso ao maior número de feitiços do jogo. Pode preparar diferentes magias conforme a situação e é um mestre em versatilidade arcana. Embora frágil fisicamente, é um dos conjuradores mais poderosos a longo prazo.'
     },
     en: {
+      'Artificer':'The Artificer is a magical inventor. They infuse tools, elixirs, and gadgets with arcane energy to bolster allies, control the battlefield, and solve problems creatively. Whether crafting arcane armor, portable cannons, or mechanical companions, they adapt to any challenge with intelligence and ingenuity.',
       'Barbarian':'The Barbarian is raw force of nature. Fights with wild fury, ignoring pain and unleashing devastating attacks. When entering Rage, they become harder to hurt and stronger in their strikes. They do not use magic but rely on sheer toughness and instinct. Ideal for those who want to be on the front line, taking and dealing damage without hesitation.',
       'Bard':'The Bard is a magical performer—a storyteller, musician or dancer who inspires allies and confuses enemies. They use magic through art, whether music, poetry or dance. Extremely versatile: can heal, cast spells, sway emotions and handle nearly any situation outside combat.',
       'Cleric':'The Cleric channels divine power. They serve a deity and call miracles to heal, protect or punish. A pillar of support yet an effective fighter when needed. Wearing armor, they can be feared like a warrior or vital like a healer depending on the divine domain followed.',
@@ -267,6 +269,10 @@ const data = {
       'Fiend Patron': 'Os Bruxos fazem pactos com entidades poderosas, e o Patrono Infernal oferece poder flamejante em troca. Lançam chamas, absorvem vida de inimigos derrotados e comandam magia infernal com cada maldição e bola de fogo.',
       'Great Old One Patron': 'Os Bruxos obtêm poder de fontes insondáveis, e o Patrono Ancião Cósmico oferece loucura em troca de poder. Lês pensamentos, falas nas mentes e enlouqueces inimigos—canalizando o horror incompreensível do cosmos.',
       'Future You': 'Os Bruxos fazem pactos com poderes estranhos, e o teu é a tua própria versão futura. Com conhecimento do que está para vir, manipulas o destino, controlas o tempo, esquivas ataques que "já sabias que vinham" e infliges dano psíquico com paradoxos—desvendando um destino só teu.',
+      Alchemist: 'Os Artífices unem ciência e magia, e os Alquimistas engarrafam esse maravilhamento em elixires potentes. Preparas poções experimentais que curam, fortalecem ou explodem, transmutas materiais no momento e resolves problemas com engenho borbulhante.',
+      Armorer: 'Os Artífices canalizam magia através da invenção, e os Armeiros transformam-se em protótipos vivos. Forjas exoarmaduras que absorvem dano, libertam rajadas elétricas e adaptam-se a qualquer missão com módulos personalizados.',
+      Artillerist: 'Os Artífices especializam-se em armamento arcano, e os Artilheiros comandam canhões portáteis. Colocas torres explosivas, moldas as detonações para proteger aliados e transformas o campo de batalha num espetáculo de fogo mágico.',
+      'Battle Smith': 'Os Artífices fundem artesanato e combate, e os Ferreiros de Batalha marcham com defensores de aço. Reparas e fortaleces aliados, combates com uma arma encantada e deixas o teu companheiro construto guardar a linha.',
       'Abjurer': 'Os Magos dominam o conhecimento arcano pelo estudo, e os Abjuradores especializam-se em defesa mágica. Erguem escudos, banem ameaças e tornam-se fortalezas ambulantes—transformando feitiços em muralhas e proteções para aliados.',
       'Diviner': 'Os Magos moldam a realidade com feitiços, e os Divinadores dobram o tempo e o destino. Antecipam o futuro, manipulam resultados com dados proféticos e estão sempre no sítio certo com conhecimento sobrenatural.',
       'Evoker': 'Os Magos comandam força arcana pura, e os Evocadores moldam-na em destruição. Esculpem bolas de fogo, relâmpagos e explosões trovejantes—libertando devastação elemental com controlo absoluto.',
@@ -323,6 +329,10 @@ const data = {
       'Fiend Patron': 'Warlocks deal with powerful entities, and the Fiend offers fiery might in return. You hurl flames, absorb life from defeated foes, and command infernal magic with every curse you whisper and fireball you conjure.',
       'Great Old One Patron': 'Warlocks gain power from unfathomable sources, and the Great Old One offers madness in exchange for might. You read thoughts, speak into minds, and drive foes insane\u2014channeling the unknowable horror of the cosmos.',
       'Future You': 'Warlocks make deals with strange powers, and yours is your own time-traveling future self. With knowledge of what\u2019s to come, you bend fate, manipulate time, dodge attacks you "knew were coming", and inflict psychic damage with paradoxes\u2014unfolding a destiny only you truly understand.',
+      Alchemist: 'Artificers weave science and spellcraft, and Alchemists bottle that wonder into potent elixirs. You brew experimental draughts that heal, fortify, or explode, transmute materials on the fly, and solve problems with bubbling ingenuity.',
+      Armorer: 'Artificers channel magic through invention, and Armorers turn themselves into living prototypes. You forge powered suits that absorb damage, unleash crackling blasts, and adapt to any mission with modular upgrades.',
+      Artillerist: 'Artificers specialize in arcane weaponry, and Artillerists command portable cannons. You field explosive turrets, sculpt blasts to protect allies, and transform the battlefield into a fireworks display of arcane artillery.',
+      'Battle Smith': 'Artificers blend craftsmanship and combat, and Battle Smiths march with steel defenders at their side. You repair and empower allies, fight with an enchanted weapon, and let your construct companion guard the line.',
       Abjurer: 'Wizards master arcane knowledge through study, and Abjurers specialize in magical defense. You erect shields, banish threats, and become a walking fortress\u2014turning spells into walls and wards that protect allies and repel foes.',
       Diviner: 'Wizards shape reality with spells, and Diviners bend time and fate. You peer into the future, manipulate outcomes with prophetic dice, and always seem to be in the right place with uncanny foreknowledge.',
       Evoker: 'Wizards command pure arcane force, and Evokers shape it into raw destruction. You sculpt fireballs, lightning bolts, and thunderous blasts\u2014unleashing elemental devastation with pinpoint control.',
@@ -489,6 +499,7 @@ const nameMap = {
       'Tortle':'Tortle'
     },
     classes: {
+      'Artificer':'Artífice',
       'Barbarian':'Bárbaro',
       'Bard':'Bardo',
       'Cleric':'Clérigo',
@@ -571,6 +582,10 @@ const nameMap = {
       'Fiend Patron': 'com Pacto Infernal',
       'Future You': 'com Pacto Consigo Mesmo do Futuro',
       'Great Old One Patron': 'com Patrono Ancião Cósmico',
+      Alchemist: 'Alquimista',
+      Armorer: 'Armeiro',
+      Artillerist: 'Artilheiro',
+      'Battle Smith': 'Ferreiro de Batalha',
       Abjurer: 'Abjurador',
       Diviner: 'Divinador',
       Evoker: 'Evocador',
