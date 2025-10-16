@@ -567,8 +567,19 @@
               "var": "class",
               "op": "set",
               "value": "ARTIFICER"
+            },
+            {
+              "var": "subclass_group",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "subclass",
+              "op": "set",
+              "value": null
             }
-          ]
+          ],
+          "next": "q_subclass_group"
         },
         {
           "label": "Paladin",
