@@ -72,6 +72,11 @@
               "var": "subclass",
               "op": "set",
               "value": null
+            },
+            {
+              "var": "niche_role",
+              "op": "set",
+              "value": null
             }
           ],
           "next": "q_subclass_group"
@@ -94,6 +99,11 @@
               "var": "subclass",
               "op": "set",
               "value": null
+            },
+            {
+              "var": "niche_role",
+              "op": "set",
+              "value": null
             }
           ],
           "next": "q_subclass_group"
@@ -114,6 +124,11 @@
             },
             {
               "var": "subclass",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "niche_role",
               "op": "set",
               "value": null
             }
@@ -176,6 +191,11 @@
               "var": "subclass",
               "op": "set",
               "value": null
+            },
+            {
+              "var": "niche_role",
+              "op": "set",
+              "value": null
             }
           ],
           "next": "q_subclass_group"
@@ -198,6 +218,11 @@
               "var": "subclass",
               "op": "set",
               "value": null
+            },
+            {
+              "var": "niche_role",
+              "op": "set",
+              "value": null
             }
           ],
           "next": "q_subclass_group"
@@ -218,6 +243,11 @@
             },
             {
               "var": "subclass",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "niche_role",
               "op": "set",
               "value": null
             }
@@ -249,6 +279,11 @@
               "var": "subclass",
               "op": "set",
               "value": null
+            },
+            {
+              "var": "niche_role",
+              "op": "set",
+              "value": null
             }
           ],
           "next": "q_subclass_group"
@@ -269,6 +304,11 @@
             },
             {
               "var": "subclass",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "niche_role",
               "op": "set",
               "value": null
             }
@@ -293,6 +333,11 @@
               "var": "subclass",
               "op": "set",
               "value": null
+            },
+            {
+              "var": "niche_role",
+              "op": "set",
+              "value": null
             }
           ],
           "next": "q_subclass_group"
@@ -313,6 +358,11 @@
             },
             {
               "var": "subclass",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "niche_role",
               "op": "set",
               "value": null
             }
@@ -387,6 +437,11 @@
               "var": "subclass",
               "op": "set",
               "value": null
+            },
+            {
+              "var": "niche_role",
+              "op": "set",
+              "value": null
             }
           ],
           "next": "q_subclass_group"
@@ -407,6 +462,11 @@
             },
             {
               "var": "subclass",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "niche_role",
               "op": "set",
               "value": null
             }
@@ -431,6 +491,11 @@
               "var": "subclass",
               "op": "set",
               "value": null
+            },
+            {
+              "var": "niche_role",
+              "op": "set",
+              "value": null
             }
           ],
           "next": "q_subclass_group"
@@ -451,6 +516,11 @@
             },
             {
               "var": "subclass",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "niche_role",
               "op": "set",
               "value": null
             }
@@ -482,6 +552,11 @@
               "var": "subclass",
               "op": "set",
               "value": null
+            },
+            {
+              "var": "niche_role",
+              "op": "set",
+              "value": null
             }
           ],
           "next": "q_subclass_group"
@@ -502,6 +577,11 @@
             },
             {
               "var": "subclass",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "niche_role",
               "op": "set",
               "value": null
             }
@@ -526,6 +606,11 @@
               "var": "subclass",
               "op": "set",
               "value": null
+            },
+            {
+              "var": "niche_role",
+              "op": "set",
+              "value": null
             }
           ],
           "next": "q_subclass_group"
@@ -548,6 +633,11 @@
               "var": "subclass",
               "op": "set",
               "value": null
+            },
+            {
+              "var": "niche_role",
+              "op": "set",
+              "value": null
             }
           ],
           "next": "q_subclass_group"
@@ -567,6 +657,11 @@
               "var": "class",
               "op": "set",
               "value": "ARTIFICER"
+            },
+            {
+              "var": "niche_role",
+              "op": "set",
+              "value": null
             }
           ]
         },
@@ -586,6 +681,11 @@
             },
             {
               "var": "subclass",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "niche_role",
               "op": "set",
               "value": null
             }
@@ -610,6 +710,11 @@
               "var": "subclass",
               "op": "set",
               "value": null
+            },
+            {
+              "var": "niche_role",
+              "op": "set",
+              "value": null
             }
           ],
           "next": "q_subclass_group"
@@ -632,6 +737,11 @@
               "var": "subclass",
               "op": "set",
               "value": null
+            },
+            {
+              "var": "niche_role",
+              "op": "set",
+              "value": null
             }
           ],
           "next": "q_subclass_group"
@@ -652,6 +762,11 @@
             },
             {
               "var": "subclass",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "niche_role",
               "op": "set",
               "value": null
             }
@@ -678,6 +793,11 @@
               "var": "subclass",
               "op": "set",
               "value": null
+            },
+            {
+              "var": "niche_role",
+              "op": "set",
+              "value": null
             }
           ],
           "next": "q_subclass_choice"
@@ -695,11 +815,85 @@
               "var": "subclass",
               "op": "set",
               "value": null
+            },
+            {
+              "var": "niche_role",
+              "op": "set",
+              "value": null
             }
           ],
-          "next": "q_subclass_choice"
+          "next": "q_subclass_niche_role"
         }
       ]
+    },
+    "q_subclass_niche_role": {
+      "type": "question",
+      "section": "class",
+      "question": "Procuras algum destes papeis?",
+      "when": {
+        "all": [
+          {
+            "var": "subclass_group",
+            "op": "eq",
+            "value": "NICHE"
+          },
+          {
+            "var": "class",
+            "op": "in",
+            "value": [
+              "CLERIC",
+              "MONK",
+              "PALADIN",
+              "ROGUE",
+              "WIZARD"
+            ]
+          }
+        ]
+      },
+      "options_source": {
+        "type": "inline",
+        "dataset": "niche_roles",
+        "label_field": "pt",
+        "value_field": "value",
+        "filters": [
+          {
+            "field": "class",
+            "var": "class",
+            "op": "eq",
+            "optional": false
+          }
+        ]
+      },
+      "skip_if_no_options": {
+        "next": "q_subclass_choice"
+      },
+      "autoselect_if_single": {
+        "dataset": "niche_roles",
+        "filters": [
+          {
+            "field": "class",
+            "var": "class",
+            "op": "eq",
+            "optional": false
+          }
+        ],
+        "value_field": "value",
+        "set": [
+          {
+            "var": "niche_role",
+            "op": "set",
+            "value_from_result": true
+          }
+        ]
+      },
+      "on_select": [
+        {
+          "var": "niche_role",
+          "op": "set",
+          "value_from_option": true
+        }
+      ],
+      "next": "q_subclass_choice"
     },
     "q_subclass_choice": {
       "type": "question",
@@ -722,6 +916,12 @@
             "var": "subclass_group",
             "op": "eq",
             "optional": false
+          },
+          {
+            "field": "niche_roles",
+            "var": "niche_role",
+            "op": "contains",
+            "optional": true
           }
         ]
       },
@@ -742,6 +942,12 @@
             "var": "subclass_group",
             "op": "eq",
             "optional": false
+          },
+          {
+            "field": "niche_roles",
+            "var": "niche_role",
+            "op": "contains",
+            "optional": true
           }
         ],
         "value_field": "code",
