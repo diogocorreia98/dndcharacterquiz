@@ -192,6 +192,132 @@
         "BARD",
         "WARLOCK"
       ]
+    },
+    "subclass_group": {
+      "type": "enum",
+      "symbols": [
+        "CORE",
+        "NICHE"
+      ]
+    },
+    "subclass": {
+      "type": "enum",
+      "symbols": [
+        "ARTIFICER_ALCHEMIST",
+        "ARTIFICER_ARMORER",
+        "ARTIFICER_ARTILLERIST",
+        "ARTIFICER_BATTLE_SMITH",
+        "BARBARIAN_PATH_OF_THE_BERSERKER",
+        "BARBARIAN_PATH_OF_THE_WILD_HEART",
+        "BARBARIAN_PATH_OF_THE_WORLD_TREE",
+        "BARBARIAN_PATH_OF_THE_ZEALOT",
+        "BARBARIAN_PATH_OF_THE_ANCESTRAL_GUARDIAN",
+        "BARBARIAN_PATH_OF_THE_BEAST",
+        "BARBARIAN_PATH_OF_THE_STORM_HERALD",
+        "BARBARIAN_PATH_OF_THE_WILD_MAGIC",
+        "BARBARIAN_PATH_OF_THE_MUSCLE_WIZARD",
+        "BARD_COLLEGE_OF_DANCE",
+        "BARD_COLLEGE_OF_GLAMOUR",
+        "BARD_COLLEGE_OF_LORE",
+        "BARD_COLLEGE_OF_VALOR",
+        "BARD_COLLEGE_OF_CREATION",
+        "BARD_COLLEGE_OF_ELOQUENCE",
+        "BARD_COLLEGE_OF_SWORDS",
+        "BARD_COLLEGE_OF_WHISPERS",
+        "CLERIC_LIFE_DOMAIN",
+        "CLERIC_LIGHT_DOMAIN",
+        "CLERIC_TRICKERY_DOMAIN",
+        "CLERIC_WAR_DOMAIN",
+        "CLERIC_ARCANA_DOMAIN",
+        "CLERIC_FORGE_DOMAIN",
+        "CLERIC_GRAVE_DOMAIN",
+        "CLERIC_KNOWLEDGE_DOMAIN",
+        "CLERIC_NATURE_DOMAIN",
+        "CLERIC_ORDER_DOMAIN",
+        "CLERIC_PEACE_DOMAIN",
+        "CLERIC_TEMPEST_DOMAIN",
+        "CLERIC_TWILIGHT_DOMAIN",
+        "DRUID_CIRCLE_OF_THE_LAND",
+        "DRUID_CIRCLE_OF_THE_MOON",
+        "DRUID_CIRCLE_OF_THE_SEA",
+        "DRUID_CIRCLE_OF_THE_STARS",
+        "DRUID_CIRCLE_OF_DREAMS",
+        "DRUID_CIRCLE_OF_SPORES",
+        "DRUID_CIRCLE_OF_THE_SHEPHERD",
+        "DRUID_CIRCLE_OF_WILDFIRE",
+        "FIGHTER_BATTLE_MASTER",
+        "FIGHTER_CHAMPION",
+        "FIGHTER_ELDRITCH_KNIGHT",
+        "FIGHTER_PSI_WARRIOR",
+        "FIGHTER_ARCANE_ARCHER",
+        "FIGHTER_CAVALIER",
+        "FIGHTER_RUNE_KNIGHT",
+        "FIGHTER_SAMURAI",
+        "FIGHTER_DUNGEONEER",
+        "MONK_WAY_OF_MERCY",
+        "MONK_WAY_OF_SHADOW",
+        "MONK_WAY_OF_THE_ELEMENTS",
+        "MONK_WAY_OF_THE_OPEN_HAND",
+        "MONK_WAY_OF_THE_ASTRAL_SELF",
+        "MONK_WAY_OF_THE_COBALT_SOUL",
+        "MONK_WAY_OF_THE_DRUNKEN_MASTER",
+        "MONK_WAY_OF_THE_KENSEI",
+        "MONK_WAY_OF_THE_LONG_DEATH",
+        "MONK_WAY_OF_THE_SUN_SOUL",
+        "MONK_WARRIOR_OF_THE_STREET",
+        "PALADIN_OATH_OF_DEVOTION",
+        "PALADIN_OATH_OF_GLORY",
+        "PALADIN_OATH_OF_THE_ANCIENTS",
+        "PALADIN_OATH_OF_VENGEANCE",
+        "PALADIN_OATH_OF_CONQUEST",
+        "PALADIN_OATH_OF_REDEMPTION",
+        "PALADIN_OATH_OF_THE_CROWN",
+        "PALADIN_OATH_OF_THE_WATCHERS",
+        "PALADIN_OATH_OF_THE_OPEN_SEA",
+        "PALADIN_OATH_OF_REVELRY",
+        "RANGER_BEAST_MASTER",
+        "RANGER_FEY_WANDERER",
+        "RANGER_GLOOM_STALKER",
+        "RANGER_HUNTER",
+        "RANGER_HORIZON_WALKER",
+        "RANGER_MONSTER_SLAYER",
+        "RANGER_SWARMKEEPER",
+        "ROGUE_ARACHNOID_STALKER",
+        "ROGUE_ARCANE_TRICKSTER",
+        "ROGUE_ASSASSIN",
+        "ROGUE_THIEF",
+        "ROGUE_INQUISITIVE",
+        "ROGUE_MASTERMIND",
+        "ROGUE_PHANTOM",
+        "ROGUE_SCOUT",
+        "ROGUE_SWASHBUCKLER",
+        "ROGUE_SOULKNIFE",
+        "SORCERER_CLOCKWORK_SORCERY",
+        "SORCERER_DRACONIC_SORCERY",
+        "SORCERER_WILD_MAGIC",
+        "SORCERER_STORM_SORCERY",
+        "SORCERER_ABERRANT_SORCERY",
+        "SORCERER_DIVINE_SOUL",
+        "SORCERER_SHADOW_MAGIC",
+        "WARLOCK_ARCHFEY_PATRON",
+        "WARLOCK_FIEND_PATRON",
+        "WARLOCK_GREAT_OLD_ONE_PATRON",
+        "WARLOCK_CELESTIAL_PATRON",
+        "WARLOCK_THE_FATHOMLESS",
+        "WARLOCK_THE_GENIE",
+        "WARLOCK_THE_HEXBLADE",
+        "WIZARD_ABJURER",
+        "WIZARD_DIVINER",
+        "WIZARD_EVOKER",
+        "WIZARD_ILLUSIONIST",
+        "WIZARD_BLADESINGING",
+        "WIZARD_ORDER_OF_SCRIBES",
+        "WIZARD_SCHOOL_OF_ABJURATION",
+        "WIZARD_SCHOOL_OF_CONJURATION",
+        "WIZARD_SCHOOL_OF_NECROMANCY",
+        "WIZARD_SCHOOL_OF_ENCHANTMENT",
+        "WIZARD_WAR_MAGIC"
+      ]
     }
   },
   "value_map": {
@@ -729,6 +855,16 @@
       "WARLOCK": {
         "pt": "Warlock",
         "en": "Warlock"
+      }
+    },
+    "subclass_group": {
+      "CORE": {
+        "pt": "Subclasses principais",
+        "en": "Core subclasses"
+      },
+      "NICHE": {
+        "pt": "Subclasses especializadas",
+        "en": "Niche subclasses"
       }
     }
   },
@@ -2240,6 +2376,806 @@
         "animal_likeness": [
           "B"
         ]
+      }
+    ],
+    "subclasses": [
+      {
+        "code": "ARTIFICER_ALCHEMIST",
+        "class": "ARTIFICER",
+        "group": "CORE",
+        "pt": "Alchemist",
+        "en": "Alchemist"
+      },
+      {
+        "code": "ARTIFICER_ARMORER",
+        "class": "ARTIFICER",
+        "group": "CORE",
+        "pt": "Armorer",
+        "en": "Armorer"
+      },
+      {
+        "code": "ARTIFICER_ARTILLERIST",
+        "class": "ARTIFICER",
+        "group": "CORE",
+        "pt": "Artillerist",
+        "en": "Artillerist"
+      },
+      {
+        "code": "ARTIFICER_BATTLE_SMITH",
+        "class": "ARTIFICER",
+        "group": "CORE",
+        "pt": "Battle Smith",
+        "en": "Battle Smith"
+      },
+      {
+        "code": "BARBARIAN_PATH_OF_THE_BERSERKER",
+        "class": "BARBARIAN",
+        "group": "CORE",
+        "pt": "Path of the Berserker",
+        "en": "Path of the Berserker"
+      },
+      {
+        "code": "BARBARIAN_PATH_OF_THE_WILD_HEART",
+        "class": "BARBARIAN",
+        "group": "CORE",
+        "pt": "Path of the Wild Heart",
+        "en": "Path of the Wild Heart"
+      },
+      {
+        "code": "BARBARIAN_PATH_OF_THE_WORLD_TREE",
+        "class": "BARBARIAN",
+        "group": "CORE",
+        "pt": "Path of the World Tree",
+        "en": "Path of the World Tree"
+      },
+      {
+        "code": "BARBARIAN_PATH_OF_THE_ZEALOT",
+        "class": "BARBARIAN",
+        "group": "CORE",
+        "pt": "Path of the Zealot",
+        "en": "Path of the Zealot"
+      },
+      {
+        "code": "BARBARIAN_PATH_OF_THE_ANCESTRAL_GUARDIAN",
+        "class": "BARBARIAN",
+        "group": "NICHE",
+        "pt": "Path of the Ancestral Guardian",
+        "en": "Path of the Ancestral Guardian"
+      },
+      {
+        "code": "BARBARIAN_PATH_OF_THE_BEAST",
+        "class": "BARBARIAN",
+        "group": "NICHE",
+        "pt": "Path of the Beast",
+        "en": "Path of the Beast"
+      },
+      {
+        "code": "BARBARIAN_PATH_OF_THE_STORM_HERALD",
+        "class": "BARBARIAN",
+        "group": "NICHE",
+        "pt": "Path of the Storm Herald",
+        "en": "Path of the Storm Herald"
+      },
+      {
+        "code": "BARBARIAN_PATH_OF_THE_WILD_MAGIC",
+        "class": "BARBARIAN",
+        "group": "NICHE",
+        "pt": "Path of the Wild Magic",
+        "en": "Path of the Wild Magic"
+      },
+      {
+        "code": "BARBARIAN_PATH_OF_THE_MUSCLE_WIZARD",
+        "class": "BARBARIAN",
+        "group": "NICHE",
+        "pt": "Path of the Muscle Wizard",
+        "en": "Path of the Muscle Wizard"
+      },
+      {
+        "code": "BARD_COLLEGE_OF_DANCE",
+        "class": "BARD",
+        "group": "CORE",
+        "pt": "College of Dance",
+        "en": "College of Dance"
+      },
+      {
+        "code": "BARD_COLLEGE_OF_GLAMOUR",
+        "class": "BARD",
+        "group": "CORE",
+        "pt": "College of Glamour",
+        "en": "College of Glamour"
+      },
+      {
+        "code": "BARD_COLLEGE_OF_LORE",
+        "class": "BARD",
+        "group": "CORE",
+        "pt": "College of Lore",
+        "en": "College of Lore"
+      },
+      {
+        "code": "BARD_COLLEGE_OF_VALOR",
+        "class": "BARD",
+        "group": "CORE",
+        "pt": "College of Valor",
+        "en": "College of Valor"
+      },
+      {
+        "code": "BARD_COLLEGE_OF_CREATION",
+        "class": "BARD",
+        "group": "NICHE",
+        "pt": "College of Creation",
+        "en": "College of Creation"
+      },
+      {
+        "code": "BARD_COLLEGE_OF_ELOQUENCE",
+        "class": "BARD",
+        "group": "NICHE",
+        "pt": "College of Eloquence",
+        "en": "College of Eloquence"
+      },
+      {
+        "code": "BARD_COLLEGE_OF_SWORDS",
+        "class": "BARD",
+        "group": "NICHE",
+        "pt": "College of Swords",
+        "en": "College of Swords"
+      },
+      {
+        "code": "BARD_COLLEGE_OF_WHISPERS",
+        "class": "BARD",
+        "group": "NICHE",
+        "pt": "College of Whispers",
+        "en": "College of Whispers"
+      },
+      {
+        "code": "CLERIC_LIFE_DOMAIN",
+        "class": "CLERIC",
+        "group": "CORE",
+        "pt": "Life Domain",
+        "en": "Life Domain"
+      },
+      {
+        "code": "CLERIC_LIGHT_DOMAIN",
+        "class": "CLERIC",
+        "group": "CORE",
+        "pt": "Light Domain",
+        "en": "Light Domain"
+      },
+      {
+        "code": "CLERIC_TRICKERY_DOMAIN",
+        "class": "CLERIC",
+        "group": "CORE",
+        "pt": "Trickery Domain",
+        "en": "Trickery Domain"
+      },
+      {
+        "code": "CLERIC_WAR_DOMAIN",
+        "class": "CLERIC",
+        "group": "CORE",
+        "pt": "War Domain",
+        "en": "War Domain"
+      },
+      {
+        "code": "CLERIC_ARCANA_DOMAIN",
+        "class": "CLERIC",
+        "group": "NICHE",
+        "pt": "Arcana Domain",
+        "en": "Arcana Domain"
+      },
+      {
+        "code": "CLERIC_FORGE_DOMAIN",
+        "class": "CLERIC",
+        "group": "NICHE",
+        "pt": "Forge Domain",
+        "en": "Forge Domain"
+      },
+      {
+        "code": "CLERIC_GRAVE_DOMAIN",
+        "class": "CLERIC",
+        "group": "NICHE",
+        "pt": "Grave Domain",
+        "en": "Grave Domain"
+      },
+      {
+        "code": "CLERIC_KNOWLEDGE_DOMAIN",
+        "class": "CLERIC",
+        "group": "NICHE",
+        "pt": "Knowledge Domain",
+        "en": "Knowledge Domain"
+      },
+      {
+        "code": "CLERIC_NATURE_DOMAIN",
+        "class": "CLERIC",
+        "group": "NICHE",
+        "pt": "Nature Domain",
+        "en": "Nature Domain"
+      },
+      {
+        "code": "CLERIC_ORDER_DOMAIN",
+        "class": "CLERIC",
+        "group": "NICHE",
+        "pt": "Order Domain",
+        "en": "Order Domain"
+      },
+      {
+        "code": "CLERIC_PEACE_DOMAIN",
+        "class": "CLERIC",
+        "group": "NICHE",
+        "pt": "Peace Domain",
+        "en": "Peace Domain"
+      },
+      {
+        "code": "CLERIC_TEMPEST_DOMAIN",
+        "class": "CLERIC",
+        "group": "NICHE",
+        "pt": "Tempest Domain",
+        "en": "Tempest Domain"
+      },
+      {
+        "code": "CLERIC_TWILIGHT_DOMAIN",
+        "class": "CLERIC",
+        "group": "NICHE",
+        "pt": "Twilight Domain",
+        "en": "Twilight Domain"
+      },
+      {
+        "code": "DRUID_CIRCLE_OF_THE_LAND",
+        "class": "DRUID",
+        "group": "CORE",
+        "pt": "Circle of the Land",
+        "en": "Circle of the Land"
+      },
+      {
+        "code": "DRUID_CIRCLE_OF_THE_MOON",
+        "class": "DRUID",
+        "group": "CORE",
+        "pt": "Circle of the Moon",
+        "en": "Circle of the Moon"
+      },
+      {
+        "code": "DRUID_CIRCLE_OF_THE_SEA",
+        "class": "DRUID",
+        "group": "CORE",
+        "pt": "Circle of the Sea",
+        "en": "Circle of the Sea"
+      },
+      {
+        "code": "DRUID_CIRCLE_OF_THE_STARS",
+        "class": "DRUID",
+        "group": "CORE",
+        "pt": "Circle of the Stars",
+        "en": "Circle of the Stars"
+      },
+      {
+        "code": "DRUID_CIRCLE_OF_DREAMS",
+        "class": "DRUID",
+        "group": "NICHE",
+        "pt": "Circle of Dreams",
+        "en": "Circle of Dreams"
+      },
+      {
+        "code": "DRUID_CIRCLE_OF_SPORES",
+        "class": "DRUID",
+        "group": "NICHE",
+        "pt": "Circle of Spores",
+        "en": "Circle of Spores"
+      },
+      {
+        "code": "DRUID_CIRCLE_OF_THE_SHEPHERD",
+        "class": "DRUID",
+        "group": "NICHE",
+        "pt": "Circle of the Shepherd",
+        "en": "Circle of the Shepherd"
+      },
+      {
+        "code": "DRUID_CIRCLE_OF_WILDFIRE",
+        "class": "DRUID",
+        "group": "NICHE",
+        "pt": "Circle of Wildfire",
+        "en": "Circle of Wildfire"
+      },
+      {
+        "code": "FIGHTER_BATTLE_MASTER",
+        "class": "FIGHTER",
+        "group": "CORE",
+        "pt": "Battle Master",
+        "en": "Battle Master"
+      },
+      {
+        "code": "FIGHTER_CHAMPION",
+        "class": "FIGHTER",
+        "group": "CORE",
+        "pt": "Champion",
+        "en": "Champion"
+      },
+      {
+        "code": "FIGHTER_ELDRITCH_KNIGHT",
+        "class": "FIGHTER",
+        "group": "CORE",
+        "pt": "Eldritch Knight",
+        "en": "Eldritch Knight"
+      },
+      {
+        "code": "FIGHTER_PSI_WARRIOR",
+        "class": "FIGHTER",
+        "group": "CORE",
+        "pt": "Psi Warrior",
+        "en": "Psi Warrior"
+      },
+      {
+        "code": "FIGHTER_ARCANE_ARCHER",
+        "class": "FIGHTER",
+        "group": "NICHE",
+        "pt": "Arcane Archer",
+        "en": "Arcane Archer"
+      },
+      {
+        "code": "FIGHTER_CAVALIER",
+        "class": "FIGHTER",
+        "group": "NICHE",
+        "pt": "Cavalier",
+        "en": "Cavalier"
+      },
+      {
+        "code": "FIGHTER_RUNE_KNIGHT",
+        "class": "FIGHTER",
+        "group": "NICHE",
+        "pt": "Rune Knight",
+        "en": "Rune Knight"
+      },
+      {
+        "code": "FIGHTER_SAMURAI",
+        "class": "FIGHTER",
+        "group": "NICHE",
+        "pt": "Samurai",
+        "en": "Samurai"
+      },
+      {
+        "code": "FIGHTER_DUNGEONEER",
+        "class": "FIGHTER",
+        "group": "NICHE",
+        "pt": "Dungeoneer",
+        "en": "Dungeoneer"
+      },
+      {
+        "code": "MONK_WAY_OF_MERCY",
+        "class": "MONK",
+        "group": "CORE",
+        "pt": "Way of Mercy",
+        "en": "Way of Mercy"
+      },
+      {
+        "code": "MONK_WAY_OF_SHADOW",
+        "class": "MONK",
+        "group": "CORE",
+        "pt": "Way of Shadow",
+        "en": "Way of Shadow"
+      },
+      {
+        "code": "MONK_WAY_OF_THE_ELEMENTS",
+        "class": "MONK",
+        "group": "CORE",
+        "pt": "Way of the Elements",
+        "en": "Way of the Elements"
+      },
+      {
+        "code": "MONK_WAY_OF_THE_OPEN_HAND",
+        "class": "MONK",
+        "group": "CORE",
+        "pt": "Way of the Open Hand",
+        "en": "Way of the Open Hand"
+      },
+      {
+        "code": "MONK_WAY_OF_THE_ASTRAL_SELF",
+        "class": "MONK",
+        "group": "NICHE",
+        "pt": "Way of the Astral Self",
+        "en": "Way of the Astral Self"
+      },
+      {
+        "code": "MONK_WAY_OF_THE_COBALT_SOUL",
+        "class": "MONK",
+        "group": "NICHE",
+        "pt": "Way of the Cobalt Soul",
+        "en": "Way of the Cobalt Soul"
+      },
+      {
+        "code": "MONK_WAY_OF_THE_DRUNKEN_MASTER",
+        "class": "MONK",
+        "group": "NICHE",
+        "pt": "Way of the Drunken Master",
+        "en": "Way of the Drunken Master"
+      },
+      {
+        "code": "MONK_WAY_OF_THE_KENSEI",
+        "class": "MONK",
+        "group": "NICHE",
+        "pt": "Way of the Kensei",
+        "en": "Way of the Kensei"
+      },
+      {
+        "code": "MONK_WAY_OF_THE_LONG_DEATH",
+        "class": "MONK",
+        "group": "NICHE",
+        "pt": "Way of the Long Death",
+        "en": "Way of the Long Death"
+      },
+      {
+        "code": "MONK_WAY_OF_THE_SUN_SOUL",
+        "class": "MONK",
+        "group": "NICHE",
+        "pt": "Way of the Sun Soul",
+        "en": "Way of the Sun Soul"
+      },
+      {
+        "code": "MONK_WARRIOR_OF_THE_STREET",
+        "class": "MONK",
+        "group": "NICHE",
+        "pt": "Warrior of the Street",
+        "en": "Warrior of the Street"
+      },
+      {
+        "code": "PALADIN_OATH_OF_DEVOTION",
+        "class": "PALADIN",
+        "group": "CORE",
+        "pt": "Oath of Devotion",
+        "en": "Oath of Devotion"
+      },
+      {
+        "code": "PALADIN_OATH_OF_GLORY",
+        "class": "PALADIN",
+        "group": "CORE",
+        "pt": "Oath of Glory",
+        "en": "Oath of Glory"
+      },
+      {
+        "code": "PALADIN_OATH_OF_THE_ANCIENTS",
+        "class": "PALADIN",
+        "group": "CORE",
+        "pt": "Oath of the Ancients",
+        "en": "Oath of the Ancients"
+      },
+      {
+        "code": "PALADIN_OATH_OF_VENGEANCE",
+        "class": "PALADIN",
+        "group": "CORE",
+        "pt": "Oath of Vengeance",
+        "en": "Oath of Vengeance"
+      },
+      {
+        "code": "PALADIN_OATH_OF_CONQUEST",
+        "class": "PALADIN",
+        "group": "NICHE",
+        "pt": "Oath of Conquest",
+        "en": "Oath of Conquest"
+      },
+      {
+        "code": "PALADIN_OATH_OF_REDEMPTION",
+        "class": "PALADIN",
+        "group": "NICHE",
+        "pt": "Oath of Redemption",
+        "en": "Oath of Redemption"
+      },
+      {
+        "code": "PALADIN_OATH_OF_THE_CROWN",
+        "class": "PALADIN",
+        "group": "NICHE",
+        "pt": "Oath of the Crown",
+        "en": "Oath of the Crown"
+      },
+      {
+        "code": "PALADIN_OATH_OF_THE_WATCHERS",
+        "class": "PALADIN",
+        "group": "NICHE",
+        "pt": "Oath of the Watchers",
+        "en": "Oath of the Watchers"
+      },
+      {
+        "code": "PALADIN_OATH_OF_THE_OPEN_SEA",
+        "class": "PALADIN",
+        "group": "NICHE",
+        "pt": "Oath of the Open Sea",
+        "en": "Oath of the Open Sea"
+      },
+      {
+        "code": "PALADIN_OATH_OF_REVELRY",
+        "class": "PALADIN",
+        "group": "NICHE",
+        "pt": "Oath of Revelry",
+        "en": "Oath of Revelry"
+      },
+      {
+        "code": "RANGER_BEAST_MASTER",
+        "class": "RANGER",
+        "group": "CORE",
+        "pt": "Beast Master",
+        "en": "Beast Master"
+      },
+      {
+        "code": "RANGER_FEY_WANDERER",
+        "class": "RANGER",
+        "group": "CORE",
+        "pt": "Fey Wanderer",
+        "en": "Fey Wanderer"
+      },
+      {
+        "code": "RANGER_GLOOM_STALKER",
+        "class": "RANGER",
+        "group": "CORE",
+        "pt": "Gloom Stalker",
+        "en": "Gloom Stalker"
+      },
+      {
+        "code": "RANGER_HUNTER",
+        "class": "RANGER",
+        "group": "CORE",
+        "pt": "Hunter",
+        "en": "Hunter"
+      },
+      {
+        "code": "RANGER_HORIZON_WALKER",
+        "class": "RANGER",
+        "group": "NICHE",
+        "pt": "Horizon Walker",
+        "en": "Horizon Walker"
+      },
+      {
+        "code": "RANGER_MONSTER_SLAYER",
+        "class": "RANGER",
+        "group": "NICHE",
+        "pt": "Monster Slayer",
+        "en": "Monster Slayer"
+      },
+      {
+        "code": "RANGER_SWARMKEEPER",
+        "class": "RANGER",
+        "group": "NICHE",
+        "pt": "Swarmkeeper",
+        "en": "Swarmkeeper"
+      },
+      {
+        "code": "ROGUE_ARACHNOID_STALKER",
+        "class": "ROGUE",
+        "group": "CORE",
+        "pt": "Arachnoid Stalker",
+        "en": "Arachnoid Stalker"
+      },
+      {
+        "code": "ROGUE_ARCANE_TRICKSTER",
+        "class": "ROGUE",
+        "group": "CORE",
+        "pt": "Arcane Trickster",
+        "en": "Arcane Trickster"
+      },
+      {
+        "code": "ROGUE_ASSASSIN",
+        "class": "ROGUE",
+        "group": "CORE",
+        "pt": "Assassin",
+        "en": "Assassin"
+      },
+      {
+        "code": "ROGUE_THIEF",
+        "class": "ROGUE",
+        "group": "CORE",
+        "pt": "Thief",
+        "en": "Thief"
+      },
+      {
+        "code": "ROGUE_INQUISITIVE",
+        "class": "ROGUE",
+        "group": "NICHE",
+        "pt": "Inquisitive",
+        "en": "Inquisitive"
+      },
+      {
+        "code": "ROGUE_MASTERMIND",
+        "class": "ROGUE",
+        "group": "NICHE",
+        "pt": "Mastermind",
+        "en": "Mastermind"
+      },
+      {
+        "code": "ROGUE_PHANTOM",
+        "class": "ROGUE",
+        "group": "NICHE",
+        "pt": "Phantom",
+        "en": "Phantom"
+      },
+      {
+        "code": "ROGUE_SCOUT",
+        "class": "ROGUE",
+        "group": "NICHE",
+        "pt": "Scout",
+        "en": "Scout"
+      },
+      {
+        "code": "ROGUE_SWASHBUCKLER",
+        "class": "ROGUE",
+        "group": "NICHE",
+        "pt": "Swashbuckler",
+        "en": "Swashbuckler"
+      },
+      {
+        "code": "ROGUE_SOULKNIFE",
+        "class": "ROGUE",
+        "group": "NICHE",
+        "pt": "Soulknife",
+        "en": "Soulknife"
+      },
+      {
+        "code": "SORCERER_CLOCKWORK_SORCERY",
+        "class": "SORCERER",
+        "group": "CORE",
+        "pt": "Clockwork Sorcery",
+        "en": "Clockwork Sorcery"
+      },
+      {
+        "code": "SORCERER_DRACONIC_SORCERY",
+        "class": "SORCERER",
+        "group": "CORE",
+        "pt": "Draconic Sorcery",
+        "en": "Draconic Sorcery"
+      },
+      {
+        "code": "SORCERER_WILD_MAGIC",
+        "class": "SORCERER",
+        "group": "CORE",
+        "pt": "Wild Magic",
+        "en": "Wild Magic"
+      },
+      {
+        "code": "SORCERER_STORM_SORCERY",
+        "class": "SORCERER",
+        "group": "NICHE",
+        "pt": "Storm Sorcery",
+        "en": "Storm Sorcery"
+      },
+      {
+        "code": "SORCERER_ABERRANT_SORCERY",
+        "class": "SORCERER",
+        "group": "CORE",
+        "pt": "Aberrant Sorcery",
+        "en": "Aberrant Sorcery"
+      },
+      {
+        "code": "SORCERER_DIVINE_SOUL",
+        "class": "SORCERER",
+        "group": "NICHE",
+        "pt": "Divine Soul",
+        "en": "Divine Soul"
+      },
+      {
+        "code": "SORCERER_SHADOW_MAGIC",
+        "class": "SORCERER",
+        "group": "NICHE",
+        "pt": "Shadow Magic",
+        "en": "Shadow Magic"
+      },
+      {
+        "code": "WARLOCK_ARCHFEY_PATRON",
+        "class": "WARLOCK",
+        "group": "CORE",
+        "pt": "Archfey Patron",
+        "en": "Archfey Patron"
+      },
+      {
+        "code": "WARLOCK_FIEND_PATRON",
+        "class": "WARLOCK",
+        "group": "CORE",
+        "pt": "Fiend Patron",
+        "en": "Fiend Patron"
+      },
+      {
+        "code": "WARLOCK_GREAT_OLD_ONE_PATRON",
+        "class": "WARLOCK",
+        "group": "CORE",
+        "pt": "Great Old One Patron",
+        "en": "Great Old One Patron"
+      },
+      {
+        "code": "WARLOCK_CELESTIAL_PATRON",
+        "class": "WARLOCK",
+        "group": "CORE",
+        "pt": "Celestial Patron",
+        "en": "Celestial Patron"
+      },
+      {
+        "code": "WARLOCK_THE_FATHOMLESS",
+        "class": "WARLOCK",
+        "group": "NICHE",
+        "pt": "The Fathomless",
+        "en": "The Fathomless"
+      },
+      {
+        "code": "WARLOCK_THE_GENIE",
+        "class": "WARLOCK",
+        "group": "NICHE",
+        "pt": "The Genie",
+        "en": "The Genie"
+      },
+      {
+        "code": "WARLOCK_THE_HEXBLADE",
+        "class": "WARLOCK",
+        "group": "NICHE",
+        "pt": "The Hexblade",
+        "en": "The Hexblade"
+      },
+      {
+        "code": "WIZARD_ABJURER",
+        "class": "WIZARD",
+        "group": "CORE",
+        "pt": "Abjurer",
+        "en": "Abjurer"
+      },
+      {
+        "code": "WIZARD_DIVINER",
+        "class": "WIZARD",
+        "group": "CORE",
+        "pt": "Diviner",
+        "en": "Diviner"
+      },
+      {
+        "code": "WIZARD_EVOKER",
+        "class": "WIZARD",
+        "group": "CORE",
+        "pt": "Evoker",
+        "en": "Evoker"
+      },
+      {
+        "code": "WIZARD_ILLUSIONIST",
+        "class": "WIZARD",
+        "group": "CORE",
+        "pt": "Illusionist",
+        "en": "Illusionist"
+      },
+      {
+        "code": "WIZARD_BLADESINGING",
+        "class": "WIZARD",
+        "group": "NICHE",
+        "pt": "Bladesinging",
+        "en": "Bladesinging"
+      },
+      {
+        "code": "WIZARD_ORDER_OF_SCRIBES",
+        "class": "WIZARD",
+        "group": "NICHE",
+        "pt": "Order of Scribes",
+        "en": "Order of Scribes"
+      },
+      {
+        "code": "WIZARD_SCHOOL_OF_ABJURATION",
+        "class": "WIZARD",
+        "group": "NICHE",
+        "pt": "School of Abjuration",
+        "en": "School of Abjuration"
+      },
+      {
+        "code": "WIZARD_SCHOOL_OF_CONJURATION",
+        "class": "WIZARD",
+        "group": "NICHE",
+        "pt": "School of Conjuration",
+        "en": "School of Conjuration"
+      },
+      {
+        "code": "WIZARD_SCHOOL_OF_NECROMANCY",
+        "class": "WIZARD",
+        "group": "NICHE",
+        "pt": "School of Necromancy",
+        "en": "School of Necromancy"
+      },
+      {
+        "code": "WIZARD_SCHOOL_OF_ENCHANTMENT",
+        "class": "WIZARD",
+        "group": "NICHE",
+        "pt": "School of Enchantment",
+        "en": "School of Enchantment"
+      },
+      {
+        "code": "WIZARD_WAR_MAGIC",
+        "class": "WIZARD",
+        "group": "NICHE",
+        "pt": "War Magic",
+        "en": "War Magic"
       }
     ]
   },

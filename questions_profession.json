@@ -62,8 +62,19 @@
               "var": "class",
               "op": "set",
               "value": "BARBARIAN"
+            },
+            {
+              "var": "subclass_group",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "subclass",
+              "op": "set",
+              "value": null
             }
-          ]
+          ],
+          "next": "q_subclass_group"
         },
         {
           "label": "Fighter",
@@ -73,8 +84,19 @@
               "var": "class",
               "op": "set",
               "value": "FIGHTER"
+            },
+            {
+              "var": "subclass_group",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "subclass",
+              "op": "set",
+              "value": null
             }
-          ]
+          ],
+          "next": "q_subclass_group"
         },
         {
           "label": "Rogue",
@@ -84,8 +106,19 @@
               "var": "class",
               "op": "set",
               "value": "ROGUE"
+            },
+            {
+              "var": "subclass_group",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "subclass",
+              "op": "set",
+              "value": null
             }
-          ]
+          ],
+          "next": "q_subclass_group"
         }
       ]
     },
@@ -133,8 +166,19 @@
               "var": "class",
               "op": "set",
               "value": "BARBARIAN"
+            },
+            {
+              "var": "subclass_group",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "subclass",
+              "op": "set",
+              "value": null
             }
-          ]
+          ],
+          "next": "q_subclass_group"
         },
         {
           "label": "Fighter",
@@ -144,8 +188,19 @@
               "var": "class",
               "op": "set",
               "value": "FIGHTER"
+            },
+            {
+              "var": "subclass_group",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "subclass",
+              "op": "set",
+              "value": null
             }
-          ]
+          ],
+          "next": "q_subclass_group"
         },
         {
           "label": "Rogue",
@@ -155,8 +210,19 @@
               "var": "class",
               "op": "set",
               "value": "ROGUE"
+            },
+            {
+              "var": "subclass_group",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "subclass",
+              "op": "set",
+              "value": null
             }
-          ]
+          ],
+          "next": "q_subclass_group"
         }
       ]
     },
@@ -173,8 +239,19 @@
               "var": "class",
               "op": "set",
               "value": "CLERIC"
+            },
+            {
+              "var": "subclass_group",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "subclass",
+              "op": "set",
+              "value": null
             }
-          ]
+          ],
+          "next": "q_subclass_group"
         },
         {
           "label": "Paladin",
@@ -184,8 +261,19 @@
               "var": "class",
               "op": "set",
               "value": "PALADIN"
+            },
+            {
+              "var": "subclass_group",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "subclass",
+              "op": "set",
+              "value": null
             }
-          ]
+          ],
+          "next": "q_subclass_group"
         },
         {
           "label": "Ranger",
@@ -195,8 +283,19 @@
               "var": "class",
               "op": "set",
               "value": "RANGER"
+            },
+            {
+              "var": "subclass_group",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "subclass",
+              "op": "set",
+              "value": null
             }
-          ]
+          ],
+          "next": "q_subclass_group"
         },
         {
           "label": "Wizard",
@@ -206,8 +305,19 @@
               "var": "class",
               "op": "set",
               "value": "WIZARD"
+            },
+            {
+              "var": "subclass_group",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "subclass",
+              "op": "set",
+              "value": null
             }
-          ]
+          ],
+          "next": "q_subclass_group"
         }
       ]
     },
@@ -267,8 +377,19 @@
               "var": "class",
               "op": "set",
               "value": "BARBARIAN"
+            },
+            {
+              "var": "subclass_group",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "subclass",
+              "op": "set",
+              "value": null
             }
-          ]
+          ],
+          "next": "q_subclass_group"
         },
         {
           "label": "Fighter",
@@ -278,8 +399,19 @@
               "var": "class",
               "op": "set",
               "value": "FIGHTER"
+            },
+            {
+              "var": "subclass_group",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "subclass",
+              "op": "set",
+              "value": null
             }
-          ]
+          ],
+          "next": "q_subclass_group"
         },
         {
           "label": "Rogue",
@@ -289,8 +421,19 @@
               "var": "class",
               "op": "set",
               "value": "ROGUE"
+            },
+            {
+              "var": "subclass_group",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "subclass",
+              "op": "set",
+              "value": null
             }
-          ]
+          ],
+          "next": "q_subclass_group"
         },
         {
           "label": "Monk",
@@ -300,8 +443,19 @@
               "var": "class",
               "op": "set",
               "value": "MONK"
+            },
+            {
+              "var": "subclass_group",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "subclass",
+              "op": "set",
+              "value": null
             }
-          ]
+          ],
+          "next": "q_subclass_group"
         }
       ]
     },
@@ -318,8 +472,19 @@
               "var": "class",
               "op": "set",
               "value": "WIZARD"
+            },
+            {
+              "var": "subclass_group",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "subclass",
+              "op": "set",
+              "value": null
             }
-          ]
+          ],
+          "next": "q_subclass_group"
         },
         {
           "label": "Sorcerer",
@@ -329,8 +494,19 @@
               "var": "class",
               "op": "set",
               "value": "SORCERER"
+            },
+            {
+              "var": "subclass_group",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "subclass",
+              "op": "set",
+              "value": null
             }
-          ]
+          ],
+          "next": "q_subclass_group"
         },
         {
           "label": "Cleric",
@@ -340,8 +516,19 @@
               "var": "class",
               "op": "set",
               "value": "CLERIC"
+            },
+            {
+              "var": "subclass_group",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "subclass",
+              "op": "set",
+              "value": null
             }
-          ]
+          ],
+          "next": "q_subclass_group"
         },
         {
           "label": "Druid",
@@ -351,8 +538,19 @@
               "var": "class",
               "op": "set",
               "value": "DRUID"
+            },
+            {
+              "var": "subclass_group",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "subclass",
+              "op": "set",
+              "value": null
             }
-          ]
+          ],
+          "next": "q_subclass_group"
         }
       ]
     },
@@ -369,8 +567,19 @@
               "var": "class",
               "op": "set",
               "value": "PALADIN"
+            },
+            {
+              "var": "subclass_group",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "subclass",
+              "op": "set",
+              "value": null
             }
-          ]
+          ],
+          "next": "q_subclass_group"
         },
         {
           "label": "Ranger",
@@ -380,8 +589,19 @@
               "var": "class",
               "op": "set",
               "value": "RANGER"
+            },
+            {
+              "var": "subclass_group",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "subclass",
+              "op": "set",
+              "value": null
             }
-          ]
+          ],
+          "next": "q_subclass_group"
         },
         {
           "label": "Bard",
@@ -391,8 +611,19 @@
               "var": "class",
               "op": "set",
               "value": "BARD"
+            },
+            {
+              "var": "subclass_group",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "subclass",
+              "op": "set",
+              "value": null
             }
-          ]
+          ],
+          "next": "q_subclass_group"
         },
         {
           "label": "Warlock",
@@ -402,8 +633,120 @@
               "var": "class",
               "op": "set",
               "value": "WARLOCK"
+            },
+            {
+              "var": "subclass_group",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "subclass",
+              "op": "set",
+              "value": null
             }
-          ]
+          ],
+          "next": "q_subclass_group"
+        }
+      ]
+    },
+    "q_subclass_group": {
+      "type": "question",
+      "section": "class",
+      "question": "Preferes explorar subclasses principais ou especializadas?",
+      "options": [
+        {
+          "label": "Quero ver as subclasses principais.",
+          "value": "CORE",
+          "set": [
+            {
+              "var": "subclass_group",
+              "op": "set",
+              "value": "CORE"
+            },
+            {
+              "var": "subclass",
+              "op": "set",
+              "value": null
+            }
+          ],
+          "next": "q_subclass_choice"
+        },
+        {
+          "label": "Mostra-me opções mais únicas ou de nicho.",
+          "value": "NICHE",
+          "set": [
+            {
+              "var": "subclass_group",
+              "op": "set",
+              "value": "NICHE"
+            },
+            {
+              "var": "subclass",
+              "op": "set",
+              "value": null
+            }
+          ],
+          "next": "q_subclass_choice"
+        }
+      ]
+    },
+    "q_subclass_choice": {
+      "type": "question",
+      "section": "class",
+      "question": "Qual destas subclasses chama mais por ti?",
+      "options_source": {
+        "type": "inline",
+        "dataset": "subclasses",
+        "label_field": "pt",
+        "value_field": "code",
+        "filters": [
+          {
+            "field": "class",
+            "var": "class",
+            "op": "eq",
+            "optional": false
+          },
+          {
+            "field": "group",
+            "var": "subclass_group",
+            "op": "eq",
+            "optional": false
+          }
+        ]
+      },
+      "skip_if_no_options": {
+        "next": null
+      },
+      "autoselect_if_single": {
+        "dataset": "subclasses",
+        "filters": [
+          {
+            "field": "class",
+            "var": "class",
+            "op": "eq",
+            "optional": false
+          },
+          {
+            "field": "group",
+            "var": "subclass_group",
+            "op": "eq",
+            "optional": false
+          }
+        ],
+        "value_field": "code",
+        "set": [
+          {
+            "var": "subclass",
+            "op": "set",
+            "value_from_result": true
+          }
+        ]
+      },
+      "on_select": [
+        {
+          "var": "subclass",
+          "op": "set",
+          "value_from_option": true
         }
       ]
     }
