@@ -77,6 +77,11 @@
               "var": "niche_role",
               "op": "set",
               "value": null
+            },
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": null
             }
           ],
           "next": "q_subclass_group"
@@ -104,6 +109,11 @@
               "var": "niche_role",
               "op": "set",
               "value": null
+            },
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": null
             }
           ],
           "next": "q_subclass_group"
@@ -129,6 +139,11 @@
             },
             {
               "var": "niche_role",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "class_adjustment",
               "op": "set",
               "value": null
             }
@@ -196,6 +211,11 @@
               "var": "niche_role",
               "op": "set",
               "value": null
+            },
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": null
             }
           ],
           "next": "q_subclass_group"
@@ -223,6 +243,11 @@
               "var": "niche_role",
               "op": "set",
               "value": null
+            },
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": null
             }
           ],
           "next": "q_subclass_group"
@@ -248,6 +273,11 @@
             },
             {
               "var": "niche_role",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "class_adjustment",
               "op": "set",
               "value": null
             }
@@ -284,9 +314,14 @@
               "var": "niche_role",
               "op": "set",
               "value": null
+            },
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": null
             }
           ],
-          "next": "q_subclass_group"
+          "next": "q_class_adjustment_cleric"
         },
         {
           "label": "Paladin",
@@ -311,9 +346,14 @@
               "var": "niche_role",
               "op": "set",
               "value": null
+            },
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": null
             }
           ],
-          "next": "q_subclass_group"
+          "next": "q_class_adjustment_paladin"
         },
         {
           "label": "Ranger",
@@ -338,9 +378,14 @@
               "var": "niche_role",
               "op": "set",
               "value": null
+            },
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": null
             }
           ],
-          "next": "q_subclass_group"
+          "next": "q_class_adjustment_ranger"
         },
         {
           "label": "Wizard",
@@ -363,6 +408,11 @@
             },
             {
               "var": "niche_role",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "class_adjustment",
               "op": "set",
               "value": null
             }
@@ -442,6 +492,11 @@
               "var": "niche_role",
               "op": "set",
               "value": null
+            },
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": null
             }
           ],
           "next": "q_subclass_group"
@@ -467,6 +522,11 @@
             },
             {
               "var": "niche_role",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "class_adjustment",
               "op": "set",
               "value": null
             }
@@ -496,6 +556,11 @@
               "var": "niche_role",
               "op": "set",
               "value": null
+            },
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": null
             }
           ],
           "next": "q_subclass_group"
@@ -521,6 +586,11 @@
             },
             {
               "var": "niche_role",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "class_adjustment",
               "op": "set",
               "value": null
             }
@@ -557,6 +627,11 @@
               "var": "niche_role",
               "op": "set",
               "value": null
+            },
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": null
             }
           ],
           "next": "q_subclass_group"
@@ -582,6 +657,11 @@
             },
             {
               "var": "niche_role",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "class_adjustment",
               "op": "set",
               "value": null
             }
@@ -611,9 +691,14 @@
               "var": "niche_role",
               "op": "set",
               "value": null
+            },
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": null
             }
           ],
-          "next": "q_subclass_group"
+          "next": "q_class_adjustment_cleric"
         },
         {
           "label": "Druid",
@@ -638,9 +723,14 @@
               "var": "niche_role",
               "op": "set",
               "value": null
+            },
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": null
             }
           ],
-          "next": "q_subclass_group"
+          "next": "q_class_adjustment_druid"
         }
       ]
     },
@@ -660,6 +750,11 @@
             },
             {
               "var": "niche_role",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "class_adjustment",
               "op": "set",
               "value": null
             }
@@ -688,9 +783,14 @@
               "var": "niche_role",
               "op": "set",
               "value": null
+            },
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": null
             }
           ],
-          "next": "q_subclass_group"
+          "next": "q_class_adjustment_paladin"
         },
         {
           "label": "Ranger",
@@ -715,9 +815,14 @@
               "var": "niche_role",
               "op": "set",
               "value": null
+            },
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": null
             }
           ],
-          "next": "q_subclass_group"
+          "next": "q_class_adjustment_ranger"
         },
         {
           "label": "Bard",
@@ -740,6 +845,11 @@
             },
             {
               "var": "niche_role",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "class_adjustment",
               "op": "set",
               "value": null
             }
@@ -769,9 +879,14 @@
               "var": "niche_role",
               "op": "set",
               "value": null
+            },
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": null
             }
           ],
-          "next": "q_subclass_group"
+          "next": "q_class_adjustment_warlock"
         }
       ]
     },
@@ -964,6 +1079,185 @@
           "var": "subclass",
           "op": "set",
           "value_from_option": true
+        }
+      ]
+    },
+    "q_class_adjustment_cleric": {
+      "type": "question",
+      "section": "class",
+      "question": "Que Divine Order pretendes escolher?",
+      "options": [
+        {
+          "label": "Protector",
+          "value": "CLERIC_PROTECTOR",
+          "set": [
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": "CLERIC_PROTECTOR"
+            }
+          ],
+          "next": "q_subclass_group"
+        },
+        {
+          "label": "Thaumaturge",
+          "value": "CLERIC_THAUMATURGE",
+          "set": [
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": "CLERIC_THAUMATURGE"
+            }
+          ],
+          "next": "q_subclass_group"
+        }
+      ]
+    },
+    "q_class_adjustment_druid": {
+      "type": "question",
+      "section": "class",
+      "question": "Que Primal Order pretendes escolher?",
+      "options": [
+        {
+          "label": "Warden",
+          "value": "DRUID_WARDEN",
+          "set": [
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": "DRUID_WARDEN"
+            }
+          ],
+          "next": "q_subclass_group"
+        },
+        {
+          "label": "Magician",
+          "value": "DRUID_MAGICIAN",
+          "set": [
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": "DRUID_MAGICIAN"
+            }
+          ],
+          "next": "q_subclass_group"
+        }
+      ]
+    },
+    "q_class_adjustment_warlock": {
+      "type": "question",
+      "section": "class",
+      "question": "Que Pact Boon Invocation pretendes escolher?",
+      "options": [
+        {
+          "label": "Pact of the Tome",
+          "value": "WARLOCK_PACT_OF_THE_TOME",
+          "set": [
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": "WARLOCK_PACT_OF_THE_TOME"
+            }
+          ],
+          "next": "q_subclass_group"
+        },
+        {
+          "label": "Pact of the Chain",
+          "value": "WARLOCK_PACT_OF_THE_CHAIN",
+          "set": [
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": "WARLOCK_PACT_OF_THE_CHAIN"
+            }
+          ],
+          "next": "q_subclass_group"
+        },
+        {
+          "label": "Pact of the Blade",
+          "value": "WARLOCK_PACT_OF_THE_BLADE",
+          "set": [
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": "WARLOCK_PACT_OF_THE_BLADE"
+            }
+          ],
+          "next": "q_subclass_group"
+        },
+        {
+          "label": "None",
+          "value": "WARLOCK_NONE",
+          "set": [
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": "WARLOCK_NONE"
+            }
+          ],
+          "next": "q_subclass_group"
+        }
+      ]
+    },
+    "q_class_adjustment_ranger": {
+      "type": "question",
+      "section": "class",
+      "question": "Pretendes escolher o Fighting Style Druidic Warrior?",
+      "options": [
+        {
+          "label": "Sim",
+          "value": "RANGER_DRUIDIC_WARRIOR_SIM",
+          "set": [
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": "RANGER_DRUIDIC_WARRIOR_SIM"
+            }
+          ],
+          "next": "q_subclass_group"
+        },
+        {
+          "label": "Não",
+          "value": "RANGER_DRUIDIC_WARRIOR_NAO",
+          "set": [
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": "RANGER_DRUIDIC_WARRIOR_NAO"
+            }
+          ],
+          "next": "q_subclass_group"
+        }
+      ]
+    },
+    "q_class_adjustment_paladin": {
+      "type": "question",
+      "section": "class",
+      "question": "Pretendes escolher o Fighting Style Blessed Warrior?",
+      "options": [
+        {
+          "label": "Sim",
+          "value": "PALADIN_BLESSED_WARRIOR_SIM",
+          "set": [
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": "PALADIN_BLESSED_WARRIOR_SIM"
+            }
+          ],
+          "next": "q_subclass_group"
+        },
+        {
+          "label": "Não",
+          "value": "PALADIN_BLESSED_WARRIOR_NAO",
+          "set": [
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": "PALADIN_BLESSED_WARRIOR_NAO"
+            }
+          ],
+          "next": "q_subclass_group"
         }
       ]
     }
