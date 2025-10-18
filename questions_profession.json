@@ -749,6 +749,16 @@
               "value": "ARTIFICER"
             },
             {
+              "var": "subclass_group",
+              "op": "set",
+              "value": "CORE"
+            },
+            {
+              "var": "subclass",
+              "op": "set",
+              "value": null
+            },
+            {
               "var": "niche_role",
               "op": "set",
               "value": null
@@ -758,7 +768,8 @@
               "op": "set",
               "value": null
             }
-          ]
+          ],
+          "next": "q_subclass_choice"
         },
         {
           "label": "Paladin",
