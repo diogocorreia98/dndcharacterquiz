@@ -365,7 +365,15 @@
         "OTHER_LAND",
         "FROG",
         "OCTOPUS",
-        "OTHER_WATER"
+        "OTHER_WATER",
+        "IMP",
+        "QUASIT",
+        "SKELETON",
+        "SLAAD_TADPOLE",
+        "PSEUDODRAGON",
+        "SPHINX_OF_WONDER",
+        "SPRITE",
+        "VENOMOUS_SNAKE"
       ]
     }
   },
@@ -1038,6 +1046,38 @@
       "OTHER_WATER": {
         "pt": "Outro familiar aquático",
         "en": "Another aquatic familiar"
+      },
+      "IMP": {
+        "pt": "Diabrete",
+        "en": "Imp"
+      },
+      "QUASIT": {
+        "pt": "Quasit",
+        "en": "Quasit"
+      },
+      "SKELETON": {
+        "pt": "Esqueleto",
+        "en": "Skeleton"
+      },
+      "SLAAD_TADPOLE": {
+        "pt": "Girino de Slaad",
+        "en": "Slaad Tadpole"
+      },
+      "PSEUDODRAGON": {
+        "pt": "Pseudodragão",
+        "en": "Pseudodragon"
+      },
+      "SPHINX_OF_WONDER": {
+        "pt": "Esfinge do Maravilhoso",
+        "en": "Sphinx of Wonder"
+      },
+      "SPRITE": {
+        "pt": "Duende Alado",
+        "en": "Sprite"
+      },
+      "VENOMOUS_SNAKE": {
+        "pt": "Cobra Venenosa",
+        "en": "Venomous Snake"
       }
     }
   },

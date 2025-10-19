@@ -1567,9 +1567,24 @@
               "var": "class_adjustment",
               "op": "set",
               "value": "WARLOCK_PACT_OF_THE_CHAIN"
+            },
+            {
+              "var": "find_familiar_usage",
+              "op": "set",
+              "value": "YES"
+            },
+            {
+              "var": "familiar_habitat",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": null
             }
           ],
-          "next": "q_subclass_group"
+          "next": "q_warlock_familiar_type"
         },
         {
           "label": "Pact of the Blade",
@@ -1591,6 +1606,563 @@
               "var": "class_adjustment",
               "op": "set",
               "value": "WARLOCK_NONE"
+            }
+          ],
+          "next": "q_subclass_group"
+        }
+      ]
+    },
+    "q_warlock_familiar_type": {
+      "type": "question",
+      "section": "class",
+      "question": "Que tipo de familiar mágico te acompanha nas tuas aventuras?",
+      "when": {
+        "all": [
+          {
+            "var": "class",
+            "op": "eq",
+            "value": "WARLOCK"
+          },
+          {
+            "var": "class_adjustment",
+            "op": "eq",
+            "value": "WARLOCK_PACT_OF_THE_CHAIN"
+          }
+        ]
+      },
+      "options": [
+        {
+          "label": "Uma criatura mágica, exótica ou venenosa — algo fora do comum.",
+          "value": "WARLOCK_FAMILIAR_EXOTIC",
+          "set": [
+            {
+              "var": "find_familiar_usage",
+              "op": "set",
+              "value": "YES"
+            },
+            {
+              "var": "familiar_habitat",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": null
+            }
+          ],
+          "next": "q_warlock_familiar_style"
+        },
+        {
+          "label": "Um animal natural — discreto, astuto ou adorável.",
+          "value": "WARLOCK_FAMILIAR_ANIMAL",
+          "set": [
+            {
+              "var": "find_familiar_usage",
+              "op": "set",
+              "value": "YES"
+            },
+            {
+              "var": "familiar_habitat",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": null
+            }
+          ],
+          "next": "q_warlock_familiar_habitat"
+        }
+      ]
+    },
+    "q_warlock_familiar_style": {
+      "type": "question",
+      "section": "class",
+      "question": "Preferes que o teu familiar tenha...?",
+      "when": {
+        "all": [
+          {
+            "var": "class",
+            "op": "eq",
+            "value": "WARLOCK"
+          },
+          {
+            "var": "class_adjustment",
+            "op": "eq",
+            "value": "WARLOCK_PACT_OF_THE_CHAIN"
+          }
+        ]
+      },
+      "options": [
+        {
+          "label": "Um lado diabólico, com poderes infernais ou demoníacos.",
+          "value": "WARLOCK_FAMILIAR_INFERNAL",
+          "next": "q_warlock_familiar_dark"
+        },
+        {
+          "label": "Um toque encantado, misterioso ou celestial.",
+          "value": "WARLOCK_FAMILIAR_CELESTIAL",
+          "next": "q_warlock_familiar_mystic"
+        }
+      ]
+    },
+    "q_warlock_familiar_dark": {
+      "type": "question",
+      "section": "class",
+      "question": "Qual destes seres das trevas preferes como familiar?",
+      "when": {
+        "all": [
+          {
+            "var": "class",
+            "op": "eq",
+            "value": "WARLOCK"
+          },
+          {
+            "var": "class_adjustment",
+            "op": "eq",
+            "value": "WARLOCK_PACT_OF_THE_CHAIN"
+          }
+        ]
+      },
+      "options": [
+        {
+          "label": "Imp",
+          "value": "IMP",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "IMP"
+            }
+          ],
+          "next": "q_subclass_group"
+        },
+        {
+          "label": "Quasit",
+          "value": "QUASIT",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "QUASIT"
+            }
+          ],
+          "next": "q_subclass_group"
+        },
+        {
+          "label": "Skeleton",
+          "value": "SKELETON",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "SKELETON"
+            }
+          ],
+          "next": "q_subclass_group"
+        },
+        {
+          "label": "Slaad Tadpole",
+          "value": "SLAAD_TADPOLE",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "SLAAD_TADPOLE"
+            }
+          ],
+          "next": "q_subclass_group"
+        }
+      ]
+    },
+    "q_warlock_familiar_mystic": {
+      "type": "question",
+      "section": "class",
+      "question": "Qual destas criaturas mágicas e fascinantes escolhes?",
+      "when": {
+        "all": [
+          {
+            "var": "class",
+            "op": "eq",
+            "value": "WARLOCK"
+          },
+          {
+            "var": "class_adjustment",
+            "op": "eq",
+            "value": "WARLOCK_PACT_OF_THE_CHAIN"
+          }
+        ]
+      },
+      "options": [
+        {
+          "label": "Pseudodragon",
+          "value": "PSEUDODRAGON",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "PSEUDODRAGON"
+            }
+          ],
+          "next": "q_subclass_group"
+        },
+        {
+          "label": "Sphinx of Wonder",
+          "value": "SPHINX_OF_WONDER",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "SPHINX_OF_WONDER"
+            }
+          ],
+          "next": "q_subclass_group"
+        },
+        {
+          "label": "Sprite",
+          "value": "SPRITE",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "SPRITE"
+            }
+          ],
+          "next": "q_subclass_group"
+        },
+        {
+          "label": "Venomous Snake",
+          "value": "VENOMOUS_SNAKE",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "VENOMOUS_SNAKE"
+            }
+          ],
+          "next": "q_subclass_group"
+        }
+      ]
+    },
+    "q_warlock_familiar_habitat": {
+      "type": "question",
+      "section": "class",
+      "question": "O teu familiar ideal vive...?",
+      "when": {
+        "all": [
+          {
+            "var": "class",
+            "op": "eq",
+            "value": "WARLOCK"
+          },
+          {
+            "var": "class_adjustment",
+            "op": "eq",
+            "value": "WARLOCK_PACT_OF_THE_CHAIN"
+          },
+          {
+            "var": "find_familiar_usage",
+            "op": "eq",
+            "value": "YES"
+          }
+        ]
+      },
+      "options": [
+        {
+          "label": "Nos céus ou entre os ramos — voador e atento.",
+          "value": "SKY",
+          "set": [
+            {
+              "var": "familiar_habitat",
+              "op": "set",
+              "value": "SKY"
+            },
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": null
+            }
+          ],
+          "next": "q_warlock_familiar_creature_sky"
+        },
+        {
+          "label": "Na terra — rápido, sorrateiro ou escalador.",
+          "value": "LAND",
+          "set": [
+            {
+              "var": "familiar_habitat",
+              "op": "set",
+              "value": "LAND"
+            },
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": null
+            }
+          ],
+          "next": "q_warlock_familiar_creature_land"
+        },
+        {
+          "label": "Na água — estranho, furtivo e versátil.",
+          "value": "WATER",
+          "set": [
+            {
+              "var": "familiar_habitat",
+              "op": "set",
+              "value": "WATER"
+            },
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": null
+            }
+          ],
+          "next": "q_warlock_familiar_creature_water"
+        }
+      ]
+    },
+    "q_warlock_familiar_creature_sky": {
+      "type": "question",
+      "section": "class",
+      "question": "Qual destas criaturas aéreas te acompanha?",
+      "when": {
+        "all": [
+          {
+            "var": "class",
+            "op": "eq",
+            "value": "WARLOCK"
+          },
+          {
+            "var": "class_adjustment",
+            "op": "eq",
+            "value": "WARLOCK_PACT_OF_THE_CHAIN"
+          },
+          {
+            "var": "familiar_habitat",
+            "op": "eq",
+            "value": "SKY"
+          }
+        ]
+      },
+      "options": [
+        {
+          "label": "Bat",
+          "value": "BAT",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "BAT"
+            }
+          ],
+          "next": "q_subclass_group"
+        },
+        {
+          "label": "Hawk",
+          "value": "HAWK",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "HAWK"
+            }
+          ],
+          "next": "q_subclass_group"
+        },
+        {
+          "label": "Owl",
+          "value": "OWL",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "OWL"
+            }
+          ],
+          "next": "q_subclass_group"
+        },
+        {
+          "label": "Raven",
+          "value": "RAVEN",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "RAVEN"
+            }
+          ],
+          "next": "q_subclass_group"
+        },
+        {
+          "label": "Hei-de escolher outro animal",
+          "value": "OTHER_AIR",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "OTHER_AIR"
+            }
+          ],
+          "next": "q_subclass_group"
+        }
+      ]
+    },
+    "q_warlock_familiar_creature_land": {
+      "type": "question",
+      "section": "class",
+      "question": "Qual destas criaturas terrestres te acompanha?",
+      "when": {
+        "all": [
+          {
+            "var": "class",
+            "op": "eq",
+            "value": "WARLOCK"
+          },
+          {
+            "var": "class_adjustment",
+            "op": "eq",
+            "value": "WARLOCK_PACT_OF_THE_CHAIN"
+          },
+          {
+            "var": "familiar_habitat",
+            "op": "eq",
+            "value": "LAND"
+          }
+        ]
+      },
+      "options": [
+        {
+          "label": "Cat",
+          "value": "CAT",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "CAT"
+            }
+          ],
+          "next": "q_subclass_group"
+        },
+        {
+          "label": "Lizard",
+          "value": "LIZARD",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "LIZARD"
+            }
+          ],
+          "next": "q_subclass_group"
+        },
+        {
+          "label": "Rat",
+          "value": "RAT",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "RAT"
+            }
+          ],
+          "next": "q_subclass_group"
+        },
+        {
+          "label": "Spider",
+          "value": "SPIDER",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "SPIDER"
+            }
+          ],
+          "next": "q_subclass_group"
+        },
+        {
+          "label": "Weasel",
+          "value": "WEASEL",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "WEASEL"
+            }
+          ],
+          "next": "q_subclass_group"
+        },
+        {
+          "label": "Hei-de escolher outro animal",
+          "value": "OTHER_LAND",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "OTHER_LAND"
+            }
+          ],
+          "next": "q_subclass_group"
+        }
+      ]
+    },
+    "q_warlock_familiar_creature_water": {
+      "type": "question",
+      "section": "class",
+      "question": "Qual destas criaturas aquáticas te acompanha?",
+      "when": {
+        "all": [
+          {
+            "var": "class",
+            "op": "eq",
+            "value": "WARLOCK"
+          },
+          {
+            "var": "class_adjustment",
+            "op": "eq",
+            "value": "WARLOCK_PACT_OF_THE_CHAIN"
+          },
+          {
+            "var": "familiar_habitat",
+            "op": "eq",
+            "value": "WATER"
+          }
+        ]
+      },
+      "options": [
+        {
+          "label": "Frog",
+          "value": "FROG",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "FROG"
+            }
+          ],
+          "next": "q_subclass_group"
+        },
+        {
+          "label": "Octopus",
+          "value": "OCTOPUS",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "OCTOPUS"
+            }
+          ],
+          "next": "q_subclass_group"
+        },
+        {
+          "label": "Hei-de escolher outro animal",
+          "value": "OTHER_WATER",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "OTHER_WATER"
             }
           ],
           "next": "q_subclass_group"
