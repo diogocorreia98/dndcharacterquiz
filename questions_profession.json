@@ -460,7 +460,24 @@
               "value": "UNUSUAL"
             }
           ],
-          "next": "q_class_high_unusual_choice"
+          "next": "q_class_high_unusual_support_preference"
+        }
+      ]
+    },
+    "q_class_high_unusual_support_preference": {
+      "type": "question",
+      "section": "class",
+      "question": "Queres ter a opção de Healer ou Support?",
+      "options": [
+        {
+          "label": "Sim",
+          "value": "YES",
+          "next": "q_class_high_unusual_healer_choice"
+        },
+        {
+          "label": "Não",
+          "value": "NO",
+          "next": "q_class_high_unusual_nonhealer_choice"
         }
       ]
     },
@@ -734,7 +751,7 @@
         }
       ]
     },
-    "q_class_high_unusual_choice": {
+    "q_class_high_unusual_healer_choice": {
       "type": "question",
       "section": "class",
       "question": "Que classe preferes jogar?",
@@ -770,6 +787,38 @@
             }
           ],
           "next": "q_subclass_choice"
+        },
+        {
+          "label": "Bard",
+          "value": "BARD",
+          "set": [
+            {
+              "var": "class",
+              "op": "set",
+              "value": "BARD"
+            },
+            {
+              "var": "subclass_group",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "subclass",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "niche_role",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": null
+            }
+          ],
+          "next": "q_subclass_group"
         },
         {
           "label": "Paladin",
@@ -834,39 +883,14 @@
             }
           ],
           "next": "q_class_adjustment_ranger"
-        },
-        {
-          "label": "Bard",
-          "value": "BARD",
-          "set": [
-            {
-              "var": "class",
-              "op": "set",
-              "value": "BARD"
-            },
-            {
-              "var": "subclass_group",
-              "op": "set",
-              "value": null
-            },
-            {
-              "var": "subclass",
-              "op": "set",
-              "value": null
-            },
-            {
-              "var": "niche_role",
-              "op": "set",
-              "value": null
-            },
-            {
-              "var": "class_adjustment",
-              "op": "set",
-              "value": null
-            }
-          ],
-          "next": "q_subclass_group"
-        },
+        }
+      ]
+    },
+    "q_class_high_unusual_nonhealer_choice": {
+      "type": "question",
+      "section": "class",
+      "question": "Que classe preferes jogar?",
+      "options": [
         {
           "label": "Warlock",
           "value": "WARLOCK",
