@@ -898,6 +898,38 @@
             }
           ],
           "next": "q_class_adjustment_warlock"
+        },
+        {
+          "label": "Blood Hunter",
+          "value": "BLOOD_HUNTER",
+          "set": [
+            {
+              "var": "class",
+              "op": "set",
+              "value": "BLOOD_HUNTER"
+            },
+            {
+              "var": "subclass_group",
+              "op": "set",
+              "value": "CORE"
+            },
+            {
+              "var": "subclass",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "niche_role",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": null
+            }
+          ],
+          "next": "q_subclass_choice"
         }
       ]
     },

@@ -190,7 +190,8 @@
         "SORCERER",
         "DRUID",
         "BARD",
-        "WARLOCK"
+        "WARLOCK",
+        "BLOOD_HUNTER"
       ]
     },
     "subclass_group": {
@@ -316,7 +317,11 @@
         "WIZARD_SCHOOL_OF_CONJURATION",
         "WIZARD_SCHOOL_OF_NECROMANCY",
         "WIZARD_SCHOOL_OF_ENCHANTMENT",
-        "WIZARD_WAR_MAGIC"
+        "WIZARD_WAR_MAGIC",
+        "BLOOD_HUNTER_ORDER_OF_THE_GHOSTSLAYER",
+        "BLOOD_HUNTER_ORDER_OF_THE_LYCAN",
+        "BLOOD_HUNTER_ORDER_OF_THE_MUTANT",
+        "BLOOD_HUNTER_ORDER_OF_THE_PROFANE_SOUL"
       ]
     },
     "niche_role": {
@@ -912,6 +917,10 @@
       "WARLOCK": {
         "pt": "Warlock",
         "en": "Warlock"
+      },
+      "BLOOD_HUNTER": {
+        "pt": "Blood Hunter",
+        "en": "Blood Hunter"
       }
     },
     "subclass_group": {
@@ -3635,6 +3644,34 @@
           "DEFENDER",
           "STRIKER"
         ]
+      },
+      {
+        "code": "BLOOD_HUNTER_ORDER_OF_THE_GHOSTSLAYER",
+        "class": "BLOOD_HUNTER",
+        "group": "CORE",
+        "pt": "Order of the Ghostslayer",
+        "en": "Order of the Ghostslayer"
+      },
+      {
+        "code": "BLOOD_HUNTER_ORDER_OF_THE_LYCAN",
+        "class": "BLOOD_HUNTER",
+        "group": "CORE",
+        "pt": "Order of the Lycan",
+        "en": "Order of the Lycan"
+      },
+      {
+        "code": "BLOOD_HUNTER_ORDER_OF_THE_MUTANT",
+        "class": "BLOOD_HUNTER",
+        "group": "CORE",
+        "pt": "Order of the Mutant",
+        "en": "Order of the Mutant"
+      },
+      {
+        "code": "BLOOD_HUNTER_ORDER_OF_THE_PROFANE_SOUL",
+        "class": "BLOOD_HUNTER",
+        "group": "CORE",
+        "pt": "Order of the Profane Soul",
+        "en": "Order of the Profane Soul"
       }
     ]
   },
