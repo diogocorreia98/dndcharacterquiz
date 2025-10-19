@@ -1091,6 +1091,393 @@
           "op": "set",
           "value_from_option": true
         }
+      ],
+      "next": "q_find_familiar_use"
+    },
+    "q_find_familiar_use": {
+      "type": "question",
+      "section": "class",
+      "question": "Pretendes usar o feitiço Find Familiar e ter uma companhia animal mágica?",
+      "when": {
+        "any": [
+          {
+            "var": "class",
+            "op": "eq",
+            "value": "WIZARD"
+          },
+          {
+            "all": [
+              {
+                "var": "class",
+                "op": "eq",
+                "value": "FIGHTER"
+              },
+              {
+                "var": "subclass",
+                "op": "eq",
+                "value": "FIGHTER_ELDRITCH_KNIGHT"
+              }
+            ]
+          },
+          {
+            "all": [
+              {
+                "var": "class",
+                "op": "eq",
+                "value": "ROGUE"
+              },
+              {
+                "var": "subclass",
+                "op": "eq",
+                "value": "ROGUE_ARCANE_TRICKSTER"
+              }
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "label": "Sim",
+          "value": "YES",
+          "set": [
+            {
+              "var": "find_familiar_usage",
+              "op": "set",
+              "value": "YES"
+            },
+            {
+              "var": "familiar_habitat",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": null
+            }
+          ],
+          "next": "q_familiar_habitat"
+        },
+        {
+          "label": "Não",
+          "value": "NO",
+          "set": [
+            {
+              "var": "find_familiar_usage",
+              "op": "set",
+              "value": "NO"
+            },
+            {
+              "var": "familiar_habitat",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": null
+            }
+          ],
+          "next": null
+        }
+      ]
+    },
+    "q_familiar_habitat": {
+      "type": "question",
+      "section": "class",
+      "question": "O teu familiar ideal vive...?",
+      "when": {
+        "all": [
+          {
+            "var": "find_familiar_usage",
+            "op": "eq",
+            "value": "YES"
+          }
+        ]
+      },
+      "options": [
+        {
+          "label": "Nos céus ou entre os ramos — voador e atento.",
+          "value": "SKY",
+          "set": [
+            {
+              "var": "familiar_habitat",
+              "op": "set",
+              "value": "SKY"
+            },
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": null
+            }
+          ],
+          "next": "q_familiar_creature_sky"
+        },
+        {
+          "label": "Na terra — rápido, sorrateiro ou escalador.",
+          "value": "LAND",
+          "set": [
+            {
+              "var": "familiar_habitat",
+              "op": "set",
+              "value": "LAND"
+            },
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": null
+            }
+          ],
+          "next": "q_familiar_creature_land"
+        },
+        {
+          "label": "Na água — estranho, furtivo e versátil.",
+          "value": "WATER",
+          "set": [
+            {
+              "var": "familiar_habitat",
+              "op": "set",
+              "value": "WATER"
+            },
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": null
+            }
+          ],
+          "next": "q_familiar_creature_water"
+        }
+      ]
+    },
+    "q_familiar_creature_sky": {
+      "type": "question",
+      "section": "class",
+      "question": "Qual destas criaturas aéreas te acompanha?",
+      "when": {
+        "all": [
+          {
+            "var": "find_familiar_usage",
+            "op": "eq",
+            "value": "YES"
+          },
+          {
+            "var": "familiar_habitat",
+            "op": "eq",
+            "value": "SKY"
+          }
+        ]
+      },
+      "options": [
+        {
+          "label": "Bat",
+          "value": "BAT",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "BAT"
+            }
+          ],
+          "next": null
+        },
+        {
+          "label": "Hawk",
+          "value": "HAWK",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "HAWK"
+            }
+          ],
+          "next": null
+        },
+        {
+          "label": "Owl",
+          "value": "OWL",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "OWL"
+            }
+          ],
+          "next": null
+        },
+        {
+          "label": "Raven",
+          "value": "RAVEN",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "RAVEN"
+            }
+          ],
+          "next": null
+        },
+        {
+          "label": "Hei-de escolher outro animal",
+          "value": "OTHER_AIR",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "OTHER_AIR"
+            }
+          ],
+          "next": null
+        }
+      ]
+    },
+    "q_familiar_creature_land": {
+      "type": "question",
+      "section": "class",
+      "question": "Qual destes animais terrestres partilha a tua jornada?",
+      "when": {
+        "all": [
+          {
+            "var": "find_familiar_usage",
+            "op": "eq",
+            "value": "YES"
+          },
+          {
+            "var": "familiar_habitat",
+            "op": "eq",
+            "value": "LAND"
+          }
+        ]
+      },
+      "options": [
+        {
+          "label": "Cat",
+          "value": "CAT",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "CAT"
+            }
+          ],
+          "next": null
+        },
+        {
+          "label": "Lizard",
+          "value": "LIZARD",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "LIZARD"
+            }
+          ],
+          "next": null
+        },
+        {
+          "label": "Rat",
+          "value": "RAT",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "RAT"
+            }
+          ],
+          "next": null
+        },
+        {
+          "label": "Spider",
+          "value": "SPIDER",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "SPIDER"
+            }
+          ],
+          "next": null
+        },
+        {
+          "label": "Weasel",
+          "value": "WEASEL",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "WEASEL"
+            }
+          ],
+          "next": null
+        },
+        {
+          "label": "Hei-de escolher outro animal",
+          "value": "OTHER_LAND",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "OTHER_LAND"
+            }
+          ],
+          "next": null
+        }
+      ]
+    },
+    "q_familiar_creature_water": {
+      "type": "question",
+      "section": "class",
+      "question": "Qual destas criaturas aquáticas é tua aliada?",
+      "when": {
+        "all": [
+          {
+            "var": "find_familiar_usage",
+            "op": "eq",
+            "value": "YES"
+          },
+          {
+            "var": "familiar_habitat",
+            "op": "eq",
+            "value": "WATER"
+          }
+        ]
+      },
+      "options": [
+        {
+          "label": "Frog",
+          "value": "FROG",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "FROG"
+            }
+          ],
+          "next": null
+        },
+        {
+          "label": "Octopus",
+          "value": "OCTOPUS",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "OCTOPUS"
+            }
+          ],
+          "next": null
+        },
+        {
+          "label": "Hei-de escolher outro animal",
+          "value": "OTHER_WATER",
+          "set": [
+            {
+              "var": "familiar_companion",
+              "op": "set",
+              "value": "OTHER_WATER"
+            }
+          ],
+          "next": null
+        }
       ]
     },
     "q_class_adjustment_cleric": {
