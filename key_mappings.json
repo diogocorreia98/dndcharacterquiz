@@ -333,6 +333,40 @@
         "SUPPORT",
         "UTILITY_CASTER"
       ]
+    },
+    "find_familiar_usage": {
+      "type": "enum",
+      "symbols": [
+        "YES",
+        "NO"
+      ]
+    },
+    "familiar_habitat": {
+      "type": "enum",
+      "symbols": [
+        "SKY",
+        "LAND",
+        "WATER"
+      ]
+    },
+    "familiar_companion": {
+      "type": "enum",
+      "symbols": [
+        "BAT",
+        "HAWK",
+        "OWL",
+        "RAVEN",
+        "OTHER_AIR",
+        "CAT",
+        "LIZARD",
+        "RAT",
+        "SPIDER",
+        "WEASEL",
+        "OTHER_LAND",
+        "FROG",
+        "OCTOPUS",
+        "OTHER_WATER"
+      ]
     }
   },
   "value_map": {
@@ -922,6 +956,88 @@
       "UTILITY_CASTER": {
         "pt": "Utility Caster",
         "en": "Utility Caster"
+      }
+    },
+    "find_familiar_usage": {
+      "YES": {
+        "pt": "Vai usar Find Familiar",
+        "en": "Will use Find Familiar"
+      },
+      "NO": {
+        "pt": "Não vai usar Find Familiar",
+        "en": "Will not use Find Familiar"
+      }
+    },
+    "familiar_habitat": {
+      "SKY": {
+        "pt": "Nos céus ou entre os ramos — voador e atento.",
+        "en": "In the skies or among the branches — flying and watchful."
+      },
+      "LAND": {
+        "pt": "Na terra — rápido, sorrateiro ou escalador.",
+        "en": "On land — swift, sneaky, or a climber."
+      },
+      "WATER": {
+        "pt": "Na água — estranho, furtivo e versátil.",
+        "en": "In the water — strange, stealthy, and versatile."
+      }
+    },
+    "familiar_companion": {
+      "BAT": {
+        "pt": "Morcego",
+        "en": "Bat"
+      },
+      "HAWK": {
+        "pt": "Falcão",
+        "en": "Hawk"
+      },
+      "OWL": {
+        "pt": "Coruja",
+        "en": "Owl"
+      },
+      "RAVEN": {
+        "pt": "Corvo",
+        "en": "Raven"
+      },
+      "OTHER_AIR": {
+        "pt": "Outro familiar aéreo",
+        "en": "Another flying familiar"
+      },
+      "CAT": {
+        "pt": "Gato",
+        "en": "Cat"
+      },
+      "LIZARD": {
+        "pt": "Lagarto",
+        "en": "Lizard"
+      },
+      "RAT": {
+        "pt": "Rato",
+        "en": "Rat"
+      },
+      "SPIDER": {
+        "pt": "Aranha",
+        "en": "Spider"
+      },
+      "WEASEL": {
+        "pt": "Doninha",
+        "en": "Weasel"
+      },
+      "OTHER_LAND": {
+        "pt": "Outro familiar terrestre",
+        "en": "Another land familiar"
+      },
+      "FROG": {
+        "pt": "Sapo",
+        "en": "Frog"
+      },
+      "OCTOPUS": {
+        "pt": "Polvo",
+        "en": "Octopus"
+      },
+      "OTHER_WATER": {
+        "pt": "Outro familiar aquático",
+        "en": "Another aquatic familiar"
       }
     }
   },
