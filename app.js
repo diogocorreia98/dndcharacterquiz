@@ -31,6 +31,7 @@ class QuizApp {
     this.sectionVariables = this.buildSectionVariables();
     this.currentOptions = [];
     this.selectedValue = null;
+    this.currentSelectionRule = null;
     this.attachEventListeners();
     this.start();
   }
@@ -71,15 +72,44 @@ class QuizApp {
   }
 
   goForward() {
+    const nodeId = this.state.currentNodeId;
+    const node = this.quizData.nodes[nodeId];
+    if (!node) {
+      return;
+    }
+
+    if (this.isMultiSelection(node)) {
+      const selectionRule = node.selection ?? {};
+      const selectedValues = Array.isArray(this.selectedValue)
+        ? this.cloneValue(this.selectedValue)
+        : [];
+
+      if (!this.isSelectionCountValid(selectedValues, selectionRule)) {
+        return;
+      }
+
+      const stateBefore = this.cloneValue(this.state.variables);
+      this.applyActions(selectionRule.set, { selectedValues });
+      this.applyActions(node.on_select, { selectedValues });
+
+      this.state.history.push({
+        nodeId,
+        selectedValue: selectedValues,
+        stateBefore,
+      });
+
+      const nextNodeId = selectionRule.next ?? node.next ?? null;
+      this.showQuestion(nextNodeId);
+      return;
+    }
+
     if (!this.selectedValue) {
       return;
     }
 
-    const nodeId = this.state.currentNodeId;
-    const node = this.quizData.nodes[nodeId];
     const option = this.currentOptions.find((opt) => opt.value === this.selectedValue);
 
-    if (!node || !option) {
+    if (!option) {
       return;
     }
 
@@ -107,14 +137,21 @@ class QuizApp {
     const { nodeId, node, options } = resolution;
     this.state.currentNodeId = nodeId;
     this.currentOptions = options;
-    this.selectedValue = preselect;
+    this.currentSelectionRule = node.selection ?? null;
+
+    if (this.isMultiSelection(node)) {
+      const initialSelection = Array.isArray(preselect) ? preselect : [];
+      this.selectedValue = this.cloneValue(initialSelection);
+    } else {
+      this.selectedValue = preselect;
+    }
 
     this.dom.progress.textContent = `Pergunta ${this.state.history.length + 1}`;
     this.dom.questionText.textContent = node.question;
 
-    this.renderOptions(options, preselect);
+    this.renderOptions(options, this.selectedValue);
     this.dom.noOptionsMessage.hidden = options.length > 0;
-    this.dom.nextButton.disabled = !preselect;
+    this.dom.nextButton.disabled = !this.isSelectionValidForCurrentQuestion();
     this.dom.backButton.disabled = this.state.history.length === 0;
 
     if (!options.length) {
@@ -153,6 +190,9 @@ class QuizApp {
 
       let options = this.buildOptions(node, { includeDatasetEntry: true });
 
+      const rolePruneOutcome = this.pruneOptionsByRoleViability(node, options);
+      options = rolePruneOutcome?.options ?? options;
+
       const pruneOutcome = this.pruneZeroViableOptions(node, options);
       options = pruneOutcome?.options ?? options;
 
@@ -185,22 +225,52 @@ class QuizApp {
 
   tryAutoselect(node, options) {
     const rule = node.autoselect_if_single;
-    if (!rule || options.length !== 1) {
+    const shouldAutoWithoutRule = !rule && options.length === 1 && this.shouldAutoSelectSingleOption(node, options[0]);
+
+    if (!rule && !shouldAutoWithoutRule) {
+      return { options };
+    }
+
+    if (options.length !== 1) {
       return { options };
     }
 
     const selectedOption = options[0];
     this.applyActions(selectedOption.set, { option: selectedOption });
     this.applyActions(node.on_select, { option: selectedOption });
-    this.applyActions(rule.set, {
-      resultValue: selectedOption.value,
-      result: selectedOption.datasetEntry,
-    });
+    if (rule) {
+      this.applyActions(rule.set, {
+        resultValue: selectedOption.value,
+        result: selectedOption.datasetEntry,
+      });
+
+      return {
+        skip: true,
+        nextNodeId: rule.skip_to ?? node.next ?? null,
+      };
+    }
 
     return {
       skip: true,
-      nextNodeId: rule.skip_to ?? node.next ?? null,
+      nextNodeId: selectedOption.next ?? node.next ?? null,
     };
+  }
+
+  shouldAutoSelectSingleOption(node, option) {
+    if (node?.section !== 'class') {
+      return false;
+    }
+
+    if (!Array.isArray(option?.set)) {
+      return false;
+    }
+
+    const setsClass = option.set.some((action) => action.var === 'class' && action.op === 'set');
+    const setsSubclassGroup = option.set.some(
+      (action) => action.var === 'subclass_group' && action.op === 'set'
+    );
+
+    return setsClass || setsSubclassGroup;
   }
 
   buildOptions(node, { includeDatasetEntry = false } = {}) {
@@ -266,6 +336,109 @@ class QuizApp {
 
     const prunedOptions = options.filter((option) => allowedValues.has(option.value));
     return { options: prunedOptions };
+  }
+
+  pruneOptionsByRoleViability(node, options) {
+    if (!Array.isArray(options) || !options.length) {
+      return { options };
+    }
+
+    if (node?.section !== 'class') {
+      return { options };
+    }
+
+    const dataset = this.quizData.metadata?.datasets?.subclasses;
+    if (!Array.isArray(dataset) || !dataset.length) {
+      return { options };
+    }
+
+    const primaryRoles = Array.isArray(this.state.variables.primary_roles)
+      ? this.state.variables.primary_roles
+      : [];
+    const secondaryRoles = Array.isArray(this.state.variables.secondary_roles)
+      ? this.state.variables.secondary_roles
+      : [];
+
+    const optionSetsClass = options.every((option) =>
+      Array.isArray(option.set) && option.set.some((action) => action.var === 'class' && action.op === 'set')
+    );
+
+    const optionSetsSubclassGroup = options.every((option) =>
+      Array.isArray(option.set) && option.set.some((action) => action.var === 'subclass_group' && action.op === 'set')
+    );
+
+    if (optionSetsClass) {
+      const prunedOptions = options.filter((option) => {
+        const classAction = option.set.find((action) => action.var === 'class' && action.op === 'set');
+        const classValue = classAction?.value;
+
+        if (!classValue) {
+          return true;
+        }
+
+        let filteredEntries = dataset.filter((entry) => entry.class === classValue);
+
+        const groupAction = option.set.find(
+          (action) => action.var === 'subclass_group' && action.op === 'set' && action.value
+        );
+        if (groupAction?.value) {
+          filteredEntries = filteredEntries.filter((entry) => entry.group === groupAction.value);
+        }
+
+        filteredEntries = this.filterEntriesByRoles(filteredEntries, primaryRoles, secondaryRoles);
+
+        return filteredEntries.length > 0;
+      });
+
+      return { options: prunedOptions };
+    }
+
+    if (optionSetsSubclassGroup) {
+      const classValue = this.state.variables.class;
+      if (!classValue) {
+        return { options };
+      }
+
+      const prunedOptions = options.filter((option) => {
+        const groupAction = option.set.find((action) => action.var === 'subclass_group' && action.op === 'set');
+        const groupValue = groupAction?.value;
+        if (!groupValue) {
+          return true;
+        }
+
+        let filteredEntries = dataset.filter(
+          (entry) => entry.class === classValue && entry.group === groupValue
+        );
+
+        filteredEntries = this.filterEntriesByRoles(filteredEntries, primaryRoles, secondaryRoles);
+
+        return filteredEntries.length > 0;
+      });
+
+      return { options: prunedOptions };
+    }
+
+    return { options };
+  }
+
+  filterEntriesByRoles(entries, primaryRoles, secondaryRoles) {
+    let filteredEntries = Array.isArray(entries) ? [...entries] : [];
+
+    if (Array.isArray(primaryRoles) && primaryRoles.length) {
+      filteredEntries = filteredEntries.filter(
+        (entry) =>
+          Array.isArray(entry.primary_roles) && primaryRoles.every((role) => entry.primary_roles.includes(role))
+      );
+    }
+
+    if (Array.isArray(secondaryRoles) && secondaryRoles.length) {
+      filteredEntries = filteredEntries.filter(
+        (entry) =>
+          Array.isArray(entry.secondary_roles) && secondaryRoles.every((role) => entry.secondary_roles.includes(role))
+      );
+    }
+
+    return filteredEntries;
   }
 
   processSkipIfSingleViable(node, options) {
@@ -357,6 +530,24 @@ class QuizApp {
             return false;
           }
           return entryValue.includes(variableValue);
+        }
+        case 'contains_all': {
+          if (!Array.isArray(entryValue)) {
+            return false;
+          }
+          if (!Array.isArray(variableValue) || !variableValue.length) {
+            return false;
+          }
+          return variableValue.every((item) => entryValue.includes(item));
+        }
+        case 'contains_any': {
+          if (!Array.isArray(entryValue)) {
+            return false;
+          }
+          if (!Array.isArray(variableValue) || !variableValue.length) {
+            return false;
+          }
+          return variableValue.some((item) => entryValue.includes(item));
         }
         case 'in': {
           if (!Array.isArray(variableValue)) {
@@ -463,6 +654,12 @@ class QuizApp {
 
   renderOptions(options, preselectValue) {
     this.dom.optionsForm.innerHTML = '';
+    const isMulti = this.isMultiSelection(this.quizData.nodes[this.state.currentNodeId] ?? {});
+    const selectionRule = this.currentSelectionRule ?? {};
+    const maxSelections = selectionRule.max;
+
+    const selectedValues = Array.isArray(preselectValue) ? [...preselectValue] : [];
+
     options.forEach((option, index) => {
       const optionId = `option-${index}`;
       const wrapper = document.createElement('label');
@@ -470,16 +667,43 @@ class QuizApp {
       wrapper.setAttribute('for', optionId);
 
       const input = document.createElement('input');
-      input.type = 'radio';
+      input.type = isMulti ? 'checkbox' : 'radio';
       input.name = 'quiz-option';
       input.value = option.value;
       input.id = optionId;
       input.className = 'option__input';
-      input.checked = option.value === preselectValue;
-      input.addEventListener('change', () => {
-        this.selectedValue = input.value;
-        this.dom.nextButton.disabled = false;
-      });
+      if (isMulti) {
+        input.checked = selectedValues.includes(option.value);
+        input.addEventListener('change', () => {
+          const currentlySelected = Array.isArray(this.selectedValue)
+            ? [...this.selectedValue]
+            : [];
+
+          if (input.checked) {
+            if (typeof maxSelections === 'number' && currentlySelected.length >= maxSelections) {
+              input.checked = false;
+              return;
+            }
+            if (!currentlySelected.includes(option.value)) {
+              currentlySelected.push(option.value);
+            }
+          } else {
+            const indexToRemove = currentlySelected.indexOf(option.value);
+            if (indexToRemove >= 0) {
+              currentlySelected.splice(indexToRemove, 1);
+            }
+          }
+
+          this.selectedValue = currentlySelected;
+          this.dom.nextButton.disabled = !this.isSelectionCountValid(currentlySelected, selectionRule);
+        });
+      } else {
+        input.checked = option.value === preselectValue;
+        input.addEventListener('change', () => {
+          this.selectedValue = input.value;
+          this.dom.nextButton.disabled = false;
+        });
+      }
 
       const label = document.createElement('p');
       label.className = 'option__label';
@@ -490,9 +714,53 @@ class QuizApp {
     });
 
     if (!options.length) {
-      this.selectedValue = null;
+      this.selectedValue = isMulti ? [] : null;
       this.dom.nextButton.disabled = true;
+      return;
     }
+
+    if (isMulti) {
+      const initialValid = this.isSelectionCountValid(selectedValues, selectionRule);
+      this.dom.nextButton.disabled = !initialValid;
+    }
+  }
+
+  isMultiSelection(node) {
+    return Boolean(node?.selection && node.selection.type === 'multi');
+  }
+
+  isSelectionCountValid(selectedValues, selectionRule = {}) {
+    if (!Array.isArray(selectedValues)) {
+      return false;
+    }
+
+    const min = typeof selectionRule.min === 'number' ? selectionRule.min : 0;
+    const max = typeof selectionRule.max === 'number' ? selectionRule.max : null;
+
+    if (selectedValues.length < min) {
+      return false;
+    }
+
+    if (max !== null && selectedValues.length > max) {
+      return false;
+    }
+
+    return true;
+  }
+
+  isSelectionValidForCurrentQuestion() {
+    const node = this.quizData.nodes[this.state.currentNodeId];
+    if (!node) {
+      return false;
+    }
+
+    if (!this.isMultiSelection(node)) {
+      return Boolean(this.selectedValue);
+    }
+
+    const selectionRule = node.selection ?? {};
+    const selectedValues = Array.isArray(this.selectedValue) ? this.selectedValue : [];
+    return this.isSelectionCountValid(selectedValues, selectionRule);
   }
 
   renderResults() {
@@ -723,21 +991,109 @@ class QuizApp {
     }
 
     actions.forEach((action) => {
-      if (!action || action.op !== 'set' || !action.var) {
+      if (!action || !action.op) {
         return;
       }
 
-      let value;
-      if (action.value_from_option) {
-        value = context.option?.value;
-      } else if (action.value_from_result) {
-        value = context.resultValue ?? context.result?.[action.value_field];
-      } else {
-        value = action.value;
-      }
+      const targetVar = action.var;
 
-      this.state.variables[action.var] = this.cloneValue(value);
+      switch (action.op) {
+        case 'set': {
+          if (!targetVar) {
+            return;
+          }
+
+          let value;
+          if (action.copy_from_var) {
+            value = this.cloneValue(this.state.variables[action.copy_from_var]);
+          } else if (action.value_from_option) {
+            value = context.option?.value;
+          } else if (action.value_from_result) {
+            value = context.resultValue ?? context.result?.[action.value_field];
+          } else if (action.value_from_selection) {
+            value = this.cloneValue(
+              this.extractSelectionValues(context.selectedValues, action.value_from_selection)
+            );
+          } else {
+            value = action.value;
+          }
+
+          this.state.variables[targetVar] = this.cloneValue(value);
+          break;
+        }
+        case 'append_unique': {
+          if (!targetVar) {
+            return;
+          }
+
+          const baseArray = Array.isArray(this.state.variables[targetVar])
+            ? [...this.state.variables[targetVar]]
+            : [];
+          const valuesToAppend = this.extractValuesForAppend(action, context);
+
+          valuesToAppend.forEach((item) => {
+            if (!baseArray.includes(item)) {
+              baseArray.push(this.cloneValue(item));
+            }
+          });
+
+          this.state.variables[targetVar] = baseArray;
+          break;
+        }
+        case 'clear': {
+          if (!targetVar) {
+            return;
+          }
+
+          this.state.variables[targetVar] = null;
+          break;
+        }
+        default:
+          break;
+      }
     });
+  }
+
+  extractSelectionValues(selectedValues, ruleConfig) {
+    if (!Array.isArray(selectedValues)) {
+      return [];
+    }
+
+    if (!ruleConfig) {
+      return [...selectedValues];
+    }
+
+    if (ruleConfig === true) {
+      return [...selectedValues];
+    }
+
+    let values = [...selectedValues];
+
+    if (Array.isArray(ruleConfig.include_only) && ruleConfig.include_only.length) {
+      values = values.filter((value) => ruleConfig.include_only.includes(value));
+    }
+
+    if (Array.isArray(ruleConfig.exclude) && ruleConfig.exclude.length) {
+      values = values.filter((value) => !ruleConfig.exclude.includes(value));
+    }
+
+    return values;
+  }
+
+  extractValuesForAppend(action, context) {
+    if (action.values_from_selection) {
+      return this.extractSelectionValues(context.selectedValues, action.values_from_selection);
+    }
+
+    if (Array.isArray(action.values)) {
+      return [...action.values];
+    }
+
+    if (action.value !== undefined) {
+      return [action.value];
+    }
+
+    return [];
   }
 
   cloneValue(value) {

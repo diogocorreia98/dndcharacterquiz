@@ -194,6 +194,18 @@
         "BLOOD_HUNTER"
       ]
     },
+    "primary_roles_base": {
+      "type": "array"
+    },
+    "primary_roles": {
+      "type": "array"
+    },
+    "primary_roles_pending_healer_support": {
+      "type": "array"
+    },
+    "secondary_roles": {
+      "type": "array"
+    },
     "subclass_group": {
       "type": "enum",
       "symbols": [
@@ -2740,175 +2752,382 @@
         "class": "ARTIFICER",
         "group": "CORE",
         "pt": "Alchemist",
-        "en": "Alchemist"
+        "en": "Alchemist",
+        "primary_roles": [
+          "HEALER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "SCHOLAR",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "ARTIFICER_ARMORER",
         "class": "ARTIFICER",
         "group": "CORE",
         "pt": "Armorer",
-        "en": "Armorer"
+        "en": "Armorer",
+        "primary_roles": [
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "SCHOLAR",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "ARTIFICER_ARTILLERIST",
         "class": "ARTIFICER",
         "group": "CORE",
         "pt": "Artillerist",
-        "en": "Artillerist"
+        "en": "Artillerist",
+        "primary_roles": [
+          "CONTROLLER",
+          "HEALER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "SCHOLAR",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "ARTIFICER_BATTLE_SMITH",
         "class": "ARTIFICER",
         "group": "CORE",
         "pt": "Battle Smith",
-        "en": "Battle Smith"
+        "en": "Battle Smith",
+        "primary_roles": [
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "SCHOLAR",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "BARBARIAN_PATH_OF_THE_BERSERKER",
         "class": "BARBARIAN",
         "group": "CORE",
         "pt": "Path of the Berserker",
-        "en": "Path of the Berserker"
+        "en": "Path of the Berserker",
+        "primary_roles": [
+          "DEFENDER",
+          "STRIKER"
+        ],
+        "secondary_roles": []
       },
       {
         "code": "BARBARIAN_PATH_OF_THE_WILD_HEART",
         "class": "BARBARIAN",
         "group": "CORE",
         "pt": "Path of the Wild Heart",
-        "en": "Path of the Wild Heart"
+        "en": "Path of the Wild Heart",
+        "primary_roles": [
+          "DEFENDER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": []
       },
       {
         "code": "BARBARIAN_PATH_OF_THE_WORLD_TREE",
         "class": "BARBARIAN",
         "group": "CORE",
         "pt": "Path of the World Tree",
-        "en": "Path of the World Tree"
+        "en": "Path of the World Tree",
+        "primary_roles": [
+          "CONTROLLER",
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": []
       },
       {
         "code": "BARBARIAN_PATH_OF_THE_ZEALOT",
         "class": "BARBARIAN",
         "group": "CORE",
         "pt": "Path of the Zealot",
-        "en": "Path of the Zealot"
+        "en": "Path of the Zealot",
+        "primary_roles": [
+          "DEFENDER",
+          "STRIKER"
+        ],
+        "secondary_roles": []
       },
       {
         "code": "BARBARIAN_PATH_OF_THE_ANCESTRAL_GUARDIAN",
         "class": "BARBARIAN",
         "group": "NICHE",
         "pt": "Path of the Ancestral Guardian",
-        "en": "Path of the Ancestral Guardian"
+        "en": "Path of the Ancestral Guardian",
+        "primary_roles": [
+          "DEFENDER",
+          "STRIKER"
+        ],
+        "secondary_roles": []
       },
       {
         "code": "BARBARIAN_PATH_OF_THE_BEAST",
         "class": "BARBARIAN",
         "group": "NICHE",
         "pt": "Path of the Beast",
-        "en": "Path of the Beast"
+        "en": "Path of the Beast",
+        "primary_roles": [
+          "DEFENDER",
+          "STRIKER"
+        ],
+        "secondary_roles": []
       },
       {
         "code": "BARBARIAN_PATH_OF_THE_STORM_HERALD",
         "class": "BARBARIAN",
         "group": "NICHE",
         "pt": "Path of the Storm Herald",
-        "en": "Path of the Storm Herald"
+        "en": "Path of the Storm Herald",
+        "primary_roles": [
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER"
+        ]
       },
       {
         "code": "BARBARIAN_PATH_OF_THE_WILD_MAGIC",
         "class": "BARBARIAN",
         "group": "NICHE",
         "pt": "Path of the Wild Magic",
-        "en": "Path of the Wild Magic"
+        "en": "Path of the Wild Magic",
+        "primary_roles": [
+          "DEFENDER",
+          "STRIKER"
+        ],
+        "secondary_roles": []
       },
       {
         "code": "BARBARIAN_PATH_OF_THE_MUSCLE_WIZARD",
         "class": "BARBARIAN",
         "group": "NICHE",
         "pt": "Path of the Muscle Wizard",
-        "en": "Path of the Muscle Wizard"
+        "en": "Path of the Muscle Wizard",
+        "primary_roles": [
+          "DEFENDER",
+          "STRIKER"
+        ],
+        "secondary_roles": []
       },
       {
         "code": "BARD_COLLEGE_OF_DANCE",
         "class": "BARD",
         "group": "CORE",
         "pt": "College of Dance",
-        "en": "College of Dance"
+        "en": "College of Dance",
+        "primary_roles": [
+          "CONTROLLER",
+          "HEALER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "FACE",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "BARD_COLLEGE_OF_GLAMOUR",
         "class": "BARD",
         "group": "CORE",
         "pt": "College of Glamour",
-        "en": "College of Glamour"
+        "en": "College of Glamour",
+        "primary_roles": [
+          "CONTROLLER",
+          "HEALER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "FACE",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "BARD_COLLEGE_OF_LORE",
         "class": "BARD",
         "group": "CORE",
         "pt": "College of Lore",
-        "en": "College of Lore"
+        "en": "College of Lore",
+        "primary_roles": [
+          "CONTROLLER",
+          "HEALER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "FACE",
+          "SCHOLAR",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "BARD_COLLEGE_OF_VALOR",
         "class": "BARD",
         "group": "CORE",
         "pt": "College of Valor",
-        "en": "College of Valor"
+        "en": "College of Valor",
+        "primary_roles": [
+          "CONTROLLER",
+          "HEALER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "FACE",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "BARD_COLLEGE_OF_CREATION",
         "class": "BARD",
         "group": "NICHE",
         "pt": "College of Creation",
-        "en": "College of Creation"
+        "en": "College of Creation",
+        "primary_roles": [
+          "CONTROLLER",
+          "HEALER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "FACE",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "BARD_COLLEGE_OF_ELOQUENCE",
         "class": "BARD",
         "group": "NICHE",
         "pt": "College of Eloquence",
-        "en": "College of Eloquence"
+        "en": "College of Eloquence",
+        "primary_roles": [
+          "CONTROLLER",
+          "HEALER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "FACE",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "BARD_COLLEGE_OF_SWORDS",
         "class": "BARD",
         "group": "NICHE",
         "pt": "College of Swords",
-        "en": "College of Swords"
+        "en": "College of Swords",
+        "primary_roles": [
+          "CONTROLLER",
+          "HEALER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "FACE",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "BARD_COLLEGE_OF_WHISPERS",
         "class": "BARD",
         "group": "NICHE",
         "pt": "College of Whispers",
-        "en": "College of Whispers"
+        "en": "College of Whispers",
+        "primary_roles": [
+          "CONTROLLER",
+          "HEALER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "FACE",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "CLERIC_LIFE_DOMAIN",
         "class": "CLERIC",
         "group": "CORE",
         "pt": "Life Domain",
-        "en": "Life Domain"
+        "en": "Life Domain",
+        "primary_roles": [
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "CLERIC_LIGHT_DOMAIN",
         "class": "CLERIC",
         "group": "CORE",
         "pt": "Light Domain",
-        "en": "Light Domain"
+        "en": "Light Domain",
+        "primary_roles": [
+          "CONTROLLER",
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "CLERIC_TRICKERY_DOMAIN",
         "class": "CLERIC",
         "group": "CORE",
         "pt": "Trickery Domain",
-        "en": "Trickery Domain"
+        "en": "Trickery Domain",
+        "primary_roles": [
+          "DEFENDER",
+          "HEALER",
+          "SCOUT",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "FACE",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "CLERIC_WAR_DOMAIN",
         "class": "CLERIC",
         "group": "CORE",
         "pt": "War Domain",
-        "en": "War Domain"
+        "en": "War Domain",
+        "primary_roles": [
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "CLERIC_ARCANA_DOMAIN",
@@ -2918,6 +3137,17 @@
         "en": "Arcana Domain",
         "niche_roles": [
           "SCHOLAR"
+        ],
+        "primary_roles": [
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "SCHOLAR",
+          "UTILITY_CASTER"
         ]
       },
       {
@@ -2928,6 +3158,16 @@
         "en": "Forge Domain",
         "niche_roles": [
           "OTHER"
+        ],
+        "primary_roles": [
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "UTILITY_CASTER"
         ]
       },
       {
@@ -2938,6 +3178,16 @@
         "en": "Grave Domain",
         "niche_roles": [
           "OTHER"
+        ],
+        "primary_roles": [
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "UTILITY_CASTER"
         ]
       },
       {
@@ -2949,6 +3199,18 @@
         "niche_roles": [
           "FACE",
           "SCHOLAR"
+        ],
+        "primary_roles": [
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "FACE",
+          "SCHOLAR",
+          "UTILITY_CASTER"
         ]
       },
       {
@@ -2959,6 +3221,17 @@
         "en": "Nature Domain",
         "niche_roles": [
           "CONTROLLER"
+        ],
+        "primary_roles": [
+          "CONTROLLER",
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "UTILITY_CASTER"
         ]
       },
       {
@@ -2969,6 +3242,17 @@
         "en": "Order Domain",
         "niche_roles": [
           "FACE"
+        ],
+        "primary_roles": [
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "FACE",
+          "UTILITY_CASTER"
         ]
       },
       {
@@ -2979,6 +3263,16 @@
         "en": "Peace Domain",
         "niche_roles": [
           "OTHER"
+        ],
+        "primary_roles": [
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "UTILITY_CASTER"
         ]
       },
       {
@@ -2989,6 +3283,17 @@
         "en": "Tempest Domain",
         "niche_roles": [
           "CONTROLLER"
+        ],
+        "primary_roles": [
+          "CONTROLLER",
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "UTILITY_CASTER"
         ]
       },
       {
@@ -2999,6 +3304,17 @@
         "en": "Twilight Domain",
         "niche_roles": [
           "SCOUT"
+        ],
+        "primary_roles": [
+          "DEFENDER",
+          "HEALER",
+          "SCOUT",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "UTILITY_CASTER"
         ]
       },
       {
@@ -3006,147 +3322,315 @@
         "class": "DRUID",
         "group": "CORE",
         "pt": "Circle of the Land",
-        "en": "Circle of the Land"
+        "en": "Circle of the Land",
+        "primary_roles": [
+          "CONTROLLER",
+          "HEALER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "DRUID_CIRCLE_OF_THE_MOON",
         "class": "DRUID",
         "group": "CORE",
         "pt": "Circle of the Moon",
-        "en": "Circle of the Moon"
+        "en": "Circle of the Moon",
+        "primary_roles": [
+          "CONTROLLER",
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "DRUID_CIRCLE_OF_THE_SEA",
         "class": "DRUID",
         "group": "CORE",
         "pt": "Circle of the Sea",
-        "en": "Circle of the Sea"
+        "en": "Circle of the Sea",
+        "primary_roles": [
+          "CONTROLLER",
+          "HEALER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "DRUID_CIRCLE_OF_THE_STARS",
         "class": "DRUID",
         "group": "CORE",
         "pt": "Circle of the Stars",
-        "en": "Circle of the Stars"
+        "en": "Circle of the Stars",
+        "primary_roles": [
+          "CONTROLLER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "SCHOLAR",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "DRUID_CIRCLE_OF_DREAMS",
         "class": "DRUID",
         "group": "NICHE",
         "pt": "Circle of Dreams",
-        "en": "Circle of Dreams"
+        "en": "Circle of Dreams",
+        "primary_roles": [
+          "CONTROLLER",
+          "HEALER",
+          "SCOUT",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "DRUID_CIRCLE_OF_SPORES",
         "class": "DRUID",
         "group": "NICHE",
         "pt": "Circle of Spores",
-        "en": "Circle of Spores"
+        "en": "Circle of Spores",
+        "primary_roles": [
+          "CONTROLLER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "DRUID_CIRCLE_OF_THE_SHEPHERD",
         "class": "DRUID",
         "group": "NICHE",
         "pt": "Circle of the Shepherd",
-        "en": "Circle of the Shepherd"
+        "en": "Circle of the Shepherd",
+        "primary_roles": [
+          "CONTROLLER",
+          "HEALER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "DRUID_CIRCLE_OF_WILDFIRE",
         "class": "DRUID",
         "group": "NICHE",
         "pt": "Circle of Wildfire",
-        "en": "Circle of Wildfire"
+        "en": "Circle of Wildfire",
+        "primary_roles": [
+          "CONTROLLER",
+          "HEALER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "FIGHTER_BATTLE_MASTER",
         "class": "FIGHTER",
         "group": "CORE",
         "pt": "Battle Master",
-        "en": "Battle Master"
+        "en": "Battle Master",
+        "primary_roles": [
+          "CONTROLLER",
+          "DEFENDER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": []
       },
       {
         "code": "FIGHTER_CHAMPION",
         "class": "FIGHTER",
         "group": "CORE",
         "pt": "Champion",
-        "en": "Champion"
+        "en": "Champion",
+        "primary_roles": [
+          "DEFENDER",
+          "STRIKER"
+        ],
+        "secondary_roles": []
       },
       {
         "code": "FIGHTER_ELDRITCH_KNIGHT",
         "class": "FIGHTER",
         "group": "CORE",
         "pt": "Eldritch Knight",
-        "en": "Eldritch Knight"
+        "en": "Eldritch Knight",
+        "primary_roles": [
+          "DEFENDER",
+          "STRIKER"
+        ],
+        "secondary_roles": [
+          "BLASTER"
+        ]
       },
       {
         "code": "FIGHTER_PSI_WARRIOR",
         "class": "FIGHTER",
         "group": "CORE",
         "pt": "Psi Warrior",
-        "en": "Psi Warrior"
+        "en": "Psi Warrior",
+        "primary_roles": [
+          "CONTROLLER",
+          "DEFENDER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": []
       },
       {
         "code": "FIGHTER_ARCANE_ARCHER",
         "class": "FIGHTER",
         "group": "NICHE",
         "pt": "Arcane Archer",
-        "en": "Arcane Archer"
+        "en": "Arcane Archer",
+        "primary_roles": [
+          "CONTROLLER",
+          "DEFENDER",
+          "STRIKER"
+        ],
+        "secondary_roles": []
       },
       {
         "code": "FIGHTER_CAVALIER",
         "class": "FIGHTER",
         "group": "NICHE",
         "pt": "Cavalier",
-        "en": "Cavalier"
+        "en": "Cavalier",
+        "primary_roles": [
+          "CONTROLLER",
+          "DEFENDER",
+          "STRIKER"
+        ],
+        "secondary_roles": []
       },
       {
         "code": "FIGHTER_RUNE_KNIGHT",
         "class": "FIGHTER",
         "group": "NICHE",
         "pt": "Rune Knight",
-        "en": "Rune Knight"
+        "en": "Rune Knight",
+        "primary_roles": [
+          "CONTROLLER",
+          "DEFENDER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": []
       },
       {
         "code": "FIGHTER_SAMURAI",
         "class": "FIGHTER",
         "group": "NICHE",
         "pt": "Samurai",
-        "en": "Samurai"
+        "en": "Samurai",
+        "primary_roles": [
+          "DEFENDER",
+          "STRIKER"
+        ],
+        "secondary_roles": [
+          "FACE",
+          "SCHOLAR"
+        ]
       },
       {
         "code": "FIGHTER_DUNGEONEER",
         "class": "FIGHTER",
         "group": "NICHE",
         "pt": "Dungeoneer",
-        "en": "Dungeoneer"
+        "en": "Dungeoneer",
+        "primary_roles": [
+          "DEFENDER",
+          "SCOUT",
+          "STRIKER"
+        ],
+        "secondary_roles": [
+          "SCHOLAR"
+        ]
       },
       {
         "code": "MONK_WAY_OF_MERCY",
         "class": "MONK",
         "group": "CORE",
         "pt": "Way of Mercy",
-        "en": "Way of Mercy"
+        "en": "Way of Mercy",
+        "primary_roles": [
+          "CONTROLLER",
+          "HEALER",
+          "SCOUT",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": []
       },
       {
         "code": "MONK_WAY_OF_SHADOW",
         "class": "MONK",
         "group": "CORE",
         "pt": "Way of Shadow",
-        "en": "Way of Shadow"
+        "en": "Way of Shadow",
+        "primary_roles": [
+          "CONTROLLER",
+          "SCOUT",
+          "STRIKER"
+        ],
+        "secondary_roles": []
       },
       {
         "code": "MONK_WAY_OF_THE_ELEMENTS",
         "class": "MONK",
         "group": "CORE",
         "pt": "Way of the Elements",
-        "en": "Way of the Elements"
+        "en": "Way of the Elements",
+        "primary_roles": [
+          "CONTROLLER",
+          "SCOUT",
+          "STRIKER"
+        ],
+        "secondary_roles": [
+          "BLASTER"
+        ]
       },
       {
         "code": "MONK_WAY_OF_THE_OPEN_HAND",
         "class": "MONK",
         "group": "CORE",
         "pt": "Way of the Open Hand",
-        "en": "Way of the Open Hand"
+        "en": "Way of the Open Hand",
+        "primary_roles": [
+          "CONTROLLER",
+          "DEFENDER",
+          "SCOUT",
+          "STRIKER"
+        ],
+        "secondary_roles": []
       },
       {
         "code": "MONK_WAY_OF_THE_ASTRAL_SELF",
@@ -3156,7 +3640,13 @@
         "en": "Way of the Astral Self",
         "niche_roles": [
           "CONTROLLER"
-        ]
+        ],
+        "primary_roles": [
+          "CONTROLLER",
+          "SCOUT",
+          "STRIKER"
+        ],
+        "secondary_roles": []
       },
       {
         "code": "MONK_WAY_OF_THE_COBALT_SOUL",
@@ -3167,6 +3657,14 @@
         "niche_roles": [
           "SCHOLAR",
           "SUPPORT"
+        ],
+        "primary_roles": [
+          "SCOUT",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "SCHOLAR"
         ]
       },
       {
@@ -3177,7 +3675,13 @@
         "en": "Way of the Drunken Master",
         "niche_roles": [
           "SUPPORT"
-        ]
+        ],
+        "primary_roles": [
+          "SCOUT",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": []
       },
       {
         "code": "MONK_WAY_OF_THE_KENSEI",
@@ -3187,7 +3691,12 @@
         "en": "Way of the Kensei",
         "niche_roles": [
           "OTHER"
-        ]
+        ],
+        "primary_roles": [
+          "SCOUT",
+          "STRIKER"
+        ],
+        "secondary_roles": []
       },
       {
         "code": "MONK_WAY_OF_THE_LONG_DEATH",
@@ -3197,7 +3706,13 @@
         "en": "Way of the Long Death",
         "niche_roles": [
           "DEFENDER"
-        ]
+        ],
+        "primary_roles": [
+          "DEFENDER",
+          "SCOUT",
+          "STRIKER"
+        ],
+        "secondary_roles": []
       },
       {
         "code": "MONK_WAY_OF_THE_SUN_SOUL",
@@ -3208,6 +3723,14 @@
         "niche_roles": [
           "BLASTER",
           "CONTROLLER"
+        ],
+        "primary_roles": [
+          "CONTROLLER",
+          "SCOUT",
+          "STRIKER"
+        ],
+        "secondary_roles": [
+          "BLASTER"
         ]
       },
       {
@@ -3218,6 +3741,13 @@
         "en": "Warrior of the Street",
         "niche_roles": [
           "FACE"
+        ],
+        "primary_roles": [
+          "SCOUT",
+          "STRIKER"
+        ],
+        "secondary_roles": [
+          "FACE"
         ]
       },
       {
@@ -3225,28 +3755,68 @@
         "class": "PALADIN",
         "group": "CORE",
         "pt": "Oath of Devotion",
-        "en": "Oath of Devotion"
+        "en": "Oath of Devotion",
+        "primary_roles": [
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "FACE"
+        ]
       },
       {
         "code": "PALADIN_OATH_OF_GLORY",
         "class": "PALADIN",
         "group": "CORE",
         "pt": "Oath of Glory",
-        "en": "Oath of Glory"
+        "en": "Oath of Glory",
+        "primary_roles": [
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "FACE"
+        ]
       },
       {
         "code": "PALADIN_OATH_OF_THE_ANCIENTS",
         "class": "PALADIN",
         "group": "CORE",
         "pt": "Oath of the Ancients",
-        "en": "Oath of the Ancients"
+        "en": "Oath of the Ancients",
+        "primary_roles": [
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "FACE"
+        ]
       },
       {
         "code": "PALADIN_OATH_OF_VENGEANCE",
         "class": "PALADIN",
         "group": "CORE",
         "pt": "Oath of Vengeance",
-        "en": "Oath of Vengeance"
+        "en": "Oath of Vengeance",
+        "primary_roles": [
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "FACE"
+        ]
       },
       {
         "code": "PALADIN_OATH_OF_CONQUEST",
@@ -3256,6 +3826,17 @@
         "en": "Oath of Conquest",
         "niche_roles": [
           "CONTROLLER"
+        ],
+        "primary_roles": [
+          "CONTROLLER",
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "FACE"
         ]
       },
       {
@@ -3266,6 +3847,17 @@
         "en": "Oath of Redemption",
         "niche_roles": [
           "CONTROLLER"
+        ],
+        "primary_roles": [
+          "CONTROLLER",
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "FACE"
         ]
       },
       {
@@ -3276,6 +3868,16 @@
         "en": "Oath of the Crown",
         "niche_roles": [
           "OTHER"
+        ],
+        "primary_roles": [
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "FACE"
         ]
       },
       {
@@ -3285,6 +3887,17 @@
         "pt": "Oath of the Watchers",
         "en": "Oath of the Watchers",
         "niche_roles": [
+          "SCHOLAR"
+        ],
+        "primary_roles": [
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "FACE",
           "SCHOLAR"
         ]
       },
@@ -3297,6 +3910,18 @@
         "niche_roles": [
           "CONTROLLER",
           "UTILITY_CASTER"
+        ],
+        "primary_roles": [
+          "CONTROLLER",
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "FACE",
+          "UTILITY_CASTER"
         ]
       },
       {
@@ -3307,6 +3932,16 @@
         "en": "Oath of Revelry",
         "niche_roles": [
           "OTHER"
+        ],
+        "primary_roles": [
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "FACE"
         ]
       },
       {
@@ -3314,77 +3949,167 @@
         "class": "RANGER",
         "group": "CORE",
         "pt": "Beast Master",
-        "en": "Beast Master"
+        "en": "Beast Master",
+        "primary_roles": [
+          "CONTROLLER",
+          "DEFENDER",
+          "SCOUT",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "RANGER_FEY_WANDERER",
         "class": "RANGER",
         "group": "CORE",
         "pt": "Fey Wanderer",
-        "en": "Fey Wanderer"
+        "en": "Fey Wanderer",
+        "primary_roles": [
+          "CONTROLLER",
+          "SCOUT",
+          "STRIKER"
+        ],
+        "secondary_roles": [
+          "FACE",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "RANGER_GLOOM_STALKER",
         "class": "RANGER",
         "group": "CORE",
         "pt": "Gloom Stalker",
-        "en": "Gloom Stalker"
+        "en": "Gloom Stalker",
+        "primary_roles": [
+          "CONTROLLER",
+          "SCOUT",
+          "STRIKER"
+        ],
+        "secondary_roles": [
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "RANGER_HUNTER",
         "class": "RANGER",
         "group": "CORE",
         "pt": "Hunter",
-        "en": "Hunter"
+        "en": "Hunter",
+        "primary_roles": [
+          "CONTROLLER",
+          "SCOUT",
+          "STRIKER"
+        ],
+        "secondary_roles": [
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "RANGER_HORIZON_WALKER",
         "class": "RANGER",
         "group": "NICHE",
         "pt": "Horizon Walker",
-        "en": "Horizon Walker"
+        "en": "Horizon Walker",
+        "primary_roles": [
+          "CONTROLLER",
+          "SCOUT",
+          "STRIKER"
+        ],
+        "secondary_roles": [
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "RANGER_MONSTER_SLAYER",
         "class": "RANGER",
         "group": "NICHE",
         "pt": "Monster Slayer",
-        "en": "Monster Slayer"
+        "en": "Monster Slayer",
+        "primary_roles": [
+          "CONTROLLER",
+          "SCOUT",
+          "STRIKER"
+        ],
+        "secondary_roles": [
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "RANGER_SWARMKEEPER",
         "class": "RANGER",
         "group": "NICHE",
         "pt": "Swarmkeeper",
-        "en": "Swarmkeeper"
+        "en": "Swarmkeeper",
+        "primary_roles": [
+          "CONTROLLER",
+          "SCOUT",
+          "STRIKER"
+        ],
+        "secondary_roles": [
+          "SCHOLAR",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "ROGUE_ARACHNOID_STALKER",
         "class": "ROGUE",
         "group": "CORE",
         "pt": "Arachnoid Stalker",
-        "en": "Arachnoid Stalker"
+        "en": "Arachnoid Stalker",
+        "primary_roles": [
+          "CONTROLLER",
+          "SCOUT",
+          "STRIKER"
+        ],
+        "secondary_roles": [
+          "FACE"
+        ]
       },
       {
         "code": "ROGUE_ARCANE_TRICKSTER",
         "class": "ROGUE",
         "group": "CORE",
         "pt": "Arcane Trickster",
-        "en": "Arcane Trickster"
+        "en": "Arcane Trickster",
+        "primary_roles": [
+          "CONTROLLER",
+          "SCOUT",
+          "STRIKER"
+        ],
+        "secondary_roles": [
+          "FACE"
+        ]
       },
       {
         "code": "ROGUE_ASSASSIN",
         "class": "ROGUE",
         "group": "CORE",
         "pt": "Assassin",
-        "en": "Assassin"
+        "en": "Assassin",
+        "primary_roles": [
+          "SCOUT",
+          "STRIKER"
+        ],
+        "secondary_roles": [
+          "FACE"
+        ]
       },
       {
         "code": "ROGUE_THIEF",
         "class": "ROGUE",
         "group": "CORE",
         "pt": "Thief",
-        "en": "Thief"
+        "en": "Thief",
+        "primary_roles": [
+          "SCOUT",
+          "STRIKER"
+        ],
+        "secondary_roles": [
+          "FACE"
+        ]
       },
       {
         "code": "ROGUE_INQUISITIVE",
@@ -3393,6 +4118,14 @@
         "pt": "Inquisitive",
         "en": "Inquisitive",
         "niche_roles": [
+          "SCHOLAR"
+        ],
+        "primary_roles": [
+          "SCOUT",
+          "STRIKER"
+        ],
+        "secondary_roles": [
+          "FACE",
           "SCHOLAR"
         ]
       },
@@ -3404,6 +4137,13 @@
         "en": "Mastermind",
         "niche_roles": [
           "OTHER"
+        ],
+        "primary_roles": [
+          "SCOUT",
+          "STRIKER"
+        ],
+        "secondary_roles": [
+          "FACE"
         ]
       },
       {
@@ -3414,6 +4154,13 @@
         "en": "Phantom",
         "niche_roles": [
           "OTHER"
+        ],
+        "primary_roles": [
+          "SCOUT",
+          "STRIKER"
+        ],
+        "secondary_roles": [
+          "FACE"
         ]
       },
       {
@@ -3423,6 +4170,14 @@
         "pt": "Scout",
         "en": "Scout",
         "niche_roles": [
+          "SCHOLAR"
+        ],
+        "primary_roles": [
+          "SCOUT",
+          "STRIKER"
+        ],
+        "secondary_roles": [
+          "FACE",
           "SCHOLAR"
         ]
       },
@@ -3434,6 +4189,13 @@
         "en": "Swashbuckler",
         "niche_roles": [
           "OTHER"
+        ],
+        "primary_roles": [
+          "SCOUT",
+          "STRIKER"
+        ],
+        "secondary_roles": [
+          "FACE"
         ]
       },
       {
@@ -3444,6 +4206,13 @@
         "en": "Soulknife",
         "niche_roles": [
           "OTHER"
+        ],
+        "primary_roles": [
+          "SCOUT",
+          "STRIKER"
+        ],
+        "secondary_roles": [
+          "FACE"
         ]
       },
       {
@@ -3451,126 +4220,301 @@
         "class": "SORCERER",
         "group": "CORE",
         "pt": "Clockwork Sorcery",
-        "en": "Clockwork Sorcery"
+        "en": "Clockwork Sorcery",
+        "primary_roles": [
+          "CONTROLLER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "SORCERER_DRACONIC_SORCERY",
         "class": "SORCERER",
         "group": "CORE",
         "pt": "Draconic Sorcery",
-        "en": "Draconic Sorcery"
+        "en": "Draconic Sorcery",
+        "primary_roles": [
+          "CONTROLLER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "SORCERER_WILD_MAGIC",
         "class": "SORCERER",
         "group": "CORE",
         "pt": "Wild Magic",
-        "en": "Wild Magic"
+        "en": "Wild Magic",
+        "primary_roles": [
+          "CONTROLLER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "SORCERER_STORM_SORCERY",
         "class": "SORCERER",
         "group": "NICHE",
         "pt": "Storm Sorcery",
-        "en": "Storm Sorcery"
+        "en": "Storm Sorcery",
+        "primary_roles": [
+          "CONTROLLER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "FACE",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "SORCERER_ABERRANT_SORCERY",
         "class": "SORCERER",
         "group": "CORE",
         "pt": "Aberrant Sorcery",
-        "en": "Aberrant Sorcery"
+        "en": "Aberrant Sorcery",
+        "primary_roles": [
+          "CONTROLLER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "FACE",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "SORCERER_DIVINE_SOUL",
         "class": "SORCERER",
         "group": "NICHE",
         "pt": "Divine Soul",
-        "en": "Divine Soul"
+        "en": "Divine Soul",
+        "primary_roles": [
+          "CONTROLLER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "FACE",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "SORCERER_SHADOW_MAGIC",
         "class": "SORCERER",
         "group": "NICHE",
         "pt": "Shadow Magic",
-        "en": "Shadow Magic"
+        "en": "Shadow Magic",
+        "primary_roles": [
+          "CONTROLLER",
+          "SCOUT",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "FACE",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "WARLOCK_ARCHFEY_PATRON",
         "class": "WARLOCK",
         "group": "CORE",
         "pt": "Archfey Patron",
-        "en": "Archfey Patron"
+        "en": "Archfey Patron",
+        "primary_roles": [
+          "CONTROLLER",
+          "STRIKER"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "FACE",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "WARLOCK_FIEND_PATRON",
         "class": "WARLOCK",
         "group": "CORE",
         "pt": "Fiend Patron",
-        "en": "Fiend Patron"
+        "en": "Fiend Patron",
+        "primary_roles": [
+          "CONTROLLER",
+          "STRIKER"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "FACE",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "WARLOCK_GREAT_OLD_ONE_PATRON",
         "class": "WARLOCK",
         "group": "CORE",
         "pt": "Great Old One Patron",
-        "en": "Great Old One Patron"
+        "en": "Great Old One Patron",
+        "primary_roles": [
+          "CONTROLLER",
+          "STRIKER"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "FACE",
+          "SCHOLAR",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "WARLOCK_CELESTIAL_PATRON",
         "class": "WARLOCK",
         "group": "CORE",
         "pt": "Celestial Patron",
-        "en": "Celestial Patron"
+        "en": "Celestial Patron",
+        "primary_roles": [
+          "CONTROLLER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "FACE",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "WARLOCK_THE_FATHOMLESS",
         "class": "WARLOCK",
         "group": "NICHE",
         "pt": "The Fathomless",
-        "en": "The Fathomless"
+        "en": "The Fathomless",
+        "primary_roles": [
+          "CONTROLLER",
+          "STRIKER"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "FACE",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "WARLOCK_THE_GENIE",
         "class": "WARLOCK",
         "group": "NICHE",
         "pt": "The Genie",
-        "en": "The Genie"
+        "en": "The Genie",
+        "primary_roles": [
+          "CONTROLLER",
+          "STRIKER"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "FACE",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "WARLOCK_THE_HEXBLADE",
         "class": "WARLOCK",
         "group": "NICHE",
         "pt": "The Hexblade",
-        "en": "The Hexblade"
+        "en": "The Hexblade",
+        "primary_roles": [
+          "CONTROLLER",
+          "DEFENDER",
+          "STRIKER"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "FACE",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "WIZARD_ABJURER",
         "class": "WIZARD",
         "group": "CORE",
         "pt": "Abjurer",
-        "en": "Abjurer"
+        "en": "Abjurer",
+        "primary_roles": [
+          "CONTROLLER",
+          "DEFENDER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "SCHOLAR",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "WIZARD_DIVINER",
         "class": "WIZARD",
         "group": "CORE",
         "pt": "Diviner",
-        "en": "Diviner"
+        "en": "Diviner",
+        "primary_roles": [
+          "CONTROLLER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "SCHOLAR",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "WIZARD_EVOKER",
         "class": "WIZARD",
         "group": "CORE",
         "pt": "Evoker",
-        "en": "Evoker"
+        "en": "Evoker",
+        "primary_roles": [
+          "CONTROLLER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "SCHOLAR",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "WIZARD_ILLUSIONIST",
         "class": "WIZARD",
         "group": "CORE",
         "pt": "Illusionist",
-        "en": "Illusionist"
+        "en": "Illusionist",
+        "primary_roles": [
+          "CONTROLLER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "FACE",
+          "SCHOLAR",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "WIZARD_BLADESINGING",
@@ -3581,6 +4525,17 @@
         "niche_roles": [
           "DEFENDER",
           "STRIKER"
+        ],
+        "primary_roles": [
+          "CONTROLLER",
+          "DEFENDER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "SCHOLAR",
+          "UTILITY_CASTER"
         ]
       },
       {
@@ -3591,6 +4546,16 @@
         "en": "Order of Scribes",
         "niche_roles": [
           "STRIKER"
+        ],
+        "primary_roles": [
+          "CONTROLLER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "SCHOLAR",
+          "UTILITY_CASTER"
         ]
       },
       {
@@ -3601,6 +4566,16 @@
         "en": "School of Abjuration",
         "niche_roles": [
           "DEFENDER"
+        ],
+        "primary_roles": [
+          "CONTROLLER",
+          "DEFENDER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "SCHOLAR",
+          "UTILITY_CASTER"
         ]
       },
       {
@@ -3611,6 +4586,15 @@
         "en": "School of Conjuration",
         "niche_roles": [
           "OTHER"
+        ],
+        "primary_roles": [
+          "CONTROLLER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "SCHOLAR",
+          "UTILITY_CASTER"
         ]
       },
       {
@@ -3621,6 +4605,16 @@
         "en": "School of Necromancy",
         "niche_roles": [
           "STRIKER"
+        ],
+        "primary_roles": [
+          "CONTROLLER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "SCHOLAR",
+          "UTILITY_CASTER"
         ]
       },
       {
@@ -3632,6 +4626,17 @@
         "niche_roles": [
           "FACE",
           "STRIKER"
+        ],
+        "primary_roles": [
+          "CONTROLLER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "FACE",
+          "SCHOLAR",
+          "UTILITY_CASTER"
         ]
       },
       {
@@ -3643,6 +4648,17 @@
         "niche_roles": [
           "DEFENDER",
           "STRIKER"
+        ],
+        "primary_roles": [
+          "CONTROLLER",
+          "DEFENDER",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "SCHOLAR",
+          "UTILITY_CASTER"
         ]
       },
       {
@@ -3650,28 +4666,58 @@
         "class": "BLOOD_HUNTER",
         "group": "CORE",
         "pt": "Order of the Ghostslayer",
-        "en": "Order of the Ghostslayer"
+        "en": "Order of the Ghostslayer",
+        "primary_roles": [
+          "SCOUT",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": []
       },
       {
         "code": "BLOOD_HUNTER_ORDER_OF_THE_LYCAN",
         "class": "BLOOD_HUNTER",
         "group": "CORE",
         "pt": "Order of the Lycan",
-        "en": "Order of the Lycan"
+        "en": "Order of the Lycan",
+        "primary_roles": [
+          "DEFENDER",
+          "SCOUT",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": []
       },
       {
         "code": "BLOOD_HUNTER_ORDER_OF_THE_MUTANT",
         "class": "BLOOD_HUNTER",
         "group": "CORE",
         "pt": "Order of the Mutant",
-        "en": "Order of the Mutant"
+        "en": "Order of the Mutant",
+        "primary_roles": [
+          "CONTROLLER",
+          "SCOUT",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": []
       },
       {
         "code": "BLOOD_HUNTER_ORDER_OF_THE_PROFANE_SOUL",
         "class": "BLOOD_HUNTER",
         "group": "CORE",
         "pt": "Order of the Profane Soul",
-        "en": "Order of the Profane Soul"
+        "en": "Order of the Profane Soul",
+        "primary_roles": [
+          "CONTROLLER",
+          "SCOUT",
+          "STRIKER",
+          "SUPPORT"
+        ],
+        "secondary_roles": [
+          "BLASTER",
+          "UTILITY_CASTER"
+        ]
       }
     ]
   },
