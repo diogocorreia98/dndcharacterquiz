@@ -1,6 +1,182 @@
 {
-  "root": "q_class_complexity",
+  "root": "q_primary_roles",
   "nodes": {
+    "q_primary_roles": {
+      "type": "question",
+      "section": "class",
+      "question": "Que papel preferes em combate (seleciona até 2 opções)?",
+      "selection": {
+        "type": "multi",
+        "min": 1,
+        "max": 2,
+        "set": [
+          {
+            "var": "primary_roles_base",
+            "op": "set",
+            "value_from_selection": {
+              "exclude": [
+                "HEALER_SUPPORT"
+              ]
+            }
+          },
+          {
+            "var": "primary_roles",
+            "op": "set",
+            "copy_from_var": "primary_roles_base"
+          },
+          {
+            "var": "primary_roles_pending_healer_support",
+            "op": "set",
+            "value_from_selection": {
+              "include_only": [
+                "HEALER_SUPPORT"
+              ]
+            }
+          }
+        ]
+      },
+      "options": [
+        {
+          "label": "Defender",
+          "value": "DEFENDER"
+        },
+        {
+          "label": "Healer/Support",
+          "value": "HEALER_SUPPORT"
+        },
+        {
+          "label": "Controller",
+          "value": "CONTROLLER"
+        },
+        {
+          "label": "Striker",
+          "value": "STRIKER"
+        },
+        {
+          "label": "Scout",
+          "value": "SCOUT"
+        }
+      ],
+      "next": "q_primary_healer_support_detail"
+    },
+    "q_primary_healer_support_detail": {
+      "type": "question",
+      "section": "class",
+      "question": "Qual preferes?",
+      "when": {
+        "var": "primary_roles_pending_healer_support",
+        "op": "is_set"
+      },
+      "options": [
+        {
+          "label": "Healer",
+          "value": "HEALER",
+          "set": [
+            {
+              "var": "primary_roles",
+              "op": "set",
+              "copy_from_var": "primary_roles_base"
+            },
+            {
+              "var": "primary_roles",
+              "op": "append_unique",
+              "values": [
+                "HEALER"
+              ]
+            },
+            {
+              "var": "primary_roles_pending_healer_support",
+              "op": "set",
+              "value": []
+            }
+          ]
+        },
+        {
+          "label": "Support",
+          "value": "SUPPORT",
+          "set": [
+            {
+              "var": "primary_roles",
+              "op": "set",
+              "copy_from_var": "primary_roles_base"
+            },
+            {
+              "var": "primary_roles",
+              "op": "append_unique",
+              "values": [
+                "SUPPORT"
+              ]
+            },
+            {
+              "var": "primary_roles_pending_healer_support",
+              "op": "set",
+              "value": []
+            }
+          ]
+        },
+        {
+          "label": "Both",
+          "value": "BOTH",
+          "set": [
+            {
+              "var": "primary_roles",
+              "op": "set",
+              "copy_from_var": "primary_roles_base"
+            },
+            {
+              "var": "primary_roles",
+              "op": "append_unique",
+              "values": [
+                "HEALER",
+                "SUPPORT"
+              ]
+            },
+            {
+              "var": "primary_roles_pending_healer_support",
+              "op": "set",
+              "value": []
+            }
+          ]
+        }
+      ],
+      "next": "q_secondary_roles"
+    },
+    "q_secondary_roles": {
+      "type": "question",
+      "section": "class",
+      "question": "Há mais algum papel que precisas que a tua personagem sirva (Seleciona 0, 1 ou 2 opções)?",
+      "selection": {
+        "type": "multi",
+        "min": 0,
+        "max": 2,
+        "set": [
+          {
+            "var": "secondary_roles",
+            "op": "set",
+            "value_from_selection": true
+          }
+        ]
+      },
+      "options": [
+        {
+          "label": "Blaster",
+          "value": "BLASTER"
+        },
+        {
+          "label": "Face",
+          "value": "FACE"
+        },
+        {
+          "label": "Scholar",
+          "value": "SCHOLAR"
+        },
+        {
+          "label": "Utility Caster",
+          "value": "UTILITY_CASTER"
+        }
+      ],
+      "next": "q_class_complexity"
+    },
     "q_class_complexity": {
       "type": "question",
       "section": "class",
@@ -1104,6 +1280,18 @@
             "var": "niche_role",
             "op": "contains",
             "optional": true
+          },
+          {
+            "field": "primary_roles",
+            "var": "primary_roles",
+            "op": "contains_all",
+            "optional": true
+          },
+          {
+            "field": "secondary_roles",
+            "var": "secondary_roles",
+            "op": "contains_all",
+            "optional": true
           }
         ]
       },
@@ -1129,6 +1317,18 @@
             "field": "niche_roles",
             "var": "niche_role",
             "op": "contains",
+            "optional": true
+          },
+          {
+            "field": "primary_roles",
+            "var": "primary_roles",
+            "op": "contains_all",
+            "optional": true
+          },
+          {
+            "field": "secondary_roles",
+            "var": "secondary_roles",
+            "op": "contains_all",
             "optional": true
           }
         ],
