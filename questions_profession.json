@@ -1164,7 +1164,7 @@
               "value": null
             }
           ],
-          "next": "q_subclass_niche_role"
+          "next": "q_subclass_choice"
         }
       ],
       "filter_by_roles": {
