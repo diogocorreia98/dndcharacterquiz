@@ -134,7 +134,7 @@
               "value": "A"
             }
           ],
-          "next": "q_class_complexity"
+          "next": "q_primary_roles"
         },
         {
           "label": "N\u00e3o humana \u2014 conhecida",
@@ -489,7 +489,7 @@
         ]
       },
       "skip_if_no_options": {
-        "next": "q_class_complexity"
+        "next": "q_primary_roles"
       },
       "autoselect_if_single": {
         "dataset": "subspecies",
@@ -591,7 +591,7 @@
         ]
       },
       "skip_if_no_options": {
-        "next": "q_class_complexity"
+        "next": "q_primary_roles"
       },
       "autoselect_if_single": {
         "dataset": "subsubspecies",
@@ -623,7 +623,7 @@
             "value_from_result": true
           }
         ],
-        "skip_to": "q_class_complexity"
+        "skip_to": "q_primary_roles"
       },
       "on_select": [
         {
@@ -632,7 +632,7 @@
           "value_from_option": true
         }
       ],
-      "next": "q_class_complexity"
+      "next": "q_primary_roles"
     }
   }
 }
