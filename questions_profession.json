@@ -174,11 +174,6 @@
               "var": "class_complexity",
               "op": "set",
               "value": "A"
-            },
-            {
-              "var": "class_style",
-              "op": "set",
-              "value": "SIMPLE_MARTIAL"
             }
           ],
           "next": "q_class_simple_choice"
@@ -193,7 +188,7 @@
               "value": "B"
             }
           ],
-          "next": "q_class_medium_style"
+          "next": "q_class_medium_choice"
         },
         {
           "label": "A complexidade não me aflige.",
@@ -205,7 +200,7 @@
               "value": "C"
             }
           ],
-          "next": "q_class_high_style"
+          "next": "q_class_high_choice"
         }
       ]
     },
@@ -301,38 +296,7 @@
       },
       "auto_select_if_single_option": true
     },
-    "q_class_medium_style": {
-      "type": "question",
-      "section": "class",
-      "question": "Que tipo de estilo de jogo soa melhor para ti?",
-      "options": [
-        {
-          "label": "Físico e direto.",
-          "value": "A",
-          "set": [
-            {
-              "var": "class_style",
-              "op": "set",
-              "value": "MARTIAL_DIRECT"
-            }
-          ],
-          "next": "q_class_medium_martial_choice"
-        },
-        {
-          "label": "Algo com um pouco de magia ou poder divino.",
-          "value": "B",
-          "set": [
-            {
-              "var": "class_style",
-              "op": "set",
-              "value": "MIXED_MAGIC"
-            }
-          ],
-          "next": "q_class_medium_magic_choice"
-        }
-      ]
-    },
-    "q_class_medium_martial_choice": {
+    "q_class_medium_choice": {
       "type": "question",
       "section": "class",
       "question": "Que classe preferes jogar?",
@@ -417,18 +381,7 @@
             }
           ],
           "next": "q_subclass_group"
-        }
-      ],
-      "filter_by_roles": {
-        "type": "class"
-      },
-      "auto_select_if_single_option": true
-    },
-    "q_class_medium_magic_choice": {
-      "type": "question",
-      "section": "class",
-      "question": "Que classe preferes jogar?",
-      "options": [
+        },
         {
           "label": "Cleric",
           "value": "CLERIC",
@@ -543,50 +496,7 @@
       },
       "auto_select_if_single_option": true
     },
-    "q_class_high_style": {
-      "type": "question",
-      "section": "class",
-      "question": "Que tipo de personagem mais te entusiasma?",
-      "options": [
-        {
-          "label": "Poder marcial e físico",
-          "value": "A",
-          "set": [
-            {
-              "var": "class_style",
-              "op": "set",
-              "value": "MARTIAL_POWER"
-            }
-          ],
-          "next": "q_class_high_martial_choice"
-        },
-        {
-          "label": "Conjuração completa e foco em magia",
-          "value": "B",
-          "set": [
-            {
-              "var": "class_style",
-              "op": "set",
-              "value": "FULL_CASTER"
-            }
-          ],
-          "next": "q_class_high_magic_choice"
-        },
-        {
-          "label": "Estilos mistos ou incomuns",
-          "value": "C",
-          "set": [
-            {
-              "var": "class_style",
-              "op": "set",
-              "value": "UNUSUAL"
-            }
-          ],
-          "next": "q_class_high_unusual_choice"
-        }
-      ]
-    },
-    "q_class_high_martial_choice": {
+    "q_class_high_choice": {
       "type": "question",
       "section": "class",
       "question": "Que classe preferes jogar?",
@@ -698,18 +608,7 @@
             }
           ],
           "next": "q_subclass_group"
-        }
-      ],
-      "filter_by_roles": {
-        "type": "class"
-      },
-      "auto_select_if_single_option": true
-    },
-    "q_class_high_magic_choice": {
-      "type": "question",
-      "section": "class",
-      "question": "Que classe preferes jogar?",
-      "options": [
+        },
         {
           "label": "Wizard",
           "value": "WIZARD",
@@ -817,18 +716,7 @@
             }
           ],
           "next": "q_class_adjustment_druid"
-        }
-      ],
-      "filter_by_roles": {
-        "type": "class"
-      },
-      "auto_select_if_single_option": true
-    },
-    "q_class_high_unusual_choice": {
-      "type": "question",
-      "section": "class",
-      "question": "Que classe preferes jogar?",
-      "options": [
+        },
         {
           "label": "Artificer",
           "value": "ARTIFICER",

@@ -736,7 +736,6 @@ class QuizApp {
       species_theme: 'Tema',
       species: 'Espécie',
       class_complexity: 'Complexidade da classe',
-      class_style: 'Estilo de jogo da classe',
       class: 'Classe',
       subclass_group: 'Tipo de subclasse',
       subclass: 'Subclasse',
