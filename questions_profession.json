@@ -1,6 +1,166 @@
 {
-  "root": "q_class_complexity",
+  "root": "q_primary_roles",
   "nodes": {
+    "q_primary_roles": {
+      "type": "question",
+      "section": "class",
+      "question": "Que papel preferes em combate (seleciona até 2 opções)?",
+      "selection": {
+        "mode": "multiple",
+        "min": 1,
+        "max": 2,
+        "actions": [
+          {
+            "var": "primary_roles",
+            "op": "set",
+            "value_from_selection_filtered": {
+              "exclude_values": [
+                "HEALER_SUPPORT"
+              ]
+            }
+          },
+          {
+            "var": "_pending_healer_support",
+            "op": "set",
+            "value_from_selection_includes": {
+              "value": "HEALER_SUPPORT",
+              "true_value": true,
+              "false_value": null
+            }
+          }
+        ]
+      },
+      "options": [
+        {
+          "label": "Defender",
+          "value": "DEFENDER"
+        },
+        {
+          "label": "Healer/Support",
+          "value": "HEALER_SUPPORT"
+        },
+        {
+          "label": "Controller",
+          "value": "CONTROLLER"
+        },
+        {
+          "label": "Striker",
+          "value": "STRIKER"
+        },
+        {
+          "label": "Scout",
+          "value": "SCOUT"
+        }
+      ],
+      "next": "q_healer_support_preference"
+    },
+    "q_healer_support_preference": {
+      "type": "question",
+      "section": "class",
+      "question": "Qual preferes?",
+      "when": {
+        "var": "_pending_healer_support",
+        "op": "eq",
+        "value": true
+      },
+      "options": [
+        {
+          "label": "Healer",
+          "value": "HEALER",
+          "set": [
+            {
+              "var": "primary_roles",
+              "op": "set",
+              "value_from_var": "primary_roles",
+              "append": [
+                "HEALER"
+              ]
+            },
+            {
+              "var": "_pending_healer_support",
+              "op": "set",
+              "value": null
+            }
+          ]
+        },
+        {
+          "label": "Support",
+          "value": "SUPPORT",
+          "set": [
+            {
+              "var": "primary_roles",
+              "op": "set",
+              "value_from_var": "primary_roles",
+              "append": [
+                "SUPPORT"
+              ]
+            },
+            {
+              "var": "_pending_healer_support",
+              "op": "set",
+              "value": null
+            }
+          ]
+        },
+        {
+          "label": "Both",
+          "value": "BOTH",
+          "set": [
+            {
+              "var": "primary_roles",
+              "op": "set",
+              "value_from_var": "primary_roles",
+              "append": [
+                "HEALER",
+                "SUPPORT"
+              ]
+            },
+            {
+              "var": "_pending_healer_support",
+              "op": "set",
+              "value": null
+            }
+          ]
+        }
+      ],
+      "next": "q_secondary_roles"
+    },
+    "q_secondary_roles": {
+      "type": "question",
+      "section": "class",
+      "question": "Há mais algum papel que precisas que a tua personagem sirva (Seleciona 0, 1 ou 2 opções)?",
+      "selection": {
+        "mode": "multiple",
+        "min": 0,
+        "max": 2,
+        "actions": [
+          {
+            "var": "secondary_roles",
+            "op": "set",
+            "value_from_selection": true
+          }
+        ]
+      },
+      "options": [
+        {
+          "label": "Blaster",
+          "value": "BLASTER"
+        },
+        {
+          "label": "Face",
+          "value": "FACE"
+        },
+        {
+          "label": "Scholar",
+          "value": "SCHOLAR"
+        },
+        {
+          "label": "Utility Caster",
+          "value": "UTILITY_CASTER"
+        }
+      ],
+      "next": "q_class_complexity"
+    },
     "q_class_complexity": {
       "type": "question",
       "section": "class",
@@ -150,7 +310,11 @@
           ],
           "next": "q_subclass_group"
         }
-      ]
+      ],
+      "filter_by_roles": {
+        "type": "class"
+      },
+      "auto_select_if_single_option": true
     },
     "q_class_medium_style": {
       "type": "question",
@@ -284,7 +448,11 @@
           ],
           "next": "q_subclass_group"
         }
-      ]
+      ],
+      "filter_by_roles": {
+        "type": "class"
+      },
+      "auto_select_if_single_option": true
     },
     "q_class_medium_magic_choice": {
       "type": "question",
@@ -419,7 +587,11 @@
           ],
           "next": "q_subclass_group"
         }
-      ]
+      ],
+      "filter_by_roles": {
+        "type": "class"
+      },
+      "auto_select_if_single_option": true
     },
     "q_class_high_style": {
       "type": "question",
@@ -597,7 +769,11 @@
           ],
           "next": "q_subclass_group"
         }
-      ]
+      ],
+      "filter_by_roles": {
+        "type": "class"
+      },
+      "auto_select_if_single_option": true
     },
     "q_class_high_magic_choice": {
       "type": "question",
@@ -732,7 +908,11 @@
           ],
           "next": "q_class_adjustment_druid"
         }
-      ]
+      ],
+      "filter_by_roles": {
+        "type": "class"
+      },
+      "auto_select_if_single_option": true
     },
     "q_class_high_unusual_choice": {
       "type": "question",
@@ -931,7 +1111,11 @@
           ],
           "next": "q_subclass_choice"
         }
-      ]
+      ],
+      "filter_by_roles": {
+        "type": "class"
+      },
+      "auto_select_if_single_option": true
     },
     "q_subclass_group": {
       "type": "question",
@@ -982,7 +1166,11 @@
           ],
           "next": "q_subclass_niche_role"
         }
-      ]
+      ],
+      "filter_by_roles": {
+        "type": "subclass_group"
+      },
+      "auto_select_if_single_option": true
     },
     "q_subclass_niche_role": {
       "type": "question",
@@ -1124,7 +1312,11 @@
           "value_from_option": true
         }
       ],
-      "next": "q_find_familiar_use"
+      "next": "q_find_familiar_use",
+      "filter_by_roles": {
+        "type": "subclass"
+      },
+      "auto_select_if_single_option": true
     },
     "q_find_familiar_use": {
       "type": "question",

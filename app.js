@@ -29,8 +29,11 @@ class QuizApp {
     };
 
     this.sectionVariables = this.buildSectionVariables();
+    this.roleData = this.prepareRoleData();
     this.currentOptions = [];
     this.selectedValue = null;
+    this.selectedValues = new Set();
+    this.currentSelectionConfig = { mode: 'single' };
     this.attachEventListeners();
     this.start();
   }
@@ -71,6 +74,38 @@ class QuizApp {
   }
 
   goForward() {
+    const selection = this.currentSelectionConfig ?? { mode: 'single' };
+
+    if (selection.mode === 'multiple') {
+      const nodeId = this.state.currentNodeId;
+      const node = this.quizData.nodes[nodeId];
+      if (!node) {
+        return;
+      }
+
+      const selectedArray = Array.from(this.selectedValues ?? []);
+      const min = selection.min ?? 0;
+      const max = selection.max ?? Infinity;
+
+      if (selectedArray.length < min || selectedArray.length > max) {
+        return;
+      }
+
+      const stateBefore = this.cloneValue(this.state.variables);
+      this.applySelectionActions(selection.actions, selectedArray);
+      this.applyActions(node.on_select, { selectedValues: selectedArray });
+
+      this.state.history.push({
+        nodeId,
+        selectedValue: this.cloneValue(selectedArray),
+        stateBefore,
+      });
+
+      const nextNodeId = node.next ?? null;
+      this.showQuestion(nextNodeId);
+      return;
+    }
+
     if (!this.selectedValue) {
       return;
     }
@@ -107,14 +142,31 @@ class QuizApp {
     const { nodeId, node, options } = resolution;
     this.state.currentNodeId = nodeId;
     this.currentOptions = options;
-    this.selectedValue = preselect;
+
+    const selection = node.selection ?? { mode: 'single' };
+    this.currentSelectionConfig = selection;
+
+    if (selection.mode === 'multiple') {
+      const preselectedValues = Array.isArray(preselect) ? preselect : [];
+      this.selectedValues = new Set(preselectedValues);
+      this.selectedValue = null;
+    } else {
+      this.selectedValue = preselect;
+      this.selectedValues = new Set();
+    }
 
     this.dom.progress.textContent = `Pergunta ${this.state.history.length + 1}`;
     this.dom.questionText.textContent = node.question;
 
-    this.renderOptions(options, preselect);
+    this.renderOptions(options, preselect, selection);
     this.dom.noOptionsMessage.hidden = options.length > 0;
-    this.dom.nextButton.disabled = !preselect;
+
+    if (selection.mode === 'multiple') {
+      this.updateNextButtonForMultiple(selection);
+    } else {
+      this.dom.nextButton.disabled = !preselect;
+    }
+
     this.dom.backButton.disabled = this.state.history.length === 0;
 
     if (!options.length) {
@@ -152,6 +204,7 @@ class QuizApp {
       }
 
       let options = this.buildOptions(node, { includeDatasetEntry: true });
+      options = this.applyRoleFilters(node, options);
 
       const pruneOutcome = this.pruneZeroViableOptions(node, options);
       options = pruneOutcome?.options ?? options;
@@ -177,10 +230,32 @@ class QuizApp {
       }
       options = autoOutcome?.options ?? options;
 
+      const singleOptionOutcome = this.autoSelectSingleOption(node, options);
+      if (singleOptionOutcome?.skip) {
+        nodeId = singleOptionOutcome.nextNodeId;
+        continue;
+      }
+      options = singleOptionOutcome?.options ?? options;
+
       return { nodeId, node, options };
     }
 
     return null;
+  }
+
+  autoSelectSingleOption(node, options) {
+    if (!node.auto_select_if_single_option || options.length !== 1) {
+      return { options };
+    }
+
+    const selectedOption = options[0];
+    this.applyActions(selectedOption.set, { option: selectedOption });
+    this.applyActions(node.on_select, { option: selectedOption });
+
+    return {
+      skip: true,
+      nextNodeId: selectedOption.next ?? node.next ?? null,
+    };
   }
 
   tryAutoselect(node, options) {
@@ -461,8 +536,12 @@ class QuizApp {
     }
   }
 
-  renderOptions(options, preselectValue) {
+  renderOptions(options, preselectValue, selection = { mode: 'single' }) {
     this.dom.optionsForm.innerHTML = '';
+    const isMultiple = selection?.mode === 'multiple';
+    const preselectedSet = new Set(Array.isArray(preselectValue) ? preselectValue : []);
+    const maxSelections = selection?.max ?? Infinity;
+
     options.forEach((option, index) => {
       const optionId = `option-${index}`;
       const wrapper = document.createElement('label');
@@ -470,16 +549,39 @@ class QuizApp {
       wrapper.setAttribute('for', optionId);
 
       const input = document.createElement('input');
-      input.type = 'radio';
+      input.type = isMultiple ? 'checkbox' : 'radio';
       input.name = 'quiz-option';
       input.value = option.value;
       input.id = optionId;
       input.className = 'option__input';
-      input.checked = option.value === preselectValue;
+
+      if (isMultiple) {
+        input.checked = preselectedSet.has(option.value);
+      } else {
+        input.checked = option.value === preselectValue;
+      }
+
       input.addEventListener('change', () => {
-        this.selectedValue = input.value;
-        this.dom.nextButton.disabled = false;
+        if (isMultiple) {
+          if (input.checked) {
+            if (this.selectedValues.size >= maxSelections) {
+              input.checked = false;
+              return;
+            }
+            this.selectedValues.add(option.value);
+          } else {
+            this.selectedValues.delete(option.value);
+          }
+          this.updateNextButtonForMultiple(selection);
+        } else {
+          this.selectedValue = input.value;
+          this.dom.nextButton.disabled = false;
+        }
       });
+
+      if (isMultiple && input.checked) {
+        this.selectedValues.add(option.value);
+      }
 
       const label = document.createElement('p');
       label.className = 'option__label';
@@ -491,6 +593,14 @@ class QuizApp {
 
     if (!options.length) {
       this.selectedValue = null;
+      this.selectedValues = new Set();
+      this.dom.nextButton.disabled = true;
+      return;
+    }
+
+    if (isMultiple) {
+      this.updateNextButtonForMultiple(selection);
+    } else if (!preselectValue) {
       this.dom.nextButton.disabled = true;
     }
   }
@@ -505,8 +615,10 @@ class QuizApp {
 
     Object.entries(sectionsMeta).forEach(([sectionKey, translations]) => {
       const variables = Array.from(this.sectionVariables.get(sectionKey) ?? []).filter((variableName) => {
-        const schema = variableSchemas[variableName];
-        return !schema || schema.type !== 'array';
+        if (!variableName || variableName.startsWith('_')) {
+          return false;
+        }
+        return true;
       });
 
       if (!variables.length) {
@@ -523,7 +635,7 @@ class QuizApp {
 
       variables.forEach((variableName) => {
         const rawValue = this.state.variables[variableName];
-        if (rawValue === undefined) {
+        if (!this.hasValue(rawValue)) {
           return;
         }
 
@@ -562,11 +674,10 @@ class QuizApp {
 
     this.sectionVariables.forEach((variables, sectionKey) => {
       const variableList = Array.from(variables).filter((variableName) => {
-        const schema = variableSchemas[variableName];
-        if (schema?.type === 'array') {
+        if (!variableName || variableName.startsWith('_')) {
           return false;
         }
-        return this.state.variables[variableName] !== undefined;
+        return this.hasValue(this.state.variables[variableName]);
       });
 
       if (!variableList.length) {
@@ -629,6 +740,8 @@ class QuizApp {
       class: 'Classe',
       subclass_group: 'Tipo de subclasse',
       subclass: 'Subclasse',
+      primary_roles: 'Papéis principais',
+      secondary_roles: 'Papéis secundários',
     };
     return map[variableName] ?? variableName;
   }
@@ -647,11 +760,23 @@ class QuizApp {
       return '—';
     }
 
+    const variableMap = valueMap?.[variableName];
+
     if (Array.isArray(rawValue)) {
-      return rawValue.join(', ');
+      if (!rawValue.length) {
+        return '—';
+      }
+      return rawValue
+        .map((item) => {
+          if (variableMap && variableMap[item]) {
+            const entry = variableMap[item];
+            return entry[localeKey] ?? entry.pt ?? String(item);
+          }
+          return String(item);
+        })
+        .join(', ');
     }
 
-    const variableMap = valueMap?.[variableName];
     if (variableMap && variableMap[rawValue]) {
       const entry = variableMap[rawValue];
       return entry[localeKey] ?? entry.pt ?? String(rawValue);
@@ -704,6 +829,7 @@ class QuizApp {
 
       (node.options ?? []).forEach((option) => collect(option.set));
       collect(node.on_select);
+      collect(node.selection?.actions);
       if (node.autoselect_if_single) {
         collect(node.autoselect_if_single.set);
       }
@@ -715,6 +841,40 @@ class QuizApp {
     });
 
     return map;
+  }
+
+  applySelectionActions(actions, selectedValues) {
+    if (!Array.isArray(actions)) {
+      return;
+    }
+
+    const selectionArray = Array.isArray(selectedValues) ? selectedValues.slice() : [];
+
+    actions.forEach((action) => {
+      if (!action || action.op !== 'set' || !action.var) {
+        return;
+      }
+
+      let value;
+      if (action.value_from_selection) {
+        value = selectionArray;
+      } else if (action.value_from_selection_filtered) {
+        const excludes = new Set(action.value_from_selection_filtered.exclude_values ?? []);
+        value = selectionArray.filter((item) => !excludes.has(item));
+      } else if (action.value_from_selection_includes) {
+        const config = action.value_from_selection_includes;
+        const matches = selectionArray.includes(config.value);
+        if (matches) {
+          value = config.true_value ?? true;
+        } else {
+          value = config.false_value ?? false;
+        }
+      } else {
+        value = action.value;
+      }
+
+      this.state.variables[action.var] = this.cloneValue(value);
+    });
   }
 
   applyActions(actions, context = {}) {
@@ -732,12 +892,223 @@ class QuizApp {
         value = context.option?.value;
       } else if (action.value_from_result) {
         value = context.resultValue ?? context.result?.[action.value_field];
+      } else if (action.value_from_var) {
+        value = this.cloneValue(this.state.variables[action.value_from_var]);
       } else {
         value = action.value;
       }
 
+      if (action.append) {
+        const baseArray = Array.isArray(value)
+          ? value.slice()
+          : Array.isArray(this.state.variables[action.var])
+          ? this.cloneValue(this.state.variables[action.var])
+          : [];
+        const appendItems = Array.isArray(action.append) ? action.append : [action.append];
+        appendItems.forEach((item) => {
+          if (!baseArray.includes(item)) {
+            baseArray.push(item);
+          }
+        });
+        value = baseArray;
+      }
+
+      if (action.remove_values) {
+        const removeItems = Array.isArray(action.remove_values)
+          ? action.remove_values
+          : [action.remove_values];
+        if (Array.isArray(value)) {
+          value = value.filter((item) => !removeItems.includes(item));
+        }
+      }
+
       this.state.variables[action.var] = this.cloneValue(value);
     });
+  }
+
+  applyRoleFilters(node, options) {
+    if (!Array.isArray(options) || !options.length) {
+      return options ?? [];
+    }
+
+    const filter = node.filter_by_roles;
+    if (!filter) {
+      return options;
+    }
+
+    switch (filter.type) {
+      case 'class':
+        return options.filter((option) => this.getCommonSubclassesForClass(option.value, 'ALL').length > 0);
+      case 'subclass_group': {
+        const classCode = this.state.variables.class;
+        if (!classCode) {
+          return [];
+        }
+        return options.filter((option) => this.getCommonSubclassesForClass(classCode, option.value).length > 0);
+      }
+      case 'subclass': {
+        const classCode = this.state.variables.class;
+        const group = this.state.variables.subclass_group;
+        if (!classCode || !group) {
+          return [];
+        }
+        const allowed = new Set(this.getCommonSubclassesForClass(classCode, group));
+        return options.filter((option) => allowed.has(option.value));
+      }
+      default:
+        return options;
+    }
+  }
+
+  updateNextButtonForMultiple(selection) {
+    const min = selection?.min ?? 0;
+    const max = selection?.max ?? Infinity;
+    const count = this.selectedValues.size;
+    let isValid = count >= min && count <= max;
+    if (min === 0 && count === 0) {
+      isValid = true;
+    }
+    this.dom.nextButton.disabled = !isValid;
+  }
+
+  prepareRoleData() {
+    const roleMappings = this.quizData.metadata?.role_mappings ?? {};
+    const subclassMap = this.buildSubclassNameMap();
+    const normalizeKey = (value) =>
+      typeof value === 'string' ? value.toUpperCase().replace(/\s+/g, '_') : value;
+
+    const primaryRoles = new Set(['DEFENDER', 'HEALER', 'SUPPORT', 'CONTROLLER', 'STRIKER', 'SCOUT']);
+    const secondaryRoles = new Set(['BLASTER', 'FACE', 'SCHOLAR', 'UTILITY_CASTER']);
+
+    const data = {
+      primary: {},
+      secondary: {},
+    };
+
+    Object.entries(roleMappings).forEach(([roleName, classEntries]) => {
+      const roleKey = normalizeKey(roleName);
+      let target;
+      if (primaryRoles.has(roleKey)) {
+        target = data.primary;
+      } else if (secondaryRoles.has(roleKey)) {
+        target = data.secondary;
+      } else {
+        return;
+      }
+
+      const roleTarget = (target[roleKey] = target[roleKey] || {});
+      Object.entries(classEntries ?? {}).forEach(([className, groups]) => {
+        const classKey = normalizeKey(className);
+        const core = new Set();
+        const niche = new Set();
+
+        (groups?.core_subclasses ?? []).forEach((name) => {
+          const code = subclassMap.get(name);
+          if (code) {
+            core.add(code);
+          }
+        });
+
+        (groups?.niche_subclasses ?? []).forEach((name) => {
+          const code = subclassMap.get(name);
+          if (code) {
+            niche.add(code);
+          }
+        });
+
+        roleTarget[classKey] = {
+          core,
+          niche,
+        };
+      });
+    });
+
+    return { data, primaryRoles, secondaryRoles };
+  }
+
+  buildSubclassNameMap() {
+    const dataset = this.quizData.metadata?.datasets?.subclasses ?? [];
+    const map = new Map();
+    dataset.forEach((entry) => {
+      if (entry.pt) {
+        map.set(entry.pt, entry.code);
+      }
+      if (entry.en) {
+        map.set(entry.en, entry.code);
+      }
+    });
+    return map;
+  }
+
+  getSelectedRoles() {
+    const normalize = (value) => (typeof value === 'string' ? value.toUpperCase() : value);
+    const primary = Array.isArray(this.state.variables.primary_roles)
+      ? this.state.variables.primary_roles.map(normalize)
+      : [];
+    const secondary = Array.isArray(this.state.variables.secondary_roles)
+      ? this.state.variables.secondary_roles.map(normalize)
+      : [];
+    return { primary, secondary };
+  }
+
+  getCommonSubclassesForClass(classCode, groupPreference = 'ALL') {
+    if (!classCode) {
+      return [];
+    }
+
+    const normalizedClass = typeof classCode === 'string' ? classCode.toUpperCase() : classCode;
+    const preference = typeof groupPreference === 'string' ? groupPreference.toUpperCase() : 'ALL';
+    const { primary, secondary } = this.getSelectedRoles();
+    const roles = [...primary, ...secondary];
+
+    if (!roles.length) {
+      return this.getAllSubclassesForClass(normalizedClass, preference);
+    }
+
+    let common = null;
+    for (const roleName of roles) {
+      const roleData =
+        this.roleData?.data?.primary?.[roleName] ?? this.roleData?.data?.secondary?.[roleName];
+      if (!roleData) {
+        return [];
+      }
+      const classEntry = roleData[normalizedClass];
+      if (!classEntry) {
+        return [];
+      }
+
+      let roleSet;
+      if (preference === 'CORE') {
+        roleSet = new Set(classEntry.core ?? []);
+      } else if (preference === 'NICHE') {
+        roleSet = new Set(classEntry.niche ?? []);
+      } else {
+        roleSet = new Set([...(classEntry.core ?? []), ...(classEntry.niche ?? [])]);
+      }
+
+      if (!roleSet.size) {
+        return [];
+      }
+
+      if (common === null) {
+        common = roleSet;
+      } else {
+        common = new Set([...common].filter((code) => roleSet.has(code)));
+        if (!common.size) {
+          return [];
+        }
+      }
+    }
+
+    return Array.from(common ?? []);
+  }
+
+  getAllSubclassesForClass(classCode, groupPreference = 'ALL') {
+    const dataset = this.quizData.metadata?.datasets?.subclasses ?? [];
+    const group = typeof groupPreference === 'string' ? groupPreference.toUpperCase() : 'ALL';
+    return dataset
+      .filter((entry) => entry.class === classCode && (group === 'ALL' || entry.group === group))
+      .map((entry) => entry.code);
   }
 
   cloneValue(value) {

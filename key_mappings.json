@@ -380,6 +380,32 @@
         "SPRITE",
         "VENOMOUS_SNAKE"
       ]
+    },
+    "primary_roles": {
+      "type": "array",
+      "items": {
+        "type": "enum",
+        "symbols": [
+          "DEFENDER",
+          "HEALER",
+          "SUPPORT",
+          "CONTROLLER",
+          "STRIKER",
+          "SCOUT"
+        ]
+      }
+    },
+    "secondary_roles": {
+      "type": "array",
+      "items": {
+        "type": "enum",
+        "symbols": [
+          "BLASTER",
+          "FACE",
+          "SCHOLAR",
+          "UTILITY_CASTER"
+        ]
+      }
     }
   },
   "value_map": {
@@ -1087,6 +1113,50 @@
       "VENOMOUS_SNAKE": {
         "pt": "Cobra Venenosa",
         "en": "Venomous Snake"
+      }
+    },
+    "primary_roles": {
+      "DEFENDER": {
+        "pt": "Defensor/a",
+        "en": "Defender"
+      },
+      "HEALER": {
+        "pt": "Curandeiro/a",
+        "en": "Healer"
+      },
+      "SUPPORT": {
+        "pt": "Suporte",
+        "en": "Support"
+      },
+      "CONTROLLER": {
+        "pt": "Controlador/a",
+        "en": "Controller"
+      },
+      "STRIKER": {
+        "pt": "Agressor/a",
+        "en": "Striker"
+      },
+      "SCOUT": {
+        "pt": "Batedor/a",
+        "en": "Scout"
+      }
+    },
+    "secondary_roles": {
+      "BLASTER": {
+        "pt": "Blaster",
+        "en": "Blaster"
+      },
+      "FACE": {
+        "pt": "Face",
+        "en": "Face"
+      },
+      "SCHOLAR": {
+        "pt": "Erudito/a",
+        "en": "Scholar"
+      },
+      "UTILITY_CASTER": {
+        "pt": "Conjurador/a utilitário/a",
+        "en": "Utility Caster"
       }
     }
   },
@@ -3679,5 +3749,1197 @@
     "pt-PT",
     "en"
   ],
-  "initial_state": {}
+  "initial_state": {
+    "primary_roles": [],
+    "secondary_roles": []
+  },
+  "role_mappings": {
+    "blaster": {
+      "Artificer": {
+        "core_subclasses": [
+          "Artillerist"
+        ]
+      },
+      "Barbarian": {
+        "niche_subclasses": [
+          "Path of the Storm Herald"
+        ]
+      },
+      "Blood Hunter": {
+        "core_subclasses": [
+          "Order of the Profane Soul"
+        ]
+      },
+      "Cleric": {
+        "core_subclasses": [
+          "Life Domain",
+          "Light Domain",
+          "Trickery Domain",
+          "War Domain"
+        ],
+        "niche_subclasses": [
+          "Arcana Domain",
+          "Forge Domain",
+          "Grave Domain",
+          "Knowledge Domain",
+          "Nature Domain",
+          "Order Domain",
+          "Peace Domain",
+          "Tempest Domain",
+          "Twilight Domain"
+        ]
+      },
+      "Druid": {
+        "core_subclasses": [
+          "Circle of the Land",
+          "Circle of the Moon",
+          "Circle of the Sea",
+          "Circle of the Stars"
+        ],
+        "niche_subclasses": [
+          "Circle of Dreams",
+          "Circle of Spores",
+          "Circle of the Shepherd",
+          "Circle of Wildfire"
+        ]
+      },
+      "Fighter": {
+        "core_subclasses": [
+          "Eldritch Knight"
+        ]
+      },
+      "Monk": {
+        "core_subclasses": [
+          "Way of the Elements"
+        ],
+        "niche_subclasses": [
+          "Way of the Sun Soul"
+        ]
+      },
+      "Paladin": {
+        "core_subclasses": [
+          "Oath of Devotion",
+          "Oath of Glory",
+          "Oath of the Ancients",
+          "Oath of Vengeance"
+        ],
+        "niche_subclasses": [
+          "Oath of Conquest",
+          "Oath of Redemption",
+          "Oath of the Crown",
+          "Oath of the Watchers",
+          "Oath of the Open Sea",
+          "Oath of Revelry"
+        ]
+      },
+      "Sorcerer": {
+        "core_subclasses": [
+          "Clockwork Sorcery",
+          "Draconic Sorcery",
+          "Wild Magic",
+          "Aberrant Sorcery"
+        ],
+        "niche_subclasses": [
+          "Storm Sorcery",
+          "Divine Soul",
+          "Shadow Magic"
+        ]
+      },
+      "Warlock": {
+        "core_subclasses": [
+          "Archfey Patron",
+          "Fiend Patron",
+          "Great Old One Patron",
+          "Celestial Patron"
+        ],
+        "niche_subclasses": [
+          "The Fathomless",
+          "The Genie",
+          "The Hexblade"
+        ]
+      },
+      "Wizard": {
+        "core_subclasses": [
+          "Abjurer",
+          "Diviner",
+          "Evoker",
+          "Illusionist"
+        ],
+        "niche_subclasses": [
+          "Bladesinging",
+          "Order of Scribes",
+          "School of Abjuration",
+          "School of Conjuration",
+          "School of Necromancy",
+          "School of Enchantment",
+          "War Magic"
+        ]
+      }
+    },
+    "controller": {
+      "Artificer": {
+        "core_subclasses": [
+          "Artillerist"
+        ]
+      },
+      "Barbarian": {
+        "core_subclasses": [
+          "Path of the World Tree"
+        ]
+      },
+      "Bard": {
+        "core_subclasses": [
+          "College of Dance",
+          "College of Glamour",
+          "College of Lore",
+          "College of Valor"
+        ],
+        "niche_subclasses": [
+          "College of Creation",
+          "College of Eloquence",
+          "College of Swords",
+          "College of Whispers"
+        ]
+      },
+      "Blood Hunter": {
+        "core_subclasses": [
+          "Order of the Mutant",
+          "Order of the Profane Soul"
+        ]
+      },
+      "Cleric": {
+        "core_subclasses": [
+          "Light Domain"
+        ],
+        "niche_subclasses": [
+          "Nature Domain",
+          "Tempest Domain"
+        ]
+      },
+      "Druid": {
+        "core_subclasses": [
+          "Circle of the Land",
+          "Circle of the Moon",
+          "Circle of the Sea",
+          "Circle of the Stars"
+        ],
+        "niche_subclasses": [
+          "Circle of Dreams",
+          "Circle of Spores",
+          "Circle of the Shepherd",
+          "Circle of Wildfire"
+        ]
+      },
+      "Fighter": {
+        "core_subclasses": [
+          "Battle Master",
+          "Psi Warrior"
+        ],
+        "niche_subclasses": [
+          "Arcane Archer",
+          "Cavalier",
+          "Rune Knight"
+        ]
+      },
+      "Monk": {
+        "core_subclasses": [
+          "Way of Mercy",
+          "Way of Shadow",
+          "Way of the Elements",
+          "Way of the Open Hand"
+        ],
+        "niche_subclasses": [
+          "Way of the Astral Self",
+          "Way of the Sun Soul"
+        ]
+      },
+      "Paladin": {
+        "niche_subclasses": [
+          "Oath of Conquest",
+          "Oath of Redemption",
+          "Oath of the Open Sea"
+        ]
+      },
+      "Ranger": {
+        "core_subclasses": [
+          "Beast Master",
+          "Fey Wanderer",
+          "Gloom Stalker",
+          "Hunter"
+        ],
+        "niche_subclasses": [
+          "Horizon Walker",
+          "Monster Slayer",
+          "Swarmkeeper"
+        ]
+      },
+      "Rogue": {
+        "core_subclasses": [
+          "Arachnoid Stalker",
+          "Arcane Trickster"
+        ]
+      },
+      "Sorcerer": {
+        "core_subclasses": [
+          "Clockwork Sorcery",
+          "Draconic Sorcery",
+          "Wild Magic",
+          "Aberrant Sorcery"
+        ],
+        "niche_subclasses": [
+          "Storm Sorcery",
+          "Divine Soul",
+          "Shadow Magic"
+        ]
+      },
+      "Warlock": {
+        "core_subclasses": [
+          "Archfey Patron",
+          "Fiend Patron",
+          "Great Old One Patron",
+          "Celestial Patron"
+        ],
+        "niche_subclasses": [
+          "The Fathomless",
+          "The Genie",
+          "The Hexblade"
+        ]
+      },
+      "Wizard": {
+        "core_subclasses": [
+          "Abjurer",
+          "Diviner",
+          "Evoker",
+          "Illusionist"
+        ],
+        "niche_subclasses": [
+          "Bladesinging",
+          "Order of Scribes",
+          "School of Abjuration",
+          "School of Conjuration",
+          "School of Necromancy",
+          "School of Enchantment",
+          "War Magic"
+        ]
+      }
+    },
+    "defender": {
+      "Artificer": {
+        "core_subclasses": [
+          "Armorer",
+          "Battle Smith"
+        ]
+      },
+      "Barbarian": {
+        "core_subclasses": [
+          "Path of the Berserker",
+          "Path of the Wild Heart",
+          "Path of the World Tree",
+          "Path of the Zealot"
+        ],
+        "niche_subclasses": [
+          "Path of the Ancestral Guardian",
+          "Path of the Beast",
+          "Path of the Storm Herald",
+          "Path of the Wild Magic",
+          "Path of the Muscle Wizard"
+        ]
+      },
+      "Blood Hunter": {
+        "core_subclasses": [
+          "Order of the Lycan"
+        ]
+      },
+      "Cleric": {
+        "core_subclasses": [
+          "Life Domain",
+          "Light Domain",
+          "Trickery Domain",
+          "War Domain"
+        ],
+        "niche_subclasses": [
+          "Arcana Domain",
+          "Forge Domain",
+          "Grave Domain",
+          "Knowledge Domain",
+          "Nature Domain",
+          "Order Domain",
+          "Peace Domain",
+          "Tempest Domain",
+          "Twilight Domain"
+        ]
+      },
+      "Druid": {
+        "core_subclasses": [
+          "Circle of the Moon"
+        ]
+      },
+      "Fighter": {
+        "core_subclasses": [
+          "Battle Master",
+          "Champion",
+          "Eldritch Knight",
+          "Psi Warrior"
+        ],
+        "niche_subclasses": [
+          "Arcane Archer",
+          "Cavalier",
+          "Rune Knight",
+          "Samurai",
+          "Dungeoneer"
+        ]
+      },
+      "Monk": {
+        "core_subclasses": [
+          "Way of the Open Hand"
+        ],
+        "niche_subclasses": [
+          "Way of the Long Death"
+        ]
+      },
+      "Paladin": {
+        "core_subclasses": [
+          "Oath of Devotion",
+          "Oath of Glory",
+          "Oath of the Ancients",
+          "Oath of Vengeance"
+        ],
+        "niche_subclasses": [
+          "Oath of Conquest",
+          "Oath of Redemption",
+          "Oath of the Crown",
+          "Oath of the Watchers",
+          "Oath of the Open Sea",
+          "Oath of Revelry"
+        ]
+      },
+      "Ranger": {
+        "core_subclasses": [
+          "Beast Master"
+        ]
+      },
+      "Warlock": {
+        "niche_subclasses": [
+          "The Hexblade"
+        ]
+      },
+      "Wizard": {
+        "core_subclasses": [
+          "Abjurer"
+        ],
+        "niche_subclasses": [
+          "Bladesinging",
+          "School of Abjuration",
+          "War Magic"
+        ]
+      }
+    },
+    "face": {
+      "Bard": {
+        "core_subclasses": [
+          "College of Dance",
+          "College of Glamour",
+          "College of Lore",
+          "College of Valor"
+        ],
+        "niche_subclasses": [
+          "College of Creation",
+          "College of Eloquence",
+          "College of Swords",
+          "College of Whispers"
+        ]
+      },
+      "Cleric": {
+        "core_subclasses": [
+          "Trickery Domain"
+        ],
+        "niche_subclasses": [
+          "Knowledge Domain",
+          "Order Domain"
+        ]
+      },
+      "Fighter": {
+        "niche_subclasses": [
+          "Samurai"
+        ]
+      },
+      "Monk": {
+        "niche_subclasses": [
+          "Warrior of the Street"
+        ]
+      },
+      "Paladin": {
+        "core_subclasses": [
+          "Oath of Devotion",
+          "Oath of Glory",
+          "Oath of the Ancients",
+          "Oath of Vengeance"
+        ],
+        "niche_subclasses": [
+          "Oath of Conquest",
+          "Oath of Redemption",
+          "Oath of the Crown",
+          "Oath of the Watchers",
+          "Oath of the Open Sea",
+          "Oath of Revelry"
+        ]
+      },
+      "Ranger": {
+        "core_subclasses": [
+          "Fey Wanderer"
+        ]
+      },
+      "Rogue": {
+        "core_subclasses": [
+          "Arachnoid Stalker",
+          "Arcane Trickster",
+          "Assassin",
+          "Thief"
+        ],
+        "niche_subclasses": [
+          "Inquisitive",
+          "Mastermind",
+          "Phantom",
+          "Scout",
+          "Swashbuckler",
+          "Soulknife"
+        ]
+      },
+      "Sorcerer": {
+        "core_subclasses": [
+          "Aberrant Sorcery"
+        ],
+        "niche_subclasses": [
+          "Storm Sorcery",
+          "Divine Soul",
+          "Shadow Magic"
+        ]
+      },
+      "Warlock": {
+        "core_subclasses": [
+          "Archfey Patron",
+          "Fiend Patron",
+          "Great Old One Patron",
+          "Celestial Patron"
+        ],
+        "niche_subclasses": [
+          "The Fathomless",
+          "The Genie",
+          "The Hexblade"
+        ]
+      },
+      "Wizard": {
+        "core_subclasses": [
+          "Illusionist"
+        ],
+        "niche_subclasses": [
+          "School of Enchantment"
+        ]
+      }
+    },
+    "healer": {
+      "Artificer": {
+        "core_subclasses": [
+          "Alchemist",
+          "Armorer",
+          "Artillerist",
+          "Battle Smith"
+        ]
+      },
+      "Barbarian": {
+        "core_subclasses": [
+          "Path of the World Tree"
+        ],
+        "niche_subclasses": [
+          "Path of the Storm Herald"
+        ]
+      },
+      "Bard": {
+        "core_subclasses": [
+          "College of Dance",
+          "College of Glamour",
+          "College of Lore",
+          "College of Valor"
+        ],
+        "niche_subclasses": [
+          "College of Creation",
+          "College of Eloquence",
+          "College of Swords",
+          "College of Whispers"
+        ]
+      },
+      "Cleric": {
+        "core_subclasses": [
+          "Life Domain",
+          "Light Domain",
+          "Trickery Domain",
+          "War Domain"
+        ],
+        "niche_subclasses": [
+          "Arcana Domain",
+          "Forge Domain",
+          "Grave Domain",
+          "Knowledge Domain",
+          "Nature Domain",
+          "Order Domain",
+          "Peace Domain",
+          "Tempest Domain",
+          "Twilight Domain"
+        ]
+      },
+      "Druid": {
+        "core_subclasses": [
+          "Circle of the Land",
+          "Circle of the Moon",
+          "Circle of the Sea",
+          "Circle of the Stars"
+        ],
+        "niche_subclasses": [
+          "Circle of Dreams",
+          "Circle of Spores",
+          "Circle of the Shepherd",
+          "Circle of Wildfire"
+        ]
+      },
+      "Monk": {
+        "core_subclasses": [
+          "Way of Mercy"
+        ]
+      },
+      "Paladin": {
+        "core_subclasses": [
+          "Oath of Devotion",
+          "Oath of Glory",
+          "Oath of the Ancients",
+          "Oath of Vengeance"
+        ],
+        "niche_subclasses": [
+          "Oath of Conquest",
+          "Oath of Redemption",
+          "Oath of the Crown",
+          "Oath of the Watchers",
+          "Oath of the Open Sea",
+          "Oath of Revelry"
+        ]
+      },
+      "Sorcerer": {
+        "niche_subclasses": [
+          "Divine Soul"
+        ]
+      },
+      "Warlock": {
+        "core_subclasses": [
+          "Celestial Patron"
+        ]
+      }
+    },
+    "scholar": {
+      "Artificer": {
+        "core_subclasses": [
+          "Alchemist",
+          "Armorer",
+          "Artillerist",
+          "Battle Smith"
+        ]
+      },
+      "Bard": {
+        "core_subclasses": [
+          "College of Lore"
+        ]
+      },
+      "Cleric": {
+        "niche_subclasses": [
+          "Arcana Domain",
+          "Knowledge Domain"
+        ]
+      },
+      "Druid": {
+        "core_subclasses": [
+          "Circle of the Stars"
+        ]
+      },
+      "Fighter": {
+        "niche_subclasses": [
+          "Samurai",
+          "Dungeoneer"
+        ]
+      },
+      "Monk": {
+        "niche_subclasses": [
+          "Way of the Cobalt Soul"
+        ]
+      },
+      "Paladin": {
+        "niche_subclasses": [
+          "Oath of the Watchers"
+        ]
+      },
+      "Ranger": {
+        "niche_subclasses": [
+          "Swarmkeeper"
+        ]
+      },
+      "Rogue": {
+        "niche_subclasses": [
+          "Inquisitive",
+          "Scout"
+        ]
+      },
+      "Warlock": {
+        "core_subclasses": [
+          "Great Old One Patron"
+        ]
+      },
+      "Wizard": {
+        "core_subclasses": [
+          "Abjurer",
+          "Diviner",
+          "Evoker",
+          "Illusionist"
+        ],
+        "niche_subclasses": [
+          "Bladesinging",
+          "Order of Scribes",
+          "School of Abjuration",
+          "School of Conjuration",
+          "School of Necromancy",
+          "School of Enchantment",
+          "War Magic"
+        ]
+      }
+    },
+    "scout": {
+      "Blood Hunter": {
+        "core_subclasses": [
+          "Order of the Lycan",
+          "Order of the Mutant",
+          "Order of the Ghostslayer",
+          "Order of the Profane Soul"
+        ]
+      },
+      "Cleric": {
+        "core_subclasses": [
+          "Trickery Domain"
+        ],
+        "niche_subclasses": [
+          "Twilight Domain"
+        ]
+      },
+      "Druid": {
+        "niche_subclasses": [
+          "Circle of Dreams"
+        ]
+      },
+      "Fighter": {
+        "niche_subclasses": [
+          "Dungeoneer"
+        ]
+      },
+      "Monk": {
+        "core_subclasses": [
+          "Way of Mercy",
+          "Way of Shadow",
+          "Way of the Elements",
+          "Way of the Open Hand"
+        ],
+        "niche_subclasses": [
+          "Way of the Astral Self",
+          "Way of the Cobalt Soul",
+          "Way of the Drunken Master",
+          "Way of the Kensei",
+          "Way of the Long Death",
+          "Way of the Sun Soul",
+          "Warrior of the Street"
+        ]
+      },
+      "Ranger": {
+        "core_subclasses": [
+          "Beast Master",
+          "Fey Wanderer",
+          "Gloom Stalker",
+          "Hunter"
+        ],
+        "niche_subclasses": [
+          "Horizon Walker",
+          "Monster Slayer",
+          "Swarmkeeper"
+        ]
+      },
+      "Rogue": {
+        "core_subclasses": [
+          "Arachnoid Stalker",
+          "Arcane Trickster",
+          "Assassin",
+          "Thief"
+        ],
+        "niche_subclasses": [
+          "Inquisitive",
+          "Mastermind",
+          "Phantom",
+          "Scout",
+          "Swashbuckler",
+          "Soulknife"
+        ]
+      },
+      "Sorcerer": {
+        "niche_subclasses": [
+          "Shadow Magic"
+        ]
+      }
+    },
+    "striker": {
+      "Artificer": {
+        "core_subclasses": [
+          "Armorer",
+          "Battle Smith"
+        ]
+      },
+      "Barbarian": {
+        "core_subclasses": [
+          "Path of the Berserker",
+          "Path of the Wild Heart",
+          "Path of the World Tree",
+          "Path of the Zealot"
+        ],
+        "niche_subclasses": [
+          "Path of the Ancestral Guardian",
+          "Path of the Beast",
+          "Path of the Storm Herald",
+          "Path of the Wild Magic",
+          "Path of the Muscle Wizard"
+        ]
+      },
+      "Bard": {
+        "core_subclasses": [
+          "College of Valor"
+        ],
+        "niche_subclasses": [
+          "College of Swords",
+          "College of Whispers"
+        ]
+      },
+      "Blood Hunter": {
+        "core_subclasses": [
+          "Order of the Lycan",
+          "Order of the Mutant",
+          "Order of the Ghostslayer",
+          "Order of the Profane Soul"
+        ]
+      },
+      "Cleric": {
+        "core_subclasses": [
+          "Life Domain",
+          "Light Domain",
+          "Trickery Domain",
+          "War Domain"
+        ],
+        "niche_subclasses": [
+          "Arcana Domain",
+          "Forge Domain",
+          "Grave Domain",
+          "Knowledge Domain",
+          "Nature Domain",
+          "Order Domain",
+          "Peace Domain",
+          "Tempest Domain",
+          "Twilight Domain"
+        ]
+      },
+      "Druid": {
+        "core_subclasses": [
+          "Circle of the Moon",
+          "Circle of the Stars"
+        ],
+        "niche_subclasses": [
+          "Circle of Spores"
+        ]
+      },
+      "Fighter": {
+        "core_subclasses": [
+          "Battle Master",
+          "Champion",
+          "Eldritch Knight",
+          "Psi Warrior"
+        ],
+        "niche_subclasses": [
+          "Arcane Archer",
+          "Cavalier",
+          "Rune Knight",
+          "Samurai",
+          "Dungeoneer"
+        ]
+      },
+      "Monk": {
+        "core_subclasses": [
+          "Way of Mercy",
+          "Way of Shadow",
+          "Way of the Elements",
+          "Way of the Open Hand"
+        ],
+        "niche_subclasses": [
+          "Way of the Astral Self",
+          "Way of the Cobalt Soul",
+          "Way of the Drunken Master",
+          "Way of the Kensei",
+          "Way of the Long Death",
+          "Way of the Sun Soul",
+          "Warrior of the Street"
+        ]
+      },
+      "Paladin": {
+        "core_subclasses": [
+          "Oath of Devotion",
+          "Oath of Glory",
+          "Oath of the Ancients",
+          "Oath of Vengeance"
+        ],
+        "niche_subclasses": [
+          "Oath of Conquest",
+          "Oath of Redemption",
+          "Oath of the Crown",
+          "Oath of the Watchers",
+          "Oath of the Open Sea",
+          "Oath of Revelry"
+        ]
+      },
+      "Ranger": {
+        "core_subclasses": [
+          "Beast Master",
+          "Fey Wanderer",
+          "Gloom Stalker",
+          "Hunter"
+        ],
+        "niche_subclasses": [
+          "Horizon Walker",
+          "Monster Slayer",
+          "Swarmkeeper"
+        ]
+      },
+      "Rogue": {
+        "core_subclasses": [
+          "Arachnoid Stalker",
+          "Arcane Trickster",
+          "Assassin",
+          "Thief"
+        ],
+        "niche_subclasses": [
+          "Inquisitive",
+          "Mastermind",
+          "Phantom",
+          "Scout",
+          "Swashbuckler",
+          "Soulknife"
+        ]
+      },
+      "Sorcerer": {
+        "core_subclasses": [
+          "Clockwork Sorcery",
+          "Draconic Sorcery",
+          "Wild Magic",
+          "Aberrant Sorcery"
+        ],
+        "niche_subclasses": [
+          "Storm Sorcery",
+          "Divine Soul",
+          "Shadow Magic"
+        ]
+      },
+      "Warlock": {
+        "core_subclasses": [
+          "Archfey Patron",
+          "Fiend Patron",
+          "Great Old One Patron",
+          "Celestial Patron"
+        ],
+        "niche_subclasses": [
+          "The Fathomless",
+          "The Genie",
+          "The Hexblade"
+        ]
+      },
+      "Wizard": {
+        "core_subclasses": [
+          "Evoker"
+        ],
+        "niche_subclasses": [
+          "Bladesinging",
+          "Order of Scribes",
+          "School of Necromancy",
+          "School of Enchantment",
+          "War Magic"
+        ]
+      }
+    },
+    "support": {
+      "Artificer": {
+        "core_subclasses": [
+          "Alchemist",
+          "Armorer",
+          "Artillerist",
+          "Battle Smith"
+        ]
+      },
+      "Barbarian": {
+        "core_subclasses": [
+          "Path of the Wild Heart",
+          "Path of the World Tree"
+        ],
+        "niche_subclasses": [
+          "Path of the Storm Herald"
+        ]
+      },
+      "Bard": {
+        "core_subclasses": [
+          "College of Dance",
+          "College of Glamour",
+          "College of Lore",
+          "College of Valor"
+        ],
+        "niche_subclasses": [
+          "College of Creation",
+          "College of Eloquence",
+          "College of Swords",
+          "College of Whispers"
+        ]
+      },
+      "Blood Hunter": {
+        "core_subclasses": [
+          "Order of the Lycan",
+          "Order of the Mutant",
+          "Order of the Ghostslayer",
+          "Order of the Profane Soul"
+        ]
+      },
+      "Cleric": {
+        "core_subclasses": [
+          "Life Domain",
+          "Light Domain",
+          "Trickery Domain",
+          "War Domain"
+        ],
+        "niche_subclasses": [
+          "Arcana Domain",
+          "Forge Domain",
+          "Grave Domain",
+          "Knowledge Domain",
+          "Nature Domain",
+          "Order Domain",
+          "Peace Domain",
+          "Tempest Domain",
+          "Twilight Domain"
+        ]
+      },
+      "Druid": {
+        "core_subclasses": [
+          "Circle of the Land",
+          "Circle of the Moon",
+          "Circle of the Sea",
+          "Circle of the Stars"
+        ],
+        "niche_subclasses": [
+          "Circle of Dreams",
+          "Circle of Spores",
+          "Circle of the Shepherd",
+          "Circle of Wildfire"
+        ]
+      },
+      "Fighter": {
+        "core_subclasses": [
+          "Battle Master",
+          "Psi Warrior"
+        ],
+        "niche_subclasses": [
+          "Rune Knight"
+        ]
+      },
+      "Monk": {
+        "core_subclasses": [
+          "Way of Mercy"
+        ],
+        "niche_subclasses": [
+          "Way of the Cobalt Soul",
+          "Way of the Drunken Master"
+        ]
+      },
+      "Paladin": {
+        "core_subclasses": [
+          "Oath of Devotion",
+          "Oath of Glory",
+          "Oath of the Ancients",
+          "Oath of Vengeance"
+        ],
+        "niche_subclasses": [
+          "Oath of Conquest",
+          "Oath of Redemption",
+          "Oath of the Crown",
+          "Oath of the Watchers",
+          "Oath of the Open Sea",
+          "Oath of Revelry"
+        ]
+      },
+      "Ranger": {
+        "core_subclasses": [
+          "Beast Master"
+        ]
+      },
+      "Sorcerer": {
+        "core_subclasses": [
+          "Clockwork Sorcery",
+          "Draconic Sorcery",
+          "Wild Magic",
+          "Aberrant Sorcery"
+        ],
+        "niche_subclasses": [
+          "Storm Sorcery",
+          "Divine Soul",
+          "Shadow Magic"
+        ]
+      },
+      "Warlock": {
+        "core_subclasses": [
+          "Celestial Patron"
+        ]
+      },
+      "Wizard": {
+        "core_subclasses": [
+          "Abjurer",
+          "Diviner",
+          "Evoker",
+          "Illusionist"
+        ],
+        "niche_subclasses": [
+          "Bladesinging",
+          "Order of Scribes",
+          "School of Abjuration",
+          "School of Conjuration",
+          "School of Necromancy",
+          "School of Enchantment",
+          "War Magic"
+        ]
+      }
+    },
+    "utility caster": {
+      "Artificer": {
+        "core_subclasses": [
+          "Alchemist",
+          "Armorer",
+          "Artillerist",
+          "Battle Smith"
+        ]
+      },
+      "Bard": {
+        "core_subclasses": [
+          "College of Dance",
+          "College of Glamour",
+          "College of Lore",
+          "College of Valor"
+        ],
+        "niche_subclasses": [
+          "College of Creation",
+          "College of Eloquence",
+          "College of Swords",
+          "College of Whispers"
+        ]
+      },
+      "Blood Hunter": {
+        "core_subclasses": [
+          "Order of the Profane Soul"
+        ]
+      },
+      "Cleric": {
+        "core_subclasses": [
+          "Life Domain",
+          "Light Domain",
+          "Trickery Domain",
+          "War Domain"
+        ],
+        "niche_subclasses": [
+          "Arcana Domain",
+          "Forge Domain",
+          "Grave Domain",
+          "Knowledge Domain",
+          "Nature Domain",
+          "Order Domain",
+          "Peace Domain",
+          "Tempest Domain",
+          "Twilight Domain"
+        ]
+      },
+      "Druid": {
+        "core_subclasses": [
+          "Circle of the Land",
+          "Circle of the Moon",
+          "Circle of the Sea",
+          "Circle of the Stars"
+        ],
+        "niche_subclasses": [
+          "Circle of Dreams",
+          "Circle of Spores",
+          "Circle of the Shepherd",
+          "Circle of Wildfire"
+        ]
+      },
+      "Paladin": {
+        "niche_subclasses": [
+          "Oath of the Open Sea"
+        ]
+      },
+      "Ranger": {
+        "core_subclasses": [
+          "Beast Master",
+          "Fey Wanderer",
+          "Gloom Stalker",
+          "Hunter"
+        ],
+        "niche_subclasses": [
+          "Horizon Walker",
+          "Monster Slayer",
+          "Swarmkeeper"
+        ]
+      },
+      "Sorcerer": {
+        "core_subclasses": [
+          "Clockwork Sorcery",
+          "Draconic Sorcery",
+          "Wild Magic",
+          "Aberrant Sorcery"
+        ],
+        "niche_subclasses": [
+          "Storm Sorcery",
+          "Divine Soul",
+          "Shadow Magic"
+        ]
+      },
+      "Warlock": {
+        "core_subclasses": [
+          "Archfey Patron",
+          "Fiend Patron",
+          "Great Old One Patron",
+          "Celestial Patron"
+        ],
+        "niche_subclasses": [
+          "The Fathomless",
+          "The Genie",
+          "The Hexblade"
+        ]
+      },
+      "Wizard": {
+        "core_subclasses": [
+          "Abjurer",
+          "Diviner",
+          "Evoker",
+          "Illusionist"
+        ],
+        "niche_subclasses": [
+          "Bladesinging",
+          "Order of Scribes",
+          "School of Abjuration",
+          "School of Conjuration",
+          "School of Necromancy",
+          "School of Enchantment",
+          "War Magic"
+        ]
+      }
+    }
+  }
 }
