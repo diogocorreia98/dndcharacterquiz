@@ -17,7 +17,6 @@
       <main class="app__main">
         <section id="question-screen" class="card" aria-live="polite">
           <div class="card__progress" id="progress-indicator"></div>
-          <div class="status-summary status-summary--hidden" id="status-summary" hidden></div>
           <h2 class="card__question" id="question-text"></h2>
           <form class="options" id="options-form" role="radiogroup" aria-describedby="question-text"></form>
           <p class="options__empty" id="no-options-message" hidden>
@@ -39,6 +38,7 @@
           </div>
         </section>
       </main>
+      <aside class="status-summary status-summary--hidden" id="status-summary" hidden></aside>
     </div>
     <script src="app.js" type="module"></script>
   </body>
