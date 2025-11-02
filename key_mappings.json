@@ -86,7 +86,10 @@
         "S033",
         "S034",
         "S035",
-        "S036"
+        "S036",
+        "S037",
+        "S038",
+        "S039"
       ]
     },
     "subspecies": {
@@ -591,6 +594,18 @@
       "S036": {
         "pt": "Yuan-ti",
         "en": "Yuan-ti"
+      },
+      "S037": {
+        "pt": "Dhampir",
+        "en": "Dhampir"
+      },
+      "S038": {
+        "pt": "Hexblood",
+        "en": "Hexblood"
+      },
+      "S039": {
+        "pt": "Reborn",
+        "en": "Reborn"
       }
     },
     "subspecies": {
@@ -1639,6 +1654,57 @@
         ],
         "animal_likeness": [
           "A"
+        ]
+      },
+      {
+        "code": "S037",
+        "pt": "Dhampir",
+        "en": "Dhampir",
+        "species_commonality": [
+          "D"
+        ],
+        "height": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "animal_likeness": [
+          "B"
+        ]
+      },
+      {
+        "code": "S038",
+        "pt": "Hexblood",
+        "en": "Hexblood",
+        "species_commonality": [
+          "D"
+        ],
+        "height": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "animal_likeness": [
+          "B"
+        ]
+      },
+      {
+        "code": "S039",
+        "pt": "Reborn",
+        "en": "Reborn",
+        "species_commonality": [
+          "D"
+        ],
+        "height": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "animal_likeness": [
+          "B"
         ]
       }
     ],
