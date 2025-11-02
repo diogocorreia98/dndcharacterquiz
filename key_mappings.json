@@ -228,6 +228,8 @@
         "BARD_COLLEGE_OF_ELOQUENCE",
         "BARD_COLLEGE_OF_SWORDS",
         "BARD_COLLEGE_OF_WHISPERS",
+        "BARD_COLLEGE_OF_SPIRITS",
+        "BARD_COLLEGE_OF_THE_MOON",
         "CLERIC_LIFE_DOMAIN",
         "CLERIC_LIGHT_DOMAIN",
         "CLERIC_TRICKERY_DOMAIN",
@@ -258,6 +260,7 @@
         "FIGHTER_RUNE_KNIGHT",
         "FIGHTER_SAMURAI",
         "FIGHTER_DUNGEONEER",
+        "FIGHTER_BANNERET",
         "MONK_WAY_OF_MERCY",
         "MONK_WAY_OF_SHADOW",
         "MONK_WAY_OF_THE_ELEMENTS",
@@ -279,6 +282,7 @@
         "PALADIN_OATH_OF_THE_WATCHERS",
         "PALADIN_OATH_OF_THE_OPEN_SEA",
         "PALADIN_OATH_OF_REVELRY",
+        "PALADIN_OATH_OF_THE_NOBLE_GENIES",
         "RANGER_BEAST_MASTER",
         "RANGER_FEY_WANDERER",
         "RANGER_GLOOM_STALKER",
@@ -286,6 +290,7 @@
         "RANGER_HORIZON_WALKER",
         "RANGER_MONSTER_SLAYER",
         "RANGER_SWARMKEEPER",
+        "RANGER_WINTER_WALKER",
         "ROGUE_ARACHNOID_STALKER",
         "ROGUE_ARCANE_TRICKSTER",
         "ROGUE_ASSASSIN",
@@ -296,6 +301,7 @@
         "ROGUE_SCOUT",
         "ROGUE_SWASHBUCKLER",
         "ROGUE_SOULKNIFE",
+        "ROGUE_SCION_OF_THE_THREE",
         "SORCERER_CLOCKWORK_SORCERY",
         "SORCERER_DRACONIC_SORCERY",
         "SORCERER_WILD_MAGIC",
@@ -303,6 +309,7 @@
         "SORCERER_ABERRANT_SORCERY",
         "SORCERER_DIVINE_SOUL",
         "SORCERER_SHADOW_MAGIC",
+        "SORCERER_SPELLFIRE_SORCERY",
         "WARLOCK_ARCHFEY_PATRON",
         "WARLOCK_FIEND_PATRON",
         "WARLOCK_GREAT_OLD_ONE_PATRON",
@@ -310,6 +317,7 @@
         "WARLOCK_THE_FATHOMLESS",
         "WARLOCK_THE_GENIE",
         "WARLOCK_THE_HEXBLADE",
+        "WARLOCK_THE_UNDEAD",
         "WIZARD_ABJURER",
         "WIZARD_DIVINER",
         "WIZARD_EVOKER",
@@ -334,6 +342,7 @@
         "CONTROLLER",
         "DEFENDER",
         "FACE",
+        "HEALER",
         "OTHER",
         "SCHOLAR",
         "SCOUT",
@@ -2669,15 +2678,33 @@
     "niche_roles": [
       {
         "class": "CLERIC",
+        "value": "BLASTER",
+        "pt": "Blaster",
+        "en": "Blaster"
+      },
+      {
+        "class": "CLERIC",
         "value": "CONTROLLER",
         "pt": "Controller",
         "en": "Controller"
       },
       {
         "class": "CLERIC",
+        "value": "DEFENDER",
+        "pt": "Defender",
+        "en": "Defender"
+      },
+      {
+        "class": "CLERIC",
         "value": "FACE",
         "pt": "Face",
         "en": "Face"
+      },
+      {
+        "class": "CLERIC",
+        "value": "HEALER",
+        "pt": "Healer",
+        "en": "Healer"
       },
       {
         "class": "CLERIC",
@@ -2690,6 +2717,24 @@
         "value": "SCOUT",
         "pt": "Scout",
         "en": "Scout"
+      },
+      {
+        "class": "CLERIC",
+        "value": "STRIKER",
+        "pt": "Striker",
+        "en": "Striker"
+      },
+      {
+        "class": "CLERIC",
+        "value": "SUPPORT",
+        "pt": "Support",
+        "en": "Support"
+      },
+      {
+        "class": "CLERIC",
+        "value": "UTILITY_CASTER",
+        "pt": "Utility Caster",
+        "en": "Utility Caster"
       },
       {
         "class": "CLERIC",
@@ -2741,6 +2786,18 @@
       },
       {
         "class": "WIZARD",
+        "value": "BLASTER",
+        "pt": "Blaster",
+        "en": "Blaster"
+      },
+      {
+        "class": "WIZARD",
+        "value": "CONTROLLER",
+        "pt": "Controller",
+        "en": "Controller"
+      },
+      {
+        "class": "WIZARD",
         "value": "DEFENDER",
         "pt": "Defender",
         "en": "Defender"
@@ -2753,9 +2810,27 @@
       },
       {
         "class": "WIZARD",
+        "value": "SCHOLAR",
+        "pt": "Scholar",
+        "en": "Scholar"
+      },
+      {
+        "class": "WIZARD",
         "value": "STRIKER",
         "pt": "Striker",
         "en": "Striker"
+      },
+      {
+        "class": "WIZARD",
+        "value": "SUPPORT",
+        "pt": "Support",
+        "en": "Support"
+      },
+      {
+        "class": "WIZARD",
+        "value": "UTILITY_CASTER",
+        "pt": "Utility Caster",
+        "en": "Utility Caster"
       },
       {
         "class": "WIZARD",
@@ -2765,15 +2840,51 @@
       },
       {
         "class": "PALADIN",
+        "value": "BLASTER",
+        "pt": "Blaster",
+        "en": "Blaster"
+      },
+      {
+        "class": "PALADIN",
         "value": "CONTROLLER",
         "pt": "Controller",
         "en": "Controller"
       },
       {
         "class": "PALADIN",
+        "value": "DEFENDER",
+        "pt": "Defender",
+        "en": "Defender"
+      },
+      {
+        "class": "PALADIN",
+        "value": "FACE",
+        "pt": "Face",
+        "en": "Face"
+      },
+      {
+        "class": "PALADIN",
+        "value": "HEALER",
+        "pt": "Healer",
+        "en": "Healer"
+      },
+      {
+        "class": "PALADIN",
         "value": "SCHOLAR",
         "pt": "Scholar",
         "en": "Scholar"
+      },
+      {
+        "class": "PALADIN",
+        "value": "STRIKER",
+        "pt": "Striker",
+        "en": "Striker"
+      },
+      {
+        "class": "PALADIN",
+        "value": "SUPPORT",
+        "pt": "Support",
+        "en": "Support"
       },
       {
         "class": "PALADIN",
@@ -2789,9 +2900,27 @@
       },
       {
         "class": "ROGUE",
+        "value": "CONTROLLER",
+        "pt": "Controller",
+        "en": "Controller"
+      },
+      {
+        "class": "ROGUE",
+        "value": "FACE",
+        "pt": "Face",
+        "en": "Face"
+      },
+      {
+        "class": "ROGUE",
         "value": "SCHOLAR",
         "pt": "Scholar",
         "en": "Scholar"
+      },
+      {
+        "class": "ROGUE",
+        "value": "SCOUT",
+        "pt": "Scout",
+        "en": "Scout"
       },
       {
         "class": "ROGUE",
@@ -2806,175 +2935,372 @@
         "class": "ARTIFICER",
         "group": "CORE",
         "pt": "Alchemist",
-        "en": "Alchemist"
+        "en": "Alchemist",
+        "niche_roles": [
+          "HEALER",
+          "SCHOLAR",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "ARTIFICER_ARMORER",
         "class": "ARTIFICER",
         "group": "CORE",
         "pt": "Armorer",
-        "en": "Armorer"
+        "en": "Armorer",
+        "niche_roles": [
+          "DEFENDER",
+          "HEALER",
+          "SCHOLAR",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "ARTIFICER_ARTILLERIST",
         "class": "ARTIFICER",
         "group": "CORE",
         "pt": "Artillerist",
-        "en": "Artillerist"
+        "en": "Artillerist",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "HEALER",
+          "SCHOLAR",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "ARTIFICER_BATTLE_SMITH",
         "class": "ARTIFICER",
         "group": "CORE",
         "pt": "Battle Smith",
-        "en": "Battle Smith"
+        "en": "Battle Smith",
+        "niche_roles": [
+          "DEFENDER",
+          "HEALER",
+          "SCHOLAR",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "BARBARIAN_PATH_OF_THE_BERSERKER",
         "class": "BARBARIAN",
         "group": "CORE",
         "pt": "Path of the Berserker",
-        "en": "Path of the Berserker"
+        "en": "Path of the Berserker",
+        "niche_roles": [
+          "DEFENDER",
+          "STRIKER"
+        ]
       },
       {
         "code": "BARBARIAN_PATH_OF_THE_WILD_HEART",
         "class": "BARBARIAN",
         "group": "CORE",
         "pt": "Path of the Wild Heart",
-        "en": "Path of the Wild Heart"
+        "en": "Path of the Wild Heart",
+        "niche_roles": [
+          "DEFENDER",
+          "STRIKER",
+          "SUPPORT"
+        ]
       },
       {
         "code": "BARBARIAN_PATH_OF_THE_WORLD_TREE",
         "class": "BARBARIAN",
         "group": "CORE",
         "pt": "Path of the World Tree",
-        "en": "Path of the World Tree"
+        "en": "Path of the World Tree",
+        "niche_roles": [
+          "CONTROLLER",
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ]
       },
       {
         "code": "BARBARIAN_PATH_OF_THE_ZEALOT",
         "class": "BARBARIAN",
         "group": "CORE",
         "pt": "Path of the Zealot",
-        "en": "Path of the Zealot"
+        "en": "Path of the Zealot",
+        "niche_roles": [
+          "DEFENDER",
+          "STRIKER"
+        ]
       },
       {
         "code": "BARBARIAN_PATH_OF_THE_ANCESTRAL_GUARDIAN",
         "class": "BARBARIAN",
         "group": "NICHE",
         "pt": "Path of the Ancestral Guardian",
-        "en": "Path of the Ancestral Guardian"
+        "en": "Path of the Ancestral Guardian",
+        "niche_roles": [
+          "DEFENDER",
+          "STRIKER"
+        ]
       },
       {
         "code": "BARBARIAN_PATH_OF_THE_BEAST",
         "class": "BARBARIAN",
         "group": "NICHE",
         "pt": "Path of the Beast",
-        "en": "Path of the Beast"
+        "en": "Path of the Beast",
+        "niche_roles": [
+          "DEFENDER",
+          "STRIKER"
+        ]
       },
       {
         "code": "BARBARIAN_PATH_OF_THE_STORM_HERALD",
         "class": "BARBARIAN",
         "group": "NICHE",
         "pt": "Path of the Storm Herald",
-        "en": "Path of the Storm Herald"
+        "en": "Path of the Storm Herald",
+        "niche_roles": [
+          "BLASTER",
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ]
       },
       {
         "code": "BARBARIAN_PATH_OF_THE_WILD_MAGIC",
         "class": "BARBARIAN",
         "group": "NICHE",
         "pt": "Path of the Wild Magic",
-        "en": "Path of the Wild Magic"
+        "en": "Path of the Wild Magic",
+        "niche_roles": [
+          "DEFENDER",
+          "STRIKER"
+        ]
       },
       {
         "code": "BARBARIAN_PATH_OF_THE_MUSCLE_WIZARD",
         "class": "BARBARIAN",
         "group": "NICHE",
         "pt": "Path of the Muscle Wizard",
-        "en": "Path of the Muscle Wizard"
+        "en": "Path of the Muscle Wizard",
+        "niche_roles": [
+          "DEFENDER",
+          "STRIKER"
+        ]
       },
       {
         "code": "BARD_COLLEGE_OF_DANCE",
         "class": "BARD",
         "group": "CORE",
         "pt": "College of Dance",
-        "en": "College of Dance"
+        "en": "College of Dance",
+        "niche_roles": [
+          "CONTROLLER",
+          "FACE",
+          "HEALER",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "BARD_COLLEGE_OF_GLAMOUR",
         "class": "BARD",
         "group": "CORE",
         "pt": "College of Glamour",
-        "en": "College of Glamour"
+        "en": "College of Glamour",
+        "niche_roles": [
+          "CONTROLLER",
+          "FACE",
+          "HEALER",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "BARD_COLLEGE_OF_LORE",
         "class": "BARD",
         "group": "CORE",
         "pt": "College of Lore",
-        "en": "College of Lore"
+        "en": "College of Lore",
+        "niche_roles": [
+          "CONTROLLER",
+          "FACE",
+          "HEALER",
+          "SCHOLAR",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "BARD_COLLEGE_OF_VALOR",
         "class": "BARD",
         "group": "CORE",
         "pt": "College of Valor",
-        "en": "College of Valor"
+        "en": "College of Valor",
+        "niche_roles": [
+          "CONTROLLER",
+          "FACE",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "BARD_COLLEGE_OF_CREATION",
         "class": "BARD",
         "group": "NICHE",
         "pt": "College of Creation",
-        "en": "College of Creation"
+        "en": "College of Creation",
+        "niche_roles": [
+          "CONTROLLER",
+          "FACE",
+          "HEALER",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "BARD_COLLEGE_OF_ELOQUENCE",
         "class": "BARD",
         "group": "NICHE",
         "pt": "College of Eloquence",
-        "en": "College of Eloquence"
+        "en": "College of Eloquence",
+        "niche_roles": [
+          "CONTROLLER",
+          "FACE",
+          "HEALER",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "BARD_COLLEGE_OF_SWORDS",
         "class": "BARD",
         "group": "NICHE",
         "pt": "College of Swords",
-        "en": "College of Swords"
+        "en": "College of Swords",
+        "niche_roles": [
+          "CONTROLLER",
+          "FACE",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "BARD_COLLEGE_OF_WHISPERS",
         "class": "BARD",
         "group": "NICHE",
         "pt": "College of Whispers",
-        "en": "College of Whispers"
+        "en": "College of Whispers",
+        "niche_roles": [
+          "CONTROLLER",
+          "FACE",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
+      },
+      {
+        "code": "BARD_COLLEGE_OF_SPIRITS",
+        "class": "BARD",
+        "group": "NICHE",
+        "pt": "College of Spirits",
+        "en": "College of Spirits",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "FACE",
+          "HEALER",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
+      },
+      {
+        "code": "BARD_COLLEGE_OF_THE_MOON",
+        "class": "BARD",
+        "group": "NICHE",
+        "pt": "College of the Moon",
+        "en": "College of the Moon",
+        "niche_roles": [
+          "CONTROLLER",
+          "FACE",
+          "HEALER",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "CLERIC_LIFE_DOMAIN",
         "class": "CLERIC",
         "group": "CORE",
         "pt": "Life Domain",
-        "en": "Life Domain"
+        "en": "Life Domain",
+        "niche_roles": [
+          "BLASTER",
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "CLERIC_LIGHT_DOMAIN",
         "class": "CLERIC",
         "group": "CORE",
         "pt": "Light Domain",
-        "en": "Light Domain"
+        "en": "Light Domain",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "CLERIC_TRICKERY_DOMAIN",
         "class": "CLERIC",
         "group": "CORE",
         "pt": "Trickery Domain",
-        "en": "Trickery Domain"
+        "en": "Trickery Domain",
+        "niche_roles": [
+          "BLASTER",
+          "DEFENDER",
+          "FACE",
+          "HEALER",
+          "SCOUT",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "CLERIC_WAR_DOMAIN",
         "class": "CLERIC",
         "group": "CORE",
         "pt": "War Domain",
-        "en": "War Domain"
+        "en": "War Domain",
+        "niche_roles": [
+          "BLASTER",
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "CLERIC_ARCANA_DOMAIN",
@@ -2983,7 +3309,13 @@
         "pt": "Arcana Domain",
         "en": "Arcana Domain",
         "niche_roles": [
-          "SCHOLAR"
+          "BLASTER",
+          "DEFENDER",
+          "HEALER",
+          "SCHOLAR",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
         ]
       },
       {
@@ -2993,7 +3325,12 @@
         "pt": "Forge Domain",
         "en": "Forge Domain",
         "niche_roles": [
-          "OTHER"
+          "BLASTER",
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
         ]
       },
       {
@@ -3003,7 +3340,12 @@
         "pt": "Grave Domain",
         "en": "Grave Domain",
         "niche_roles": [
-          "OTHER"
+          "BLASTER",
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
         ]
       },
       {
@@ -3013,8 +3355,15 @@
         "pt": "Knowledge Domain",
         "en": "Knowledge Domain",
         "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "DEFENDER",
           "FACE",
-          "SCHOLAR"
+          "HEALER",
+          "SCHOLAR",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
         ]
       },
       {
@@ -3024,7 +3373,13 @@
         "pt": "Nature Domain",
         "en": "Nature Domain",
         "niche_roles": [
-          "CONTROLLER"
+          "BLASTER",
+          "CONTROLLER",
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
         ]
       },
       {
@@ -3034,7 +3389,13 @@
         "pt": "Order Domain",
         "en": "Order Domain",
         "niche_roles": [
-          "FACE"
+          "BLASTER",
+          "DEFENDER",
+          "FACE",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
         ]
       },
       {
@@ -3044,7 +3405,12 @@
         "pt": "Peace Domain",
         "en": "Peace Domain",
         "niche_roles": [
-          "OTHER"
+          "BLASTER",
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
         ]
       },
       {
@@ -3054,7 +3420,13 @@
         "pt": "Tempest Domain",
         "en": "Tempest Domain",
         "niche_roles": [
-          "CONTROLLER"
+          "BLASTER",
+          "CONTROLLER",
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
         ]
       },
       {
@@ -3064,7 +3436,13 @@
         "pt": "Twilight Domain",
         "en": "Twilight Domain",
         "niche_roles": [
-          "SCOUT"
+          "BLASTER",
+          "DEFENDER",
+          "HEALER",
+          "SCOUT",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
         ]
       },
       {
@@ -3072,147 +3450,296 @@
         "class": "DRUID",
         "group": "CORE",
         "pt": "Circle of the Land",
-        "en": "Circle of the Land"
+        "en": "Circle of the Land",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "HEALER",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "DRUID_CIRCLE_OF_THE_MOON",
         "class": "DRUID",
         "group": "CORE",
         "pt": "Circle of the Moon",
-        "en": "Circle of the Moon"
+        "en": "Circle of the Moon",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "DEFENDER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "DRUID_CIRCLE_OF_THE_SEA",
         "class": "DRUID",
         "group": "CORE",
         "pt": "Circle of the Sea",
-        "en": "Circle of the Sea"
+        "en": "Circle of the Sea",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "HEALER",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "DRUID_CIRCLE_OF_THE_STARS",
         "class": "DRUID",
         "group": "CORE",
         "pt": "Circle of the Stars",
-        "en": "Circle of the Stars"
+        "en": "Circle of the Stars",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "HEALER",
+          "SCHOLAR",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "DRUID_CIRCLE_OF_DREAMS",
         "class": "DRUID",
         "group": "NICHE",
         "pt": "Circle of Dreams",
-        "en": "Circle of Dreams"
+        "en": "Circle of Dreams",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "HEALER",
+          "SCOUT",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "DRUID_CIRCLE_OF_SPORES",
         "class": "DRUID",
         "group": "NICHE",
         "pt": "Circle of Spores",
-        "en": "Circle of Spores"
+        "en": "Circle of Spores",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "DRUID_CIRCLE_OF_THE_SHEPHERD",
         "class": "DRUID",
         "group": "NICHE",
         "pt": "Circle of the Shepherd",
-        "en": "Circle of the Shepherd"
+        "en": "Circle of the Shepherd",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "HEALER",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "DRUID_CIRCLE_OF_WILDFIRE",
         "class": "DRUID",
         "group": "NICHE",
         "pt": "Circle of Wildfire",
-        "en": "Circle of Wildfire"
+        "en": "Circle of Wildfire",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "HEALER",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "FIGHTER_BATTLE_MASTER",
         "class": "FIGHTER",
         "group": "CORE",
         "pt": "Battle Master",
-        "en": "Battle Master"
+        "en": "Battle Master",
+        "niche_roles": [
+          "CONTROLLER",
+          "DEFENDER",
+          "STRIKER",
+          "SUPPORT"
+        ]
       },
       {
         "code": "FIGHTER_CHAMPION",
         "class": "FIGHTER",
         "group": "CORE",
         "pt": "Champion",
-        "en": "Champion"
+        "en": "Champion",
+        "niche_roles": [
+          "DEFENDER",
+          "STRIKER"
+        ]
       },
       {
         "code": "FIGHTER_ELDRITCH_KNIGHT",
         "class": "FIGHTER",
         "group": "CORE",
         "pt": "Eldritch Knight",
-        "en": "Eldritch Knight"
+        "en": "Eldritch Knight",
+        "niche_roles": [
+          "BLASTER",
+          "DEFENDER",
+          "STRIKER"
+        ]
       },
       {
         "code": "FIGHTER_PSI_WARRIOR",
         "class": "FIGHTER",
         "group": "CORE",
         "pt": "Psi Warrior",
-        "en": "Psi Warrior"
+        "en": "Psi Warrior",
+        "niche_roles": [
+          "CONTROLLER",
+          "DEFENDER",
+          "STRIKER",
+          "SUPPORT"
+        ]
       },
       {
         "code": "FIGHTER_ARCANE_ARCHER",
         "class": "FIGHTER",
         "group": "NICHE",
         "pt": "Arcane Archer",
-        "en": "Arcane Archer"
+        "en": "Arcane Archer",
+        "niche_roles": [
+          "CONTROLLER",
+          "DEFENDER",
+          "STRIKER"
+        ]
       },
       {
         "code": "FIGHTER_CAVALIER",
         "class": "FIGHTER",
         "group": "NICHE",
         "pt": "Cavalier",
-        "en": "Cavalier"
+        "en": "Cavalier",
+        "niche_roles": [
+          "CONTROLLER",
+          "DEFENDER",
+          "STRIKER"
+        ]
       },
       {
         "code": "FIGHTER_RUNE_KNIGHT",
         "class": "FIGHTER",
         "group": "NICHE",
         "pt": "Rune Knight",
-        "en": "Rune Knight"
+        "en": "Rune Knight",
+        "niche_roles": [
+          "CONTROLLER",
+          "DEFENDER",
+          "STRIKER",
+          "SUPPORT"
+        ]
       },
       {
         "code": "FIGHTER_SAMURAI",
         "class": "FIGHTER",
         "group": "NICHE",
         "pt": "Samurai",
-        "en": "Samurai"
+        "en": "Samurai",
+        "niche_roles": [
+          "DEFENDER",
+          "FACE",
+          "SCHOLAR",
+          "STRIKER"
+        ]
       },
       {
         "code": "FIGHTER_DUNGEONEER",
         "class": "FIGHTER",
         "group": "NICHE",
         "pt": "Dungeoneer",
-        "en": "Dungeoneer"
+        "en": "Dungeoneer",
+        "niche_roles": [
+          "DEFENDER",
+          "SCHOLAR",
+          "SCOUT",
+          "STRIKER"
+        ]
+      },
+      {
+        "code": "FIGHTER_BANNERET",
+        "class": "FIGHTER",
+        "group": "NICHE",
+        "pt": "Banneret",
+        "en": "Banneret",
+        "niche_roles": [
+          "DEFENDER",
+          "FACE",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ]
       },
       {
         "code": "MONK_WAY_OF_MERCY",
         "class": "MONK",
         "group": "CORE",
         "pt": "Way of Mercy",
-        "en": "Way of Mercy"
+        "en": "Way of Mercy",
+        "niche_roles": [
+          "CONTROLLER",
+          "HEALER",
+          "SCOUT",
+          "STRIKER",
+          "SUPPORT"
+        ]
       },
       {
         "code": "MONK_WAY_OF_SHADOW",
         "class": "MONK",
         "group": "CORE",
         "pt": "Way of Shadow",
-        "en": "Way of Shadow"
+        "en": "Way of Shadow",
+        "niche_roles": [
+          "CONTROLLER",
+          "SCOUT",
+          "STRIKER"
+        ]
       },
       {
         "code": "MONK_WAY_OF_THE_ELEMENTS",
         "class": "MONK",
         "group": "CORE",
         "pt": "Way of the Elements",
-        "en": "Way of the Elements"
+        "en": "Way of the Elements",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "SCOUT",
+          "STRIKER"
+        ]
       },
       {
         "code": "MONK_WAY_OF_THE_OPEN_HAND",
         "class": "MONK",
         "group": "CORE",
         "pt": "Way of the Open Hand",
-        "en": "Way of the Open Hand"
+        "en": "Way of the Open Hand",
+        "niche_roles": [
+          "CONTROLLER",
+          "DEFENDER",
+          "SCOUT",
+          "STRIKER"
+        ]
       },
       {
         "code": "MONK_WAY_OF_THE_ASTRAL_SELF",
@@ -3221,7 +3748,9 @@
         "pt": "Way of the Astral Self",
         "en": "Way of the Astral Self",
         "niche_roles": [
-          "CONTROLLER"
+          "CONTROLLER",
+          "SCOUT",
+          "STRIKER"
         ]
       },
       {
@@ -3232,6 +3761,8 @@
         "en": "Way of the Cobalt Soul",
         "niche_roles": [
           "SCHOLAR",
+          "SCOUT",
+          "STRIKER",
           "SUPPORT"
         ]
       },
@@ -3242,6 +3773,8 @@
         "pt": "Way of the Drunken Master",
         "en": "Way of the Drunken Master",
         "niche_roles": [
+          "SCOUT",
+          "STRIKER",
           "SUPPORT"
         ]
       },
@@ -3252,7 +3785,8 @@
         "pt": "Way of the Kensei",
         "en": "Way of the Kensei",
         "niche_roles": [
-          "OTHER"
+          "SCOUT",
+          "STRIKER"
         ]
       },
       {
@@ -3262,7 +3796,9 @@
         "pt": "Way of the Long Death",
         "en": "Way of the Long Death",
         "niche_roles": [
-          "DEFENDER"
+          "DEFENDER",
+          "SCOUT",
+          "STRIKER"
         ]
       },
       {
@@ -3273,7 +3809,9 @@
         "en": "Way of the Sun Soul",
         "niche_roles": [
           "BLASTER",
-          "CONTROLLER"
+          "CONTROLLER",
+          "SCOUT",
+          "STRIKER"
         ]
       },
       {
@@ -3283,7 +3821,9 @@
         "pt": "Warrior of the Street",
         "en": "Warrior of the Street",
         "niche_roles": [
-          "FACE"
+          "FACE",
+          "SCOUT",
+          "STRIKER"
         ]
       },
       {
@@ -3291,28 +3831,60 @@
         "class": "PALADIN",
         "group": "CORE",
         "pt": "Oath of Devotion",
-        "en": "Oath of Devotion"
+        "en": "Oath of Devotion",
+        "niche_roles": [
+          "BLASTER",
+          "DEFENDER",
+          "FACE",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ]
       },
       {
         "code": "PALADIN_OATH_OF_GLORY",
         "class": "PALADIN",
         "group": "CORE",
         "pt": "Oath of Glory",
-        "en": "Oath of Glory"
+        "en": "Oath of Glory",
+        "niche_roles": [
+          "BLASTER",
+          "DEFENDER",
+          "FACE",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ]
       },
       {
         "code": "PALADIN_OATH_OF_THE_ANCIENTS",
         "class": "PALADIN",
         "group": "CORE",
         "pt": "Oath of the Ancients",
-        "en": "Oath of the Ancients"
+        "en": "Oath of the Ancients",
+        "niche_roles": [
+          "BLASTER",
+          "DEFENDER",
+          "FACE",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ]
       },
       {
         "code": "PALADIN_OATH_OF_VENGEANCE",
         "class": "PALADIN",
         "group": "CORE",
         "pt": "Oath of Vengeance",
-        "en": "Oath of Vengeance"
+        "en": "Oath of Vengeance",
+        "niche_roles": [
+          "BLASTER",
+          "DEFENDER",
+          "FACE",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ]
       },
       {
         "code": "PALADIN_OATH_OF_CONQUEST",
@@ -3321,7 +3893,13 @@
         "pt": "Oath of Conquest",
         "en": "Oath of Conquest",
         "niche_roles": [
-          "CONTROLLER"
+          "BLASTER",
+          "CONTROLLER",
+          "DEFENDER",
+          "FACE",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
         ]
       },
       {
@@ -3331,7 +3909,13 @@
         "pt": "Oath of Redemption",
         "en": "Oath of Redemption",
         "niche_roles": [
-          "CONTROLLER"
+          "BLASTER",
+          "CONTROLLER",
+          "DEFENDER",
+          "FACE",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
         ]
       },
       {
@@ -3341,7 +3925,12 @@
         "pt": "Oath of the Crown",
         "en": "Oath of the Crown",
         "niche_roles": [
-          "OTHER"
+          "BLASTER",
+          "DEFENDER",
+          "FACE",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
         ]
       },
       {
@@ -3351,7 +3940,13 @@
         "pt": "Oath of the Watchers",
         "en": "Oath of the Watchers",
         "niche_roles": [
-          "SCHOLAR"
+          "BLASTER",
+          "DEFENDER",
+          "FACE",
+          "HEALER",
+          "SCHOLAR",
+          "STRIKER",
+          "SUPPORT"
         ]
       },
       {
@@ -3361,7 +3956,13 @@
         "pt": "Oath of the Open Sea",
         "en": "Oath of the Open Sea",
         "niche_roles": [
+          "BLASTER",
           "CONTROLLER",
+          "DEFENDER",
+          "FACE",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT",
           "UTILITY_CASTER"
         ]
       },
@@ -3372,7 +3973,28 @@
         "pt": "Oath of Revelry",
         "en": "Oath of Revelry",
         "niche_roles": [
-          "OTHER"
+          "BLASTER",
+          "DEFENDER",
+          "FACE",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
+        ]
+      },
+      {
+        "code": "PALADIN_OATH_OF_THE_NOBLE_GENIES",
+        "class": "PALADIN",
+        "group": "NICHE",
+        "pt": "Oath of the Noble Genies",
+        "en": "Oath of the Noble Genies",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "DEFENDER",
+          "FACE",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT"
         ]
       },
       {
@@ -3380,77 +4002,160 @@
         "class": "RANGER",
         "group": "CORE",
         "pt": "Beast Master",
-        "en": "Beast Master"
+        "en": "Beast Master",
+        "niche_roles": [
+          "CONTROLLER",
+          "DEFENDER",
+          "SCOUT",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "RANGER_FEY_WANDERER",
         "class": "RANGER",
         "group": "CORE",
         "pt": "Fey Wanderer",
-        "en": "Fey Wanderer"
+        "en": "Fey Wanderer",
+        "niche_roles": [
+          "CONTROLLER",
+          "FACE",
+          "SCOUT",
+          "STRIKER",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "RANGER_GLOOM_STALKER",
         "class": "RANGER",
         "group": "CORE",
         "pt": "Gloom Stalker",
-        "en": "Gloom Stalker"
+        "en": "Gloom Stalker",
+        "niche_roles": [
+          "CONTROLLER",
+          "SCOUT",
+          "STRIKER",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "RANGER_HUNTER",
         "class": "RANGER",
         "group": "CORE",
         "pt": "Hunter",
-        "en": "Hunter"
+        "en": "Hunter",
+        "niche_roles": [
+          "CONTROLLER",
+          "SCOUT",
+          "STRIKER",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "RANGER_HORIZON_WALKER",
         "class": "RANGER",
         "group": "NICHE",
         "pt": "Horizon Walker",
-        "en": "Horizon Walker"
+        "en": "Horizon Walker",
+        "niche_roles": [
+          "CONTROLLER",
+          "SCOUT",
+          "STRIKER",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "RANGER_MONSTER_SLAYER",
         "class": "RANGER",
         "group": "NICHE",
         "pt": "Monster Slayer",
-        "en": "Monster Slayer"
+        "en": "Monster Slayer",
+        "niche_roles": [
+          "CONTROLLER",
+          "SCOUT",
+          "STRIKER",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "RANGER_SWARMKEEPER",
         "class": "RANGER",
         "group": "NICHE",
         "pt": "Swarmkeeper",
-        "en": "Swarmkeeper"
+        "en": "Swarmkeeper",
+        "niche_roles": [
+          "CONTROLLER",
+          "SCHOLAR",
+          "SCOUT",
+          "STRIKER",
+          "UTILITY_CASTER"
+        ]
+      },
+      {
+        "code": "RANGER_WINTER_WALKER",
+        "class": "RANGER",
+        "group": "NICHE",
+        "pt": "Winter Walker",
+        "en": "Winter Walker",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "HEALER",
+          "SCOUT",
+          "STRIKER",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "ROGUE_ARACHNOID_STALKER",
         "class": "ROGUE",
         "group": "CORE",
         "pt": "Arachnoid Stalker",
-        "en": "Arachnoid Stalker"
+        "en": "Arachnoid Stalker",
+        "niche_roles": [
+          "CONTROLLER",
+          "FACE",
+          "SCOUT",
+          "STRIKER"
+        ]
       },
       {
         "code": "ROGUE_ARCANE_TRICKSTER",
         "class": "ROGUE",
         "group": "CORE",
         "pt": "Arcane Trickster",
-        "en": "Arcane Trickster"
+        "en": "Arcane Trickster",
+        "niche_roles": [
+          "CONTROLLER",
+          "FACE",
+          "SCOUT",
+          "STRIKER"
+        ]
       },
       {
         "code": "ROGUE_ASSASSIN",
         "class": "ROGUE",
         "group": "CORE",
         "pt": "Assassin",
-        "en": "Assassin"
+        "en": "Assassin",
+        "niche_roles": [
+          "FACE",
+          "SCOUT",
+          "STRIKER"
+        ]
       },
       {
         "code": "ROGUE_THIEF",
         "class": "ROGUE",
         "group": "CORE",
         "pt": "Thief",
-        "en": "Thief"
+        "en": "Thief",
+        "niche_roles": [
+          "FACE",
+          "SCOUT",
+          "STRIKER"
+        ]
       },
       {
         "code": "ROGUE_INQUISITIVE",
@@ -3459,7 +4164,10 @@
         "pt": "Inquisitive",
         "en": "Inquisitive",
         "niche_roles": [
-          "SCHOLAR"
+          "FACE",
+          "SCHOLAR",
+          "SCOUT",
+          "STRIKER"
         ]
       },
       {
@@ -3469,7 +4177,9 @@
         "pt": "Mastermind",
         "en": "Mastermind",
         "niche_roles": [
-          "OTHER"
+          "FACE",
+          "SCOUT",
+          "STRIKER"
         ]
       },
       {
@@ -3479,7 +4189,9 @@
         "pt": "Phantom",
         "en": "Phantom",
         "niche_roles": [
-          "OTHER"
+          "FACE",
+          "SCOUT",
+          "STRIKER"
         ]
       },
       {
@@ -3489,7 +4201,10 @@
         "pt": "Scout",
         "en": "Scout",
         "niche_roles": [
-          "SCHOLAR"
+          "FACE",
+          "SCHOLAR",
+          "SCOUT",
+          "STRIKER"
         ]
       },
       {
@@ -3499,7 +4214,9 @@
         "pt": "Swashbuckler",
         "en": "Swashbuckler",
         "niche_roles": [
-          "OTHER"
+          "FACE",
+          "SCOUT",
+          "STRIKER"
         ]
       },
       {
@@ -3509,7 +4226,22 @@
         "pt": "Soulknife",
         "en": "Soulknife",
         "niche_roles": [
-          "OTHER"
+          "FACE",
+          "SCOUT",
+          "STRIKER"
+        ]
+      },
+      {
+        "code": "ROGUE_SCION_OF_THE_THREE",
+        "class": "ROGUE",
+        "group": "NICHE",
+        "pt": "Scion of the Three",
+        "en": "Scion of the Three",
+        "niche_roles": [
+          "CONTROLLER",
+          "FACE",
+          "SCOUT",
+          "STRIKER"
         ]
       },
       {
@@ -3517,136 +4249,310 @@
         "class": "SORCERER",
         "group": "CORE",
         "pt": "Clockwork Sorcery",
-        "en": "Clockwork Sorcery"
+        "en": "Clockwork Sorcery",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "SORCERER_DRACONIC_SORCERY",
         "class": "SORCERER",
         "group": "CORE",
         "pt": "Draconic Sorcery",
-        "en": "Draconic Sorcery"
+        "en": "Draconic Sorcery",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "SORCERER_WILD_MAGIC",
         "class": "SORCERER",
         "group": "CORE",
         "pt": "Wild Magic",
-        "en": "Wild Magic"
+        "en": "Wild Magic",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "SORCERER_STORM_SORCERY",
         "class": "SORCERER",
         "group": "NICHE",
         "pt": "Storm Sorcery",
-        "en": "Storm Sorcery"
+        "en": "Storm Sorcery",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "FACE",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "SORCERER_ABERRANT_SORCERY",
         "class": "SORCERER",
         "group": "CORE",
         "pt": "Aberrant Sorcery",
-        "en": "Aberrant Sorcery"
+        "en": "Aberrant Sorcery",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "FACE",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "SORCERER_DIVINE_SOUL",
         "class": "SORCERER",
         "group": "NICHE",
         "pt": "Divine Soul",
-        "en": "Divine Soul"
+        "en": "Divine Soul",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "FACE",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "SORCERER_SHADOW_MAGIC",
         "class": "SORCERER",
         "group": "NICHE",
         "pt": "Shadow Magic",
-        "en": "Shadow Magic"
+        "en": "Shadow Magic",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "FACE",
+          "SCOUT",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
+      },
+      {
+        "code": "SORCERER_SPELLFIRE_SORCERY",
+        "class": "SORCERER",
+        "group": "NICHE",
+        "pt": "Spellfire Sorcery",
+        "en": "Spellfire Sorcery",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "WARLOCK_ARCHFEY_PATRON",
         "class": "WARLOCK",
         "group": "CORE",
         "pt": "Archfey Patron",
-        "en": "Archfey Patron"
+        "en": "Archfey Patron",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "FACE",
+          "STRIKER",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "WARLOCK_FIEND_PATRON",
         "class": "WARLOCK",
         "group": "CORE",
         "pt": "Fiend Patron",
-        "en": "Fiend Patron"
+        "en": "Fiend Patron",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "FACE",
+          "STRIKER",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "WARLOCK_GREAT_OLD_ONE_PATRON",
         "class": "WARLOCK",
         "group": "CORE",
         "pt": "Great Old One Patron",
-        "en": "Great Old One Patron"
+        "en": "Great Old One Patron",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "FACE",
+          "SCHOLAR",
+          "STRIKER",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "WARLOCK_CELESTIAL_PATRON",
         "class": "WARLOCK",
         "group": "CORE",
         "pt": "Celestial Patron",
-        "en": "Celestial Patron"
+        "en": "Celestial Patron",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "FACE",
+          "HEALER",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "WARLOCK_THE_FATHOMLESS",
         "class": "WARLOCK",
         "group": "NICHE",
         "pt": "The Fathomless",
-        "en": "The Fathomless"
+        "en": "The Fathomless",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "FACE",
+          "STRIKER",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "WARLOCK_THE_GENIE",
         "class": "WARLOCK",
         "group": "NICHE",
         "pt": "The Genie",
-        "en": "The Genie"
+        "en": "The Genie",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "FACE",
+          "STRIKER",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "WARLOCK_THE_HEXBLADE",
         "class": "WARLOCK",
         "group": "NICHE",
         "pt": "The Hexblade",
-        "en": "The Hexblade"
+        "en": "The Hexblade",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "DEFENDER",
+          "FACE",
+          "STRIKER",
+          "UTILITY_CASTER"
+        ]
+      },
+      {
+        "code": "WARLOCK_THE_UNDEAD",
+        "class": "WARLOCK",
+        "group": "NICHE",
+        "pt": "The Undead",
+        "en": "The Undead",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "DEFENDER",
+          "FACE",
+          "STRIKER",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "WIZARD_ABJURER",
         "class": "WIZARD",
         "group": "CORE",
         "pt": "Abjurer",
-        "en": "Abjurer"
+        "en": "Abjurer",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "DEFENDER",
+          "SCHOLAR",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "WIZARD_DIVINER",
         "class": "WIZARD",
         "group": "CORE",
         "pt": "Diviner",
-        "en": "Diviner"
+        "en": "Diviner",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "SCHOLAR",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "WIZARD_EVOKER",
         "class": "WIZARD",
         "group": "CORE",
         "pt": "Evoker",
-        "en": "Evoker"
+        "en": "Evoker",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "SCHOLAR",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "WIZARD_ILLUSIONIST",
         "class": "WIZARD",
         "group": "CORE",
         "pt": "Illusionist",
-        "en": "Illusionist"
+        "en": "Illusionist",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "FACE",
+          "SCHOLAR",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       },
       {
         "code": "WIZARD_BLADESINGING",
         "class": "WIZARD",
         "group": "NICHE",
-        "pt": "Bladesinging",
-        "en": "Bladesinging",
+        "pt": "Bladesinger",
+        "en": "Bladesinger",
         "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
           "DEFENDER",
-          "STRIKER"
+          "SCHOLAR",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
         ]
       },
       {
@@ -3656,7 +4562,12 @@
         "pt": "Order of Scribes",
         "en": "Order of Scribes",
         "niche_roles": [
-          "STRIKER"
+          "BLASTER",
+          "CONTROLLER",
+          "SCHOLAR",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
         ]
       },
       {
@@ -3666,7 +4577,12 @@
         "pt": "School of Abjuration",
         "en": "School of Abjuration",
         "niche_roles": [
-          "DEFENDER"
+          "BLASTER",
+          "CONTROLLER",
+          "DEFENDER",
+          "SCHOLAR",
+          "SUPPORT",
+          "UTILITY_CASTER"
         ]
       },
       {
@@ -3676,7 +4592,11 @@
         "pt": "School of Conjuration",
         "en": "School of Conjuration",
         "niche_roles": [
-          "OTHER"
+          "BLASTER",
+          "CONTROLLER",
+          "SCHOLAR",
+          "SUPPORT",
+          "UTILITY_CASTER"
         ]
       },
       {
@@ -3686,7 +4606,12 @@
         "pt": "School of Necromancy",
         "en": "School of Necromancy",
         "niche_roles": [
-          "STRIKER"
+          "BLASTER",
+          "CONTROLLER",
+          "SCHOLAR",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
         ]
       },
       {
@@ -3696,8 +4621,13 @@
         "pt": "School of Enchantment",
         "en": "School of Enchantment",
         "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
           "FACE",
-          "STRIKER"
+          "SCHOLAR",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
         ]
       },
       {
@@ -3707,8 +4637,13 @@
         "pt": "War Magic",
         "en": "War Magic",
         "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
           "DEFENDER",
-          "STRIKER"
+          "SCHOLAR",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
         ]
       },
       {
@@ -3716,28 +4651,53 @@
         "class": "BLOOD_HUNTER",
         "group": "CORE",
         "pt": "Order of the Ghostslayer",
-        "en": "Order of the Ghostslayer"
+        "en": "Order of the Ghostslayer",
+        "niche_roles": [
+          "SCOUT",
+          "STRIKER",
+          "SUPPORT"
+        ]
       },
       {
         "code": "BLOOD_HUNTER_ORDER_OF_THE_LYCAN",
         "class": "BLOOD_HUNTER",
         "group": "CORE",
         "pt": "Order of the Lycan",
-        "en": "Order of the Lycan"
+        "en": "Order of the Lycan",
+        "niche_roles": [
+          "DEFENDER",
+          "SCOUT",
+          "STRIKER",
+          "SUPPORT"
+        ]
       },
       {
         "code": "BLOOD_HUNTER_ORDER_OF_THE_MUTANT",
         "class": "BLOOD_HUNTER",
         "group": "CORE",
         "pt": "Order of the Mutant",
-        "en": "Order of the Mutant"
+        "en": "Order of the Mutant",
+        "niche_roles": [
+          "CONTROLLER",
+          "SCOUT",
+          "STRIKER",
+          "SUPPORT"
+        ]
       },
       {
         "code": "BLOOD_HUNTER_ORDER_OF_THE_PROFANE_SOUL",
         "class": "BLOOD_HUNTER",
         "group": "CORE",
         "pt": "Order of the Profane Soul",
-        "en": "Order of the Profane Soul"
+        "en": "Order of the Profane Soul",
+        "niche_roles": [
+          "BLASTER",
+          "CONTROLLER",
+          "SCOUT",
+          "STRIKER",
+          "SUPPORT",
+          "UTILITY_CASTER"
+        ]
       }
     ]
   },
