@@ -741,6 +741,7 @@ class QuizApp {
       subclass: 'Subclasse',
       primary_roles: 'Papéis principais',
       secondary_roles: 'Papéis secundários',
+      dark_gift: 'Dark Gift',
     };
     return map[variableName] ?? variableName;
   }
@@ -750,6 +751,7 @@ class QuizApp {
       gender: 'Género',
       species: 'Espécie',
       class: 'Classe',
+      dark_gift: 'Dark Gift',
     };
     return map[sectionKey] ?? sectionKey;
   }
