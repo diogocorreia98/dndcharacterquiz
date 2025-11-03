@@ -955,7 +955,7 @@
         ]
       },
       "skip_if_no_options": {
-        "next": null
+        "next": "q_dark_gift_presence"
       },
       "autoselect_if_single": {
         "dataset": "subclasses",
@@ -1079,7 +1079,7 @@
               "value": null
             }
           ],
-          "next": null
+          "next": "q_dark_gift_presence"
         }
       ]
     },
@@ -1179,7 +1179,7 @@
               "value": "BAT"
             }
           ],
-          "next": null
+          "next": "q_dark_gift_presence"
         },
         {
           "label": "Hawk",
@@ -1191,7 +1191,7 @@
               "value": "HAWK"
             }
           ],
-          "next": null
+          "next": "q_dark_gift_presence"
         },
         {
           "label": "Owl",
@@ -1203,7 +1203,7 @@
               "value": "OWL"
             }
           ],
-          "next": null
+          "next": "q_dark_gift_presence"
         },
         {
           "label": "Raven",
@@ -1215,7 +1215,7 @@
               "value": "RAVEN"
             }
           ],
-          "next": null
+          "next": "q_dark_gift_presence"
         },
         {
           "label": "Hei-de escolher outro animal",
@@ -1227,7 +1227,7 @@
               "value": "OTHER_AIR"
             }
           ],
-          "next": null
+          "next": "q_dark_gift_presence"
         }
       ]
     },
@@ -1260,7 +1260,7 @@
               "value": "CAT"
             }
           ],
-          "next": null
+          "next": "q_dark_gift_presence"
         },
         {
           "label": "Lizard",
@@ -1272,7 +1272,7 @@
               "value": "LIZARD"
             }
           ],
-          "next": null
+          "next": "q_dark_gift_presence"
         },
         {
           "label": "Rat",
@@ -1284,7 +1284,7 @@
               "value": "RAT"
             }
           ],
-          "next": null
+          "next": "q_dark_gift_presence"
         },
         {
           "label": "Spider",
@@ -1296,7 +1296,7 @@
               "value": "SPIDER"
             }
           ],
-          "next": null
+          "next": "q_dark_gift_presence"
         },
         {
           "label": "Weasel",
@@ -1308,7 +1308,7 @@
               "value": "WEASEL"
             }
           ],
-          "next": null
+          "next": "q_dark_gift_presence"
         },
         {
           "label": "Hei-de escolher outro animal",
@@ -1320,7 +1320,7 @@
               "value": "OTHER_LAND"
             }
           ],
-          "next": null
+          "next": "q_dark_gift_presence"
         }
       ]
     },
@@ -1353,7 +1353,7 @@
               "value": "FROG"
             }
           ],
-          "next": null
+          "next": "q_dark_gift_presence"
         },
         {
           "label": "Octopus",
@@ -1365,7 +1365,7 @@
               "value": "OCTOPUS"
             }
           ],
-          "next": null
+          "next": "q_dark_gift_presence"
         },
         {
           "label": "Hei-de escolher outro animal",
@@ -1377,7 +1377,7 @@
               "value": "OTHER_WATER"
             }
           ],
-          "next": null
+          "next": "q_dark_gift_presence"
         }
       ]
     },
@@ -2129,6 +2129,140 @@
             }
           ],
           "next": "q_subclass_group"
+        }
+          ]
+    },
+    "q_dark_gift_presence": {
+      "type": "question",
+      "section": "dark_gift",
+      "question": "A tua personagem carrega uma maldição?",
+      "options": [
+        {
+          "label": "Sim",
+          "value": "YES",
+          "set": [
+            {
+              "var": "dark_gift",
+              "op": "set",
+              "value": null
+            }
+          ],
+          "next": "q_dark_gift_type"
+        },
+        {
+          "label": "Não",
+          "value": "NO",
+          "set": [
+            {
+              "var": "dark_gift",
+              "op": "set",
+              "value": "NONE"
+            }
+          ],
+          "next": null
+        }
+      ]
+    },
+    "q_dark_gift_type": {
+      "type": "question",
+      "section": "dark_gift",
+      "question": "Que tipo de maldição ela tem?",
+      "options": [
+        {
+          "label": "Echoing Soul",
+          "value": "ECHOING_SOUL",
+          "set": [
+            {
+              "var": "dark_gift",
+              "op": "set",
+              "value": "ECHOING_SOUL"
+            }
+          ],
+          "next": null
+        },
+        {
+          "label": "Gathered Whispers",
+          "value": "GATHERED_WHISPERS",
+          "set": [
+            {
+              "var": "dark_gift",
+              "op": "set",
+              "value": "GATHERED_WHISPERS"
+            }
+          ],
+          "next": null
+        },
+        {
+          "label": "Living Shadow",
+          "value": "LIVING_SHADOW",
+          "set": [
+            {
+              "var": "dark_gift",
+              "op": "set",
+              "value": "LIVING_SHADOW"
+            }
+          ],
+          "next": null
+        },
+        {
+          "label": "Mist Walker",
+          "value": "MIST_WALKER",
+          "set": [
+            {
+              "var": "dark_gift",
+              "op": "set",
+              "value": "MIST_WALKER"
+            }
+          ],
+          "next": null
+        },
+        {
+          "label": "Second Skin",
+          "value": "SECOND_SKIN",
+          "set": [
+            {
+              "var": "dark_gift",
+              "op": "set",
+              "value": "SECOND_SKIN"
+            }
+          ],
+          "next": null
+        },
+        {
+          "label": "Symbiotic Being",
+          "value": "SYMBIOTIC_BEING",
+          "set": [
+            {
+              "var": "dark_gift",
+              "op": "set",
+              "value": "SYMBIOTIC_BEING"
+            }
+          ],
+          "next": null
+        },
+        {
+          "label": "Touch of Death",
+          "value": "TOUCH_OF_DEATH",
+          "set": [
+            {
+              "var": "dark_gift",
+              "op": "set",
+              "value": "TOUCH_OF_DEATH"
+            }
+          ],
+          "next": null
+        },
+        {
+          "label": "Watchers",
+          "value": "WATCHERS",
+          "set": [
+            {
+              "var": "dark_gift",
+              "op": "set",
+              "value": "WATCHERS"
+            }
+          ],
+          "next": null
         }
       ]
     }

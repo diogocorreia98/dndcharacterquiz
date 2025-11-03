@@ -11,6 +11,10 @@
     "class": {
       "pt": "Classe",
       "en": "Class"
+    },
+    "dark_gift": {
+      "pt": "Dark Gift",
+      "en": "Dark Gift"
     }
   },
   "variables": {
@@ -392,6 +396,20 @@
           "UTILITY_CASTER"
         ]
       }
+    },
+    "dark_gift": {
+      "type": "enum",
+      "symbols": [
+        "NONE",
+        "ECHOING_SOUL",
+        "GATHERED_WHISPERS",
+        "LIVING_SHADOW",
+        "MIST_WALKER",
+        "SECOND_SKIN",
+        "SYMBIOTIC_BEING",
+        "TOUCH_OF_DEATH",
+        "WATCHERS"
+      ]
     }
   },
   "value_map": {
@@ -1087,6 +1105,44 @@
       "UTILITY_CASTER": {
         "pt": "Conjurador/a utilitário/a",
         "en": "Utility Caster"
+      }
+    },
+    "dark_gift": {
+      "NONE": {
+        "pt": "Sem maldição",
+        "en": "No curse"
+      },
+      "ECHOING_SOUL": {
+        "pt": "Echoing Soul",
+        "en": "Echoing Soul"
+      },
+      "GATHERED_WHISPERS": {
+        "pt": "Gathered Whispers",
+        "en": "Gathered Whispers"
+      },
+      "LIVING_SHADOW": {
+        "pt": "Living Shadow",
+        "en": "Living Shadow"
+      },
+      "MIST_WALKER": {
+        "pt": "Mist Walker",
+        "en": "Mist Walker"
+      },
+      "SECOND_SKIN": {
+        "pt": "Second Skin",
+        "en": "Second Skin"
+      },
+      "SYMBIOTIC_BEING": {
+        "pt": "Symbiotic Being",
+        "en": "Symbiotic Being"
+      },
+      "TOUCH_OF_DEATH": {
+        "pt": "Touch of Death",
+        "en": "Touch of Death"
+      },
+      "WATCHERS": {
+        "pt": "Watchers",
+        "en": "Watchers"
       }
     }
   },
@@ -3661,7 +3717,8 @@
   ],
   "initial_state": {
     "primary_roles": [],
-    "secondary_roles": []
+    "secondary_roles": [],
+    "dark_gift": null
   },
   "role_mappings": {
     "blaster": {
