@@ -1497,6 +1497,32 @@
               "value": "WARLOCK_PACT_OF_THE_BLADE"
             }
           ],
+          "when": {
+            "none": [
+              {
+                "all": [
+                  {
+                    "var": "secondary_roles",
+                    "op": "contains",
+                    "value": "FACE"
+                  },
+                  {
+                    "var": "subclass",
+                    "op": "is_set"
+                  },
+                  {
+                    "none": [
+                      {
+                        "var": "subclass",
+                        "op": "eq",
+                        "value": "WARLOCK_THE_HEXBLADE"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
           "next": "q_subclass_group"
         },
         {
