@@ -280,10 +280,12 @@ class QuizApp {
 
   buildOptions(node, { includeDatasetEntry = false } = {}) {
     if (Array.isArray(node.options)) {
-      return node.options.map((opt, index) => ({
-        ...opt,
-        index,
-      }));
+      return node.options
+        .map((opt, index) => ({
+          ...opt,
+          index,
+        }))
+        .filter((option) => !option.when || this.evaluateCondition(option.when));
     }
 
     const source = node.options_source;
@@ -322,7 +324,7 @@ class QuizApp {
       options.push(option);
     }
 
-    return options;
+    return options.filter((option) => !option.when || this.evaluateCondition(option.when));
   }
 
   pruneZeroViableOptions(node, options) {
@@ -529,6 +531,14 @@ class QuizApp {
           return false;
         }
         return condition.value.includes(variableValue);
+      case 'contains':
+        if (!Array.isArray(variableValue)) {
+          return false;
+        }
+        if (Array.isArray(condition.value)) {
+          return condition.value.some((item) => variableValue.includes(item));
+        }
+        return variableValue.includes(condition.value);
       case 'is_set':
         return this.hasValue(variableValue);
       default:
