@@ -29,6 +29,7 @@ class QuizApp {
     };
 
     this.sectionVariables = this.buildSectionVariables();
+    this.darkGiftQuestionId = this.findDarkGiftQuestionId();
     this.roleData = this.prepareRoleData();
     this.variantData = this.prepareVariantData();
     this.lastVariantSignature = null;
@@ -138,10 +139,13 @@ class QuizApp {
   }
 
   showQuestion(startNodeId, { preselect = null, fromHistory = false } = {}) {
-    const resolution = this.resolveNextQuestion(startNodeId);
+    let resolution = this.resolveNextQuestion(startNodeId);
     if (!resolution) {
-      this.showResults();
-      return;
+      resolution = this.resolveDarkGiftFallback();
+      if (!resolution) {
+        this.showResults();
+        return;
+      }
     }
 
     const { nodeId, node, options } = resolution;
@@ -247,6 +251,18 @@ class QuizApp {
     }
 
     return null;
+  }
+
+  resolveDarkGiftFallback() {
+    if (this.hasValue(this.state.variables?.dark_gift)) {
+      return null;
+    }
+
+    if (!this.darkGiftQuestionId || this.state.currentNodeId === this.darkGiftQuestionId) {
+      return null;
+    }
+
+    return this.resolveNextQuestion(this.darkGiftQuestionId);
   }
 
   autoSelectSingleOption(node, options) {
@@ -869,6 +885,34 @@ class QuizApp {
     });
 
     return map;
+  }
+
+  findDarkGiftQuestionId() {
+    const entries = Object.entries(this.quizData.nodes ?? {});
+    for (const [nodeId, node] of entries) {
+      if (!node || node.type !== 'question' || node.section !== 'dark_gift') {
+        continue;
+      }
+
+      const options = Array.isArray(node.options) ? node.options : [];
+      const touchesDarkGift = options.some((option) =>
+        Array.isArray(option.set) && option.set.some((action) => action?.var === 'dark_gift'),
+      );
+
+      if (!touchesDarkGift) {
+        continue;
+      }
+
+      const resetsDarkGift = options.some((option) =>
+        Array.isArray(option.set) && option.set.some((action) => action?.var === 'dark_gift' && action.value === null),
+      );
+
+      if (resetsDarkGift) {
+        return nodeId;
+      }
+    }
+
+    return null;
   }
 
   applySelectionActions(actions, selectedValues) {
