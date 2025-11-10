@@ -826,6 +826,7 @@ class QuizApp {
       class_ability_combo: 'Atributos prioritários',
       class_armor: 'Armadura sugerida',
       class_handheld_gear: 'Equipamento empunhado',
+      fighting_style_choice: 'Estilo de Luta',
       background: 'Antecedente',
     };
     return map[variableName] ?? variableName;
@@ -1085,9 +1086,20 @@ class QuizApp {
       return [];
     }
 
-    const abilitySet = new Set(
-      abilityValues.map((value) => (typeof value === 'string' ? value.toUpperCase() : String(value)))
+    const normalizedAbilities = abilityValues.map((value) =>
+      typeof value === 'string' ? value.toUpperCase() : String(value)
     );
+    const abilitySet = new Set(normalizedAbilities);
+    const abilitySetWithoutCha = Array.from(abilitySet).filter((value) => value && value !== 'CHA');
+    const faceRoleVar = rule.face_role_variable ?? 'secondary_roles';
+    let faceRoleSelected = false;
+    const faceRoleValues = this.state.variables?.[faceRoleVar];
+    if (Array.isArray(faceRoleValues)) {
+      faceRoleSelected = faceRoleValues.some(
+        (value) => typeof value === 'string' && value.toUpperCase() === 'FACE'
+      );
+    }
+    const requireChaForFace = faceRoleSelected && rule.face_requires_cha;
     const minOverlap = typeof rule.min_overlap === 'number' ? rule.min_overlap : 1;
 
     return options.filter((option) => {
@@ -1101,12 +1113,34 @@ class QuizApp {
         return false;
       }
 
+      const entryAbilities = entryAbilitiesRaw
+        .map((ability) => (ability ? String(ability).toUpperCase() : null))
+        .filter(Boolean);
+      if (!entryAbilities.length) {
+        return false;
+      }
+
       let overlap = 0;
-      entryAbilitiesRaw.forEach((ability) => {
-        if (ability && abilitySet.has(String(ability).toUpperCase())) {
+      entryAbilities.forEach((ability) => {
+        if (abilitySet.has(ability)) {
           overlap += 1;
         }
       });
+
+      if (requireChaForFace) {
+        const hasCha = entryAbilities.includes('CHA');
+        let hasComboAbility = false;
+        if (abilitySetWithoutCha.length) {
+          hasComboAbility = abilitySetWithoutCha.some((ability) =>
+            entryAbilities.includes(ability)
+          );
+        } else {
+          hasComboAbility = hasCha;
+        }
+        if (!hasCha || !hasComboAbility) {
+          return false;
+        }
+      }
 
       return overlap >= minOverlap;
     });
@@ -1263,9 +1297,26 @@ class QuizApp {
 
     const variables = this.state.variables;
     const classCode = variables.class ?? null;
+    const normalizedClassCode =
+      typeof classCode === 'string' ? classCode.toUpperCase() : null;
     const subclassCode = variables.subclass ?? null;
     const classAdjustment = variables.class_adjustment ?? null;
-    const signature = `${classCode ?? ''}::${subclassCode ?? ''}::${classAdjustment ?? ''}`;
+    const fightingStyleRaw = variables.fighting_style_choice ?? null;
+    let fightingStyle =
+      typeof fightingStyleRaw === 'string' ? fightingStyleRaw.toUpperCase() : null;
+    const supportsFightingStyle = ['FIGHTER', 'PALADIN', 'RANGER'].includes(
+      normalizedClassCode
+    );
+    if (!supportsFightingStyle) {
+      fightingStyle = null;
+      if (fightingStyleRaw) {
+        variables.fighting_style_choice = null;
+      }
+    }
+    const usesStrengthStyle = fightingStyle === 'THROWN' || fightingStyle === 'UNARMED';
+    const signature = `${classCode ?? ''}::${subclassCode ?? ''}::${classAdjustment ?? ''}::${
+      fightingStyle ?? ''
+    }`;
     const combinationChanged = signature !== this.lastVariantSignature;
     if (combinationChanged) {
       this.lastVariantSignature = signature;
@@ -1289,6 +1340,19 @@ class QuizApp {
     }
     if (!filtered.length) {
       filtered = entries.slice();
+    }
+
+    if (usesStrengthStyle) {
+      const strengthEntries = filtered.filter(
+        (entry) => (entry.ability ? String(entry.ability).toUpperCase() : null) === 'STR'
+      );
+      if (strengthEntries.length) {
+        filtered = strengthEntries;
+      }
+    }
+
+    if (usesStrengthStyle) {
+      variables.preferred_physical_ability = 'STR';
     }
 
     const abilityOptions = Array.from(
@@ -1359,6 +1423,11 @@ class QuizApp {
       classAdjustment.toUpperCase() === 'WARLOCK_PACT_OF_THE_TOME';
     if (isWarlockTome) {
       variables.class_handheld_gear = 'Eldritch Spellbook';
+    }
+    if (fightingStyle === 'THROWN') {
+      variables.class_handheld_gear = 'Handaxes';
+    } else if (fightingStyle === 'UNARMED') {
+      variables.class_handheld_gear = '[]';
     }
     variables._class_ability_combo_codes = abilityComboCodes;
   }
