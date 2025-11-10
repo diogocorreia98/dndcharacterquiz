@@ -2178,7 +2178,7 @@
               "value": "DEX"
             }
           ],
-          "next": "q_dark_gift_presence"
+          "next": "q_background_preference"
         },
         {
           "label": "Força (STR)",
@@ -2190,9 +2190,41 @@
               "value": "STR"
             }
           ],
-          "next": "q_dark_gift_presence"
+          "next": "q_background_preference"
         }
       ],
+      "next": "q_background_preference"
+    },
+    "q_background_preference": {
+      "type": "question",
+      "section": "background",
+      "question": "Qual destes antecedentes se alinha melhor com a tua personagem?",
+      "when": {
+        "var": "class_ability_combo",
+        "op": "is_set"
+      },
+      "options_source": {
+        "type": "inline",
+        "dataset": "backgrounds",
+        "label_field": "pt",
+        "value_field": "code"
+      },
+      "ability_overlap_filter": {
+        "variable": "_class_ability_combo_codes",
+        "entry_field": "ability_increases",
+        "min_overlap": 2
+      },
+      "on_select": [
+        {
+          "var": "background",
+          "op": "set",
+          "value_from_option": true
+        }
+      ],
+      "skip_if_no_options": {
+        "next": "q_dark_gift_presence"
+      },
+      "auto_select_if_single_option": true,
       "next": "q_dark_gift_presence"
     },
     "q_dark_gift_presence": {

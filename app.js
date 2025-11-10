@@ -209,6 +209,7 @@ class QuizApp {
       }
 
       let options = this.buildOptions(node, { includeDatasetEntry: true });
+      options = this.applyAbilityOverlapFilter(node, options);
       options = this.applyRoleFilters(node, options);
 
       const pruneOutcome = this.pruneZeroViableOptions(node, options);
@@ -761,6 +762,7 @@ class QuizApp {
       class_ability_combo: 'Atributos prioritários',
       class_armor: 'Armadura sugerida',
       class_handheld_gear: 'Equipamento empunhado',
+      background: 'Antecedente',
     };
     return map[variableName] ?? variableName;
   }
@@ -771,6 +773,7 @@ class QuizApp {
       species: 'Espécie',
       class: 'Classe',
       dark_gift: 'Dark Gift',
+      background: 'Antecedente',
     };
     return map[sectionKey] ?? sectionKey;
   }
@@ -955,6 +958,48 @@ class QuizApp {
     this.syncClassVariantAttributes();
   }
 
+  applyAbilityOverlapFilter(node, options) {
+    if (!Array.isArray(options) || !options.length) {
+      return options ?? [];
+    }
+
+    const rule = node.ability_overlap_filter;
+    if (!rule || !rule.variable || !rule.entry_field) {
+      return options;
+    }
+
+    const abilityValues = this.state.variables?.[rule.variable];
+    if (!Array.isArray(abilityValues) || !abilityValues.length) {
+      return [];
+    }
+
+    const abilitySet = new Set(
+      abilityValues.map((value) => (typeof value === 'string' ? value.toUpperCase() : String(value)))
+    );
+    const minOverlap = typeof rule.min_overlap === 'number' ? rule.min_overlap : 1;
+
+    return options.filter((option) => {
+      const entry = option.datasetEntry;
+      if (!entry) {
+        return false;
+      }
+
+      const entryAbilitiesRaw = entry[rule.entry_field];
+      if (!Array.isArray(entryAbilitiesRaw) || !entryAbilitiesRaw.length) {
+        return false;
+      }
+
+      let overlap = 0;
+      entryAbilitiesRaw.forEach((ability) => {
+        if (ability && abilitySet.has(String(ability).toUpperCase())) {
+          overlap += 1;
+        }
+      });
+
+      return overlap >= minOverlap;
+    });
+  }
+
   applyRoleFilters(node, options) {
     if (!Array.isArray(options) || !options.length) {
       return options ?? [];
@@ -1113,6 +1158,7 @@ class QuizApp {
     if (combinationChanged) {
       this.lastVariantSignature = signature;
       variables.preferred_physical_ability = null;
+      variables._class_ability_combo_codes = [];
     }
 
     const entries = this.getVariantEntries(classCode, subclassCode);
@@ -1121,6 +1167,7 @@ class QuizApp {
       variables.class_ability_combo = null;
       variables.class_armor = null;
       variables.class_handheld_gear = null;
+      variables._class_ability_combo_codes = [];
       return;
     }
 
@@ -1161,9 +1208,13 @@ class QuizApp {
       selected = filtered[0];
     }
 
-    const abilityComboText = Array.isArray(selected?.abilityCombo) && selected.abilityCombo.length
-      ? selected.abilityCombo.join(' / ')
-      : null;
+    const abilityComboCodes = Array.isArray(selected?.abilityCombo)
+      ? selected.abilityCombo
+          .map((value) => (typeof value === 'string' ? value.toUpperCase() : String(value)))
+          .filter(Boolean)
+      : [];
+
+    const abilityComboText = abilityComboCodes.length ? abilityComboCodes.join(' / ') : null;
 
     const armorRaw = selected?.armor ?? null;
     let armorText = null;
@@ -1189,6 +1240,7 @@ class QuizApp {
     variables.class_ability_combo = abilityComboText;
     variables.class_armor = armorText;
     variables.class_handheld_gear = handsText;
+    variables._class_ability_combo_codes = abilityComboCodes;
   }
 
   buildSubclassNameMap() {
