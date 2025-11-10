@@ -22,8 +22,8 @@ class QuizApp {
       questionText: document.getElementById('question-text'),
       optionsForm: document.getElementById('options-form'),
       noOptionsMessage: document.getElementById('no-options-message'),
-      backButton: document.getElementById('back-button'),
-      nextButton: document.getElementById('next-button'),
+      backButtons: Array.from(document.querySelectorAll('[data-nav="back"]')),
+      nextButtons: Array.from(document.querySelectorAll('[data-nav="next"]')),
       resultsContainer: document.getElementById('results-container'),
       restartButton: document.getElementById('restart-button'),
     };
@@ -44,9 +44,42 @@ class QuizApp {
   }
 
   attachEventListeners() {
-    this.dom.nextButton.addEventListener('click', () => this.goForward());
-    this.dom.backButton.addEventListener('click', () => this.goBack());
+    this.dom.nextButtons.forEach((button) => {
+      button?.addEventListener('click', () => this.goForward());
+    });
+    this.dom.backButtons.forEach((button) => {
+      button?.addEventListener('click', () => this.goBack());
+    });
     this.dom.restartButton.addEventListener('click', () => this.restart());
+  }
+
+  getNavButtons(type) {
+    if (type === 'next') {
+      return this.dom.nextButtons ?? [];
+    }
+    if (type === 'back') {
+      return this.dom.backButtons ?? [];
+    }
+    return [];
+  }
+
+  setNavButtonsDisabled(type, disabled) {
+    this.getNavButtons(type).forEach((button) => {
+      if (button) {
+        button.disabled = disabled;
+      }
+    });
+  }
+
+  scrollToTop() {
+    if (typeof window === 'undefined' || typeof window.scrollTo !== 'function') {
+      return;
+    }
+    try {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    } catch {
+      window.scrollTo(0, 0);
+    }
   }
 
   start() {
@@ -174,13 +207,13 @@ class QuizApp {
     if (selection.mode === 'multiple') {
       this.updateNextButtonForMultiple(selection);
     } else {
-      this.dom.nextButton.disabled = !preselect;
+      this.setNavButtonsDisabled('next', !preselect);
     }
 
-    this.dom.backButton.disabled = this.state.history.length === 0;
+    this.setNavButtonsDisabled('back', this.state.history.length === 0);
 
     if (!options.length) {
-      this.dom.nextButton.disabled = true;
+      this.setNavButtonsDisabled('next', true);
     }
 
     this.renderStatusSummary();
@@ -188,11 +221,13 @@ class QuizApp {
     if (!fromHistory) {
       this.dom.optionsForm.focus?.();
     }
+    this.scrollToTop();
   }
 
   showResults() {
     this.toggleScreens('result');
     this.renderResults();
+    this.scrollToTop();
   }
 
   resolveNextQuestion(startNodeId) {
@@ -620,7 +655,7 @@ class QuizApp {
           this.updateNextButtonForMultiple(selection);
         } else {
           this.selectedValue = input.value;
-          this.dom.nextButton.disabled = false;
+          this.setNavButtonsDisabled('next', false);
         }
       });
 
@@ -639,14 +674,14 @@ class QuizApp {
     if (!options.length) {
       this.selectedValue = null;
       this.selectedValues = new Set();
-      this.dom.nextButton.disabled = true;
+      this.setNavButtonsDisabled('next', true);
       return;
     }
 
     if (isMultiple) {
       this.updateNextButtonForMultiple(selection);
     } else if (!preselectValue) {
-      this.dom.nextButton.disabled = true;
+      this.setNavButtonsDisabled('next', true);
     }
   }
 
@@ -1119,7 +1154,7 @@ class QuizApp {
     if (min === 0 && count === 0) {
       isValid = true;
     }
-    this.dom.nextButton.disabled = !isValid;
+    this.setNavButtonsDisabled('next', !isValid);
   }
 
   prepareRoleData() {
@@ -1317,6 +1352,14 @@ class QuizApp {
     variables.class_ability_combo = abilityComboText;
     variables.class_armor = armorText;
     variables.class_handheld_gear = handsText;
+    const isWarlockTome =
+      typeof classCode === 'string' &&
+      classCode.toUpperCase() === 'WARLOCK' &&
+      typeof classAdjustment === 'string' &&
+      classAdjustment.toUpperCase() === 'WARLOCK_PACT_OF_THE_TOME';
+    if (isWarlockTome) {
+      variables.class_handheld_gear = 'Eldritch Spellbook';
+    }
     variables._class_ability_combo_codes = abilityComboCodes;
   }
 
