@@ -30,6 +30,7 @@ class QuizApp {
 
     this.sectionVariables = this.buildSectionVariables();
     this.darkGiftQuestionId = this.findDarkGiftQuestionId();
+    this.backgroundQuestionId = this.findBackgroundQuestionId();
     this.roleData = this.prepareRoleData();
     this.variantData = this.prepareVariantData();
     this.lastVariantSignature = null;
@@ -254,12 +255,24 @@ class QuizApp {
   }
 
   resolveDarkGiftFallback() {
-    if (this.hasValue(this.state.variables?.dark_gift)) {
+    const variables = this.state.variables ?? {};
+
+    if (this.hasValue(variables.dark_gift)) {
       return null;
     }
 
     if (!this.darkGiftQuestionId || this.state.currentNodeId === this.darkGiftQuestionId) {
       return null;
+    }
+
+    const backgroundNotChosen = !this.hasValue(variables.background);
+    const abilityComboDefined = this.hasValue(variables.class_ability_combo);
+
+    if (this.backgroundQuestionId && backgroundNotChosen && abilityComboDefined) {
+      const resolution = this.resolveNextQuestion(this.backgroundQuestionId);
+      if (resolution) {
+        return resolution;
+      }
     }
 
     return this.resolveNextQuestion(this.darkGiftQuestionId);
@@ -908,6 +921,26 @@ class QuizApp {
       );
 
       if (resetsDarkGift) {
+        return nodeId;
+      }
+    }
+
+    return null;
+  }
+
+  findBackgroundQuestionId() {
+    const entries = Object.entries(this.quizData.nodes ?? {});
+    for (const [nodeId, node] of entries) {
+      if (!node || node.type !== 'question' || node.section !== 'background') {
+        continue;
+      }
+
+      const usesBackgroundDataset = node.options_source?.dataset === 'backgrounds';
+      const setsBackgroundVariable = Array.isArray(node.on_select)
+        ? node.on_select.some((action) => action?.var === 'background')
+        : false;
+
+      if (usesBackgroundDataset || setsBackgroundVariable) {
         return nodeId;
       }
     }

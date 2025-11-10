@@ -2198,7 +2198,7 @@
     "q_background_preference": {
       "type": "question",
       "section": "background",
-      "question": "Qual destes antecedentes se alinha melhor com a tua personagem?",
+      "question": "Que tipo de vida levou a tua personagem?",
       "when": {
         "var": "class_ability_combo",
         "op": "is_set"
