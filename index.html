@@ -17,14 +17,18 @@
       <main class="app__main">
         <section id="question-screen" class="card" aria-live="polite">
           <div class="card__progress" id="progress-indicator"></div>
+          <div class="card__actions card__actions--top">
+            <button type="button" class="btn btn--secondary" data-nav="back" disabled>&larr; Anterior</button>
+            <button type="button" class="btn btn--primary" data-nav="next" disabled>Seguinte &rarr;</button>
+          </div>
           <h2 class="card__question" id="question-text"></h2>
           <form class="options" id="options-form" role="radiogroup" aria-describedby="question-text"></form>
           <p class="options__empty" id="no-options-message" hidden>
             Não encontrámos opções compatíveis com as tuas escolhas. Volta atrás e ajusta as respostas anteriores.
           </p>
-          <div class="card__actions">
-            <button type="button" class="btn btn--secondary" id="back-button">&larr; Anterior</button>
-            <button type="button" class="btn btn--primary" id="next-button" disabled>Seguinte &rarr;</button>
+          <div class="card__actions card__actions--bottom">
+            <button type="button" class="btn btn--secondary" data-nav="back" disabled>&larr; Anterior</button>
+            <button type="button" class="btn btn--primary" data-nav="next" disabled>Seguinte &rarr;</button>
           </div>
         </section>
         <section id="result-screen" class="card card--hidden" hidden>
