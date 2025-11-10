@@ -259,9 +259,14 @@
               "var": "class_adjustment",
               "op": "set",
               "value": null
+            },
+            {
+              "var": "fighting_style_choice",
+              "op": "set",
+              "value": null
             }
           ],
-          "next": "q_subclass_group"
+          "next": "q_class_adjustment_fighter"
         },
         {
           "label": "Rogue",
@@ -294,7 +299,14 @@
       "filter_by_roles": {
         "type": "class"
       },
-      "auto_select_if_single_option": true
+      "auto_select_if_single_option": true,
+      "on_select": [
+        {
+          "var": "fighting_style_choice",
+          "op": "set",
+          "value": null
+        }
+      ]
     },
     "q_class_medium_choice": {
       "type": "question",
@@ -351,9 +363,14 @@
               "var": "class_adjustment",
               "op": "set",
               "value": null
+            },
+            {
+              "var": "fighting_style_choice",
+              "op": "set",
+              "value": null
             }
           ],
-          "next": "q_subclass_group"
+          "next": "q_class_adjustment_fighter"
         },
         {
           "label": "Rogue",
@@ -494,7 +511,14 @@
       "filter_by_roles": {
         "type": "class"
       },
-      "auto_select_if_single_option": true
+      "auto_select_if_single_option": true,
+      "on_select": [
+        {
+          "var": "fighting_style_choice",
+          "op": "set",
+          "value": null
+        }
+      ]
     },
     "q_class_high_choice": {
       "type": "question",
@@ -551,9 +575,14 @@
               "var": "class_adjustment",
               "op": "set",
               "value": null
+            },
+            {
+              "var": "fighting_style_choice",
+              "op": "set",
+              "value": null
             }
           ],
-          "next": "q_subclass_group"
+          "next": "q_class_adjustment_fighter"
         },
         {
           "label": "Rogue",
@@ -883,7 +912,14 @@
       "filter_by_roles": {
         "type": "class"
       },
-      "auto_select_if_single_option": true
+      "auto_select_if_single_option": true,
+      "on_select": [
+        {
+          "var": "fighting_style_choice",
+          "op": "set",
+          "value": null
+        }
+      ]
     },
     "q_subclass_group": {
       "type": "question",
@@ -2096,31 +2132,133 @@
         }
       ]
     },
-    "q_class_adjustment_ranger": {
+    "q_class_adjustment_fighter": {
       "type": "question",
       "section": "class",
-      "question": "Pretendes escolher o Fighting Style Druidic Warrior?",
+      "question": "Que Estilo de Luta preferes aprender?",
       "options": [
         {
-          "label": "Sim",
-          "value": "RANGER_DRUIDIC_WARRIOR_SIM",
+          "label": "Classic Fighting Style",
+          "value": "FIGHTER_FIGHTING_STYLE_CLASSIC",
           "set": [
             {
               "var": "class_adjustment",
               "op": "set",
-              "value": "RANGER_DRUIDIC_WARRIOR_SIM"
+              "value": null
+            },
+            {
+              "var": "fighting_style_choice",
+              "op": "set",
+              "value": "CLASSIC"
             }
           ],
           "next": "q_subclass_group"
         },
         {
-          "label": "Não",
-          "value": "RANGER_DRUIDIC_WARRIOR_NAO",
+          "label": "Thrown Weapon Fighting Style",
+          "value": "FIGHTER_FIGHTING_STYLE_THROWN",
+          "set": [
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "fighting_style_choice",
+              "op": "set",
+              "value": "THROWN"
+            }
+          ],
+          "next": "q_subclass_group"
+        },
+        {
+          "label": "Unarmed Fighting Style",
+          "value": "FIGHTER_FIGHTING_STYLE_UNARMED",
+          "set": [
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": null
+            },
+            {
+              "var": "fighting_style_choice",
+              "op": "set",
+              "value": "UNARMED"
+            }
+          ],
+          "next": "q_subclass_group"
+        }
+      ]
+    },
+    "q_class_adjustment_ranger": {
+      "type": "question",
+      "section": "class",
+      "question": "Que Estilo de Luta preferes aprender?",
+      "options": [
+        {
+          "label": "Classic Fighting Style",
+          "value": "RANGER_FIGHTING_STYLE_CLASSIC",
           "set": [
             {
               "var": "class_adjustment",
               "op": "set",
               "value": "RANGER_DRUIDIC_WARRIOR_NAO"
+            },
+            {
+              "var": "fighting_style_choice",
+              "op": "set",
+              "value": "CLASSIC"
+            }
+          ],
+          "next": "q_subclass_group"
+        },
+        {
+          "label": "Druidic Warrior",
+          "value": "RANGER_FIGHTING_STYLE_DRUIDIC",
+          "set": [
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": "RANGER_DRUIDIC_WARRIOR_SIM"
+            },
+            {
+              "var": "fighting_style_choice",
+              "op": "set",
+              "value": "DRUIDIC_WARRIOR"
+            }
+          ],
+          "next": "q_subclass_group"
+        },
+        {
+          "label": "Thrown Weapon Fighting Style",
+          "value": "RANGER_FIGHTING_STYLE_THROWN",
+          "set": [
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": "RANGER_DRUIDIC_WARRIOR_NAO"
+            },
+            {
+              "var": "fighting_style_choice",
+              "op": "set",
+              "value": "THROWN"
+            }
+          ],
+          "next": "q_subclass_group"
+        },
+        {
+          "label": "Unarmed Fighting Style",
+          "value": "RANGER_FIGHTING_STYLE_UNARMED",
+          "set": [
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": "RANGER_DRUIDIC_WARRIOR_NAO"
+            },
+            {
+              "var": "fighting_style_choice",
+              "op": "set",
+              "value": "UNARMED"
             }
           ],
           "next": "q_subclass_group"
@@ -2130,33 +2268,77 @@
     "q_class_adjustment_paladin": {
       "type": "question",
       "section": "class",
-      "question": "Pretendes escolher o Fighting Style Blessed Warrior?",
+      "question": "Que Estilo de Luta preferes aprender?",
       "options": [
         {
-          "label": "Sim",
-          "value": "PALADIN_BLESSED_WARRIOR_SIM",
-          "set": [
-            {
-              "var": "class_adjustment",
-              "op": "set",
-              "value": "PALADIN_BLESSED_WARRIOR_SIM"
-            }
-          ],
-          "next": "q_subclass_group"
-        },
-        {
-          "label": "Não",
-          "value": "PALADIN_BLESSED_WARRIOR_NAO",
+          "label": "Classic Fighting Style",
+          "value": "PALADIN_FIGHTING_STYLE_CLASSIC",
           "set": [
             {
               "var": "class_adjustment",
               "op": "set",
               "value": "PALADIN_BLESSED_WARRIOR_NAO"
+            },
+            {
+              "var": "fighting_style_choice",
+              "op": "set",
+              "value": "CLASSIC"
+            }
+          ],
+          "next": "q_subclass_group"
+        },
+        {
+          "label": "Blessed Warrior",
+          "value": "PALADIN_FIGHTING_STYLE_BLESSED",
+          "set": [
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": "PALADIN_BLESSED_WARRIOR_SIM"
+            },
+            {
+              "var": "fighting_style_choice",
+              "op": "set",
+              "value": "BLESSED_WARRIOR"
+            }
+          ],
+          "next": "q_subclass_group"
+        },
+        {
+          "label": "Thrown Weapon Fighting Style",
+          "value": "PALADIN_FIGHTING_STYLE_THROWN",
+          "set": [
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": "PALADIN_BLESSED_WARRIOR_NAO"
+            },
+            {
+              "var": "fighting_style_choice",
+              "op": "set",
+              "value": "THROWN"
+            }
+          ],
+          "next": "q_subclass_group"
+        },
+        {
+          "label": "Unarmed Fighting Style",
+          "value": "PALADIN_FIGHTING_STYLE_UNARMED",
+          "set": [
+            {
+              "var": "class_adjustment",
+              "op": "set",
+              "value": "PALADIN_BLESSED_WARRIOR_NAO"
+            },
+            {
+              "var": "fighting_style_choice",
+              "op": "set",
+              "value": "UNARMED"
             }
           ],
           "next": "q_subclass_group"
         }
-          ]
+      ]
     },
     "q_physical_ability_preference": {
       "type": "question",
@@ -2212,7 +2394,9 @@
       "ability_overlap_filter": {
         "variable": "_class_ability_combo_codes",
         "entry_field": "ability_increases",
-        "min_overlap": 2
+        "min_overlap": 2,
+        "face_role_variable": "secondary_roles",
+        "face_requires_cha": true
       },
       "on_select": [
         {

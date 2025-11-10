@@ -349,6 +349,16 @@
     "class_handheld_gear": {
       "type": "string"
     },
+    "fighting_style_choice": {
+      "type": "enum",
+      "symbols": [
+        "CLASSIC",
+        "BLESSED_WARRIOR",
+        "DRUIDIC_WARRIOR",
+        "THROWN",
+        "UNARMED"
+      ]
+    },
     "variant_requires_physical_preference": {
       "type": "boolean"
     },
@@ -543,6 +553,28 @@
       "STR": {
         "pt": "Força (STR)",
         "en": "Strength (STR)"
+      }
+    },
+    "fighting_style_choice": {
+      "CLASSIC": {
+        "pt": "Classic Fighting Style",
+        "en": "Classic Fighting Style"
+      },
+      "BLESSED_WARRIOR": {
+        "pt": "Blessed Warrior",
+        "en": "Blessed Warrior"
+      },
+      "DRUIDIC_WARRIOR": {
+        "pt": "Druidic Warrior",
+        "en": "Druidic Warrior"
+      },
+      "THROWN": {
+        "pt": "Thrown Weapon Fighting Style",
+        "en": "Thrown Weapon Fighting Style"
+      },
+      "UNARMED": {
+        "pt": "Unarmed Fighting Style",
+        "en": "Unarmed Fighting Style"
       }
     },
     "species": {
@@ -4275,6 +4307,7 @@
     "class_ability_combo": null,
     "class_armor": null,
     "class_handheld_gear": null,
+    "fighting_style_choice": null,
     "variant_requires_physical_preference": false,
     "background": null,
     "_class_ability_combo_codes": []
