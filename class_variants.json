@@ -1,0 +1,3239 @@
+[
+  {
+    "class": "ARTIFICER",
+    "subclass": "ARTIFICER_ALCHEMIST",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "INT",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Steampunk Crossbow"
+    ]
+  },
+  {
+    "class": "ARTIFICER",
+    "subclass": "ARTIFICER_ARMORER",
+    "variant": "Guardian",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "INT",
+      "CON",
+      "DEX"
+    ],
+    "armor": "Mechanically enhanced heavy armor",
+    "hands": []
+  },
+  {
+    "class": "ARTIFICER",
+    "subclass": "ARTIFICER_ARMORER",
+    "variant": "Infiltrator",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "INT",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Mechanically enhanced stealthy light armor",
+    "hands": []
+  },
+  {
+    "class": "ARTIFICER",
+    "subclass": "ARTIFICER_ARTILLERIST",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "INT",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Steampunk Crossbow"
+    ]
+  },
+  {
+    "class": "ARTIFICER",
+    "subclass": "ARTIFICER_BATTLE_SMITH",
+    "variant": "Melee",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "INT",
+      "CON",
+      "DEX"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Steampunk Warhammer"
+    ]
+  },
+  {
+    "class": "ARTIFICER",
+    "subclass": "ARTIFICER_BATTLE_SMITH",
+    "variant": "Ranged",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "INT",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Steampunk Light Crossbow"
+    ]
+  },
+  {
+    "class": "BARBARIAN",
+    "subclass": "BARBARIAN_PATH_OF_THE_ANCESTRAL_GUARDIAN",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": null,
+    "ability_combo": [
+      "STR",
+      "CON",
+      "DEX"
+    ],
+    "armor": null,
+    "hands": [
+      "Greataxe"
+    ]
+  },
+  {
+    "class": "BARBARIAN",
+    "subclass": "BARBARIAN_PATH_OF_THE_BEAST",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": null,
+    "ability_combo": [
+      "STR",
+      "CON",
+      "DEX"
+    ],
+    "armor": null,
+    "hands": [
+      "Greataxe"
+    ]
+  },
+  {
+    "class": "BARBARIAN",
+    "subclass": "BARBARIAN_PATH_OF_THE_BERSERKER",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": null,
+    "ability_combo": [
+      "STR",
+      "CON",
+      "DEX"
+    ],
+    "armor": null,
+    "hands": [
+      "Greataxe"
+    ]
+  },
+  {
+    "class": "BARBARIAN",
+    "subclass": "BARBARIAN_PATH_OF_THE_MUSCLE_WIZARD",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": null,
+    "ability_combo": [
+      "STR",
+      "CON",
+      "DEX"
+    ],
+    "armor": null,
+    "hands": [
+      "Greataxe"
+    ]
+  },
+  {
+    "class": "BARBARIAN",
+    "subclass": "BARBARIAN_PATH_OF_THE_STORM_HERALD",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": null,
+    "ability_combo": [
+      "STR",
+      "CON",
+      "DEX"
+    ],
+    "armor": null,
+    "hands": [
+      "Greataxe"
+    ]
+  },
+  {
+    "class": "BARBARIAN",
+    "subclass": "BARBARIAN_PATH_OF_THE_WILD_HEART",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "STR",
+      "CON",
+      "WIS"
+    ],
+    "armor": null,
+    "hands": [
+      "Greataxe"
+    ]
+  },
+  {
+    "class": "BARBARIAN",
+    "subclass": "BARBARIAN_PATH_OF_THE_WILD_MAGIC",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": null,
+    "ability_combo": [
+      "STR",
+      "CON",
+      "DEX"
+    ],
+    "armor": null,
+    "hands": [
+      "Greataxe"
+    ]
+  },
+  {
+    "class": "BARBARIAN",
+    "subclass": "BARBARIAN_PATH_OF_THE_WORLD_TREE",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": null,
+    "ability_combo": [
+      "STR",
+      "CON",
+      "DEX"
+    ],
+    "armor": null,
+    "hands": [
+      "Greataxe"
+    ]
+  },
+  {
+    "class": "BARBARIAN",
+    "subclass": "BARBARIAN_PATH_OF_THE_ZEALOT",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": null,
+    "ability_combo": [
+      "STR",
+      "CON",
+      "DEX"
+    ],
+    "armor": null,
+    "hands": [
+      "Greataxe"
+    ]
+  },
+  {
+    "class": "BARD",
+    "subclass": "BARD_COLLEGE_OF_CREATION",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Magical Musical Instrument"
+    ]
+  },
+  {
+    "class": "BARD",
+    "subclass": "BARD_COLLEGE_OF_DANCE",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "CHA",
+      "CON"
+    ],
+    "armor": null,
+    "hands": [
+      "Magical Musical Instrument"
+    ]
+  },
+  {
+    "class": "BARD",
+    "subclass": "BARD_COLLEGE_OF_ELOQUENCE",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Magical Musical Instrument"
+    ]
+  },
+  {
+    "class": "BARD",
+    "subclass": "BARD_COLLEGE_OF_GLAMOUR",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Magical Musical Instrument"
+    ]
+  },
+  {
+    "class": "BARD",
+    "subclass": "BARD_COLLEGE_OF_LORE",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Magical Musical Instrument"
+    ]
+  },
+  {
+    "class": "BARD",
+    "subclass": "BARD_COLLEGE_OF_SPIRITS",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Magical Tarokka Deck"
+    ]
+  },
+  {
+    "class": "BARD",
+    "subclass": "BARD_COLLEGE_OF_SWORDS",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "CHA",
+      "CON"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Magical Scimitar"
+    ]
+  },
+  {
+    "class": "BARD",
+    "subclass": "BARD_COLLEGE_OF_VALOR",
+    "variant": "DEX",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Magical Shortsword"
+    ]
+  },
+  {
+    "class": "BARD",
+    "subclass": "BARD_COLLEGE_OF_VALOR",
+    "variant": "STR",
+    "required_adjustment": null,
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "CHA",
+      "STR",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Magical Longsword"
+    ]
+  },
+  {
+    "class": "BARD",
+    "subclass": "BARD_COLLEGE_OF_WHISPERS",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Rapier"
+    ]
+  },
+  {
+    "class": "BARD",
+    "subclass": "BARD_COLLEGE_OF_THE_MOON",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Magical Musical Instrument"
+    ]
+  },
+  {
+    "class": "BLOOD_HUNTER",
+    "subclass": "BLOOD_HUNTER_ORDER_OF_THE_GHOSTSLAYER",
+    "variant": "DEX",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "WIS",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Light Crossbow"
+    ]
+  },
+  {
+    "class": "BLOOD_HUNTER",
+    "subclass": "BLOOD_HUNTER_ORDER_OF_THE_GHOSTSLAYER",
+    "variant": "STR",
+    "required_adjustment": null,
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "STR",
+      "WIS",
+      "CON"
+    ],
+    "armor": "Scale Mail",
+    "hands": [
+      "Greatsword"
+    ]
+  },
+  {
+    "class": "BLOOD_HUNTER",
+    "subclass": "BLOOD_HUNTER_ORDER_OF_THE_LYCAN",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "STR",
+      "WIS",
+      "CON"
+    ],
+    "armor": "Scale Mail",
+    "hands": []
+  },
+  {
+    "class": "BLOOD_HUNTER",
+    "subclass": "BLOOD_HUNTER_ORDER_OF_THE_MUTANT",
+    "variant": "DEX",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "WIS",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Rapier"
+    ]
+  },
+  {
+    "class": "BLOOD_HUNTER",
+    "subclass": "BLOOD_HUNTER_ORDER_OF_THE_MUTANT",
+    "variant": "STR",
+    "required_adjustment": null,
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "STR",
+      "WIS",
+      "CON"
+    ],
+    "armor": "Scale Mail",
+    "hands": [
+      "Greatsword"
+    ]
+  },
+  {
+    "class": "BLOOD_HUNTER",
+    "subclass": "BLOOD_HUNTER_ORDER_OF_THE_PROFANE_SOUL",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "WIS",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Magical Light Crossbow"
+    ]
+  },
+  {
+    "class": "CLERIC",
+    "subclass": "CLERIC_ARCANA_DOMAIN",
+    "variant": "Protector",
+    "required_adjustment": "CLERIC_PROTECTOR",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "WIS",
+      "STR",
+      "CON"
+    ],
+    "armor": "Chain Shirt",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "CLERIC",
+    "subclass": "CLERIC_ARCANA_DOMAIN",
+    "variant": "Thaumaturge",
+    "required_adjustment": "CLERIC_THAUMATURGE",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "WIS",
+      "CON",
+      "DEX"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "CLERIC",
+    "subclass": "CLERIC_FORGE_DOMAIN",
+    "variant": "Protector",
+    "required_adjustment": "CLERIC_PROTECTOR",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "WIS",
+      "STR",
+      "CON"
+    ],
+    "armor": "Chain Shirt",
+    "hands": [
+      "Mace",
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "CLERIC",
+    "subclass": "CLERIC_FORGE_DOMAIN",
+    "variant": "Thaumaturge",
+    "required_adjustment": "CLERIC_THAUMATURGE",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "WIS",
+      "CON",
+      "DEX"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "CLERIC",
+    "subclass": "CLERIC_GRAVE_DOMAIN",
+    "variant": "Protector",
+    "required_adjustment": "CLERIC_PROTECTOR",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "WIS",
+      "STR",
+      "CON"
+    ],
+    "armor": "Chain Shirt",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "CLERIC",
+    "subclass": "CLERIC_GRAVE_DOMAIN",
+    "variant": "Thaumaturge",
+    "required_adjustment": "CLERIC_THAUMATURGE",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "WIS",
+      "CON",
+      "DEX"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "CLERIC",
+    "subclass": "CLERIC_KNOWLEDGE_DOMAIN",
+    "variant": "Protector",
+    "required_adjustment": "CLERIC_PROTECTOR",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "WIS",
+      "STR",
+      "CON"
+    ],
+    "armor": "Chain Shirt",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "CLERIC",
+    "subclass": "CLERIC_KNOWLEDGE_DOMAIN",
+    "variant": "Thaumaturge",
+    "required_adjustment": "CLERIC_THAUMATURGE",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "WIS",
+      "CON",
+      "DEX"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "CLERIC",
+    "subclass": "CLERIC_LIFE_DOMAIN",
+    "variant": "Protector",
+    "required_adjustment": "CLERIC_PROTECTOR",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "WIS",
+      "STR",
+      "CON"
+    ],
+    "armor": "Chain Shirt",
+    "hands": [
+      "Mace",
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "CLERIC",
+    "subclass": "CLERIC_LIFE_DOMAIN",
+    "variant": "Thaumaturge",
+    "required_adjustment": "CLERIC_THAUMATURGE",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "WIS",
+      "CON",
+      "DEX"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "CLERIC",
+    "subclass": "CLERIC_LIGHT_DOMAIN",
+    "variant": "Protector",
+    "required_adjustment": "CLERIC_PROTECTOR",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "WIS",
+      "STR",
+      "CON"
+    ],
+    "armor": "Chain Shirt",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "CLERIC",
+    "subclass": "CLERIC_LIGHT_DOMAIN",
+    "variant": "Thaumaturge",
+    "required_adjustment": "CLERIC_THAUMATURGE",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "WIS",
+      "CON",
+      "DEX"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "CLERIC",
+    "subclass": "CLERIC_NATURE_DOMAIN",
+    "variant": "Protector",
+    "required_adjustment": "CLERIC_PROTECTOR",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "WIS",
+      "STR",
+      "CON"
+    ],
+    "armor": "Chain Shirt",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "CLERIC",
+    "subclass": "CLERIC_NATURE_DOMAIN",
+    "variant": "Thaumaturge",
+    "required_adjustment": "CLERIC_THAUMATURGE",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "WIS",
+      "CON",
+      "DEX"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "CLERIC",
+    "subclass": "CLERIC_ORDER_DOMAIN",
+    "variant": "Protector",
+    "required_adjustment": "CLERIC_PROTECTOR",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "WIS",
+      "STR",
+      "CON"
+    ],
+    "armor": "Chain Shirt",
+    "hands": [
+      "Mace",
+      "Shield"
+    ]
+  },
+  {
+    "class": "CLERIC",
+    "subclass": "CLERIC_ORDER_DOMAIN",
+    "variant": "Thaumaturge",
+    "required_adjustment": "CLERIC_THAUMATURGE",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "WIS",
+      "CON",
+      "DEX"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "CLERIC",
+    "subclass": "CLERIC_PEACE_DOMAIN",
+    "variant": "Protector",
+    "required_adjustment": "CLERIC_PROTECTOR",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "WIS",
+      "STR",
+      "CON"
+    ],
+    "armor": "Chain Shirt",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "CLERIC",
+    "subclass": "CLERIC_PEACE_DOMAIN",
+    "variant": "Thaumaturge",
+    "required_adjustment": "CLERIC_THAUMATURGE",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "WIS",
+      "CON",
+      "DEX"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "CLERIC",
+    "subclass": "CLERIC_TEMPEST_DOMAIN",
+    "variant": "Protector",
+    "required_adjustment": "CLERIC_PROTECTOR",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "WIS",
+      "STR",
+      "CON"
+    ],
+    "armor": "Chain Shirt",
+    "hands": [
+      "Mace",
+      "Shield"
+    ]
+  },
+  {
+    "class": "CLERIC",
+    "subclass": "CLERIC_TEMPEST_DOMAIN",
+    "variant": "Thaumaturge",
+    "required_adjustment": "CLERIC_THAUMATURGE",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "WIS",
+      "CON",
+      "DEX"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "CLERIC",
+    "subclass": "CLERIC_TRICKERY_DOMAIN",
+    "variant": "Protector",
+    "required_adjustment": "CLERIC_PROTECTOR",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "WIS",
+      "STR",
+      "CON"
+    ],
+    "armor": "Chain Shirt",
+    "hands": [
+      "Mace",
+      "Shield"
+    ]
+  },
+  {
+    "class": "CLERIC",
+    "subclass": "CLERIC_TRICKERY_DOMAIN",
+    "variant": "Thaumaturge",
+    "required_adjustment": "CLERIC_THAUMATURGE",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "WIS",
+      "CON",
+      "DEX"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "CLERIC",
+    "subclass": "CLERIC_TWILIGHT_DOMAIN",
+    "variant": "Protector",
+    "required_adjustment": "CLERIC_PROTECTOR",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "WIS",
+      "STR",
+      "CON"
+    ],
+    "armor": "Chain Shirt",
+    "hands": [
+      "Mace",
+      "Shield"
+    ]
+  },
+  {
+    "class": "CLERIC",
+    "subclass": "CLERIC_TWILIGHT_DOMAIN",
+    "variant": "Thaumaturge",
+    "required_adjustment": "CLERIC_THAUMATURGE",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "WIS",
+      "CON",
+      "DEX"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "CLERIC",
+    "subclass": "CLERIC_WAR_DOMAIN",
+    "variant": "Protector",
+    "required_adjustment": "CLERIC_PROTECTOR",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "WIS",
+      "STR",
+      "CON"
+    ],
+    "armor": "Chain Shirt",
+    "hands": [
+      "Mace",
+      "Shield"
+    ]
+  },
+  {
+    "class": "CLERIC",
+    "subclass": "CLERIC_WAR_DOMAIN",
+    "variant": "Thaumaturge",
+    "required_adjustment": "CLERIC_THAUMATURGE",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "WIS",
+      "CON",
+      "DEX"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Light Crossbow"
+    ]
+  },
+  {
+    "class": "DRUID",
+    "subclass": "DRUID_CIRCLE_OF_DREAMS",
+    "variant": "Magician",
+    "required_adjustment": "DRUID_MAGICIAN",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "WIS",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Druidic Magical Staff"
+    ]
+  },
+  {
+    "class": "DRUID",
+    "subclass": "DRUID_CIRCLE_OF_DREAMS",
+    "variant": "Warden",
+    "required_adjustment": "DRUID_WARDEN",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "WIS",
+      "CON",
+      "DEX"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Druidic Magical Staff"
+    ]
+  },
+  {
+    "class": "DRUID",
+    "subclass": "DRUID_CIRCLE_OF_WILDFIRE",
+    "variant": "Magician",
+    "required_adjustment": "DRUID_MAGICIAN",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "WIS",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Druidic Magical Staff"
+    ]
+  },
+  {
+    "class": "DRUID",
+    "subclass": "DRUID_CIRCLE_OF_WILDFIRE",
+    "variant": "Warden",
+    "required_adjustment": "DRUID_WARDEN",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "WIS",
+      "CON",
+      "DEX"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Druidic Magical Staff"
+    ]
+  },
+  {
+    "class": "DRUID",
+    "subclass": "DRUID_CIRCLE_OF_THE_LAND",
+    "variant": "Magician",
+    "required_adjustment": "DRUID_MAGICIAN",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "WIS",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Druidic Magical Staff"
+    ]
+  },
+  {
+    "class": "DRUID",
+    "subclass": "DRUID_CIRCLE_OF_THE_LAND",
+    "variant": "Warden",
+    "required_adjustment": "DRUID_WARDEN",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "WIS",
+      "CON",
+      "DEX"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Druidic Magical Staff"
+    ]
+  },
+  {
+    "class": "DRUID",
+    "subclass": "DRUID_CIRCLE_OF_THE_MOON",
+    "variant": "Magician",
+    "required_adjustment": "DRUID_MAGICIAN",
+    "preferred_ability": null,
+    "ability_combo": [
+      "WIS",
+      "CON",
+      "INT"
+    ],
+    "armor": "Leather Armor",
+    "hands": []
+  },
+  {
+    "class": "DRUID",
+    "subclass": "DRUID_CIRCLE_OF_THE_MOON",
+    "variant": "Warden",
+    "required_adjustment": "DRUID_WARDEN",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "WIS",
+      "CON",
+      "DEX"
+    ],
+    "armor": "Leather Armor",
+    "hands": []
+  },
+  {
+    "class": "DRUID",
+    "subclass": "DRUID_CIRCLE_OF_THE_SEA",
+    "variant": "Warden",
+    "required_adjustment": "DRUID_WARDEN",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "WIS",
+      "CON",
+      "DEX"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Druidic Magical Staff",
+      "Shield"
+    ]
+  },
+  {
+    "class": "DRUID",
+    "subclass": "DRUID_CIRCLE_OF_THE_SHEPHERD",
+    "variant": "Magician",
+    "required_adjustment": "DRUID_MAGICIAN",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "WIS",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Druidic Magical Staff"
+    ]
+  },
+  {
+    "class": "DRUID",
+    "subclass": "DRUID_CIRCLE_OF_THE_SHEPHERD",
+    "variant": "Warden",
+    "required_adjustment": "DRUID_WARDEN",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "WIS",
+      "CON",
+      "DEX"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Druidic Magical Staff"
+    ]
+  },
+  {
+    "class": "DRUID",
+    "subclass": "DRUID_CIRCLE_OF_SPORES",
+    "variant": "Warden",
+    "required_adjustment": "DRUID_WARDEN",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "WIS",
+      "CON",
+      "DEX"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Druidic Magical Staff",
+      "Shield"
+    ]
+  },
+  {
+    "class": "DRUID",
+    "subclass": "DRUID_CIRCLE_OF_THE_STARS",
+    "variant": "Magician",
+    "required_adjustment": "DRUID_MAGICIAN",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "WIS",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Druidic Magical Staff"
+    ]
+  },
+  {
+    "class": "DRUID",
+    "subclass": "DRUID_CIRCLE_OF_THE_STARS",
+    "variant": "Warden",
+    "required_adjustment": "DRUID_WARDEN",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "WIS",
+      "CON",
+      "DEX"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Druidic Magical Staff"
+    ]
+  },
+  {
+    "class": "FIGHTER",
+    "subclass": "FIGHTER_ARCANE_ARCHER",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "CON",
+      "WIS"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Longbow"
+    ]
+  },
+  {
+    "class": "FIGHTER",
+    "subclass": "FIGHTER_BANNERET",
+    "variant": "DEX",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "CON",
+      "CHA"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Scimitar"
+    ]
+  },
+  {
+    "class": "FIGHTER",
+    "subclass": "FIGHTER_BANNERET",
+    "variant": "STR",
+    "required_adjustment": null,
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "STR",
+      "CON",
+      "CHA"
+    ],
+    "armor": "Chain Mail",
+    "hands": [
+      "Greatsword"
+    ]
+  },
+  {
+    "class": "FIGHTER",
+    "subclass": "FIGHTER_BATTLE_MASTER",
+    "variant": "DEX",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "CON",
+      "WIS"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Scimitar"
+    ]
+  },
+  {
+    "class": "FIGHTER",
+    "subclass": "FIGHTER_BATTLE_MASTER",
+    "variant": "STR",
+    "required_adjustment": null,
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "STR",
+      "CON",
+      "WIS"
+    ],
+    "armor": "Chain Mail",
+    "hands": [
+      "Greatsword"
+    ]
+  },
+  {
+    "class": "FIGHTER",
+    "subclass": "FIGHTER_CAVALIER",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "STR",
+      "CON",
+      "WIS"
+    ],
+    "armor": "Chain Mail",
+    "hands": [
+      "Greatsword"
+    ]
+  },
+  {
+    "class": "FIGHTER",
+    "subclass": "FIGHTER_CHAMPION",
+    "variant": "DEX",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "CON",
+      "WIS"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Scimitar"
+    ]
+  },
+  {
+    "class": "FIGHTER",
+    "subclass": "FIGHTER_CHAMPION",
+    "variant": "STR",
+    "required_adjustment": null,
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "STR",
+      "CON",
+      "WIS"
+    ],
+    "armor": "Chain Mail",
+    "hands": [
+      "Greatsword"
+    ]
+  },
+  {
+    "class": "FIGHTER",
+    "subclass": "FIGHTER_DUNGEONEER",
+    "variant": "DEX",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "CON",
+      "WIS"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Scimitar"
+    ]
+  },
+  {
+    "class": "FIGHTER",
+    "subclass": "FIGHTER_DUNGEONEER",
+    "variant": "STR",
+    "required_adjustment": null,
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "STR",
+      "CON",
+      "WIS"
+    ],
+    "armor": "Chain Mail",
+    "hands": [
+      "Greatsword"
+    ]
+  },
+  {
+    "class": "FIGHTER",
+    "subclass": "FIGHTER_ELDRITCH_KNIGHT",
+    "variant": "DEX",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "CON",
+      "INT"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Magical Shortsword"
+    ]
+  },
+  {
+    "class": "FIGHTER",
+    "subclass": "FIGHTER_ELDRITCH_KNIGHT",
+    "variant": "STR",
+    "required_adjustment": null,
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "STR",
+      "CON",
+      "INT"
+    ],
+    "armor": "Chain Mail",
+    "hands": [
+      "Magical Longsword"
+    ]
+  },
+  {
+    "class": "FIGHTER",
+    "subclass": "FIGHTER_PSI_WARRIOR",
+    "variant": "DEX",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "CON",
+      "INT"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Psionic Shortsword"
+    ]
+  },
+  {
+    "class": "FIGHTER",
+    "subclass": "FIGHTER_PSI_WARRIOR",
+    "variant": "STR",
+    "required_adjustment": null,
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "STR",
+      "CON",
+      "INT"
+    ],
+    "armor": "Chain Mail",
+    "hands": [
+      "Psionic Greatsword"
+    ]
+  },
+  {
+    "class": "FIGHTER",
+    "subclass": "FIGHTER_RUNE_KNIGHT",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "STR",
+      "CON",
+      "WIS"
+    ],
+    "armor": "Chain Mail",
+    "hands": [
+      "Magic Rune-infused Greatsword"
+    ]
+  },
+  {
+    "class": "FIGHTER",
+    "subclass": "FIGHTER_SAMURAI",
+    "variant": "DEX",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "CON",
+      "WIS"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Longbow"
+    ]
+  },
+  {
+    "class": "FIGHTER",
+    "subclass": "FIGHTER_SAMURAI",
+    "variant": "STR",
+    "required_adjustment": null,
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "STR",
+      "CON",
+      "WIS"
+    ],
+    "armor": "Chain Mail",
+    "hands": [
+      "Long Katana"
+    ]
+  },
+  {
+    "class": "MONK",
+    "subclass": "MONK_WAY_OF_THE_ELEMENTS",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "WIS",
+      "CON"
+    ],
+    "armor": null,
+    "hands": []
+  },
+  {
+    "class": "MONK",
+    "subclass": "MONK_WAY_OF_THE_OPEN_HAND",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "WIS",
+      "CON"
+    ],
+    "armor": null,
+    "hands": []
+  },
+  {
+    "class": "MONK",
+    "subclass": "MONK_WARRIOR_OF_THE_STREET",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "WIS",
+      "CON"
+    ],
+    "armor": null,
+    "hands": []
+  },
+  {
+    "class": "MONK",
+    "subclass": "MONK_WAY_OF_MERCY",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "CON",
+      "WIS"
+    ],
+    "armor": null,
+    "hands": []
+  },
+  {
+    "class": "MONK",
+    "subclass": "MONK_WAY_OF_SHADOW",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "CON",
+      "WIS"
+    ],
+    "armor": null,
+    "hands": [
+      "2 Daggers"
+    ]
+  },
+  {
+    "class": "MONK",
+    "subclass": "MONK_WAY_OF_THE_ASTRAL_SELF",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "WIS",
+      "CON"
+    ],
+    "armor": null,
+    "hands": []
+  },
+  {
+    "class": "MONK",
+    "subclass": "MONK_WAY_OF_THE_COBALT_SOUL",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "CON",
+      "WIS"
+    ],
+    "armor": null,
+    "hands": [
+      "Spear"
+    ]
+  },
+  {
+    "class": "MONK",
+    "subclass": "MONK_WAY_OF_THE_DRUNKEN_MASTER",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "CON",
+      "WIS"
+    ],
+    "armor": null,
+    "hands": []
+  },
+  {
+    "class": "MONK",
+    "subclass": "MONK_WAY_OF_THE_KENSEI",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "CON",
+      "WIS"
+    ],
+    "armor": null,
+    "hands": [
+      "Longbow"
+    ]
+  },
+  {
+    "class": "MONK",
+    "subclass": "MONK_WAY_OF_THE_LONG_DEATH",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "WIS",
+      "CON"
+    ],
+    "armor": null,
+    "hands": []
+  },
+  {
+    "class": "MONK",
+    "subclass": "MONK_WAY_OF_THE_SUN_SOUL",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "WIS",
+      "CON"
+    ],
+    "armor": null,
+    "hands": []
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_CONQUEST",
+    "variant": "STR",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_NAO",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "STR",
+      "CHA",
+      "CON"
+    ],
+    "armor": "Chain Mail",
+    "hands": [
+      "Longsword",
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_CONQUEST",
+    "variant": "Blessed Warrior",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_SIM",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "CHA",
+      "STR",
+      "CON"
+    ],
+    "armor": "Chain Mail",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_DEVOTION",
+    "variant": "DEX",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_NAO",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "CHA",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Rapier",
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_DEVOTION",
+    "variant": "STR",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_NAO",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "STR",
+      "CHA",
+      "CON"
+    ],
+    "armor": "Chain Mail",
+    "hands": [
+      "Longsword",
+      "Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_DEVOTION",
+    "variant": "Blessed Warrior — DEX",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_SIM",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_DEVOTION",
+    "variant": "Blessed Warrior — STR",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_SIM",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "CHA",
+      "STR",
+      "CON"
+    ],
+    "armor": "Chain Mail",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_GLORY",
+    "variant": "DEX",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_NAO",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "CHA",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Rapier",
+      "Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_GLORY",
+    "variant": "STR",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_NAO",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "STR",
+      "CHA",
+      "CON"
+    ],
+    "armor": "Chain Mail",
+    "hands": [
+      "Longsword",
+      "Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_GLORY",
+    "variant": "Blessed Warrior — DEX",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_SIM",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_GLORY",
+    "variant": "Blessed Warrior — STR",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_SIM",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "CHA",
+      "STR",
+      "CON"
+    ],
+    "armor": "Chain Mail",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_REDEMPTION",
+    "variant": "DEX",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_NAO",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "CHA",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Rapier",
+      "Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_REDEMPTION",
+    "variant": "STR",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_NAO",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "STR",
+      "CHA",
+      "CON"
+    ],
+    "armor": "Chain Mail",
+    "hands": [
+      "Longsword",
+      "Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_REDEMPTION",
+    "variant": "Blessed Warrior — DEX",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_SIM",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_REDEMPTION",
+    "variant": "Blessed Warrior — STR",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_SIM",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "CHA",
+      "STR",
+      "CON"
+    ],
+    "armor": "Chain Mail",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_REVELRY",
+    "variant": "DEX",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_NAO",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "CHA",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Rapier",
+      "Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_REVELRY",
+    "variant": "STR",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_NAO",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "STR",
+      "CHA",
+      "CON"
+    ],
+    "armor": "Chain Mail",
+    "hands": [
+      "Longsword",
+      "Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_REVELRY",
+    "variant": "Blessed Warrior — DEX",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_SIM",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_REVELRY",
+    "variant": "Blessed Warrior — STR",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_SIM",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "CHA",
+      "STR",
+      "CON"
+    ],
+    "armor": "Chain Mail",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_VENGEANCE",
+    "variant": "DEX",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_NAO",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "CHA",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Rapier",
+      "Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_VENGEANCE",
+    "variant": "STR",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_NAO",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "STR",
+      "CHA",
+      "CON"
+    ],
+    "armor": "Chain Mail",
+    "hands": [
+      "Longsword",
+      "Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_THE_ANCIENTS",
+    "variant": "DEX",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_NAO",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "CHA",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Rapier",
+      "Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_THE_ANCIENTS",
+    "variant": "STR",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_NAO",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "STR",
+      "CHA",
+      "CON"
+    ],
+    "armor": "Chain Mail",
+    "hands": [
+      "Longsword",
+      "Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_THE_ANCIENTS",
+    "variant": "Blessed Warrior — DEX",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_SIM",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_THE_ANCIENTS",
+    "variant": "Blessed Warrior — STR",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_SIM",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "CHA",
+      "STR",
+      "CON"
+    ],
+    "armor": "Chain Mail",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_THE_CROWN",
+    "variant": "STR",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_NAO",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "STR",
+      "CHA",
+      "CON"
+    ],
+    "armor": "Chain Mail",
+    "hands": [
+      "Longsword",
+      "Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_THE_CROWN",
+    "variant": "Blessed Warrior",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_SIM",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "CHA",
+      "STR",
+      "CON"
+    ],
+    "armor": "Chain Mail",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_THE_NOBLE_GENIES",
+    "variant": "STR",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_NAO",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "STR",
+      "CHA",
+      "CON"
+    ],
+    "armor": "Chain Mail",
+    "hands": [
+      "Longsword",
+      "Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_THE_NOBLE_GENIES",
+    "variant": "Blessed Warrior",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_SIM",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "CHA",
+      "STR",
+      "CON"
+    ],
+    "armor": "Chain Mail",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_THE_OPEN_SEA",
+    "variant": "DEX",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_NAO",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "CHA",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Rapier",
+      "Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_THE_OPEN_SEA",
+    "variant": "STR",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_NAO",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "STR",
+      "CHA",
+      "CON"
+    ],
+    "armor": "Chain Mail",
+    "hands": [
+      "Longsword",
+      "Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_THE_OPEN_SEA",
+    "variant": "Blessed Warrior — DEX",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_SIM",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_THE_OPEN_SEA",
+    "variant": "Blessed Warrior — STR",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_SIM",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "CHA",
+      "STR",
+      "CON"
+    ],
+    "armor": "Chain Mail",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_THE_WATCHERS",
+    "variant": "DEX",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_NAO",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "CHA",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Rapier",
+      "Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_THE_WATCHERS",
+    "variant": "STR",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_NAO",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "STR",
+      "CHA",
+      "CON"
+    ],
+    "armor": "Chain Mail",
+    "hands": [
+      "Longsword",
+      "Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_THE_WATCHERS",
+    "variant": "Blessed Warrior — DEX",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_SIM",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "PALADIN",
+    "subclass": "PALADIN_OATH_OF_THE_WATCHERS",
+    "variant": "Blessed Warrior — STR",
+    "required_adjustment": "PALADIN_BLESSED_WARRIOR_SIM",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "CHA",
+      "STR",
+      "CON"
+    ],
+    "armor": "Chain Mail",
+    "hands": [
+      "Holy Shield"
+    ]
+  },
+  {
+    "class": "RANGER",
+    "subclass": "RANGER_BEAST_MASTER",
+    "variant": "DEX",
+    "required_adjustment": "RANGER_DRUIDIC_WARRIOR_NAO",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "WIS",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Longbow"
+    ]
+  },
+  {
+    "class": "RANGER",
+    "subclass": "RANGER_BEAST_MASTER",
+    "variant": "STR",
+    "required_adjustment": "RANGER_DRUIDIC_WARRIOR_NAO",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "STR",
+      "WIS",
+      "CON"
+    ],
+    "armor": "Scale Mail",
+    "hands": [
+      "Longsword",
+      "Shield"
+    ]
+  },
+  {
+    "class": "RANGER",
+    "subclass": "RANGER_BEAST_MASTER",
+    "variant": "Druidic Warrior — DEX",
+    "required_adjustment": "RANGER_DRUIDIC_WARRIOR_SIM",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "WIS",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Longbow"
+    ]
+  },
+  {
+    "class": "RANGER",
+    "subclass": "RANGER_BEAST_MASTER",
+    "variant": "Druidic Warrior — STR",
+    "required_adjustment": "RANGER_DRUIDIC_WARRIOR_SIM",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "WIS",
+      "STR",
+      "CON"
+    ],
+    "armor": "Scale Mail",
+    "hands": [
+      "Druidic Sword"
+    ]
+  },
+  {
+    "class": "RANGER",
+    "subclass": "RANGER_FEY_WANDERER",
+    "variant": "DEX",
+    "required_adjustment": "RANGER_DRUIDIC_WARRIOR_NAO",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "WIS",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Longbow"
+    ]
+  },
+  {
+    "class": "RANGER",
+    "subclass": "RANGER_FEY_WANDERER",
+    "variant": "Druidic Warrior",
+    "required_adjustment": "RANGER_DRUIDIC_WARRIOR_SIM",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "WIS",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Longbow"
+    ]
+  },
+  {
+    "class": "RANGER",
+    "subclass": "RANGER_GLOOM_STALKER",
+    "variant": "DEX",
+    "required_adjustment": "RANGER_DRUIDIC_WARRIOR_NAO",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "WIS",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Longbow"
+    ]
+  },
+  {
+    "class": "RANGER",
+    "subclass": "RANGER_GLOOM_STALKER",
+    "variant": "Druidic Warrior",
+    "required_adjustment": "RANGER_DRUIDIC_WARRIOR_SIM",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "WIS",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Longbow"
+    ]
+  },
+  {
+    "class": "RANGER",
+    "subclass": "RANGER_HORIZON_WALKER",
+    "variant": "DEX",
+    "required_adjustment": "RANGER_DRUIDIC_WARRIOR_NAO",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "WIS",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Longbow"
+    ]
+  },
+  {
+    "class": "RANGER",
+    "subclass": "RANGER_HORIZON_WALKER",
+    "variant": "STR",
+    "required_adjustment": "RANGER_DRUIDIC_WARRIOR_NAO",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "STR",
+      "WIS",
+      "CON"
+    ],
+    "armor": "Scale Mail",
+    "hands": [
+      "Longsword",
+      "Shield"
+    ]
+  },
+  {
+    "class": "RANGER",
+    "subclass": "RANGER_HORIZON_WALKER",
+    "variant": "Druidic Warrior — DEX",
+    "required_adjustment": "RANGER_DRUIDIC_WARRIOR_SIM",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "WIS",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Longbow"
+    ]
+  },
+  {
+    "class": "RANGER",
+    "subclass": "RANGER_HORIZON_WALKER",
+    "variant": "Druidic Warrior — STR",
+    "required_adjustment": "RANGER_DRUIDIC_WARRIOR_SIM",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "WIS",
+      "STR",
+      "CON"
+    ],
+    "armor": "Scale Mail",
+    "hands": [
+      "Druidic Sword"
+    ]
+  },
+  {
+    "class": "RANGER",
+    "subclass": "RANGER_HUNTER",
+    "variant": "DEX",
+    "required_adjustment": "RANGER_DRUIDIC_WARRIOR_NAO",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "WIS",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Longbow"
+    ]
+  },
+  {
+    "class": "RANGER",
+    "subclass": "RANGER_HUNTER",
+    "variant": "STR",
+    "required_adjustment": "RANGER_DRUIDIC_WARRIOR_NAO",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "STR",
+      "WIS",
+      "CON"
+    ],
+    "armor": "Scale Mail",
+    "hands": [
+      "Longsword",
+      "Shield"
+    ]
+  },
+  {
+    "class": "RANGER",
+    "subclass": "RANGER_HUNTER",
+    "variant": "Druidic Warrior — DEX",
+    "required_adjustment": "RANGER_DRUIDIC_WARRIOR_SIM",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "WIS",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Longbow"
+    ]
+  },
+  {
+    "class": "RANGER",
+    "subclass": "RANGER_HUNTER",
+    "variant": "Druidic Warrior — STR",
+    "required_adjustment": "RANGER_DRUIDIC_WARRIOR_SIM",
+    "preferred_ability": "STR",
+    "ability_combo": [
+      "WIS",
+      "STR",
+      "CON"
+    ],
+    "armor": "Scale Mail",
+    "hands": [
+      "Druidic Sword"
+    ]
+  },
+  {
+    "class": "RANGER",
+    "subclass": "RANGER_MONSTER_SLAYER",
+    "variant": "DEX",
+    "required_adjustment": "RANGER_DRUIDIC_WARRIOR_NAO",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "WIS",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Longbow"
+    ]
+  },
+  {
+    "class": "RANGER",
+    "subclass": "RANGER_MONSTER_SLAYER",
+    "variant": "Druidic Warrior",
+    "required_adjustment": "RANGER_DRUIDIC_WARRIOR_SIM",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "WIS",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Longbow"
+    ]
+  },
+  {
+    "class": "RANGER",
+    "subclass": "RANGER_SWARMKEEPER",
+    "variant": "DEX",
+    "required_adjustment": "RANGER_DRUIDIC_WARRIOR_NAO",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "WIS",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Longbow"
+    ]
+  },
+  {
+    "class": "RANGER",
+    "subclass": "RANGER_SWARMKEEPER",
+    "variant": "Druidic Warrior",
+    "required_adjustment": "RANGER_DRUIDIC_WARRIOR_SIM",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "WIS",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Longbow"
+    ]
+  },
+  {
+    "class": "RANGER",
+    "subclass": "RANGER_WINTER_WALKER",
+    "variant": "DEX",
+    "required_adjustment": "RANGER_DRUIDIC_WARRIOR_NAO",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "WIS",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Longbow"
+    ]
+  },
+  {
+    "class": "RANGER",
+    "subclass": "RANGER_WINTER_WALKER",
+    "variant": "Druidic Warrior",
+    "required_adjustment": "RANGER_DRUIDIC_WARRIOR_SIM",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "WIS",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Longbow"
+    ]
+  },
+  {
+    "class": "ROGUE",
+    "subclass": "ROGUE_ARACHNOID_STALKER",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "CON",
+      "WIS"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "2 Daggers"
+    ]
+  },
+  {
+    "class": "ROGUE",
+    "subclass": "ROGUE_ARCANE_TRICKSTER",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "INT",
+      "CON"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "2 Magical Daggers"
+    ]
+  },
+  {
+    "class": "ROGUE",
+    "subclass": "ROGUE_ASSASSIN",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "CON",
+      "WIS"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "2 Daggers"
+    ]
+  },
+  {
+    "class": "ROGUE",
+    "subclass": "ROGUE_INQUISITIVE",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "WIS",
+      "CON"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "2 Daggers"
+    ]
+  },
+  {
+    "class": "ROGUE",
+    "subclass": "ROGUE_MASTERMIND",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "CON",
+      "WIS"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "2 Daggers"
+    ]
+  },
+  {
+    "class": "ROGUE",
+    "subclass": "ROGUE_PHANTOM",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "CON",
+      "WIS"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "2 Daggers"
+    ]
+  },
+  {
+    "class": "ROGUE",
+    "subclass": "ROGUE_SCION_OF_THE_THREE",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "CON",
+      "INT"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "2 Daggers"
+    ]
+  },
+  {
+    "class": "ROGUE",
+    "subclass": "ROGUE_SCOUT",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "CON",
+      "WIS"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "2 Daggers"
+    ]
+  },
+  {
+    "class": "ROGUE",
+    "subclass": "ROGUE_SOULKNIFE",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "CON",
+      "WIS"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Psionic Knife"
+    ]
+  },
+  {
+    "class": "ROGUE",
+    "subclass": "ROGUE_SWASHBUCKLER",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "CON",
+      "CHA"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "2 Daggers"
+    ]
+  },
+  {
+    "class": "ROGUE",
+    "subclass": "ROGUE_THIEF",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "DEX",
+      "CON",
+      "WIS"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "2 Daggers"
+    ]
+  },
+  {
+    "class": "SORCERER",
+    "subclass": "SORCERER_ABERRANT_SORCERY",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "CON",
+      "DEX"
+    ],
+    "armor": null,
+    "hands": [
+      "Magical Wand"
+    ]
+  },
+  {
+    "class": "SORCERER",
+    "subclass": "SORCERER_CLOCKWORK_SORCERY",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "CON",
+      "DEX"
+    ],
+    "armor": null,
+    "hands": [
+      "Magical Wand"
+    ]
+  },
+  {
+    "class": "SORCERER",
+    "subclass": "SORCERER_DIVINE_SOUL",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "CON",
+      "DEX"
+    ],
+    "armor": null,
+    "hands": [
+      "Magical Wand"
+    ]
+  },
+  {
+    "class": "SORCERER",
+    "subclass": "SORCERER_DRACONIC_SORCERY",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "CON",
+      "DEX"
+    ],
+    "armor": null,
+    "hands": [
+      "Magical Wand"
+    ]
+  },
+  {
+    "class": "SORCERER",
+    "subclass": "SORCERER_SHADOW_MAGIC",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "CON",
+      "DEX"
+    ],
+    "armor": null,
+    "hands": [
+      "Magical Wand"
+    ]
+  },
+  {
+    "class": "SORCERER",
+    "subclass": "SORCERER_SPELLFIRE_SORCERY",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "CON",
+      "DEX"
+    ],
+    "armor": null,
+    "hands": [
+      "Magical Wand"
+    ]
+  },
+  {
+    "class": "SORCERER",
+    "subclass": "SORCERER_STORM_SORCERY",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "CON",
+      "DEX"
+    ],
+    "armor": null,
+    "hands": [
+      "Magical Wand"
+    ]
+  },
+  {
+    "class": "SORCERER",
+    "subclass": "SORCERER_WILD_MAGIC",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "CON",
+      "DEX"
+    ],
+    "armor": null,
+    "hands": [
+      "Magical Wand"
+    ]
+  },
+  {
+    "class": "WARLOCK",
+    "subclass": "WARLOCK_ARCHFEY_PATRON",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "CON",
+      "DEX"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Mystic Orb"
+    ]
+  },
+  {
+    "class": "WARLOCK",
+    "subclass": "WARLOCK_ARCHFEY_PATRON",
+    "variant": "Pact of the Blade",
+    "required_adjustment": "WARLOCK_PACT_OF_THE_BLADE",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Shadow Sword"
+    ]
+  },
+  {
+    "class": "WARLOCK",
+    "subclass": "WARLOCK_CELESTIAL_PATRON",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "CON",
+      "DEX"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Mystic Orb"
+    ]
+  },
+  {
+    "class": "WARLOCK",
+    "subclass": "WARLOCK_CELESTIAL_PATRON",
+    "variant": "Pact of the Blade",
+    "required_adjustment": "WARLOCK_PACT_OF_THE_BLADE",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Shadow Sword"
+    ]
+  },
+  {
+    "class": "WARLOCK",
+    "subclass": "WARLOCK_FIEND_PATRON",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "CON",
+      "DEX"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Mystic Orb"
+    ]
+  },
+  {
+    "class": "WARLOCK",
+    "subclass": "WARLOCK_FIEND_PATRON",
+    "variant": "Pact of the Blade",
+    "required_adjustment": "WARLOCK_PACT_OF_THE_BLADE",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Shadow Sword"
+    ]
+  },
+  {
+    "class": "WARLOCK",
+    "subclass": "WARLOCK_GREAT_OLD_ONE_PATRON",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "CON",
+      "DEX"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Mystic Orb"
+    ]
+  },
+  {
+    "class": "WARLOCK",
+    "subclass": "WARLOCK_GREAT_OLD_ONE_PATRON",
+    "variant": "Pact of the Blade",
+    "required_adjustment": "WARLOCK_PACT_OF_THE_BLADE",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Shadow Sword"
+    ]
+  },
+  {
+    "class": "WARLOCK",
+    "subclass": "WARLOCK_THE_HEXBLADE",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Cursed Sword"
+    ]
+  },
+  {
+    "class": "WARLOCK",
+    "subclass": "WARLOCK_THE_FATHOMLESS",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "CON",
+      "DEX"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Mystic Orb"
+    ]
+  },
+  {
+    "class": "WARLOCK",
+    "subclass": "WARLOCK_THE_FATHOMLESS",
+    "variant": "Pact of the Blade",
+    "required_adjustment": "WARLOCK_PACT_OF_THE_BLADE",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Shadow Sword"
+    ]
+  },
+  {
+    "class": "WARLOCK",
+    "subclass": "WARLOCK_THE_GENIE",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "CON",
+      "DEX"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Mystic Orb"
+    ]
+  },
+  {
+    "class": "WARLOCK",
+    "subclass": "WARLOCK_THE_GENIE",
+    "variant": "Pact of the Blade",
+    "required_adjustment": "WARLOCK_PACT_OF_THE_BLADE",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Shadow Sword"
+    ]
+  },
+  {
+    "class": "WARLOCK",
+    "subclass": "WARLOCK_THE_UNDEAD",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "CON",
+      "DEX"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Mystic Orb"
+    ]
+  },
+  {
+    "class": "WARLOCK",
+    "subclass": "WARLOCK_THE_UNDEAD",
+    "variant": "Pact of the Blade",
+    "required_adjustment": "WARLOCK_PACT_OF_THE_BLADE",
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "CHA",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Shadow Sword"
+    ]
+  },
+  {
+    "class": "WIZARD",
+    "subclass": "WIZARD_BLADESINGING",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "INT",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Leather Armor",
+    "hands": [
+      "Magic Rapier"
+    ]
+  },
+  {
+    "class": "WIZARD",
+    "subclass": "WIZARD_ORDER_OF_SCRIBES",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "INT",
+      "CON",
+      "DEX"
+    ],
+    "armor": null,
+    "hands": [
+      "Spellbook"
+    ]
+  },
+  {
+    "class": "WIZARD",
+    "subclass": "WIZARD_SCHOOL_OF_ABJURATION",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "INT",
+      "CON",
+      "DEX"
+    ],
+    "armor": null,
+    "hands": [
+      "Spellbook"
+    ]
+  },
+  {
+    "class": "WIZARD",
+    "subclass": "WIZARD_SCHOOL_OF_CONJURATION",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "INT",
+      "CON",
+      "DEX"
+    ],
+    "armor": null,
+    "hands": [
+      "Spellbook"
+    ]
+  },
+  {
+    "class": "WIZARD",
+    "subclass": "WIZARD_DIVINER",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "INT",
+      "CON",
+      "DEX"
+    ],
+    "armor": null,
+    "hands": [
+      "Spellbook"
+    ]
+  },
+  {
+    "class": "WIZARD",
+    "subclass": "WIZARD_SCHOOL_OF_ENCHANTMENT",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "INT",
+      "CON",
+      "DEX"
+    ],
+    "armor": null,
+    "hands": [
+      "Spellbook"
+    ]
+  },
+  {
+    "class": "WIZARD",
+    "subclass": "WIZARD_EVOKER",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "INT",
+      "CON",
+      "DEX"
+    ],
+    "armor": null,
+    "hands": [
+      "Spellbook"
+    ]
+  },
+  {
+    "class": "WIZARD",
+    "subclass": "WIZARD_ILLUSIONIST",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "INT",
+      "CON",
+      "DEX"
+    ],
+    "armor": null,
+    "hands": [
+      "Spellbook"
+    ]
+  },
+  {
+    "class": "WIZARD",
+    "subclass": "WIZARD_SCHOOL_OF_NECROMANCY",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "INT",
+      "CON",
+      "DEX"
+    ],
+    "armor": null,
+    "hands": [
+      "Spellbook"
+    ]
+  },
+  {
+    "class": "WIZARD",
+    "subclass": "WIZARD_WAR_MAGIC",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "INT",
+      "CON",
+      "DEX"
+    ],
+    "armor": null,
+    "hands": [
+      "Spellbook"
+    ]
+  }
+]

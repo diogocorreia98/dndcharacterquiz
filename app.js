@@ -30,11 +30,14 @@ class QuizApp {
 
     this.sectionVariables = this.buildSectionVariables();
     this.roleData = this.prepareRoleData();
+    this.variantData = this.prepareVariantData();
+    this.lastVariantSignature = null;
     this.currentOptions = [];
     this.selectedValue = null;
     this.selectedValues = new Set();
     this.currentSelectionConfig = { mode: 'single' };
     this.attachEventListeners();
+    this.syncClassVariantAttributes();
     this.start();
   }
 
@@ -48,6 +51,8 @@ class QuizApp {
     this.state.currentNodeId = null;
     this.state.history = [];
     this.state.variables = this.cloneValue(this.quizData.metadata?.initial_state ?? {});
+    this.lastVariantSignature = null;
+    this.syncClassVariantAttributes();
     this.showQuestion(this.quizData.root);
   }
 
@@ -752,6 +757,10 @@ class QuizApp {
       primary_roles: 'Papéis principais',
       secondary_roles: 'Papéis secundários',
       dark_gift: 'Dark Gift',
+      preferred_physical_ability: 'Habilidade física preferida',
+      class_ability_combo: 'Atributos prioritários',
+      class_armor: 'Armadura sugerida',
+      class_handheld_gear: 'Equipamento empunhado',
     };
     return map[variableName] ?? variableName;
   }
@@ -851,6 +860,11 @@ class QuizApp {
       }
     });
 
+    const classSection = ensureSection('class');
+    ['class_ability_combo', 'class_armor', 'class_handheld_gear'].forEach((variable) => {
+      classSection.add(variable);
+    });
+
     return map;
   }
 
@@ -886,6 +900,8 @@ class QuizApp {
 
       this.state.variables[action.var] = this.cloneValue(value);
     });
+
+    this.syncClassVariantAttributes();
   }
 
   applyActions(actions, context = {}) {
@@ -935,6 +951,8 @@ class QuizApp {
 
       this.state.variables[action.var] = this.cloneValue(value);
     });
+
+    this.syncClassVariantAttributes();
   }
 
   applyRoleFilters(node, options) {
@@ -1035,6 +1053,142 @@ class QuizApp {
     });
 
     return { data, primaryRoles, secondaryRoles };
+  }
+
+  prepareVariantData() {
+    const entries = Array.isArray(this.quizData.metadata?.class_variants)
+      ? this.quizData.metadata.class_variants
+      : [];
+    const map = new Map();
+
+    entries.forEach((entry) => {
+      const classCode = entry?.class;
+      const subclassCode = entry?.subclass;
+      if (!classCode || !subclassCode) {
+        return;
+      }
+
+      const key = `${classCode}::${subclassCode}`;
+      if (!map.has(key)) {
+        map.set(key, []);
+      }
+
+      const abilityCombo = Array.isArray(entry.ability_combo)
+        ? entry.ability_combo.map((value) => String(value))
+        : [];
+      const hands = Array.isArray(entry.hands) ? entry.hands.map((value) => String(value)) : [];
+
+      map.get(key).push({
+        adjustment: entry.required_adjustment ?? null,
+        ability: entry.preferred_ability ?? null,
+        abilityCombo,
+        armor: entry.armor ?? null,
+        hands,
+        variant: entry.variant ?? null,
+      });
+    });
+
+    return map;
+  }
+
+  getVariantEntries(classCode, subclassCode) {
+    if (!classCode || !subclassCode) {
+      return [];
+    }
+    const key = `${classCode}::${subclassCode}`;
+    return this.variantData?.get(key) ?? [];
+  }
+
+  syncClassVariantAttributes() {
+    if (!this.state?.variables) {
+      return;
+    }
+
+    const variables = this.state.variables;
+    const classCode = variables.class ?? null;
+    const subclassCode = variables.subclass ?? null;
+    const classAdjustment = variables.class_adjustment ?? null;
+    const signature = `${classCode ?? ''}::${subclassCode ?? ''}::${classAdjustment ?? ''}`;
+    const combinationChanged = signature !== this.lastVariantSignature;
+    if (combinationChanged) {
+      this.lastVariantSignature = signature;
+      variables.preferred_physical_ability = null;
+    }
+
+    const entries = this.getVariantEntries(classCode, subclassCode);
+    if (!entries.length) {
+      variables.variant_requires_physical_preference = false;
+      variables.class_ability_combo = null;
+      variables.class_armor = null;
+      variables.class_handheld_gear = null;
+      return;
+    }
+
+    let filtered = entries.filter((entry) => entry.adjustment === classAdjustment);
+    if (!filtered.length) {
+      filtered = entries.filter((entry) => entry.adjustment === null || entry.adjustment === undefined);
+    }
+    if (!filtered.length) {
+      filtered = entries.slice();
+    }
+
+    const abilityOptions = Array.from(
+      new Set(
+        filtered
+          .map((entry) => (entry.ability ? String(entry.ability).toUpperCase() : null))
+          .filter(Boolean)
+      )
+    );
+    const needsChoice = abilityOptions.length >= 2;
+    variables.variant_requires_physical_preference = needsChoice;
+
+    if (!abilityOptions.includes(variables.preferred_physical_ability)) {
+      variables.preferred_physical_ability = null;
+    }
+
+    let selected = null;
+    if (needsChoice) {
+      if (variables.preferred_physical_ability) {
+        selected = filtered.find(
+          (entry) => (entry.ability ?? '').toUpperCase() === variables.preferred_physical_ability
+        );
+      }
+    } else {
+      selected = filtered[0] ?? null;
+    }
+
+    if (!selected && filtered.length === 1) {
+      selected = filtered[0];
+    }
+
+    const abilityComboText = Array.isArray(selected?.abilityCombo) && selected.abilityCombo.length
+      ? selected.abilityCombo.join(' / ')
+      : null;
+
+    const armorRaw = selected?.armor ?? null;
+    let armorText = null;
+    if (typeof armorRaw === 'string') {
+      const trimmed = armorRaw.trim();
+      armorText = trimmed.length ? trimmed : null;
+    } else if (armorRaw) {
+      armorText = armorRaw;
+    }
+
+    const handsRaw = selected?.hands ?? null;
+    let handsText = null;
+    if (Array.isArray(handsRaw)) {
+      const filteredHands = handsRaw
+        .map((item) => (typeof item === 'string' ? item.trim() : item))
+        .filter((item) => Boolean(item));
+      handsText = filteredHands.length ? filteredHands.join(', ') : null;
+    } else if (typeof handsRaw === 'string') {
+      const trimmed = handsRaw.trim();
+      handsText = trimmed.length ? trimmed : null;
+    }
+
+    variables.class_ability_combo = abilityComboText;
+    variables.class_armor = armorText;
+    variables.class_handheld_gear = handsText;
   }
 
   buildSubclassNameMap() {
@@ -1193,6 +1347,14 @@ const loadQuizData = async (manifestUrl) => {
     metadata = await fetchJson(manifest.metadata_file, 'os mapeamentos');
   }
 
+  if (manifest.class_variant_file) {
+    const variants = await fetchJson(manifest.class_variant_file, 'as variantes de classe');
+    metadata = {
+      ...metadata,
+      class_variants: variants,
+    };
+  }
+
   const merged = {
     ...manifest,
     nodes,
@@ -1201,6 +1363,7 @@ const loadQuizData = async (manifestUrl) => {
 
   delete merged.question_files;
   delete merged.metadata_file;
+  delete merged.class_variant_file;
 
   if (!merged.root) {
     const rootFromPayload = questionPayloads.find(({ data }) => data?.root)?.data?.root;

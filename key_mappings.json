@@ -329,6 +329,25 @@
         "WIZARD_BLADESINGER"
       ]
     },
+    "preferred_physical_ability": {
+      "type": "enum",
+      "symbols": [
+        "DEX",
+        "STR"
+      ]
+    },
+    "class_ability_combo": {
+      "type": "string"
+    },
+    "class_armor": {
+      "type": "string"
+    },
+    "class_handheld_gear": {
+      "type": "string"
+    },
+    "variant_requires_physical_preference": {
+      "type": "boolean"
+    },
     "find_familiar_usage": {
       "type": "enum",
       "symbols": [
@@ -471,6 +490,16 @@
       "B": {
         "pt": "Não tem traços de animal",
         "en": "No animal traits"
+      }
+    },
+    "preferred_physical_ability": {
+      "DEX": {
+        "pt": "Destreza (DEX)",
+        "en": "Dexterity (DEX)"
+      },
+      "STR": {
+        "pt": "Força (STR)",
+        "en": "Strength (STR)"
       }
     },
     "species": {
@@ -3718,7 +3747,12 @@
   "initial_state": {
     "primary_roles": [],
     "secondary_roles": [],
-    "dark_gift": null
+    "dark_gift": null,
+    "preferred_physical_ability": null,
+    "class_ability_combo": null,
+    "class_armor": null,
+    "class_handheld_gear": null,
+    "variant_requires_physical_preference": false
   },
   "role_mappings": {
     "blaster": {
