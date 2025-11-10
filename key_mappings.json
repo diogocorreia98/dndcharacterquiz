@@ -15,6 +15,10 @@
     "dark_gift": {
       "pt": "Dark Gift",
       "en": "Dark Gift"
+    },
+    "background": {
+      "pt": "Antecedente",
+      "en": "Background"
     }
   },
   "variables": {
@@ -428,6 +432,45 @@
         "SYMBIOTIC_BEING",
         "TOUCH_OF_DEATH",
         "WATCHERS"
+      ]
+    },
+    "background": {
+      "type": "enum",
+      "symbols": [
+        "ACOLYTE",
+        "ARTISAN",
+        "CHARLATAN",
+        "CHONDATHAN_FREEBOOTER",
+        "CRIMINAL",
+        "DEAD_MAGIC_DWELLER",
+        "DRAGON_CULTIST",
+        "EMERALD_ENCLAVE_CARETAKER",
+        "ENTERTAINER",
+        "FARMER",
+        "FLAMING_FIST_MERCENARY",
+        "GENIE_TOUCHED",
+        "GUARD",
+        "GUIDE",
+        "HARPER",
+        "HERMIT",
+        "ICE_FISHER",
+        "KNIGHT_OF_THE_GAUNTLET",
+        "LORDS_ALLIANCE_VASSAL",
+        "MERCHANT",
+        "MOONWELL_PILGRIM",
+        "MULHORANDI_TOMB_RAIDER",
+        "MYTHALKEEPER",
+        "NOBLE",
+        "PURPLE_DRAGON_SQUIRE",
+        "RASHEMI_WANDERER",
+        "SAGE",
+        "SAILOR",
+        "SCRIBE",
+        "SHADOWMASTERS_EXILE",
+        "SOLDIER",
+        "SPELLFIRE_INITIATE",
+        "WAYFARER",
+        "ZHENTARIM_MERCENARY"
       ]
     }
   },
@@ -1172,6 +1215,144 @@
       "WATCHERS": {
         "pt": "Watchers",
         "en": "Watchers"
+      }
+    },
+    "background": {
+      "ACOLYTE": {
+        "pt": "Acolyte",
+        "en": "Acolyte"
+      },
+      "ARTISAN": {
+        "pt": "Artisan",
+        "en": "Artisan"
+      },
+      "CHARLATAN": {
+        "pt": "Charlatan",
+        "en": "Charlatan"
+      },
+      "CHONDATHAN_FREEBOOTER": {
+        "pt": "Chondathan Freebooter",
+        "en": "Chondathan Freebooter"
+      },
+      "CRIMINAL": {
+        "pt": "Criminal",
+        "en": "Criminal"
+      },
+      "DEAD_MAGIC_DWELLER": {
+        "pt": "Dead Magic Dweller",
+        "en": "Dead Magic Dweller"
+      },
+      "DRAGON_CULTIST": {
+        "pt": "Dragon Cultist",
+        "en": "Dragon Cultist"
+      },
+      "EMERALD_ENCLAVE_CARETAKER": {
+        "pt": "Emerald Enclave Caretaker",
+        "en": "Emerald Enclave Caretaker"
+      },
+      "ENTERTAINER": {
+        "pt": "Entertainer",
+        "en": "Entertainer"
+      },
+      "FARMER": {
+        "pt": "Farmer",
+        "en": "Farmer"
+      },
+      "FLAMING_FIST_MERCENARY": {
+        "pt": "Flaming Fist Mercenary",
+        "en": "Flaming Fist Mercenary"
+      },
+      "GENIE_TOUCHED": {
+        "pt": "Genie Touched",
+        "en": "Genie Touched"
+      },
+      "GUARD": {
+        "pt": "Guard",
+        "en": "Guard"
+      },
+      "GUIDE": {
+        "pt": "Guide",
+        "en": "Guide"
+      },
+      "HARPER": {
+        "pt": "Harper",
+        "en": "Harper"
+      },
+      "HERMIT": {
+        "pt": "Hermit",
+        "en": "Hermit"
+      },
+      "ICE_FISHER": {
+        "pt": "Ice Fisher",
+        "en": "Ice Fisher"
+      },
+      "KNIGHT_OF_THE_GAUNTLET": {
+        "pt": "Knight of the Gauntlet",
+        "en": "Knight of the Gauntlet"
+      },
+      "LORDS_ALLIANCE_VASSAL": {
+        "pt": "Lords' Alliance Vassal",
+        "en": "Lords' Alliance Vassal"
+      },
+      "MERCHANT": {
+        "pt": "Merchant",
+        "en": "Merchant"
+      },
+      "MOONWELL_PILGRIM": {
+        "pt": "Moonwell Pilgrim",
+        "en": "Moonwell Pilgrim"
+      },
+      "MULHORANDI_TOMB_RAIDER": {
+        "pt": "Mulhorandi Tomb Raider",
+        "en": "Mulhorandi Tomb Raider"
+      },
+      "MYTHALKEEPER": {
+        "pt": "Mythalkeeper",
+        "en": "Mythalkeeper"
+      },
+      "NOBLE": {
+        "pt": "Noble",
+        "en": "Noble"
+      },
+      "PURPLE_DRAGON_SQUIRE": {
+        "pt": "Purple Dragon Squire",
+        "en": "Purple Dragon Squire"
+      },
+      "RASHEMI_WANDERER": {
+        "pt": "Rashemi Wanderer",
+        "en": "Rashemi Wanderer"
+      },
+      "SAGE": {
+        "pt": "Sage",
+        "en": "Sage"
+      },
+      "SAILOR": {
+        "pt": "Sailor",
+        "en": "Sailor"
+      },
+      "SCRIBE": {
+        "pt": "Scribe",
+        "en": "Scribe"
+      },
+      "SHADOWMASTERS_EXILE": {
+        "pt": "Shadowmasters Exile",
+        "en": "Shadowmasters Exile"
+      },
+      "SOLDIER": {
+        "pt": "Soldier",
+        "en": "Soldier"
+      },
+      "SPELLFIRE_INITIATE": {
+        "pt": "Spellfire Initiate",
+        "en": "Spellfire Initiate"
+      },
+      "WAYFARER": {
+        "pt": "Wayfarer",
+        "en": "Wayfarer"
+      },
+      "ZHENTARIM_MERCENARY": {
+        "pt": "Zhentarim Mercenary",
+        "en": "Zhentarim Mercenary"
       }
     }
   },
@@ -3738,6 +3919,348 @@
         "pt": "Bladesinger",
         "en": "Bladesinger"
       }
+    ],
+    "backgrounds": [
+      {
+        "code": "ACOLYTE",
+        "pt": "Acolyte",
+        "en": "Acolyte",
+        "ability_increases": [
+          "INT",
+          "WIS",
+          "CHA"
+        ]
+      },
+      {
+        "code": "ARTISAN",
+        "pt": "Artisan",
+        "en": "Artisan",
+        "ability_increases": [
+          "STR",
+          "DEX",
+          "INT"
+        ]
+      },
+      {
+        "code": "CHARLATAN",
+        "pt": "Charlatan",
+        "en": "Charlatan",
+        "ability_increases": [
+          "DEX",
+          "CON",
+          "CHA"
+        ]
+      },
+      {
+        "code": "CHONDATHAN_FREEBOOTER",
+        "pt": "Chondathan Freebooter",
+        "en": "Chondathan Freebooter",
+        "ability_increases": [
+          "STR",
+          "DEX",
+          "WIS"
+        ]
+      },
+      {
+        "code": "CRIMINAL",
+        "pt": "Criminal",
+        "en": "Criminal",
+        "ability_increases": [
+          "DEX",
+          "CON",
+          "INT"
+        ]
+      },
+      {
+        "code": "DEAD_MAGIC_DWELLER",
+        "pt": "Dead Magic Dweller",
+        "en": "Dead Magic Dweller",
+        "ability_increases": [
+          "STR",
+          "CON",
+          "WIS"
+        ]
+      },
+      {
+        "code": "DRAGON_CULTIST",
+        "pt": "Dragon Cultist",
+        "en": "Dragon Cultist",
+        "ability_increases": [
+          "DEX",
+          "CON",
+          "INT"
+        ]
+      },
+      {
+        "code": "EMERALD_ENCLAVE_CARETAKER",
+        "pt": "Emerald Enclave Caretaker",
+        "en": "Emerald Enclave Caretaker",
+        "ability_increases": [
+          "CON",
+          "INT",
+          "WIS"
+        ]
+      },
+      {
+        "code": "ENTERTAINER",
+        "pt": "Entertainer",
+        "en": "Entertainer",
+        "ability_increases": [
+          "STR",
+          "DEX",
+          "CHA"
+        ]
+      },
+      {
+        "code": "FARMER",
+        "pt": "Farmer",
+        "en": "Farmer",
+        "ability_increases": [
+          "STR",
+          "CON",
+          "WIS"
+        ]
+      },
+      {
+        "code": "FLAMING_FIST_MERCENARY",
+        "pt": "Flaming Fist Mercenary",
+        "en": "Flaming Fist Mercenary",
+        "ability_increases": [
+          "STR",
+          "CON",
+          "CHA"
+        ]
+      },
+      {
+        "code": "GENIE_TOUCHED",
+        "pt": "Genie Touched",
+        "en": "Genie Touched",
+        "ability_increases": [
+          "DEX",
+          "WIS",
+          "CHA"
+        ]
+      },
+      {
+        "code": "GUARD",
+        "pt": "Guard",
+        "en": "Guard",
+        "ability_increases": [
+          "STR",
+          "INT",
+          "WIS"
+        ]
+      },
+      {
+        "code": "GUIDE",
+        "pt": "Guide",
+        "en": "Guide",
+        "ability_increases": [
+          "DEX",
+          "CON",
+          "WIS"
+        ]
+      },
+      {
+        "code": "HARPER",
+        "pt": "Harper",
+        "en": "Harper",
+        "ability_increases": [
+          "DEX",
+          "INT",
+          "CHA"
+        ]
+      },
+      {
+        "code": "HERMIT",
+        "pt": "Hermit",
+        "en": "Hermit",
+        "ability_increases": [
+          "CON",
+          "WIS",
+          "CHA"
+        ]
+      },
+      {
+        "code": "ICE_FISHER",
+        "pt": "Ice Fisher",
+        "en": "Ice Fisher",
+        "ability_increases": [
+          "STR",
+          "DEX",
+          "CON"
+        ]
+      },
+      {
+        "code": "KNIGHT_OF_THE_GAUNTLET",
+        "pt": "Knight of the Gauntlet",
+        "en": "Knight of the Gauntlet",
+        "ability_increases": [
+          "STR",
+          "INT",
+          "WIS"
+        ]
+      },
+      {
+        "code": "LORDS_ALLIANCE_VASSAL",
+        "pt": "Lords' Alliance Vassal",
+        "en": "Lords' Alliance Vassal",
+        "ability_increases": [
+          "STR",
+          "INT",
+          "CHA"
+        ]
+      },
+      {
+        "code": "MERCHANT",
+        "pt": "Merchant",
+        "en": "Merchant",
+        "ability_increases": [
+          "CON",
+          "INT",
+          "CHA"
+        ]
+      },
+      {
+        "code": "MOONWELL_PILGRIM",
+        "pt": "Moonwell Pilgrim",
+        "en": "Moonwell Pilgrim",
+        "ability_increases": [
+          "CON",
+          "WIS",
+          "CHA"
+        ]
+      },
+      {
+        "code": "MULHORANDI_TOMB_RAIDER",
+        "pt": "Mulhorandi Tomb Raider",
+        "en": "Mulhorandi Tomb Raider",
+        "ability_increases": [
+          "DEX",
+          "CON",
+          "INT"
+        ]
+      },
+      {
+        "code": "MYTHALKEEPER",
+        "pt": "Mythalkeeper",
+        "en": "Mythalkeeper",
+        "ability_increases": [
+          "INT",
+          "WIS",
+          "CHA"
+        ]
+      },
+      {
+        "code": "NOBLE",
+        "pt": "Noble",
+        "en": "Noble",
+        "ability_increases": [
+          "STR",
+          "INT",
+          "CHA"
+        ]
+      },
+      {
+        "code": "PURPLE_DRAGON_SQUIRE",
+        "pt": "Purple Dragon Squire",
+        "en": "Purple Dragon Squire",
+        "ability_increases": [
+          "STR",
+          "WIS",
+          "CHA"
+        ]
+      },
+      {
+        "code": "RASHEMI_WANDERER",
+        "pt": "Rashemi Wanderer",
+        "en": "Rashemi Wanderer",
+        "ability_increases": [
+          "STR",
+          "CON",
+          "CHA"
+        ]
+      },
+      {
+        "code": "SAGE",
+        "pt": "Sage",
+        "en": "Sage",
+        "ability_increases": [
+          "CON",
+          "INT",
+          "WIS"
+        ]
+      },
+      {
+        "code": "SAILOR",
+        "pt": "Sailor",
+        "en": "Sailor",
+        "ability_increases": [
+          "STR",
+          "DEX",
+          "WIS"
+        ]
+      },
+      {
+        "code": "SCRIBE",
+        "pt": "Scribe",
+        "en": "Scribe",
+        "ability_increases": [
+          "DEX",
+          "INT",
+          "WIS"
+        ]
+      },
+      {
+        "code": "SHADOWMASTERS_EXILE",
+        "pt": "Shadowmasters Exile",
+        "en": "Shadowmasters Exile",
+        "ability_increases": [
+          "DEX",
+          "INT",
+          "CHA"
+        ]
+      },
+      {
+        "code": "SOLDIER",
+        "pt": "Soldier",
+        "en": "Soldier",
+        "ability_increases": [
+          "STR",
+          "DEX",
+          "CON"
+        ]
+      },
+      {
+        "code": "SPELLFIRE_INITIATE",
+        "pt": "Spellfire Initiate",
+        "en": "Spellfire Initiate",
+        "ability_increases": [
+          "CON",
+          "INT",
+          "CHA"
+        ]
+      },
+      {
+        "code": "WAYFARER",
+        "pt": "Wayfarer",
+        "en": "Wayfarer",
+        "ability_increases": [
+          "DEX",
+          "WIS",
+          "CHA"
+        ]
+      },
+      {
+        "code": "ZHENTARIM_MERCENARY",
+        "pt": "Zhentarim Mercenary",
+        "en": "Zhentarim Mercenary",
+        "ability_increases": [
+          "STR",
+          "DEX",
+          "CHA"
+        ]
+      }
     ]
   },
   "supported_locales": [
@@ -3752,7 +4275,9 @@
     "class_ability_combo": null,
     "class_armor": null,
     "class_handheld_gear": null,
-    "variant_requires_physical_preference": false
+    "variant_requires_physical_preference": false,
+    "background": null,
+    "_class_ability_combo_codes": []
   },
   "role_mappings": {
     "blaster": {
