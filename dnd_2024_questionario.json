@@ -7,5 +7,6 @@
     "before_class": "questions_appearance.json",
     "class": "questions_profession.json"
   },
-  "metadata_file": "key_mappings.json"
+  "metadata_file": "key_mappings.json",
+  "class_variant_file": "class_variants.json"
 }

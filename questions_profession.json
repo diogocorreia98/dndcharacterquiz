@@ -955,7 +955,7 @@
         ]
       },
       "skip_if_no_options": {
-        "next": "q_dark_gift_presence"
+        "next": "q_physical_ability_preference"
       },
       "autoselect_if_single": {
         "dataset": "subclasses",
@@ -1079,7 +1079,7 @@
               "value": null
             }
           ],
-          "next": "q_dark_gift_presence"
+          "next": "q_physical_ability_preference"
         }
       ]
     },
@@ -1179,7 +1179,7 @@
               "value": "BAT"
             }
           ],
-          "next": "q_dark_gift_presence"
+          "next": "q_physical_ability_preference"
         },
         {
           "label": "Hawk",
@@ -1191,7 +1191,7 @@
               "value": "HAWK"
             }
           ],
-          "next": "q_dark_gift_presence"
+          "next": "q_physical_ability_preference"
         },
         {
           "label": "Owl",
@@ -1203,7 +1203,7 @@
               "value": "OWL"
             }
           ],
-          "next": "q_dark_gift_presence"
+          "next": "q_physical_ability_preference"
         },
         {
           "label": "Raven",
@@ -1215,7 +1215,7 @@
               "value": "RAVEN"
             }
           ],
-          "next": "q_dark_gift_presence"
+          "next": "q_physical_ability_preference"
         },
         {
           "label": "Hei-de escolher outro animal",
@@ -1227,7 +1227,7 @@
               "value": "OTHER_AIR"
             }
           ],
-          "next": "q_dark_gift_presence"
+          "next": "q_physical_ability_preference"
         }
       ]
     },
@@ -1260,7 +1260,7 @@
               "value": "CAT"
             }
           ],
-          "next": "q_dark_gift_presence"
+          "next": "q_physical_ability_preference"
         },
         {
           "label": "Lizard",
@@ -1272,7 +1272,7 @@
               "value": "LIZARD"
             }
           ],
-          "next": "q_dark_gift_presence"
+          "next": "q_physical_ability_preference"
         },
         {
           "label": "Rat",
@@ -1284,7 +1284,7 @@
               "value": "RAT"
             }
           ],
-          "next": "q_dark_gift_presence"
+          "next": "q_physical_ability_preference"
         },
         {
           "label": "Spider",
@@ -1296,7 +1296,7 @@
               "value": "SPIDER"
             }
           ],
-          "next": "q_dark_gift_presence"
+          "next": "q_physical_ability_preference"
         },
         {
           "label": "Weasel",
@@ -1308,7 +1308,7 @@
               "value": "WEASEL"
             }
           ],
-          "next": "q_dark_gift_presence"
+          "next": "q_physical_ability_preference"
         },
         {
           "label": "Hei-de escolher outro animal",
@@ -1320,7 +1320,7 @@
               "value": "OTHER_LAND"
             }
           ],
-          "next": "q_dark_gift_presence"
+          "next": "q_physical_ability_preference"
         }
       ]
     },
@@ -1353,7 +1353,7 @@
               "value": "FROG"
             }
           ],
-          "next": "q_dark_gift_presence"
+          "next": "q_physical_ability_preference"
         },
         {
           "label": "Octopus",
@@ -1365,7 +1365,7 @@
               "value": "OCTOPUS"
             }
           ],
-          "next": "q_dark_gift_presence"
+          "next": "q_physical_ability_preference"
         },
         {
           "label": "Hei-de escolher outro animal",
@@ -1377,7 +1377,7 @@
               "value": "OTHER_WATER"
             }
           ],
-          "next": "q_dark_gift_presence"
+          "next": "q_physical_ability_preference"
         }
       ]
     },
@@ -2157,6 +2157,43 @@
           "next": "q_subclass_group"
         }
           ]
+    },
+    "q_physical_ability_preference": {
+      "type": "question",
+      "section": "class",
+      "question": "Preferes destacar a Destreza (DEX) ou a Força (STR) da tua personagem?",
+      "when": {
+        "var": "variant_requires_physical_preference",
+        "op": "eq",
+        "value": true
+      },
+      "options": [
+        {
+          "label": "Destreza (DEX)",
+          "value": "DEX",
+          "set": [
+            {
+              "var": "preferred_physical_ability",
+              "op": "set",
+              "value": "DEX"
+            }
+          ],
+          "next": "q_dark_gift_presence"
+        },
+        {
+          "label": "Força (STR)",
+          "value": "STR",
+          "set": [
+            {
+              "var": "preferred_physical_ability",
+              "op": "set",
+              "value": "STR"
+            }
+          ],
+          "next": "q_dark_gift_presence"
+        }
+      ],
+      "next": "q_dark_gift_presence"
     },
     "q_dark_gift_presence": {
       "type": "question",
