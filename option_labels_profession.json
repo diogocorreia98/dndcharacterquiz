@@ -538,5 +538,653 @@
       "pt": "Watchers",
       "en": "Watchers"
     }
+  },
+  "q_subclass_choice": {
+    "ARTIFICER_ALCHEMIST": {
+      "pt": "Alchemist",
+      "en": "Alchemist"
+    },
+    "ARTIFICER_ARMORER": {
+      "pt": "Armorer",
+      "en": "Armorer"
+    },
+    "ARTIFICER_ARTILLERIST": {
+      "pt": "Artillerist",
+      "en": "Artillerist"
+    },
+    "ARTIFICER_BATTLE_SMITH": {
+      "pt": "Battle Smith",
+      "en": "Battle Smith"
+    },
+    "BARBARIAN_PATH_OF_THE_BERSERKER": {
+      "pt": "Path of the Berserker",
+      "en": "Path of the Berserker"
+    },
+    "BARBARIAN_PATH_OF_THE_WILD_HEART": {
+      "pt": "Path of the Wild Heart",
+      "en": "Path of the Wild Heart"
+    },
+    "BARBARIAN_PATH_OF_THE_WORLD_TREE": {
+      "pt": "Path of the World Tree",
+      "en": "Path of the World Tree"
+    },
+    "BARBARIAN_PATH_OF_THE_ZEALOT": {
+      "pt": "Path of the Zealot",
+      "en": "Path of the Zealot"
+    },
+    "BARBARIAN_PATH_OF_THE_ANCESTRAL_GUARDIAN": {
+      "pt": "Path of the Ancestral Guardian",
+      "en": "Path of the Ancestral Guardian"
+    },
+    "BARBARIAN_PATH_OF_THE_BEAST": {
+      "pt": "Path of the Beast",
+      "en": "Path of the Beast"
+    },
+    "BARBARIAN_PATH_OF_THE_STORM_HERALD": {
+      "pt": "Path of the Storm Herald",
+      "en": "Path of the Storm Herald"
+    },
+    "BARBARIAN_PATH_OF_THE_WILD_MAGIC": {
+      "pt": "Path of the Wild Magic",
+      "en": "Path of the Wild Magic"
+    },
+    "BARBARIAN_PATH_OF_THE_MUSCLE_WIZARD": {
+      "pt": "Path of the Muscle Wizard",
+      "en": "Path of the Muscle Wizard"
+    },
+    "BARD_COLLEGE_OF_DANCE": {
+      "pt": "College of Dance",
+      "en": "College of Dance"
+    },
+    "BARD_COLLEGE_OF_GLAMOUR": {
+      "pt": "College of Glamour",
+      "en": "College of Glamour"
+    },
+    "BARD_COLLEGE_OF_LORE": {
+      "pt": "College of Lore",
+      "en": "College of Lore"
+    },
+    "BARD_COLLEGE_OF_VALOR": {
+      "pt": "College of Valor",
+      "en": "College of Valor"
+    },
+    "BARD_COLLEGE_OF_CREATION": {
+      "pt": "College of Creation",
+      "en": "College of Creation"
+    },
+    "BARD_COLLEGE_OF_ELOQUENCE": {
+      "pt": "College of Eloquence",
+      "en": "College of Eloquence"
+    },
+    "BARD_COLLEGE_OF_SWORDS": {
+      "pt": "College of Swords",
+      "en": "College of Swords"
+    },
+    "BARD_COLLEGE_OF_WHISPERS": {
+      "pt": "College of Whispers",
+      "en": "College of Whispers"
+    },
+    "CLERIC_LIFE_DOMAIN": {
+      "pt": "Life Domain",
+      "en": "Life Domain"
+    },
+    "CLERIC_LIGHT_DOMAIN": {
+      "pt": "Light Domain",
+      "en": "Light Domain"
+    },
+    "CLERIC_TRICKERY_DOMAIN": {
+      "pt": "Trickery Domain",
+      "en": "Trickery Domain"
+    },
+    "CLERIC_WAR_DOMAIN": {
+      "pt": "War Domain",
+      "en": "War Domain"
+    },
+    "CLERIC_ARCANA_DOMAIN": {
+      "pt": "Arcana Domain",
+      "en": "Arcana Domain"
+    },
+    "CLERIC_FORGE_DOMAIN": {
+      "pt": "Forge Domain",
+      "en": "Forge Domain"
+    },
+    "CLERIC_GRAVE_DOMAIN": {
+      "pt": "Grave Domain",
+      "en": "Grave Domain"
+    },
+    "CLERIC_KNOWLEDGE_DOMAIN": {
+      "pt": "Knowledge Domain",
+      "en": "Knowledge Domain"
+    },
+    "CLERIC_NATURE_DOMAIN": {
+      "pt": "Nature Domain",
+      "en": "Nature Domain"
+    },
+    "CLERIC_ORDER_DOMAIN": {
+      "pt": "Order Domain",
+      "en": "Order Domain"
+    },
+    "CLERIC_PEACE_DOMAIN": {
+      "pt": "Peace Domain",
+      "en": "Peace Domain"
+    },
+    "CLERIC_TEMPEST_DOMAIN": {
+      "pt": "Tempest Domain",
+      "en": "Tempest Domain"
+    },
+    "CLERIC_TWILIGHT_DOMAIN": {
+      "pt": "Twilight Domain",
+      "en": "Twilight Domain"
+    },
+    "DRUID_CIRCLE_OF_THE_LAND": {
+      "pt": "Circle of the Land",
+      "en": "Circle of the Land"
+    },
+    "DRUID_CIRCLE_OF_THE_MOON": {
+      "pt": "Circle of the Moon",
+      "en": "Circle of the Moon"
+    },
+    "DRUID_CIRCLE_OF_THE_SEA": {
+      "pt": "Circle of the Sea",
+      "en": "Circle of the Sea"
+    },
+    "DRUID_CIRCLE_OF_THE_STARS": {
+      "pt": "Circle of the Stars",
+      "en": "Circle of the Stars"
+    },
+    "DRUID_CIRCLE_OF_DREAMS": {
+      "pt": "Circle of Dreams",
+      "en": "Circle of Dreams"
+    },
+    "DRUID_CIRCLE_OF_SPORES": {
+      "pt": "Circle of Spores",
+      "en": "Circle of Spores"
+    },
+    "DRUID_CIRCLE_OF_THE_SHEPHERD": {
+      "pt": "Circle of the Shepherd",
+      "en": "Circle of the Shepherd"
+    },
+    "DRUID_CIRCLE_OF_WILDFIRE": {
+      "pt": "Circle of Wildfire",
+      "en": "Circle of Wildfire"
+    },
+    "FIGHTER_BATTLE_MASTER": {
+      "pt": "Battle Master",
+      "en": "Battle Master"
+    },
+    "FIGHTER_CHAMPION": {
+      "pt": "Champion",
+      "en": "Champion"
+    },
+    "FIGHTER_ELDRITCH_KNIGHT": {
+      "pt": "Eldritch Knight",
+      "en": "Eldritch Knight"
+    },
+    "FIGHTER_PSI_WARRIOR": {
+      "pt": "Psi Warrior",
+      "en": "Psi Warrior"
+    },
+    "FIGHTER_ARCANE_ARCHER": {
+      "pt": "Arcane Archer",
+      "en": "Arcane Archer"
+    },
+    "FIGHTER_CAVALIER": {
+      "pt": "Cavalier",
+      "en": "Cavalier"
+    },
+    "FIGHTER_RUNE_KNIGHT": {
+      "pt": "Rune Knight",
+      "en": "Rune Knight"
+    },
+    "FIGHTER_SAMURAI": {
+      "pt": "Samurai",
+      "en": "Samurai"
+    },
+    "FIGHTER_DUNGEONEER": {
+      "pt": "Dungeoneer",
+      "en": "Dungeoneer"
+    },
+    "MONK_WAY_OF_MERCY": {
+      "pt": "Way of Mercy",
+      "en": "Way of Mercy"
+    },
+    "MONK_WAY_OF_SHADOW": {
+      "pt": "Way of Shadow",
+      "en": "Way of Shadow"
+    },
+    "MONK_WAY_OF_THE_ELEMENTS": {
+      "pt": "Way of the Elements",
+      "en": "Way of the Elements"
+    },
+    "MONK_WAY_OF_THE_OPEN_HAND": {
+      "pt": "Way of the Open Hand",
+      "en": "Way of the Open Hand"
+    },
+    "MONK_WAY_OF_THE_ASTRAL_SELF": {
+      "pt": "Way of the Astral Self",
+      "en": "Way of the Astral Self"
+    },
+    "MONK_WAY_OF_THE_COBALT_SOUL": {
+      "pt": "Way of the Cobalt Soul",
+      "en": "Way of the Cobalt Soul"
+    },
+    "MONK_WAY_OF_THE_DRUNKEN_MASTER": {
+      "pt": "Way of the Drunken Master",
+      "en": "Way of the Drunken Master"
+    },
+    "MONK_WAY_OF_THE_KENSEI": {
+      "pt": "Way of the Kensei",
+      "en": "Way of the Kensei"
+    },
+    "MONK_WAY_OF_THE_LONG_DEATH": {
+      "pt": "Way of the Long Death",
+      "en": "Way of the Long Death"
+    },
+    "MONK_WAY_OF_THE_SUN_SOUL": {
+      "pt": "Way of the Sun Soul",
+      "en": "Way of the Sun Soul"
+    },
+    "MONK_WARRIOR_OF_THE_STREET": {
+      "pt": "Warrior of the Street",
+      "en": "Warrior of the Street"
+    },
+    "PALADIN_OATH_OF_DEVOTION": {
+      "pt": "Oath of Devotion",
+      "en": "Oath of Devotion"
+    },
+    "PALADIN_OATH_OF_GLORY": {
+      "pt": "Oath of Glory",
+      "en": "Oath of Glory"
+    },
+    "PALADIN_OATH_OF_THE_ANCIENTS": {
+      "pt": "Oath of the Ancients",
+      "en": "Oath of the Ancients"
+    },
+    "PALADIN_OATH_OF_VENGEANCE": {
+      "pt": "Oath of Vengeance",
+      "en": "Oath of Vengeance"
+    },
+    "PALADIN_OATH_OF_CONQUEST": {
+      "pt": "Oath of Conquest",
+      "en": "Oath of Conquest"
+    },
+    "PALADIN_OATH_OF_REDEMPTION": {
+      "pt": "Oath of Redemption",
+      "en": "Oath of Redemption"
+    },
+    "PALADIN_OATH_OF_THE_CROWN": {
+      "pt": "Oath of the Crown",
+      "en": "Oath of the Crown"
+    },
+    "PALADIN_OATH_OF_THE_WATCHERS": {
+      "pt": "Oath of the Watchers",
+      "en": "Oath of the Watchers"
+    },
+    "PALADIN_OATH_OF_THE_OPEN_SEA": {
+      "pt": "Oath of the Open Sea",
+      "en": "Oath of the Open Sea"
+    },
+    "PALADIN_OATH_OF_REVELRY": {
+      "pt": "Oath of Revelry",
+      "en": "Oath of Revelry"
+    },
+    "RANGER_BEAST_MASTER": {
+      "pt": "Beast Master",
+      "en": "Beast Master"
+    },
+    "RANGER_FEY_WANDERER": {
+      "pt": "Fey Wanderer",
+      "en": "Fey Wanderer"
+    },
+    "RANGER_GLOOM_STALKER": {
+      "pt": "Gloom Stalker",
+      "en": "Gloom Stalker"
+    },
+    "RANGER_HUNTER": {
+      "pt": "Hunter",
+      "en": "Hunter"
+    },
+    "RANGER_HORIZON_WALKER": {
+      "pt": "Horizon Walker",
+      "en": "Horizon Walker"
+    },
+    "RANGER_MONSTER_SLAYER": {
+      "pt": "Monster Slayer",
+      "en": "Monster Slayer"
+    },
+    "RANGER_SWARMKEEPER": {
+      "pt": "Swarmkeeper",
+      "en": "Swarmkeeper"
+    },
+    "ROGUE_ARACHNOID_STALKER": {
+      "pt": "Arachnoid Stalker",
+      "en": "Arachnoid Stalker"
+    },
+    "ROGUE_ARCANE_TRICKSTER": {
+      "pt": "Arcane Trickster",
+      "en": "Arcane Trickster"
+    },
+    "ROGUE_ASSASSIN": {
+      "pt": "Assassin",
+      "en": "Assassin"
+    },
+    "ROGUE_THIEF": {
+      "pt": "Thief",
+      "en": "Thief"
+    },
+    "ROGUE_INQUISITIVE": {
+      "pt": "Inquisitive",
+      "en": "Inquisitive"
+    },
+    "ROGUE_MASTERMIND": {
+      "pt": "Mastermind",
+      "en": "Mastermind"
+    },
+    "ROGUE_PHANTOM": {
+      "pt": "Phantom",
+      "en": "Phantom"
+    },
+    "ROGUE_SCOUT": {
+      "pt": "Scout",
+      "en": "Scout"
+    },
+    "ROGUE_SWASHBUCKLER": {
+      "pt": "Swashbuckler",
+      "en": "Swashbuckler"
+    },
+    "ROGUE_SOULKNIFE": {
+      "pt": "Soulknife",
+      "en": "Soulknife"
+    },
+    "SORCERER_CLOCKWORK_SORCERY": {
+      "pt": "Clockwork Sorcery",
+      "en": "Clockwork Sorcery"
+    },
+    "SORCERER_DRACONIC_SORCERY": {
+      "pt": "Draconic Sorcery",
+      "en": "Draconic Sorcery"
+    },
+    "SORCERER_WILD_MAGIC": {
+      "pt": "Wild Magic",
+      "en": "Wild Magic"
+    },
+    "SORCERER_STORM_SORCERY": {
+      "pt": "Storm Sorcery",
+      "en": "Storm Sorcery"
+    },
+    "SORCERER_ABERRANT_SORCERY": {
+      "pt": "Aberrant Sorcery",
+      "en": "Aberrant Sorcery"
+    },
+    "SORCERER_DIVINE_SOUL": {
+      "pt": "Divine Soul",
+      "en": "Divine Soul"
+    },
+    "SORCERER_SHADOW_MAGIC": {
+      "pt": "Shadow Magic",
+      "en": "Shadow Magic"
+    },
+    "WARLOCK_ARCHFEY_PATRON": {
+      "pt": "Archfey Patron",
+      "en": "Archfey Patron"
+    },
+    "WARLOCK_FIEND_PATRON": {
+      "pt": "Fiend Patron",
+      "en": "Fiend Patron"
+    },
+    "WARLOCK_GREAT_OLD_ONE_PATRON": {
+      "pt": "Great Old One Patron",
+      "en": "Great Old One Patron"
+    },
+    "WARLOCK_CELESTIAL_PATRON": {
+      "pt": "Celestial Patron",
+      "en": "Celestial Patron"
+    },
+    "WARLOCK_THE_FATHOMLESS": {
+      "pt": "The Fathomless",
+      "en": "The Fathomless"
+    },
+    "WARLOCK_THE_GENIE": {
+      "pt": "The Genie",
+      "en": "The Genie"
+    },
+    "WARLOCK_THE_HEXBLADE": {
+      "pt": "The Hexblade",
+      "en": "The Hexblade"
+    },
+    "WIZARD_ABJURER": {
+      "pt": "Abjurer",
+      "en": "Abjurer"
+    },
+    "WIZARD_DIVINER": {
+      "pt": "Diviner",
+      "en": "Diviner"
+    },
+    "WIZARD_EVOKER": {
+      "pt": "Evoker",
+      "en": "Evoker"
+    },
+    "WIZARD_ILLUSIONIST": {
+      "pt": "Illusionist",
+      "en": "Illusionist"
+    },
+    "WIZARD_BLADESINGING": {
+      "pt": "Bladesinging",
+      "en": "Bladesinging"
+    },
+    "WIZARD_ORDER_OF_SCRIBES": {
+      "pt": "Order of Scribes",
+      "en": "Order of Scribes"
+    },
+    "WIZARD_SCHOOL_OF_ABJURATION": {
+      "pt": "School of Abjuration",
+      "en": "School of Abjuration"
+    },
+    "WIZARD_SCHOOL_OF_CONJURATION": {
+      "pt": "School of Conjuration",
+      "en": "School of Conjuration"
+    },
+    "WIZARD_SCHOOL_OF_NECROMANCY": {
+      "pt": "School of Necromancy",
+      "en": "School of Necromancy"
+    },
+    "WIZARD_SCHOOL_OF_ENCHANTMENT": {
+      "pt": "School of Enchantment",
+      "en": "School of Enchantment"
+    },
+    "WIZARD_WAR_MAGIC": {
+      "pt": "War Magic",
+      "en": "War Magic"
+    },
+    "BLOOD_HUNTER_ORDER_OF_THE_GHOSTSLAYER": {
+      "pt": "Order of the Ghostslayer",
+      "en": "Order of the Ghostslayer"
+    },
+    "BLOOD_HUNTER_ORDER_OF_THE_LYCAN": {
+      "pt": "Order of the Lycan",
+      "en": "Order of the Lycan"
+    },
+    "BLOOD_HUNTER_ORDER_OF_THE_MUTANT": {
+      "pt": "Order of the Mutant",
+      "en": "Order of the Mutant"
+    },
+    "BLOOD_HUNTER_ORDER_OF_THE_PROFANE_SOUL": {
+      "pt": "Order of the Profane Soul",
+      "en": "Order of the Profane Soul"
+    },
+    "BARD_COLLEGE_OF_SPIRITS": {
+      "pt": "College of Spirits",
+      "en": "College of Spirits"
+    },
+    "BARD_COLLEGE_OF_THE_MOON": {
+      "pt": "College of the Moon",
+      "en": "College of the Moon"
+    },
+    "FIGHTER_BANNERET": {
+      "pt": "Banneret",
+      "en": "Banneret"
+    },
+    "PALADIN_OATH_OF_THE_NOBLE_GENIES": {
+      "pt": "Oath of the Noble Genies",
+      "en": "Oath of the Noble Genies"
+    },
+    "RANGER_WINTER_WALKER": {
+      "pt": "Winter Walker",
+      "en": "Winter Walker"
+    },
+    "ROGUE_SCION_OF_THE_THREE": {
+      "pt": "Scion of the Three",
+      "en": "Scion of the Three"
+    },
+    "SORCERER_SPELLFIRE_SORCERY": {
+      "pt": "Spellfire Sorcery",
+      "en": "Spellfire Sorcery"
+    },
+    "WARLOCK_THE_UNDEAD": {
+      "pt": "The Undead",
+      "en": "The Undead"
+    },
+    "WIZARD_BLADESINGER": {
+      "pt": "Bladesinger",
+      "en": "Bladesinger"
+    }
+  },
+  "q_background_preference": {
+    "ACOLYTE": {
+      "pt": "Acolyte",
+      "en": "Acolyte"
+    },
+    "ARTISAN": {
+      "pt": "Artisan",
+      "en": "Artisan"
+    },
+    "CHARLATAN": {
+      "pt": "Charlatan",
+      "en": "Charlatan"
+    },
+    "CHONDATHAN_FREEBOOTER": {
+      "pt": "Chondathan Freebooter",
+      "en": "Chondathan Freebooter"
+    },
+    "CRIMINAL": {
+      "pt": "Criminal",
+      "en": "Criminal"
+    },
+    "DEAD_MAGIC_DWELLER": {
+      "pt": "Dead Magic Dweller",
+      "en": "Dead Magic Dweller"
+    },
+    "DRAGON_CULTIST": {
+      "pt": "Dragon Cultist",
+      "en": "Dragon Cultist"
+    },
+    "EMERALD_ENCLAVE_CARETAKER": {
+      "pt": "Emerald Enclave Caretaker",
+      "en": "Emerald Enclave Caretaker"
+    },
+    "ENTERTAINER": {
+      "pt": "Entertainer",
+      "en": "Entertainer"
+    },
+    "FARMER": {
+      "pt": "Farmer",
+      "en": "Farmer"
+    },
+    "FLAMING_FIST_MERCENARY": {
+      "pt": "Flaming Fist Mercenary",
+      "en": "Flaming Fist Mercenary"
+    },
+    "GENIE_TOUCHED": {
+      "pt": "Genie Touched",
+      "en": "Genie Touched"
+    },
+    "GUARD": {
+      "pt": "Guard",
+      "en": "Guard"
+    },
+    "GUIDE": {
+      "pt": "Guide",
+      "en": "Guide"
+    },
+    "HARPER": {
+      "pt": "Harper",
+      "en": "Harper"
+    },
+    "HERMIT": {
+      "pt": "Hermit",
+      "en": "Hermit"
+    },
+    "ICE_FISHER": {
+      "pt": "Ice Fisher",
+      "en": "Ice Fisher"
+    },
+    "KNIGHT_OF_THE_GAUNTLET": {
+      "pt": "Knight of the Gauntlet",
+      "en": "Knight of the Gauntlet"
+    },
+    "LORDS_ALLIANCE_VASSAL": {
+      "pt": "Lords' Alliance Vassal",
+      "en": "Lords' Alliance Vassal"
+    },
+    "MERCHANT": {
+      "pt": "Merchant",
+      "en": "Merchant"
+    },
+    "MOONWELL_PILGRIM": {
+      "pt": "Moonwell Pilgrim",
+      "en": "Moonwell Pilgrim"
+    },
+    "MULHORANDI_TOMB_RAIDER": {
+      "pt": "Mulhorandi Tomb Raider",
+      "en": "Mulhorandi Tomb Raider"
+    },
+    "MYTHALKEEPER": {
+      "pt": "Mythalkeeper",
+      "en": "Mythalkeeper"
+    },
+    "NOBLE": {
+      "pt": "Noble",
+      "en": "Noble"
+    },
+    "PURPLE_DRAGON_SQUIRE": {
+      "pt": "Purple Dragon Squire",
+      "en": "Purple Dragon Squire"
+    },
+    "RASHEMI_WANDERER": {
+      "pt": "Rashemi Wanderer",
+      "en": "Rashemi Wanderer"
+    },
+    "SAGE": {
+      "pt": "Sage",
+      "en": "Sage"
+    },
+    "SAILOR": {
+      "pt": "Sailor",
+      "en": "Sailor"
+    },
+    "SCRIBE": {
+      "pt": "Scribe",
+      "en": "Scribe"
+    },
+    "SHADOWMASTERS_EXILE": {
+      "pt": "Shadowmasters Exile",
+      "en": "Shadowmasters Exile"
+    },
+    "SOLDIER": {
+      "pt": "Soldier",
+      "en": "Soldier"
+    },
+    "SPELLFIRE_INITIATE": {
+      "pt": "Spellfire Initiate",
+      "en": "Spellfire Initiate"
+    },
+    "WAYFARER": {
+      "pt": "Wayfarer",
+      "en": "Wayfarer"
+    },
+    "ZHENTARIM_MERCENARY": {
+      "pt": "Zhentarim Mercenary",
+      "en": "Zhentarim Mercenary"
+    }
   }
 }

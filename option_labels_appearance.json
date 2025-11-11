@@ -1,24 +1,63 @@
 {
   "q_gender": {
-    "A": { "pt": "Feminina", "en": "Female" },
-    "B": { "pt": "Masculina", "en": "Male" },
-    "C": { "pt": "Andrógina", "en": "Androgynous" }
+    "A": {
+      "pt": "Feminina",
+      "en": "Female"
+    },
+    "B": {
+      "pt": "Masculina",
+      "en": "Male"
+    },
+    "C": {
+      "pt": "Andrógina",
+      "en": "Androgynous"
+    }
   },
   "q_height": {
-    "A": { "pt": "Minúscula — 0,6–0,9 m", "en": "Tiny — 0.6–0.9 m" },
-    "B": { "pt": "Baixa — ~1,2 m", "en": "Short — ~1.2 m" },
-    "C": { "pt": "Média — 1,5–1,8 m", "en": "Medium — 1.5–1.8 m" },
-    "D": { "pt": "Alta — 2,1–2,4 m", "en": "Tall — 2.1–2.4 m" }
+    "A": {
+      "pt": "Minúscula — 0,6–0,9 m",
+      "en": "Tiny — 0.6–0.9 m"
+    },
+    "B": {
+      "pt": "Baixa — ~1,2 m",
+      "en": "Short — ~1.2 m"
+    },
+    "C": {
+      "pt": "Média — 1,5–1,8 m",
+      "en": "Medium — 1.5–1.8 m"
+    },
+    "D": {
+      "pt": "Alta — 2,1–2,4 m",
+      "en": "Tall — 2.1–2.4 m"
+    }
   },
   "q_species_exoticness": {
-    "A": { "pt": "A espécie humana", "en": "The human species" },
-    "B": { "pt": "Não humana — conhecida", "en": "Non-human — well-known" },
-    "C": { "pt": "Não humana — estranha para alguns", "en": "Non-human — odd to some" },
-    "D": { "pt": "Não humana — estranha para a maioria", "en": "Non-human — odd to most" }
+    "A": {
+      "pt": "A espécie humana",
+      "en": "The human species"
+    },
+    "B": {
+      "pt": "Não humana — conhecida",
+      "en": "Non-human — well-known"
+    },
+    "C": {
+      "pt": "Não humana — estranha para alguns",
+      "en": "Non-human — odd to some"
+    },
+    "D": {
+      "pt": "Não humana — estranha para a maioria",
+      "en": "Non-human — odd to most"
+    }
   },
   "q_species_animal_likeness": {
-    "A": { "pt": "Sim", "en": "Yes" },
-    "B": { "pt": "Não", "en": "No" }
+    "A": {
+      "pt": "Sim",
+      "en": "Yes"
+    },
+    "B": {
+      "pt": "Não",
+      "en": "No"
+    }
   },
   "q_dragonborn_ancestry_type": {
     "chromatic": {
@@ -31,8 +70,411 @@
     }
   },
   "q_goliath_power_type": {
-    "defensive": { "pt": "Poderes Defensivos", "en": "Defensive powers" },
-    "mobility": { "pt": "Poderes de Mobilidade", "en": "Mobility powers" },
-    "offensive": { "pt": "Poderes Ofensivos", "en": "Offensive powers" }
+    "defensive": {
+      "pt": "Poderes Defensivos",
+      "en": "Defensive powers"
+    },
+    "mobility": {
+      "pt": "Poderes de Mobilidade",
+      "en": "Mobility powers"
+    },
+    "offensive": {
+      "pt": "Poderes Ofensivos",
+      "en": "Offensive powers"
+    }
+  },
+  "q_species_pick": {
+    "S001": {
+      "pt": "Aarakocra",
+      "en": "Aarakocra"
+    },
+    "S002": {
+      "pt": "Aasimar",
+      "en": "Aasimar"
+    },
+    "S003": {
+      "pt": "Bugbear",
+      "en": "Bugbear"
+    },
+    "S004": {
+      "pt": "Centaur",
+      "en": "Centaur"
+    },
+    "S005": {
+      "pt": "Changeling",
+      "en": "Changeling"
+    },
+    "S006": {
+      "pt": "Custom Lineage",
+      "en": "Custom Lineage"
+    },
+    "S007": {
+      "pt": "Dragonborn",
+      "en": "Dragonborn"
+    },
+    "S008": {
+      "pt": "Dwarf",
+      "en": "Dwarf"
+    },
+    "S009": {
+      "pt": "Elf",
+      "en": "Elf"
+    },
+    "S010": {
+      "pt": "Fairy",
+      "en": "Fairy"
+    },
+    "S011": {
+      "pt": "Firbolg",
+      "en": "Firbolg"
+    },
+    "S012": {
+      "pt": "Genasi",
+      "en": "Genasi"
+    },
+    "S013": {
+      "pt": "Geppettin",
+      "en": "Geppettin"
+    },
+    "S014": {
+      "pt": "Gith",
+      "en": "Gith"
+    },
+    "S015": {
+      "pt": "Gnome",
+      "en": "Gnome"
+    },
+    "S016": {
+      "pt": "Goblin",
+      "en": "Goblin"
+    },
+    "S017": {
+      "pt": "Goliath",
+      "en": "Goliath"
+    },
+    "S018": {
+      "pt": "Grung",
+      "en": "Grung"
+    },
+    "S019": {
+      "pt": "Halfling",
+      "en": "Halfling"
+    },
+    "S020": {
+      "pt": "Harengon",
+      "en": "Harengon"
+    },
+    "S021": {
+      "pt": "Hobgoblin",
+      "en": "Hobgoblin"
+    },
+    "S022": {
+      "pt": "Human",
+      "en": "Human"
+    },
+    "S023": {
+      "pt": "Kenku",
+      "en": "Kenku"
+    },
+    "S024": {
+      "pt": "Kobold",
+      "en": "Kobold"
+    },
+    "S025": {
+      "pt": "Lizardfolk",
+      "en": "Lizardfolk"
+    },
+    "S026": {
+      "pt": "Mandrake",
+      "en": "Mandrake"
+    },
+    "S027": {
+      "pt": "Minotaur",
+      "en": "Minotaur"
+    },
+    "S028": {
+      "pt": "Orc",
+      "en": "Orc"
+    },
+    "S029": {
+      "pt": "Satyr",
+      "en": "Satyr"
+    },
+    "S030": {
+      "pt": "Shifter",
+      "en": "Shifter"
+    },
+    "S031": {
+      "pt": "Tabaxi",
+      "en": "Tabaxi"
+    },
+    "S032": {
+      "pt": "Tiefling",
+      "en": "Tiefling"
+    },
+    "S033": {
+      "pt": "Tortle",
+      "en": "Tortle"
+    },
+    "S034": {
+      "pt": "Triton",
+      "en": "Triton"
+    },
+    "S035": {
+      "pt": "Verdan",
+      "en": "Verdan"
+    },
+    "S036": {
+      "pt": "Yuan-ti",
+      "en": "Yuan-ti"
+    },
+    "S037": {
+      "pt": "Dhampir",
+      "en": "Dhampir"
+    },
+    "S038": {
+      "pt": "Hexblood",
+      "en": "Hexblood"
+    },
+    "S039": {
+      "pt": "Reborn",
+      "en": "Reborn"
+    }
+  },
+  "q_subspecies_pick": {
+    "SS001": {
+      "pt": "Custom Lineage with Darkvision",
+      "en": "Custom Lineage with Darkvision"
+    },
+    "SS002": {
+      "pt": "Custom Lineage with Skill Proficiency",
+      "en": "Custom Lineage with Skill Proficiency"
+    },
+    "SS003": {
+      "pt": "Black Dragonborn",
+      "en": "Black Dragonborn"
+    },
+    "SS004": {
+      "pt": "Blue Dragonborn",
+      "en": "Blue Dragonborn"
+    },
+    "SS005": {
+      "pt": "Brass Dragonborn",
+      "en": "Brass Dragonborn"
+    },
+    "SS006": {
+      "pt": "Bronze Dragonborn",
+      "en": "Bronze Dragonborn"
+    },
+    "SS007": {
+      "pt": "Copper Dragonborn",
+      "en": "Copper Dragonborn"
+    },
+    "SS008": {
+      "pt": "Gold Dragonborn",
+      "en": "Gold Dragonborn"
+    },
+    "SS009": {
+      "pt": "Green Dragonborn",
+      "en": "Green Dragonborn"
+    },
+    "SS010": {
+      "pt": "Red Dragonborn",
+      "en": "Red Dragonborn"
+    },
+    "SS011": {
+      "pt": "Silver Dragonborn",
+      "en": "Silver Dragonborn"
+    },
+    "SS012": {
+      "pt": "White Dragonborn",
+      "en": "White Dragonborn"
+    },
+    "SS013": {
+      "pt": "Duergar",
+      "en": "Duergar"
+    },
+    "SS014": {
+      "pt": "Common Dwarf",
+      "en": "Common Dwarf"
+    },
+    "SS016": {
+      "pt": "Drow",
+      "en": "Drow"
+    },
+    "SS017": {
+      "pt": "Eladrin",
+      "en": "Eladrin"
+    },
+    "SS018": {
+      "pt": "High Elf",
+      "en": "High Elf"
+    },
+    "SS019": {
+      "pt": "Sea Elf",
+      "en": "Sea Elf"
+    },
+    "SS020": {
+      "pt": "Shadar-kai",
+      "en": "Shadar-kai"
+    },
+    "SS021": {
+      "pt": "Wood Elf",
+      "en": "Wood Elf"
+    },
+    "SS022": {
+      "pt": "Air Genasi",
+      "en": "Air Genasi"
+    },
+    "SS023": {
+      "pt": "Earth Genasi",
+      "en": "Earth Genasi"
+    },
+    "SS024": {
+      "pt": "Fire Genasi",
+      "en": "Fire Genasi"
+    },
+    "SS025": {
+      "pt": "Water Genasi",
+      "en": "Water Genasi"
+    },
+    "SS026": {
+      "pt": "Bisque Geppettin",
+      "en": "Bisque Geppettin"
+    },
+    "SS027": {
+      "pt": "Marionette Geppettin",
+      "en": "Marionette Geppettin"
+    },
+    "SS028": {
+      "pt": "Plushie Geppettin",
+      "en": "Plushie Geppettin"
+    },
+    "SS029": {
+      "pt": "Githyanki",
+      "en": "Githyanki"
+    },
+    "SS030": {
+      "pt": "Githzerai",
+      "en": "Githzerai"
+    },
+    "SS031": {
+      "pt": "Deep Gnome",
+      "en": "Deep Gnome"
+    },
+    "SS032": {
+      "pt": "Forest Gnome",
+      "en": "Forest Gnome"
+    },
+    "SS033": {
+      "pt": "Rock Gnome",
+      "en": "Rock Gnome"
+    },
+    "SS034": {
+      "pt": "Cloud Goliath",
+      "en": "Cloud Goliath"
+    },
+    "SS035": {
+      "pt": "Fire Goliath",
+      "en": "Fire Goliath"
+    },
+    "SS036": {
+      "pt": "Frost Goliath",
+      "en": "Frost Goliath"
+    },
+    "SS037": {
+      "pt": "Hill Goliath",
+      "en": "Hill Goliath"
+    },
+    "SS038": {
+      "pt": "Stone Goliath",
+      "en": "Stone Goliath"
+    },
+    "SS039": {
+      "pt": "Storm Goliath",
+      "en": "Storm Goliath"
+    },
+    "SS040": {
+      "pt": "Common Halfling",
+      "en": "Common Halfling"
+    },
+    "SS041": {
+      "pt": "Ghostwise Halfling",
+      "en": "Ghostwise Halfling"
+    },
+    "SS042": {
+      "pt": "Crafty Kobold",
+      "en": "Crafty Kobold"
+    },
+    "SS043": {
+      "pt": "Defiant Kobold",
+      "en": "Defiant Kobold"
+    },
+    "SS044": {
+      "pt": "Sorcerous Kobold",
+      "en": "Sorcerous Kobold"
+    },
+    "SS045": {
+      "pt": "Autumn Mandrake",
+      "en": "Autumn Mandrake"
+    },
+    "SS046": {
+      "pt": "Spring Mandrake",
+      "en": "Spring Mandrake"
+    },
+    "SS047": {
+      "pt": "Summer Mandrake",
+      "en": "Summer Mandrake"
+    },
+    "SS048": {
+      "pt": "Winter Mandrake",
+      "en": "Winter Mandrake"
+    },
+    "SS049": {
+      "pt": "Beasthide Shifter",
+      "en": "Beasthide Shifter"
+    },
+    "SS050": {
+      "pt": "Longtooth Shifter",
+      "en": "Longtooth Shifter"
+    },
+    "SS051": {
+      "pt": "Swiftstride Shifter",
+      "en": "Swiftstride Shifter"
+    },
+    "SS052": {
+      "pt": "Wildhunt Shifter",
+      "en": "Wildhunt Shifter"
+    },
+    "SS053": {
+      "pt": "Abyssal Tiefling",
+      "en": "Abyssal Tiefling"
+    },
+    "SS054": {
+      "pt": "Chthonic Tiefling",
+      "en": "Chthonic Tiefling"
+    },
+    "SS055": {
+      "pt": "Infernal Tiefling",
+      "en": "Infernal Tiefling"
+    }
+  },
+  "q_subsubspecies_pick": {
+    "SSS051": {
+      "pt": "Autumn Eladrin",
+      "en": "Autumn Eladrin"
+    },
+    "SSS049": {
+      "pt": "Spring Eladrin",
+      "en": "Spring Eladrin"
+    },
+    "SSS050": {
+      "pt": "Summer Eladrin",
+      "en": "Summer Eladrin"
+    },
+    "SSS052": {
+      "pt": "Winter Eladrin",
+      "en": "Winter Eladrin"
+    }
   }
 }
