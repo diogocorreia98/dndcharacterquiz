@@ -4,10 +4,9 @@
     "q_gender": {
       "type": "question",
       "section": "gender",
-      "question": "Como se apresenta a tua personagem em termos de g\u00e9nero?",
+      "question": "Como se apresenta a tua personagem em termos de género?",
       "options": [
         {
-          "label": "Feminina",
           "value": "A",
           "set": [
             {
@@ -19,7 +18,6 @@
           "next": "q_height"
         },
         {
-          "label": "Masculina",
           "value": "B",
           "set": [
             {
@@ -31,7 +29,6 @@
           "next": "q_height"
         },
         {
-          "label": "Andr\u00f3gina",
           "value": "C",
           "set": [
             {
@@ -50,7 +47,6 @@
       "question": "Em que faixa de alturas se encaixa a tua personagem?",
       "options": [
         {
-          "label": "Min\u00fascula \u2014 0,6\u20130,9 m",
           "value": "A",
           "set": [
             {
@@ -62,7 +58,6 @@
           "next": "q_species_exoticness"
         },
         {
-          "label": "Baixa \u2014 ~1,2 m",
           "value": "B",
           "set": [
             {
@@ -74,7 +69,6 @@
           "next": "q_species_exoticness"
         },
         {
-          "label": "M\u00e9dia \u2014 1,5\u20131,8 m",
           "value": "C",
           "set": [
             {
@@ -86,7 +80,6 @@
           "next": "q_species_exoticness"
         },
         {
-          "label": "Alta \u2014 2,1\u20132,4 m",
           "value": "D",
           "set": [
             {
@@ -102,7 +95,7 @@
     "q_species_exoticness": {
       "type": "question",
       "section": "species",
-      "question": "Qu\u00e3o ex\u00f3tica pretendes que a esp\u00e9cie da tua personagem seja?",
+      "question": "Quão exótica pretendes que a espécie da tua personagem seja?",
       "prune_zero_viable_options": {
         "dataset": "species",
         "option_field": "species_commonality",
@@ -120,7 +113,6 @@
       },
       "options": [
         {
-          "label": "A esp\u00e9cie humana",
           "value": "A",
           "set": [
             {
@@ -137,7 +129,6 @@
           "next": "q_primary_roles"
         },
         {
-          "label": "N\u00e3o humana \u2014 conhecida",
           "value": "B",
           "set": [
             {
@@ -149,7 +140,6 @@
           "next": "q_species_animal_likeness"
         },
         {
-          "label": "N\u00e3o humana \u2014 estranha para alguns",
           "value": "C",
           "set": [
             {
@@ -161,7 +151,6 @@
           "next": "q_species_animal_likeness"
         },
         {
-          "label": "N\u00e3o humana \u2014 estranha para a maioria",
           "value": "D",
           "set": [
             {
@@ -177,7 +166,7 @@
     "q_species_animal_likeness": {
       "type": "question",
       "section": "species",
-      "question": "A tua personagem tem tra\u00e7os de animal?",
+      "question": "A tua personagem tem traços de animal?",
       "prune_zero_viable_options": {
         "dataset": "species",
         "option_field": "animal_likeness",
@@ -198,7 +187,6 @@
       },
       "options": [
         {
-          "label": "Sim",
           "value": "A",
           "set": [
             {
@@ -210,7 +198,6 @@
           "next": "q_species_pick"
         },
         {
-          "label": "N\u00e3o",
           "value": "B",
           "set": [
             {
@@ -226,7 +213,7 @@
     "q_species_pick": {
       "type": "question",
       "section": "species",
-      "question": "Que esp\u00e9cie preferes jogar?",
+      "question": "Que espécie preferes jogar?",
       "options_source": {
         "type": "inline",
         "dataset": "species",
@@ -345,7 +332,6 @@
       },
       "options": [
         {
-          "label": "Cromática (escamas reptilianas, aspeto feroz)",
           "value": "chromatic",
           "set": [
             {
@@ -357,7 +343,6 @@
           "next": "q_goliath_power_type"
         },
         {
-          "label": "Metálica (escamas metálicas, aspeto polido)",
           "value": "metallic",
           "set": [
             {
@@ -382,7 +367,6 @@
       },
       "options": [
         {
-          "label": "Poderes Defensivos",
           "value": "defensive",
           "set": [
             {
@@ -394,7 +378,6 @@
           "next": "q_subspecies_pick"
         },
         {
-          "label": "Poderes de Mobilidade",
           "value": "mobility",
           "set": [
             {
@@ -406,7 +389,6 @@
           "next": "q_subspecies_pick"
         },
         {
-          "label": "Poderes Ofensivos",
           "value": "offensive",
           "set": [
             {

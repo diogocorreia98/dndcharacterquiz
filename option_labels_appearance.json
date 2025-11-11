@@ -1,0 +1,38 @@
+{
+  "q_gender": {
+    "A": { "pt": "Feminina", "en": "Female" },
+    "B": { "pt": "Masculina", "en": "Male" },
+    "C": { "pt": "Andrógina", "en": "Androgynous" }
+  },
+  "q_height": {
+    "A": { "pt": "Minúscula — 0,6–0,9 m", "en": "Tiny — 0.6–0.9 m" },
+    "B": { "pt": "Baixa — ~1,2 m", "en": "Short — ~1.2 m" },
+    "C": { "pt": "Média — 1,5–1,8 m", "en": "Medium — 1.5–1.8 m" },
+    "D": { "pt": "Alta — 2,1–2,4 m", "en": "Tall — 2.1–2.4 m" }
+  },
+  "q_species_exoticness": {
+    "A": { "pt": "A espécie humana", "en": "The human species" },
+    "B": { "pt": "Não humana — conhecida", "en": "Non-human — well-known" },
+    "C": { "pt": "Não humana — estranha para alguns", "en": "Non-human — odd to some" },
+    "D": { "pt": "Não humana — estranha para a maioria", "en": "Non-human — odd to most" }
+  },
+  "q_species_animal_likeness": {
+    "A": { "pt": "Sim", "en": "Yes" },
+    "B": { "pt": "Não", "en": "No" }
+  },
+  "q_dragonborn_ancestry_type": {
+    "chromatic": {
+      "pt": "Cromática (escamas reptilianas, aspeto feroz)",
+      "en": "Chromatic (scaled and fearsome)"
+    },
+    "metallic": {
+      "pt": "Metálica (escamas metálicas, aspeto polido)",
+      "en": "Metallic (gleaming metallic scales)"
+    }
+  },
+  "q_goliath_power_type": {
+    "defensive": { "pt": "Poderes Defensivos", "en": "Defensive powers" },
+    "mobility": { "pt": "Poderes de Mobilidade", "en": "Mobility powers" },
+    "offensive": { "pt": "Poderes Ofensivos", "en": "Offensive powers" }
+  }
+}

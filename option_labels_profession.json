@@ -1,0 +1,542 @@
+{
+  "q_primary_roles": {
+    "DEFENDER": {
+      "pt": "Defender",
+      "en": "Defender"
+    },
+    "HEALER_SUPPORT": {
+      "pt": "Healer/Support",
+      "en": "Healer/Support"
+    },
+    "CONTROLLER": {
+      "pt": "Controller",
+      "en": "Controller"
+    },
+    "STRIKER": {
+      "pt": "Striker",
+      "en": "Striker"
+    },
+    "SCOUT": {
+      "pt": "Scout",
+      "en": "Scout"
+    }
+  },
+  "q_healer_support_preference": {
+    "HEALER": {
+      "pt": "Healer",
+      "en": "Healer"
+    },
+    "SUPPORT": {
+      "pt": "Support",
+      "en": "Support"
+    },
+    "BOTH": {
+      "pt": "Both",
+      "en": "Both"
+    }
+  },
+  "q_secondary_roles": {
+    "BLASTER": {
+      "pt": "Blaster",
+      "en": "Blaster"
+    },
+    "FACE": {
+      "pt": "Face",
+      "en": "Face"
+    },
+    "SCHOLAR": {
+      "pt": "Scholar",
+      "en": "Scholar"
+    },
+    "UTILITY_CASTER": {
+      "pt": "Utility Caster",
+      "en": "Utility Caster"
+    }
+  },
+  "q_class_complexity": {
+    "A": {
+      "pt": "Só tenho interesse nas classes mais simples.",
+      "en": "I'm only interested in the simplest classes."
+    },
+    "B": {
+      "pt": "Só não tenho interesse nas classes mais complexas.",
+      "en": "I just want to avoid the most complex classes."
+    },
+    "C": {
+      "pt": "A complexidade não me aflige.",
+      "en": "Complexity doesn't bother me."
+    }
+  },
+  "q_class_simple_choice": {
+    "BARBARIAN": {
+      "pt": "Barbarian",
+      "en": "Barbarian"
+    },
+    "FIGHTER": {
+      "pt": "Fighter",
+      "en": "Fighter"
+    },
+    "ROGUE": {
+      "pt": "Rogue",
+      "en": "Rogue"
+    }
+  },
+  "q_class_medium_choice": {
+    "BARBARIAN": {
+      "pt": "Barbarian",
+      "en": "Barbarian"
+    },
+    "FIGHTER": {
+      "pt": "Fighter",
+      "en": "Fighter"
+    },
+    "ROGUE": {
+      "pt": "Rogue",
+      "en": "Rogue"
+    },
+    "CLERIC": {
+      "pt": "Cleric",
+      "en": "Cleric"
+    },
+    "PALADIN": {
+      "pt": "Paladin",
+      "en": "Paladin"
+    },
+    "RANGER": {
+      "pt": "Ranger",
+      "en": "Ranger"
+    },
+    "WIZARD": {
+      "pt": "Wizard",
+      "en": "Wizard"
+    }
+  },
+  "q_class_high_choice": {
+    "BARBARIAN": {
+      "pt": "Barbarian",
+      "en": "Barbarian"
+    },
+    "FIGHTER": {
+      "pt": "Fighter",
+      "en": "Fighter"
+    },
+    "ROGUE": {
+      "pt": "Rogue",
+      "en": "Rogue"
+    },
+    "MONK": {
+      "pt": "Monk",
+      "en": "Monk"
+    },
+    "WIZARD": {
+      "pt": "Wizard",
+      "en": "Wizard"
+    },
+    "SORCERER": {
+      "pt": "Sorcerer",
+      "en": "Sorcerer"
+    },
+    "CLERIC": {
+      "pt": "Cleric",
+      "en": "Cleric"
+    },
+    "DRUID": {
+      "pt": "Druid",
+      "en": "Druid"
+    },
+    "ARTIFICER": {
+      "pt": "Artificer",
+      "en": "Artificer"
+    },
+    "PALADIN": {
+      "pt": "Paladin",
+      "en": "Paladin"
+    },
+    "RANGER": {
+      "pt": "Ranger",
+      "en": "Ranger"
+    },
+    "BARD": {
+      "pt": "Bard",
+      "en": "Bard"
+    },
+    "WARLOCK": {
+      "pt": "Warlock",
+      "en": "Warlock"
+    },
+    "BLOOD_HUNTER": {
+      "pt": "Blood Hunter",
+      "en": "Blood Hunter"
+    }
+  },
+  "q_subclass_group": {
+    "CORE": {
+      "pt": "Quero ver as subclasses principais.",
+      "en": "Show me the core subclasses."
+    },
+    "NICHE": {
+      "pt": "Mostra-me opções mais únicas ou de nicho.",
+      "en": "Show me more unique or niche options."
+    }
+  },
+  "q_find_familiar_use": {
+    "YES": {
+      "pt": "Sim",
+      "en": "Yes"
+    },
+    "NO": {
+      "pt": "Não",
+      "en": "No"
+    }
+  },
+  "q_familiar_habitat": {
+    "SKY": {
+      "pt": "Nos céus ou entre os ramos — voador e atento.",
+      "en": "In the sky or treetops — flying and watchful."
+    },
+    "LAND": {
+      "pt": "Na terra — rápido, sorrateiro ou escalador.",
+      "en": "On land — quick, sneaky, or a climber."
+    },
+    "WATER": {
+      "pt": "Na água — estranho, furtivo e versátil.",
+      "en": "In the water — strange, stealthy, and versatile."
+    }
+  },
+  "q_familiar_creature_sky": {
+    "BAT": {
+      "pt": "Bat",
+      "en": "Bat"
+    },
+    "HAWK": {
+      "pt": "Hawk",
+      "en": "Hawk"
+    },
+    "OWL": {
+      "pt": "Owl",
+      "en": "Owl"
+    },
+    "RAVEN": {
+      "pt": "Raven",
+      "en": "Raven"
+    },
+    "OTHER_AIR": {
+      "pt": "Hei-de escolher outro animal",
+      "en": "I'll choose another animal"
+    }
+  },
+  "q_familiar_creature_land": {
+    "CAT": {
+      "pt": "Cat",
+      "en": "Cat"
+    },
+    "LIZARD": {
+      "pt": "Lizard",
+      "en": "Lizard"
+    },
+    "RAT": {
+      "pt": "Rat",
+      "en": "Rat"
+    },
+    "SPIDER": {
+      "pt": "Spider",
+      "en": "Spider"
+    },
+    "WEASEL": {
+      "pt": "Weasel",
+      "en": "Weasel"
+    },
+    "OTHER_LAND": {
+      "pt": "Hei-de escolher outro animal",
+      "en": "I'll choose another animal"
+    }
+  },
+  "q_familiar_creature_water": {
+    "FROG": {
+      "pt": "Frog",
+      "en": "Frog"
+    },
+    "OCTOPUS": {
+      "pt": "Octopus",
+      "en": "Octopus"
+    },
+    "OTHER_WATER": {
+      "pt": "Hei-de escolher outro animal",
+      "en": "I'll choose another animal"
+    }
+  },
+  "q_class_adjustment_cleric": {
+    "CLERIC_PROTECTOR": {
+      "pt": "Protector",
+      "en": "Protector"
+    },
+    "CLERIC_THAUMATURGE": {
+      "pt": "Thaumaturge",
+      "en": "Thaumaturge"
+    }
+  },
+  "q_class_adjustment_druid": {
+    "DRUID_WARDEN": {
+      "pt": "Warden",
+      "en": "Warden"
+    },
+    "DRUID_MAGICIAN": {
+      "pt": "Magician",
+      "en": "Magician"
+    }
+  },
+  "q_class_adjustment_warlock": {
+    "WARLOCK_PACT_OF_THE_TOME": {
+      "pt": "Pact of the Tome",
+      "en": "Pact of the Tome"
+    },
+    "WARLOCK_PACT_OF_THE_CHAIN": {
+      "pt": "Pact of the Chain",
+      "en": "Pact of the Chain"
+    },
+    "WARLOCK_PACT_OF_THE_BLADE": {
+      "pt": "Pact of the Blade",
+      "en": "Pact of the Blade"
+    },
+    "WARLOCK_NONE": {
+      "pt": "None",
+      "en": "None"
+    }
+  },
+  "q_warlock_familiar_type": {
+    "WARLOCK_FAMILIAR_EXOTIC": {
+      "pt": "Uma criatura mágica, exótica ou venenosa — algo fora do comum.",
+      "en": "A magical, exotic, or venomous creature — something unusual."
+    },
+    "WARLOCK_FAMILIAR_ANIMAL": {
+      "pt": "Um animal natural — discreto, astuto ou adorável.",
+      "en": "A natural animal — discreet, clever, or adorable."
+    }
+  },
+  "q_warlock_familiar_style": {
+    "WARLOCK_FAMILIAR_INFERNAL": {
+      "pt": "Um lado diabólico, com poderes infernais ou demoníacos.",
+      "en": "A fiendish side with infernal or demonic powers."
+    },
+    "WARLOCK_FAMILIAR_CELESTIAL": {
+      "pt": "Um toque encantado, misterioso ou celestial.",
+      "en": "An enchanted, mysterious, or celestial touch."
+    }
+  },
+  "q_warlock_familiar_dark": {
+    "IMP": {
+      "pt": "Imp",
+      "en": "Imp"
+    },
+    "QUASIT": {
+      "pt": "Quasit",
+      "en": "Quasit"
+    },
+    "SKELETON": {
+      "pt": "Skeleton",
+      "en": "Skeleton"
+    },
+    "SLAAD_TADPOLE": {
+      "pt": "Slaad Tadpole",
+      "en": "Slaad Tadpole"
+    }
+  },
+  "q_warlock_familiar_mystic": {
+    "PSEUDODRAGON": {
+      "pt": "Pseudodragon",
+      "en": "Pseudodragon"
+    },
+    "SPHINX_OF_WONDER": {
+      "pt": "Sphinx of Wonder",
+      "en": "Sphinx of Wonder"
+    },
+    "SPRITE": {
+      "pt": "Sprite",
+      "en": "Sprite"
+    },
+    "VENOMOUS_SNAKE": {
+      "pt": "Venomous Snake",
+      "en": "Venomous Snake"
+    }
+  },
+  "q_warlock_familiar_habitat": {
+    "SKY": {
+      "pt": "Nos céus ou entre os ramos — voador e atento.",
+      "en": "In the sky or treetops — flying and watchful."
+    },
+    "LAND": {
+      "pt": "Na terra — rápido, sorrateiro ou escalador.",
+      "en": "On land — quick, sneaky, or a climber."
+    },
+    "WATER": {
+      "pt": "Na água — estranho, furtivo e versátil.",
+      "en": "In the water — strange, stealthy, and versatile."
+    }
+  },
+  "q_warlock_familiar_creature_sky": {
+    "BAT": {
+      "pt": "Bat",
+      "en": "Bat"
+    },
+    "HAWK": {
+      "pt": "Hawk",
+      "en": "Hawk"
+    },
+    "OWL": {
+      "pt": "Owl",
+      "en": "Owl"
+    },
+    "RAVEN": {
+      "pt": "Raven",
+      "en": "Raven"
+    },
+    "OTHER_AIR": {
+      "pt": "Hei-de escolher outro animal",
+      "en": "I'll choose another animal"
+    }
+  },
+  "q_warlock_familiar_creature_land": {
+    "CAT": {
+      "pt": "Cat",
+      "en": "Cat"
+    },
+    "LIZARD": {
+      "pt": "Lizard",
+      "en": "Lizard"
+    },
+    "RAT": {
+      "pt": "Rat",
+      "en": "Rat"
+    },
+    "SPIDER": {
+      "pt": "Spider",
+      "en": "Spider"
+    },
+    "WEASEL": {
+      "pt": "Weasel",
+      "en": "Weasel"
+    },
+    "OTHER_LAND": {
+      "pt": "Hei-de escolher outro animal",
+      "en": "I'll choose another animal"
+    }
+  },
+  "q_warlock_familiar_creature_water": {
+    "FROG": {
+      "pt": "Frog",
+      "en": "Frog"
+    },
+    "OCTOPUS": {
+      "pt": "Octopus",
+      "en": "Octopus"
+    },
+    "OTHER_WATER": {
+      "pt": "Hei-de escolher outro animal",
+      "en": "I'll choose another animal"
+    }
+  },
+  "q_class_adjustment_fighter": {
+    "FIGHTER_FIGHTING_STYLE_CLASSIC": {
+      "pt": "Classic Fighting Style",
+      "en": "Classic Fighting Style"
+    },
+    "FIGHTER_FIGHTING_STYLE_THROWN": {
+      "pt": "Thrown Weapon Fighting Style",
+      "en": "Thrown Weapon Fighting Style"
+    },
+    "FIGHTER_FIGHTING_STYLE_UNARMED": {
+      "pt": "Unarmed Fighting Style",
+      "en": "Unarmed Fighting Style"
+    }
+  },
+  "q_class_adjustment_ranger": {
+    "RANGER_FIGHTING_STYLE_CLASSIC": {
+      "pt": "Classic Fighting Style",
+      "en": "Classic Fighting Style"
+    },
+    "RANGER_FIGHTING_STYLE_DRUIDIC": {
+      "pt": "Druidic Warrior",
+      "en": "Druidic Warrior"
+    },
+    "RANGER_FIGHTING_STYLE_THROWN": {
+      "pt": "Thrown Weapon Fighting Style",
+      "en": "Thrown Weapon Fighting Style"
+    },
+    "RANGER_FIGHTING_STYLE_UNARMED": {
+      "pt": "Unarmed Fighting Style",
+      "en": "Unarmed Fighting Style"
+    }
+  },
+  "q_class_adjustment_paladin": {
+    "PALADIN_FIGHTING_STYLE_CLASSIC": {
+      "pt": "Classic Fighting Style",
+      "en": "Classic Fighting Style"
+    },
+    "PALADIN_FIGHTING_STYLE_BLESSED": {
+      "pt": "Blessed Warrior",
+      "en": "Blessed Warrior"
+    },
+    "PALADIN_FIGHTING_STYLE_THROWN": {
+      "pt": "Thrown Weapon Fighting Style",
+      "en": "Thrown Weapon Fighting Style"
+    },
+    "PALADIN_FIGHTING_STYLE_UNARMED": {
+      "pt": "Unarmed Fighting Style",
+      "en": "Unarmed Fighting Style"
+    }
+  },
+  "q_physical_ability_preference": {
+    "DEX": {
+      "pt": "Destreza (DEX)",
+      "en": "Dexterity (DEX)"
+    },
+    "STR": {
+      "pt": "Força (STR)",
+      "en": "Strength (STR)"
+    }
+  },
+  "q_dark_gift_presence": {
+    "YES": {
+      "pt": "Sim",
+      "en": "Yes"
+    },
+    "NO": {
+      "pt": "Não",
+      "en": "No"
+    }
+  },
+  "q_dark_gift_type": {
+    "ECHOING_SOUL": {
+      "pt": "Echoing Soul",
+      "en": "Echoing Soul"
+    },
+    "GATHERED_WHISPERS": {
+      "pt": "Gathered Whispers",
+      "en": "Gathered Whispers"
+    },
+    "LIVING_SHADOW": {
+      "pt": "Living Shadow",
+      "en": "Living Shadow"
+    },
+    "MIST_WALKER": {
+      "pt": "Mist Walker",
+      "en": "Mist Walker"
+    },
+    "SECOND_SKIN": {
+      "pt": "Second Skin",
+      "en": "Second Skin"
+    },
+    "SYMBIOTIC_BEING": {
+      "pt": "Symbiotic Being",
+      "en": "Symbiotic Being"
+    },
+    "TOUCH_OF_DEATH": {
+      "pt": "Touch of Death",
+      "en": "Touch of Death"
+    },
+    "WATCHERS": {
+      "pt": "Watchers",
+      "en": "Watchers"
+    }
+  }
+}
