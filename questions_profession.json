@@ -32,23 +32,18 @@
       },
       "options": [
         {
-          "label": "Defender",
           "value": "DEFENDER"
         },
         {
-          "label": "Healer/Support",
           "value": "HEALER_SUPPORT"
         },
         {
-          "label": "Controller",
           "value": "CONTROLLER"
         },
         {
-          "label": "Striker",
           "value": "STRIKER"
         },
         {
-          "label": "Scout",
           "value": "SCOUT"
         }
       ],
@@ -65,7 +60,6 @@
       },
       "options": [
         {
-          "label": "Healer",
           "value": "HEALER",
           "set": [
             {
@@ -84,7 +78,6 @@
           ]
         },
         {
-          "label": "Support",
           "value": "SUPPORT",
           "set": [
             {
@@ -103,7 +96,6 @@
           ]
         },
         {
-          "label": "Both",
           "value": "BOTH",
           "set": [
             {
@@ -143,19 +135,15 @@
       },
       "options": [
         {
-          "label": "Blaster",
           "value": "BLASTER"
         },
         {
-          "label": "Face",
           "value": "FACE"
         },
         {
-          "label": "Scholar",
           "value": "SCHOLAR"
         },
         {
-          "label": "Utility Caster",
           "value": "UTILITY_CASTER"
         }
       ],
@@ -167,7 +155,6 @@
       "question": "Com que nível de complexidade te sentes confortável?",
       "options": [
         {
-          "label": "Só tenho interesse nas classes mais simples.",
           "value": "A",
           "set": [
             {
@@ -179,7 +166,6 @@
           "next": "q_class_simple_choice"
         },
         {
-          "label": "Só não tenho interesse nas classes mais complexas.",
           "value": "B",
           "set": [
             {
@@ -191,7 +177,6 @@
           "next": "q_class_medium_choice"
         },
         {
-          "label": "A complexidade não me aflige.",
           "value": "C",
           "set": [
             {
@@ -210,7 +195,6 @@
       "question": "Que classe preferes jogar?",
       "options": [
         {
-          "label": "Barbarian",
           "value": "BARBARIAN",
           "set": [
             {
@@ -237,7 +221,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Fighter",
           "value": "FIGHTER",
           "set": [
             {
@@ -269,7 +252,6 @@
           "next": "q_class_adjustment_fighter"
         },
         {
-          "label": "Rogue",
           "value": "ROGUE",
           "set": [
             {
@@ -314,7 +296,6 @@
       "question": "Que classe preferes jogar?",
       "options": [
         {
-          "label": "Barbarian",
           "value": "BARBARIAN",
           "set": [
             {
@@ -341,7 +322,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Fighter",
           "value": "FIGHTER",
           "set": [
             {
@@ -373,7 +353,6 @@
           "next": "q_class_adjustment_fighter"
         },
         {
-          "label": "Rogue",
           "value": "ROGUE",
           "set": [
             {
@@ -400,7 +379,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Cleric",
           "value": "CLERIC",
           "set": [
             {
@@ -427,7 +405,6 @@
           "next": "q_class_adjustment_cleric"
         },
         {
-          "label": "Paladin",
           "value": "PALADIN",
           "set": [
             {
@@ -454,7 +431,6 @@
           "next": "q_class_adjustment_paladin"
         },
         {
-          "label": "Ranger",
           "value": "RANGER",
           "set": [
             {
@@ -481,7 +457,6 @@
           "next": "q_class_adjustment_ranger"
         },
         {
-          "label": "Wizard",
           "value": "WIZARD",
           "set": [
             {
@@ -526,7 +501,6 @@
       "question": "Que classe preferes jogar?",
       "options": [
         {
-          "label": "Barbarian",
           "value": "BARBARIAN",
           "set": [
             {
@@ -553,7 +527,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Fighter",
           "value": "FIGHTER",
           "set": [
             {
@@ -585,7 +558,6 @@
           "next": "q_class_adjustment_fighter"
         },
         {
-          "label": "Rogue",
           "value": "ROGUE",
           "set": [
             {
@@ -612,7 +584,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Monk",
           "value": "MONK",
           "set": [
             {
@@ -639,7 +610,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Wizard",
           "value": "WIZARD",
           "set": [
             {
@@ -666,7 +636,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Sorcerer",
           "value": "SORCERER",
           "set": [
             {
@@ -693,7 +662,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Cleric",
           "value": "CLERIC",
           "set": [
             {
@@ -720,7 +688,6 @@
           "next": "q_class_adjustment_cleric"
         },
         {
-          "label": "Druid",
           "value": "DRUID",
           "set": [
             {
@@ -747,7 +714,6 @@
           "next": "q_class_adjustment_druid"
         },
         {
-          "label": "Artificer",
           "value": "ARTIFICER",
           "set": [
             {
@@ -774,7 +740,6 @@
           "next": "q_subclass_choice"
         },
         {
-          "label": "Paladin",
           "value": "PALADIN",
           "set": [
             {
@@ -801,7 +766,6 @@
           "next": "q_class_adjustment_paladin"
         },
         {
-          "label": "Ranger",
           "value": "RANGER",
           "set": [
             {
@@ -828,7 +792,6 @@
           "next": "q_class_adjustment_ranger"
         },
         {
-          "label": "Bard",
           "value": "BARD",
           "set": [
             {
@@ -855,7 +818,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Warlock",
           "value": "WARLOCK",
           "set": [
             {
@@ -882,7 +844,6 @@
           "next": "q_class_adjustment_warlock"
         },
         {
-          "label": "Blood Hunter",
           "value": "BLOOD_HUNTER",
           "set": [
             {
@@ -927,7 +888,6 @@
       "question": "Preferes explorar subclasses principais ou especializadas?",
       "options": [
         {
-          "label": "Quero ver as subclasses principais.",
           "value": "CORE",
           "set": [
             {
@@ -944,7 +904,6 @@
           "next": "q_subclass_choice"
         },
         {
-          "label": "Mostra-me opções mais únicas ou de nicho.",
           "value": "NICHE",
           "set": [
             {
@@ -1074,7 +1033,6 @@
       },
       "options": [
         {
-          "label": "Sim",
           "value": "YES",
           "set": [
             {
@@ -1096,7 +1054,6 @@
           "next": "q_familiar_habitat"
         },
         {
-          "label": "Não",
           "value": "NO",
           "set": [
             {
@@ -1134,7 +1091,6 @@
       },
       "options": [
         {
-          "label": "Nos céus ou entre os ramos — voador e atento.",
           "value": "SKY",
           "set": [
             {
@@ -1151,7 +1107,6 @@
           "next": "q_familiar_creature_sky"
         },
         {
-          "label": "Na terra — rápido, sorrateiro ou escalador.",
           "value": "LAND",
           "set": [
             {
@@ -1168,7 +1123,6 @@
           "next": "q_familiar_creature_land"
         },
         {
-          "label": "Na água — estranho, furtivo e versátil.",
           "value": "WATER",
           "set": [
             {
@@ -1206,7 +1160,6 @@
       },
       "options": [
         {
-          "label": "Bat",
           "value": "BAT",
           "set": [
             {
@@ -1218,7 +1171,6 @@
           "next": "q_physical_ability_preference"
         },
         {
-          "label": "Hawk",
           "value": "HAWK",
           "set": [
             {
@@ -1230,7 +1182,6 @@
           "next": "q_physical_ability_preference"
         },
         {
-          "label": "Owl",
           "value": "OWL",
           "set": [
             {
@@ -1242,7 +1193,6 @@
           "next": "q_physical_ability_preference"
         },
         {
-          "label": "Raven",
           "value": "RAVEN",
           "set": [
             {
@@ -1254,7 +1204,6 @@
           "next": "q_physical_ability_preference"
         },
         {
-          "label": "Hei-de escolher outro animal",
           "value": "OTHER_AIR",
           "set": [
             {
@@ -1287,7 +1236,6 @@
       },
       "options": [
         {
-          "label": "Cat",
           "value": "CAT",
           "set": [
             {
@@ -1299,7 +1247,6 @@
           "next": "q_physical_ability_preference"
         },
         {
-          "label": "Lizard",
           "value": "LIZARD",
           "set": [
             {
@@ -1311,7 +1258,6 @@
           "next": "q_physical_ability_preference"
         },
         {
-          "label": "Rat",
           "value": "RAT",
           "set": [
             {
@@ -1323,7 +1269,6 @@
           "next": "q_physical_ability_preference"
         },
         {
-          "label": "Spider",
           "value": "SPIDER",
           "set": [
             {
@@ -1335,7 +1280,6 @@
           "next": "q_physical_ability_preference"
         },
         {
-          "label": "Weasel",
           "value": "WEASEL",
           "set": [
             {
@@ -1347,7 +1291,6 @@
           "next": "q_physical_ability_preference"
         },
         {
-          "label": "Hei-de escolher outro animal",
           "value": "OTHER_LAND",
           "set": [
             {
@@ -1380,7 +1323,6 @@
       },
       "options": [
         {
-          "label": "Frog",
           "value": "FROG",
           "set": [
             {
@@ -1392,7 +1334,6 @@
           "next": "q_physical_ability_preference"
         },
         {
-          "label": "Octopus",
           "value": "OCTOPUS",
           "set": [
             {
@@ -1404,7 +1345,6 @@
           "next": "q_physical_ability_preference"
         },
         {
-          "label": "Hei-de escolher outro animal",
           "value": "OTHER_WATER",
           "set": [
             {
@@ -1423,7 +1363,6 @@
       "question": "Que Divine Order pretendes escolher?",
       "options": [
         {
-          "label": "Protector",
           "value": "CLERIC_PROTECTOR",
           "set": [
             {
@@ -1435,7 +1374,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Thaumaturge",
           "value": "CLERIC_THAUMATURGE",
           "set": [
             {
@@ -1454,7 +1392,6 @@
       "question": "Que Primal Order pretendes escolher?",
       "options": [
         {
-          "label": "Warden",
           "value": "DRUID_WARDEN",
           "set": [
             {
@@ -1466,7 +1403,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Magician",
           "value": "DRUID_MAGICIAN",
           "set": [
             {
@@ -1485,7 +1421,6 @@
       "question": "Que Pact Boon Invocation pretendes escolher?",
       "options": [
         {
-          "label": "Pact of the Tome",
           "value": "WARLOCK_PACT_OF_THE_TOME",
           "set": [
             {
@@ -1497,7 +1432,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Pact of the Chain",
           "value": "WARLOCK_PACT_OF_THE_CHAIN",
           "set": [
             {
@@ -1524,7 +1458,6 @@
           "next": "q_warlock_familiar_type"
         },
         {
-          "label": "Pact of the Blade",
           "value": "WARLOCK_PACT_OF_THE_BLADE",
           "set": [
             {
@@ -1562,7 +1495,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "None",
           "value": "WARLOCK_NONE",
           "set": [
             {
@@ -1595,7 +1527,6 @@
       },
       "options": [
         {
-          "label": "Uma criatura mágica, exótica ou venenosa — algo fora do comum.",
           "value": "WARLOCK_FAMILIAR_EXOTIC",
           "set": [
             {
@@ -1617,7 +1548,6 @@
           "next": "q_warlock_familiar_style"
         },
         {
-          "label": "Um animal natural — discreto, astuto ou adorável.",
           "value": "WARLOCK_FAMILIAR_ANIMAL",
           "set": [
             {
@@ -1660,12 +1590,10 @@
       },
       "options": [
         {
-          "label": "Um lado diabólico, com poderes infernais ou demoníacos.",
           "value": "WARLOCK_FAMILIAR_INFERNAL",
           "next": "q_warlock_familiar_dark"
         },
         {
-          "label": "Um toque encantado, misterioso ou celestial.",
           "value": "WARLOCK_FAMILIAR_CELESTIAL",
           "next": "q_warlock_familiar_mystic"
         }
@@ -1691,7 +1619,6 @@
       },
       "options": [
         {
-          "label": "Imp",
           "value": "IMP",
           "set": [
             {
@@ -1703,7 +1630,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Quasit",
           "value": "QUASIT",
           "set": [
             {
@@ -1715,7 +1641,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Skeleton",
           "value": "SKELETON",
           "set": [
             {
@@ -1727,7 +1652,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Slaad Tadpole",
           "value": "SLAAD_TADPOLE",
           "set": [
             {
@@ -1760,7 +1684,6 @@
       },
       "options": [
         {
-          "label": "Pseudodragon",
           "value": "PSEUDODRAGON",
           "set": [
             {
@@ -1772,7 +1695,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Sphinx of Wonder",
           "value": "SPHINX_OF_WONDER",
           "set": [
             {
@@ -1784,7 +1706,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Sprite",
           "value": "SPRITE",
           "set": [
             {
@@ -1796,7 +1717,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Venomous Snake",
           "value": "VENOMOUS_SNAKE",
           "set": [
             {
@@ -1834,7 +1754,6 @@
       },
       "options": [
         {
-          "label": "Nos céus ou entre os ramos — voador e atento.",
           "value": "SKY",
           "set": [
             {
@@ -1851,7 +1770,6 @@
           "next": "q_warlock_familiar_creature_sky"
         },
         {
-          "label": "Na terra — rápido, sorrateiro ou escalador.",
           "value": "LAND",
           "set": [
             {
@@ -1868,7 +1786,6 @@
           "next": "q_warlock_familiar_creature_land"
         },
         {
-          "label": "Na água — estranho, furtivo e versátil.",
           "value": "WATER",
           "set": [
             {
@@ -1911,7 +1828,6 @@
       },
       "options": [
         {
-          "label": "Bat",
           "value": "BAT",
           "set": [
             {
@@ -1923,7 +1839,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Hawk",
           "value": "HAWK",
           "set": [
             {
@@ -1935,7 +1850,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Owl",
           "value": "OWL",
           "set": [
             {
@@ -1947,7 +1861,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Raven",
           "value": "RAVEN",
           "set": [
             {
@@ -1959,7 +1872,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Hei-de escolher outro animal",
           "value": "OTHER_AIR",
           "set": [
             {
@@ -1997,7 +1909,6 @@
       },
       "options": [
         {
-          "label": "Cat",
           "value": "CAT",
           "set": [
             {
@@ -2009,7 +1920,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Lizard",
           "value": "LIZARD",
           "set": [
             {
@@ -2021,7 +1931,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Rat",
           "value": "RAT",
           "set": [
             {
@@ -2033,7 +1942,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Spider",
           "value": "SPIDER",
           "set": [
             {
@@ -2045,7 +1953,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Weasel",
           "value": "WEASEL",
           "set": [
             {
@@ -2057,7 +1964,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Hei-de escolher outro animal",
           "value": "OTHER_LAND",
           "set": [
             {
@@ -2095,7 +2001,6 @@
       },
       "options": [
         {
-          "label": "Frog",
           "value": "FROG",
           "set": [
             {
@@ -2107,7 +2012,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Octopus",
           "value": "OCTOPUS",
           "set": [
             {
@@ -2119,7 +2023,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Hei-de escolher outro animal",
           "value": "OTHER_WATER",
           "set": [
             {
@@ -2138,7 +2041,6 @@
       "question": "Que Estilo de Luta preferes aprender?",
       "options": [
         {
-          "label": "Classic Fighting Style",
           "value": "FIGHTER_FIGHTING_STYLE_CLASSIC",
           "set": [
             {
@@ -2155,7 +2057,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Thrown Weapon Fighting Style",
           "value": "FIGHTER_FIGHTING_STYLE_THROWN",
           "set": [
             {
@@ -2172,7 +2073,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Unarmed Fighting Style",
           "value": "FIGHTER_FIGHTING_STYLE_UNARMED",
           "set": [
             {
@@ -2196,7 +2096,6 @@
       "question": "Que Estilo de Luta preferes aprender?",
       "options": [
         {
-          "label": "Classic Fighting Style",
           "value": "RANGER_FIGHTING_STYLE_CLASSIC",
           "set": [
             {
@@ -2213,7 +2112,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Druidic Warrior",
           "value": "RANGER_FIGHTING_STYLE_DRUIDIC",
           "set": [
             {
@@ -2230,7 +2128,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Thrown Weapon Fighting Style",
           "value": "RANGER_FIGHTING_STYLE_THROWN",
           "set": [
             {
@@ -2247,7 +2144,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Unarmed Fighting Style",
           "value": "RANGER_FIGHTING_STYLE_UNARMED",
           "set": [
             {
@@ -2271,7 +2167,6 @@
       "question": "Que Estilo de Luta preferes aprender?",
       "options": [
         {
-          "label": "Classic Fighting Style",
           "value": "PALADIN_FIGHTING_STYLE_CLASSIC",
           "set": [
             {
@@ -2288,7 +2183,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Blessed Warrior",
           "value": "PALADIN_FIGHTING_STYLE_BLESSED",
           "set": [
             {
@@ -2305,7 +2199,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Thrown Weapon Fighting Style",
           "value": "PALADIN_FIGHTING_STYLE_THROWN",
           "set": [
             {
@@ -2322,7 +2215,6 @@
           "next": "q_subclass_group"
         },
         {
-          "label": "Unarmed Fighting Style",
           "value": "PALADIN_FIGHTING_STYLE_UNARMED",
           "set": [
             {
@@ -2351,7 +2243,6 @@
       },
       "options": [
         {
-          "label": "Destreza (DEX)",
           "value": "DEX",
           "set": [
             {
@@ -2363,7 +2254,6 @@
           "next": "q_background_preference"
         },
         {
-          "label": "Força (STR)",
           "value": "STR",
           "set": [
             {
@@ -2417,7 +2307,6 @@
       "question": "A tua personagem carrega uma maldição?",
       "options": [
         {
-          "label": "Sim",
           "value": "YES",
           "set": [
             {
@@ -2429,7 +2318,6 @@
           "next": "q_dark_gift_type"
         },
         {
-          "label": "Não",
           "value": "NO",
           "set": [
             {
@@ -2448,7 +2336,6 @@
       "question": "Que tipo de maldição ela tem?",
       "options": [
         {
-          "label": "Echoing Soul",
           "value": "ECHOING_SOUL",
           "set": [
             {
@@ -2460,7 +2347,6 @@
           "next": null
         },
         {
-          "label": "Gathered Whispers",
           "value": "GATHERED_WHISPERS",
           "set": [
             {
@@ -2472,7 +2358,6 @@
           "next": null
         },
         {
-          "label": "Living Shadow",
           "value": "LIVING_SHADOW",
           "set": [
             {
@@ -2484,7 +2369,6 @@
           "next": null
         },
         {
-          "label": "Mist Walker",
           "value": "MIST_WALKER",
           "set": [
             {
@@ -2496,7 +2380,6 @@
           "next": null
         },
         {
-          "label": "Second Skin",
           "value": "SECOND_SKIN",
           "set": [
             {
@@ -2508,7 +2391,6 @@
           "next": null
         },
         {
-          "label": "Symbiotic Being",
           "value": "SYMBIOTIC_BEING",
           "set": [
             {
@@ -2520,7 +2402,6 @@
           "next": null
         },
         {
-          "label": "Touch of Death",
           "value": "TOUCH_OF_DEATH",
           "set": [
             {
@@ -2532,7 +2413,6 @@
           "next": null
         },
         {
-          "label": "Watchers",
           "value": "WATCHERS",
           "set": [
             {

@@ -105,446 +105,254 @@ const SECTION_FALLBACK = {
 };
 
 const QUESTION_TRANSLATIONS = {
-  q_gender: {
-    question: {
-      pt: 'Como se apresenta a tua personagem em termos de género?',
-      en: 'How does your character present in terms of gender?',
-    },
-    options: {
-      A: { pt: 'Feminina', en: 'Female' },
-      B: { pt: 'Masculina', en: 'Male' },
-      C: { pt: 'Andrógina', en: 'Androgynous' },
-    },
+  "q_gender": {
+    "question": {
+      "pt": "Como se apresenta a tua personagem em termos de género?",
+      "en": "How does your character present in terms of gender?"
+    }
   },
-  q_height: {
-    question: {
-      pt: 'Em que faixa de alturas se encaixa a tua personagem?',
-      en: 'Which height range fits your character?',
-    },
-    options: {
-      A: { pt: 'Minúscula — 0,6–0,9 m', en: 'Tiny — 0.6–0.9 m' },
-      B: { pt: 'Baixa — ~1,2 m', en: 'Short — ~1.2 m' },
-      C: { pt: 'Média — 1,5–1,8 m', en: 'Medium — 1.5–1.8 m' },
-      D: { pt: 'Alta — 2,1–2,4 m', en: 'Tall — 2.1–2.4 m' },
-    },
+  "q_height": {
+    "question": {
+      "pt": "Em que faixa de alturas se encaixa a tua personagem?",
+      "en": "Which height range fits your character?"
+    }
   },
-  q_species_exoticness: {
-    question: {
-      pt: 'Quão exótica pretendes que a espécie da tua personagem seja?',
-      en: "How exotic do you want your character's species to be?",
-    },
-    options: {
-      A: { pt: 'A espécie humana', en: 'The human species' },
-      B: { pt: 'Não humana — conhecida', en: 'Non-human — well-known' },
-      C: { pt: 'Não humana — estranha para alguns', en: 'Non-human — odd to some' },
-      D: { pt: 'Não humana — estranha para a maioria', en: 'Non-human — odd to most' },
-    },
+  "q_species_exoticness": {
+    "question": {
+      "pt": "Quão exótica pretendes que a espécie da tua personagem seja?",
+      "en": "How exotic do you want your character's species to be?"
+    }
   },
-  q_species_animal_likeness: {
-    question: {
-      pt: 'A tua personagem tem traços de animal?',
-      en: 'Does your character have animal traits?',
-    },
-    options: {
-      A: { pt: 'Sim', en: 'Yes' },
-      B: { pt: 'Não', en: 'No' },
-    },
+  "q_species_animal_likeness": {
+    "question": {
+      "pt": "A tua personagem tem traços de animal?",
+      "en": "Does your character have animal traits?"
+    }
   },
-  q_species_pick: {
-    question: {
-      pt: 'Que espécie preferes jogar?',
-      en: 'Which species do you want to play?',
-    },
+  "q_species_pick": {
+    "question": {
+      "pt": "Que espécie preferes jogar?",
+      "en": "Which species do you want to play?"
+    }
   },
-  q_dragonborn_ancestry_type: {
-    question: {
-      pt: 'Que tipo de ancestralidade dracónica define a tua personagem?',
-      en: 'Which type of draconic ancestry defines your character?',
-    },
-    options: {
-      chromatic: {
-        pt: 'Cromática (escamas reptilianas, aspeto feroz)',
-        en: 'Chromatic (scaled and fearsome)',
-      },
-      metallic: {
-        pt: 'Metálica (escamas metálicas, aspeto polido)',
-        en: 'Metallic (gleaming metallic scales)',
-      },
-    },
+  "q_dragonborn_ancestry_type": {
+    "question": {
+      "pt": "Que tipo de ancestralidade dracónica define a tua personagem?",
+      "en": "Which type of draconic ancestry defines your character?"
+    }
   },
-  q_goliath_power_type: {
-    question: {
-      pt: 'Que tipo de poder de ancestralidade gigante melhor descreve a tua personagem?',
-      en: 'Which kind of giant ancestry power best fits your character?',
-    },
-    options: {
-      defensive: { pt: 'Poderes Defensivos', en: 'Defensive powers' },
-      mobility: { pt: 'Poderes de Mobilidade', en: 'Mobility powers' },
-      offensive: { pt: 'Poderes Ofensivos', en: 'Offensive powers' },
-    },
+  "q_goliath_power_type": {
+    "question": {
+      "pt": "Que tipo de poder de ancestralidade gigante melhor descreve a tua personagem?",
+      "en": "Which kind of giant ancestry power best fits your character?"
+    }
   },
-  q_subspecies_pick: {
-    question: {
-      pt: 'Que subespécie prefere a tua personagem?',
-      en: 'Which sub-species does your character prefer?',
-    },
+  "q_subspecies_pick": {
+    "question": {
+      "pt": "Que subespécie prefere a tua personagem?",
+      "en": "Which sub-species does your character prefer?"
+    }
   },
-  q_subsubspecies_pick: {
-    question: {
-      pt: 'Qual é a variação específica da subespécie?',
-      en: 'What is the specific variation of the sub-species?',
-    },
+  "q_subsubspecies_pick": {
+    "question": {
+      "pt": "Qual é a variação específica da subespécie?",
+      "en": "What is the specific variation of the sub-species?"
+    }
   },
-  q_primary_roles: {
-    question: {
-      pt: 'Que papel preferes em combate (seleciona até 2 opções)?',
-      en: 'Which combat role do you prefer (select up to 2 options)?',
-    },
-    options: {
-      DEFENDER: { pt: 'Defensor', en: 'Defender' },
-      HEALER_SUPPORT: { pt: 'Cura/Apoio', en: 'Healer/Support' },
-      CONTROLLER: { pt: 'Controlador', en: 'Controller' },
-      STRIKER: { pt: 'Atacante', en: 'Striker' },
-      SCOUT: { pt: 'Batedor', en: 'Scout' },
-    },
+  "q_primary_roles": {
+    "question": {
+      "pt": "Que papel preferes em combate (seleciona até 2 opções)?",
+      "en": "Which combat role do you prefer (select up to 2 options)?"
+    }
   },
-  q_healer_support_preference: {
-    question: {
-      pt: 'Qual preferes?',
-      en: 'Which do you prefer?',
-    },
-    options: {
-      HEALER: { pt: 'Curandeiro', en: 'Healer' },
-      SUPPORT: { pt: 'Apoio', en: 'Support' },
-      BOTH: { pt: 'Ambos', en: 'Both' },
-    },
+  "q_healer_support_preference": {
+    "question": {
+      "pt": "Qual preferes?",
+      "en": "Which do you prefer?"
+    }
   },
-  q_secondary_roles: {
-    question: {
-      pt: 'Há mais algum papel que precisas que a tua personagem sirva (Seleciona 0, 1 ou 2 opções)?',
-      en: 'Do you need your character to fill any other roles (select 0, 1, or 2 options)?',
-    },
-    options: {
-      BLASTER: { pt: 'Blaster', en: 'Blaster' },
-      FACE: { pt: 'Face (diplomata)', en: 'Face' },
-      SCHOLAR: { pt: 'Erudito', en: 'Scholar' },
-      UTILITY_CASTER: { pt: 'Conjurador utilitário', en: 'Utility Caster' },
-    },
+  "q_secondary_roles": {
+    "question": {
+      "pt": "Há mais algum papel que precisas que a tua personagem sirva (Seleciona 0, 1 ou 2 opções)?",
+      "en": "Do you need your character to fill any other roles (select 0, 1, or 2 options)?"
+    }
   },
-  q_class_complexity: {
-    question: {
-      pt: 'Com que nível de complexidade te sentes confortável?',
-      en: 'What level of class complexity are you comfortable with?',
-    },
-    options: {
-      A: {
-        pt: 'Só tenho interesse nas classes mais simples.',
-        en: "I'm only interested in the simplest classes.",
-      },
-      B: {
-        pt: 'Só não tenho interesse nas classes mais complexas.',
-        en: "I just want to avoid the most complex classes.",
-      },
-      C: {
-        pt: 'A complexidade não me aflige.',
-        en: "Complexity doesn't bother me.",
-      },
-    },
+  "q_class_complexity": {
+    "question": {
+      "pt": "Com que nível de complexidade te sentes confortável?",
+      "en": "What level of class complexity are you comfortable with?"
+    }
   },
-  q_class_simple_choice: {
-    question: {
-      pt: 'Que classe preferes jogar?',
-      en: 'Which class would you like to play?',
-    },
+  "q_class_simple_choice": {
+    "question": {
+      "pt": "Que classe preferes jogar?",
+      "en": "Which class would you like to play?"
+    }
   },
-  q_class_medium_choice: {
-    question: {
-      pt: 'Que classe preferes jogar?',
-      en: 'Which class would you like to play?',
-    },
+  "q_class_medium_choice": {
+    "question": {
+      "pt": "Que classe preferes jogar?",
+      "en": "Which class would you like to play?"
+    }
   },
-  q_class_high_choice: {
-    question: {
-      pt: 'Que classe preferes jogar?',
-      en: 'Which class would you like to play?',
-    },
+  "q_class_high_choice": {
+    "question": {
+      "pt": "Que classe preferes jogar?",
+      "en": "Which class would you like to play?"
+    }
   },
-  q_subclass_group: {
-    question: {
-      pt: 'Preferes explorar subclasses principais ou especializadas?',
-      en: 'Do you want to explore core or specialized subclasses?',
-    },
-    options: {
-      CORE: { pt: 'Quero ver as subclasses principais.', en: 'Show me the core subclasses.' },
-      NICHE: {
-        pt: 'Mostra-me opções mais únicas ou de nicho.',
-        en: 'Show me more unique or niche options.',
-      },
-    },
+  "q_subclass_group": {
+    "question": {
+      "pt": "Preferes explorar subclasses principais ou especializadas?",
+      "en": "Do you want to explore core or specialized subclasses?"
+    }
   },
-  q_subclass_choice: {
-    question: {
-      pt: 'Qual destas subclasses chama mais por ti?',
-      en: 'Which of these subclasses appeals to you most?',
-    },
+  "q_subclass_choice": {
+    "question": {
+      "pt": "Qual destas subclasses chama mais por ti?",
+      "en": "Which of these subclasses appeals to you most?"
+    }
   },
-  q_find_familiar_use: {
-    question: {
-      pt: 'Pretendes usar o feitiço Find Familiar e ter uma companhia animal mágica?',
-      en: 'Do you plan to use the Find Familiar spell and have a magical animal companion?',
-    },
-    options: {
-      YES: { pt: 'Sim', en: 'Yes' },
-      NO: { pt: 'Não', en: 'No' },
-    },
+  "q_find_familiar_use": {
+    "question": {
+      "pt": "Pretendes usar o feitiço Find Familiar e ter uma companhia animal mágica?",
+      "en": "Do you plan to use the Find Familiar spell and have a magical animal companion?"
+    }
   },
-  q_familiar_habitat: {
-    question: {
-      pt: 'O teu familiar ideal vive...?',
-      en: 'Where does your ideal familiar live?',
-    },
-    options: {
-      SKY: {
-        pt: 'Nos céus ou entre os ramos — voador e atento.',
-        en: 'In the sky or treetops — flying and watchful.',
-      },
-      LAND: {
-        pt: 'Na terra — rápido, sorrateiro ou escalador.',
-        en: 'On land — quick, sneaky, or a climber.',
-      },
-      WATER: {
-        pt: 'Na água — estranho, furtivo e versátil.',
-        en: 'In the water — strange, stealthy, and versatile.',
-      },
-    },
+  "q_familiar_habitat": {
+    "question": {
+      "pt": "O teu familiar ideal vive...?",
+      "en": "Where does your ideal familiar live?"
+    }
   },
-  q_familiar_creature_sky: {
-    question: {
-      pt: 'Qual destas criaturas aéreas te acompanha?',
-      en: 'Which of these aerial creatures accompanies you?',
-    },
-    options: {
-      BAT: { pt: 'Morcego', en: 'Bat' },
-      HAWK: { pt: 'Falcão', en: 'Hawk' },
-      OWL: { pt: 'Coruja', en: 'Owl' },
-      RAVEN: { pt: 'Corvo', en: 'Raven' },
-      OTHER_AIR: {
-        pt: 'Hei-de escolher outro animal',
-        en: "I'll choose another animal",
-      },
-    },
+  "q_familiar_creature_sky": {
+    "question": {
+      "pt": "Qual destas criaturas aéreas te acompanha?",
+      "en": "Which of these aerial creatures accompanies you?"
+    }
   },
-  q_familiar_creature_land: {
-    question: {
-      pt: 'Qual destes animais terrestres partilha a tua jornada?',
-      en: 'Which of these land animals joins your journey?',
-    },
-    options: {
-      CAT: { pt: 'Gato', en: 'Cat' },
-      LIZARD: { pt: 'Lagarto', en: 'Lizard' },
-      RAT: { pt: 'Rato', en: 'Rat' },
-      SPIDER: { pt: 'Aranha', en: 'Spider' },
-      WEASEL: { pt: 'Doninha', en: 'Weasel' },
-      OTHER_LAND: {
-        pt: 'Hei-de escolher outro animal',
-        en: "I'll choose another animal",
-      },
-    },
+  "q_familiar_creature_land": {
+    "question": {
+      "pt": "Qual destes animais terrestres partilha a tua jornada?",
+      "en": "Which of these land animals joins your journey?"
+    }
   },
-  q_familiar_creature_water: {
-    question: {
-      pt: 'Qual destas criaturas aquáticas é tua aliada?',
-      en: 'Which of these aquatic creatures is your ally?',
-    },
-    options: {
-      FROG: { pt: 'Sapo', en: 'Frog' },
-      OCTOPUS: { pt: 'Polvo', en: 'Octopus' },
-      OTHER_WATER: {
-        pt: 'Hei-de escolher outro animal',
-        en: "I'll choose another animal",
-      },
-    },
+  "q_familiar_creature_water": {
+    "question": {
+      "pt": "Qual destas criaturas aquáticas é tua aliada?",
+      "en": "Which of these aquatic creatures is your ally?"
+    }
   },
-  q_class_adjustment_cleric: {
-    question: {
-      pt: 'Que Divine Order pretendes escolher?',
-      en: 'Which Divine Order do you want to choose?',
-    },
+  "q_class_adjustment_cleric": {
+    "question": {
+      "pt": "Que Divine Order pretendes escolher?",
+      "en": "Which Divine Order do you want to choose?"
+    }
   },
-  q_class_adjustment_druid: {
-    question: {
-      pt: 'Que Primal Order pretendes escolher?',
-      en: 'Which Primal Order do you want to choose?',
-    },
+  "q_class_adjustment_druid": {
+    "question": {
+      "pt": "Que Primal Order pretendes escolher?",
+      "en": "Which Primal Order do you want to choose?"
+    }
   },
-  q_class_adjustment_warlock: {
-    question: {
-      pt: 'Que Pact Boon Invocation pretendes escolher?',
-      en: 'Which Pact Boon Invocation do you want to choose?',
-    },
+  "q_class_adjustment_warlock": {
+    "question": {
+      "pt": "Que Pact Boon Invocation pretendes escolher?",
+      "en": "Which Pact Boon Invocation do you want to choose?"
+    }
   },
-  q_warlock_familiar_type: {
-    question: {
-      pt: 'Que tipo de familiar mágico te acompanha nas tuas aventuras?',
-      en: 'What type of magical familiar accompanies you on your adventures?',
-    },
-    options: {
-      WARLOCK_FAMILIAR_EXOTIC: {
-        pt: 'Uma criatura mágica, exótica ou venenosa — algo fora do comum.',
-        en: 'A magical, exotic, or venomous creature — something unusual.',
-      },
-      WARLOCK_FAMILIAR_ANIMAL: {
-        pt: 'Um animal natural — discreto, astuto ou adorável.',
-        en: 'A natural animal — discreet, clever, or adorable.',
-      },
-    },
+  "q_warlock_familiar_type": {
+    "question": {
+      "pt": "Que tipo de familiar mágico te acompanha nas tuas aventuras?",
+      "en": "What type of magical familiar accompanies you on your adventures?"
+    }
   },
-  q_warlock_familiar_style: {
-    question: {
-      pt: 'Preferes que o teu familiar tenha...?',
-      en: 'Do you prefer your familiar to have...?',
-    },
-    options: {
-      WARLOCK_FAMILIAR_DARK: {
-        pt: 'Um lado diabólico, com poderes infernais ou demoníacos.',
-        en: 'A fiendish side with infernal or demonic powers.',
-      },
-      WARLOCK_FAMILIAR_MYSTIC: {
-        pt: 'Um toque encantado, misterioso ou celestial.',
-        en: 'An enchanted, mysterious, or celestial touch.',
-      },
-    },
+  "q_warlock_familiar_style": {
+    "question": {
+      "pt": "Preferes que o teu familiar tenha...?",
+      "en": "Do you prefer your familiar to have...?"
+    }
   },
-  q_warlock_familiar_dark: {
-    question: {
-      pt: 'Qual destes seres das trevas preferes como familiar?',
-      en: 'Which dark creature do you prefer as a familiar?',
-    },
+  "q_warlock_familiar_dark": {
+    "question": {
+      "pt": "Qual destes seres das trevas preferes como familiar?",
+      "en": "Which dark creature do you prefer as a familiar?"
+    }
   },
-  q_warlock_familiar_mystic: {
-    question: {
-      pt: 'Qual destas criaturas mágicas e fascinantes escolhes?',
-      en: 'Which of these magical and fascinating creatures do you choose?',
-    },
+  "q_warlock_familiar_mystic": {
+    "question": {
+      "pt": "Qual destas criaturas mágicas e fascinantes escolhes?",
+      "en": "Which of these magical and fascinating creatures do you choose?"
+    }
   },
-  q_warlock_familiar_habitat: {
-    question: {
-      pt: 'O teu familiar ideal vive...?',
-      en: 'Where does your ideal familiar live?',
-    },
-    options: {
-      SKY: {
-        pt: 'Nos céus ou entre os ramos — voador e atento.',
-        en: 'In the sky or treetops — flying and watchful.',
-      },
-      LAND: {
-        pt: 'Na terra — rápido, sorrateiro ou escalador.',
-        en: 'On land — quick, sneaky, or a climber.',
-      },
-      WATER: {
-        pt: 'Na água — estranho, furtivo e versátil.',
-        en: 'In the water — strange, stealthy, and versatile.',
-      },
-    },
+  "q_warlock_familiar_habitat": {
+    "question": {
+      "pt": "O teu familiar ideal vive...?",
+      "en": "Where does your ideal familiar live?"
+    }
   },
-  q_warlock_familiar_creature_sky: {
-    question: {
-      pt: 'Qual destas criaturas aéreas te acompanha?',
-      en: 'Which of these aerial creatures accompanies you?',
-    },
-    options: {
-      BAT: { pt: 'Morcego', en: 'Bat' },
-      HAWK: { pt: 'Falcão', en: 'Hawk' },
-      OWL: { pt: 'Coruja', en: 'Owl' },
-      RAVEN: { pt: 'Corvo', en: 'Raven' },
-      OTHER_AIR: {
-        pt: 'Hei-de escolher outro animal',
-        en: "I'll choose another animal",
-      },
-    },
+  "q_warlock_familiar_creature_sky": {
+    "question": {
+      "pt": "Qual destas criaturas aéreas te acompanha?",
+      "en": "Which of these aerial creatures accompanies you?"
+    }
   },
-  q_warlock_familiar_creature_land: {
-    question: {
-      pt: 'Qual destas criaturas terrestres te acompanha?',
-      en: 'Which of these land creatures accompanies you?',
-    },
-    options: {
-      CAT: { pt: 'Gato', en: 'Cat' },
-      LIZARD: { pt: 'Lagarto', en: 'Lizard' },
-      RAT: { pt: 'Rato', en: 'Rat' },
-      SPIDER: { pt: 'Aranha', en: 'Spider' },
-      WEASEL: { pt: 'Doninha', en: 'Weasel' },
-      OTHER_LAND: {
-        pt: 'Hei-de escolher outro animal',
-        en: "I'll choose another animal",
-      },
-    },
+  "q_warlock_familiar_creature_land": {
+    "question": {
+      "pt": "Qual destas criaturas terrestres te acompanha?",
+      "en": "Which of these land creatures accompanies you?"
+    }
   },
-  q_warlock_familiar_creature_water: {
-    question: {
-      pt: 'Qual destas criaturas aquáticas te acompanha?',
-      en: 'Which of these aquatic creatures accompanies you?',
-    },
-    options: {
-      FROG: { pt: 'Sapo', en: 'Frog' },
-      OCTOPUS: { pt: 'Polvo', en: 'Octopus' },
-      OTHER_WATER: {
-        pt: 'Hei-de escolher outro animal',
-        en: "I'll choose another animal",
-      },
-    },
+  "q_warlock_familiar_creature_water": {
+    "question": {
+      "pt": "Qual destas criaturas aquáticas te acompanha?",
+      "en": "Which of these aquatic creatures accompanies you?"
+    }
   },
-  q_class_adjustment_fighter: {
-    question: {
-      pt: 'Que Estilo de Luta preferes aprender?',
-      en: 'Which Fighting Style would you like to learn?',
-    },
+  "q_class_adjustment_fighter": {
+    "question": {
+      "pt": "Que Estilo de Luta preferes aprender?",
+      "en": "Which Fighting Style would you like to learn?"
+    }
   },
-  q_class_adjustment_ranger: {
-    question: {
-      pt: 'Que Estilo de Luta preferes aprender?',
-      en: 'Which Fighting Style would you like to learn?',
-    },
+  "q_class_adjustment_ranger": {
+    "question": {
+      "pt": "Que Estilo de Luta preferes aprender?",
+      "en": "Which Fighting Style would you like to learn?"
+    }
   },
-  q_class_adjustment_paladin: {
-    question: {
-      pt: 'Que Estilo de Luta preferes aprender?',
-      en: 'Which Fighting Style would you like to learn?',
-    },
+  "q_class_adjustment_paladin": {
+    "question": {
+      "pt": "Que Estilo de Luta preferes aprender?",
+      "en": "Which Fighting Style would you like to learn?"
+    }
   },
-  q_physical_ability_preference: {
-    question: {
-      pt: 'Preferes destacar a Destreza (DEX) ou a Força (STR) da tua personagem?',
-      en: 'Would you rather highlight your character\'s Dexterity (DEX) or Strength (STR)?',
-    },
-    options: {
-      DEX: { pt: 'Destreza (DEX)', en: 'Dexterity (DEX)' },
-      STR: { pt: 'Força (STR)', en: 'Strength (STR)' },
-    },
+  "q_physical_ability_preference": {
+    "question": {
+      "pt": "Preferes destacar a Destreza (DEX) ou a Força (STR) da tua personagem?",
+      "en": "Would you rather highlight your character's Dexterity (DEX) or Strength (STR)?"
+    }
   },
-  q_background_preference: {
-    question: {
-      pt: 'Que tipo de vida levou a tua personagem?',
-      en: 'What kind of life has your character led?',
-    },
+  "q_background_preference": {
+    "question": {
+      "pt": "Que tipo de vida levou a tua personagem?",
+      "en": "What kind of life has your character led?"
+    }
   },
-  q_dark_gift_presence: {
-    question: {
-      pt: 'A tua personagem carrega uma maldição?',
-      en: 'Does your character carry a curse?',
-    },
-    options: {
-      YES: { pt: 'Sim', en: 'Yes' },
-      NO: { pt: 'Não', en: 'No' },
-    },
+  "q_dark_gift_presence": {
+    "question": {
+      "pt": "A tua personagem carrega uma maldição?",
+      "en": "Does your character carry a curse?"
+    }
   },
-  q_dark_gift_type: {
-    question: {
-      pt: 'Que tipo de maldição ela tem?',
-      en: 'What kind of curse do they bear?',
-    },
-  },
+  "q_dark_gift_type": {
+    "question": {
+      "pt": "Que tipo de maldição ela tem?",
+      "en": "What kind of curse do they bear?"
+    }
+  }
 };
+
 
 class QuizApp {
   constructor(quizData) {
@@ -742,13 +550,12 @@ class QuizApp {
       return '';
     }
     const localeKey = this.getLocaleKey();
-    const nodeTranslations = QUESTION_TRANSLATIONS[nodeId]?.options;
-    if (nodeTranslations && nodeTranslations[option.value]) {
-      const translation = nodeTranslations[option.value];
-      return translation[localeKey] ?? translation[DEFAULT_LANGUAGE] ?? option.label ?? '';
-    }
     if (option.label_translations) {
       return option.label_translations[localeKey] ?? option.label_translations[DEFAULT_LANGUAGE] ?? '';
+    }
+    const optionMapEntry = this.quizData.optionLabels?.[nodeId]?.[option.value];
+    if (optionMapEntry) {
+      return optionMapEntry[localeKey] ?? optionMapEntry[DEFAULT_LANGUAGE] ?? '';
     }
     if (option.datasetEntry) {
       const datasetLabel = option.datasetEntry[localeKey] ?? option.datasetEntry[DEFAULT_LANGUAGE];
@@ -2271,6 +2078,34 @@ const fetchJson = async (url, description) => {
   return response.json();
 };
 
+const applyOptionLabelTranslations = (nodes, labelMap) => {
+  if (!nodes || !labelMap) {
+    return;
+  }
+
+  Object.entries(nodes).forEach(([nodeId, node]) => {
+    if (!node || !Array.isArray(node.options)) {
+      return;
+    }
+
+    const nodeLabels = labelMap[nodeId];
+    if (!nodeLabels) {
+      return;
+    }
+
+    node.options.forEach((option) => {
+      if (!option || option.value === undefined) {
+        return;
+      }
+
+      const translation = nodeLabels[option.value];
+      if (translation && typeof translation === 'object') {
+        option.label_translations = { ...translation };
+      }
+    });
+  });
+};
+
 const loadQuizData = async (manifestUrl) => {
   const manifest = await fetchJson(manifestUrl, 'o questionário');
 
@@ -2300,6 +2135,40 @@ const loadQuizData = async (manifestUrl) => {
     throw new Error('Não foi possível carregar nenhuma pergunta do questionário.');
   }
 
+  let optionLabels = {};
+  const labelEntries = Object.entries(manifest.option_label_files ?? {});
+  if (labelEntries.length) {
+    const labelPayloads = await Promise.all(
+      labelEntries.map(async ([key, filePath]) => ({
+        key,
+        data: await fetchJson(filePath, `os rótulos (${key})`),
+      }))
+    );
+
+    optionLabels = labelPayloads.reduce((acc, { data }) => {
+      if (!data || typeof data !== 'object') {
+        return acc;
+      }
+      Object.entries(data).forEach(([nodeId, labels]) => {
+        if (!labels || typeof labels !== 'object') {
+          return;
+        }
+        const bucket = acc[nodeId] ?? {};
+        acc[nodeId] = bucket;
+        Object.entries(labels).forEach(([value, translations]) => {
+          if (translations && typeof translations === 'object') {
+            bucket[value] = { ...translations };
+          }
+        });
+      });
+      return acc;
+    }, {});
+  }
+
+  if (Object.keys(optionLabels).length) {
+    applyOptionLabelTranslations(nodes, optionLabels);
+  }
+
   let metadata = manifest.metadata ?? {};
   if (manifest.metadata_file) {
     metadata = await fetchJson(manifest.metadata_file, 'os mapeamentos');
@@ -2317,11 +2186,13 @@ const loadQuizData = async (manifestUrl) => {
     ...manifest,
     nodes,
     metadata,
+    optionLabels,
   };
 
   delete merged.question_files;
   delete merged.metadata_file;
   delete merged.class_variant_file;
+  delete merged.option_label_files;
 
   if (!merged.root) {
     const rootFromPayload = questionPayloads.find(({ data }) => data?.root)?.data?.root;
