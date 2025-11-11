@@ -204,6 +204,20 @@ body {
   line-height: 1.5;
 }
 
+.option__description {
+  grid-column: 2 / -1;
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+@media (prefers-color-scheme: dark) {
+  .option__description {
+    color: var(--muted-dark);
+  }
+}
+
 .options__empty {
   margin: 0;
   color: #b3261e;
@@ -267,6 +281,24 @@ body {
 .results {
   display: grid;
   gap: 1rem;
+}
+
+.result-summary {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.result-summary__paragraph {
+  margin: 0;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+@media (prefers-color-scheme: dark) {
+  .result-summary__paragraph {
+    color: var(--text-dark);
+  }
 }
 
 .result-section {

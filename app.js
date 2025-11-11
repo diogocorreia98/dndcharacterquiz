@@ -201,7 +201,7 @@ class QuizApp {
     this.dom.progress.textContent = `Pergunta ${this.state.history.length + 1}`;
     this.dom.questionText.textContent = node.question;
 
-    this.renderOptions(options, preselect, selection);
+    this.renderOptions(nodeId, node, options, preselect, selection);
     this.dom.noOptionsMessage.hidden = options.length > 0;
 
     if (selection.mode === 'multiple') {
@@ -385,6 +385,7 @@ class QuizApp {
       const option = {
         label,
         value,
+        dataset: source.dataset,
       };
 
       if (includeDatasetEntry) {
@@ -616,11 +617,12 @@ class QuizApp {
     }
   }
 
-  renderOptions(options, preselectValue, selection = { mode: 'single' }) {
+  renderOptions(nodeId, node, options, preselectValue, selection = { mode: 'single' }) {
     this.dom.optionsForm.innerHTML = '';
     const isMultiple = selection?.mode === 'multiple';
     const preselectedSet = new Set(Array.isArray(preselectValue) ? preselectValue : []);
     const maxSelections = selection?.max ?? Infinity;
+    const localeKey = this.getLocaleKey();
 
     options.forEach((option, index) => {
       const optionId = `option-${index}`;
@@ -663,11 +665,21 @@ class QuizApp {
         this.selectedValues.add(option.value);
       }
 
+      const optionContent = this.getOptionContent(nodeId, node, option, localeKey);
+
       const label = document.createElement('p');
       label.className = 'option__label';
-      label.textContent = option.label;
+      label.textContent = optionContent?.name ?? option.label;
 
       wrapper.append(input, label);
+
+      if (optionContent?.short) {
+        const description = document.createElement('p');
+        description.className = 'option__description';
+        description.textContent = optionContent.short;
+        wrapper.appendChild(description);
+      }
+
       this.dom.optionsForm.appendChild(wrapper);
     });
 
@@ -692,6 +704,33 @@ class QuizApp {
     const sectionsMeta = this.quizData.metadata?.sections ?? {};
     const valueMap = this.quizData.metadata?.value_map ?? {};
     const variableSchemas = this.quizData.metadata?.variables ?? {};
+
+    const summary = this.buildResultSummary(localeKey);
+    if (summary.length) {
+      const summaryContainer = document.createElement('div');
+      summaryContainer.className = 'result-summary';
+
+      summary.forEach(({ heading, body }) => {
+        if (!heading && !body) {
+          return;
+        }
+        const paragraph = document.createElement('p');
+        paragraph.className = 'result-summary__paragraph';
+        if (heading) {
+          const strong = document.createElement('strong');
+          strong.textContent = heading;
+          paragraph.appendChild(strong);
+          if (body) {
+            paragraph.appendChild(document.createTextNode(`: ${body}`));
+          }
+        } else if (body) {
+          paragraph.textContent = body;
+        }
+        summaryContainer.appendChild(paragraph);
+      });
+
+      this.dom.resultsContainer.appendChild(summaryContainer);
+    }
 
     Object.entries(sectionsMeta).forEach(([sectionKey, translations]) => {
       const variables = Array.from(this.sectionVariables.get(sectionKey) ?? []).filter((variableName) => {
@@ -736,6 +775,523 @@ class QuizApp {
 
       this.dom.resultsContainer.appendChild(sectionElement);
     });
+  }
+
+  getLocaleKey() {
+    return this.language === 'pt' ? 'pt' : 'en';
+  }
+
+  getOptionContent(nodeId, node, option, localeKey) {
+    const descriptions = this.quizData.metadata?.descriptions ?? {};
+    const questionConfig = descriptions.questions?.[nodeId]?.[option.value] ?? null;
+    const datasetName = option.dataset ?? null;
+    const datasetContent = datasetName
+      ? this.getDatasetEntryContent(datasetName, option.value, localeKey)
+      : null;
+    const classContent = node?.section === 'class' ? this.getClassContent(option.value, localeKey) : null;
+
+    const name =
+      questionConfig?.name?.[localeKey] ??
+      questionConfig?.name?.pt ??
+      questionConfig?.name?.en ??
+      datasetContent?.name ??
+      classContent?.name ??
+      option.label;
+
+    let short =
+      questionConfig?.short?.[localeKey] ??
+      questionConfig?.short?.pt ??
+      questionConfig?.short?.en ??
+      datasetContent?.short ??
+      null;
+
+    if (!short && classContent?.short) {
+      short = classContent.short;
+    }
+
+    if (!short) {
+      short = this.getFallbackDescription(nodeId, node, option, localeKey);
+    }
+
+    return { name, short };
+  }
+
+  getFallbackDescription(nodeId, node, option, localeKey) {
+    const config = this.quizData.metadata?.descriptions?.question_fallbacks ?? {};
+    const label = option.label ?? option.value ?? '';
+    if (!label) {
+      return null;
+    }
+
+    const trimmedLabel = String(label).trim();
+    if (!trimmedLabel) {
+      return null;
+    }
+
+    if (/[.!?]$/.test(trimmedLabel) || trimmedLabel.length > 60) {
+      return null;
+    }
+
+    let template = null;
+    if (nodeId && config.by_question?.[nodeId]) {
+      const questionFallback = config.by_question[nodeId];
+      template =
+        questionFallback?.[localeKey] ?? questionFallback?.pt ?? questionFallback?.en ?? template;
+    }
+
+    if (!template && node?.section && config.by_section?.[node.section]) {
+      const sectionFallback = config.by_section[node.section];
+      template =
+        sectionFallback?.[localeKey] ?? sectionFallback?.pt ?? sectionFallback?.en ?? template;
+    }
+
+    if (!template) {
+      template = config.default?.[localeKey] ?? config.default?.pt ?? config.default?.en ?? null;
+    }
+
+    if (!template) {
+      return null;
+    }
+
+    return this.interpolate(template, { label: trimmedLabel });
+  }
+
+  getDatasetEntryContent(datasetName, code, localeKey) {
+    if (!datasetName || !this.hasValue(code)) {
+      return null;
+    }
+
+    if (datasetName === 'classes') {
+      return this.getClassContent(code, localeKey);
+    }
+
+    if (datasetName === 'subclasses') {
+      return this.getSubclassContent(code, localeKey);
+    }
+
+    const dataset = this.quizData.metadata?.datasets?.[datasetName];
+    if (!Array.isArray(dataset)) {
+      return null;
+    }
+
+    const entry = dataset.find((item) => item.code === code);
+    if (!entry) {
+      return null;
+    }
+
+    const config = this.quizData.metadata?.descriptions?.datasets?.[datasetName] ?? {};
+    const overrides = config.overrides?.[code] ?? {};
+
+    const name =
+      overrides.name?.[localeKey] ??
+      overrides.name?.pt ??
+      overrides.name?.en ??
+      entry[localeKey] ??
+      entry.pt ??
+      entry.en ??
+      code;
+
+    const short =
+      overrides.short?.[localeKey] ??
+      overrides.short?.pt ??
+      overrides.short?.en ??
+      this.buildDatasetDescription(datasetName, entry, localeKey, 'short');
+
+    const long =
+      overrides.long?.[localeKey] ??
+      overrides.long?.pt ??
+      overrides.long?.en ??
+      this.buildDatasetDescription(datasetName, entry, localeKey, 'long');
+
+    return { name, short, long, entry };
+  }
+
+  getClassContent(classCode, localeKey) {
+    if (!this.hasValue(classCode)) {
+      return null;
+    }
+
+    const config = this.quizData.metadata?.descriptions?.datasets?.classes?.overrides?.[classCode];
+    if (!config) {
+      return null;
+    }
+
+    const name = config.name?.[localeKey] ?? config.name?.pt ?? config.name?.en ?? classCode;
+    const short = config.short?.[localeKey] ?? config.short?.pt ?? config.short?.en ?? null;
+    const long = config.long?.[localeKey] ?? config.long?.pt ?? config.long?.en ?? null;
+
+    return {
+      name,
+      short,
+      long,
+      subclassFallback: config.subclass_fallback ?? {},
+    };
+  }
+
+  getSubclassContent(subclassCode, localeKey) {
+    if (!this.hasValue(subclassCode)) {
+      return null;
+    }
+
+    const dataset = this.quizData.metadata?.datasets?.subclasses ?? [];
+    const entry = dataset.find((item) => item.code === subclassCode);
+    if (!entry) {
+      return null;
+    }
+
+    const overrides =
+      this.quizData.metadata?.descriptions?.datasets?.subclasses?.overrides?.[subclassCode] ?? {};
+    const classContent = this.getClassContent(entry.class, localeKey);
+
+    const className = classContent?.name ?? entry.class;
+    const name =
+      overrides.name?.[localeKey] ??
+      overrides.name?.pt ??
+      overrides.name?.en ??
+      entry[localeKey] ??
+      entry.pt ??
+      entry.en ??
+      subclassCode;
+
+    const short =
+      overrides.short?.[localeKey] ??
+      overrides.short?.pt ??
+      overrides.short?.en ??
+      (classContent?.subclassFallback
+        ? this.interpolate(
+            classContent.subclassFallback[localeKey] ??
+              classContent.subclassFallback.pt ??
+              classContent.subclassFallback.en ??
+              '',
+            {
+              name,
+              className,
+            },
+          )
+        : null);
+
+    const long =
+      overrides.long?.[localeKey] ??
+      overrides.long?.pt ??
+      overrides.long?.en ??
+      short;
+
+    return { name, short, long, entry, classContent };
+  }
+
+  buildDatasetDescription(datasetName, entry, localeKey, type) {
+    if (!entry) {
+      return null;
+    }
+
+    const config = this.quizData.metadata?.descriptions?.datasets?.[datasetName];
+    if (!config) {
+      return null;
+    }
+
+    const templateSource = config.templates?.[type];
+    const template = templateSource?.[localeKey] ?? templateSource?.pt ?? templateSource?.en ?? null;
+    if (!template) {
+      return null;
+    }
+
+    const name = entry[localeKey] ?? entry.pt ?? entry.en ?? entry.code;
+    const tokens = { name };
+
+    if (datasetName === 'subspecies' && entry.species_code) {
+      const parent = this.getDatasetEntryContent('species', entry.species_code, localeKey);
+      tokens.parent_name = parent?.name ?? entry.species_code;
+    }
+
+    if (datasetName === 'subsubspecies' && entry.subspecies_code) {
+      const parent = this.getDatasetEntryContent('subspecies', entry.subspecies_code, localeKey);
+      tokens.parent_name = parent?.name ?? entry.subspecies_code;
+      const grandparentCode = parent?.entry?.species_code;
+      if (grandparentCode) {
+        const grandparent = this.getDatasetEntryContent('species', grandparentCode, localeKey);
+        tokens.grandparent_name = grandparent?.name ?? grandparentCode;
+      }
+      if (!tokens.grandparent_name) {
+        tokens.grandparent_name = localeKey === 'pt' ? 'uma linhagem ancestral' : 'an ancestral lineage';
+      }
+    }
+
+    if (datasetName === 'backgrounds') {
+      const abilities = this.describeAbilities(entry.ability_increases, localeKey);
+      tokens.abilities = abilities || (localeKey === 'pt' ? 'talentos variados' : 'varied talents');
+    }
+
+    const commonality = this.describeAttributeList(
+      datasetName,
+      'species_commonality',
+      entry.species_commonality,
+      localeKey,
+    );
+    tokens.commonality =
+      commonality || (localeKey === 'pt' ? 'uma espécie singular' : 'a singular species');
+
+    const heightRange = this.describeHeight(datasetName, entry.height, localeKey);
+    tokens.height_range = heightRange || (localeKey === 'pt' ? 'estaturas variadas' : 'varied statures');
+
+    const likeness = this.describeAttributeList(
+      datasetName,
+      'animal_likeness',
+      entry.animal_likeness,
+      localeKey,
+    );
+    tokens.likeness = likeness || (localeKey === 'pt' ? 'traços únicos' : 'unique traits');
+
+    let output = this.interpolate(template, tokens);
+
+    const extraParts = [];
+    if (datasetName === 'subspecies') {
+      const ancestry = this.describeAttributeList(
+        datasetName,
+        'dragonborn_ancestry_type',
+        entry.dragonborn_ancestry_type,
+        localeKey,
+      );
+      if (ancestry) {
+        extraParts.push(localeKey === 'pt' ? `Destaca ${ancestry}.` : `It highlights ${ancestry}.`);
+      }
+
+      const goliathLegacy = this.describeAttributeList(
+        datasetName,
+        'goliath_power_type',
+        entry.goliath_power_type,
+        localeKey,
+      );
+      if (goliathLegacy) {
+        extraParts.push(localeKey === 'pt' ? `Carrega ${goliathLegacy}.` : `It carries ${goliathLegacy}.`);
+      }
+    }
+
+    if (extraParts.length) {
+      output = output ? `${output} ${extraParts.join(' ')}` : extraParts.join(' ');
+    }
+
+    return output;
+  }
+
+  describeAbilities(abilityCodes, localeKey) {
+    if (!Array.isArray(abilityCodes) || !abilityCodes.length) {
+      return null;
+    }
+    const abilityNames =
+      this.quizData.metadata?.descriptions?.ability_names?.[localeKey] ??
+      this.quizData.metadata?.descriptions?.ability_names?.pt ??
+      {};
+    const parts = abilityCodes
+      .map((code) => abilityNames[code] ?? code)
+      .filter(Boolean);
+    if (!parts.length) {
+      return null;
+    }
+    return this.formatList(parts, localeKey);
+  }
+
+  describeHeight(datasetName, values, localeKey) {
+    const mapping = this.getAttributeMapping(datasetName, 'height');
+    if (!mapping) {
+      return null;
+    }
+
+    const order = ['A', 'B', 'C', 'D'];
+    const list = Array.isArray(values) ? values : this.hasValue(values) ? [values] : [];
+    const unique = Array.from(new Set(list)).filter((code) => order.includes(code));
+    unique.sort((a, b) => order.indexOf(a) - order.indexOf(b));
+
+    if (!unique.length) {
+      return null;
+    }
+
+    const getText = (code) => {
+      const entry = mapping?.[code];
+      if (!entry) {
+        return null;
+      }
+      if (typeof entry === 'string') {
+        return entry;
+      }
+      return entry[localeKey] ?? entry.pt ?? entry.en ?? null;
+    };
+
+    const firstText = getText(unique[0]);
+    if (!firstText) {
+      return null;
+    }
+
+    if (unique.length === 1) {
+      return firstText;
+    }
+
+    const lastText = getText(unique[unique.length - 1]);
+    if (!lastText) {
+      return firstText;
+    }
+
+    const connector = localeKey === 'pt' ? ' até ' : ' to ';
+    return `${firstText}${connector}${lastText}`;
+  }
+
+  describeAttributeList(datasetName, attributeKey, values, localeKey) {
+    const mapping = this.getAttributeMapping(datasetName, attributeKey);
+    if (!mapping) {
+      return null;
+    }
+
+    const list = Array.isArray(values) ? values : this.hasValue(values) ? [values] : [];
+    const texts = list
+      .map((value) => {
+        const entry = mapping?.[value];
+        if (!entry) {
+          return null;
+        }
+        if (typeof entry === 'string') {
+          return entry;
+        }
+        return entry[localeKey] ?? entry.pt ?? entry.en ?? null;
+      })
+      .filter(Boolean);
+
+    if (!texts.length) {
+      return null;
+    }
+
+    if (texts.length === 1) {
+      return texts[0];
+    }
+
+    return this.formatList(texts, localeKey);
+  }
+
+  getAttributeMapping(datasetName, attributeKey) {
+    const datasetConfig = this.quizData.metadata?.descriptions?.datasets?.[datasetName];
+    const raw = datasetConfig?.attributes?.[attributeKey];
+    if (!raw) {
+      return null;
+    }
+
+    if (typeof raw === 'string' && raw.startsWith('@')) {
+      return this.resolveDescriptionReference(raw.slice(1));
+    }
+
+    return raw;
+  }
+
+  resolveDescriptionReference(path) {
+    if (!path) {
+      return null;
+    }
+
+    const segments = path.split('.').filter(Boolean);
+    let current = this.quizData.metadata?.descriptions;
+    for (const segment of segments) {
+      if (!current) {
+        return null;
+      }
+      current = current[segment];
+    }
+    return current ?? null;
+  }
+
+  formatList(items, localeKey) {
+    const filtered = items.filter(Boolean);
+    if (!filtered.length) {
+      return '';
+    }
+    if (filtered.length === 1) {
+      return filtered[0];
+    }
+    const last = filtered[filtered.length - 1];
+    const rest = filtered.slice(0, -1);
+    const connector = localeKey === 'pt' ? ' e ' : ' and ';
+    if (!rest.length) {
+      return last;
+    }
+    return `${rest.join(', ')}${connector}${last}`;
+  }
+
+  interpolate(template, tokens = {}) {
+    if (!template) {
+      return '';
+    }
+    const filled = template.replace(/\{([^}]+)\}/g, (match, key) => {
+      const value = tokens[key.trim()];
+      return value !== undefined && value !== null ? String(value) : '';
+    });
+    return filled.replace(/\s{2,}/g, ' ').trim();
+  }
+
+  buildResultSummary(localeKey) {
+    const summary = [];
+    const variables = this.state?.variables ?? {};
+
+    const speciesCode = variables.species;
+    if (this.hasValue(speciesCode)) {
+      const speciesContent = this.getDatasetEntryContent('species', speciesCode, localeKey);
+      const subspeciesContent = this.getDatasetEntryContent('subspecies', variables.subspecies, localeKey);
+      const subsubContent = this.getDatasetEntryContent('subsubspecies', variables.subsubspecies, localeKey);
+
+      const names = [subsubContent?.name, subspeciesContent?.name, speciesContent?.name].filter(Boolean);
+      const heading = names.join(' ');
+
+      const description =
+        subsubContent?.long ??
+        subspeciesContent?.long ??
+        speciesContent?.long ??
+        subsubContent?.short ??
+        subspeciesContent?.short ??
+        speciesContent?.short ??
+        '';
+
+      if (heading || description) {
+        summary.push({ heading, body: description });
+      }
+    }
+
+    const classContent = this.getClassContent(variables.class, localeKey);
+    const subclassContent = this.getSubclassContent(variables.subclass, localeKey);
+    if (classContent || subclassContent) {
+      const names = [];
+      if (subclassContent?.name) {
+        names.push(subclassContent.name);
+      }
+      if (classContent?.name) {
+        names.push(classContent.name);
+      } else if (this.hasValue(variables.class)) {
+        names.push(String(variables.class));
+      }
+      const heading = names.join(' ');
+
+      const bodyParts = [];
+      if (subclassContent?.long) {
+        bodyParts.push(subclassContent.long);
+      } else if (subclassContent?.short) {
+        bodyParts.push(subclassContent.short);
+      }
+
+      if (classContent?.long) {
+        bodyParts.push(classContent.long);
+      } else if (classContent?.short) {
+        bodyParts.push(classContent.short);
+      }
+
+      const body = bodyParts.join(' ');
+
+      if (heading || body) {
+        summary.push({ heading, body });
+      }
+    }
+
+    const backgroundContent = this.getDatasetEntryContent('backgrounds', variables.background, localeKey);
+    if (backgroundContent) {
+      const heading = backgroundContent.name ?? variables.background;
+      const body = backgroundContent.long ?? backgroundContent.short ?? '';
+      summary.push({ heading, body });
+    }
+
+    return summary;
   }
 
   renderStatusSummary() {
@@ -1596,6 +2152,14 @@ const loadQuizData = async (manifestUrl) => {
     };
   }
 
+  if (manifest.descriptions_file) {
+    const descriptions = await fetchJson(manifest.descriptions_file, 'as descrições');
+    metadata = {
+      ...metadata,
+      descriptions,
+    };
+  }
+
   const merged = {
     ...manifest,
     nodes,
@@ -1605,6 +2169,7 @@ const loadQuizData = async (manifestUrl) => {
   delete merged.question_files;
   delete merged.metadata_file;
   delete merged.class_variant_file;
+  delete merged.descriptions_file;
 
   if (!merged.root) {
     const rootFromPayload = questionPayloads.find(({ data }) => data?.root)?.data?.root;
