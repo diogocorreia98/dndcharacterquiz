@@ -13,8 +13,8 @@ const UI_TEXT = {
     en: 'Discover your 2024 D&D character',
   },
   subtitle: {
-    pt: 'Responde às perguntas para encontrares a combinação ideal de género, espécie e classe.',
-    en: 'Answer the questions to find the ideal combination of gender, species, and class.',
+    pt: 'Responde às perguntas para encontrares a combinação ideal de espécie, classe e antecedente.',
+    en: 'Answer the questions to find the ideal combination of species, class and background.',
   },
   languageLabel: {
     pt: 'Idioma',
