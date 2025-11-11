@@ -809,51 +809,7 @@ class QuizApp {
       short = classContent.short;
     }
 
-    if (!short) {
-      short = this.getFallbackDescription(nodeId, node, option, localeKey);
-    }
-
     return { name, short };
-  }
-
-  getFallbackDescription(nodeId, node, option, localeKey) {
-    const config = this.quizData.metadata?.descriptions?.question_fallbacks ?? {};
-    const label = option.label ?? option.value ?? '';
-    if (!label) {
-      return null;
-    }
-
-    const trimmedLabel = String(label).trim();
-    if (!trimmedLabel) {
-      return null;
-    }
-
-    if (/[.!?]$/.test(trimmedLabel) || trimmedLabel.length > 60) {
-      return null;
-    }
-
-    let template = null;
-    if (nodeId && config.by_question?.[nodeId]) {
-      const questionFallback = config.by_question[nodeId];
-      template =
-        questionFallback?.[localeKey] ?? questionFallback?.pt ?? questionFallback?.en ?? template;
-    }
-
-    if (!template && node?.section && config.by_section?.[node.section]) {
-      const sectionFallback = config.by_section[node.section];
-      template =
-        sectionFallback?.[localeKey] ?? sectionFallback?.pt ?? sectionFallback?.en ?? template;
-    }
-
-    if (!template) {
-      template = config.default?.[localeKey] ?? config.default?.pt ?? config.default?.en ?? null;
-    }
-
-    if (!template) {
-      return null;
-    }
-
-    return this.interpolate(template, { label: trimmedLabel });
   }
 
   getDatasetEntryContent(datasetName, code, localeKey) {
