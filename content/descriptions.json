@@ -1,0 +1,572 @@
+{
+  "questions": {
+    "q_primary_roles": {
+      "DEFENDER": {
+        "short": {
+          "pt": "Assume o papel de defensor, mantendo os inimigos longe dos aliados.",
+          "en": "Takes on the defender role, keeping enemies away from allies."
+        }
+      },
+      "HEALER_SUPPORT": {
+        "short": {
+          "pt": "Procura curar feridas ou oferecer apoio mágico ao grupo.",
+          "en": "Focuses on healing wounds or offering magical support to the party."
+        }
+      },
+      "CONTROLLER": {
+        "short": {
+          "pt": "Controla o campo de batalha com efeitos que travam ou desviam inimigos.",
+          "en": "Shapes the battlefield with effects that slow or divert foes."
+        }
+      },
+      "STRIKER": {
+        "short": {
+          "pt": "Especializa-se em causar grandes quantidades de dano a um único alvo.",
+          "en": "Specialises in delivering high damage to a single target."
+        }
+      },
+      "SCOUT": {
+        "short": {
+          "pt": "Explora, infiltra-se e recolhe informa\u00e7\u00e3o para o grupo.",
+          "en": "Scouts ahead, infiltrates, and gathers information for the group."
+        }
+      }
+    },
+    "q_healer_support_preference": {
+      "HEALER": {
+        "short": {
+          "pt": "Prioriza magia de cura direta e apoio vital.",
+          "en": "Prioritises direct healing magic and vital support."
+        }
+      },
+      "SUPPORT": {
+        "short": {
+          "pt": "Prefere buffs, debuffs e truques que potenciam o grupo.",
+          "en": "Prefers buffs, debuffs, and tricks that empower the party."
+        }
+      },
+      "BOTH": {
+        "short": {
+          "pt": "Quer equilibrar cura e apoio utilit\u00e1rio em medidas iguais.",
+          "en": "Wants to balance healing and utility support in equal measure."
+        }
+      }
+    },
+    "q_secondary_roles": {
+      "BLASTER": {
+        "short": {
+          "pt": "Projeta magia ou ataques em \u00e1rea para atingir grupos de inimigos.",
+          "en": "Projects magic or area attacks to hit clusters of foes."
+        }
+      },
+      "FACE": {
+        "short": {
+          "pt": "Assume o papel social principal, negociando e convencendo.",
+          "en": "Takes on the party's social lead, negotiating and persuading."
+        }
+      },
+      "SCHOLAR": {
+        "short": {
+          "pt": "Serve como especialista em conhecimentos, l\u00ednguas e enigmas.",
+          "en": "Acts as the knowledge expert for lore, languages, and puzzles."
+        }
+      },
+      "UTILITY_CASTER": {
+        "short": {
+          "pt": "Prepara magia flex\u00edvel para resolver problemas fora de combate.",
+          "en": "Prepares flexible magic to solve problems outside of battle."
+        }
+      }
+    }
+  },
+  "ability_names": {
+    "pt": {
+      "STR": "For\u00e7a",
+      "DEX": "Destreza",
+      "CON": "Constitui\u00e7\u00e3o",
+      "INT": "Intelig\u00eancia",
+      "WIS": "Sabedoria",
+      "CHA": "Carisma"
+    },
+    "en": {
+      "STR": "Strength",
+      "DEX": "Dexterity",
+      "CON": "Constitution",
+      "INT": "Intelligence",
+      "WIS": "Wisdom",
+      "CHA": "Charisma"
+    }
+  },
+  "question_fallbacks": {
+    "default": {
+      "pt": "Esta op\u00e7\u00e3o seleciona \"{label}\".",
+      "en": "This choice selects \"{label}\"."
+    },
+    "by_section": {
+      "gender": {
+        "pt": "Define a apresenta\u00e7\u00e3o de g\u00e9nero como {label}.",
+        "en": "Sets the character's gender presentation to {label}."
+      },
+      "class": {
+        "pt": "Escolhe a classe {label} para a tua personagem.",
+        "en": "Chooses the {label} class for your character."
+      },
+      "background": {
+        "pt": "Adota o antecedente {label} como hist\u00f3ria da personagem.",
+        "en": "Adopts the {label} background as the character's history."
+      },
+      "dark_gift": {
+        "pt": "Liga a personagem ao dark gift {label}.",
+        "en": "Binds the character to the {label} dark gift."
+      },
+      "species": {
+        "pt": "Explora a esp\u00e9cie {label}.",
+        "en": "Explores the {label} species."
+      }
+    },
+    "by_question": {}
+  },
+  "datasets": {
+    "species": {
+      "templates": {
+        "short": {
+          "pt": "{name} \u00e9 {commonality} com {height_range} e {likeness}.",
+          "en": "{name} is {commonality} with {height_range} and {likeness}."
+        },
+        "long": {
+          "pt": "{name} pertence a {commonality}. A esp\u00e9cie apresenta {height_range} e {likeness}, oferecendo um ponto de partida claro para o visual e a presen\u00e7a da personagem.",
+          "en": "{name} belongs to {commonality}. The species features {height_range} and {likeness}, giving a clear sense of the character's look and presence."
+        }
+      },
+      "attributes": {
+        "species_commonality": {
+          "A": {
+            "pt": "uma esp\u00e9cie muito comum",
+            "en": "a very common species"
+          },
+          "B": {
+            "pt": "uma esp\u00e9cie relativamente comum",
+            "en": "a fairly common species"
+          },
+          "C": {
+            "pt": "uma esp\u00e9cie pouco comum",
+            "en": "an uncommon species"
+          },
+          "D": {
+            "pt": "uma esp\u00e9cie rara",
+            "en": "a rare species"
+          }
+        },
+        "height": {
+          "A": {
+            "pt": "estaturas min\u00fasculas, perto dos 0,6\u20130,9 m",
+            "en": "tiny statures around 2\u20133 feet tall"
+          },
+          "B": {
+            "pt": "estaturas baixas, perto de 1,2 m",
+            "en": "short builds of roughly 4 feet"
+          },
+          "C": {
+            "pt": "estaturas m\u00e9dias, entre 1,5 e 1,8 m",
+            "en": "average heights between 5 and 6 feet"
+          },
+          "D": {
+            "pt": "estaturas altas, a rondar ou acima de 2 m",
+            "en": "tall frames near or above 6\u20137 feet"
+          }
+        },
+        "animal_likeness": {
+          "A": {
+            "pt": "tra\u00e7os marcadamente animalescos",
+            "en": "pronounced bestial traits"
+          },
+          "B": {
+            "pt": "uma apar\u00eancia sobretudo humanoide",
+            "en": "a mostly humanoid appearance"
+          }
+        }
+      },
+      "overrides": {
+        "S013": {
+          "short": {
+            "pt": "Geppettin \u00e9 uma cria\u00e7\u00e3o animada que recorda bonecos artesanais ganhando vida.",
+            "en": "Geppettin is a living construct reminiscent of handcrafted dolls come to life."
+          },
+          "long": {
+            "pt": "Geppettin s\u00e3o construtos animados com corpos de madeira, porcelana ou tecido. Esta esp\u00e9cie rara tem o charme inocente de um brinquedo encantado, mas pode ser refor\u00e7ada com magia e engenho.",
+            "en": "Geppettin are animated constructs built from wood, porcelain, or cloth. The rare species carries the innocent charm of an enchanted toy yet can be reinforced with magic and craftsmanship."
+          }
+        }
+      }
+    },
+    "subspecies": {
+      "templates": {
+        "short": {
+          "pt": "{name} \u00e9 uma variante de {parent_name} considerada {commonality}, com {height_range} e {likeness}.",
+          "en": "{name} is a variant of {parent_name}, counted as {commonality}, showing {height_range} and {likeness}."
+        },
+        "long": {
+          "pt": "Dentro da esp\u00e9cie {parent_name}, {name} destaca-se como {commonality}. Mant\u00e9m {height_range} e {likeness}, adicionando o sabor espec\u00edfico indicado pelo seu t\u00edtulo.",
+          "en": "Within the {parent_name} species, {name} stands out as {commonality}. It keeps {height_range} and {likeness}, layering in the specific flavour suggested by its title."
+        }
+      },
+      "attributes": {
+        "species_commonality": "@species.attributes.species_commonality",
+        "height": "@species.attributes.height",
+        "animal_likeness": "@species.attributes.animal_likeness",
+        "dragonborn_ancestry_type": {
+          "chromatic": {
+            "pt": "uma ancestralidade crom\u00e1tica cheia de f\u00faria elementar",
+            "en": "a chromatic ancestry brimming with elemental wrath"
+          },
+          "metallic": {
+            "pt": "uma ancestralidade met\u00e1lica disciplinada e protetora",
+            "en": "a metallic ancestry known for disciplined protection"
+          },
+          "gem": {
+            "pt": "uma ancestralidade de gemas que canaliza energias ps\u00edquicas",
+            "en": "a gem ancestry that channels psionic energies"
+          }
+        },
+        "goliath_power_type": {
+          "stone": {
+            "pt": "um legado de pele de pedra resistente",
+            "en": "a legacy of stone-like resilience"
+          },
+          "cloud": {
+            "pt": "um legado de n\u00e9voa e leveza celeste",
+            "en": "a legacy of mist and lofty lightness"
+          },
+          "fire": {
+            "pt": "um legado de labaredas intensas",
+            "en": "a legacy of searing flame"
+          },
+          "frost": {
+            "pt": "um legado de gelo cortante",
+            "en": "a legacy of biting frost"
+          }
+        }
+      },
+      "overrides": {
+        "SS026": {
+          "short": {
+            "pt": "Bisque Geppettin lembra bonecos de porcelana delicada animados por magia.",
+            "en": "Bisque Geppettin evokes delicate porcelain dolls animated by magic."
+          },
+          "long": {
+            "pt": "A variante Bisque do povo Geppettin utiliza cascas de porcelana impec\u00e1veis, pintadas com express\u00f5es suaves. Mesmo sendo pequena e fr\u00e1gil em aspeto, continua a ser um construto resistente guiado por um esp\u00edrito gentil.",
+            "en": "The Bisque variant of the Geppettin people is housed in flawless porcelain shells painted with soft expressions. While petite and seemingly fragile, it remains a hardy construct guided by a gentle spirit."
+          }
+        },
+        "SS027": {
+          "short": {
+            "pt": "Marionette Geppettin mostra juntas vis\u00edveis e cordas imagin\u00e1rias de um boneco articulado vivo.",
+            "en": "Marionette Geppettin displays visible joints and the implied strings of a living puppet."
+          },
+          "long": {
+            "pt": "Os Marionette Geppettin t\u00eam membros segmentados e um porte teatral. Parecem marionetas sustentadas por cordas invis\u00edveis, movendo-se com gra\u00e7a encantada sem perder a versatilidade de um aventureiro.",
+            "en": "Marionette Geppettin have segmented limbs and a theatrical poise. They resemble puppets guided by unseen strings, moving with enchanted grace while retaining the versatility of an adventurer."
+          }
+        },
+        "SS028": {
+          "short": {
+            "pt": "Plushie Geppettin \u00e9 fofo e acolchoado, como um peluche consciente.",
+            "en": "Plushie Geppettin is soft and stuffed, like a sentient plush toy."
+          },
+          "long": {
+            "pt": "Esta variante Geppettin usa tecidos acolchoados e costuras vis\u00edveis, lembrando um brinquedo amado. Por baixo do exterior fofinho, reside um cora\u00e7\u00e3o determinado que enfrenta aventuras com otimismo.",
+            "en": "This Geppettin variant is made of padded fabrics and visible stitches, resembling a cherished toy. Beneath the cuddly exterior beats a determined heart ready to tackle adventures with optimism."
+          }
+        }
+      }
+    },
+    "subsubspecies": {
+      "templates": {
+        "short": {
+          "pt": "{name} \u00e9 uma faceta de {parent_name}, dentro do legado {grandparent_name}, mantendo {height_range} e {likeness}.",
+          "en": "{name} is a facet of {parent_name} within the {grandparent_name} lineage, keeping {height_range} and {likeness}."
+        },
+        "long": {
+          "pt": "A varia\u00e7\u00e3o {name} nasce entre os {parent_name} da esp\u00e9cie {grandparent_name}. Conserva {height_range} e {likeness}, enquanto adiciona um temperamento sazonal distinto.",
+          "en": "The {name} variation arises among the {parent_name} of the {grandparent_name} species. It preserves {height_range} and {likeness} while adding a distinct seasonal temperament."
+        }
+      },
+      "attributes": {
+        "height": "@species.attributes.height",
+        "animal_likeness": "@species.attributes.animal_likeness"
+      }
+    },
+    "classes": {
+      "overrides": {
+        "BARBARIAN": {
+          "name": {
+            "pt": "Barbarian",
+            "en": "Barbarian"
+          },
+          "short": {
+            "pt": "Um combatente primal que canaliza f\u00faria para resistir e esmagar inimigos.",
+            "en": "A primal combatant who channels rage to endure and crush foes."
+          },
+          "long": {
+            "pt": "Barbarians lutam com instinto visceral, confiando na f\u00faria para aumentar a for\u00e7a e a resili\u00eancia. S\u00e3o ideais para quem quer estar na linha da frente como tanque agressivo.",
+            "en": "Barbarians fight with visceral instinct, relying on rage to heighten strength and resilience. They suit players who want to stand on the front line as an aggressive tank."
+          },
+          "subclass_fallback": {
+            "pt": "{name} representa uma senda da classe Barbarian, reinterpretando a f\u00faria primitiva de acordo com o seu tema.",
+            "en": "{name} represents a Barbarian path that reinterprets primal rage according to its theme."
+          }
+        },
+        "BARD": {
+          "name": {
+            "pt": "Bard",
+            "en": "Bard"
+          },
+          "short": {
+            "pt": "Um artista vers\u00e1til que conjura magia atrav\u00e9s de inspira\u00e7\u00e3o e hist\u00f3rias.",
+            "en": "A versatile performer who weaves magic through inspiration and tales."
+          },
+          "long": {
+            "pt": "Bards usam m\u00fasica, palavras e gestos para refor\u00e7ar aliados e confundir inimigos. Oferecem uma mistura equilibrada de apoio, utilidade e magia social.",
+            "en": "Bards use music, words, and gestures to bolster allies and confound enemies. They offer a balanced mix of support, utility, and social magic."
+          },
+          "subclass_fallback": {
+            "pt": "{name} \u00e9 um col\u00e9gio bardico que direciona a inspira\u00e7\u00e3o para o tema indicado.",
+            "en": "{name} is a bardic college that channels inspiration toward its stated theme."
+          }
+        },
+        "CLERIC": {
+          "name": {
+            "pt": "Cleric",
+            "en": "Cleric"
+          },
+          "short": {
+            "pt": "Um devoto que invoca magia divina para curar, proteger e punir.",
+            "en": "A devotee who channels divine magic to heal, protect, and smite."
+          },
+          "long": {
+            "pt": "Clerics combinam feiti\u00e7os de suporte com milagre ofensivo. A escolha de dom\u00ednio define o estilo de jogo, desde curandeiro puro a combatente santo.",
+            "en": "Clerics blend supportive miracles with righteous offense. The chosen domain shapes playstyle, from dedicated healer to holy combatant."
+          },
+          "subclass_fallback": {
+            "pt": "O Dom\u00ednio {name} orienta a forma como o Cleric canaliza os poderes divinos do seu pante\u00e3o.",
+            "en": "The {name} Domain guides how the Cleric channels their deity's power."
+          }
+        },
+        "DRUID": {
+          "name": {
+            "pt": "Druid",
+            "en": "Druid"
+          },
+          "short": {
+            "pt": "Um guardi\u00e3o da natureza que se transforma e controla as for\u00e7as naturais.",
+            "en": "A warden of nature who shapeshifts and commands primal forces."
+          },
+          "long": {
+            "pt": "Druids dominam feiti\u00e7os naturais e a capacidade de assumir formas animais. A classe encaixa jogadores que querem versatilidade m\u00e1gica aliada a liga\u00e7\u00e3o com a natureza.",
+            "en": "Druids command natural spells and the ability to adopt animal forms. The class suits players seeking magical versatility tied to the natural world."
+          },
+          "subclass_fallback": {
+            "pt": "O C\u00edrculo {name} define a tradi\u00e7\u00e3o dru\u00eddica e o foco tem\u00e1tico da magia.",
+            "en": "The {name} Circle defines the druidic tradition and its thematic focus."
+          }
+        },
+        "FIGHTER": {
+          "name": {
+            "pt": "Fighter",
+            "en": "Fighter"
+          },
+          "short": {
+            "pt": "Um perito marcial flex\u00edvel que domina armas e t\u00e1ticas.",
+            "en": "A flexible martial expert mastering weapons and tactics."
+          },
+          "long": {
+            "pt": "Fighters s\u00e3o especialistas em combate com armas, capazes de se adaptar a qualquer papel marcial. Oferecem simplicidade para iniciantes e profundidade para estrategas.",
+            "en": "Fighters are weapon masters able to adapt to any martial role. They offer straightforward play for newcomers and depth for tacticians."
+          },
+          "subclass_fallback": {
+            "pt": "{name} \u00e9 um estilo marcial que molda a versatilidade do Fighter ao tema indicado.",
+            "en": "{name} is a martial style that shapes the Fighter's versatility to suit its theme."
+          }
+        },
+        "MONK": {
+          "name": {
+            "pt": "Monk",
+            "en": "Monk"
+          },
+          "short": {
+            "pt": "Um artista marcial r\u00e1pido que canaliza ki para golpes precisos.",
+            "en": "A swift martial artist who channels ki into precise strikes."
+          },
+          "long": {
+            "pt": "Monks combinam disciplina corporal com energia espiritual. Brilham em mobilidade, controlo e ataques repetidos, personificando um guerreiro asc\u00e9tico.",
+            "en": "Monks combine bodily discipline with spiritual energy. They excel at mobility, control, and flurries of strikes, embodying an ascetic warrior."
+          },
+          "subclass_fallback": {
+            "pt": "O Caminho {name} descreve a filosofia de ki que guia o Monk.",
+            "en": "The Way of {name} describes the ki philosophy guiding the Monk."
+          }
+        },
+        "PALADIN": {
+          "name": {
+            "pt": "Paladin",
+            "en": "Paladin"
+          },
+          "short": {
+            "pt": "Um cavaleiro juramentado que mistura combate corpo a corpo com magia divina.",
+            "en": "An oathbound knight who blends melee combat with divine magic."
+          },
+          "long": {
+            "pt": "Paladins juram votos que lhes concedem poderes sagrados. Atuam como protetores inspiradores, com a capacidade de curar e devastar com golpes sagrados.",
+            "en": "Paladins swear oaths that grant holy powers. They act as inspiring protectors capable of healing and smiting with radiant strikes."
+          },
+          "subclass_fallback": {
+            "pt": "O Juramento {name} define os ideais que o Paladin defende.",
+            "en": "The Oath of {name} sets the ideals the Paladin upholds."
+          }
+        },
+        "RANGER": {
+          "name": {
+            "pt": "Ranger",
+            "en": "Ranger"
+          },
+          "short": {
+            "pt": "Um ca\u00e7ador errante que domina o terreno selvagem e a magia primal.",
+            "en": "A wandering hunter who masters the wilds and primal magic."
+          },
+          "long": {
+            "pt": "Rangers combinam arco, espada e truques de sobreviv\u00eancia com feiti\u00e7os leves. S\u00e3o guias ideais e combatentes vers\u00e1teis em ambientes naturais.",
+            "en": "Rangers blend bow, blade, and survival tricks with light magic. They are ideal guides and versatile fighters in natural environments."
+          },
+          "subclass_fallback": {
+            "pt": "O Conclave {name} especifica o estilo de ca\u00e7a e os talentos do Ranger.",
+            "en": "The {name} Conclave specifies the Ranger's hunting style and talents."
+          }
+        },
+        "ROGUE": {
+          "name": {
+            "pt": "Rogue",
+            "en": "Rogue"
+          },
+          "short": {
+            "pt": "Um especialista furtivo em golpes precisos, truques e habilidades.",
+            "en": "A stealth specialist skilled in precise strikes, tricks, and skills."
+          },
+          "long": {
+            "pt": "Rogues exploram furtividade, percep\u00e7\u00e3o e golpes certeiros. Ideal para jogadores que gostam de resolver desafios com ast\u00facia.",
+            "en": "Rogues lean on stealth, perception, and pinpoint strikes. Ideal for players who enjoy solving challenges with cunning."
+          },
+          "subclass_fallback": {
+            "pt": "O Arqu\u00e9tipo {name} traduz a especializa\u00e7\u00e3o criminosa ou aventureira do Rogue.",
+            "en": "The {name} archetype translates the Rogue's criminal or adventurous specialty."
+          }
+        },
+        "SORCERER": {
+          "name": {
+            "pt": "Sorcerer",
+            "en": "Sorcerer"
+          },
+          "short": {
+            "pt": "Um conjurador nato que manipula magia inata com pura vontade.",
+            "en": "An innate spellcaster who bends raw magic through willpower."
+          },
+          "long": {
+            "pt": "Sorcerers recebem magia do sangue, destino ou caos. Menos vers\u00e1teis que um Wizard, mas capazes de modelar feiti\u00e7os com Metamagia.",
+            "en": "Sorcerers draw magic from bloodline, fate, or chaos. They offer fewer spells than a Wizard but reshape them through Metamagic."
+          },
+          "subclass_fallback": {
+            "pt": "A Origem {name} explica a fonte inata do poder do Sorcerer.",
+            "en": "The {name} Origin explains the innate source of the Sorcerer's power."
+          }
+        },
+        "WARLOCK": {
+          "name": {
+            "pt": "Warlock",
+            "en": "Warlock"
+          },
+          "short": {
+            "pt": "Um portador de pactos que canaliza magia atrav\u00e9s de um patrono sobrenatural.",
+            "en": "A pactbound caster who channels magic through a supernatural patron."
+          },
+          "long": {
+            "pt": "Warlocks fazem acordos com entidades poderosas para obter feiti\u00e7os e invoca\u00e7\u00f5es. Jogam com recurso limitado mas recupera\u00e7\u00f5es frequentes.",
+            "en": "Warlocks strike bargains with mighty entities for spells and invocations. They play with limited slots but frequent recoveries."
+          },
+          "subclass_fallback": {
+            "pt": "O Patrono {name} define quem concede os poderes ao Warlock.",
+            "en": "The {name} Patron determines who grants the Warlock's powers."
+          }
+        },
+        "WIZARD": {
+          "name": {
+            "pt": "Wizard",
+            "en": "Wizard"
+          },
+          "short": {
+            "pt": "Um estudioso arcano que domina um vasto grim\u00f3rio de feiti\u00e7os.",
+            "en": "An arcane scholar who commands a vast spellbook."
+          },
+          "long": {
+            "pt": "Wizards aprendem magia atrav\u00e9s de estudo intenso e versatilidade. T\u00eam acesso ao maior leque de feiti\u00e7os, adaptando-se a qualquer situa\u00e7\u00e3o.",
+            "en": "Wizards master magic through study and versatility. They access the widest spell list, adapting to any situation."
+          },
+          "subclass_fallback": {
+            "pt": "A Escola {name} indica a especializa\u00e7\u00e3o arcana do Wizard.",
+            "en": "The {name} School marks the Wizard's arcane specialization."
+          }
+        },
+        "ARTIFICER": {
+          "name": {
+            "pt": "Artificer",
+            "en": "Artificer"
+          },
+          "short": {
+            "pt": "Um inventor m\u00edstico que combina alquimia, tecnologia e magia.",
+            "en": "A mystical inventor blending alchemy, technology, and magic."
+          },
+          "long": {
+            "pt": "Artificers imbuem objetos com magia, criando ferramentas, armas e companheiros mecanizados. Brilham em suporte criativo e solu\u00e7\u00f5es engenhosas.",
+            "en": "Artificers infuse items with magic, crafting gadgets, weapons, and mechanical companions. They shine at creative support and ingenious solutions."
+          },
+          "subclass_fallback": {
+            "pt": "A especializa\u00e7\u00e3o {name} define a vertente de engenharia m\u00edstica do Artificer.",
+            "en": "The {name} specialty defines the Artificer's brand of arcane engineering."
+          }
+        },
+        "BLOOD_HUNTER": {
+          "name": {
+            "pt": "Blood Hunter",
+            "en": "Blood Hunter"
+          },
+          "short": {
+            "pt": "Um guerreiro juramentado que sacrifica o pr\u00f3prio sangue para destruir monstros.",
+            "en": "An oathbound warrior who bleeds for power to slay monsters."
+          },
+          "long": {
+            "pt": "Blood Hunters usam rituais e hematomancia para potenciar ataques, aceitando riscos pessoais. O estilo combina rastreio, magia sombria e combate.",
+            "en": "Blood Hunters employ rites and hemomancy to empower attacks at personal risk. The style combines tracking, shadowy magic, and combat."
+          },
+          "subclass_fallback": {
+            "pt": "A Ordem {name} dita os rituais sangrentos que o Blood Hunter segue.",
+            "en": "The Order of {name} dictates the bloody rites a Blood Hunter follows."
+          }
+        }
+      }
+    },
+    "subclasses": {
+      "overrides": {}
+    },
+    "backgrounds": {
+      "templates": {
+        "short": {
+          "pt": "{name} fornece experi\u00eancias que refor\u00e7am {abilities}.",
+          "en": "{name} provides experiences that bolster {abilities}."
+        },
+        "long": {
+          "pt": "Ao escolher {name}, a personagem ganha um passado definido, contatos e treino que real\u00e7am {abilities}. Usa este antecedente como base para motiva\u00e7\u00f5es e liga\u00e7\u00f5es narrativas.",
+          "en": "Selecting {name} grants the character a defined past, contacts, and training that highlight {abilities}. Use this background as a foundation for motivations and narrative ties."
+        }
+      },
+      "overrides": {}
+    }
+  }
+}

@@ -8,5 +8,6 @@
     "class": "questions_profession.json"
   },
   "metadata_file": "key_mappings.json",
-  "class_variant_file": "class_variants.json"
+  "class_variant_file": "class_variants.json",
+  "descriptions_file": "content/descriptions.json"
 }
