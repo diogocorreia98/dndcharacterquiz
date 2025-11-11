@@ -4,10 +4,555 @@ const languageFromLocale = (locale) => {
   return lang || 'pt';
 };
 
+const SUPPORTED_LANGUAGES = ['pt', 'en'];
+const DEFAULT_LANGUAGE = 'pt';
+
+const UI_TEXT = {
+  title: {
+    pt: 'Descobre a tua personagem de D&D 2024',
+    en: 'Discover your 2024 D&D character',
+  },
+  subtitle: {
+    pt: 'Responde às perguntas para encontrares a combinação ideal de género, espécie e classe.',
+    en: 'Answer the questions to find the ideal combination of gender, species, and class.',
+  },
+  languageLabel: {
+    pt: 'Idioma',
+    en: 'Language',
+  },
+  startTitle: {
+    pt: 'Começa a tua aventura',
+    en: 'Begin your adventure',
+  },
+  startDescription: {
+    pt: 'Escolhe o idioma e descobre que personagem de Dungeons & Dragons 2024 combina melhor contigo.',
+    en: 'Choose a language and discover which Dungeons & Dragons 2024 character fits you best.',
+  },
+  startNote: {
+    pt: 'Podes alterar o idioma em qualquer momento usando o seletor acima.',
+    en: 'You can switch languages at any time using the selector above.',
+  },
+  startButton: {
+    pt: 'Começar questionário',
+    en: 'Start quiz',
+  },
+  progressPrefix: {
+    pt: 'Pergunta',
+    en: 'Question',
+  },
+  navPrevious: {
+    pt: 'Anterior',
+    en: 'Previous',
+  },
+  navNext: {
+    pt: 'Seguinte',
+    en: 'Next',
+  },
+  noOptions: {
+    pt: 'Não encontrámos opções compatíveis com as tuas escolhas. Volta atrás e ajusta as respostas anteriores.',
+    en: "We couldn't find options that match your choices. Go back and adjust your previous answers.",
+  },
+  resultsTitle: {
+    pt: 'Resultados',
+    en: 'Results',
+  },
+  resultsIntro: {
+    pt: 'Eis as tuas escolhas ao longo do questionário. Podes voltar atrás para alterar respostas ou recomeçar.',
+    en: 'Here are your choices throughout the quiz. You can go back to change answers or restart.',
+  },
+  restartButton: {
+    pt: 'Recomeçar',
+    en: 'Restart',
+  },
+  loading: {
+    pt: 'A carregar questionário…',
+    en: 'Loading quiz…',
+  },
+  loadError: {
+    pt: 'Não foi possível carregar o questionário. Atualiza a página ou verifica o servidor.',
+    en: "We couldn't load the quiz. Refresh the page or check the server.",
+  },
+};
+
+const VARIABLE_LABELS = {
+  gender: { pt: 'Género', en: 'Gender' },
+  height: { pt: 'Altura', en: 'Height' },
+  species_commonality: { pt: 'Comum/Exótico', en: 'Common/Exotic' },
+  animal_likeness: { pt: 'Traços animais', en: 'Animal traits' },
+  species_theme: { pt: 'Tema', en: 'Theme' },
+  species: { pt: 'Espécie', en: 'Species' },
+  class_complexity: { pt: 'Complexidade da classe', en: 'Class complexity' },
+  class: { pt: 'Classe', en: 'Class' },
+  subclass_group: { pt: 'Tipo de subclasse', en: 'Subclass type' },
+  subclass: { pt: 'Subclasse', en: 'Subclass' },
+  primary_roles: { pt: 'Papéis principais', en: 'Primary roles' },
+  secondary_roles: { pt: 'Papéis secundários', en: 'Secondary roles' },
+  dark_gift: { pt: 'Dark Gift', en: 'Dark Gift' },
+  preferred_physical_ability: { pt: 'Habilidade física preferida', en: 'Preferred physical ability' },
+  class_ability_combo: { pt: 'Atributos prioritários', en: 'Priority abilities' },
+  class_armor: { pt: 'Armadura sugerida', en: 'Suggested armor' },
+  class_handheld_gear: { pt: 'Equipamento empunhado', en: 'Handheld gear' },
+  fighting_style_choice: { pt: 'Estilo de Luta', en: 'Fighting Style' },
+  background: { pt: 'Antecedente', en: 'Background' },
+};
+
+const SECTION_FALLBACK = {
+  gender: { pt: 'Género', en: 'Gender' },
+  species: { pt: 'Espécie', en: 'Species' },
+  class: { pt: 'Classe', en: 'Class' },
+  dark_gift: { pt: 'Dark Gift', en: 'Dark Gift' },
+  background: { pt: 'Antecedente', en: 'Background' },
+};
+
+const QUESTION_TRANSLATIONS = {
+  q_gender: {
+    question: {
+      pt: 'Como se apresenta a tua personagem em termos de género?',
+      en: 'How does your character present in terms of gender?',
+    },
+    options: {
+      A: { pt: 'Feminina', en: 'Female' },
+      B: { pt: 'Masculina', en: 'Male' },
+      C: { pt: 'Andrógina', en: 'Androgynous' },
+    },
+  },
+  q_height: {
+    question: {
+      pt: 'Em que faixa de alturas se encaixa a tua personagem?',
+      en: 'Which height range fits your character?',
+    },
+    options: {
+      A: { pt: 'Minúscula — 0,6–0,9 m', en: 'Tiny — 0.6–0.9 m' },
+      B: { pt: 'Baixa — ~1,2 m', en: 'Short — ~1.2 m' },
+      C: { pt: 'Média — 1,5–1,8 m', en: 'Medium — 1.5–1.8 m' },
+      D: { pt: 'Alta — 2,1–2,4 m', en: 'Tall — 2.1–2.4 m' },
+    },
+  },
+  q_species_exoticness: {
+    question: {
+      pt: 'Quão exótica pretendes que a espécie da tua personagem seja?',
+      en: "How exotic do you want your character's species to be?",
+    },
+    options: {
+      A: { pt: 'A espécie humana', en: 'The human species' },
+      B: { pt: 'Não humana — conhecida', en: 'Non-human — well-known' },
+      C: { pt: 'Não humana — estranha para alguns', en: 'Non-human — odd to some' },
+      D: { pt: 'Não humana — estranha para a maioria', en: 'Non-human — odd to most' },
+    },
+  },
+  q_species_animal_likeness: {
+    question: {
+      pt: 'A tua personagem tem traços de animal?',
+      en: 'Does your character have animal traits?',
+    },
+    options: {
+      A: { pt: 'Sim', en: 'Yes' },
+      B: { pt: 'Não', en: 'No' },
+    },
+  },
+  q_species_pick: {
+    question: {
+      pt: 'Que espécie preferes jogar?',
+      en: 'Which species do you want to play?',
+    },
+  },
+  q_dragonborn_ancestry_type: {
+    question: {
+      pt: 'Que tipo de ancestralidade dracónica define a tua personagem?',
+      en: 'Which type of draconic ancestry defines your character?',
+    },
+    options: {
+      chromatic: {
+        pt: 'Cromática (escamas reptilianas, aspeto feroz)',
+        en: 'Chromatic (scaled and fearsome)',
+      },
+      metallic: {
+        pt: 'Metálica (escamas metálicas, aspeto polido)',
+        en: 'Metallic (gleaming metallic scales)',
+      },
+    },
+  },
+  q_goliath_power_type: {
+    question: {
+      pt: 'Que tipo de poder de ancestralidade gigante melhor descreve a tua personagem?',
+      en: 'Which kind of giant ancestry power best fits your character?',
+    },
+    options: {
+      defensive: { pt: 'Poderes Defensivos', en: 'Defensive powers' },
+      mobility: { pt: 'Poderes de Mobilidade', en: 'Mobility powers' },
+      offensive: { pt: 'Poderes Ofensivos', en: 'Offensive powers' },
+    },
+  },
+  q_subspecies_pick: {
+    question: {
+      pt: 'Que subespécie prefere a tua personagem?',
+      en: 'Which sub-species does your character prefer?',
+    },
+  },
+  q_subsubspecies_pick: {
+    question: {
+      pt: 'Qual é a variação específica da subespécie?',
+      en: 'What is the specific variation of the sub-species?',
+    },
+  },
+  q_primary_roles: {
+    question: {
+      pt: 'Que papel preferes em combate (seleciona até 2 opções)?',
+      en: 'Which combat role do you prefer (select up to 2 options)?',
+    },
+    options: {
+      DEFENDER: { pt: 'Defensor', en: 'Defender' },
+      HEALER_SUPPORT: { pt: 'Cura/Apoio', en: 'Healer/Support' },
+      CONTROLLER: { pt: 'Controlador', en: 'Controller' },
+      STRIKER: { pt: 'Atacante', en: 'Striker' },
+      SCOUT: { pt: 'Batedor', en: 'Scout' },
+    },
+  },
+  q_healer_support_preference: {
+    question: {
+      pt: 'Qual preferes?',
+      en: 'Which do you prefer?',
+    },
+    options: {
+      HEALER: { pt: 'Curandeiro', en: 'Healer' },
+      SUPPORT: { pt: 'Apoio', en: 'Support' },
+      BOTH: { pt: 'Ambos', en: 'Both' },
+    },
+  },
+  q_secondary_roles: {
+    question: {
+      pt: 'Há mais algum papel que precisas que a tua personagem sirva (Seleciona 0, 1 ou 2 opções)?',
+      en: 'Do you need your character to fill any other roles (select 0, 1, or 2 options)?',
+    },
+    options: {
+      BLASTER: { pt: 'Blaster', en: 'Blaster' },
+      FACE: { pt: 'Face (diplomata)', en: 'Face' },
+      SCHOLAR: { pt: 'Erudito', en: 'Scholar' },
+      UTILITY_CASTER: { pt: 'Conjurador utilitário', en: 'Utility Caster' },
+    },
+  },
+  q_class_complexity: {
+    question: {
+      pt: 'Com que nível de complexidade te sentes confortável?',
+      en: 'What level of class complexity are you comfortable with?',
+    },
+    options: {
+      A: {
+        pt: 'Só tenho interesse nas classes mais simples.',
+        en: "I'm only interested in the simplest classes.",
+      },
+      B: {
+        pt: 'Só não tenho interesse nas classes mais complexas.',
+        en: "I just want to avoid the most complex classes.",
+      },
+      C: {
+        pt: 'A complexidade não me aflige.',
+        en: "Complexity doesn't bother me.",
+      },
+    },
+  },
+  q_class_simple_choice: {
+    question: {
+      pt: 'Que classe preferes jogar?',
+      en: 'Which class would you like to play?',
+    },
+  },
+  q_class_medium_choice: {
+    question: {
+      pt: 'Que classe preferes jogar?',
+      en: 'Which class would you like to play?',
+    },
+  },
+  q_class_high_choice: {
+    question: {
+      pt: 'Que classe preferes jogar?',
+      en: 'Which class would you like to play?',
+    },
+  },
+  q_subclass_group: {
+    question: {
+      pt: 'Preferes explorar subclasses principais ou especializadas?',
+      en: 'Do you want to explore core or specialized subclasses?',
+    },
+    options: {
+      CORE: { pt: 'Quero ver as subclasses principais.', en: 'Show me the core subclasses.' },
+      NICHE: {
+        pt: 'Mostra-me opções mais únicas ou de nicho.',
+        en: 'Show me more unique or niche options.',
+      },
+    },
+  },
+  q_subclass_choice: {
+    question: {
+      pt: 'Qual destas subclasses chama mais por ti?',
+      en: 'Which of these subclasses appeals to you most?',
+    },
+  },
+  q_find_familiar_use: {
+    question: {
+      pt: 'Pretendes usar o feitiço Find Familiar e ter uma companhia animal mágica?',
+      en: 'Do you plan to use the Find Familiar spell and have a magical animal companion?',
+    },
+    options: {
+      YES: { pt: 'Sim', en: 'Yes' },
+      NO: { pt: 'Não', en: 'No' },
+    },
+  },
+  q_familiar_habitat: {
+    question: {
+      pt: 'O teu familiar ideal vive...?',
+      en: 'Where does your ideal familiar live?',
+    },
+    options: {
+      SKY: {
+        pt: 'Nos céus ou entre os ramos — voador e atento.',
+        en: 'In the sky or treetops — flying and watchful.',
+      },
+      LAND: {
+        pt: 'Na terra — rápido, sorrateiro ou escalador.',
+        en: 'On land — quick, sneaky, or a climber.',
+      },
+      WATER: {
+        pt: 'Na água — estranho, furtivo e versátil.',
+        en: 'In the water — strange, stealthy, and versatile.',
+      },
+    },
+  },
+  q_familiar_creature_sky: {
+    question: {
+      pt: 'Qual destas criaturas aéreas te acompanha?',
+      en: 'Which of these aerial creatures accompanies you?',
+    },
+    options: {
+      BAT: { pt: 'Morcego', en: 'Bat' },
+      HAWK: { pt: 'Falcão', en: 'Hawk' },
+      OWL: { pt: 'Coruja', en: 'Owl' },
+      RAVEN: { pt: 'Corvo', en: 'Raven' },
+      OTHER_AIR: {
+        pt: 'Hei-de escolher outro animal',
+        en: "I'll choose another animal",
+      },
+    },
+  },
+  q_familiar_creature_land: {
+    question: {
+      pt: 'Qual destes animais terrestres partilha a tua jornada?',
+      en: 'Which of these land animals joins your journey?',
+    },
+    options: {
+      CAT: { pt: 'Gato', en: 'Cat' },
+      LIZARD: { pt: 'Lagarto', en: 'Lizard' },
+      RAT: { pt: 'Rato', en: 'Rat' },
+      SPIDER: { pt: 'Aranha', en: 'Spider' },
+      WEASEL: { pt: 'Doninha', en: 'Weasel' },
+      OTHER_LAND: {
+        pt: 'Hei-de escolher outro animal',
+        en: "I'll choose another animal",
+      },
+    },
+  },
+  q_familiar_creature_water: {
+    question: {
+      pt: 'Qual destas criaturas aquáticas é tua aliada?',
+      en: 'Which of these aquatic creatures is your ally?',
+    },
+    options: {
+      FROG: { pt: 'Sapo', en: 'Frog' },
+      OCTOPUS: { pt: 'Polvo', en: 'Octopus' },
+      OTHER_WATER: {
+        pt: 'Hei-de escolher outro animal',
+        en: "I'll choose another animal",
+      },
+    },
+  },
+  q_class_adjustment_cleric: {
+    question: {
+      pt: 'Que Divine Order pretendes escolher?',
+      en: 'Which Divine Order do you want to choose?',
+    },
+  },
+  q_class_adjustment_druid: {
+    question: {
+      pt: 'Que Primal Order pretendes escolher?',
+      en: 'Which Primal Order do you want to choose?',
+    },
+  },
+  q_class_adjustment_warlock: {
+    question: {
+      pt: 'Que Pact Boon Invocation pretendes escolher?',
+      en: 'Which Pact Boon Invocation do you want to choose?',
+    },
+  },
+  q_warlock_familiar_type: {
+    question: {
+      pt: 'Que tipo de familiar mágico te acompanha nas tuas aventuras?',
+      en: 'What type of magical familiar accompanies you on your adventures?',
+    },
+    options: {
+      WARLOCK_FAMILIAR_EXOTIC: {
+        pt: 'Uma criatura mágica, exótica ou venenosa — algo fora do comum.',
+        en: 'A magical, exotic, or venomous creature — something unusual.',
+      },
+      WARLOCK_FAMILIAR_ANIMAL: {
+        pt: 'Um animal natural — discreto, astuto ou adorável.',
+        en: 'A natural animal — discreet, clever, or adorable.',
+      },
+    },
+  },
+  q_warlock_familiar_style: {
+    question: {
+      pt: 'Preferes que o teu familiar tenha...?',
+      en: 'Do you prefer your familiar to have...?',
+    },
+    options: {
+      WARLOCK_FAMILIAR_DARK: {
+        pt: 'Um lado diabólico, com poderes infernais ou demoníacos.',
+        en: 'A fiendish side with infernal or demonic powers.',
+      },
+      WARLOCK_FAMILIAR_MYSTIC: {
+        pt: 'Um toque encantado, misterioso ou celestial.',
+        en: 'An enchanted, mysterious, or celestial touch.',
+      },
+    },
+  },
+  q_warlock_familiar_dark: {
+    question: {
+      pt: 'Qual destes seres das trevas preferes como familiar?',
+      en: 'Which dark creature do you prefer as a familiar?',
+    },
+  },
+  q_warlock_familiar_mystic: {
+    question: {
+      pt: 'Qual destas criaturas mágicas e fascinantes escolhes?',
+      en: 'Which of these magical and fascinating creatures do you choose?',
+    },
+  },
+  q_warlock_familiar_habitat: {
+    question: {
+      pt: 'O teu familiar ideal vive...?',
+      en: 'Where does your ideal familiar live?',
+    },
+    options: {
+      SKY: {
+        pt: 'Nos céus ou entre os ramos — voador e atento.',
+        en: 'In the sky or treetops — flying and watchful.',
+      },
+      LAND: {
+        pt: 'Na terra — rápido, sorrateiro ou escalador.',
+        en: 'On land — quick, sneaky, or a climber.',
+      },
+      WATER: {
+        pt: 'Na água — estranho, furtivo e versátil.',
+        en: 'In the water — strange, stealthy, and versatile.',
+      },
+    },
+  },
+  q_warlock_familiar_creature_sky: {
+    question: {
+      pt: 'Qual destas criaturas aéreas te acompanha?',
+      en: 'Which of these aerial creatures accompanies you?',
+    },
+    options: {
+      BAT: { pt: 'Morcego', en: 'Bat' },
+      HAWK: { pt: 'Falcão', en: 'Hawk' },
+      OWL: { pt: 'Coruja', en: 'Owl' },
+      RAVEN: { pt: 'Corvo', en: 'Raven' },
+      OTHER_AIR: {
+        pt: 'Hei-de escolher outro animal',
+        en: "I'll choose another animal",
+      },
+    },
+  },
+  q_warlock_familiar_creature_land: {
+    question: {
+      pt: 'Qual destas criaturas terrestres te acompanha?',
+      en: 'Which of these land creatures accompanies you?',
+    },
+    options: {
+      CAT: { pt: 'Gato', en: 'Cat' },
+      LIZARD: { pt: 'Lagarto', en: 'Lizard' },
+      RAT: { pt: 'Rato', en: 'Rat' },
+      SPIDER: { pt: 'Aranha', en: 'Spider' },
+      WEASEL: { pt: 'Doninha', en: 'Weasel' },
+      OTHER_LAND: {
+        pt: 'Hei-de escolher outro animal',
+        en: "I'll choose another animal",
+      },
+    },
+  },
+  q_warlock_familiar_creature_water: {
+    question: {
+      pt: 'Qual destas criaturas aquáticas te acompanha?',
+      en: 'Which of these aquatic creatures accompanies you?',
+    },
+    options: {
+      FROG: { pt: 'Sapo', en: 'Frog' },
+      OCTOPUS: { pt: 'Polvo', en: 'Octopus' },
+      OTHER_WATER: {
+        pt: 'Hei-de escolher outro animal',
+        en: "I'll choose another animal",
+      },
+    },
+  },
+  q_class_adjustment_fighter: {
+    question: {
+      pt: 'Que Estilo de Luta preferes aprender?',
+      en: 'Which Fighting Style would you like to learn?',
+    },
+  },
+  q_class_adjustment_ranger: {
+    question: {
+      pt: 'Que Estilo de Luta preferes aprender?',
+      en: 'Which Fighting Style would you like to learn?',
+    },
+  },
+  q_class_adjustment_paladin: {
+    question: {
+      pt: 'Que Estilo de Luta preferes aprender?',
+      en: 'Which Fighting Style would you like to learn?',
+    },
+  },
+  q_physical_ability_preference: {
+    question: {
+      pt: 'Preferes destacar a Destreza (DEX) ou a Força (STR) da tua personagem?',
+      en: 'Would you rather highlight your character\'s Dexterity (DEX) or Strength (STR)?',
+    },
+    options: {
+      DEX: { pt: 'Destreza (DEX)', en: 'Dexterity (DEX)' },
+      STR: { pt: 'Força (STR)', en: 'Strength (STR)' },
+    },
+  },
+  q_background_preference: {
+    question: {
+      pt: 'Que tipo de vida levou a tua personagem?',
+      en: 'What kind of life has your character led?',
+    },
+  },
+  q_dark_gift_presence: {
+    question: {
+      pt: 'A tua personagem carrega uma maldição?',
+      en: 'Does your character carry a curse?',
+    },
+    options: {
+      YES: { pt: 'Sim', en: 'Yes' },
+      NO: { pt: 'Não', en: 'No' },
+    },
+  },
+  q_dark_gift_type: {
+    question: {
+      pt: 'Que tipo de maldição ela tem?',
+      en: 'What kind of curse do they bear?',
+    },
+  },
+};
+
 class QuizApp {
   constructor(quizData) {
     this.quizData = quizData;
     this.language = languageFromLocale(quizData.locale);
+    if (!SUPPORTED_LANGUAGES.includes(this.language)) {
+      this.language = DEFAULT_LANGUAGE;
+    }
     this.state = {
       variables: this.cloneValue(quizData.metadata?.initial_state ?? {}),
       currentNodeId: null,
@@ -15,8 +560,11 @@ class QuizApp {
     };
 
     this.dom = {
+      startScreen: document.getElementById('start-screen'),
       questionScreen: document.getElementById('question-screen'),
       resultScreen: document.getElementById('result-screen'),
+      appTitle: document.getElementById('app-title'),
+      appSubtitle: document.getElementById('app-subtitle'),
       progress: document.getElementById('progress-indicator'),
       statusSummary: document.getElementById('status-summary'),
       questionText: document.getElementById('question-text'),
@@ -26,6 +574,14 @@ class QuizApp {
       nextButtons: Array.from(document.querySelectorAll('[data-nav="next"]')),
       resultsContainer: document.getElementById('results-container'),
       restartButton: document.getElementById('restart-button'),
+      startButton: document.getElementById('start-button'),
+      startTitle: document.getElementById('start-title'),
+      startDescription: document.getElementById('start-description'),
+      startLanguageNote: document.getElementById('start-language-note'),
+      languageSelect: document.getElementById('language-select'),
+      languageLabel: document.getElementById('language-label'),
+      resultTitle: document.getElementById('result-title'),
+      resultIntro: document.getElementById('result-intro'),
     };
 
     this.sectionVariables = this.buildSectionVariables();
@@ -38,9 +594,11 @@ class QuizApp {
     this.selectedValue = null;
     this.selectedValues = new Set();
     this.currentSelectionConfig = { mode: 'single' };
+    this.hasStarted = false;
     this.attachEventListeners();
     this.syncClassVariantAttributes();
-    this.start();
+    this.setLanguage(this.language, { skipRerender: true });
+    this.toggleScreens('start');
   }
 
   attachEventListeners() {
@@ -50,7 +608,161 @@ class QuizApp {
     this.dom.backButtons.forEach((button) => {
       button?.addEventListener('click', () => this.goBack());
     });
-    this.dom.restartButton.addEventListener('click', () => this.restart());
+    this.dom.restartButton?.addEventListener('click', () => this.restart());
+    this.dom.startButton?.addEventListener('click', () => this.startQuiz());
+    this.dom.languageSelect?.addEventListener('change', (event) => {
+      this.setLanguage(event.target.value);
+    });
+  }
+
+  startQuiz() {
+    this.hasStarted = true;
+    this.toggleScreens('question');
+    this.start();
+  }
+
+  setLanguage(language, { skipRerender = false } = {}) {
+    const normalized = SUPPORTED_LANGUAGES.includes(language) ? language : DEFAULT_LANGUAGE;
+    const previous = this.language;
+    this.language = normalized;
+    if (typeof document !== 'undefined' && document.documentElement) {
+      document.documentElement.lang = this.language;
+    }
+    this.syncLanguageControls();
+    this.updateStaticText();
+    if (!skipRerender && previous !== this.language) {
+      this.rerenderActiveScreen();
+    }
+  }
+
+  syncLanguageControls() {
+    if (this.dom.languageSelect) {
+      this.dom.languageSelect.value = this.language;
+    }
+  }
+
+  getLocaleKey() {
+    return this.language === 'en' ? 'en' : 'pt';
+  }
+
+  getText(key) {
+    const entry = UI_TEXT[key];
+    if (!entry) {
+      return '';
+    }
+    const localeKey = this.getLocaleKey();
+    return entry[localeKey] ?? entry[DEFAULT_LANGUAGE] ?? '';
+  }
+
+  updateStaticText() {
+    if (this.dom.appTitle) {
+      this.dom.appTitle.textContent = this.getText('title');
+    }
+    if (this.dom.appSubtitle) {
+      this.dom.appSubtitle.textContent = this.getText('subtitle');
+    }
+    if (this.dom.languageLabel) {
+      this.dom.languageLabel.textContent = this.getText('languageLabel');
+    }
+    if (this.dom.startTitle) {
+      this.dom.startTitle.textContent = this.getText('startTitle');
+    }
+    if (this.dom.startDescription) {
+      this.dom.startDescription.textContent = this.getText('startDescription');
+    }
+    if (this.dom.startLanguageNote) {
+      this.dom.startLanguageNote.textContent = this.getText('startNote');
+    }
+    if (this.dom.startButton) {
+      this.dom.startButton.textContent = this.getText('startButton');
+    }
+    if (this.dom.noOptionsMessage) {
+      this.dom.noOptionsMessage.textContent = this.getText('noOptions');
+    }
+    if (this.dom.resultTitle) {
+      this.dom.resultTitle.textContent = this.getText('resultsTitle');
+    }
+    if (this.dom.resultIntro) {
+      this.dom.resultIntro.textContent = this.getText('resultsIntro');
+    }
+    if (this.dom.restartButton) {
+      this.dom.restartButton.textContent = this.getText('restartButton');
+    }
+    this.dom.backButtons.forEach((button) => {
+      if (button) {
+        button.textContent = `← ${this.getText('navPrevious')}`;
+      }
+    });
+    this.dom.nextButtons.forEach((button) => {
+      if (button) {
+        button.textContent = `${this.getText('navNext')} →`;
+      }
+    });
+    if (typeof document !== 'undefined') {
+      document.title = this.getText('title');
+    }
+  }
+
+  rerenderActiveScreen() {
+    const questionVisible = this.dom.questionScreen && !this.dom.questionScreen.hasAttribute('hidden');
+    const resultVisible = this.dom.resultScreen && !this.dom.resultScreen.hasAttribute('hidden');
+
+    if (questionVisible && this.state.currentNodeId) {
+      const selection = this.currentSelectionConfig ?? { mode: 'single' };
+      const preselect =
+        selection.mode === 'multiple'
+          ? Array.from(this.selectedValues ?? [])
+          : this.selectedValue;
+      this.showQuestion(this.state.currentNodeId, { preselect, fromHistory: true });
+      return;
+    }
+
+    if (resultVisible) {
+      this.renderResults();
+    }
+  }
+
+  getQuestionText(nodeId, node) {
+    if (!node) {
+      return '';
+    }
+    const localeKey = this.getLocaleKey();
+    const translationEntry = QUESTION_TRANSLATIONS[nodeId]?.question;
+    if (translationEntry) {
+      return translationEntry[localeKey] ?? translationEntry[DEFAULT_LANGUAGE] ?? node.question ?? '';
+    }
+    if (node.question && typeof node.question === 'object') {
+      return node.question[localeKey] ?? node.question[DEFAULT_LANGUAGE] ?? '';
+    }
+    return node.question ?? '';
+  }
+
+  getOptionLabel(nodeId, option) {
+    if (!option) {
+      return '';
+    }
+    const localeKey = this.getLocaleKey();
+    const nodeTranslations = QUESTION_TRANSLATIONS[nodeId]?.options;
+    if (nodeTranslations && nodeTranslations[option.value]) {
+      const translation = nodeTranslations[option.value];
+      return translation[localeKey] ?? translation[DEFAULT_LANGUAGE] ?? option.label ?? '';
+    }
+    if (option.label_translations) {
+      return option.label_translations[localeKey] ?? option.label_translations[DEFAULT_LANGUAGE] ?? '';
+    }
+    if (option.datasetEntry) {
+      const datasetLabel = option.datasetEntry[localeKey] ?? option.datasetEntry[DEFAULT_LANGUAGE];
+      if (datasetLabel) {
+        return datasetLabel;
+      }
+    }
+    if (option.label && typeof option.label === 'object') {
+      return option.label[localeKey] ?? option.label[DEFAULT_LANGUAGE] ?? '';
+    }
+    if (typeof option.label === 'string') {
+      return option.label;
+    }
+    return String(option.value ?? '');
   }
 
   getNavButtons(type) {
@@ -92,16 +804,30 @@ class QuizApp {
   }
 
   restart() {
+    this.hasStarted = true;
     this.toggleScreens('question');
     this.start();
   }
 
   toggleScreens(target) {
+    const showStart = target === 'start';
     const showQuestion = target === 'question';
-    this.dom.questionScreen.toggleAttribute('hidden', !showQuestion);
-    this.dom.resultScreen.toggleAttribute('hidden', showQuestion);
-    this.dom.questionScreen.classList.toggle('card--hidden', !showQuestion);
-    this.dom.resultScreen.classList.toggle('card--hidden', showQuestion);
+    const showResult = target === 'result';
+
+    if (this.dom.startScreen) {
+      this.dom.startScreen.toggleAttribute('hidden', !showStart);
+      this.dom.startScreen.classList.toggle('card--hidden', !showStart);
+    }
+
+    if (this.dom.questionScreen) {
+      this.dom.questionScreen.toggleAttribute('hidden', !showQuestion);
+      this.dom.questionScreen.classList.toggle('card--hidden', !showQuestion);
+    }
+
+    if (this.dom.resultScreen) {
+      this.dom.resultScreen.toggleAttribute('hidden', !showResult);
+      this.dom.resultScreen.classList.toggle('card--hidden', !showResult);
+    }
   }
 
   goBack() {
@@ -198,10 +924,16 @@ class QuizApp {
       this.selectedValues = new Set();
     }
 
-    this.dom.progress.textContent = `Pergunta ${this.state.history.length + 1}`;
-    this.dom.questionText.textContent = node.question;
+    if (this.dom.progress) {
+      this.dom.progress.textContent = `${this.getText('progressPrefix')} ${
+        this.state.history.length + 1
+      }`;
+    }
+    if (this.dom.questionText) {
+      this.dom.questionText.textContent = this.getQuestionText(nodeId, node);
+    }
 
-    this.renderOptions(options, preselect, selection);
+    this.renderOptions(nodeId, options, preselect, selection);
     this.dom.noOptionsMessage.hidden = options.length > 0;
 
     if (selection.mode === 'multiple') {
@@ -616,7 +1348,10 @@ class QuizApp {
     }
   }
 
-  renderOptions(options, preselectValue, selection = { mode: 'single' }) {
+  renderOptions(nodeId, options, preselectValue, selection = { mode: 'single' }) {
+    if (!this.dom.optionsForm) {
+      return;
+    }
     this.dom.optionsForm.innerHTML = '';
     const isMultiple = selection?.mode === 'multiple';
     const preselectedSet = new Set(Array.isArray(preselectValue) ? preselectValue : []);
@@ -665,7 +1400,7 @@ class QuizApp {
 
       const label = document.createElement('p');
       label.className = 'option__label';
-      label.textContent = option.label;
+      label.textContent = this.getOptionLabel(nodeId, option);
 
       wrapper.append(input, label);
       this.dom.optionsForm.appendChild(wrapper);
@@ -686,7 +1421,7 @@ class QuizApp {
   }
 
   renderResults() {
-    const localeKey = this.language === 'pt' ? 'pt' : 'en';
+    const localeKey = this.getLocaleKey();
     this.dom.resultsContainer.innerHTML = '';
 
     const sectionsMeta = this.quizData.metadata?.sections ?? {};
@@ -744,7 +1479,7 @@ class QuizApp {
       return;
     }
 
-    const localeKey = this.language === 'pt' ? 'pt' : 'en';
+    const localeKey = this.getLocaleKey();
     const sectionsMeta = this.quizData.metadata?.sections ?? {};
     const valueMap = this.quizData.metadata?.value_map ?? {};
     const variableSchemas = this.quizData.metadata?.variables ?? {};
@@ -808,39 +1543,21 @@ class QuizApp {
   }
 
   formatVariableLabel(variableName) {
-    const map = {
-      gender: 'Género',
-      height: 'Altura',
-      species_commonality: 'Comum/Exótico',
-      animal_likeness: 'Traços animais',
-      species_theme: 'Tema',
-      species: 'Espécie',
-      class_complexity: 'Complexidade da classe',
-      class: 'Classe',
-      subclass_group: 'Tipo de subclasse',
-      subclass: 'Subclasse',
-      primary_roles: 'Papéis principais',
-      secondary_roles: 'Papéis secundários',
-      dark_gift: 'Dark Gift',
-      preferred_physical_ability: 'Habilidade física preferida',
-      class_ability_combo: 'Atributos prioritários',
-      class_armor: 'Armadura sugerida',
-      class_handheld_gear: 'Equipamento empunhado',
-      fighting_style_choice: 'Estilo de Luta',
-      background: 'Antecedente',
-    };
-    return map[variableName] ?? variableName;
+    const entry = VARIABLE_LABELS[variableName];
+    if (!entry) {
+      return variableName;
+    }
+    const localeKey = this.getLocaleKey();
+    return entry[localeKey] ?? entry[DEFAULT_LANGUAGE] ?? variableName;
   }
 
   formatSectionFallback(sectionKey) {
-    const map = {
-      gender: 'Género',
-      species: 'Espécie',
-      class: 'Classe',
-      dark_gift: 'Dark Gift',
-      background: 'Antecedente',
-    };
-    return map[sectionKey] ?? sectionKey;
+    const entry = SECTION_FALLBACK[sectionKey];
+    if (!entry) {
+      return sectionKey;
+    }
+    const localeKey = this.getLocaleKey();
+    return entry[localeKey] ?? entry[DEFAULT_LANGUAGE] ?? sectionKey;
   }
 
   formatVariableValue(variableName, rawValue, valueMap, localeKey) {
@@ -1617,15 +2334,19 @@ const loadQuizData = async (manifestUrl) => {
 };
 
 const bootstrap = async () => {
-  const loadingMessage = 'A carregar questionário…';
-  document.getElementById('question-text').textContent = loadingMessage;
+  const loadingMessage = UI_TEXT.loading?.[DEFAULT_LANGUAGE] ?? 'A carregar questionário…';
+  const questionElement = document.getElementById('question-text');
+  if (questionElement) {
+    questionElement.textContent = loadingMessage;
+  }
   try {
     const data = await loadQuizData('dnd_2024_questionario.json');
     new QuizApp(data);
   } catch (error) {
     const message = document.createElement('p');
     message.className = 'options__empty';
-    message.textContent = 'Não foi possível carregar o questionário. Atualiza a página ou verifica o servidor.';
+    message.textContent = UI_TEXT.loadError?.[DEFAULT_LANGUAGE] ??
+      'Não foi possível carregar o questionário. Atualiza a página ou verifica o servidor.';
     const container = document.getElementById('options-form');
     container.innerHTML = '';
     container.appendChild(message);

@@ -42,6 +42,56 @@ body {
 .app__header {
   text-align: center;
   padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.app__header-content {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.language-switcher__label {
+  font-weight: 600;
+}
+
+.language-switcher__select {
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  padding: 0.35rem 0.75rem;
+  background: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+  .language-switcher__select {
+    background: color-mix(in srgb, var(--card-dark) 92%, transparent);
+    border-color: var(--border-dark);
+    color: var(--text-dark);
+  }
+}
+
+@media (min-width: 720px) {
+  .app__header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .app__header-content {
+    text-align: left;
+  }
 }
 
 .app__title {
@@ -52,6 +102,21 @@ body {
 .app__subtitle {
   margin-top: 0.5rem;
   color: var(--muted);
+}
+
+.start-screen__note {
+  color: var(--muted);
+  font-size: 0.95rem;
+  background: color-mix(in srgb, var(--card) 85%, transparent);
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .start-screen__note {
+    background: color-mix(in srgb, var(--card-dark) 92%, transparent);
+    color: var(--muted-dark);
+  }
 }
 
 .card {
