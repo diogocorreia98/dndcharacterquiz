@@ -33,4 +33,5 @@ Aplicação web simples para percorrer o questionário de Dungeons & Dragons 202
 * `dnd_2024_questionario.json` – manifesto que indica onde estão as perguntas e os mapeamentos.
 * `questions_appearance.json` – perguntas até à secção de classe.
 * `questions_profession.json` – perguntas da secção de classe.
-* `key_mappings.json` – mapeamentos de variáveis, valores e datasets.
+* `key_mappings.json` – mapeamentos de variáveis, datasets e configuração dos ficheiros de rótulos.
+* `option_labels_core.json`, `option_labels_subclasses.json`, `option_labels_backgrounds.json` – rótulos das opções (base, subclasses e antecedentes).
