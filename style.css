@@ -269,6 +269,23 @@ body {
   line-height: 1.5;
 }
 
+.option__content {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.option__description {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+@media (prefers-color-scheme: dark) {
+  .option__description {
+    color: var(--muted-dark);
+  }
+}
+
 .options__empty {
   margin: 0;
   color: #b3261e;
