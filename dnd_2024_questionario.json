@@ -12,5 +12,6 @@
   "option_label_files": {
     "appearance": "option_labels_appearance.json",
     "profession": "option_labels_profession.json"
-  }
+  },
+  "option_description_file": "option_descriptions.json"
 }

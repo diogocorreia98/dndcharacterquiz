@@ -426,110 +426,6 @@ const SUBCLASS_DESCRIPTION_LABELS = {
   gear: withTranslations('Equipamento', 'Gear'),
 };
 
-const CLASS_SUMMARIES = {
-  ARTIFICER: withTranslations(
-    'Inventor arcano que combina magia com engenhocas adaptáveis e suporte criativo.',
-    'Arcane inventor who blends magic with adaptable gadgets and creative support.'
-  ),
-  BARBARIAN: withTranslations(
-    'Combatente feroz que canaliza a fúria para resistir e esmagar inimigos corpo a corpo.',
-    'Ferocious brawler who channels rage to withstand punishment and smash foes up close.'
-  ),
-  BARD: withTranslations(
-    'Artista versátil que inspira aliados com magia, música e truques sociais.',
-    'Versatile performer who bolsters allies with magic, music, and social tricks.'
-  ),
-  BLOOD_HUNTER: withTranslations(
-    'Caçador maldito que sacrifica vitalidade para potenciar técnicas hemomânticas.',
-    'Cursed hunter who trades vitality for potent hemomancy techniques.'
-  ),
-  CLERIC: withTranslations(
-    'Canaliza poder divino para curar, proteger e punir em nome da fé.',
-    'Channels divine power to heal, protect, and smite in service of faith.'
-  ),
-  DRUID: withTranslations(
-    'Guardião da natureza capaz de lançar magia primal e assumir formas animais.',
-    'Warden of nature able to wield primal magic and assume bestial forms.'
-  ),
-  FIGHTER: withTranslations(
-    'Especialista marcial disciplinado com acesso a quase todo o equipamento e estilos.',
-    'Disciplined martial expert with access to nearly every weapon, armor, and style.'
-  ),
-  MONK: withTranslations(
-    'Artista marcial místico que usa ki para movimentos rápidos e golpes precisos.',
-    'Mystic martial artist who uses ki for swift movement and precise strikes.'
-  ),
-  PALADIN: withTranslations(
-    'Campeão juramentado que combina armas pesadas com magia sagrada e auras.',
-    'Oathbound champion who blends heavy weapons with holy magic and protective auras.'
-  ),
-  RANGER: withTranslations(
-    'Vigia ágil que caça, rastreia e lança truques primais para dominar o campo.',
-    'Agile warden who tracks prey and wields primal tricks to control the field.'
-  ),
-  ROGUE: withTranslations(
-    'Especialista furtivo em golpes precisos, perícias e mobilidade.',
-    'Stealthy specialist in precise strikes, skills, and mobility.'
-  ),
-  SORCERER: withTranslations(
-    'Nascido da magia, lança feitiços com flexibilidade e poder bruto.',
-    'Innate spellcaster who unleashes flexible, high-impact magic.'
-  ),
-  WARLOCK: withTranslations(
-    'Canaliza pactos com patronos para obter truques únicos e invocações.',
-    'Channels pacts with patrons for unique tricks and invocations.'
-  ),
-  WIZARD: withTranslations(
-    'Erudito arcano que prepara feitiços variados e domina escolas mágicas.',
-    'Arcane scholar who prepares varied spells and masters magical schools.'
-  ),
-};
-
-const ROLE_DESCRIPTIONS = {
-  primary: {
-    DEFENDER: withTranslations('Forma a linha da frente e absorve os golpes inimigos.', 'Holds the front line and soaks enemy hits.'),
-    HEALER_SUPPORT: withTranslations('Mantém aliados vivos com curas e buffs rápidos.', 'Keeps allies alive with quick healing and buffs.'),
-    CONTROLLER: withTranslations('Manipula o campo de batalha com efeitos e condições.', 'Manipulates the battlefield with effects and conditions.'),
-    STRIKER: withTranslations('Causa grandes quantidades de dano a alvos prioritários.', 'Deals high damage to priority targets.'),
-    SCOUT: withTranslations('Explora, infiltra-se e alerta o grupo para perigos.', 'Explores, infiltrates, and warns the party of danger.'),
-  },
-  secondary: {
-    BLASTER: withTranslations('Especialista em feitiços ou ataques de área devastadores.', 'Specialist in devastating area spells or attacks.'),
-    FACE: withTranslations('Brilha em testes sociais e negociações delicadas.', 'Excels at social tests and delicate negotiations.'),
-    SCHOLAR: withTranslations('Resolve desafios com conhecimentos e perícias intelectuais.', 'Solves challenges with lore and investigative skills.'),
-    UTILITY_CASTER: withTranslations('Disponibiliza magia de suporte, truques e versatilidade fora de combate.', 'Provides utility magic, rituals, and out-of-combat versatility.'),
-  },
-  healerPreference: {
-    HEALER: withTranslations('Quero priorizar curas diretas durante o jogo.', 'I want to prioritize direct healing during play.'),
-    SUPPORT: withTranslations('Prefiro inspirar ou proteger em vez de curar constantemente.', 'I prefer to inspire or protect instead of constant healing.'),
-    BOTH: withTranslations('Posso equilibrar curas e suporte conforme necessário.', 'I can balance healing and support as needed.'),
-  },
-};
-
-const SUBCLASS_GROUP_DESCRIPTIONS = {
-  CORE: withTranslations('Escolha equilibrada, fácil de integrar em qualquer campanha.', 'Balanced pick that fits smoothly into most campaigns.'),
-  NICHE: withTranslations('Opção especializada para conceitos ou mesas específicas.', 'Specialized option tailored to specific stories or tables.'),
-};
-
-const CLASS_ADJUSTMENT_DESCRIPTIONS = {
-  CLERIC_PROTECTOR: withTranslations('Armadura pesada e foco em proteção divina constante.', 'Heavy armor focus with steady defensive miracles.'),
-  CLERIC_THAUMATURGE: withTranslations('Favorece milagres ofensivos e canalizações arcanas.', 'Leans into offensive miracles and arcane channeling.'),
-  DRUID_WARDEN: withTranslations('Mantém formas selvagens robustas e magia defensiva.', 'Emphasizes sturdy Wild Shape forms and defensive magic.'),
-  DRUID_MAGICIAN: withTranslations('Expande a lista de feitiços e truques utilitários.', 'Expands the spell list with extra utility tricks.'),
-  WARLOCK_PACT_OF_THE_TOME: withTranslations('Grimório repleto de truques versáteis e rituais.', 'A grimoire packed with versatile tricks and rituals.'),
-  WARLOCK_PACT_OF_THE_CHAIN: withTranslations('Familiar poderoso que partilha sentidos e ações.', 'Potent familiar that shares senses and actions.'),
-  WARLOCK_PACT_OF_THE_BLADE: withTranslations('Arma pactuada sempre à mão para combate híbrido.', 'Bound weapon always ready for hybrid combat.'),
-  WARLOCK_NONE: withTranslations('Mantém o conjunto padrão de invocações sem ajuste extra.', 'Keeps the default invocation suite without extra tweaks.'),
-};
-
-const FIGHTING_STYLE_SUMMARIES = {
-  CLASSIC: withTranslations('Acede aos estilos tradicionais como Defesa, Arquearia ou Duelo.', 'Access classic styles such as Defense, Archery, or Dueling.'),
-  BLESSED_WARRIOR: withTranslations('Aprende truques divinos para complementar ataques corpo a corpo.', 'Learn divine cantrips to complement melee strikes.'),
-  DRUIDIC_WARRIOR: withTranslations('Mistura magia druidica com combate à distância ou corpo a corpo.', 'Blend druidic cantrips with ranged or melee combat.'),
-  THROWN: withTranslations('Especializa-se em armas arremessadas, mantendo pressão constante.', 'Specializes in thrown weapons to keep constant pressure.'),
-  UNARMED: withTranslations('Transforma o corpo numa arma, útil mesmo sem equipamento.', 'Turns your body into a weapon, useful even when disarmed.'),
-};
-
 const FIGHTING_STYLE_OPTION_MAP = {
   FIGHTER_FIGHTING_STYLE_CLASSIC: 'CLASSIC',
   FIGHTER_FIGHTING_STYLE_THROWN: 'THROWN',
@@ -544,102 +440,27 @@ const FIGHTING_STYLE_OPTION_MAP = {
   PALADIN_FIGHTING_STYLE_UNARMED: 'UNARMED',
 };
 
-const PHYSICAL_ABILITY_DESCRIPTIONS = {
-  DEX: withTranslations('Favorece esquiva, furtividade e ataques precisos com armas leves.', 'Favors dodging, stealth, and precise attacks with light weapons.'),
-  STR: withTranslations('Prioriza golpes pesados, arremessos e capacidade de carga.', 'Prioritizes heavy hits, grapples, and carrying capacity.'),
-};
-
-const FAMILIAR_TYPE_DESCRIPTIONS = {
-  WARLOCK_FAMILIAR_EXOTIC: withTranslations(
-    'Sobressai em cena e oferece truques mágicos incomuns.',
-    'Stands out dramatically and brings unusual magical tricks.'
-  ),
-  WARLOCK_FAMILIAR_ANIMAL: withTranslations(
-    'Mantém um perfil discreto para infiltração e reconhecimento.',
-    'Keeps a discreet profile for scouting and infiltration.'
-  ),
-};
-
-const FAMILIAR_STYLE_DESCRIPTIONS = {
-  WARLOCK_FAMILIAR_INFERNAL: withTranslations('Aparência temível, ótima para pactos sombrios.', 'Fearsome presence that suits darker pacts.'),
-  WARLOCK_FAMILIAR_CELESTIAL: withTranslations('Aura misteriosa ou serena para pactos feéricos ou divinos.', 'Mysterious or serene aura for fey or holy pacts.'),
-};
-
-const FAMILIAR_HABITAT_DESCRIPTIONS = {
-  SKY: withTranslations('Ideal para vigiar de cima e cobrir vastas áreas.', 'Ideal for overwatch and covering wide areas from above.'),
-  LAND: withTranslations('Excelente para infiltrações urbanas ou emboscadas rasteiras.', 'Great for urban infiltration or ground ambushes.'),
-  WATER: withTranslations('Perfeito para campanhas costeiras, portos ou cavernas inundadas.', 'Perfect for coastal adventures, harbors, or flooded lairs.'),
-};
-
-const FAMILIAR_CREATURE_SKY_DESCRIPTIONS = {
-  BAT: withTranslations('Ecolocalização útil em túneis e ruínas escuras.', 'Echolocates in tunnels and dark ruins.'),
-  HAWK: withTranslations('Caçador de longo alcance com visão afiada.', 'Long-range scout with razor-sharp vision.'),
-  OWL: withTranslations('Vigia silencioso que enxerga mesmo na penumbra.', 'Silent watcher that sees even in dim light.'),
-  RAVEN: withTranslations('Mensageiro inteligente capaz de imitar sons.', 'Clever messenger capable of mimicking sounds.'),
-  OTHER_AIR: withTranslations('Queres negociar outra criatura voadora com o DM.', 'You plan to negotiate another flying creature with the DM.'),
-};
-
-const FAMILIAR_CREATURE_LAND_DESCRIPTIONS = {
-  CAT: withTranslations('Ótimo para seguir alvos em ruas e becos.', 'Great for tailing targets through streets and alleys.'),
-  LIZARD: withTranslations('Escala paredes e se esconde em fendas estreitas.', 'Climbs walls and hides inside tight crevices.'),
-  RAT: withTranslations('Passa despercebido em cidades e esgotos.', 'Goes unnoticed in cities and sewers.'),
-  SPIDER: withTranslations('Pode subir superfícies íngremes e deixar fios.', 'Climbs steep surfaces and leaves silken lines.'),
-  WEASEL: withTranslations('Ágil e curioso, cabe em qualquer buraco.', 'Agile and curious, squeezes through any hole.'),
-  OTHER_LAND: withTranslations('Combinas outro animal terrestre com o DM.', 'You will arrange another land animal with the DM.'),
-};
-
-const FAMILIAR_CREATURE_WATER_DESCRIPTIONS = {
-  FROG: withTranslations('Discreto em pântanos e cavernas húmidas.', 'Unobtrusive in swamps and damp caverns.'),
-  OCTOPUS: withTranslations('Tentáculos furtivos e camuflagem anfíbia.', 'Stealthy tentacles with amphibious camouflage.'),
-  OTHER_WATER: withTranslations('Reservas um companheiro aquático diferente.', 'You prefer a different aquatic companion.'),
-};
-
-const FAMILIAR_DARK_DESCRIPTIONS = {
-  IMP: withTranslations('Espião invisível resistente a fogo infernal.', 'Invisible spy resistant to infernal fire.'),
-  QUASIT: withTranslations('Demónio travesso que infunde medo e veneno.', 'Mischievous demon that inflicts fear and poison.'),
-  SKELETON: withTranslations('Serviçal morto-vivo fácil de remendar.', 'Undead minion that is easy to patch up.'),
-  SLAAD_TADPOLE: withTranslations('Aberração caótica com mordida corrosiva.', 'Chaotic aberration with a caustic bite.'),
-};
-
-const FAMILIAR_MYSTIC_DESCRIPTIONS = {
-  PSEUDODRAGON: withTranslations('Companheiro leal com sentidos aguçados e veneno leve.', 'Loyal companion with keen senses and mild poison.'),
-  SPHINX_OF_WONDER: withTranslations('Mascote enigmática cheia de charadas e clarividência.', 'Enigmatic mascot brimming with riddles and insight.'),
-  SPRITE: withTranslations('Fada minúscula que detecta alinhamento e emoções.', 'Tiny fey that reads alignment and emotions.'),
-  VENOMOUS_SNAKE: withTranslations('Ataques furtivos com veneno debilitante.', 'Stealthy strikes with debilitating venom.'),
-};
-
-const DARK_GIFT_DESCRIPTIONS = {
-  ECHOING_SOUL: withTranslations('Vozes de vidas passadas oferecem conselhos e lembranças.', 'Voices of past lives offer advice and memories.'),
-  GATHERED_WHISPERS: withTranslations('Segredos sussurrados invadem a mente, trocando cordura por informação.', 'Stolen whispers flood your mind, trading sanity for insight.'),
-  LIVING_SHADOW: withTranslations('A sombra age por conta própria, escondendo-te ou distraindo inimigos.', 'Your shadow moves on its own, hiding you or distracting foes.'),
-  MIST_WALKER: withTranslations('Consegues atravessar névoas e brumas como se fossem portais.', 'You slip through mists and fog as if they were portals.'),
-  SECOND_SKIN: withTranslations('Uma pele adicional protege-te mas reage de forma estranha a magia.', 'A second skin shields you yet reacts oddly to magic.'),
-  SYMBIOTIC_BEING: withTranslations('Uma entidade partilha o teu corpo e fornece poderes famintos.', 'A hitchhiking entity shares your body and hungers for power.'),
-  TOUCH_OF_DEATH: withTranslations('Toque gélido que drena vitalidade e inspira temor.', 'Chilling touch that drains vitality and inspires dread.'),
-  WATCHERS: withTranslations('Olhos invisíveis observam tudo através de ti e sussurram avisos.', 'Unseen eyes watch through you and whisper warnings.'),
-};
-
-const STATIC_DESCRIPTION_MAPS = {
-  q_primary_roles: ROLE_DESCRIPTIONS.primary,
-  q_secondary_roles: ROLE_DESCRIPTIONS.secondary,
-  q_healer_support_preference: ROLE_DESCRIPTIONS.healerPreference,
-  q_class_simple_choice: CLASS_SUMMARIES,
-  q_class_medium_choice: CLASS_SUMMARIES,
-  q_class_high_choice: CLASS_SUMMARIES,
-  q_subclass_group: SUBCLASS_GROUP_DESCRIPTIONS,
-  q_class_adjustment_cleric: CLASS_ADJUSTMENT_DESCRIPTIONS,
-  q_class_adjustment_druid: CLASS_ADJUSTMENT_DESCRIPTIONS,
-  q_class_adjustment_warlock: CLASS_ADJUSTMENT_DESCRIPTIONS,
-  q_physical_ability_preference: PHYSICAL_ABILITY_DESCRIPTIONS,
-  q_warlock_familiar_type: FAMILIAR_TYPE_DESCRIPTIONS,
-  q_warlock_familiar_style: FAMILIAR_STYLE_DESCRIPTIONS,
-  q_warlock_familiar_dark: FAMILIAR_DARK_DESCRIPTIONS,
-  q_warlock_familiar_mystic: FAMILIAR_MYSTIC_DESCRIPTIONS,
-  q_warlock_familiar_habitat: FAMILIAR_HABITAT_DESCRIPTIONS,
-  q_warlock_familiar_creature_sky: FAMILIAR_CREATURE_SKY_DESCRIPTIONS,
-  q_warlock_familiar_creature_land: FAMILIAR_CREATURE_LAND_DESCRIPTIONS,
-  q_warlock_familiar_creature_water: FAMILIAR_CREATURE_WATER_DESCRIPTIONS,
-  q_dark_gift_type: DARK_GIFT_DESCRIPTIONS,
+const DESCRIPTION_GROUP_MAP = {
+  q_primary_roles: 'role_primary',
+  q_secondary_roles: 'role_secondary',
+  q_healer_support_preference: 'role_healer_preference',
+  q_class_simple_choice: 'class_summaries',
+  q_class_medium_choice: 'class_summaries',
+  q_class_high_choice: 'class_summaries',
+  q_subclass_group: 'subclass_groups',
+  q_class_adjustment_cleric: 'class_adjustments',
+  q_class_adjustment_druid: 'class_adjustments',
+  q_class_adjustment_warlock: 'class_adjustments',
+  q_physical_ability_preference: 'physical_abilities',
+  q_warlock_familiar_type: 'warlock_familiar_types',
+  q_warlock_familiar_style: 'warlock_familiar_styles',
+  q_warlock_familiar_dark: 'warlock_familiar_dark',
+  q_warlock_familiar_mystic: 'warlock_familiar_mystic',
+  q_warlock_familiar_habitat: 'warlock_familiar_habitats',
+  q_warlock_familiar_creature_sky: 'warlock_familiar_creature_sky',
+  q_warlock_familiar_creature_land: 'warlock_familiar_creature_land',
+  q_warlock_familiar_creature_water: 'warlock_familiar_creature_water',
+  q_dark_gift_type: 'dark_gifts',
 };
 
 const buildSpeciesDescription = function (option) {
@@ -820,7 +641,11 @@ const buildFightingStyleDescription = function (option) {
   if (!styleCode) {
     return null;
   }
-  return FIGHTING_STYLE_SUMMARIES[styleCode] ?? null;
+  const styleDescriptions = this.quizData.descriptionGroups?.fighting_style_summaries;
+  if (!styleDescriptions) {
+    return null;
+  }
+  return styleDescriptions[styleCode] ?? null;
 };
 
 const AUTO_DESCRIPTION_BUILDERS = {
@@ -1074,9 +899,12 @@ class QuizApp {
     if (option.datasetEntry?.description) {
       return option.datasetEntry.description;
     }
-    const staticMap = STATIC_DESCRIPTION_MAPS[nodeId];
-    if (staticMap && staticMap[option.value]) {
-      return staticMap[option.value];
+    const groupKey = DESCRIPTION_GROUP_MAP[nodeId];
+    if (groupKey) {
+      const groupEntry = this.quizData.descriptionGroups?.[groupKey]?.[option.value];
+      if (groupEntry) {
+        return groupEntry;
+      }
     }
     const builder = AUTO_DESCRIPTION_BUILDERS[nodeId];
     if (typeof builder === 'function') {
@@ -2750,17 +2578,27 @@ const loadQuizData = async (manifestUrl) => {
     };
   }
 
+  let descriptionGroups = manifest.descriptionGroups ?? {};
+  if (manifest.option_description_file) {
+    const descriptions = await fetchJson(manifest.option_description_file, 'as descrições');
+    if (descriptions && typeof descriptions === 'object') {
+      descriptionGroups = descriptions;
+    }
+  }
+
   const merged = {
     ...manifest,
     nodes,
     metadata,
     optionLabels,
+    descriptionGroups,
   };
 
   delete merged.question_files;
   delete merged.metadata_file;
   delete merged.class_variant_file;
   delete merged.option_label_files;
+  delete merged.option_description_file;
 
   if (!merged.root) {
     const rootFromPayload = questionPayloads.find(({ data }) => data?.root)?.data?.root;
