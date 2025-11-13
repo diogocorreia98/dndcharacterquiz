@@ -777,6 +777,33 @@ const fetchJson = async (url, description) => {
   return response.json();
 };
 
+const mergeValueMaps = (base = {}, extra = {}) => {
+  const result = { ...base };
+  Object.entries(extra).forEach(([variable, labels]) => {
+    result[variable] = {
+      ...(result[variable] ?? {}),
+      ...labels,
+    };
+  });
+  return result;
+};
+
+const loadOptionLabelFiles = async (files) => {
+  const entries = Object.entries(files ?? {});
+  if (!entries.length) {
+    return {};
+  }
+
+  const payloads = await Promise.all(
+    entries.map(async ([key, filePath]) => ({
+      key,
+      data: await fetchJson(filePath, `os rótulos (${key})`),
+    })),
+  );
+
+  return payloads.reduce((acc, { data }) => mergeValueMaps(acc, data ?? {}), {});
+};
+
 const loadQuizData = async (manifestUrl) => {
   const manifest = await fetchJson(manifestUrl, 'o questionário');
 
@@ -810,6 +837,11 @@ const loadQuizData = async (manifestUrl) => {
   if (manifest.metadata_file) {
     metadata = await fetchJson(manifest.metadata_file, 'os mapeamentos');
   }
+
+  const optionLabelFiles = metadata.option_label_files ?? manifest.option_label_files;
+  const loadedOptionLabels = await loadOptionLabelFiles(optionLabelFiles);
+  metadata.value_map = mergeValueMaps(metadata.value_map ?? {}, loadedOptionLabels);
+  delete metadata.option_label_files;
 
   const merged = {
     ...manifest,
