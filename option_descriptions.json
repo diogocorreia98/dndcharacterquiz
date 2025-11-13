@@ -1,0 +1,356 @@
+{
+  "class_summaries": {
+    "ARTIFICER": {
+      "pt": "Inventor arcano que combina magia com engenhocas adaptáveis e suporte criativo.",
+      "en": "Arcane inventor who blends magic with adaptable gadgets and creative support."
+    },
+    "BARBARIAN": {
+      "pt": "Combatente feroz que canaliza a fúria para resistir e esmagar inimigos corpo a corpo.",
+      "en": "Ferocious brawler who channels rage to withstand punishment and smash foes up close."
+    },
+    "BARD": {
+      "pt": "Artista versátil que inspira aliados com magia, música e truques sociais.",
+      "en": "Versatile performer who bolsters allies with magic, music, and social tricks."
+    },
+    "BLOOD_HUNTER": {
+      "pt": "Caçador maldito que sacrifica vitalidade para potenciar técnicas hemomânticas.",
+      "en": "Cursed hunter who trades vitality for potent hemomancy techniques."
+    },
+    "CLERIC": {
+      "pt": "Canaliza poder divino para curar, proteger e punir em nome da fé.",
+      "en": "Channels divine power to heal, protect, and smite in service of faith."
+    },
+    "DRUID": {
+      "pt": "Guardião da natureza capaz de lançar magia primal e assumir formas animais.",
+      "en": "Warden of nature able to wield primal magic and assume bestial forms."
+    },
+    "FIGHTER": {
+      "pt": "Especialista marcial disciplinado com acesso a quase todo o equipamento e estilos.",
+      "en": "Disciplined martial expert with access to nearly every weapon, armor, and style."
+    },
+    "MONK": {
+      "pt": "Artista marcial místico que usa ki para movimentos rápidos e golpes precisos.",
+      "en": "Mystic martial artist who uses ki for swift movement and precise strikes."
+    },
+    "PALADIN": {
+      "pt": "Campeão juramentado que combina armas pesadas com magia sagrada e auras.",
+      "en": "Oathbound champion who blends heavy weapons with holy magic and protective auras."
+    },
+    "RANGER": {
+      "pt": "Vigia ágil que caça, rastreia e lança truques primais para dominar o campo.",
+      "en": "Agile warden who tracks prey and wields primal tricks to control the field."
+    },
+    "ROGUE": {
+      "pt": "Especialista furtivo em golpes precisos, perícias e mobilidade.",
+      "en": "Stealthy specialist in precise strikes, skills, and mobility."
+    },
+    "SORCERER": {
+      "pt": "Nascido da magia, lança feitiços com flexibilidade e poder bruto.",
+      "en": "Innate spellcaster who unleashes flexible, high-impact magic."
+    },
+    "WARLOCK": {
+      "pt": "Canaliza pactos com patronos para obter truques únicos e invocações.",
+      "en": "Channels pacts with patrons for unique tricks and invocations."
+    },
+    "WIZARD": {
+      "pt": "Erudito arcano que prepara feitiços variados e domina escolas mágicas.",
+      "en": "Arcane scholar who prepares varied spells and masters magical schools."
+    }
+  },
+  "role_primary": {
+    "DEFENDER": {
+      "pt": "Forma a linha da frente e absorve os golpes inimigos.",
+      "en": "Holds the front line and soaks enemy hits."
+    },
+    "HEALER_SUPPORT": {
+      "pt": "Mantém aliados vivos com curas e buffs rápidos.",
+      "en": "Keeps allies alive with quick healing and buffs."
+    },
+    "CONTROLLER": {
+      "pt": "Manipula o campo de batalha com efeitos e condições.",
+      "en": "Manipulates the battlefield with effects and conditions."
+    },
+    "STRIKER": {
+      "pt": "Causa grandes quantidades de dano a alvos prioritários.",
+      "en": "Deals high damage to priority targets."
+    },
+    "SCOUT": {
+      "pt": "Explora, infiltra-se e alerta o grupo para perigos.",
+      "en": "Explores, infiltrates, and warns the party of danger."
+    }
+  },
+  "role_secondary": {
+    "BLASTER": {
+      "pt": "Especialista em feitiços ou ataques de área devastadores.",
+      "en": "Specialist in devastating area spells or attacks."
+    },
+    "FACE": {
+      "pt": "Brilha em testes sociais e negociações delicadas.",
+      "en": "Excels at social tests and delicate negotiations."
+    },
+    "SCHOLAR": {
+      "pt": "Resolve desafios com conhecimentos e perícias intelectuais.",
+      "en": "Solves challenges with lore and investigative skills."
+    },
+    "UTILITY_CASTER": {
+      "pt": "Disponibiliza magia de suporte, truques e versatilidade fora de combate.",
+      "en": "Provides utility magic, rituals, and out-of-combat versatility."
+    }
+  },
+  "role_healer_preference": {
+    "HEALER": {
+      "pt": "Quero priorizar curas diretas durante o jogo.",
+      "en": "I want to prioritize direct healing during play."
+    },
+    "SUPPORT": {
+      "pt": "Prefiro inspirar ou proteger em vez de curar constantemente.",
+      "en": "I prefer to inspire or protect instead of constant healing."
+    },
+    "BOTH": {
+      "pt": "Posso equilibrar curas e suporte conforme necessário.",
+      "en": "I can balance healing and support as needed."
+    }
+  },
+  "subclass_groups": {
+    "CORE": {
+      "pt": "Escolha equilibrada, fácil de integrar em qualquer campanha.",
+      "en": "Balanced pick that fits smoothly into most campaigns."
+    },
+    "NICHE": {
+      "pt": "Opção especializada para conceitos ou mesas específicas.",
+      "en": "Specialized option tailored to specific stories or tables."
+    }
+  },
+  "class_adjustments": {
+    "CLERIC_PROTECTOR": {
+      "pt": "Armadura pesada e foco em proteção divina constante.",
+      "en": "Heavy armor focus with steady defensive miracles."
+    },
+    "CLERIC_THAUMATURGE": {
+      "pt": "Favorece milagres ofensivos e canalizações arcanas.",
+      "en": "Leans into offensive miracles and arcane channeling."
+    },
+    "DRUID_WARDEN": {
+      "pt": "Mantém formas selvagens robustas e magia defensiva.",
+      "en": "Emphasizes sturdy Wild Shape forms and defensive magic."
+    },
+    "DRUID_MAGICIAN": {
+      "pt": "Expande a lista de feitiços e truques utilitários.",
+      "en": "Expands the spell list with extra utility tricks."
+    },
+    "WARLOCK_PACT_OF_THE_TOME": {
+      "pt": "Grimório repleto de truques versáteis e rituais.",
+      "en": "A grimoire packed with versatile tricks and rituals."
+    },
+    "WARLOCK_PACT_OF_THE_CHAIN": {
+      "pt": "Familiar poderoso que partilha sentidos e ações.",
+      "en": "Potent familiar that shares senses and actions."
+    },
+    "WARLOCK_PACT_OF_THE_BLADE": {
+      "pt": "Arma pactuada sempre à mão para combate híbrido.",
+      "en": "Bound weapon always ready for hybrid combat."
+    },
+    "WARLOCK_NONE": {
+      "pt": "Mantém o conjunto padrão de invocações sem ajuste extra.",
+      "en": "Keeps the default invocation suite without extra tweaks."
+    }
+  },
+  "physical_abilities": {
+    "DEX": {
+      "pt": "Favorece esquiva, furtividade e ataques precisos com armas leves.",
+      "en": "Favors dodging, stealth, and precise attacks with light weapons."
+    },
+    "STR": {
+      "pt": "Prioriza golpes pesados, arremessos e capacidade de carga.",
+      "en": "Prioritizes heavy hits, grapples, and carrying capacity."
+    }
+  },
+  "warlock_familiar_types": {
+    "WARLOCK_FAMILIAR_EXOTIC": {
+      "pt": "Sobressai em cena e oferece truques mágicos incomuns.",
+      "en": "Stands out dramatically and brings unusual magical tricks."
+    },
+    "WARLOCK_FAMILIAR_ANIMAL": {
+      "pt": "Mantém um perfil discreto para infiltração e reconhecimento.",
+      "en": "Keeps a discreet profile for scouting and infiltration."
+    }
+  },
+  "warlock_familiar_styles": {
+    "WARLOCK_FAMILIAR_INFERNAL": {
+      "pt": "Aparência temível, ótima para pactos sombrios.",
+      "en": "Fearsome presence that suits darker pacts."
+    },
+    "WARLOCK_FAMILIAR_CELESTIAL": {
+      "pt": "Aura misteriosa ou serena para pactos feéricos ou divinos.",
+      "en": "Mysterious or serene aura for fey or holy pacts."
+    }
+  },
+  "warlock_familiar_dark": {
+    "IMP": {
+      "pt": "Espião invisível resistente a fogo infernal.",
+      "en": "Invisible spy resistant to infernal fire."
+    },
+    "QUASIT": {
+      "pt": "Demónio travesso que infunde medo e veneno.",
+      "en": "Mischievous demon that inflicts fear and poison."
+    },
+    "SKELETON": {
+      "pt": "Serviçal morto-vivo fácil de remendar.",
+      "en": "Undead minion that is easy to patch up."
+    },
+    "SLAAD_TADPOLE": {
+      "pt": "Aberração caótica com mordida corrosiva.",
+      "en": "Chaotic aberration with a caustic bite."
+    }
+  },
+  "warlock_familiar_mystic": {
+    "PSEUDODRAGON": {
+      "pt": "Companheiro leal com sentidos aguçados e veneno leve.",
+      "en": "Loyal companion with keen senses and mild poison."
+    },
+    "SPHINX_OF_WONDER": {
+      "pt": "Mascote enigmática cheia de charadas e clarividência.",
+      "en": "Enigmatic mascot brimming with riddles and insight."
+    },
+    "SPRITE": {
+      "pt": "Fada minúscula que detecta alinhamento e emoções.",
+      "en": "Tiny fey that reads alignment and emotions."
+    },
+    "VENOMOUS_SNAKE": {
+      "pt": "Ataques furtivos com veneno debilitante.",
+      "en": "Stealthy strikes with debilitating venom."
+    }
+  },
+  "warlock_familiar_habitats": {
+    "SKY": {
+      "pt": "Ideal para vigiar de cima e cobrir vastas áreas.",
+      "en": "Ideal for overwatch and covering wide areas from above."
+    },
+    "LAND": {
+      "pt": "Excelente para infiltrações urbanas ou emboscadas rasteiras.",
+      "en": "Great for urban infiltration or ground ambushes."
+    },
+    "WATER": {
+      "pt": "Perfeito para campanhas costeiras, portos ou cavernas inundadas.",
+      "en": "Perfect for coastal adventures, harbors, or flooded lairs."
+    }
+  },
+  "warlock_familiar_creature_sky": {
+    "BAT": {
+      "pt": "Ecolocalização útil em túneis e ruínas escuras.",
+      "en": "Echolocates in tunnels and dark ruins."
+    },
+    "HAWK": {
+      "pt": "Caçador de longo alcance com visão afiada.",
+      "en": "Long-range scout with razor-sharp vision."
+    },
+    "OWL": {
+      "pt": "Vigia silencioso que enxerga mesmo na penumbra.",
+      "en": "Silent watcher that sees even in dim light."
+    },
+    "RAVEN": {
+      "pt": "Mensageiro inteligente capaz de imitar sons.",
+      "en": "Clever messenger capable of mimicking sounds."
+    },
+    "OTHER_AIR": {
+      "pt": "Queres negociar outra criatura voadora com o DM.",
+      "en": "You plan to negotiate another flying creature with the DM."
+    }
+  },
+  "warlock_familiar_creature_land": {
+    "CAT": {
+      "pt": "Ótimo para seguir alvos em ruas e becos.",
+      "en": "Great for tailing targets through streets and alleys."
+    },
+    "LIZARD": {
+      "pt": "Escala paredes e se esconde em fendas estreitas.",
+      "en": "Climbs walls and hides inside tight crevices."
+    },
+    "RAT": {
+      "pt": "Passa despercebido em cidades e esgotos.",
+      "en": "Goes unnoticed in cities and sewers."
+    },
+    "SPIDER": {
+      "pt": "Pode subir superfícies íngremes e deixar fios.",
+      "en": "Climbs steep surfaces and leaves silken lines."
+    },
+    "WEASEL": {
+      "pt": "Ágil e curioso, cabe em qualquer buraco.",
+      "en": "Agile and curious, squeezes through any hole."
+    },
+    "OTHER_LAND": {
+      "pt": "Combinas outro animal terrestre com o DM.",
+      "en": "You will arrange another land animal with the DM."
+    }
+  },
+  "warlock_familiar_creature_water": {
+    "FROG": {
+      "pt": "Discreto em pântanos e cavernas húmidas.",
+      "en": "Unobtrusive in swamps and damp caverns."
+    },
+    "OCTOPUS": {
+      "pt": "Tentáculos furtivos e camuflagem anfíbia.",
+      "en": "Stealthy tentacles with amphibious camouflage."
+    },
+    "OTHER_WATER": {
+      "pt": "Reservas um companheiro aquático diferente.",
+      "en": "You prefer a different aquatic companion."
+    }
+  },
+  "dark_gifts": {
+    "ECHOING_SOUL": {
+      "pt": "Vozes de vidas passadas oferecem conselhos e lembranças.",
+      "en": "Voices of past lives offer advice and memories."
+    },
+    "GATHERED_WHISPERS": {
+      "pt": "Segredos sussurrados invadem a mente, trocando cordura por informação.",
+      "en": "Stolen whispers flood your mind, trading sanity for insight."
+    },
+    "LIVING_SHADOW": {
+      "pt": "A sombra age por conta própria, escondendo-te ou distraindo inimigos.",
+      "en": "Your shadow moves on its own, hiding you or distracting foes."
+    },
+    "MIST_WALKER": {
+      "pt": "Consegues atravessar névoas e brumas como se fossem portais.",
+      "en": "You slip through mists and fog as if they were portals."
+    },
+    "SECOND_SKIN": {
+      "pt": "Uma pele adicional protege-te mas reage de forma estranha a magia.",
+      "en": "A second skin shields you yet reacts oddly to magic."
+    },
+    "SYMBIOTIC_BEING": {
+      "pt": "Uma entidade partilha o teu corpo e fornece poderes famintos.",
+      "en": "A hitchhiking entity shares your body and hungers for power."
+    },
+    "TOUCH_OF_DEATH": {
+      "pt": "Toque gélido que drena vitalidade e inspira temor.",
+      "en": "Chilling touch that drains vitality and inspires dread."
+    },
+    "WATCHERS": {
+      "pt": "Olhos invisíveis observam tudo através de ti e sussurram avisos.",
+      "en": "Unseen eyes watch through you and whisper warnings."
+    }
+  },
+  "fighting_style_summaries": {
+    "CLASSIC": {
+      "pt": "Acede aos estilos tradicionais como Defesa, Arquearia ou Duelo.",
+      "en": "Access classic styles such as Defense, Archery, or Dueling."
+    },
+    "BLESSED_WARRIOR": {
+      "pt": "Aprende truques divinos para complementar ataques corpo a corpo.",
+      "en": "Learn divine cantrips to complement melee strikes."
+    },
+    "DRUIDIC_WARRIOR": {
+      "pt": "Mistura magia druidica com combate à distância ou corpo a corpo.",
+      "en": "Blend druidic cantrips with ranged or melee combat."
+    },
+    "THROWN": {
+      "pt": "Especializa-se em armas arremessadas, mantendo pressão constante.",
+      "en": "Specializes in thrown weapons to keep constant pressure."
+    },
+    "UNARMED": {
+      "pt": "Transforma o corpo numa arma, útil mesmo sem equipamento.",
+      "en": "Turns your body into a weapon, useful even when disarmed."
+    }
+  }
+}
