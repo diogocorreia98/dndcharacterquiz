@@ -968,17 +968,13 @@
       "pt": "Ilusionista",
       "en": "Illusionist"
     },
-    "WIZARD_BLADESINGING": {
-      "pt": "Bladesinging",
-      "en": "Bladesinging"
-    },
     "WIZARD_ORDER_OF_SCRIBES": {
       "pt": "Ordem dos Escribas",
       "en": "Order of Scribes"
     },
     "WIZARD_SCHOOL_OF_ABJURATION": {
-      "pt": "Escola de Abjuração",
-      "en": "School of Abjuration"
+      "pt": "Abjurador",
+      "en": "Abjurer"
     },
     "WIZARD_SCHOOL_OF_CONJURATION": {
       "pt": "Escola de Conjuração",
