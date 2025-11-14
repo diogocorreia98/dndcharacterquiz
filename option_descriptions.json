@@ -161,14 +161,14 @@
       "en": "Favors dodging, stealth, and precise attacks with light weapons."
     },
     "STR": {
-      "pt": "Prioriza golpes pesados, arremessos e capacidade de carga.",
+      "pt": "Prioriza golpes e armadura pesados e capacidade de carga.",
       "en": "Prioritizes heavy hits, grapples, and carrying capacity."
     }
   },
   "warlock_familiar_dark": {
     "IMP": {
-      "pt": "Espião invisível resistente a fogo infernal.",
-      "en": "Invisible spy resistant to infernal fire."
+      "pt": "Espião invisível resistente a fogo.",
+      "en": "Invisible spy resistant to fire."
     },
     "QUASIT": {
       "pt": "Demónio travesso que infunde medo e veneno.",
@@ -249,8 +249,8 @@
       "en": "Blend druidic cantrips with ranged or melee combat."
     },
     "THROWN": {
-      "pt": "Especializa-se em armas arremessadas, mantendo pressão constante.",
-      "en": "Specializes in thrown weapons to keep constant pressure."
+      "pt": "Especializa-se em armas de arremesso, conciliando longo alcançe com força bruta.",
+      "en": "Specializes in thrown weapons to merge range with raw strength."
     },
     "UNARMED": {
       "pt": "Transforma o corpo numa arma, útil mesmo sem equipamento.",
