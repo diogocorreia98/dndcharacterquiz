@@ -2574,10 +2574,20 @@ const loadQuizData = async (manifestUrl) => {
   }
 
   let descriptionGroups = manifest.descriptionGroups ?? {};
+  const descriptionFiles = [];
+  if (Array.isArray(manifest.option_description_files)) {
+    descriptionFiles.push(...manifest.option_description_files);
+  }
   if (manifest.option_description_file) {
-    const descriptions = await fetchJson(manifest.option_description_file, 'as descrições');
+    descriptionFiles.push(manifest.option_description_file);
+  }
+  for (const descriptionFile of descriptionFiles) {
+    const descriptions = await fetchJson(descriptionFile, 'as descrições');
     if (descriptions && typeof descriptions === 'object') {
-      descriptionGroups = descriptions;
+      descriptionGroups = {
+        ...descriptionGroups,
+        ...descriptions,
+      };
     }
   }
 
@@ -2594,6 +2604,7 @@ const loadQuizData = async (manifestUrl) => {
   delete merged.class_variant_file;
   delete merged.option_label_files;
   delete merged.option_description_file;
+  delete merged.option_description_files;
 
   if (!merged.root) {
     const rootFromPayload = questionPayloads.find(({ data }) => data?.root)?.data?.root;

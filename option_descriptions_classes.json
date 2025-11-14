@@ -1,0 +1,104 @@
+{
+  "class_summaries": {
+    "ARTIFICER": {
+      "pt": "Inventor arcano que combina magia com engenhocas adaptáveis e suporte criativo.",
+      "en": "Arcane inventor who blends magic with adaptable gadgets and creative support."
+    },
+    "BARBARIAN": {
+      "pt": "Combatente feroz que canaliza a fúria para resistir e esmagar inimigos corpo a corpo.",
+      "en": "Ferocious brawler who channels rage to withstand punishment and smash foes up close."
+    },
+    "BARD": {
+      "pt": "Artista versátil que inspira aliados com magia, música e truques sociais.",
+      "en": "Versatile performer who bolsters allies with magic, music, and social tricks."
+    },
+    "BLOOD_HUNTER": {
+      "pt": "Caçador maldito que sacrifica vitalidade para potenciar técnicas hemomânticas.",
+      "en": "Cursed hunter who trades vitality for potent hemomancy techniques."
+    },
+    "CLERIC": {
+      "pt": "Canaliza poder divino para curar, proteger e punir em nome da fé.",
+      "en": "Channels divine power to heal, protect, and smite in service of faith."
+    },
+    "DRUID": {
+      "pt": "Guardião da natureza capaz de lançar magia primal e assumir formas animais.",
+      "en": "Warden of nature able to wield primal magic and assume bestial forms."
+    },
+    "FIGHTER": {
+      "pt": "Especialista marcial disciplinado com acesso a quase todo o equipamento e estilos.",
+      "en": "Disciplined martial expert with access to nearly every weapon, armor, and style."
+    },
+    "MONK": {
+      "pt": "Artista marcial místico que usa ki para movimentos rápidos e golpes precisos.",
+      "en": "Mystic martial artist who uses ki for swift movement and precise strikes."
+    },
+    "PALADIN": {
+      "pt": "Campeão juramentado que combina armas pesadas com magia sagrada e auras.",
+      "en": "Oathbound champion who blends heavy weapons with holy magic and protective auras."
+    },
+    "RANGER": {
+      "pt": "Vigia ágil que caça, rastreia e lança truques primais para dominar o campo.",
+      "en": "Agile warden who tracks prey and wields primal tricks to control the field."
+    },
+    "ROGUE": {
+      "pt": "Especialista furtivo em golpes precisos, perícias e mobilidade.",
+      "en": "Stealthy specialist in precise strikes, skills, and mobility."
+    },
+    "SORCERER": {
+      "pt": "Nascido da magia, lança feitiços com flexibilidade e poder bruto.",
+      "en": "Innate spellcaster who unleashes flexible, high-impact magic."
+    },
+    "WARLOCK": {
+      "pt": "Canaliza pactos com patronos para obter truques únicos e invocações.",
+      "en": "Channels pacts with patrons for unique tricks and invocations."
+    },
+    "WIZARD": {
+      "pt": "Erudito arcano que prepara feitiços variados e domina escolas mágicas.",
+      "en": "Arcane scholar who prepares varied spells and masters magical schools."
+    }
+  },
+  "subclass_groups": {
+    "CORE": {
+      "pt": "Escolha equilibrada, fácil de integrar em qualquer campanha.",
+      "en": "Balanced pick that fits smoothly into most campaigns."
+    },
+    "NICHE": {
+      "pt": "Opção especializada para conceitos ou mesas específicas.",
+      "en": "Specialized option tailored to specific stories or tables."
+    }
+  },
+  "class_adjustments": {
+    "CLERIC_PROTECTOR": {
+      "pt": "Armadura pesada e foco em proteção divina constante.",
+      "en": "Heavy armor focus with steady defensive miracles."
+    },
+    "CLERIC_THAUMATURGE": {
+      "pt": "Favorece milagres ofensivos e canalizações arcanas.",
+      "en": "Leans into offensive miracles and arcane channeling."
+    },
+    "DRUID_WARDEN": {
+      "pt": "Mantém formas selvagens robustas e magia defensiva.",
+      "en": "Emphasizes sturdy Wild Shape forms and defensive magic."
+    },
+    "DRUID_MAGICIAN": {
+      "pt": "Expande a lista de feitiços e truques utilitários.",
+      "en": "Expands the spell list with extra utility tricks."
+    },
+    "WARLOCK_PACT_OF_THE_TOME": {
+      "pt": "Grimório repleto de truques versáteis e rituais.",
+      "en": "A grimoire packed with versatile tricks and rituals."
+    },
+    "WARLOCK_PACT_OF_THE_CHAIN": {
+      "pt": "Familiar poderoso que partilha sentidos e ações.",
+      "en": "Potent familiar that shares senses and actions."
+    },
+    "WARLOCK_PACT_OF_THE_BLADE": {
+      "pt": "Arma pactuada sempre à mão para combate híbrido.",
+      "en": "Bound weapon always ready for hybrid combat."
+    },
+    "WARLOCK_NONE": {
+      "pt": "Mantém o conjunto padrão de invocações sem ajuste extra.",
+      "en": "Keeps the default invocation suite without extra tweaks."
+    }
+  }
+}
