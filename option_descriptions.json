@@ -165,26 +165,6 @@
       "en": "Prioritizes heavy hits, grapples, and carrying capacity."
     }
   },
-  "warlock_familiar_types": {
-    "WARLOCK_FAMILIAR_EXOTIC": {
-      "pt": "Sobressai em cena e oferece truques mágicos incomuns.",
-      "en": "Stands out dramatically and brings unusual magical tricks."
-    },
-    "WARLOCK_FAMILIAR_ANIMAL": {
-      "pt": "Mantém um perfil discreto para infiltração e reconhecimento.",
-      "en": "Keeps a discreet profile for scouting and infiltration."
-    }
-  },
-  "warlock_familiar_styles": {
-    "WARLOCK_FAMILIAR_INFERNAL": {
-      "pt": "Aparência temível, ótima para pactos sombrios.",
-      "en": "Fearsome presence that suits darker pacts."
-    },
-    "WARLOCK_FAMILIAR_CELESTIAL": {
-      "pt": "Aura misteriosa ou serena para pactos feéricos ou divinos.",
-      "en": "Mysterious or serene aura for fey or holy pacts."
-    }
-  },
   "warlock_familiar_dark": {
     "IMP": {
       "pt": "Espião invisível resistente a fogo infernal.",
@@ -219,82 +199,6 @@
     "VENOMOUS_SNAKE": {
       "pt": "Ataques furtivos com veneno debilitante.",
       "en": "Stealthy strikes with debilitating venom."
-    }
-  },
-  "warlock_familiar_habitats": {
-    "SKY": {
-      "pt": "Ideal para vigiar de cima e cobrir vastas áreas.",
-      "en": "Ideal for overwatch and covering wide areas from above."
-    },
-    "LAND": {
-      "pt": "Excelente para infiltrações urbanas ou emboscadas rasteiras.",
-      "en": "Great for urban infiltration or ground ambushes."
-    },
-    "WATER": {
-      "pt": "Perfeito para campanhas costeiras, portos ou cavernas inundadas.",
-      "en": "Perfect for coastal adventures, harbors, or flooded lairs."
-    }
-  },
-  "warlock_familiar_creature_sky": {
-    "BAT": {
-      "pt": "Ecolocalização útil em túneis e ruínas escuras.",
-      "en": "Echolocates in tunnels and dark ruins."
-    },
-    "HAWK": {
-      "pt": "Caçador de longo alcance com visão afiada.",
-      "en": "Long-range scout with razor-sharp vision."
-    },
-    "OWL": {
-      "pt": "Vigia silencioso que enxerga mesmo na penumbra.",
-      "en": "Silent watcher that sees even in dim light."
-    },
-    "RAVEN": {
-      "pt": "Mensageiro inteligente capaz de imitar sons.",
-      "en": "Clever messenger capable of mimicking sounds."
-    },
-    "OTHER_AIR": {
-      "pt": "Queres negociar outra criatura voadora com o DM.",
-      "en": "You plan to negotiate another flying creature with the DM."
-    }
-  },
-  "warlock_familiar_creature_land": {
-    "CAT": {
-      "pt": "Ótimo para seguir alvos em ruas e becos.",
-      "en": "Great for tailing targets through streets and alleys."
-    },
-    "LIZARD": {
-      "pt": "Escala paredes e se esconde em fendas estreitas.",
-      "en": "Climbs walls and hides inside tight crevices."
-    },
-    "RAT": {
-      "pt": "Passa despercebido em cidades e esgotos.",
-      "en": "Goes unnoticed in cities and sewers."
-    },
-    "SPIDER": {
-      "pt": "Pode subir superfícies íngremes e deixar fios.",
-      "en": "Climbs steep surfaces and leaves silken lines."
-    },
-    "WEASEL": {
-      "pt": "Ágil e curioso, cabe em qualquer buraco.",
-      "en": "Agile and curious, squeezes through any hole."
-    },
-    "OTHER_LAND": {
-      "pt": "Combinas outro animal terrestre com o DM.",
-      "en": "You will arrange another land animal with the DM."
-    }
-  },
-  "warlock_familiar_creature_water": {
-    "FROG": {
-      "pt": "Discreto em pântanos e cavernas húmidas.",
-      "en": "Unobtrusive in swamps and damp caverns."
-    },
-    "OCTOPUS": {
-      "pt": "Tentáculos furtivos e camuflagem anfíbia.",
-      "en": "Stealthy tentacles with amphibious camouflage."
-    },
-    "OTHER_WATER": {
-      "pt": "Reservas um companheiro aquático diferente.",
-      "en": "You prefer a different aquatic companion."
     }
   },
   "dark_gifts": {
