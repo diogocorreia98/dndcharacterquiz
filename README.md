@@ -22,7 +22,7 @@ Aplicação web simples para percorrer o questionário de Dungeons & Dragons 202
 
 3. Abre [http://localhost:3000](http://localhost:3000) no teu navegador preferido.
 
-4. Responde às perguntas. Usa o botão **Anterior** para recuar se quiseres rever alguma resposta. Depois da última pergunta será mostrado o ecrã de resultados com o resumo das tuas escolhas.
+4. Percorre o questionário usando os botões **Seguinte** e **Anterior** para ajustar respostas sempre que precisares. Depois da última pergunta será mostrado o ecrã de resultados com o resumo das tuas escolhas.
 
 ## Estrutura
 

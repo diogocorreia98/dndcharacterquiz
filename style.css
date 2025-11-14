@@ -99,11 +99,6 @@ body {
   font-size: clamp(1.75rem, 3vw + 1rem, 2.8rem);
 }
 
-.app__subtitle {
-  margin-top: 0.5rem;
-  color: var(--muted);
-}
-
 .start-screen__note {
   color: var(--muted);
   font-size: 0.95rem;

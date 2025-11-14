@@ -12,10 +12,6 @@ const UI_TEXT = {
     pt: 'Descobre a tua personagem de D&D 2024',
     en: 'Discover your 2024 D&D character',
   },
-  subtitle: {
-    pt: 'Responde às perguntas para encontrares a combinação ideal de espécie, classe e antecedente.',
-    en: 'Answer the questions to find the ideal combination of species, class and background.',
-  },
   languageLabel: {
     pt: 'Idioma',
     en: 'Language',
@@ -678,7 +674,6 @@ class QuizApp {
       questionScreen: document.getElementById('question-screen'),
       resultScreen: document.getElementById('result-screen'),
       appTitle: document.getElementById('app-title'),
-      appSubtitle: document.getElementById('app-subtitle'),
       progress: document.getElementById('progress-indicator'),
       statusSummary: document.getElementById('status-summary'),
       questionText: document.getElementById('question-text'),
@@ -772,9 +767,6 @@ class QuizApp {
   updateStaticText() {
     if (this.dom.appTitle) {
       this.dom.appTitle.textContent = this.getText('title');
-    }
-    if (this.dom.appSubtitle) {
-      this.dom.appSubtitle.textContent = this.getText('subtitle');
     }
     if (this.dom.languageLabel) {
       this.dom.languageLabel.textContent = this.getText('languageLabel');
