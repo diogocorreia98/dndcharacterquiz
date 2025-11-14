@@ -13,7 +13,7 @@
       "en": "Class"
     },
     "dark_gift": {
-      "pt": "Dark Gift",
+      "pt": "Dom Sombrio",
       "en": "Dark Gift"
     },
     "background": {
@@ -557,23 +557,23 @@
     },
     "fighting_style_choice": {
       "CLASSIC": {
-        "pt": "Classic Fighting Style",
+        "pt": "Estilo de Luta Clássico",
         "en": "Classic Fighting Style"
       },
       "BLESSED_WARRIOR": {
-        "pt": "Blessed Warrior",
+        "pt": "Guerreiro Abençoado",
         "en": "Blessed Warrior"
       },
       "DRUIDIC_WARRIOR": {
-        "pt": "Druidic Warrior",
+        "pt": "Guerreiro Druídico",
         "en": "Druidic Warrior"
       },
       "THROWN": {
-        "pt": "Thrown Weapon Fighting Style",
+        "pt": "Estilo de Armas de Arremesso",
         "en": "Thrown Weapon Fighting Style"
       },
       "UNARMED": {
-        "pt": "Unarmed Fighting Style",
+        "pt": "Estilo de Combate Desarmado",
         "en": "Unarmed Fighting Style"
       }
     },
@@ -591,35 +591,35 @@
         "en": "Aasimar"
       },
       "S003": {
-        "pt": "Bugbear",
+        "pt": "Bicho-papão",
         "en": "Bugbear"
       },
       "S004": {
-        "pt": "Centaur",
+        "pt": "Centauro",
         "en": "Centaur"
       },
       "S005": {
-        "pt": "Changeling",
+        "pt": "Metamorfo",
         "en": "Changeling"
       },
       "S006": {
-        "pt": "Custom Lineage",
+        "pt": "Linhagem Personalizada",
         "en": "Custom Lineage"
       },
       "S007": {
-        "pt": "Dragonborn",
+        "pt": "Draconato",
         "en": "Dragonborn"
       },
       "S008": {
-        "pt": "Dwarf",
+        "pt": "Anão",
         "en": "Dwarf"
       },
       "S009": {
-        "pt": "Elf",
+        "pt": "Elfo",
         "en": "Elf"
       },
       "S010": {
-        "pt": "Fairy",
+        "pt": "Fada",
         "en": "Fairy"
       },
       "S011": {
@@ -639,15 +639,15 @@
         "en": "Gith"
       },
       "S015": {
-        "pt": "Gnome",
+        "pt": "Gnomo",
         "en": "Gnome"
       },
       "S016": {
-        "pt": "Goblin",
+        "pt": "Duende",
         "en": "Goblin"
       },
       "S017": {
-        "pt": "Goliath",
+        "pt": "Golias",
         "en": "Goliath"
       },
       "S018": {
@@ -663,11 +663,11 @@
         "en": "Harengon"
       },
       "S021": {
-        "pt": "Hobgoblin",
+        "pt": "Arquiduende",
         "en": "Hobgoblin"
       },
       "S022": {
-        "pt": "Human",
+        "pt": "Humano",
         "en": "Human"
       },
       "S023": {
@@ -683,23 +683,23 @@
         "en": "Lizardfolk"
       },
       "S026": {
-        "pt": "Mandrake",
+        "pt": "Mandrágora",
         "en": "Mandrake"
       },
       "S027": {
-        "pt": "Minotaur",
+        "pt": "Minotauro",
         "en": "Minotaur"
       },
       "S028": {
-        "pt": "Orc",
+        "pt": "Orque",
         "en": "Orc"
       },
       "S029": {
-        "pt": "Satyr",
+        "pt": "Sátiro",
         "en": "Satyr"
       },
       "S030": {
-        "pt": "Shifter",
+        "pt": "Semi-licantropo",
         "en": "Shifter"
       },
       "S031": {
@@ -715,7 +715,7 @@
         "en": "Tortle"
       },
       "S034": {
-        "pt": "Triton",
+        "pt": "Tritão",
         "en": "Triton"
       },
       "S035": {
@@ -731,61 +731,61 @@
         "en": "Dhampir"
       },
       "S038": {
-        "pt": "Hexblood",
+        "pt": "Sanguebruxa",
         "en": "Hexblood"
       },
       "S039": {
-        "pt": "Reborn",
+        "pt": "Renascido",
         "en": "Reborn"
       }
     },
     "subspecies": {
       "SS001": {
-        "pt": "Custom Lineage with Darkvision",
+        "pt": "Linhagem Personalizada com Visão no Escuro",
         "en": "Custom Lineage with Darkvision"
       },
       "SS002": {
-        "pt": "Custom Lineage with Skill Proficiency",
+        "pt": "Linhagem Personalizada com Perícia",
         "en": "Custom Lineage with Skill Proficiency"
       },
       "SS003": {
-        "pt": "Black Dragonborn",
+        "pt": "Draconato Negro",
         "en": "Black Dragonborn"
       },
       "SS004": {
-        "pt": "Blue Dragonborn",
+        "pt": "Draconato Azul",
         "en": "Blue Dragonborn"
       },
       "SS005": {
-        "pt": "Brass Dragonborn",
+        "pt": "Draconato de Latão",
         "en": "Brass Dragonborn"
       },
       "SS006": {
-        "pt": "Bronze Dragonborn",
+        "pt": "Draconato de Bronze",
         "en": "Bronze Dragonborn"
       },
       "SS007": {
-        "pt": "Copper Dragonborn",
+        "pt": "Draconato de Cobre",
         "en": "Copper Dragonborn"
       },
       "SS008": {
-        "pt": "Gold Dragonborn",
+        "pt": "Draconato Ouro",
         "en": "Gold Dragonborn"
       },
       "SS009": {
-        "pt": "Green Dragonborn",
+        "pt": "Draconato Verde",
         "en": "Green Dragonborn"
       },
       "SS010": {
-        "pt": "Red Dragonborn",
+        "pt": "Draconato Vermelho",
         "en": "Red Dragonborn"
       },
       "SS011": {
-        "pt": "Silver Dragonborn",
+        "pt": "Draconato de Prata",
         "en": "Silver Dragonborn"
       },
       "SS012": {
-        "pt": "White Dragonborn",
+        "pt": "Draconato Branco",
         "en": "White Dragonborn"
       },
       "SS013": {
@@ -793,11 +793,11 @@
         "en": "Duergar"
       },
       "SS014": {
-        "pt": "Common Dwarf",
+        "pt": "Anão Comum",
         "en": "Common Dwarf"
       },
       "SS016": {
-        "pt": "Drow",
+        "pt": "Elfo Drow",
         "en": "Drow"
       },
       "SS017": {
@@ -805,11 +805,11 @@
         "en": "Eladrin"
       },
       "SS018": {
-        "pt": "High Elf",
+        "pt": "Alto Elfo",
         "en": "High Elf"
       },
       "SS019": {
-        "pt": "Sea Elf",
+        "pt": "Elfo do Mar",
         "en": "Sea Elf"
       },
       "SS020": {
@@ -817,35 +817,35 @@
         "en": "Shadar-kai"
       },
       "SS021": {
-        "pt": "Wood Elf",
+        "pt": "Elfo dos Bosques",
         "en": "Wood Elf"
       },
       "SS022": {
-        "pt": "Air Genasi",
+        "pt": "Genasi do Ar",
         "en": "Air Genasi"
       },
       "SS023": {
-        "pt": "Earth Genasi",
+        "pt": "Genasi da Terra",
         "en": "Earth Genasi"
       },
       "SS024": {
-        "pt": "Fire Genasi",
+        "pt": "Genasi do Fogo",
         "en": "Fire Genasi"
       },
       "SS025": {
-        "pt": "Water Genasi",
+        "pt": "Genasi da Água",
         "en": "Water Genasi"
       },
       "SS026": {
-        "pt": "Bisque Geppettin",
+        "pt": "Geppettin de Porcelana",
         "en": "Bisque Geppettin"
       },
       "SS027": {
-        "pt": "Marionette Geppettin",
+        "pt": "Geppettin Marioneta",
         "en": "Marionette Geppettin"
       },
       "SS028": {
-        "pt": "Plushie Geppettin",
+        "pt": "Geppettin de Peluche",
         "en": "Plushie Geppettin"
       },
       "SS029": {
@@ -857,121 +857,121 @@
         "en": "Githzerai"
       },
       "SS031": {
-        "pt": "Deep Gnome",
+        "pt": "Gnomo das Profundezas",
         "en": "Deep Gnome"
       },
       "SS032": {
-        "pt": "Forest Gnome",
+        "pt": "Gnomo da Floresta",
         "en": "Forest Gnome"
       },
       "SS033": {
-        "pt": "Rock Gnome",
+        "pt": "Gnomo das Rochas",
         "en": "Rock Gnome"
       },
       "SS034": {
-        "pt": "Cloud Goliath",
+        "pt": "Golias das Nuvens",
         "en": "Cloud Goliath"
       },
       "SS035": {
-        "pt": "Fire Goliath",
+        "pt": "Golias do Fogo",
         "en": "Fire Goliath"
       },
       "SS036": {
-        "pt": "Frost Goliath",
+        "pt": "Golias da Geada",
         "en": "Frost Goliath"
       },
       "SS037": {
-        "pt": "Hill Goliath",
+        "pt": "Golias das Colinas",
         "en": "Hill Goliath"
       },
       "SS038": {
-        "pt": "Stone Goliath",
+        "pt": "Golias de Pedra",
         "en": "Stone Goliath"
       },
       "SS039": {
-        "pt": "Storm Goliath",
+        "pt": "Golias da Tempestade",
         "en": "Storm Goliath"
       },
       "SS040": {
-        "pt": "Common Halfling",
+        "pt": "Halfling Comum",
         "en": "Common Halfling"
       },
       "SS041": {
-        "pt": "Ghostwise Halfling",
+        "pt": "Halfling dos Sussurros",
         "en": "Ghostwise Halfling"
       },
       "SS042": {
-        "pt": "Crafty Kobold",
+        "pt": "Kobold Astuto",
         "en": "Crafty Kobold"
       },
       "SS043": {
-        "pt": "Defiant Kobold",
+        "pt": "Kobold Desafiante",
         "en": "Defiant Kobold"
       },
       "SS044": {
-        "pt": "Sorcerous Kobold",
+        "pt": "Kobold Feiticeiro",
         "en": "Sorcerous Kobold"
       },
       "SS045": {
-        "pt": "Autumn Mandrake",
+        "pt": "Mandrágora Outonal",
         "en": "Autumn Mandrake"
       },
       "SS046": {
-        "pt": "Spring Mandrake",
+        "pt": "Mandrágora Primaveril",
         "en": "Spring Mandrake"
       },
       "SS047": {
-        "pt": "Summer Mandrake",
+        "pt": "Mandrágora Estival",
         "en": "Summer Mandrake"
       },
       "SS048": {
-        "pt": "Winter Mandrake",
+        "pt": "Mandrágora Invernal",
         "en": "Winter Mandrake"
       },
       "SS049": {
-        "pt": "Beasthide Shifter",
+        "pt": "Semi-licantropo Encouraçado",
         "en": "Beasthide Shifter"
       },
       "SS050": {
-        "pt": "Longtooth Shifter",
+        "pt": "Semi-licantropo Lupino",
         "en": "Longtooth Shifter"
       },
       "SS051": {
-        "pt": "Swiftstride Shifter",
+        "pt": "Semi-licantropo Veloz",
         "en": "Swiftstride Shifter"
       },
       "SS052": {
-        "pt": "Wildhunt Shifter",
+        "pt": "Semi-licantropo Canídeo",
         "en": "Wildhunt Shifter"
       },
       "SS053": {
-        "pt": "Abyssal Tiefling",
+        "pt": "Tiefling Abissal",
         "en": "Abyssal Tiefling"
       },
       "SS054": {
-        "pt": "Chthonic Tiefling",
+        "pt": "Tiefling Ctónico",
         "en": "Chthonic Tiefling"
       },
       "SS055": {
-        "pt": "Infernal Tiefling",
+        "pt": "Tiefling Infernal",
         "en": "Infernal Tiefling"
       }
     },
     "subsubspecies": {
       "SSS051": {
-        "pt": "Autumn Eladrin",
+        "pt": "Eladrin Outonal",
         "en": "Autumn Eladrin"
       },
       "SSS049": {
-        "pt": "Spring Eladrin",
+        "pt": "Eladrin Primaveril",
         "en": "Spring Eladrin"
       },
       "SSS050": {
-        "pt": "Summer Eladrin",
+        "pt": "Eladrin Estival",
         "en": "Summer Eladrin"
       },
       "SSS052": {
-        "pt": "Winter Eladrin",
+        "pt": "Eladrin Invernal",
         "en": "Winter Eladrin"
       }
     },
@@ -991,55 +991,55 @@
     },
     "class": {
       "BARBARIAN": {
-        "pt": "Barbarian",
+        "pt": "Bárbaro",
         "en": "Barbarian"
       },
       "FIGHTER": {
-        "pt": "Fighter",
+        "pt": "Guerreiro",
         "en": "Fighter"
       },
       "ROGUE": {
-        "pt": "Rogue",
+        "pt": "Ladino",
         "en": "Rogue"
       },
       "CLERIC": {
-        "pt": "Cleric",
+        "pt": "Clérigo",
         "en": "Cleric"
       },
       "PALADIN": {
-        "pt": "Paladin",
+        "pt": "Paladino",
         "en": "Paladin"
       },
       "RANGER": {
-        "pt": "Ranger",
+        "pt": "Patrulheiro",
         "en": "Ranger"
       },
       "WIZARD": {
-        "pt": "Wizard",
+        "pt": "Mago",
         "en": "Wizard"
       },
       "MONK": {
-        "pt": "Monk",
+        "pt": "Monge",
         "en": "Monk"
       },
       "SORCERER": {
-        "pt": "Sorcerer",
+        "pt": "Feiticeiro",
         "en": "Sorcerer"
       },
       "DRUID": {
-        "pt": "Druid",
+        "pt": "Druida",
         "en": "Druid"
       },
       "BARD": {
-        "pt": "Bard",
+        "pt": "Bardo",
         "en": "Bard"
       },
       "WARLOCK": {
-        "pt": "Warlock",
+        "pt": "Bruxo",
         "en": "Warlock"
       },
       "BLOOD_HUNTER": {
-        "pt": "Blood Hunter",
+        "pt": "Caçador de Sangue",
         "en": "Blood Hunter"
       }
     },
@@ -1169,11 +1169,11 @@
     },
     "primary_roles": {
       "DEFENDER": {
-        "pt": "Defensor/a",
+        "pt": "Defensor",
         "en": "Defender"
       },
       "HEALER": {
-        "pt": "Curandeiro/a",
+        "pt": "Curandeiro",
         "en": "Healer"
       },
       "SUPPORT": {
@@ -1181,33 +1181,33 @@
         "en": "Support"
       },
       "CONTROLLER": {
-        "pt": "Controlador/a",
+        "pt": "Controlador",
         "en": "Controller"
       },
       "STRIKER": {
-        "pt": "Agressor/a",
+        "pt": "Agressor",
         "en": "Striker"
       },
       "SCOUT": {
-        "pt": "Batedor/a",
+        "pt": "Batedor",
         "en": "Scout"
       }
     },
     "secondary_roles": {
       "BLASTER": {
-        "pt": "Blaster",
+        "pt": "Aniquilador",
         "en": "Blaster"
       },
       "FACE": {
-        "pt": "Face",
+        "pt": "Rosto",
         "en": "Face"
       },
       "SCHOLAR": {
-        "pt": "Erudito/a",
+        "pt": "Erudito",
         "en": "Scholar"
       },
       "UTILITY_CASTER": {
-        "pt": "Conjurador/a utilitário/a",
+        "pt": "Conjurador Utilitário",
         "en": "Utility Caster"
       }
     },
@@ -1217,173 +1217,173 @@
         "en": "No curse"
       },
       "ECHOING_SOUL": {
-        "pt": "Echoing Soul",
+        "pt": "Alma Ecoante",
         "en": "Echoing Soul"
       },
       "GATHERED_WHISPERS": {
-        "pt": "Gathered Whispers",
+        "pt": "Sussurros Recolhidos",
         "en": "Gathered Whispers"
       },
       "LIVING_SHADOW": {
-        "pt": "Living Shadow",
+        "pt": "Sombra Viva",
         "en": "Living Shadow"
       },
       "MIST_WALKER": {
-        "pt": "Mist Walker",
+        "pt": "Caminhante da Névoa",
         "en": "Mist Walker"
       },
       "SECOND_SKIN": {
-        "pt": "Second Skin",
+        "pt": "Segunda Pele",
         "en": "Second Skin"
       },
       "SYMBIOTIC_BEING": {
-        "pt": "Symbiotic Being",
+        "pt": "Ser Simbiótico",
         "en": "Symbiotic Being"
       },
       "TOUCH_OF_DEATH": {
-        "pt": "Touch of Death",
+        "pt": "Toque da Morte",
         "en": "Touch of Death"
       },
       "WATCHERS": {
-        "pt": "Watchers",
+        "pt": "Observadores",
         "en": "Watchers"
       }
     },
     "background": {
       "ACOLYTE": {
-        "pt": "Acolyte",
+        "pt": "Acólito",
         "en": "Acolyte"
       },
       "ARTISAN": {
-        "pt": "Artisan",
+        "pt": "Artesão",
         "en": "Artisan"
       },
       "CHARLATAN": {
-        "pt": "Charlatan",
+        "pt": "Charlatão",
         "en": "Charlatan"
       },
       "CHONDATHAN_FREEBOOTER": {
-        "pt": "Chondathan Freebooter",
+        "pt": "Corsário Chondathano",
         "en": "Chondathan Freebooter"
       },
       "CRIMINAL": {
-        "pt": "Criminal",
+        "pt": "Criminoso",
         "en": "Criminal"
       },
       "DEAD_MAGIC_DWELLER": {
-        "pt": "Dead Magic Dweller",
+        "pt": "Habitante da Anti-magia",
         "en": "Dead Magic Dweller"
       },
       "DRAGON_CULTIST": {
-        "pt": "Dragon Cultist",
+        "pt": "Cultista Dracónico",
         "en": "Dragon Cultist"
       },
       "EMERALD_ENCLAVE_CARETAKER": {
-        "pt": "Emerald Enclave Caretaker",
+        "pt": "Zelador do Enclave Esmeralda",
         "en": "Emerald Enclave Caretaker"
       },
       "ENTERTAINER": {
-        "pt": "Entertainer",
+        "pt": "Artista",
         "en": "Entertainer"
       },
       "FARMER": {
-        "pt": "Farmer",
+        "pt": "Camponês",
         "en": "Farmer"
       },
       "FLAMING_FIST_MERCENARY": {
-        "pt": "Flaming Fist Mercenary",
+        "pt": "Mercenário do Punho Flamejante",
         "en": "Flaming Fist Mercenary"
       },
       "GENIE_TOUCHED": {
-        "pt": "Genie Touched",
+        "pt": "Marcado pelos Génios",
         "en": "Genie Touched"
       },
       "GUARD": {
-        "pt": "Guard",
+        "pt": "Guarda",
         "en": "Guard"
       },
       "GUIDE": {
-        "pt": "Guide",
+        "pt": "Guia",
         "en": "Guide"
       },
       "HARPER": {
-        "pt": "Harper",
+        "pt": "Harpista",
         "en": "Harper"
       },
       "HERMIT": {
-        "pt": "Hermit",
+        "pt": "Eremita",
         "en": "Hermit"
       },
       "ICE_FISHER": {
-        "pt": "Ice Fisher",
+        "pt": "Pescador de Gelo",
         "en": "Ice Fisher"
       },
       "KNIGHT_OF_THE_GAUNTLET": {
-        "pt": "Knight of the Gauntlet",
+        "pt": "Cavaleiro da Manopla",
         "en": "Knight of the Gauntlet"
       },
       "LORDS_ALLIANCE_VASSAL": {
-        "pt": "Lords' Alliance Vassal",
+        "pt": "Vassalo da Aliança dos Lordes",
         "en": "Lords' Alliance Vassal"
       },
       "MERCHANT": {
-        "pt": "Merchant",
+        "pt": "Comerciante",
         "en": "Merchant"
       },
       "MOONWELL_PILGRIM": {
-        "pt": "Moonwell Pilgrim",
+        "pt": "Peregrino da Lua",
         "en": "Moonwell Pilgrim"
       },
       "MULHORANDI_TOMB_RAIDER": {
-        "pt": "Mulhorandi Tomb Raider",
+        "pt": "Saqueador de Tumbas Mulhorandi",
         "en": "Mulhorandi Tomb Raider"
       },
       "MYTHALKEEPER": {
-        "pt": "Mythalkeeper",
+        "pt": "Guardião do Mythal",
         "en": "Mythalkeeper"
       },
       "NOBLE": {
-        "pt": "Noble",
+        "pt": "Nobre",
         "en": "Noble"
       },
       "PURPLE_DRAGON_SQUIRE": {
-        "pt": "Purple Dragon Squire",
+        "pt": "Escudeiro do Dragão Púrpura",
         "en": "Purple Dragon Squire"
       },
       "RASHEMI_WANDERER": {
-        "pt": "Rashemi Wanderer",
+        "pt": "Errante Rashemi",
         "en": "Rashemi Wanderer"
       },
       "SAGE": {
-        "pt": "Sage",
+        "pt": "Estudioso",
         "en": "Sage"
       },
       "SAILOR": {
-        "pt": "Sailor",
+        "pt": "Marinheiro",
         "en": "Sailor"
       },
       "SCRIBE": {
-        "pt": "Scribe",
+        "pt": "Escrivão",
         "en": "Scribe"
       },
       "SHADOWMASTERS_EXILE": {
-        "pt": "Shadowmasters Exile",
+        "pt": "Exilado dos Mestres das Sombras",
         "en": "Shadowmasters Exile"
       },
       "SOLDIER": {
-        "pt": "Soldier",
+        "pt": "Soldado",
         "en": "Soldier"
       },
       "SPELLFIRE_INITIATE": {
-        "pt": "Spellfire Initiate",
+        "pt": "Iniciado de Spellfire",
         "en": "Spellfire Initiate"
       },
       "WAYFARER": {
-        "pt": "Wayfarer",
+        "pt": "Errante",
         "en": "Wayfarer"
       },
       "ZHENTARIM_MERCENARY": {
-        "pt": "Zhentarim Mercenary",
+        "pt": "Mercenário Zhentarim",
         "en": "Zhentarim Mercenary"
       }
     }
@@ -1422,7 +1422,7 @@
       },
       {
         "code": "S003",
-        "pt": "Bugbear",
+        "pt": "Bicho-papão",
         "en": "Bugbear",
         "species_commonality": [
           "C"
@@ -1437,7 +1437,7 @@
       },
       {
         "code": "S004",
-        "pt": "Centaur",
+        "pt": "Centauro",
         "en": "Centaur",
         "species_commonality": [
           "C"
@@ -1452,7 +1452,7 @@
       },
       {
         "code": "S005",
-        "pt": "Changeling",
+        "pt": "Metamorfo",
         "en": "Changeling",
         "species_commonality": [
           "D"
@@ -1468,7 +1468,7 @@
       },
       {
         "code": "S006",
-        "pt": "Custom Lineage",
+        "pt": "Linhagem Personalizada",
         "en": "Custom Lineage",
         "species_commonality": [
           "D"
@@ -1485,7 +1485,7 @@
       },
       {
         "code": "S007",
-        "pt": "Dragonborn",
+        "pt": "Draconato",
         "en": "Dragonborn",
         "species_commonality": [
           "B"
@@ -1500,7 +1500,7 @@
       },
       {
         "code": "S008",
-        "pt": "Dwarf",
+        "pt": "Anão",
         "en": "Dwarf",
         "species_commonality": [
           "B",
@@ -1516,7 +1516,7 @@
       },
       {
         "code": "S009",
-        "pt": "Elf",
+        "pt": "Elfo",
         "en": "Elf",
         "species_commonality": [
           "B",
@@ -1531,7 +1531,7 @@
       },
       {
         "code": "S010",
-        "pt": "Fairy",
+        "pt": "Fada",
         "en": "Fairy",
         "species_commonality": [
           "D"
@@ -1607,7 +1607,7 @@
       },
       {
         "code": "S015",
-        "pt": "Gnome",
+        "pt": "Gnomo",
         "en": "Gnome",
         "species_commonality": [
           "B",
@@ -1623,7 +1623,7 @@
       },
       {
         "code": "S016",
-        "pt": "Goblin",
+        "pt": "Duende",
         "en": "Goblin",
         "species_commonality": [
           "C"
@@ -1638,7 +1638,7 @@
       },
       {
         "code": "S017",
-        "pt": "Goliath",
+        "pt": "Golias",
         "en": "Goliath",
         "species_commonality": [
           "B"
@@ -1697,7 +1697,7 @@
       },
       {
         "code": "S021",
-        "pt": "Hobgoblin",
+        "pt": "Arquiduende",
         "en": "Hobgoblin",
         "species_commonality": [
           "C"
@@ -1711,7 +1711,7 @@
       },
       {
         "code": "S022",
-        "pt": "Human",
+        "pt": "Humano",
         "en": "Human",
         "species_commonality": [
           "A"
@@ -1773,7 +1773,7 @@
       },
       {
         "code": "S026",
-        "pt": "Mandrake",
+        "pt": "Mandrágora",
         "en": "Mandrake",
         "species_commonality": [
           "D"
@@ -1787,7 +1787,7 @@
       },
       {
         "code": "S027",
-        "pt": "Minotaur",
+        "pt": "Minotauro",
         "en": "Minotaur",
         "species_commonality": [
           "C"
@@ -1802,7 +1802,7 @@
       },
       {
         "code": "S028",
-        "pt": "Orc",
+        "pt": "Orque",
         "en": "Orc",
         "species_commonality": [
           "B"
@@ -1817,7 +1817,7 @@
       },
       {
         "code": "S029",
-        "pt": "Satyr",
+        "pt": "Sátiro",
         "en": "Satyr",
         "species_commonality": [
           "D"
@@ -1831,7 +1831,7 @@
       },
       {
         "code": "S030",
-        "pt": "Shifter",
+        "pt": "Semi-licantropo",
         "en": "Shifter",
         "species_commonality": [
           "D"
@@ -1896,7 +1896,7 @@
       },
       {
         "code": "S034",
-        "pt": "Triton",
+        "pt": "Tritão",
         "en": "Triton",
         "species_commonality": [
           "D"
@@ -1958,7 +1958,7 @@
       },
       {
         "code": "S038",
-        "pt": "Hexblood",
+        "pt": "Sanguebruxa",
         "en": "Hexblood",
         "species_commonality": [
           "D"
@@ -1975,7 +1975,7 @@
       },
       {
         "code": "S039",
-        "pt": "Reborn",
+        "pt": "Renascido",
         "en": "Reborn",
         "species_commonality": [
           "D"
@@ -1995,7 +1995,7 @@
       {
         "code": "SS001",
         "species_code": "S006",
-        "pt": "Custom Lineage with Darkvision",
+        "pt": "Linhagem Personalizada com Visão no Escuro",
         "en": "Custom Lineage with Darkvision",
         "height": [
           "A",
@@ -2013,7 +2013,7 @@
       {
         "code": "SS002",
         "species_code": "S006",
-        "pt": "Custom Lineage with Skill Proficiency",
+        "pt": "Linhagem Personalizada com Perícia",
         "en": "Custom Lineage with Skill Proficiency",
         "height": [
           "A",
@@ -2031,7 +2031,7 @@
       {
         "code": "SS003",
         "species_code": "S007",
-        "pt": "Black Dragonborn",
+        "pt": "Draconato Negro",
         "en": "Black Dragonborn",
         "height": [
           "C",
@@ -2050,7 +2050,7 @@
       {
         "code": "SS004",
         "species_code": "S007",
-        "pt": "Blue Dragonborn",
+        "pt": "Draconato Azul",
         "en": "Blue Dragonborn",
         "height": [
           "C",
@@ -2069,7 +2069,7 @@
       {
         "code": "SS005",
         "species_code": "S007",
-        "pt": "Brass Dragonborn",
+        "pt": "Draconato de Latão",
         "en": "Brass Dragonborn",
         "height": [
           "C",
@@ -2088,7 +2088,7 @@
       {
         "code": "SS006",
         "species_code": "S007",
-        "pt": "Bronze Dragonborn",
+        "pt": "Draconato de Bronze",
         "en": "Bronze Dragonborn",
         "height": [
           "C",
@@ -2107,7 +2107,7 @@
       {
         "code": "SS007",
         "species_code": "S007",
-        "pt": "Copper Dragonborn",
+        "pt": "Draconato de Cobre",
         "en": "Copper Dragonborn",
         "height": [
           "C",
@@ -2126,7 +2126,7 @@
       {
         "code": "SS008",
         "species_code": "S007",
-        "pt": "Gold Dragonborn",
+        "pt": "Draconato Ouro",
         "en": "Gold Dragonborn",
         "height": [
           "C",
@@ -2145,7 +2145,7 @@
       {
         "code": "SS009",
         "species_code": "S007",
-        "pt": "Green Dragonborn",
+        "pt": "Draconato Verde",
         "en": "Green Dragonborn",
         "height": [
           "C",
@@ -2164,7 +2164,7 @@
       {
         "code": "SS010",
         "species_code": "S007",
-        "pt": "Red Dragonborn",
+        "pt": "Draconato Vermelho",
         "en": "Red Dragonborn",
         "height": [
           "C",
@@ -2183,7 +2183,7 @@
       {
         "code": "SS011",
         "species_code": "S007",
-        "pt": "Silver Dragonborn",
+        "pt": "Draconato de Prata",
         "en": "Silver Dragonborn",
         "height": [
           "C",
@@ -2202,7 +2202,7 @@
       {
         "code": "SS012",
         "species_code": "S007",
-        "pt": "White Dragonborn",
+        "pt": "Draconato Branco",
         "en": "White Dragonborn",
         "height": [
           "C",
@@ -2237,7 +2237,7 @@
       {
         "code": "SS014",
         "species_code": "S008",
-        "pt": "Common Dwarf",
+        "pt": "Anão Comum",
         "en": "Common Dwarf",
         "height": [
           "B",
@@ -2253,7 +2253,7 @@
       {
         "code": "SS016",
         "species_code": "S009",
-        "pt": "Drow",
+        "pt": "Elfo Drow",
         "en": "Drow",
         "height": [
           "C"
@@ -2283,7 +2283,7 @@
       {
         "code": "SS018",
         "species_code": "S009",
-        "pt": "High Elf",
+        "pt": "Alto Elfo",
         "en": "High Elf",
         "height": [
           "C"
@@ -2298,7 +2298,7 @@
       {
         "code": "SS019",
         "species_code": "S009",
-        "pt": "Sea Elf",
+        "pt": "Elfo do Mar",
         "en": "Sea Elf",
         "height": [
           "C"
@@ -2328,7 +2328,7 @@
       {
         "code": "SS021",
         "species_code": "S009",
-        "pt": "Wood Elf",
+        "pt": "Elfo dos Bosques",
         "en": "Wood Elf",
         "height": [
           "C"
@@ -2343,7 +2343,7 @@
       {
         "code": "SS022",
         "species_code": "S012",
-        "pt": "Air Genasi",
+        "pt": "Genasi do Ar",
         "en": "Air Genasi",
         "height": [
           "A",
@@ -2361,7 +2361,7 @@
       {
         "code": "SS023",
         "species_code": "S012",
-        "pt": "Earth Genasi",
+        "pt": "Genasi da Terra",
         "en": "Earth Genasi",
         "height": [
           "A",
@@ -2379,7 +2379,7 @@
       {
         "code": "SS024",
         "species_code": "S012",
-        "pt": "Fire Genasi",
+        "pt": "Genasi do Fogo",
         "en": "Fire Genasi",
         "height": [
           "A",
@@ -2397,7 +2397,7 @@
       {
         "code": "SS025",
         "species_code": "S012",
-        "pt": "Water Genasi",
+        "pt": "Genasi da Água",
         "en": "Water Genasi",
         "height": [
           "A",
@@ -2415,7 +2415,7 @@
       {
         "code": "SS026",
         "species_code": "S013",
-        "pt": "Bisque Geppettin",
+        "pt": "Geppettin de Porcelana",
         "en": "Bisque Geppettin",
         "height": [
           "A"
@@ -2430,7 +2430,7 @@
       {
         "code": "SS027",
         "species_code": "S013",
-        "pt": "Marionette Geppettin",
+        "pt": "Geppettin Marioneta",
         "en": "Marionette Geppettin",
         "height": [
           "C"
@@ -2445,7 +2445,7 @@
       {
         "code": "SS028",
         "species_code": "S013",
-        "pt": "Plushie Geppettin",
+        "pt": "Geppettin de Peluche",
         "en": "Plushie Geppettin",
         "height": [
           "A"
@@ -2492,7 +2492,7 @@
       {
         "code": "SS031",
         "species_code": "S015",
-        "pt": "Deep Gnome",
+        "pt": "Gnomo das Profundezas",
         "en": "Deep Gnome",
         "height": [
           "A",
@@ -2508,7 +2508,7 @@
       {
         "code": "SS032",
         "species_code": "S015",
-        "pt": "Forest Gnome",
+        "pt": "Gnomo da Floresta",
         "en": "Forest Gnome",
         "height": [
           "A",
@@ -2524,7 +2524,7 @@
       {
         "code": "SS033",
         "species_code": "S015",
-        "pt": "Rock Gnome",
+        "pt": "Gnomo das Rochas",
         "en": "Rock Gnome",
         "height": [
           "A",
@@ -2540,7 +2540,7 @@
       {
         "code": "SS034",
         "species_code": "S017",
-        "pt": "Cloud Goliath",
+        "pt": "Golias das Nuvens",
         "en": "Cloud Goliath",
         "height": [
           "D"
@@ -2558,7 +2558,7 @@
       {
         "code": "SS035",
         "species_code": "S017",
-        "pt": "Fire Goliath",
+        "pt": "Golias do Fogo",
         "en": "Fire Goliath",
         "height": [
           "D"
@@ -2576,7 +2576,7 @@
       {
         "code": "SS036",
         "species_code": "S017",
-        "pt": "Frost Goliath",
+        "pt": "Golias da Geada",
         "en": "Frost Goliath",
         "height": [
           "D"
@@ -2594,7 +2594,7 @@
       {
         "code": "SS037",
         "species_code": "S017",
-        "pt": "Hill Goliath",
+        "pt": "Golias das Colinas",
         "en": "Hill Goliath",
         "height": [
           "D"
@@ -2612,7 +2612,7 @@
       {
         "code": "SS038",
         "species_code": "S017",
-        "pt": "Stone Goliath",
+        "pt": "Golias de Pedra",
         "en": "Stone Goliath",
         "height": [
           "D"
@@ -2630,7 +2630,7 @@
       {
         "code": "SS039",
         "species_code": "S017",
-        "pt": "Storm Goliath",
+        "pt": "Golias da Tempestade",
         "en": "Storm Goliath",
         "height": [
           "D"
@@ -2648,7 +2648,7 @@
       {
         "code": "SS040",
         "species_code": "S019",
-        "pt": "Common Halfling",
+        "pt": "Halfling Comum",
         "en": "Common Halfling",
         "height": [
           "A"
@@ -2663,7 +2663,7 @@
       {
         "code": "SS041",
         "species_code": "S019",
-        "pt": "Ghostwise Halfling",
+        "pt": "Halfling dos Sussurros",
         "en": "Ghostwise Halfling",
         "height": [
           "A"
@@ -2678,7 +2678,7 @@
       {
         "code": "SS042",
         "species_code": "S024",
-        "pt": "Crafty Kobold",
+        "pt": "Kobold Astuto",
         "en": "Crafty Kobold",
         "height": [
           "A"
@@ -2693,7 +2693,7 @@
       {
         "code": "SS043",
         "species_code": "S024",
-        "pt": "Defiant Kobold",
+        "pt": "Kobold Desafiante",
         "en": "Defiant Kobold",
         "height": [
           "A"
@@ -2708,7 +2708,7 @@
       {
         "code": "SS044",
         "species_code": "S024",
-        "pt": "Sorcerous Kobold",
+        "pt": "Kobold Feiticeiro",
         "en": "Sorcerous Kobold",
         "height": [
           "A"
@@ -2723,7 +2723,7 @@
       {
         "code": "SS045",
         "species_code": "S026",
-        "pt": "Autumn Mandrake",
+        "pt": "Mandrágora Outonal",
         "en": "Autumn Mandrake",
         "height": [
           "D"
@@ -2738,7 +2738,7 @@
       {
         "code": "SS046",
         "species_code": "S026",
-        "pt": "Spring Mandrake",
+        "pt": "Mandrágora Primaveril",
         "en": "Spring Mandrake",
         "height": [
           "D"
@@ -2753,7 +2753,7 @@
       {
         "code": "SS047",
         "species_code": "S026",
-        "pt": "Summer Mandrake",
+        "pt": "Mandrágora Estival",
         "en": "Summer Mandrake",
         "height": [
           "D"
@@ -2768,7 +2768,7 @@
       {
         "code": "SS048",
         "species_code": "S026",
-        "pt": "Winter Mandrake",
+        "pt": "Mandrágora Invernal",
         "en": "Winter Mandrake",
         "height": [
           "D"
@@ -2783,7 +2783,7 @@
       {
         "code": "SS049",
         "species_code": "S030",
-        "pt": "Beasthide Shifter",
+        "pt": "Semi-licantropo Encouraçado",
         "en": "Beasthide Shifter",
         "height": [
           "C",
@@ -2799,7 +2799,7 @@
       {
         "code": "SS050",
         "species_code": "S030",
-        "pt": "Longtooth Shifter",
+        "pt": "Semi-licantropo Lupino",
         "en": "Longtooth Shifter",
         "height": [
           "C",
@@ -2815,7 +2815,7 @@
       {
         "code": "SS051",
         "species_code": "S030",
-        "pt": "Swiftstride Shifter",
+        "pt": "Semi-licantropo Veloz",
         "en": "Swiftstride Shifter",
         "height": [
           "C",
@@ -2831,7 +2831,7 @@
       {
         "code": "SS052",
         "species_code": "S030",
-        "pt": "Wildhunt Shifter",
+        "pt": "Semi-licantropo Canídeo",
         "en": "Wildhunt Shifter",
         "height": [
           "C",
@@ -2847,7 +2847,7 @@
       {
         "code": "SS053",
         "species_code": "S032",
-        "pt": "Abyssal Tiefling",
+        "pt": "Tiefling Abissal",
         "en": "Abyssal Tiefling",
         "height": [
           "A",
@@ -2865,7 +2865,7 @@
       {
         "code": "SS054",
         "species_code": "S032",
-        "pt": "Chthonic Tiefling",
+        "pt": "Tiefling Ctónico",
         "en": "Chthonic Tiefling",
         "height": [
           "A",
@@ -2883,7 +2883,7 @@
       {
         "code": "SS055",
         "species_code": "S032",
-        "pt": "Infernal Tiefling",
+        "pt": "Tiefling Infernal",
         "en": "Infernal Tiefling",
         "height": [
           "A",
@@ -2903,7 +2903,7 @@
       {
         "code": "SSS051",
         "subspecies_code": "SS017",
-        "pt": "Autumn Eladrin",
+        "pt": "Eladrin Outonal",
         "en": "Autumn Eladrin",
         "height": [
           "C"
@@ -2915,7 +2915,7 @@
       {
         "code": "SSS049",
         "subspecies_code": "SS017",
-        "pt": "Spring Eladrin",
+        "pt": "Eladrin Primaveril",
         "en": "Spring Eladrin",
         "height": [
           "C"
@@ -2927,7 +2927,7 @@
       {
         "code": "SSS050",
         "subspecies_code": "SS017",
-        "pt": "Summer Eladrin",
+        "pt": "Eladrin Estival",
         "en": "Summer Eladrin",
         "height": [
           "C"
@@ -2939,7 +2939,7 @@
       {
         "code": "SSS052",
         "subspecies_code": "SS017",
-        "pt": "Winter Eladrin",
+        "pt": "Eladrin Invernal",
         "en": "Winter Eladrin",
         "height": [
           "C"
@@ -2954,182 +2954,182 @@
         "code": "ARTIFICER_ALCHEMIST",
         "class": "ARTIFICER",
         "group": "CORE",
-        "pt": "Alchemist",
+        "pt": "Alquimista",
         "en": "Alchemist"
       },
       {
         "code": "ARTIFICER_ARMORER",
         "class": "ARTIFICER",
         "group": "CORE",
-        "pt": "Armorer",
+        "pt": "Armeiro",
         "en": "Armorer"
       },
       {
         "code": "ARTIFICER_ARTILLERIST",
         "class": "ARTIFICER",
         "group": "CORE",
-        "pt": "Artillerist",
+        "pt": "Artilheiro",
         "en": "Artillerist"
       },
       {
         "code": "ARTIFICER_BATTLE_SMITH",
         "class": "ARTIFICER",
         "group": "CORE",
-        "pt": "Battle Smith",
+        "pt": "Ferreiro de Batalha",
         "en": "Battle Smith"
       },
       {
         "code": "BARBARIAN_PATH_OF_THE_BERSERKER",
         "class": "BARBARIAN",
         "group": "CORE",
-        "pt": "Path of the Berserker",
+        "pt": "do Caminho da Ira Desenfreada",
         "en": "Path of the Berserker"
       },
       {
         "code": "BARBARIAN_PATH_OF_THE_WILD_HEART",
         "class": "BARBARIAN",
         "group": "CORE",
-        "pt": "Path of the Wild Heart",
+        "pt": "do Caminho do Coração Selvagem",
         "en": "Path of the Wild Heart"
       },
       {
         "code": "BARBARIAN_PATH_OF_THE_WORLD_TREE",
         "class": "BARBARIAN",
         "group": "CORE",
-        "pt": "Path of the World Tree",
+        "pt": "do Caminho da Árvore do Mundo",
         "en": "Path of the World Tree"
       },
       {
         "code": "BARBARIAN_PATH_OF_THE_ZEALOT",
         "class": "BARBARIAN",
         "group": "CORE",
-        "pt": "Path of the Zealot",
+        "pt": "do Caminho do Fanático",
         "en": "Path of the Zealot"
       },
       {
         "code": "BARBARIAN_PATH_OF_THE_ANCESTRAL_GUARDIAN",
         "class": "BARBARIAN",
         "group": "NICHE",
-        "pt": "Path of the Ancestral Guardian",
+        "pt": "do Caminho do Guardião Ancestral",
         "en": "Path of the Ancestral Guardian"
       },
       {
         "code": "BARBARIAN_PATH_OF_THE_BEAST",
         "class": "BARBARIAN",
         "group": "NICHE",
-        "pt": "Path of the Beast",
+        "pt": "do Caminho da Besta",
         "en": "Path of the Beast"
       },
       {
         "code": "BARBARIAN_PATH_OF_THE_STORM_HERALD",
         "class": "BARBARIAN",
         "group": "NICHE",
-        "pt": "Path of the Storm Herald",
+        "pt": "do Caminho do Arauto da Tempestade",
         "en": "Path of the Storm Herald"
       },
       {
         "code": "BARBARIAN_PATH_OF_THE_WILD_MAGIC",
         "class": "BARBARIAN",
         "group": "NICHE",
-        "pt": "Path of the Wild Magic",
+        "pt": "do Caminho da Magia Caótica",
         "en": "Path of the Wild Magic"
       },
       {
         "code": "BARBARIAN_PATH_OF_THE_MUSCLE_WIZARD",
         "class": "BARBARIAN",
         "group": "NICHE",
-        "pt": "Path of the Muscle Wizard",
+        "pt": "do Caminho do Mago Musculado",
         "en": "Path of the Muscle Wizard"
       },
       {
         "code": "BARD_COLLEGE_OF_DANCE",
         "class": "BARD",
         "group": "CORE",
-        "pt": "College of Dance",
+        "pt": "do Colégio da Dança",
         "en": "College of Dance"
       },
       {
         "code": "BARD_COLLEGE_OF_GLAMOUR",
         "class": "BARD",
         "group": "CORE",
-        "pt": "College of Glamour",
+        "pt": "do Colégio do Deslumbre",
         "en": "College of Glamour"
       },
       {
         "code": "BARD_COLLEGE_OF_LORE",
         "class": "BARD",
         "group": "CORE",
-        "pt": "College of Lore",
+        "pt": "do Colégio do Conhecimento",
         "en": "College of Lore"
       },
       {
         "code": "BARD_COLLEGE_OF_VALOR",
         "class": "BARD",
         "group": "CORE",
-        "pt": "College of Valor",
+        "pt": "do Colégio da Bravura",
         "en": "College of Valor"
       },
       {
         "code": "BARD_COLLEGE_OF_CREATION",
         "class": "BARD",
         "group": "NICHE",
-        "pt": "College of Creation",
+        "pt": "do Colégio da Criação",
         "en": "College of Creation"
       },
       {
         "code": "BARD_COLLEGE_OF_ELOQUENCE",
         "class": "BARD",
         "group": "NICHE",
-        "pt": "College of Eloquence",
+        "pt": "do Colégio da Eloquência",
         "en": "College of Eloquence"
       },
       {
         "code": "BARD_COLLEGE_OF_SWORDS",
         "class": "BARD",
         "group": "NICHE",
-        "pt": "College of Swords",
+        "pt": "do Colégio das Espadas",
         "en": "College of Swords"
       },
       {
         "code": "BARD_COLLEGE_OF_WHISPERS",
         "class": "BARD",
         "group": "NICHE",
-        "pt": "College of Whispers",
+        "pt": "do Colégio dos Sussurros",
         "en": "College of Whispers"
       },
       {
         "code": "CLERIC_LIFE_DOMAIN",
         "class": "CLERIC",
         "group": "CORE",
-        "pt": "Life Domain",
+        "pt": "do Domínio da Vida",
         "en": "Life Domain"
       },
       {
         "code": "CLERIC_LIGHT_DOMAIN",
         "class": "CLERIC",
         "group": "CORE",
-        "pt": "Light Domain",
+        "pt": "do Domínio da Luz",
         "en": "Light Domain"
       },
       {
         "code": "CLERIC_TRICKERY_DOMAIN",
         "class": "CLERIC",
         "group": "CORE",
-        "pt": "Trickery Domain",
+        "pt": "do Domínio da Trapaça",
         "en": "Trickery Domain"
       },
       {
         "code": "CLERIC_WAR_DOMAIN",
         "class": "CLERIC",
         "group": "CORE",
-        "pt": "War Domain",
+        "pt": "do Domínio da Guerra",
         "en": "War Domain"
       },
       {
         "code": "CLERIC_ARCANA_DOMAIN",
         "class": "CLERIC",
         "group": "NICHE",
-        "pt": "Arcana Domain",
+        "pt": "do Domínio do Arcano",
         "en": "Arcana Domain",
         "niche_roles": [
           "SCHOLAR"
@@ -3139,7 +3139,7 @@
         "code": "CLERIC_FORGE_DOMAIN",
         "class": "CLERIC",
         "group": "NICHE",
-        "pt": "Forge Domain",
+        "pt": "do Domínio da Forja",
         "en": "Forge Domain",
         "niche_roles": [
           "OTHER"
@@ -3149,7 +3149,7 @@
         "code": "CLERIC_GRAVE_DOMAIN",
         "class": "CLERIC",
         "group": "NICHE",
-        "pt": "Grave Domain",
+        "pt": "do Domínio da Sepultura",
         "en": "Grave Domain",
         "niche_roles": [
           "OTHER"
@@ -3159,7 +3159,7 @@
         "code": "CLERIC_KNOWLEDGE_DOMAIN",
         "class": "CLERIC",
         "group": "NICHE",
-        "pt": "Knowledge Domain",
+        "pt": "do Domínio do Conhecimento",
         "en": "Knowledge Domain",
         "niche_roles": [
           "FACE",
@@ -3170,7 +3170,7 @@
         "code": "CLERIC_NATURE_DOMAIN",
         "class": "CLERIC",
         "group": "NICHE",
-        "pt": "Nature Domain",
+        "pt": "do Domínio da Natureza",
         "en": "Nature Domain",
         "niche_roles": [
           "CONTROLLER"
@@ -3180,7 +3180,7 @@
         "code": "CLERIC_ORDER_DOMAIN",
         "class": "CLERIC",
         "group": "NICHE",
-        "pt": "Order Domain",
+        "pt": "do Domínio da Ordem",
         "en": "Order Domain",
         "niche_roles": [
           "FACE"
@@ -3190,7 +3190,7 @@
         "code": "CLERIC_PEACE_DOMAIN",
         "class": "CLERIC",
         "group": "NICHE",
-        "pt": "Peace Domain",
+        "pt": "do Domínio da Paz",
         "en": "Peace Domain",
         "niche_roles": [
           "OTHER"
@@ -3200,7 +3200,7 @@
         "code": "CLERIC_TEMPEST_DOMAIN",
         "class": "CLERIC",
         "group": "NICHE",
-        "pt": "Tempest Domain",
+        "pt": "do Domínio da Tempestade",
         "en": "Tempest Domain",
         "niche_roles": [
           "CONTROLLER"
@@ -3210,7 +3210,7 @@
         "code": "CLERIC_TWILIGHT_DOMAIN",
         "class": "CLERIC",
         "group": "NICHE",
-        "pt": "Twilight Domain",
+        "pt": "do Domínio do Crepúsculo",
         "en": "Twilight Domain",
         "niche_roles": [
           "SCOUT"
@@ -3220,105 +3220,105 @@
         "code": "DRUID_CIRCLE_OF_THE_LAND",
         "class": "DRUID",
         "group": "CORE",
-        "pt": "Circle of the Land",
+        "pt": "do Círculo da Terra",
         "en": "Circle of the Land"
       },
       {
         "code": "DRUID_CIRCLE_OF_THE_MOON",
         "class": "DRUID",
         "group": "CORE",
-        "pt": "Circle of the Moon",
+        "pt": "do Círculo da Lua",
         "en": "Circle of the Moon"
       },
       {
         "code": "DRUID_CIRCLE_OF_THE_SEA",
         "class": "DRUID",
         "group": "CORE",
-        "pt": "Circle of the Sea",
+        "pt": "do Círculo do Mar",
         "en": "Circle of the Sea"
       },
       {
         "code": "DRUID_CIRCLE_OF_THE_STARS",
         "class": "DRUID",
         "group": "CORE",
-        "pt": "Circle of the Stars",
+        "pt": "do Círculo das Estrelas",
         "en": "Circle of the Stars"
       },
       {
         "code": "DRUID_CIRCLE_OF_DREAMS",
         "class": "DRUID",
         "group": "NICHE",
-        "pt": "Circle of Dreams",
+        "pt": "do Círculo dos Sonhos",
         "en": "Circle of Dreams"
       },
       {
         "code": "DRUID_CIRCLE_OF_SPORES",
         "class": "DRUID",
         "group": "NICHE",
-        "pt": "Circle of Spores",
+        "pt": "do Círculo dos Esporos",
         "en": "Circle of Spores"
       },
       {
         "code": "DRUID_CIRCLE_OF_THE_SHEPHERD",
         "class": "DRUID",
         "group": "NICHE",
-        "pt": "Circle of the Shepherd",
+        "pt": "do Círculo do Guardião",
         "en": "Circle of the Shepherd"
       },
       {
         "code": "DRUID_CIRCLE_OF_WILDFIRE",
         "class": "DRUID",
         "group": "NICHE",
-        "pt": "Circle of Wildfire",
+        "pt": "do Círculo do Fogo Selvagem",
         "en": "Circle of Wildfire"
       },
       {
         "code": "FIGHTER_BATTLE_MASTER",
         "class": "FIGHTER",
         "group": "CORE",
-        "pt": "Battle Master",
+        "pt": "Mestre de Batalha",
         "en": "Battle Master"
       },
       {
         "code": "FIGHTER_CHAMPION",
         "class": "FIGHTER",
         "group": "CORE",
-        "pt": "Champion",
+        "pt": "Campeão",
         "en": "Champion"
       },
       {
         "code": "FIGHTER_ELDRITCH_KNIGHT",
         "class": "FIGHTER",
         "group": "CORE",
-        "pt": "Eldritch Knight",
+        "pt": "Místico",
         "en": "Eldritch Knight"
       },
       {
         "code": "FIGHTER_PSI_WARRIOR",
         "class": "FIGHTER",
         "group": "CORE",
-        "pt": "Psi Warrior",
+        "pt": "Psiónico",
         "en": "Psi Warrior"
       },
       {
         "code": "FIGHTER_ARCANE_ARCHER",
         "class": "FIGHTER",
         "group": "NICHE",
-        "pt": "Arcane Archer",
+        "pt": "Arqueiro Arcano",
         "en": "Arcane Archer"
       },
       {
         "code": "FIGHTER_CAVALIER",
         "class": "FIGHTER",
         "group": "NICHE",
-        "pt": "Cavalier",
+        "pt": "Cavaleiro",
         "en": "Cavalier"
       },
       {
         "code": "FIGHTER_RUNE_KNIGHT",
         "class": "FIGHTER",
         "group": "NICHE",
-        "pt": "Rune Knight",
+        "pt": "Cavaleiro Rúnico",
         "en": "Rune Knight"
       },
       {
@@ -3332,42 +3332,42 @@
         "code": "FIGHTER_DUNGEONEER",
         "class": "FIGHTER",
         "group": "NICHE",
-        "pt": "Dungeoneer",
+        "pt": "Explorador de Masmorras",
         "en": "Dungeoneer"
       },
       {
         "code": "MONK_WAY_OF_MERCY",
         "class": "MONK",
         "group": "CORE",
-        "pt": "Way of Mercy",
+        "pt": "da Técnica da Misericórdia",
         "en": "Way of Mercy"
       },
       {
         "code": "MONK_WAY_OF_SHADOW",
         "class": "MONK",
         "group": "CORE",
-        "pt": "Way of Shadow",
+        "pt": "da Técnica da Sombra",
         "en": "Way of Shadow"
       },
       {
         "code": "MONK_WAY_OF_THE_ELEMENTS",
         "class": "MONK",
         "group": "CORE",
-        "pt": "Way of the Elements",
+        "pt": "da Técnica dos Elementos",
         "en": "Way of the Elements"
       },
       {
         "code": "MONK_WAY_OF_THE_OPEN_HAND",
         "class": "MONK",
         "group": "CORE",
-        "pt": "Way of the Open Hand",
+        "pt": "da Técnica da Mão Aberta",
         "en": "Way of the Open Hand"
       },
       {
         "code": "MONK_WAY_OF_THE_ASTRAL_SELF",
         "class": "MONK",
         "group": "NICHE",
-        "pt": "Way of the Astral Self",
+        "pt": "da Técnica do Eu Astral",
         "en": "Way of the Astral Self",
         "niche_roles": [
           "CONTROLLER"
@@ -3377,7 +3377,7 @@
         "code": "MONK_WAY_OF_THE_COBALT_SOUL",
         "class": "MONK",
         "group": "NICHE",
-        "pt": "Way of the Cobalt Soul",
+        "pt": "da Técnica da Alma Cobalto",
         "en": "Way of the Cobalt Soul",
         "niche_roles": [
           "SCHOLAR",
@@ -3388,7 +3388,7 @@
         "code": "MONK_WAY_OF_THE_DRUNKEN_MASTER",
         "class": "MONK",
         "group": "NICHE",
-        "pt": "Way of the Drunken Master",
+        "pt": "da Técnica do Mestre Bêbedo",
         "en": "Way of the Drunken Master",
         "niche_roles": [
           "SUPPORT"
@@ -3398,7 +3398,7 @@
         "code": "MONK_WAY_OF_THE_KENSEI",
         "class": "MONK",
         "group": "NICHE",
-        "pt": "Way of the Kensei",
+        "pt": "da Técnica do Kensei",
         "en": "Way of the Kensei",
         "niche_roles": [
           "OTHER"
@@ -3408,7 +3408,7 @@
         "code": "MONK_WAY_OF_THE_LONG_DEATH",
         "class": "MONK",
         "group": "NICHE",
-        "pt": "Way of the Long Death",
+        "pt": "da Técnica da Longa Morte",
         "en": "Way of the Long Death",
         "niche_roles": [
           "DEFENDER"
@@ -3418,7 +3418,7 @@
         "code": "MONK_WAY_OF_THE_SUN_SOUL",
         "class": "MONK",
         "group": "NICHE",
-        "pt": "Way of the Sun Soul",
+        "pt": "da Técnica da Alma Solar",
         "en": "Way of the Sun Soul",
         "niche_roles": [
           "BLASTER",
@@ -3429,7 +3429,7 @@
         "code": "MONK_WARRIOR_OF_THE_STREET",
         "class": "MONK",
         "group": "NICHE",
-        "pt": "Warrior of the Street",
+        "pt": "Lutador das Ruas",
         "en": "Warrior of the Street",
         "niche_roles": [
           "FACE"
@@ -3439,35 +3439,35 @@
         "code": "PALADIN_OATH_OF_DEVOTION",
         "class": "PALADIN",
         "group": "CORE",
-        "pt": "Oath of Devotion",
+        "pt": "do Juramento da Devoção",
         "en": "Oath of Devotion"
       },
       {
         "code": "PALADIN_OATH_OF_GLORY",
         "class": "PALADIN",
         "group": "CORE",
-        "pt": "Oath of Glory",
+        "pt": "do Juramento da Glória",
         "en": "Oath of Glory"
       },
       {
         "code": "PALADIN_OATH_OF_THE_ANCIENTS",
         "class": "PALADIN",
         "group": "CORE",
-        "pt": "Oath of the Ancients",
+        "pt": "do Juramento dos Ancestrais",
         "en": "Oath of the Ancients"
       },
       {
         "code": "PALADIN_OATH_OF_VENGEANCE",
         "class": "PALADIN",
         "group": "CORE",
-        "pt": "Oath of Vengeance",
+        "pt": "do Juramento da Vingança",
         "en": "Oath of Vengeance"
       },
       {
         "code": "PALADIN_OATH_OF_CONQUEST",
         "class": "PALADIN",
         "group": "NICHE",
-        "pt": "Oath of Conquest",
+        "pt": "do Juramento da Conquista",
         "en": "Oath of Conquest",
         "niche_roles": [
           "CONTROLLER"
@@ -3477,7 +3477,7 @@
         "code": "PALADIN_OATH_OF_REDEMPTION",
         "class": "PALADIN",
         "group": "NICHE",
-        "pt": "Oath of Redemption",
+        "pt": "do Juramento da Redenção",
         "en": "Oath of Redemption",
         "niche_roles": [
           "CONTROLLER"
@@ -3487,7 +3487,7 @@
         "code": "PALADIN_OATH_OF_THE_CROWN",
         "class": "PALADIN",
         "group": "NICHE",
-        "pt": "Oath of the Crown",
+        "pt": "do Juramento da Coroa",
         "en": "Oath of the Crown",
         "niche_roles": [
           "OTHER"
@@ -3497,7 +3497,7 @@
         "code": "PALADIN_OATH_OF_THE_WATCHERS",
         "class": "PALADIN",
         "group": "NICHE",
-        "pt": "Oath of the Watchers",
+        "pt": "do Juramento dos Vigilantes",
         "en": "Oath of the Watchers",
         "niche_roles": [
           "SCHOLAR"
@@ -3507,7 +3507,7 @@
         "code": "PALADIN_OATH_OF_THE_OPEN_SEA",
         "class": "PALADIN",
         "group": "NICHE",
-        "pt": "Oath of the Open Sea",
+        "pt": "do Juramento do Mar Aberto",
         "en": "Oath of the Open Sea",
         "niche_roles": [
           "CONTROLLER",
@@ -3518,7 +3518,7 @@
         "code": "PALADIN_OATH_OF_REVELRY",
         "class": "PALADIN",
         "group": "NICHE",
-        "pt": "Oath of Revelry",
+        "pt": "do Juramento da Celebração",
         "en": "Oath of Revelry",
         "niche_roles": [
           "OTHER"
@@ -3528,84 +3528,84 @@
         "code": "RANGER_BEAST_MASTER",
         "class": "RANGER",
         "group": "CORE",
-        "pt": "Beast Master",
+        "pt": "Mestre das Feras",
         "en": "Beast Master"
       },
       {
         "code": "RANGER_FEY_WANDERER",
         "class": "RANGER",
         "group": "CORE",
-        "pt": "Fey Wanderer",
+        "pt": "Viajante Feérico",
         "en": "Fey Wanderer"
       },
       {
         "code": "RANGER_GLOOM_STALKER",
         "class": "RANGER",
         "group": "CORE",
-        "pt": "Gloom Stalker",
+        "pt": "Viajante das Sombras",
         "en": "Gloom Stalker"
       },
       {
         "code": "RANGER_HUNTER",
         "class": "RANGER",
         "group": "CORE",
-        "pt": "Hunter",
+        "pt": "Caçador",
         "en": "Hunter"
       },
       {
         "code": "RANGER_HORIZON_WALKER",
         "class": "RANGER",
         "group": "NICHE",
-        "pt": "Horizon Walker",
+        "pt": "Viajante do Horizonte",
         "en": "Horizon Walker"
       },
       {
         "code": "RANGER_MONSTER_SLAYER",
         "class": "RANGER",
         "group": "NICHE",
-        "pt": "Monster Slayer",
+        "pt": "Matador de Monstros",
         "en": "Monster Slayer"
       },
       {
         "code": "RANGER_SWARMKEEPER",
         "class": "RANGER",
         "group": "NICHE",
-        "pt": "Swarmkeeper",
+        "pt": "Guarda-do-Cardume",
         "en": "Swarmkeeper"
       },
       {
         "code": "ROGUE_ARACHNOID_STALKER",
         "class": "ROGUE",
         "group": "CORE",
-        "pt": "Arachnoid Stalker",
+        "pt": "Predador Aracnídeo",
         "en": "Arachnoid Stalker"
       },
       {
         "code": "ROGUE_ARCANE_TRICKSTER",
         "class": "ROGUE",
         "group": "CORE",
-        "pt": "Arcane Trickster",
+        "pt": "Trapaceiro Arcano",
         "en": "Arcane Trickster"
       },
       {
         "code": "ROGUE_ASSASSIN",
         "class": "ROGUE",
         "group": "CORE",
-        "pt": "Assassin",
+        "pt": "Assassino",
         "en": "Assassin"
       },
       {
         "code": "ROGUE_THIEF",
         "class": "ROGUE",
         "group": "CORE",
-        "pt": "Thief",
+        "pt": "Ladrão",
         "en": "Thief"
       },
       {
         "code": "ROGUE_INQUISITIVE",
         "class": "ROGUE",
         "group": "NICHE",
-        "pt": "Inquisitive",
+        "pt": "Inquisitivo",
         "en": "Inquisitive",
         "niche_roles": [
           "SCHOLAR"
@@ -3615,7 +3615,7 @@
         "code": "ROGUE_MASTERMIND",
         "class": "ROGUE",
         "group": "NICHE",
-        "pt": "Mastermind",
+        "pt": "Mentor",
         "en": "Mastermind",
         "niche_roles": [
           "OTHER"
@@ -3625,7 +3625,7 @@
         "code": "ROGUE_PHANTOM",
         "class": "ROGUE",
         "group": "NICHE",
-        "pt": "Phantom",
+        "pt": "Fantasma",
         "en": "Phantom",
         "niche_roles": [
           "OTHER"
@@ -3635,7 +3635,7 @@
         "code": "ROGUE_SCOUT",
         "class": "ROGUE",
         "group": "NICHE",
-        "pt": "Scout",
+        "pt": "Batedor",
         "en": "Scout",
         "niche_roles": [
           "SCHOLAR"
@@ -3645,7 +3645,7 @@
         "code": "ROGUE_SWASHBUCKLER",
         "class": "ROGUE",
         "group": "NICHE",
-        "pt": "Swashbuckler",
+        "pt": "Espadachim",
         "en": "Swashbuckler",
         "niche_roles": [
           "OTHER"
@@ -3655,7 +3655,7 @@
         "code": "ROGUE_SOULKNIFE",
         "class": "ROGUE",
         "group": "NICHE",
-        "pt": "Soulknife",
+        "pt": "da Lâmina Psíquica",
         "en": "Soulknife",
         "niche_roles": [
           "OTHER"
@@ -3665,126 +3665,126 @@
         "code": "SORCERER_CLOCKWORK_SORCERY",
         "class": "SORCERER",
         "group": "CORE",
-        "pt": "Clockwork Sorcery",
+        "pt": "da Magia Mecânica",
         "en": "Clockwork Sorcery"
       },
       {
         "code": "SORCERER_DRACONIC_SORCERY",
         "class": "SORCERER",
         "group": "CORE",
-        "pt": "Draconic Sorcery",
+        "pt": "da Magia Dracónica",
         "en": "Draconic Sorcery"
       },
       {
         "code": "SORCERER_WILD_MAGIC",
         "class": "SORCERER",
         "group": "CORE",
-        "pt": "Wild Magic",
+        "pt": "da Magia Caótica",
         "en": "Wild Magic"
       },
       {
         "code": "SORCERER_STORM_SORCERY",
         "class": "SORCERER",
         "group": "NICHE",
-        "pt": "Storm Sorcery",
+        "pt": "da Magia da Tempestade",
         "en": "Storm Sorcery"
       },
       {
         "code": "SORCERER_ABERRANT_SORCERY",
         "class": "SORCERER",
         "group": "CORE",
-        "pt": "Aberrant Sorcery",
+        "pt": "da Magia Aberrante",
         "en": "Aberrant Sorcery"
       },
       {
         "code": "SORCERER_DIVINE_SOUL",
         "class": "SORCERER",
         "group": "NICHE",
-        "pt": "Divine Soul",
+        "pt": "da Alma Divina",
         "en": "Divine Soul"
       },
       {
         "code": "SORCERER_SHADOW_MAGIC",
         "class": "SORCERER",
         "group": "NICHE",
-        "pt": "Shadow Magic",
+        "pt": "da Magia das Sombras",
         "en": "Shadow Magic"
       },
       {
         "code": "WARLOCK_ARCHFEY_PATRON",
         "class": "WARLOCK",
         "group": "CORE",
-        "pt": "Archfey Patron",
+        "pt": "com Pacto Arqui-feérico",
         "en": "Archfey Patron"
       },
       {
         "code": "WARLOCK_FIEND_PATRON",
         "class": "WARLOCK",
         "group": "CORE",
-        "pt": "Fiend Patron",
+        "pt": "com Pacto Infernal",
         "en": "Fiend Patron"
       },
       {
         "code": "WARLOCK_GREAT_OLD_ONE_PATRON",
         "class": "WARLOCK",
         "group": "CORE",
-        "pt": "Great Old One Patron",
+        "pt": "com Patrono Ancião Cósmico",
         "en": "Great Old One Patron"
       },
       {
         "code": "WARLOCK_CELESTIAL_PATRON",
         "class": "WARLOCK",
         "group": "CORE",
-        "pt": "Celestial Patron",
+        "pt": "com Pacto Celestial",
         "en": "Celestial Patron"
       },
       {
         "code": "WARLOCK_THE_FATHOMLESS",
         "class": "WARLOCK",
         "group": "NICHE",
-        "pt": "The Fathomless",
+        "pt": "com Patrono Abissal",
         "en": "The Fathomless"
       },
       {
         "code": "WARLOCK_THE_GENIE",
         "class": "WARLOCK",
         "group": "NICHE",
-        "pt": "The Genie",
+        "pt": "com Patrono Djinn",
         "en": "The Genie"
       },
       {
         "code": "WARLOCK_THE_HEXBLADE",
         "class": "WARLOCK",
         "group": "NICHE",
-        "pt": "The Hexblade",
+        "pt": "com Patrono Hexblade",
         "en": "The Hexblade"
       },
       {
         "code": "WIZARD_ABJURER",
         "class": "WIZARD",
         "group": "CORE",
-        "pt": "Abjurer",
+        "pt": "Abjurador",
         "en": "Abjurer"
       },
       {
         "code": "WIZARD_DIVINER",
         "class": "WIZARD",
         "group": "CORE",
-        "pt": "Diviner",
+        "pt": "Divinador",
         "en": "Diviner"
       },
       {
         "code": "WIZARD_EVOKER",
         "class": "WIZARD",
         "group": "CORE",
-        "pt": "Evoker",
+        "pt": "Evocador",
         "en": "Evoker"
       },
       {
         "code": "WIZARD_ILLUSIONIST",
         "class": "WIZARD",
         "group": "CORE",
-        "pt": "Illusionist",
+        "pt": "Ilusionista",
         "en": "Illusionist"
       },
       {
@@ -3802,7 +3802,7 @@
         "code": "WIZARD_ORDER_OF_SCRIBES",
         "class": "WIZARD",
         "group": "NICHE",
-        "pt": "Order of Scribes",
+        "pt": "Ordem dos Escribas",
         "en": "Order of Scribes",
         "niche_roles": [
           "STRIKER"
@@ -3812,7 +3812,7 @@
         "code": "WIZARD_SCHOOL_OF_ABJURATION",
         "class": "WIZARD",
         "group": "NICHE",
-        "pt": "School of Abjuration",
+        "pt": "Escola de Abjuração",
         "en": "School of Abjuration",
         "niche_roles": [
           "DEFENDER"
@@ -3822,7 +3822,7 @@
         "code": "WIZARD_SCHOOL_OF_CONJURATION",
         "class": "WIZARD",
         "group": "NICHE",
-        "pt": "School of Conjuration",
+        "pt": "Escola de Conjuração",
         "en": "School of Conjuration",
         "niche_roles": [
           "OTHER"
@@ -3832,7 +3832,7 @@
         "code": "WIZARD_SCHOOL_OF_NECROMANCY",
         "class": "WIZARD",
         "group": "NICHE",
-        "pt": "School of Necromancy",
+        "pt": "Escola de Necromancia",
         "en": "School of Necromancy",
         "niche_roles": [
           "STRIKER"
@@ -3842,7 +3842,7 @@
         "code": "WIZARD_SCHOOL_OF_ENCHANTMENT",
         "class": "WIZARD",
         "group": "NICHE",
-        "pt": "School of Enchantment",
+        "pt": "Escola de Encantamento",
         "en": "School of Enchantment",
         "niche_roles": [
           "FACE",
@@ -3853,7 +3853,7 @@
         "code": "WIZARD_WAR_MAGIC",
         "class": "WIZARD",
         "group": "NICHE",
-        "pt": "War Magic",
+        "pt": "Magia de Guerra",
         "en": "War Magic",
         "niche_roles": [
           "DEFENDER",
@@ -3864,98 +3864,98 @@
         "code": "BLOOD_HUNTER_ORDER_OF_THE_GHOSTSLAYER",
         "class": "BLOOD_HUNTER",
         "group": "CORE",
-        "pt": "Order of the Ghostslayer",
+        "pt": "Ordem do Matador de Fantasmas",
         "en": "Order of the Ghostslayer"
       },
       {
         "code": "BLOOD_HUNTER_ORDER_OF_THE_LYCAN",
         "class": "BLOOD_HUNTER",
         "group": "CORE",
-        "pt": "Order of the Lycan",
+        "pt": "Ordem do Licantropo",
         "en": "Order of the Lycan"
       },
       {
         "code": "BLOOD_HUNTER_ORDER_OF_THE_MUTANT",
         "class": "BLOOD_HUNTER",
         "group": "CORE",
-        "pt": "Order of the Mutant",
+        "pt": "Ordem do Mutante",
         "en": "Order of the Mutant"
       },
       {
         "code": "BLOOD_HUNTER_ORDER_OF_THE_PROFANE_SOUL",
         "class": "BLOOD_HUNTER",
         "group": "CORE",
-        "pt": "Order of the Profane Soul",
+        "pt": "Ordem da Alma Profana",
         "en": "Order of the Profane Soul"
       },
       {
         "code": "BARD_COLLEGE_OF_SPIRITS",
         "class": "BARD",
         "group": "NICHE",
-        "pt": "College of Spirits",
+        "pt": "do Colégio dos Espíritos",
         "en": "College of Spirits"
       },
       {
         "code": "BARD_COLLEGE_OF_THE_MOON",
         "class": "BARD",
         "group": "NICHE",
-        "pt": "College of the Moon",
+        "pt": "do Colégio da Lua",
         "en": "College of the Moon"
       },
       {
         "code": "FIGHTER_BANNERET",
         "class": "FIGHTER",
         "group": "NICHE",
-        "pt": "Banneret",
+        "pt": "Estandarte",
         "en": "Banneret"
       },
       {
         "code": "PALADIN_OATH_OF_THE_NOBLE_GENIES",
         "class": "PALADIN",
         "group": "NICHE",
-        "pt": "Oath of the Noble Genies",
+        "pt": "do Juramento dos Nobres Génio",
         "en": "Oath of the Noble Genies"
       },
       {
         "code": "RANGER_WINTER_WALKER",
         "class": "RANGER",
         "group": "NICHE",
-        "pt": "Winter Walker",
+        "pt": "Viajante Invernal",
         "en": "Winter Walker"
       },
       {
         "code": "ROGUE_SCION_OF_THE_THREE",
         "class": "ROGUE",
         "group": "NICHE",
-        "pt": "Scion of the Three",
+        "pt": "Herdeiro dos Três",
         "en": "Scion of the Three"
       },
       {
         "code": "SORCERER_SPELLFIRE_SORCERY",
         "class": "SORCERER",
         "group": "NICHE",
-        "pt": "Spellfire Sorcery",
+        "pt": "da Magia Spellfire",
         "en": "Spellfire Sorcery"
       },
       {
         "code": "WARLOCK_THE_UNDEAD",
         "class": "WARLOCK",
         "group": "NICHE",
-        "pt": "The Undead",
+        "pt": "com Patrono dos Mortos-Vivos",
         "en": "The Undead"
       },
       {
         "code": "WIZARD_BLADESINGER",
         "class": "WIZARD",
         "group": "NICHE",
-        "pt": "Bladesinger",
+        "pt": "Cantor da Lâmina",
         "en": "Bladesinger"
       }
     ],
     "backgrounds": [
       {
         "code": "ACOLYTE",
-        "pt": "Acolyte",
+        "pt": "Acólito",
         "en": "Acolyte",
         "ability_increases": [
           "INT",
@@ -3965,7 +3965,7 @@
       },
       {
         "code": "ARTISAN",
-        "pt": "Artisan",
+        "pt": "Artesão",
         "en": "Artisan",
         "ability_increases": [
           "STR",
@@ -3975,7 +3975,7 @@
       },
       {
         "code": "CHARLATAN",
-        "pt": "Charlatan",
+        "pt": "Charlatão",
         "en": "Charlatan",
         "ability_increases": [
           "DEX",
@@ -3985,7 +3985,7 @@
       },
       {
         "code": "CHONDATHAN_FREEBOOTER",
-        "pt": "Chondathan Freebooter",
+        "pt": "Corsário Chondathano",
         "en": "Chondathan Freebooter",
         "ability_increases": [
           "STR",
@@ -3995,7 +3995,7 @@
       },
       {
         "code": "CRIMINAL",
-        "pt": "Criminal",
+        "pt": "Criminoso",
         "en": "Criminal",
         "ability_increases": [
           "DEX",
@@ -4005,7 +4005,7 @@
       },
       {
         "code": "DEAD_MAGIC_DWELLER",
-        "pt": "Dead Magic Dweller",
+        "pt": "Habitante da Anti-magia",
         "en": "Dead Magic Dweller",
         "ability_increases": [
           "STR",
@@ -4015,7 +4015,7 @@
       },
       {
         "code": "DRAGON_CULTIST",
-        "pt": "Dragon Cultist",
+        "pt": "Cultista Dracónico",
         "en": "Dragon Cultist",
         "ability_increases": [
           "DEX",
@@ -4025,7 +4025,7 @@
       },
       {
         "code": "EMERALD_ENCLAVE_CARETAKER",
-        "pt": "Emerald Enclave Caretaker",
+        "pt": "Zelador do Enclave Esmeralda",
         "en": "Emerald Enclave Caretaker",
         "ability_increases": [
           "CON",
@@ -4035,7 +4035,7 @@
       },
       {
         "code": "ENTERTAINER",
-        "pt": "Entertainer",
+        "pt": "Artista",
         "en": "Entertainer",
         "ability_increases": [
           "STR",
@@ -4045,7 +4045,7 @@
       },
       {
         "code": "FARMER",
-        "pt": "Farmer",
+        "pt": "Camponês",
         "en": "Farmer",
         "ability_increases": [
           "STR",
@@ -4055,7 +4055,7 @@
       },
       {
         "code": "FLAMING_FIST_MERCENARY",
-        "pt": "Flaming Fist Mercenary",
+        "pt": "Mercenário do Punho Flamejante",
         "en": "Flaming Fist Mercenary",
         "ability_increases": [
           "STR",
@@ -4065,7 +4065,7 @@
       },
       {
         "code": "GENIE_TOUCHED",
-        "pt": "Genie Touched",
+        "pt": "Marcado pelos Génios",
         "en": "Genie Touched",
         "ability_increases": [
           "DEX",
@@ -4075,7 +4075,7 @@
       },
       {
         "code": "GUARD",
-        "pt": "Guard",
+        "pt": "Guarda",
         "en": "Guard",
         "ability_increases": [
           "STR",
@@ -4085,7 +4085,7 @@
       },
       {
         "code": "GUIDE",
-        "pt": "Guide",
+        "pt": "Guia",
         "en": "Guide",
         "ability_increases": [
           "DEX",
@@ -4095,7 +4095,7 @@
       },
       {
         "code": "HARPER",
-        "pt": "Harper",
+        "pt": "Harpista",
         "en": "Harper",
         "ability_increases": [
           "DEX",
@@ -4105,7 +4105,7 @@
       },
       {
         "code": "HERMIT",
-        "pt": "Hermit",
+        "pt": "Eremita",
         "en": "Hermit",
         "ability_increases": [
           "CON",
@@ -4115,7 +4115,7 @@
       },
       {
         "code": "ICE_FISHER",
-        "pt": "Ice Fisher",
+        "pt": "Pescador de Gelo",
         "en": "Ice Fisher",
         "ability_increases": [
           "STR",
@@ -4125,7 +4125,7 @@
       },
       {
         "code": "KNIGHT_OF_THE_GAUNTLET",
-        "pt": "Knight of the Gauntlet",
+        "pt": "Cavaleiro da Manopla",
         "en": "Knight of the Gauntlet",
         "ability_increases": [
           "STR",
@@ -4135,7 +4135,7 @@
       },
       {
         "code": "LORDS_ALLIANCE_VASSAL",
-        "pt": "Lords' Alliance Vassal",
+        "pt": "Vassalo da Aliança dos Lordes",
         "en": "Lords' Alliance Vassal",
         "ability_increases": [
           "STR",
@@ -4145,7 +4145,7 @@
       },
       {
         "code": "MERCHANT",
-        "pt": "Merchant",
+        "pt": "Comerciante",
         "en": "Merchant",
         "ability_increases": [
           "CON",
@@ -4155,7 +4155,7 @@
       },
       {
         "code": "MOONWELL_PILGRIM",
-        "pt": "Moonwell Pilgrim",
+        "pt": "Peregrino da Lua",
         "en": "Moonwell Pilgrim",
         "ability_increases": [
           "CON",
@@ -4165,7 +4165,7 @@
       },
       {
         "code": "MULHORANDI_TOMB_RAIDER",
-        "pt": "Mulhorandi Tomb Raider",
+        "pt": "Saqueador de Tumbas Mulhorandi",
         "en": "Mulhorandi Tomb Raider",
         "ability_increases": [
           "DEX",
@@ -4175,7 +4175,7 @@
       },
       {
         "code": "MYTHALKEEPER",
-        "pt": "Mythalkeeper",
+        "pt": "Guardião do Mythal",
         "en": "Mythalkeeper",
         "ability_increases": [
           "INT",
@@ -4185,7 +4185,7 @@
       },
       {
         "code": "NOBLE",
-        "pt": "Noble",
+        "pt": "Nobre",
         "en": "Noble",
         "ability_increases": [
           "STR",
@@ -4195,7 +4195,7 @@
       },
       {
         "code": "PURPLE_DRAGON_SQUIRE",
-        "pt": "Purple Dragon Squire",
+        "pt": "Escudeiro do Dragão Púrpura",
         "en": "Purple Dragon Squire",
         "ability_increases": [
           "STR",
@@ -4205,7 +4205,7 @@
       },
       {
         "code": "RASHEMI_WANDERER",
-        "pt": "Rashemi Wanderer",
+        "pt": "Errante Rashemi",
         "en": "Rashemi Wanderer",
         "ability_increases": [
           "STR",
@@ -4215,7 +4215,7 @@
       },
       {
         "code": "SAGE",
-        "pt": "Sage",
+        "pt": "Estudioso",
         "en": "Sage",
         "ability_increases": [
           "CON",
@@ -4225,7 +4225,7 @@
       },
       {
         "code": "SAILOR",
-        "pt": "Sailor",
+        "pt": "Marinheiro",
         "en": "Sailor",
         "ability_increases": [
           "STR",
@@ -4235,7 +4235,7 @@
       },
       {
         "code": "SCRIBE",
-        "pt": "Scribe",
+        "pt": "Escrivão",
         "en": "Scribe",
         "ability_increases": [
           "DEX",
@@ -4245,7 +4245,7 @@
       },
       {
         "code": "SHADOWMASTERS_EXILE",
-        "pt": "Shadowmasters Exile",
+        "pt": "Exilado dos Mestres das Sombras",
         "en": "Shadowmasters Exile",
         "ability_increases": [
           "DEX",
@@ -4255,7 +4255,7 @@
       },
       {
         "code": "SOLDIER",
-        "pt": "Soldier",
+        "pt": "Soldado",
         "en": "Soldier",
         "ability_increases": [
           "STR",
@@ -4265,7 +4265,7 @@
       },
       {
         "code": "SPELLFIRE_INITIATE",
-        "pt": "Spellfire Initiate",
+        "pt": "Iniciado de Spellfire",
         "en": "Spellfire Initiate",
         "ability_increases": [
           "CON",
@@ -4275,7 +4275,7 @@
       },
       {
         "code": "WAYFARER",
-        "pt": "Wayfarer",
+        "pt": "Errante",
         "en": "Wayfarer",
         "ability_increases": [
           "DEX",
@@ -4285,7 +4285,7 @@
       },
       {
         "code": "ZHENTARIM_MERCENARY",
-        "pt": "Zhentarim Mercenary",
+        "pt": "Mercenário Zhentarim",
         "en": "Zhentarim Mercenary",
         "ability_increases": [
           "STR",
