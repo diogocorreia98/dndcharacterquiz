@@ -32,7 +32,7 @@ Aplicação web simples para percorrer o questionário de Dungeons & Dragons 202
 * `server.js` – servidor HTTP mínimo para servir os ficheiros estáticos.
 * `dnd_2024_questionario.json` – manifesto que indica onde estão as perguntas e os mapeamentos.
 * `option_labels_appearance.json` e `option_labels_profession.json` – rótulos traduzidos das opções.
-* `option_descriptions.json` – descrições em texto livre para opções estáticas.
+* `option_descriptions_classes.json`, `option_descriptions_species.json` e `option_descriptions_misc.json` – descrições em texto livre agrupadas por classes/subclasses, espécies (e variações) e restantes opções estáticas.
 * `questions_appearance.json` – perguntas até à secção de classe.
 * `questions_profession.json` – perguntas da secção de classe.
 * `key_mappings.json` – mapeamentos de variáveis, valores e datasets.
