@@ -3075,7 +3075,7 @@
   },
   {
     "class": "WIZARD",
-    "subclass": "WIZARD_BLADESINGING",
+    "subclass": "WIZARD_BLADESINGER",
     "variant": "Core",
     "required_adjustment": null,
     "preferred_ability": "DEX",

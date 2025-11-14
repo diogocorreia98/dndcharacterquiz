@@ -311,7 +311,6 @@
         "WIZARD_DIVINER",
         "WIZARD_EVOKER",
         "WIZARD_ILLUSIONIST",
-        "WIZARD_BLADESINGING",
         "WIZARD_ORDER_OF_SCRIBES",
         "WIZARD_SCHOOL_OF_ABJURATION",
         "WIZARD_SCHOOL_OF_CONJURATION",
@@ -3158,13 +3157,9 @@
       {
         "code": "CLERIC_KNOWLEDGE_DOMAIN",
         "class": "CLERIC",
-        "group": "NICHE",
+        "group": "CORE",
         "pt": "do Domínio do Conhecimento",
-        "en": "Knowledge Domain",
-        "niche_roles": [
-          "FACE",
-          "SCHOLAR"
-        ]
+        "en": "Knowledge Domain"
       },
       {
         "code": "CLERIC_NATURE_DOMAIN",
@@ -3788,15 +3783,11 @@
         "en": "Illusionist"
       },
       {
-        "code": "WIZARD_BLADESINGING",
+        "code": "WIZARD_BLADESINGER",
         "class": "WIZARD",
-        "group": "NICHE",
-        "pt": "Bladesinging",
-        "en": "Bladesinging",
-        "niche_roles": [
-          "DEFENDER",
-          "STRIKER"
-        ]
+        "group": "CORE",
+        "pt": "Cantor da Lâmina",
+        "en": "Bladesinger"
       },
       {
         "code": "WIZARD_ORDER_OF_SCRIBES",
@@ -3812,8 +3803,8 @@
         "code": "WIZARD_SCHOOL_OF_ABJURATION",
         "class": "WIZARD",
         "group": "NICHE",
-        "pt": "Escola de Abjuração",
-        "en": "School of Abjuration",
+        "pt": "Abjurador",
+        "en": "Abjurer",
         "niche_roles": [
           "DEFENDER"
         ]
@@ -3898,42 +3889,42 @@
       {
         "code": "BARD_COLLEGE_OF_THE_MOON",
         "class": "BARD",
-        "group": "NICHE",
+        "group": "CORE",
         "pt": "do Colégio da Lua",
         "en": "College of the Moon"
       },
       {
         "code": "FIGHTER_BANNERET",
         "class": "FIGHTER",
-        "group": "NICHE",
+        "group": "CORE",
         "pt": "Estandarte",
         "en": "Banneret"
       },
       {
         "code": "PALADIN_OATH_OF_THE_NOBLE_GENIES",
         "class": "PALADIN",
-        "group": "NICHE",
+        "group": "CORE",
         "pt": "do Juramento dos Nobres Génio",
         "en": "Oath of the Noble Genies"
       },
       {
         "code": "RANGER_WINTER_WALKER",
         "class": "RANGER",
-        "group": "NICHE",
+        "group": "CORE",
         "pt": "Viajante Invernal",
         "en": "Winter Walker"
       },
       {
         "code": "ROGUE_SCION_OF_THE_THREE",
         "class": "ROGUE",
-        "group": "NICHE",
+        "group": "CORE",
         "pt": "Herdeiro dos Três",
         "en": "Scion of the Three"
       },
       {
         "code": "SORCERER_SPELLFIRE_SORCERY",
         "class": "SORCERER",
-        "group": "NICHE",
+        "group": "CORE",
         "pt": "da Magia Spellfire",
         "en": "Spellfire Sorcery"
       },
@@ -3943,13 +3934,6 @@
         "group": "NICHE",
         "pt": "com Patrono dos Mortos-Vivos",
         "en": "The Undead"
-      },
-      {
-        "code": "WIZARD_BLADESINGER",
-        "class": "WIZARD",
-        "group": "NICHE",
-        "pt": "Cantor da Lâmina",
-        "en": "Bladesinger"
       }
     ],
     "backgrounds": [
@@ -4334,13 +4318,13 @@
           "Life Domain",
           "Light Domain",
           "Trickery Domain",
-          "War Domain"
+          "War Domain",
+          "Knowledge Domain"
         ],
         "niche_subclasses": [
           "Arcana Domain",
           "Forge Domain",
           "Grave Domain",
-          "Knowledge Domain",
           "Nature Domain",
           "Order Domain",
           "Peace Domain",
@@ -4364,7 +4348,8 @@
       },
       "Fighter": {
         "core_subclasses": [
-          "Eldritch Knight"
+          "Eldritch Knight",
+          "Banneret"
         ]
       },
       "Monk": {
@@ -4380,7 +4365,8 @@
           "Oath of Devotion",
           "Oath of Glory",
           "Oath of the Ancients",
-          "Oath of Vengeance"
+          "Oath of Vengeance",
+          "Oath of the Noble Genies"
         ],
         "niche_subclasses": [
           "Oath of Conquest",
@@ -4388,8 +4374,7 @@
           "Oath of the Crown",
           "Oath of the Watchers",
           "Oath of the Open Sea",
-          "Oath of Revelry",
-          "Oath of the Noble Genies"
+          "Oath of Revelry"
         ]
       },
       "Sorcerer": {
@@ -4397,13 +4382,13 @@
           "Clockwork Sorcery",
           "Draconic Sorcery",
           "Wild Magic",
-          "Aberrant Sorcery"
+          "Aberrant Sorcery",
+          "Spellfire Sorcery"
         ],
         "niche_subclasses": [
           "Storm Sorcery",
           "Divine Soul",
-          "Shadow Magic",
-          "Spellfire Sorcery"
+          "Shadow Magic"
         ]
       },
       "Warlock": {
@@ -4425,26 +4410,28 @@
           "Abjurer",
           "Diviner",
           "Evoker",
-          "Illusionist"
+          "Illusionist",
+          "Bladesinger"
         ],
         "niche_subclasses": [
-          "Bladesinging",
           "Order of Scribes",
-          "School of Abjuration",
+          "Abjurer",
           "School of Conjuration",
           "School of Necromancy",
           "School of Enchantment",
-          "War Magic",
-          "Bladesinger"
+          "War Magic"
         ]
       },
       "Bard": {
         "niche_subclasses": [
           "College of Spirits"
+        ],
+        "core_subclasses": [
+          "College of the Moon"
         ]
       },
       "Ranger": {
-        "niche_subclasses": [
+        "core_subclasses": [
           "Winter Walker"
         ]
       }
@@ -4465,15 +4452,15 @@
           "College of Dance",
           "College of Glamour",
           "College of Lore",
-          "College of Valor"
+          "College of Valor",
+          "College of the Moon"
         ],
         "niche_subclasses": [
           "College of Creation",
           "College of Eloquence",
           "College of Swords",
           "College of Whispers",
-          "College of Spirits",
-          "College of the Moon"
+          "College of Spirits"
         ]
       },
       "Blood Hunter": {
@@ -4484,12 +4471,12 @@
       },
       "Cleric": {
         "core_subclasses": [
-          "Light Domain"
+          "Light Domain",
+          "Knowledge Domain"
         ],
         "niche_subclasses": [
           "Nature Domain",
-          "Tempest Domain",
-          "Knowledge Domain"
+          "Tempest Domain"
         ]
       },
       "Druid": {
@@ -4509,7 +4496,8 @@
       "Fighter": {
         "core_subclasses": [
           "Battle Master",
-          "Psi Warrior"
+          "Psi Warrior",
+          "Banneret"
         ],
         "niche_subclasses": [
           "Arcane Archer",
@@ -4533,7 +4521,9 @@
         "niche_subclasses": [
           "Oath of Conquest",
           "Oath of Redemption",
-          "Oath of the Open Sea",
+          "Oath of the Open Sea"
+        ],
+        "core_subclasses": [
           "Oath of the Noble Genies"
         ]
       },
@@ -4542,21 +4532,19 @@
           "Beast Master",
           "Fey Wanderer",
           "Gloom Stalker",
-          "Hunter"
+          "Hunter",
+          "Winter Walker"
         ],
         "niche_subclasses": [
           "Horizon Walker",
           "Monster Slayer",
-          "Swarmkeeper",
-          "Winter Walker"
+          "Swarmkeeper"
         ]
       },
       "Rogue": {
         "core_subclasses": [
           "Arachnoid Stalker",
-          "Arcane Trickster"
-        ],
-        "niche_subclasses": [
+          "Arcane Trickster",
           "Scion of the Three"
         ]
       },
@@ -4565,13 +4553,13 @@
           "Clockwork Sorcery",
           "Draconic Sorcery",
           "Wild Magic",
-          "Aberrant Sorcery"
+          "Aberrant Sorcery",
+          "Spellfire Sorcery"
         ],
         "niche_subclasses": [
           "Storm Sorcery",
           "Divine Soul",
-          "Shadow Magic",
-          "Spellfire Sorcery"
+          "Shadow Magic"
         ]
       },
       "Warlock": {
@@ -4593,17 +4581,16 @@
           "Abjurer",
           "Diviner",
           "Evoker",
-          "Illusionist"
+          "Illusionist",
+          "Bladesinger"
         ],
         "niche_subclasses": [
-          "Bladesinging",
           "Order of Scribes",
-          "School of Abjuration",
+          "Abjurer",
           "School of Conjuration",
           "School of Necromancy",
           "School of Enchantment",
-          "War Magic",
-          "Bladesinger"
+          "War Magic"
         ]
       }
     },
@@ -4639,13 +4626,13 @@
           "Life Domain",
           "Light Domain",
           "Trickery Domain",
-          "War Domain"
+          "War Domain",
+          "Knowledge Domain"
         ],
         "niche_subclasses": [
           "Arcana Domain",
           "Forge Domain",
           "Grave Domain",
-          "Knowledge Domain",
           "Nature Domain",
           "Order Domain",
           "Peace Domain",
@@ -4663,15 +4650,15 @@
           "Battle Master",
           "Champion",
           "Eldritch Knight",
-          "Psi Warrior"
+          "Psi Warrior",
+          "Banneret"
         ],
         "niche_subclasses": [
           "Arcane Archer",
           "Cavalier",
           "Rune Knight",
           "Samurai",
-          "Dungeoneer",
-          "Banneret"
+          "Dungeoneer"
         ]
       },
       "Monk": {
@@ -4687,7 +4674,8 @@
           "Oath of Devotion",
           "Oath of Glory",
           "Oath of the Ancients",
-          "Oath of Vengeance"
+          "Oath of Vengeance",
+          "Oath of the Noble Genies"
         ],
         "niche_subclasses": [
           "Oath of Conquest",
@@ -4695,13 +4683,13 @@
           "Oath of the Crown",
           "Oath of the Watchers",
           "Oath of the Open Sea",
-          "Oath of Revelry",
-          "Oath of the Noble Genies"
+          "Oath of Revelry"
         ]
       },
       "Ranger": {
         "core_subclasses": [
-          "Beast Master"
+          "Beast Master",
+          "Winter Walker"
         ]
       },
       "Warlock": {
@@ -4712,13 +4700,12 @@
       },
       "Wizard": {
         "core_subclasses": [
-          "Abjurer"
+          "Abjurer",
+          "Bladesinger"
         ],
         "niche_subclasses": [
-          "Bladesinging",
-          "School of Abjuration",
-          "War Magic",
-          "Bladesinger"
+          "Abjurer",
+          "War Magic"
         ]
       }
     },
@@ -4728,29 +4715,31 @@
           "College of Dance",
           "College of Glamour",
           "College of Lore",
-          "College of Valor"
+          "College of Valor",
+          "College of the Moon"
         ],
         "niche_subclasses": [
           "College of Creation",
           "College of Eloquence",
           "College of Swords",
           "College of Whispers",
-          "College of Spirits",
-          "College of the Moon"
+          "College of Spirits"
         ]
       },
       "Cleric": {
         "core_subclasses": [
-          "Trickery Domain"
+          "Trickery Domain",
+          "Knowledge Domain"
         ],
         "niche_subclasses": [
-          "Knowledge Domain",
           "Order Domain"
         ]
       },
       "Fighter": {
         "niche_subclasses": [
-          "Samurai",
+          "Samurai"
+        ],
+        "core_subclasses": [
           "Banneret"
         ]
       },
@@ -4764,7 +4753,8 @@
           "Oath of Devotion",
           "Oath of Glory",
           "Oath of the Ancients",
-          "Oath of Vengeance"
+          "Oath of Vengeance",
+          "Oath of the Noble Genies"
         ],
         "niche_subclasses": [
           "Oath of Conquest",
@@ -4772,13 +4762,13 @@
           "Oath of the Crown",
           "Oath of the Watchers",
           "Oath of the Open Sea",
-          "Oath of Revelry",
-          "Oath of the Noble Genies"
+          "Oath of Revelry"
         ]
       },
       "Ranger": {
         "core_subclasses": [
-          "Fey Wanderer"
+          "Fey Wanderer",
+          "Winter Walker"
         ]
       },
       "Rogue": {
@@ -4786,7 +4776,8 @@
           "Arachnoid Stalker",
           "Arcane Trickster",
           "Assassin",
-          "Thief"
+          "Thief",
+          "Scion of the Three"
         ],
         "niche_subclasses": [
           "Inquisitive",
@@ -4794,13 +4785,13 @@
           "Phantom",
           "Scout",
           "Swashbuckler",
-          "Soulknife",
-          "Scion of the Three"
+          "Soulknife"
         ]
       },
       "Sorcerer": {
         "core_subclasses": [
-          "Aberrant Sorcery"
+          "Aberrant Sorcery",
+          "Spellfire Sorcery"
         ],
         "niche_subclasses": [
           "Storm Sorcery",
@@ -4824,7 +4815,8 @@
       },
       "Wizard": {
         "core_subclasses": [
-          "Illusionist"
+          "Illusionist",
+          "Bladesinger"
         ],
         "niche_subclasses": [
           "School of Enchantment"
@@ -4853,15 +4845,15 @@
           "College of Dance",
           "College of Glamour",
           "College of Lore",
-          "College of Valor"
+          "College of Valor",
+          "College of the Moon"
         ],
         "niche_subclasses": [
           "College of Creation",
           "College of Eloquence",
           "College of Swords",
           "College of Whispers",
-          "College of Spirits",
-          "College of the Moon"
+          "College of Spirits"
         ]
       },
       "Cleric": {
@@ -4869,13 +4861,13 @@
           "Life Domain",
           "Light Domain",
           "Trickery Domain",
-          "War Domain"
+          "War Domain",
+          "Knowledge Domain"
         ],
         "niche_subclasses": [
           "Arcana Domain",
           "Forge Domain",
           "Grave Domain",
-          "Knowledge Domain",
           "Nature Domain",
           "Order Domain",
           "Peace Domain",
@@ -4907,7 +4899,8 @@
           "Oath of Devotion",
           "Oath of Glory",
           "Oath of the Ancients",
-          "Oath of Vengeance"
+          "Oath of Vengeance",
+          "Oath of the Noble Genies"
         ],
         "niche_subclasses": [
           "Oath of Conquest",
@@ -4915,13 +4908,14 @@
           "Oath of the Crown",
           "Oath of the Watchers",
           "Oath of the Open Sea",
-          "Oath of Revelry",
-          "Oath of the Noble Genies"
+          "Oath of Revelry"
         ]
       },
       "Sorcerer": {
         "niche_subclasses": [
-          "Divine Soul",
+          "Divine Soul"
+        ],
+        "core_subclasses": [
           "Spellfire Sorcery"
         ]
       },
@@ -4931,12 +4925,12 @@
         ]
       },
       "Fighter": {
-        "niche_subclasses": [
+        "core_subclasses": [
           "Banneret"
         ]
       },
       "Ranger": {
-        "niche_subclasses": [
+        "core_subclasses": [
           "Winter Walker"
         ]
       }
@@ -4952,12 +4946,15 @@
       },
       "Bard": {
         "core_subclasses": [
-          "College of Lore"
+          "College of Lore",
+          "College of the Moon"
         ]
       },
       "Cleric": {
         "niche_subclasses": [
-          "Arcana Domain",
+          "Arcana Domain"
+        ],
+        "core_subclasses": [
           "Knowledge Domain"
         ]
       },
@@ -4970,6 +4967,9 @@
         "niche_subclasses": [
           "Samurai",
           "Dungeoneer"
+        ],
+        "core_subclasses": [
+          "Banneret"
         ]
       },
       "Monk": {
@@ -4980,17 +4980,26 @@
       "Paladin": {
         "niche_subclasses": [
           "Oath of the Watchers"
+        ],
+        "core_subclasses": [
+          "Oath of the Noble Genies"
         ]
       },
       "Ranger": {
         "niche_subclasses": [
           "Swarmkeeper"
+        ],
+        "core_subclasses": [
+          "Winter Walker"
         ]
       },
       "Rogue": {
         "niche_subclasses": [
           "Inquisitive",
           "Scout"
+        ],
+        "core_subclasses": [
+          "Scion of the Three"
         ]
       },
       "Warlock": {
@@ -5003,17 +5012,16 @@
           "Abjurer",
           "Diviner",
           "Evoker",
-          "Illusionist"
+          "Illusionist",
+          "Bladesinger"
         ],
         "niche_subclasses": [
-          "Bladesinging",
           "Order of Scribes",
-          "School of Abjuration",
+          "Abjurer",
           "School of Conjuration",
           "School of Necromancy",
           "School of Enchantment",
-          "War Magic",
-          "Bladesinger"
+          "War Magic"
         ]
       }
     },
@@ -5028,7 +5036,8 @@
       },
       "Cleric": {
         "core_subclasses": [
-          "Trickery Domain"
+          "Trickery Domain",
+          "Knowledge Domain"
         ],
         "niche_subclasses": [
           "Twilight Domain"
@@ -5042,6 +5051,9 @@
       "Fighter": {
         "niche_subclasses": [
           "Dungeoneer"
+        ],
+        "core_subclasses": [
+          "Banneret"
         ]
       },
       "Monk": {
@@ -5066,13 +5078,13 @@
           "Beast Master",
           "Fey Wanderer",
           "Gloom Stalker",
-          "Hunter"
+          "Hunter",
+          "Winter Walker"
         ],
         "niche_subclasses": [
           "Horizon Walker",
           "Monster Slayer",
-          "Swarmkeeper",
-          "Winter Walker"
+          "Swarmkeeper"
         ]
       },
       "Rogue": {
@@ -5080,7 +5092,8 @@
           "Arachnoid Stalker",
           "Arcane Trickster",
           "Assassin",
-          "Thief"
+          "Thief",
+          "Scion of the Three"
         ],
         "niche_subclasses": [
           "Inquisitive",
@@ -5088,13 +5101,15 @@
           "Phantom",
           "Scout",
           "Swashbuckler",
-          "Soulknife",
-          "Scion of the Three"
+          "Soulknife"
         ]
       },
       "Sorcerer": {
         "niche_subclasses": [
           "Shadow Magic"
+        ],
+        "core_subclasses": [
+          "Spellfire Sorcery"
         ]
       }
     },
@@ -5122,7 +5137,8 @@
       },
       "Bard": {
         "core_subclasses": [
-          "College of Valor"
+          "College of Valor",
+          "College of the Moon"
         ],
         "niche_subclasses": [
           "College of Swords",
@@ -5142,13 +5158,13 @@
           "Life Domain",
           "Light Domain",
           "Trickery Domain",
-          "War Domain"
+          "War Domain",
+          "Knowledge Domain"
         ],
         "niche_subclasses": [
           "Arcana Domain",
           "Forge Domain",
           "Grave Domain",
-          "Knowledge Domain",
           "Nature Domain",
           "Order Domain",
           "Peace Domain",
@@ -5170,15 +5186,15 @@
           "Battle Master",
           "Champion",
           "Eldritch Knight",
-          "Psi Warrior"
+          "Psi Warrior",
+          "Banneret"
         ],
         "niche_subclasses": [
           "Arcane Archer",
           "Cavalier",
           "Rune Knight",
           "Samurai",
-          "Dungeoneer",
-          "Banneret"
+          "Dungeoneer"
         ]
       },
       "Monk": {
@@ -5203,7 +5219,8 @@
           "Oath of Devotion",
           "Oath of Glory",
           "Oath of the Ancients",
-          "Oath of Vengeance"
+          "Oath of Vengeance",
+          "Oath of the Noble Genies"
         ],
         "niche_subclasses": [
           "Oath of Conquest",
@@ -5211,8 +5228,7 @@
           "Oath of the Crown",
           "Oath of the Watchers",
           "Oath of the Open Sea",
-          "Oath of Revelry",
-          "Oath of the Noble Genies"
+          "Oath of Revelry"
         ]
       },
       "Ranger": {
@@ -5220,13 +5236,13 @@
           "Beast Master",
           "Fey Wanderer",
           "Gloom Stalker",
-          "Hunter"
+          "Hunter",
+          "Winter Walker"
         ],
         "niche_subclasses": [
           "Horizon Walker",
           "Monster Slayer",
-          "Swarmkeeper",
-          "Winter Walker"
+          "Swarmkeeper"
         ]
       },
       "Rogue": {
@@ -5234,7 +5250,8 @@
           "Arachnoid Stalker",
           "Arcane Trickster",
           "Assassin",
-          "Thief"
+          "Thief",
+          "Scion of the Three"
         ],
         "niche_subclasses": [
           "Inquisitive",
@@ -5242,8 +5259,7 @@
           "Phantom",
           "Scout",
           "Swashbuckler",
-          "Soulknife",
-          "Scion of the Three"
+          "Soulknife"
         ]
       },
       "Sorcerer": {
@@ -5251,13 +5267,13 @@
           "Clockwork Sorcery",
           "Draconic Sorcery",
           "Wild Magic",
-          "Aberrant Sorcery"
+          "Aberrant Sorcery",
+          "Spellfire Sorcery"
         ],
         "niche_subclasses": [
           "Storm Sorcery",
           "Divine Soul",
-          "Shadow Magic",
-          "Spellfire Sorcery"
+          "Shadow Magic"
         ]
       },
       "Warlock": {
@@ -5276,15 +5292,14 @@
       },
       "Wizard": {
         "core_subclasses": [
-          "Evoker"
+          "Evoker",
+          "Bladesinger"
         ],
         "niche_subclasses": [
-          "Bladesinging",
           "Order of Scribes",
           "School of Necromancy",
           "School of Enchantment",
-          "War Magic",
-          "Bladesinger"
+          "War Magic"
         ]
       }
     },
@@ -5311,15 +5326,15 @@
           "College of Dance",
           "College of Glamour",
           "College of Lore",
-          "College of Valor"
+          "College of Valor",
+          "College of the Moon"
         ],
         "niche_subclasses": [
           "College of Creation",
           "College of Eloquence",
           "College of Swords",
           "College of Whispers",
-          "College of Spirits",
-          "College of the Moon"
+          "College of Spirits"
         ]
       },
       "Blood Hunter": {
@@ -5335,13 +5350,13 @@
           "Life Domain",
           "Light Domain",
           "Trickery Domain",
-          "War Domain"
+          "War Domain",
+          "Knowledge Domain"
         ],
         "niche_subclasses": [
           "Arcana Domain",
           "Forge Domain",
           "Grave Domain",
-          "Knowledge Domain",
           "Nature Domain",
           "Order Domain",
           "Peace Domain",
@@ -5366,11 +5381,11 @@
       "Fighter": {
         "core_subclasses": [
           "Battle Master",
-          "Psi Warrior"
+          "Psi Warrior",
+          "Banneret"
         ],
         "niche_subclasses": [
-          "Rune Knight",
-          "Banneret"
+          "Rune Knight"
         ]
       },
       "Monk": {
@@ -5387,7 +5402,8 @@
           "Oath of Devotion",
           "Oath of Glory",
           "Oath of the Ancients",
-          "Oath of Vengeance"
+          "Oath of Vengeance",
+          "Oath of the Noble Genies"
         ],
         "niche_subclasses": [
           "Oath of Conquest",
@@ -5395,13 +5411,13 @@
           "Oath of the Crown",
           "Oath of the Watchers",
           "Oath of the Open Sea",
-          "Oath of Revelry",
-          "Oath of the Noble Genies"
+          "Oath of Revelry"
         ]
       },
       "Ranger": {
         "core_subclasses": [
-          "Beast Master"
+          "Beast Master",
+          "Winter Walker"
         ]
       },
       "Sorcerer": {
@@ -5409,13 +5425,13 @@
           "Clockwork Sorcery",
           "Draconic Sorcery",
           "Wild Magic",
-          "Aberrant Sorcery"
+          "Aberrant Sorcery",
+          "Spellfire Sorcery"
         ],
         "niche_subclasses": [
           "Storm Sorcery",
           "Divine Soul",
-          "Shadow Magic",
-          "Spellfire Sorcery"
+          "Shadow Magic"
         ]
       },
       "Warlock": {
@@ -5428,17 +5444,16 @@
           "Abjurer",
           "Diviner",
           "Evoker",
-          "Illusionist"
+          "Illusionist",
+          "Bladesinger"
         ],
         "niche_subclasses": [
-          "Bladesinging",
           "Order of Scribes",
-          "School of Abjuration",
+          "Abjurer",
           "School of Conjuration",
           "School of Necromancy",
           "School of Enchantment",
-          "War Magic",
-          "Bladesinger"
+          "War Magic"
         ]
       }
     },
@@ -5456,15 +5471,15 @@
           "College of Dance",
           "College of Glamour",
           "College of Lore",
-          "College of Valor"
+          "College of Valor",
+          "College of the Moon"
         ],
         "niche_subclasses": [
           "College of Creation",
           "College of Eloquence",
           "College of Swords",
           "College of Whispers",
-          "College of Spirits",
-          "College of the Moon"
+          "College of Spirits"
         ]
       },
       "Blood Hunter": {
@@ -5477,13 +5492,13 @@
           "Life Domain",
           "Light Domain",
           "Trickery Domain",
-          "War Domain"
+          "War Domain",
+          "Knowledge Domain"
         ],
         "niche_subclasses": [
           "Arcana Domain",
           "Forge Domain",
           "Grave Domain",
-          "Knowledge Domain",
           "Nature Domain",
           "Order Domain",
           "Peace Domain",
@@ -5508,6 +5523,9 @@
       "Paladin": {
         "niche_subclasses": [
           "Oath of the Open Sea"
+        ],
+        "core_subclasses": [
+          "Oath of the Noble Genies"
         ]
       },
       "Ranger": {
@@ -5515,13 +5533,13 @@
           "Beast Master",
           "Fey Wanderer",
           "Gloom Stalker",
-          "Hunter"
+          "Hunter",
+          "Winter Walker"
         ],
         "niche_subclasses": [
           "Horizon Walker",
           "Monster Slayer",
-          "Swarmkeeper",
-          "Winter Walker"
+          "Swarmkeeper"
         ]
       },
       "Sorcerer": {
@@ -5529,13 +5547,13 @@
           "Clockwork Sorcery",
           "Draconic Sorcery",
           "Wild Magic",
-          "Aberrant Sorcery"
+          "Aberrant Sorcery",
+          "Spellfire Sorcery"
         ],
         "niche_subclasses": [
           "Storm Sorcery",
           "Divine Soul",
-          "Shadow Magic",
-          "Spellfire Sorcery"
+          "Shadow Magic"
         ]
       },
       "Warlock": {
@@ -5557,17 +5575,16 @@
           "Abjurer",
           "Diviner",
           "Evoker",
-          "Illusionist"
+          "Illusionist",
+          "Bladesinger"
         ],
         "niche_subclasses": [
-          "Bladesinging",
           "Order of Scribes",
-          "School of Abjuration",
+          "Abjurer",
           "School of Conjuration",
           "School of Necromancy",
           "School of Enchantment",
-          "War Magic",
-          "Bladesinger"
+          "War Magic"
         ]
       }
     }
