@@ -256,5 +256,399 @@
       "pt": "Transforma o corpo numa arma, útil mesmo sem equipamento.",
       "en": "Turns your body into a weapon, useful even when disarmed."
     }
+  },
+  "species_descriptions": {
+    "S001": {
+      "pt": "Sentinelas aladas dos céus, com garras afiadas e sentidos atentos ideais para reconhecimento e ataques rápidos.",
+      "en": "Winged sky sentinels whose talons and keen senses excel at scouting and hit-and-run strikes."
+    },
+    "S002": {
+      "pt": "Herdeiros de energia celestial que irradiam luz curativa e protegem aliados com presença inspiradora.",
+      "en": "Celestial-blooded heirs who shine with radiant healing and inspire allies with their presence."
+    },
+    "S003": {
+      "pt": "Goblinoides enormes que atacam das sombras, combinando furtividade com força bruta surpreendente.",
+      "en": "Massive goblinoids who lunge from the dark, blending stealth with startling brute force."
+    },
+    "S004": {
+      "pt": "Metade cavalo metade humano, correm com velocidade desértica enquanto carregam sabedoria tribal ancestral.",
+      "en": "Half horse and half human, they gallop with desert speed while carrying deep ancestral lore."
+    },
+    "S005": {
+      "pt": "Metamorfo mutável capaz de alterar aparência à vontade, perfeito para infiltradores e mestres do disfarce.",
+      "en": "A mutable changeling who reshapes their visage at will, perfect for infiltrators and masters of disguise."
+    },
+    "S006": {
+      "pt": "Linhagem personalizada feita sob medida, definindo traços e talentos conforme a história que quiser contar.",
+      "en": "A custom lineage built to taste, letting you define traits and talents that match your story."
+    },
+    "S007": {
+      "pt": "Draconatos orgulhosos que canalizam sopros elementais e honra ancestral de dragões lendários.",
+      "en": "Proud dragonborn who wield elemental breath and the storied honor of legendary dragons."
+    },
+    "S008": {
+      "pt": "Anões resistentes que dominam o trabalho em pedra, magia runica e disciplina militar tenaz.",
+      "en": "Stout dwarves who excel at stonecraft, runic magic, and unyielding martial discipline."
+    },
+    "S009": {
+      "pt": "Elfos elegantes ligados à magia feérica, combinando sentidos aguçados com perícia marcial milenar.",
+      "en": "Graceful elves tied to fey magic, blending keen senses with millennia of martial mastery."
+    },
+    "S010": {
+      "pt": "Fadas diminutas e astutas, voando com asas brilhantes e truques de encantamento travessos.",
+      "en": "Tiny, clever fairies who flit on iridescent wings and toss out playful enchantments."
+    },
+    "S011": {
+      "pt": "Firbolgs gentis e gigantes, protetores silenciosos de florestas com magia natural inata.",
+      "en": "Gentle giant firbolgs who guard forests in silence with innate nature magic."
+    },
+    "S012": {
+      "pt": "Genasi elementais cuja herança planares molda corpo e personalidade com tempestades internas.",
+      "en": "Elemental genasi whose planar blood shapes body and temperament with inner storms."
+    },
+    "S013": {
+      "pt": "Geppettin animados por magia, bonecos conscientes que exploram emoções humanas com curiosidade.",
+      "en": "Magic-awakened geppettin, living dolls who explore mortal emotions with bright curiosity."
+    },
+    "S014": {
+      "pt": "Gith guerreiros libertos da escravidão astral, disciplinados e focados em psiquismo marcial.",
+      "en": "Gith warriors freed from astral chains, disciplined and focused on martial psionics."
+    },
+    "S015": {
+      "pt": "Gnomos inventivos e brincalhões, mestres de dispositivos engenhosos e ilusões coloridas.",
+      "en": "Inventive, playful gnomes who master clever devices and colorful illusions."
+    },
+    "S016": {
+      "pt": "Duendes ágeis que combinam astúcia urbana com ataques súbitos e um humor travesso.",
+      "en": "Quick-footed goblins who mix city cunning with sudden strikes and impish humor."
+    },
+    "S017": {
+      "pt": "Golias montanheses de corpos colossais, sempre testando limites físicos em busca de desafios.",
+      "en": "Mountain-born goliaths with colossal frames who constantly chase new physical trials."
+    },
+    "S018": {
+      "pt": "Grung anfíbios venenosos, tribalistas que saltam alto e defendem territórios pantanosos.",
+      "en": "Poisonous amphibian grung who leap high and fiercely defend their swampy territories."
+    },
+    "S019": {
+      "pt": "Halflings otimistas e resilientes, mestres de esquiva e de encontrar alegria em qualquer viagem.",
+      "en": "Optimistic, resilient halflings who excel at nimble footwork and finding joy in every journey."
+    },
+    "S020": {
+      "pt": "Harengon velozes com reflexos de coelho, sempre prontos para aventuras caóticas e impulsivas.",
+      "en": "Quick harengon with rabbit reflexes, ever ready for impulsive, chaotic adventures."
+    },
+    "S021": {
+      "pt": "Arquiduendes estrategas e disciplinados que canalizam magia marcial inspirada pelos reinos feéricos.",
+      "en": "Tactical, disciplined hobgoblins who channel martial magic inspired by the fey courts."
+    },
+    "S022": {
+      "pt": "Humanos versáteis cuja adaptabilidade permite preencher qualquer papel e aprender rapidamente.",
+      "en": "Versatile humans whose adaptability lets them fill any role and pick up talents quickly."
+    },
+    "S023": {
+      "pt": "Kenku imitadores que dominam sons e movimentos, sobrevivendo com astúcia urbana e talento furtivo.",
+      "en": "Mimicking kenku who master sounds and motion, surviving through urban cunning and stealth."
+    },
+    "S024": {
+      "pt": "Kobolds engenhosos que compensam tamanho com armadilhas, magia dracónica e espírito de equipe.",
+      "en": "Ingenious kobolds who offset size with traps, draconic magic, and pack teamwork."
+    },
+    "S025": {
+      "pt": "Lizardfolk pragmáticos com instintos reptilianos, focados em sobrevivência fria e artesanato ósseo.",
+      "en": "Pragmatic lizardfolk with reptilian instincts focused on cold survival and bonecraft."
+    },
+    "S026": {
+      "pt": "Mandrágoras feéricas nascidas de estações, trocando humor e poderes conforme o ciclo do ano.",
+      "en": "Seasonal mandrakes born of the fey, shifting mood and magic with the turning year."
+    },
+    "S027": {
+      "pt": "Minotauros impulsivos que combinam força brutal com labirintos instintivos e lealdade tribal.",
+      "en": "Impulsive minotaurs who blend brutal strength with labyrinthine instincts and fierce loyalty."
+    },
+    "S028": {
+      "pt": "Orques resilientes e determinados, forjando honra na batalha e respeito por clãs guerreiros.",
+      "en": "Relentless orcs who forge honor in battle and loyalty to warrior clans."
+    },
+    "S029": {
+      "pt": "Sátiros festeiros guiados por música e desejos, sempre prontos para charmes, travessuras e dança.",
+      "en": "Revel-loving satyrs led by music and impulse, always ready for charms, mischief, and dance."
+    },
+    "S030": {
+      "pt": "Semi-licantropos mutáveis que liberam bestas interiores, adaptando-se a caça, perseguição ou fuga.",
+      "en": "Shifting lycanthropes who unleash inner beasts, adapting for the hunt, chase, or escape."
+    },
+    "S031": {
+      "pt": "Tabaxi felinos colecionadores de histórias, exploradores ágeis movidos por curiosidade infinita.",
+      "en": "Feline tabaxi who hoard tales, agile explorers driven by endless curiosity."
+    },
+    "S032": {
+      "pt": "Tieflings marcados por sangue infernal, com magia ardente e determinação para desafiar o destino.",
+      "en": "Infernal-marked tieflings with smoldering magic and the drive to defy fate."
+    },
+    "S033": {
+      "pt": "Tortles filosofam sobre viagens enquanto carregam o lar nas costas e lutam com golpes poderosos.",
+      "en": "Thoughtful tortles who carry home on their backs and fight with powerful, deliberate blows."
+    },
+    "S034": {
+      "pt": "Tritões guardiões dos mares, usando controle aquático e diplomacia marcial para proteger reinos submersos.",
+      "en": "Sea-guarding tritons who wield aquatic command and martial diplomacy to defend undersea realms."
+    },
+    "S035": {
+      "pt": "Verdans flexíveis, moldados pelo caos feérico, que crescem, mudam e encaram a vida com humor.",
+      "en": "Ever-changing verdan touched by fey chaos who grow, mutate, and face life with humor."
+    },
+    "S036": {
+      "pt": "Yuan-ti calculistas de sangue serpentino que manipulam venenos e magia hipnótica com precisão fria.",
+      "en": "Coldly calculating yuan-ti with serpentine blood who wield venom and hypnotic magic precisely."
+    },
+    "S037": {
+      "pt": "Dhampirs atormentados entre vida e morte, famintos por energia vital e dotados de agilidade sobrenatural.",
+      "en": "Dhampirs caught between life and death, hungry for vitality yet gifted with eerie agility."
+    },
+    "S038": {
+      "pt": "Sanguebruxas descendem de pactos feéricos ou hag, usando magia intuitiva e traços grotescos.",
+      "en": "Hexbloods born from hags or fey bargains, wielding intuitive magic and eerie features."
+    },
+    "S039": {
+      "pt": "Renascidos regressam da morte com memórias fragmentadas e corpos remendados, movidos por propósito misterioso.",
+      "en": "Reborn come back from death with patchwork bodies and fractured memories driving mysterious purpose."
+    }
+  },
+  "subspecies_descriptions": {
+    "SS001": {
+      "pt": "Personaliza a linhagem adicionando visão no escuro, ideal para campanhas subterrâneas.",
+      "en": "Tailor your lineage with darkvision, perfect for delving through shadowed adventures."
+    },
+    "SS002": {
+      "pt": "Linhagem personalizada com perícia adicional, focada em habilidades sociais ou técnicas.",
+      "en": "Custom lineage that grabs an extra skill, great for social experts or technical savants."
+    },
+    "SS003": {
+      "pt": "Draconato negro que exala ácido corrosivo e prospera em pântanos sombrios.",
+      "en": "Black dragonborn who belch caustic acid and thrive in shadowy marshes."
+    },
+    "SS004": {
+      "pt": "Draconato azul, orgulhoso e elétrico, com sopro em linha devastador.",
+      "en": "Blue dragonborn crackling with pride and lightning, unleashing a brutal line breath."
+    },
+    "SS005": {
+      "pt": "Draconato de latão comunicativo que dispara fogo escaldante e ama conversas longas.",
+      "en": "Talkative brass dragonborn who breathe scorching fire and adore long conversations."
+    },
+    "SS006": {
+      "pt": "Draconato de bronze guardião das costas, com sopros elétricos e senso de justiça naval.",
+      "en": "Coastal bronze dragonborn who spit lightning and uphold a sailor's sense of justice."
+    },
+    "SS007": {
+      "pt": "Draconato de cobre brincalhão cujo sopro ácido pune inimigos arrogantes.",
+      "en": "Mischievous copper dragonborn whose acidic breath humbles arrogant foes."
+    },
+    "SS008": {
+      "pt": "Draconato dourado benevolente que queima inimigos com chamas purificadoras.",
+      "en": "Benevolent gold dragonborn who burn enemies with purifying fire."
+    },
+    "SS009": {
+      "pt": "Draconato verde ardiloso que esguicha veneno sufocante através de névoas tóxicas.",
+      "en": "Cunning green dragonborn who spew choking poison within toxic mists."
+    },
+    "SS010": {
+      "pt": "Draconato vermelho impetuoso com chama devastadora e ambição vulcânica.",
+      "en": "Impulsive red dragonborn wielding devastating flame and volcanic ambition."
+    },
+    "SS011": {
+      "pt": "Draconato prateado protetor que respira frio cortante e adora batalhas honradas.",
+      "en": "Protective silver dragonborn who breathe slicing cold and relish honorable battles."
+    },
+    "SS012": {
+      "pt": "Draconato branco selvagem adaptado a tundras, cuspindo gelo brutal.",
+      "en": "Savage white dragonborn built for tundras, exhaling brutal frost."
+    },
+    "SS013": {
+      "pt": "Duergar taciturno das profundezas, mestre em engrandecer o corpo e desaparecer na penumbra.",
+      "en": "Grim duergar from the deep who enlarge themselves and fade into gloom."
+    },
+    "SS014": {
+      "pt": "Anão comum disciplinado, com tradições clanicas e resistência lendária.",
+      "en": "Stalwart common dwarf with clan traditions and legendary endurance."
+    },
+    "SS016": {
+      "pt": "Elfo drow das cidades subterrâneas, combinando magia sombria e veneno elegante.",
+      "en": "Drow elf of the underdark cities, mixing shadow magic with poised poison."
+    },
+    "SS017": {
+      "pt": "Eladrin mutável que canaliza emoções sazonais para teleporte feérico e charme etéreo.",
+      "en": "Shape-shifting eladrin who pour seasonal emotion into fey steps and ethereal charm."
+    },
+    "SS018": {
+      "pt": "Alto elfo erudito ligado a magia arcana refinada e disciplina ancestral.",
+      "en": "Learned high elf steeped in refined arcane magic and ancestral discipline."
+    },
+    "SS019": {
+      "pt": "Elfo do mar adaptado às ondas, com natação veloz e armas de tridente.",
+      "en": "Sea elf adapted to the surf with swift swimming and trident-ready combat."
+    },
+    "SS020": {
+      "pt": "Shadar-kai sombrio, marcado por viagem sombria e resiliente à necromancia.",
+      "en": "Shadow-forged shadar-kai hardened by dread journeys and resistant to necromancy."
+    },
+    "SS021": {
+      "pt": "Elfo dos bosques ágil que domina arco, camuflagem e movimento silencioso.",
+      "en": "Agile wood elf who masters bows, camouflage, and silent strides."
+    },
+    "SS022": {
+      "pt": "Genasi do ar com rajadas que levantam voo curto e infundem relâmpagos.",
+      "en": "Air genasi riding gusts for short flights while crackling with lightning."
+    },
+    "SS023": {
+      "pt": "Genasi da terra firme, com pele rochosa e tremores defensivos.",
+      "en": "Earth genasi with stony hide and ground-shaking defenses."
+    },
+    "SS024": {
+      "pt": "Genasi do fogo ardente, emitindo calor constante e chamas agressivas.",
+      "en": "Fire genasi blazing with constant heat and aggressive flames."
+    },
+    "SS025": {
+      "pt": "Genasi da água fluido, respira sob as ondas e molda correntes sutis.",
+      "en": "Fluid water genasi who breathe below the waves and sculpt subtle currents."
+    },
+    "SS026": {
+      "pt": "Geppettin de porcelana delicado mas resiliente, com articulações rígidas e elegância fria.",
+      "en": "Delicate yet resilient bisque geppettin with stiff joints and cool elegance."
+    },
+    "SS027": {
+      "pt": "Geppettin marioneta articulado por fios mágicos, especialista em gestos dramáticos.",
+      "en": "Marionette geppettin animated by invisible strings, expert in dramatic gestures."
+    },
+    "SS028": {
+      "pt": "Geppettin de peluche macio que inspira confiança e acolhe abraços antes da batalha.",
+      "en": "Plushie geppettin whose soft form inspires trust and hugs before battle."
+    },
+    "SS029": {
+      "pt": "Githyanki saqueador astral, mestre em lâminas de prata e pirataria planar.",
+      "en": "Astral-raiding githyanki skilled with silver blades and planar piracy."
+    },
+    "SS030": {
+      "pt": "Githzerai asceta que equilibra corpo e mente através de disciplina psíquica.",
+      "en": "Ascetic githzerai balancing body and mind through psychic discipline."
+    },
+    "SS031": {
+      "pt": "Gnomo das profundezas furtivo, habituado a cavernas e ilusão tátil.",
+      "en": "Stealthy deep gnome used to caverns and tactile illusions."
+    },
+    "SS032": {
+      "pt": "Gnomo da floresta brincalhão, amigo de animais e mestre em truques ligeiros.",
+      "en": "Playful forest gnome allied with beasts and deft trickery."
+    },
+    "SS033": {
+      "pt": "Gnomo das rochas inventor que carrega ferramentas e autômatos improvisados.",
+      "en": "Tinkering rock gnome lugging tools and improvised automatons."
+    },
+    "SS034": {
+      "pt": "Golias das nuvens treina saltos colossais e golpes de raio inspirados em trovões.",
+      "en": "Cloud goliath practices colossal leaps and thunder-inspired strikes."
+    },
+    "SS035": {
+      "pt": "Golias do fogo canaliza calor vulcânico em armações ardentes.",
+      "en": "Fire goliath channels volcanic heat into blazing offense."
+    },
+    "SS036": {
+      "pt": "Golias da geada suporta ventos cortantes e reforça aliados com gelo protetor.",
+      "en": "Frost goliath withstands cutting winds and shields allies with protective ice."
+    },
+    "SS037": {
+      "pt": "Golias das colinas com vigor constante e queda de pedras devastadora.",
+      "en": "Hill goliath brims with steady vigor and devastating rockfalls."
+    },
+    "SS038": {
+      "pt": "Golias de pedra com pele impenetrável e punhos como obeliscos.",
+      "en": "Stone goliath bears nearly impenetrable skin and obelisk fists."
+    },
+    "SS039": {
+      "pt": "Golias da tempestade cavalga relâmpagos e arremessa trovões.",
+      "en": "Storm goliath rides lightning and hurls thunder."
+    },
+    "SS040": {
+      "pt": "Halfling comum alegre, sorte natural e coragem inesperada.",
+      "en": "Bright common halfling with natural luck and surprising bravery."
+    },
+    "SS041": {
+      "pt": "Halfling dos sussurros telepata, comunicando-se em silêncio e protegendo segredos de clã.",
+      "en": "Ghostwise halfling speaks mind-to-mind, guarding clan secrets in silence."
+    },
+    "SS042": {
+      "pt": "Kobold astuto focado em ferramentas e armadilhas engenhosas.",
+      "en": "Crafty kobold focused on clever tools and traps."
+    },
+    "SS043": {
+      "pt": "Kobold desafiante que resiste à tirania dracónica e incentiva revoltas.",
+      "en": "Defiant kobold resisting draconic tyrants and rallying uprisings."
+    },
+    "SS044": {
+      "pt": "Kobold feiticeiro com sangue mágico latente e truques arcanos fáceis.",
+      "en": "Sorcerous kobold with latent magical blood and effortless arcane tricks."
+    },
+    "SS045": {
+      "pt": "Mandrágora outonal melancólica, espalhando sono e folhas douradas.",
+      "en": "Melancholy autumn mandrake who spreads sleep and golden leaves."
+    },
+    "SS046": {
+      "pt": "Mandrágora primaveril exuberante, curando aliados com vitalidade floral.",
+      "en": "Exuberant spring mandrake who heals allies with floral vitality."
+    },
+    "SS047": {
+      "pt": "Mandrágora estival radiante, lançando chamas solares e alegria impulsiva.",
+      "en": "Radiant summer mandrake who flings solar fire and impulsive joy."
+    },
+    "SS048": {
+      "pt": "Mandrágora invernal serena, manipulando gelo e emoções calmas.",
+      "en": "Serene winter mandrake who shapes ice and soothing emotions."
+    },
+    "SS049": {
+      "pt": "Semi-licantropo encouraçado, com peles espessas e foco defensivo.",
+      "en": "Beasthide shifter with thick hide and defensive focus."
+    },
+    "SS050": {
+      "pt": "Semi-licantropo lupino que transforma presas em armas agressivas.",
+      "en": "Longtooth shifter turning fangs into aggressive weapons."
+    },
+    "SS051": {
+      "pt": "Semi-licantropo veloz que dança entre inimigos com passos felinos.",
+      "en": "Swiftstride shifter who dances between foes with feline steps."
+    },
+    "SS052": {
+      "pt": "Semi-licantropo canídeo instintivo, caçador paciente com sentidos aguçados.",
+      "en": "Wildhunt shifter guided by primal instincts and razor senses."
+    },
+    "SS053": {
+      "pt": "Tiefling abissal que canaliza caos demoníaco e magia visceral.",
+      "en": "Abyssal tiefling channeling demonic chaos and visceral magic."
+    },
+    "SS054": {
+      "pt": "Tiefling ctónico ligado a segredos subterrâneos e sombras pesadas.",
+      "en": "Chthonic tiefling bound to subterranean secrets and heavy shadows."
+    },
+    "SS055": {
+      "pt": "Tiefling infernal clássico com foco em disciplina diabólica e fogo controlado.",
+      "en": "Classic infernal tiefling focused on devilish discipline and controlled flame."
+    }
+  },
+  "subsubspecies_descriptions": {
+    "SSS049": {
+      "pt": "Eladrin primaveril que salta entre planos com energia esperançosa e renovações floridas.",
+      "en": "Spring eladrin who step between realms with hopeful energy and blooming renewal."
+    },
+    "SSS050": {
+      "pt": "Eladrin estival radiante, irradiando calor apaixonado e coragem exuberante.",
+      "en": "Summer eladrin blazing with passionate heat and exuberant courage."
+    },
+    "SSS051": {
+      "pt": "Eladrin outonal contemplativo, trazendo calma melancólica e rajadas de vento dourado.",
+      "en": "Autumn eladrin contemplatively calm, ushering in melancholy breezes of gold."
+    },
+    "SSS052": {
+      "pt": "Eladrin invernal austero, silencioso como neve recém-caída e cortante como gelo.",
+      "en": "Winter eladrin austere as fresh snow and sharp as sculpted ice."
+    }
   }
 }

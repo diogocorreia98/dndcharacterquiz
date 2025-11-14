@@ -457,6 +457,9 @@ const DESCRIPTION_GROUP_MAP = {
   q_warlock_familiar_creature_land: 'warlock_familiar_creature_land',
   q_warlock_familiar_creature_water: 'warlock_familiar_creature_water',
   q_dark_gift_type: 'dark_gifts',
+  q_species_pick: 'species_descriptions',
+  q_subspecies_pick: 'subspecies_descriptions',
+  q_subsubspecies_pick: 'subsubspecies_descriptions',
 };
 
 const buildSpeciesDescription = function (option) {
