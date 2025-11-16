@@ -246,23 +246,35 @@ body {
 
 .option__label {
   margin: 0;
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.option__label--note {
+  color: var(--muted);
 }
 
 .option__content {
   display: grid;
-  gap: 0.25rem;
+  gap: 0.35rem;
 }
 
 .option__description {
   margin: 0;
-  font-size: 0.9rem;
-  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.5;
+  font-weight: 700;
+  color: var(--text);
 }
 
 @media (prefers-color-scheme: dark) {
   .option__description {
+    color: var(--text-dark);
+  }
+  .option__label,
+  .option__label--note {
     color: var(--muted-dark);
   }
 }
