@@ -810,6 +810,7 @@ class QuizApp {
       resultsContainer: document.getElementById('results-container'),
       restartButton: document.getElementById('restart-button'),
       startButton: document.getElementById('start-button'),
+      appTitle: document.getElementById('app-title'),
       startTitle: document.getElementById('start-title'),
       startDescription: document.getElementById('start-description'),
       startLanguageNote: document.getElementById('start-language-note'),
@@ -892,6 +893,9 @@ class QuizApp {
   }
 
   updateStaticText() {
+    if (this.dom.appTitle) {
+      this.dom.appTitle.textContent = this.getText('title');
+    }
     if (this.dom.languageLabel) {
       this.dom.languageLabel.textContent = this.getText('languageLabel');
     }
@@ -1089,6 +1093,10 @@ class QuizApp {
     const showStart = target === 'start';
     const showQuestion = target === 'question';
     const showResult = target === 'result';
+
+    if (this.dom.appTitle) {
+      this.dom.appTitle.toggleAttribute('hidden', !showStart);
+    }
 
     if (this.dom.startScreen) {
       this.dom.startScreen.toggleAttribute('hidden', !showStart);
@@ -1669,20 +1677,24 @@ class QuizApp {
         this.selectedValues.add(option.value);
       }
 
-      const label = document.createElement('p');
-      label.className = 'option__label';
-      label.textContent = this.getOptionLabel(nodeId, option);
+      const labelText = this.getOptionLabel(nodeId, option);
+      const descriptionText = this.getOptionDescription(nodeId, option);
+      const primaryText = descriptionText || labelText;
+      const noteText = descriptionText ? labelText : '';
+
+      const description = document.createElement('p');
+      description.className = 'option__description';
+      description.textContent = primaryText;
 
       const content = document.createElement('div');
       content.className = 'option__content';
-      content.appendChild(label);
+      content.appendChild(description);
 
-      const descriptionText = this.getOptionDescription(nodeId, option);
-      if (descriptionText) {
-        const description = document.createElement('p');
-        description.className = 'option__description';
-        description.textContent = descriptionText;
-        content.appendChild(description);
+      if (noteText) {
+        const label = document.createElement('p');
+        label.className = 'option__label option__label--note';
+        label.textContent = noteText;
+        content.appendChild(label);
       }
 
       wrapper.append(input, content);
