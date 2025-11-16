@@ -32,10 +32,6 @@ const UI_TEXT = {
     pt: 'Começar questionário',
     en: 'Start quiz',
   },
-  progressPrefix: {
-    pt: 'Pergunta',
-    en: 'Question',
-  },
   navPrevious: {
     pt: 'Anterior',
     en: 'Previous',
@@ -805,8 +801,6 @@ class QuizApp {
       startScreen: document.getElementById('start-screen'),
       questionScreen: document.getElementById('question-screen'),
       resultScreen: document.getElementById('result-screen'),
-      appTitle: document.getElementById('app-title'),
-      progress: document.getElementById('progress-indicator'),
       statusSummary: document.getElementById('status-summary'),
       questionText: document.getElementById('question-text'),
       optionsForm: document.getElementById('options-form'),
@@ -898,9 +892,6 @@ class QuizApp {
   }
 
   updateStaticText() {
-    if (this.dom.appTitle) {
-      this.dom.appTitle.textContent = this.getText('title');
-    }
     if (this.dom.languageLabel) {
       this.dom.languageLabel.textContent = this.getText('languageLabel');
     }
@@ -1207,12 +1198,6 @@ class QuizApp {
     } else {
       this.selectedValue = preselect;
       this.selectedValues = new Set();
-    }
-
-    if (this.dom.progress) {
-      this.dom.progress.textContent = `${this.getText('progressPrefix')} ${
-        this.state.history.length + 1
-      }`;
     }
     if (this.dom.questionText) {
       this.dom.questionText.textContent = this.getQuestionText(nodeId, node);
