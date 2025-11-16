@@ -4,7 +4,7 @@
     "q_primary_roles": {
       "type": "question",
       "section": "class",
-      "question": "Que papel preferes em combate (seleciona até 2 opções)?",
+      "question": "My character steps into which primary combat roles (select up to 2)?",
       "selection": {
         "mode": "multiple",
         "min": 1,
@@ -52,7 +52,7 @@
     "q_healer_support_preference": {
       "type": "question",
       "section": "class",
-      "question": "Qual preferes?",
+      "question": "My character leans toward which kind of support?",
       "when": {
         "var": "_pending_healer_support",
         "op": "eq",
@@ -120,7 +120,7 @@
     "q_secondary_roles": {
       "type": "question",
       "section": "class",
-      "question": "Há mais algum papel que precisas que a tua personagem sirva (Seleciona 0, 1 ou 2 opções)?",
+      "question": "My character also covers which other roles (select up to 2)?",
       "selection": {
         "mode": "multiple",
         "min": 0,
@@ -152,7 +152,7 @@
     "q_class_complexity": {
       "type": "question",
       "section": "class",
-      "question": "Com que nível de complexidade te sentes confortável?",
+      "question": "My character thrives with which level of class complexity?",
       "options": [
         {
           "value": "A",
@@ -192,7 +192,7 @@
     "q_class_simple_choice": {
       "type": "question",
       "section": "class",
-      "question": "Que classe preferes jogar?",
+      "question": "My character adventures as which class?",
       "options": [
         {
           "value": "BARBARIAN",
@@ -293,7 +293,7 @@
     "q_class_medium_choice": {
       "type": "question",
       "section": "class",
-      "question": "Que classe preferes jogar?",
+      "question": "My character adventures as which class?",
       "options": [
         {
           "value": "BARBARIAN",
@@ -498,7 +498,7 @@
     "q_class_high_choice": {
       "type": "question",
       "section": "class",
-      "question": "Que classe preferes jogar?",
+      "question": "My character adventures as which class?",
       "options": [
         {
           "value": "BARBARIAN",
@@ -885,7 +885,7 @@
     "q_subclass_group": {
       "type": "question",
       "section": "class",
-      "question": "Preferes explorar subclasses principais ou especializadas?",
+      "question": "My character dives into which type of subclass focus?",
       "options": [
         {
           "value": "CORE",
@@ -928,7 +928,7 @@
     "q_subclass_choice": {
       "type": "question",
       "section": "class",
-      "question": "Qual destas subclasses chama mais por ti?",
+      "question": "My character resonates most with which subclass?",
       "options_source": {
         "type": "inline",
         "dataset": "subclasses",
@@ -993,7 +993,7 @@
     "q_find_familiar_use": {
       "type": "question",
       "section": "class",
-      "question": "Pretendes usar o feitiço Find Familiar e ter uma companhia animal mágica?",
+      "question": "My character plans to use the Find Familiar spell and keep a magical animal companion?",
       "when": {
         "any": [
           {
@@ -1079,7 +1079,7 @@
     "q_familiar_habitat": {
       "type": "question",
       "section": "class",
-      "question": "O teu familiar ideal vive...?",
+      "question": "My character's ideal familiar lives where?",
       "when": {
         "all": [
           {
@@ -1143,7 +1143,7 @@
     "q_familiar_creature_sky": {
       "type": "question",
       "section": "class",
-      "question": "Qual destas criaturas aéreas te acompanha?",
+      "question": "My character is accompanied by which flying creature?",
       "when": {
         "all": [
           {
@@ -1219,7 +1219,7 @@
     "q_familiar_creature_land": {
       "type": "question",
       "section": "class",
-      "question": "Qual destes animais terrestres partilha a tua jornada?",
+      "question": "My character journeys with which land animal?",
       "when": {
         "all": [
           {
@@ -1306,7 +1306,7 @@
     "q_familiar_creature_water": {
       "type": "question",
       "section": "class",
-      "question": "Qual destas criaturas aquáticas é tua aliada?",
+      "question": "My character partners with which aquatic creature?",
       "when": {
         "all": [
           {
@@ -1360,7 +1360,7 @@
     "q_class_adjustment_cleric": {
       "type": "question",
       "section": "class",
-      "question": "Que Divine Order pretendes escolher?",
+      "question": "My character follows which Divine Order?",
       "options": [
         {
           "value": "CLERIC_PROTECTOR",
@@ -1389,7 +1389,7 @@
     "q_class_adjustment_druid": {
       "type": "question",
       "section": "class",
-      "question": "Que Primal Order pretendes escolher?",
+      "question": "My character follows which Primal Order?",
       "options": [
         {
           "value": "DRUID_WARDEN",
@@ -1418,7 +1418,7 @@
     "q_class_adjustment_warlock": {
       "type": "question",
       "section": "class",
-      "question": "Que Pact Boon Invocation pretendes escolher?",
+      "question": "My character binds to which Pact Boon Invocation?",
       "options": [
         {
           "value": "WARLOCK_PACT_OF_THE_TOME",
@@ -1510,7 +1510,7 @@
     "q_warlock_familiar_type": {
       "type": "question",
       "section": "class",
-      "question": "Que tipo de familiar mágico te acompanha nas tuas aventuras?",
+      "question": "My character is accompanied by which kind of magical familiar?",
       "when": {
         "all": [
           {
@@ -1573,7 +1573,7 @@
     "q_warlock_familiar_style": {
       "type": "question",
       "section": "class",
-      "question": "Preferes que o teu familiar tenha...?",
+      "question": "My character prefers a familiar that has what trait?",
       "when": {
         "all": [
           {
@@ -1602,7 +1602,7 @@
     "q_warlock_familiar_dark": {
       "type": "question",
       "section": "class",
-      "question": "Qual destes seres das trevas preferes como familiar?",
+      "question": "My character claims which shadowy being as a familiar?",
       "when": {
         "all": [
           {
@@ -1667,7 +1667,7 @@
     "q_warlock_familiar_mystic": {
       "type": "question",
       "section": "class",
-      "question": "Qual destas criaturas mágicas e fascinantes escolhes?",
+      "question": "My character travels with which magical and wondrous creature?",
       "when": {
         "all": [
           {
@@ -1732,7 +1732,7 @@
     "q_warlock_familiar_habitat": {
       "type": "question",
       "section": "class",
-      "question": "O teu familiar ideal vive...?",
+      "question": "My character's ideal familiar lives where?",
       "when": {
         "all": [
           {
@@ -1806,7 +1806,7 @@
     "q_warlock_familiar_creature_sky": {
       "type": "question",
       "section": "class",
-      "question": "Qual destas criaturas aéreas te acompanha?",
+      "question": "My character is accompanied by which flying creature?",
       "when": {
         "all": [
           {
@@ -1887,7 +1887,7 @@
     "q_warlock_familiar_creature_land": {
       "type": "question",
       "section": "class",
-      "question": "Qual destas criaturas terrestres te acompanha?",
+      "question": "My character is partnered with which terrestrial creature?",
       "when": {
         "all": [
           {
@@ -2038,7 +2038,7 @@
     "q_class_adjustment_fighter": {
       "type": "question",
       "section": "class",
-      "question": "Que Estilo de Luta preferes aprender?",
+      "question": "My character trains in which Fighting Style?",
       "options": [
         {
           "value": "FIGHTER_FIGHTING_STYLE_CLASSIC",
@@ -2093,7 +2093,7 @@
     "q_class_adjustment_ranger": {
       "type": "question",
       "section": "class",
-      "question": "Que Estilo de Luta preferes aprender?",
+      "question": "My character trains in which Fighting Style?",
       "options": [
         {
           "value": "RANGER_FIGHTING_STYLE_CLASSIC",
@@ -2164,7 +2164,7 @@
     "q_class_adjustment_paladin": {
       "type": "question",
       "section": "class",
-      "question": "Que Estilo de Luta preferes aprender?",
+      "question": "My character trains in which Fighting Style?",
       "options": [
         {
           "value": "PALADIN_FIGHTING_STYLE_CLASSIC",
@@ -2235,7 +2235,7 @@
     "q_physical_ability_preference": {
       "type": "question",
       "section": "class",
-      "question": "Preferes destacar a Destreza (DEX) ou a Força (STR) da tua personagem?",
+      "question": "My character emphasizes which core ability, Dexterity (DEX) or Strength (STR)?",
       "when": {
         "var": "variant_requires_physical_preference",
         "op": "eq",
@@ -2270,7 +2270,7 @@
     "q_background_preference": {
       "type": "question",
       "section": "background",
-      "question": "Que tipo de vida levou a tua personagem?",
+      "question": "My character lived what kind of life?",
       "when": {
         "var": "class_ability_combo",
         "op": "is_set"
@@ -2304,7 +2304,7 @@
     "q_dark_gift_presence": {
       "type": "question",
       "section": "dark_gift",
-      "question": "A tua personagem carrega uma maldição?",
+      "question": "My character carries a curse, right?",
       "options": [
         {
           "value": "YES",
@@ -2333,7 +2333,7 @@
     "q_dark_gift_type": {
       "type": "question",
       "section": "dark_gift",
-      "question": "Que tipo de maldição ela tem?",
+      "question": "My character bears what kind of curse?",
       "options": [
         {
           "value": "ECHOING_SOUL",

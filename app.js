@@ -228,200 +228,200 @@ const SECTION_FALLBACK = {
 const QUESTION_TRANSLATIONS = {
   "q_gender": {
     "question": {
-      "pt": "Como se apresenta a tua personagem em termos de género?",
-      "en": "How does your character present in terms of gender?"
+      "pt": "My character presents as which gender?",
+      "en": "My character presents as which gender?"
     }
   },
   "q_height": {
     "question": {
-      "pt": "Em que faixa de alturas se encaixa a tua personagem?",
-      "en": "Which height range fits your character?"
+      "pt": "My character is roughly what height?",
+      "en": "My character is roughly what height?"
     }
   },
   "q_species_exoticness": {
     "question": {
-      "pt": "Quão exótica pretendes que a espécie da tua personagem seja?",
-      "en": "How exotic do you want your character's species to be?"
+      "pt": "My character comes from a species that is how familiar?",
+      "en": "My character comes from a species that is how familiar?"
     }
   },
   "q_species_animal_likeness": {
     "question": {
-      "pt": "A tua personagem tem traços de animal?",
-      "en": "Does your character have animal traits?"
+      "pt": "My character shows animal traits, yes or no?",
+      "en": "My character shows animal traits, yes or no?"
     }
   },
   "q_species_pick": {
     "question": {
-      "pt": "Que espécie preferes jogar?",
-      "en": "Which species do you want to play?"
+      "pt": "My character is what species?",
+      "en": "My character is what species?"
     }
   },
   "q_dragonborn_ancestry_type": {
     "question": {
-      "pt": "Que tipo de ancestralidade dracónica define a tua personagem?",
-      "en": "Which type of draconic ancestry defines your character?"
+      "pt": "My character is defined by which draconic ancestry?",
+      "en": "My character is defined by which draconic ancestry?"
     }
   },
   "q_goliath_power_type": {
     "question": {
-      "pt": "Que tipo de poder de ancestralidade gigante melhor descreve a tua personagem?",
-      "en": "Which kind of giant ancestry power best fits your character?"
+      "pt": "My character draws on which giant-ancestry power?",
+      "en": "My character draws on which giant-ancestry power?"
     }
   },
   "q_subspecies_pick": {
     "question": {
-      "pt": "Que subespécie prefere a tua personagem?",
-      "en": "Which sub-species does your character prefer?"
+      "pt": "My character is from which sub-species?",
+      "en": "My character is from which sub-species?"
     }
   },
   "q_subsubspecies_pick": {
     "question": {
-      "pt": "Qual é a variação específica da subespécie?",
-      "en": "What is the specific variation of the sub-species?"
+      "pt": "My character belongs to which specific variation of that sub-species?",
+      "en": "My character belongs to which specific variation of that sub-species?"
     }
   },
   "q_primary_roles": {
     "question": {
-      "pt": "Que papel preferes em combate (seleciona até 2 opções)?",
-      "en": "Which combat role do you prefer (select up to 2 options)?"
+      "pt": "My character steps into which primary combat roles (select up to 2)?",
+      "en": "My character steps into which primary combat roles (select up to 2)?"
     }
   },
   "q_healer_support_preference": {
     "question": {
-      "pt": "Qual preferes?",
-      "en": "Which do you prefer?"
+      "pt": "My character leans toward which kind of support?",
+      "en": "My character leans toward which kind of support?"
     }
   },
   "q_secondary_roles": {
     "question": {
-      "pt": "Há mais algum papel que precisas que a tua personagem sirva (Seleciona 0, 1 ou 2 opções)?",
-      "en": "Do you need your character to fill any other roles (select 0, 1, or 2 options)?"
+      "pt": "My character also covers which other roles (select up to 2)?",
+      "en": "My character also covers which other roles (select up to 2)?"
     }
   },
   "q_class_complexity": {
     "question": {
-      "pt": "Com que nível de complexidade te sentes confortável?",
-      "en": "What level of class complexity are you comfortable with?"
+      "pt": "My character thrives with which level of class complexity?",
+      "en": "My character thrives with which level of class complexity?"
     }
   },
   "q_class_simple_choice": {
     "question": {
-      "pt": "Que classe preferes jogar?",
-      "en": "Which class would you like to play?"
+      "pt": "My character adventures as which class?",
+      "en": "My character adventures as which class?"
     }
   },
   "q_class_medium_choice": {
     "question": {
-      "pt": "Que classe preferes jogar?",
-      "en": "Which class would you like to play?"
+      "pt": "My character adventures as which class?",
+      "en": "My character adventures as which class?"
     }
   },
   "q_class_high_choice": {
     "question": {
-      "pt": "Que classe preferes jogar?",
-      "en": "Which class would you like to play?"
+      "pt": "My character adventures as which class?",
+      "en": "My character adventures as which class?"
     }
   },
   "q_subclass_group": {
     "question": {
-      "pt": "Preferes explorar subclasses principais ou especializadas?",
-      "en": "Do you want to explore core or specialized subclasses?"
+      "pt": "My character dives into which type of subclass focus?",
+      "en": "My character dives into which type of subclass focus?"
     }
   },
   "q_subclass_choice": {
     "question": {
-      "pt": "Qual destas subclasses chama mais por ti?",
-      "en": "Which of these subclasses appeals to you most?"
+      "pt": "My character resonates most with which subclass?",
+      "en": "My character resonates most with which subclass?"
     }
   },
   "q_find_familiar_use": {
     "question": {
-      "pt": "Pretendes usar o feitiço Find Familiar e ter uma companhia animal mágica?",
-      "en": "Do you plan to use the Find Familiar spell and have a magical animal companion?"
+      "pt": "My character plans to use the Find Familiar spell and keep a magical animal companion?",
+      "en": "My character plans to use the Find Familiar spell and keep a magical animal companion?"
     }
   },
   "q_familiar_habitat": {
     "question": {
-      "pt": "O teu familiar ideal vive...?",
-      "en": "Where does your ideal familiar live?"
+      "pt": "My character's ideal familiar lives where?",
+      "en": "My character's ideal familiar lives where?"
     }
   },
   "q_familiar_creature_sky": {
     "question": {
-      "pt": "Qual destas criaturas aéreas te acompanha?",
-      "en": "Which of these aerial creatures accompanies you?"
+      "pt": "My character is accompanied by which flying creature?",
+      "en": "My character is accompanied by which flying creature?"
     }
   },
   "q_familiar_creature_land": {
     "question": {
-      "pt": "Qual destes animais terrestres partilha a tua jornada?",
-      "en": "Which of these land animals joins your journey?"
+      "pt": "My character journeys with which land animal?",
+      "en": "My character journeys with which land animal?"
     }
   },
   "q_familiar_creature_water": {
     "question": {
-      "pt": "Qual destas criaturas aquáticas é tua aliada?",
-      "en": "Which of these aquatic creatures is your ally?"
+      "pt": "My character partners with which aquatic creature?",
+      "en": "My character partners with which aquatic creature?"
     }
   },
   "q_class_adjustment_cleric": {
     "question": {
-      "pt": "Que Divine Order pretendes escolher?",
-      "en": "Which Divine Order do you want to choose?"
+      "pt": "My character follows which Divine Order?",
+      "en": "My character follows which Divine Order?"
     }
   },
   "q_class_adjustment_druid": {
     "question": {
-      "pt": "Que Primal Order pretendes escolher?",
-      "en": "Which Primal Order do you want to choose?"
+      "pt": "My character follows which Primal Order?",
+      "en": "My character follows which Primal Order?"
     }
   },
   "q_class_adjustment_warlock": {
     "question": {
-      "pt": "Que Pact Boon Invocation pretendes escolher?",
-      "en": "Which Pact Boon Invocation do you want to choose?"
+      "pt": "My character binds to which Pact Boon Invocation?",
+      "en": "My character binds to which Pact Boon Invocation?"
     }
   },
   "q_warlock_familiar_type": {
     "question": {
-      "pt": "Que tipo de familiar mágico te acompanha nas tuas aventuras?",
-      "en": "What type of magical familiar accompanies you on your adventures?"
+      "pt": "My character is accompanied by which kind of magical familiar?",
+      "en": "My character is accompanied by which kind of magical familiar?"
     }
   },
   "q_warlock_familiar_style": {
     "question": {
-      "pt": "Preferes que o teu familiar tenha...?",
-      "en": "Do you prefer your familiar to have...?"
+      "pt": "My character prefers a familiar that has what trait?",
+      "en": "My character prefers a familiar that has what trait?"
     }
   },
   "q_warlock_familiar_dark": {
     "question": {
-      "pt": "Qual destes seres das trevas preferes como familiar?",
-      "en": "Which dark creature do you prefer as a familiar?"
+      "pt": "My character claims which shadowy being as a familiar?",
+      "en": "My character claims which shadowy being as a familiar?"
     }
   },
   "q_warlock_familiar_mystic": {
     "question": {
-      "pt": "Qual destas criaturas mágicas e fascinantes escolhes?",
-      "en": "Which of these magical and fascinating creatures do you choose?"
+      "pt": "My character travels with which magical and wondrous creature?",
+      "en": "My character travels with which magical and wondrous creature?"
     }
   },
   "q_warlock_familiar_habitat": {
     "question": {
-      "pt": "O teu familiar ideal vive...?",
-      "en": "Where does your ideal familiar live?"
+      "pt": "My character's ideal familiar lives where?",
+      "en": "My character's ideal familiar lives where?"
     }
   },
   "q_warlock_familiar_creature_sky": {
     "question": {
-      "pt": "Qual destas criaturas aéreas te acompanha?",
-      "en": "Which of these aerial creatures accompanies you?"
+      "pt": "My character is accompanied by which flying creature?",
+      "en": "My character is accompanied by which flying creature?"
     }
   },
   "q_warlock_familiar_creature_land": {
     "question": {
-      "pt": "Qual destas criaturas terrestres te acompanha?",
-      "en": "Which of these land creatures accompanies you?"
+      "pt": "My character is partnered with which terrestrial creature?",
+      "en": "My character is partnered with which terrestrial creature?"
     }
   },
   "q_warlock_familiar_creature_water": {
@@ -432,44 +432,44 @@ const QUESTION_TRANSLATIONS = {
   },
   "q_class_adjustment_fighter": {
     "question": {
-      "pt": "Que Estilo de Luta preferes aprender?",
-      "en": "Which Fighting Style would you like to learn?"
+      "pt": "My character trains in which Fighting Style?",
+      "en": "My character trains in which Fighting Style?"
     }
   },
   "q_class_adjustment_ranger": {
     "question": {
-      "pt": "Que Estilo de Luta preferes aprender?",
-      "en": "Which Fighting Style would you like to learn?"
+      "pt": "My character trains in which Fighting Style?",
+      "en": "My character trains in which Fighting Style?"
     }
   },
   "q_class_adjustment_paladin": {
     "question": {
-      "pt": "Que Estilo de Luta preferes aprender?",
-      "en": "Which Fighting Style would you like to learn?"
+      "pt": "My character trains in which Fighting Style?",
+      "en": "My character trains in which Fighting Style?"
     }
   },
   "q_physical_ability_preference": {
     "question": {
-      "pt": "Preferes destacar a Destreza (DEX) ou a Força (STR) da tua personagem?",
-      "en": "Would you rather highlight your character's Dexterity (DEX) or Strength (STR)?"
+      "pt": "My character emphasizes which core ability, Dexterity (DEX) or Strength (STR)?",
+      "en": "My character emphasizes which core ability, Dexterity (DEX) or Strength (STR)?"
     }
   },
   "q_background_preference": {
     "question": {
-      "pt": "Que tipo de vida levou a tua personagem?",
-      "en": "What kind of life has your character led?"
+      "pt": "My character lived what kind of life?",
+      "en": "My character lived what kind of life?"
     }
   },
   "q_dark_gift_presence": {
     "question": {
-      "pt": "A tua personagem carrega uma maldição?",
-      "en": "Does your character carry a curse?"
+      "pt": "My character carries a curse, right?",
+      "en": "My character carries a curse, right?"
     }
   },
   "q_dark_gift_type": {
     "question": {
-      "pt": "Que tipo de maldição ela tem?",
-      "en": "What kind of curse do they bear?"
+      "pt": "My character bears what kind of curse?",
+      "en": "My character bears what kind of curse?"
     }
   }
 };
@@ -1043,6 +1043,25 @@ class QuizApp {
       return entry;
     }
     return entry[localeKey] ?? entry[DEFAULT_LANGUAGE] ?? '';
+  }
+
+  formatDescriptionContinuation(text) {
+    if (!text || typeof text !== 'string') {
+      return '';
+    }
+
+    let content = text.trim();
+    if (!content) {
+      return '';
+    }
+
+    content = content.replace(/[.!?]+$/u, '').trim();
+
+    if (/^[A-Z][a-z]/.test(content)) {
+      content = content.charAt(0).toLowerCase() + content.slice(1);
+    }
+
+    return content;
   }
 
   getNavButtons(type) {
@@ -1678,7 +1697,9 @@ class QuizApp {
       }
 
       const labelText = this.getOptionLabel(nodeId, option);
-      const descriptionText = this.getOptionDescription(nodeId, option);
+      const descriptionText = this.formatDescriptionContinuation(
+        this.getOptionDescription(nodeId, option),
+      );
       const primaryText = descriptionText || labelText;
       const noteText = descriptionText ? labelText : '';
 

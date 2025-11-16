@@ -4,7 +4,7 @@
     "q_gender": {
       "type": "question",
       "section": "gender",
-      "question": "Como se apresenta a tua personagem em termos de género?",
+      "question": "My character presents as which gender?",
       "options": [
         {
           "value": "A",
@@ -44,7 +44,7 @@
     "q_height": {
       "type": "question",
       "section": "species",
-      "question": "Em que faixa de alturas se encaixa a tua personagem?",
+      "question": "My character is roughly what height?",
       "options": [
         {
           "value": "A",
@@ -95,7 +95,7 @@
     "q_species_exoticness": {
       "type": "question",
       "section": "species",
-      "question": "Quão exótica pretendes que a espécie da tua personagem seja?",
+      "question": "My character comes from a species that is how familiar?",
       "prune_zero_viable_options": {
         "dataset": "species",
         "option_field": "species_commonality",
@@ -166,7 +166,7 @@
     "q_species_animal_likeness": {
       "type": "question",
       "section": "species",
-      "question": "A tua personagem tem traços de animal?",
+      "question": "My character shows animal traits, yes or no?",
       "prune_zero_viable_options": {
         "dataset": "species",
         "option_field": "animal_likeness",
@@ -213,7 +213,7 @@
     "q_species_pick": {
       "type": "question",
       "section": "species",
-      "question": "Que espécie preferes jogar?",
+      "question": "My character is what species?",
       "options_source": {
         "type": "inline",
         "dataset": "species",
@@ -324,7 +324,7 @@
     "q_dragonborn_ancestry_type": {
       "type": "question",
       "section": "species",
-      "question": "Que tipo de ancestralidade dracónica define a tua personagem?",
+      "question": "My character is defined by which draconic ancestry?",
       "when": {
         "var": "species",
         "op": "eq",
@@ -359,7 +359,7 @@
     "q_goliath_power_type": {
       "type": "question",
       "section": "species",
-      "question": "Que tipo de poder de ancestralidade gigante melhor descreve a tua personagem?",
+      "question": "My character draws on which giant-ancestry power?",
       "when": {
         "var": "species",
         "op": "eq",
@@ -405,7 +405,7 @@
     "q_subspecies_pick": {
       "type": "question",
       "section": "species",
-      "question": "Que subespécie prefere a tua personagem?",
+      "question": "My character is from which sub-species?",
       "when": {
         "var": "species",
         "op": "in",
@@ -545,7 +545,7 @@
     "q_subsubspecies_pick": {
       "type": "question",
       "section": "species",
-      "question": "Qual é a variação específica da subespécie?",
+      "question": "My character belongs to which specific variation of that sub-species?",
       "options_source": {
         "type": "inline",
         "dataset": "subsubspecies",
