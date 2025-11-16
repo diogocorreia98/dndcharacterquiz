@@ -70,6 +70,135 @@ const UI_TEXT = {
   },
 };
 
+const SUBCLASS_COMPLEXITY = {
+  ARTIFICER_ALCHEMIST: 'HIGH',
+  ARTIFICER_ARMORER: 'HIGH',
+  ARTIFICER_ARTILLERIST: 'HIGH',
+  ARTIFICER_BATTLE_SMITH: 'HIGH',
+  BARBARIAN_PATH_OF_THE_BERSERKER: 'LOW',
+  BARBARIAN_PATH_OF_THE_WILD_HEART: 'LOW',
+  BARBARIAN_PATH_OF_THE_WORLD_TREE: 'LOW',
+  BARBARIAN_PATH_OF_THE_ZEALOT: 'LOW',
+  BARBARIAN_PATH_OF_THE_ANCESTRAL_GUARDIAN: 'LOW',
+  BARBARIAN_PATH_OF_THE_BEAST: 'LOW',
+  BARBARIAN_PATH_OF_THE_STORM_HERALD: 'LOW',
+  BARBARIAN_PATH_OF_THE_WILD_MAGIC: 'AVERAGE',
+  BARBARIAN_PATH_OF_THE_MUSCLE_WIZARD: 'LOW',
+  BARD_COLLEGE_OF_DANCE: 'HIGH',
+  BARD_COLLEGE_OF_GLAMOUR: 'HIGH',
+  BARD_COLLEGE_OF_LORE: 'HIGH',
+  BARD_COLLEGE_OF_VALOR: 'HIGH',
+  BARD_COLLEGE_OF_CREATION: 'HIGH',
+  BARD_COLLEGE_OF_ELOQUENCE: 'HIGH',
+  BARD_COLLEGE_OF_SWORDS: 'HIGH',
+  BARD_COLLEGE_OF_WHISPERS: 'HIGH',
+  BARD_COLLEGE_OF_SPIRITS: 'HIGH',
+  BARD_COLLEGE_OF_THE_MOON: 'HIGH',
+  BLOOD_HUNTER_ORDER_OF_THE_LYCAN: 'HIGH',
+  BLOOD_HUNTER_ORDER_OF_THE_MUTANT: 'HIGH',
+  BLOOD_HUNTER_ORDER_OF_THE_GHOSTSLAYER: 'HIGH',
+  BLOOD_HUNTER_ORDER_OF_THE_PROFANE_SOUL: 'HIGH',
+  CLERIC_LIFE_DOMAIN: 'AVERAGE',
+  CLERIC_LIGHT_DOMAIN: 'HIGH',
+  CLERIC_TRICKERY_DOMAIN: 'HIGH',
+  CLERIC_WAR_DOMAIN: 'AVERAGE',
+  CLERIC_ARCANA_DOMAIN: 'HIGH',
+  CLERIC_FORGE_DOMAIN: 'HIGH',
+  CLERIC_GRAVE_DOMAIN: 'HIGH',
+  CLERIC_KNOWLEDGE_DOMAIN: 'HIGH',
+  CLERIC_NATURE_DOMAIN: 'HIGH',
+  CLERIC_ORDER_DOMAIN: 'HIGH',
+  CLERIC_PEACE_DOMAIN: 'HIGH',
+  CLERIC_TEMPEST_DOMAIN: 'HIGH',
+  CLERIC_TWILIGHT_DOMAIN: 'HIGH',
+  DRUID_CIRCLE_OF_THE_LAND: 'HIGH',
+  DRUID_CIRCLE_OF_THE_MOON: 'HIGH',
+  DRUID_CIRCLE_OF_THE_SEA: 'HIGH',
+  DRUID_CIRCLE_OF_THE_STARS: 'HIGH',
+  DRUID_CIRCLE_OF_DREAMS: 'HIGH',
+  DRUID_CIRCLE_OF_SPORES: 'HIGH',
+  DRUID_CIRCLE_OF_THE_SHEPHERD: 'HIGH',
+  DRUID_CIRCLE_OF_WILDFIRE: 'HIGH',
+  FIGHTER_BATTLE_MASTER: 'AVERAGE',
+  FIGHTER_CHAMPION: 'LOW',
+  FIGHTER_ELDRITCH_KNIGHT: 'HIGH',
+  FIGHTER_PSI_WARRIOR: 'HIGH',
+  FIGHTER_ARCANE_ARCHER: 'AVERAGE',
+  FIGHTER_CAVALIER: 'AVERAGE',
+  FIGHTER_RUNE_KNIGHT: 'HIGH',
+  FIGHTER_SAMURAI: 'AVERAGE',
+  FIGHTER_DUNGEONEER: 'AVERAGE',
+  FIGHTER_BANNERET: 'AVERAGE',
+  MONK_WAY_OF_MERCY: 'HIGH',
+  MONK_WAY_OF_SHADOW: 'HIGH',
+  MONK_WAY_OF_THE_ELEMENTS: 'HIGH',
+  MONK_WAY_OF_THE_OPEN_HAND: 'HIGH',
+  MONK_WAY_OF_THE_ASTRAL_SELF: 'HIGH',
+  MONK_WAY_OF_THE_COBALT_SOUL: 'HIGH',
+  MONK_WAY_OF_THE_DRUNKEN_MASTER: 'HIGH',
+  MONK_WAY_OF_THE_KENSEI: 'HIGH',
+  MONK_WAY_OF_THE_LONG_DEATH: 'HIGH',
+  MONK_WAY_OF_THE_SUN_SOUL: 'HIGH',
+  MONK_WARRIOR_OF_THE_STREET: 'HIGH',
+  PALADIN_OATH_OF_DEVOTION: 'AVERAGE',
+  PALADIN_OATH_OF_GLORY: 'AVERAGE',
+  PALADIN_OATH_OF_THE_ANCIENTS: 'AVERAGE',
+  PALADIN_OATH_OF_VENGEANCE: 'AVERAGE',
+  PALADIN_OATH_OF_CONQUEST: 'AVERAGE',
+  PALADIN_OATH_OF_REDEMPTION: 'AVERAGE',
+  PALADIN_OATH_OF_THE_CROWN: 'AVERAGE',
+  PALADIN_OATH_OF_THE_WATCHERS: 'AVERAGE',
+  PALADIN_OATH_OF_THE_OPEN_SEA: 'AVERAGE',
+  PALADIN_OATH_OF_REVELRY: 'AVERAGE',
+  PALADIN_OATH_OF_THE_NOBLE_GENIES: 'AVERAGE',
+  RANGER_BEAST_MASTER: 'HIGH',
+  RANGER_FEY_WANDERER: 'AVERAGE',
+  RANGER_GLOOM_STALKER: 'AVERAGE',
+  RANGER_HUNTER: 'AVERAGE',
+  RANGER_HORIZON_WALKER: 'AVERAGE',
+  RANGER_MONSTER_SLAYER: 'AVERAGE',
+  RANGER_SWARMKEEPER: 'HIGH',
+  RANGER_WINTER_WALKER: 'AVERAGE',
+  ROGUE_ARACHNOID_STALKER: 'AVERAGE',
+  ROGUE_ARCANE_TRICKSTER: 'HIGH',
+  ROGUE_ASSASSIN: 'LOW',
+  ROGUE_THIEF: 'LOW',
+  ROGUE_INQUISITIVE: 'LOW',
+  ROGUE_MASTERMIND: 'LOW',
+  ROGUE_PHANTOM: 'HIGH',
+  ROGUE_SCOUT: 'LOW',
+  ROGUE_SWASHBUCKLER: 'LOW',
+  ROGUE_SOULKNIFE: 'HIGH',
+  ROGUE_SCION_OF_THE_THREE: 'HIGH',
+  SORCERER_CLOCKWORK_SORCERY: 'HIGH',
+  SORCERER_DRACONIC_SORCERY: 'HIGH',
+  SORCERER_WILD_MAGIC: 'HIGH',
+  SORCERER_STORM_SORCERY: 'HIGH',
+  SORCERER_ABERRANT_SORCERY: 'HIGH',
+  SORCERER_DIVINE_SOUL: 'HIGH',
+  SORCERER_SHADOW_MAGIC: 'HIGH',
+  SORCERER_SPELLFIRE_SORCERY: 'HIGH',
+  WARLOCK_ARCHFEY_PATRON: 'HIGH',
+  WARLOCK_FIEND_PATRON: 'HIGH',
+  WARLOCK_GREAT_OLD_ONE_PATRON: 'HIGH',
+  WARLOCK_CELESTIAL_PATRON: 'HIGH',
+  WARLOCK_THE_FATHOMLESS: 'HIGH',
+  WARLOCK_THE_GENIE: 'HIGH',
+  WARLOCK_THE_HEXBLADE: 'HIGH',
+  WARLOCK_THE_UNDEAD: 'HIGH',
+  WIZARD_ABJURER: 'HIGH',
+  WIZARD_DIVINER: 'HIGH',
+  WIZARD_EVOKER: 'AVERAGE',
+  WIZARD_ILLUSIONIST: 'HIGH',
+  WIZARD_ORDER_OF_SCRIBES: 'HIGH',
+  WIZARD_SCHOOL_OF_ABJURATION: 'HIGH',
+  WIZARD_SCHOOL_OF_CONJURATION: 'HIGH',
+  WIZARD_SCHOOL_OF_NECROMANCY: 'HIGH',
+  WIZARD_SCHOOL_OF_ENCHANTMENT: 'HIGH',
+  WIZARD_WAR_MAGIC: 'HIGH',
+  WIZARD_BLADESINGER: 'HIGH',
+};
+
 const VARIABLE_LABELS = {
   gender: { pt: 'Género', en: 'Gender' },
   height: { pt: 'Altura', en: 'Height' },
@@ -700,6 +829,7 @@ class QuizApp {
     this.darkGiftQuestionId = this.findDarkGiftQuestionId();
     this.backgroundQuestionId = this.findBackgroundQuestionId();
     this.roleData = this.prepareRoleData();
+    this.complexityData = this.prepareComplexityData();
     this.variantData = this.prepareVariantData();
     this.datasetIndexes = {};
     this.lastVariantSignature = null;
@@ -1138,6 +1268,7 @@ class QuizApp {
       let options = this.buildOptions(node, { includeDatasetEntry: true });
       options = this.applyAbilityOverlapFilter(node, options);
       options = this.applyRoleFilters(node, options);
+      options = this.applyComplexityFilters(node, options);
 
       const pruneOutcome = this.pruneZeroViableOptions(node, options);
       options = pruneOutcome?.options ?? options;
@@ -2089,6 +2220,66 @@ class QuizApp {
     }
   }
 
+  getAllowedComplexities() {
+    const choice = this.state?.variables?.class_complexity;
+    if (!choice) {
+      return null;
+    }
+
+    switch (choice) {
+      case 'A':
+        return new Set(['LOW']);
+      case 'B':
+        return new Set(['LOW', 'AVERAGE']);
+      case 'C':
+        return new Set(['LOW', 'AVERAGE', 'HIGH']);
+      default:
+        return null;
+    }
+  }
+
+  applyComplexityFilters(node, options) {
+    if (!Array.isArray(options) || !options.length) {
+      return options ?? [];
+    }
+
+    const allowed = this.getAllowedComplexities();
+    if (!allowed) {
+      return options;
+    }
+
+    const { subclassComplexity, classComplexity } = this.complexityData ?? {};
+    if (!subclassComplexity || !classComplexity) {
+      return options;
+    }
+
+    const isClassSelection = Array.isArray(node.options)
+      ? node.options.some((option) =>
+          Array.isArray(option.set) && option.set.some((action) => action.var === 'class')
+        )
+      : false;
+
+    if (isClassSelection) {
+      return options.filter((option) => {
+        const complexitySet = classComplexity.get(option.value);
+        if (!complexitySet || !complexitySet.size) {
+          return true;
+        }
+        return Array.from(complexitySet).some((level) => allowed.has(level));
+      });
+    }
+
+    const fromSubclassDataset = node.options_source?.dataset === 'subclasses';
+    if (fromSubclassDataset) {
+      return options.filter((option) => {
+        const level = subclassComplexity.get(option.value);
+        return !level || allowed.has(level);
+      });
+    }
+
+    return options;
+  }
+
   updateNextButtonForMultiple(selection) {
     const min = selection?.min ?? 0;
     const max = selection?.max ?? Infinity;
@@ -2153,6 +2344,45 @@ class QuizApp {
     });
 
     return { data, primaryRoles, secondaryRoles };
+  }
+
+  normalizeComplexityLevel(level) {
+    if (!level) {
+      return null;
+    }
+
+    const normalized = String(level).toUpperCase();
+    if (['LOW', 'AVERAGE', 'HIGH'].includes(normalized)) {
+      return normalized;
+    }
+
+    return null;
+  }
+
+  prepareComplexityData() {
+    const subclassDataset = this.quizData.metadata?.datasets?.subclasses ?? [];
+    const subclassComplexity = new Map();
+    const classComplexity = new Map();
+
+    subclassDataset.forEach((entry) => {
+      const { code, class: classCode } = entry;
+      if (!code || !classCode) {
+        return;
+      }
+
+      const level = this.normalizeComplexityLevel(SUBCLASS_COMPLEXITY[code]);
+      if (!level) {
+        return;
+      }
+
+      subclassComplexity.set(code, level);
+      if (!classComplexity.has(classCode)) {
+        classComplexity.set(classCode, new Set());
+      }
+      classComplexity.get(classCode).add(level);
+    });
+
+    return { subclassComplexity, classComplexity };
   }
 
   prepareVariantData() {
@@ -2356,6 +2586,10 @@ class QuizApp {
   }
 
   getSelectedRoles() {
+    if (this.state?.variables?.class_complexity === 'A') {
+      return { primary: [], secondary: [] };
+    }
+
     const normalize = (value) => (typeof value === 'string' ? value.toUpperCase() : value);
     const primary = Array.isArray(this.state.variables.primary_roles)
       ? this.state.variables.primary_roles.map(normalize)
