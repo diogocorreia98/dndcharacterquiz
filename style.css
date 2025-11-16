@@ -135,20 +135,6 @@ body {
   display: none;
 }
 
-.card__progress {
-  font-weight: 600;
-  color: var(--primary);
-  text-transform: uppercase;
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
-}
-
-@media (prefers-color-scheme: dark) {
-  .card__progress {
-    color: var(--primary-dark);
-  }
-}
-
 .status-summary {
   border: 1px solid var(--border);
   border-radius: 14px;
