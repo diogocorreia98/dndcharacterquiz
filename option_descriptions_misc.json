@@ -154,5 +154,143 @@
       "pt": "Transforma o corpo numa arma, útil mesmo sem equipamento.",
       "en": "Turns your body into a weapon, useful even when disarmed."
     }
+  },
+  "background_summaries": {
+    "ACOLYTE": {
+      "pt": "Cresceu ao serviço de um templo, habituado a rituais e deveres religiosos.",
+      "en": "Raised in service to a temple, versed in rituals and sacred duties."
+    },
+    "ARTISAN": {
+      "pt": "Passou anos a aperfeiçoar um ofício, conhecendo ferramentas e guildas.",
+      "en": "Spent years perfecting a craft, knowing tools, markets, and guild ties."
+    },
+    "CHARLATAN": {
+      "pt": "Vive de truques, identidades falsas e esquemas rápidos para sobreviver.",
+      "en": "Lives on tricks, false identities, and quick schemes to get by."
+    },
+    "CHONDATHAN_FREEBOOTER": {
+      "pt": "Corsário aventureiro vindo de Chondath, habituado a mares e portos agitados.",
+      "en": "Chondathan privateer used to rough seas, busy ports, and daring raids."
+    },
+    "CRIMINAL": {
+      "pt": "Tem experiência com o submundo, contactos duvidosos e fugas apertadas.",
+      "en": "Knows the underworld, shady contacts, and how to slip away from trouble."
+    },
+    "DEAD_MAGIC_DWELLER": {
+      "pt": "Sobreviveu em zonas onde a magia falha, contando com engenho e resiliência.",
+      "en": "Survived in places where magic dies, relying on grit and ingenuity."
+    },
+    "DRAGON_CULTIST": {
+      "pt": "Jurou fidelidade a cultos dracónicos, venerando dragões e seus mistérios.",
+      "en": "Swore fealty to draconic cults, revering dragons and their mysteries."
+    },
+    "EMERALD_ENCLAVE_CARETAKER": {
+      "pt": "Protegeu a natureza ao lado do Enclave Esmeralda, guiando viajantes e bosques.",
+      "en": "Guarded the wilds with the Emerald Enclave, guiding travelers and groves."
+    },
+    "ENTERTAINER": {
+      "pt": "Sobrevive na estrada com música, histórias e espetáculos que encantam o público.",
+      "en": "Lives on the road with music, tales, and performances that win crowds."
+    },
+    "FARMER": {
+      "pt": "Cresceu no campo, habituado a trabalho duro, estações e ciclos da terra.",
+      "en": "Raised on farmland, used to hard work, the seasons, and the land's cycles."
+    },
+    "FLAMING_FIST_MERCENARY": {
+      "pt": "Serviu como mercenário do Punho Flamejante, acostumado a campanhas pagas.",
+      "en": "Served as a Flaming Fist mercenary, accustomed to paid campaigns and orders."
+    },
+    "GENIE_TOUCHED": {
+      "pt": "Foi marcado por um génio, trazendo caprichos elementais e curiosidade arcana.",
+      "en": "Touched by a genie, carrying elemental quirks and arcane curiosity."
+    },
+    "GUARD": {
+      "pt": "Fez serviço de guarda, vigiando portões, ruas e mantendo a ordem local.",
+      "en": "Served as a guard, watching gates and streets while keeping local order."
+    },
+    "GUIDE": {
+      "pt": "Conhece trilhos e perigos da região, conduzindo viajantes em segurança.",
+      "en": "Knows local trails and hazards, leading travelers safely through them."
+    },
+    "HARPER": {
+      "pt": "Agente dos Harpers, habituado a operar discretamente em prol do bem.",
+      "en": "Harper agent used to working quietly in the name of the greater good."
+    },
+    "HERMIT": {
+      "pt": "Viveu isolado, com tempo para meditar, estudar e desconfiar de estranhos.",
+      "en": "Lived in isolation, with time to meditate, study, and eye outsiders warily."
+    },
+    "ICE_FISHER": {
+      "pt": "Aprendeu a sobreviver em climas gelados, pescando e viajando no gelo.",
+      "en": "Learned to survive frozen climates, fishing and traveling across the ice."
+    },
+    "KNIGHT_OF_THE_GAUNTLET": {
+      "pt": "Jurou proteger os inocentes como Cavaleiro da Manopla, obedecendo a códigos rígidos.",
+      "en": "Swore to defend the innocent as a Knight of the Gauntlet under strict codes."
+    },
+    "LORDS_ALLIANCE_VASSAL": {
+      "pt": "Serve a Aliança dos Lordes, habituado a política, dever e missões oficiais.",
+      "en": "Serves the Lords' Alliance, used to politics, duty, and official missions."
+    },
+    "MERCHANT": {
+      "pt": "Trabalhou em feiras e caravanas, negociando bens e rotas comerciais.",
+      "en": "Worked markets and caravans, negotiating goods and trade routes."
+    },
+    "MOONWELL_PILGRIM": {
+      "pt": "Peregrinou por santuários Moonwell, em comunhão com druidas e espíritos.",
+      "en": "Pilgrimaged through Moonwell sanctuaries, in communion with druids and spirits."
+    },
+    "MULHORANDI_TOMB_RAIDER": {
+      "pt": "Explorou tumbas mulhorandi, enfrentando armadilhas antigas e segredos.",
+      "en": "Delved Mulhorandi tombs, facing ancient traps and buried secrets."
+    },
+    "MYTHALKEEPER": {
+      "pt": "Guardou locais mágicos protegidos por mythals, zelando por segredos arcanos.",
+      "en": "Kept watch over mythal-warded sites, safeguarding hidden arcane lore."
+    },
+    "NOBLE": {
+      "pt": "Cresceu na nobreza, rodeado de etiqueta, recursos e expectativas familiares.",
+      "en": "Raised among nobility with etiquette, resources, and heavy family expectations."
+    },
+    "PURPLE_DRAGON_SQUIRE": {
+      "pt": "Serviu como escudeiro do Dragão Púrpura, treinado em disciplina cormyriana.",
+      "en": "Served as a Purple Dragon squire, trained in Cormyrian discipline."
+    },
+    "RASHEMI_WANDERER": {
+      "pt": "Viajou pelas terras Rashemi, endurecido por invernos e tradições ferozes.",
+      "en": "Wandered Rashemi lands, hardened by fierce traditions and brutal winters."
+    },
+    "SAGE": {
+      "pt": "Passou anos em bibliotecas e estudos, acumulando conhecimento e contactos académicos.",
+      "en": "Spent years in libraries and study, gathering knowledge and scholarly contacts."
+    },
+    "SAILOR": {
+      "pt": "Vive no mar, habituado a cordas, velas, tempestades e superstições náuticas.",
+      "en": "Lives at sea, used to rigging, storms, and the superstitions of sailors."
+    },
+    "SCRIBE": {
+      "pt": "Trabalhou a copiar textos, catalogar pergaminhos e registar histórias.",
+      "en": "Copied texts, cataloged scrolls, and recorded stories for patrons."
+    },
+    "SHADOWMASTERS_EXILE": {
+      "pt": "Exilado dos Mestres das Sombras, tenta recomeçar longe de intrigas escuras.",
+      "en": "Exiled from the Shadowmasters, seeking a fresh start far from dark intrigues."
+    },
+    "SOLDIER": {
+      "pt": "Serviu num exército, acostumado a marchas, ordens e camaradagem marcial.",
+      "en": "Served in an army, used to marches, orders, and martial camaraderie."
+    },
+    "SPELLFIRE_INITIATE": {
+      "pt": "Foi tocado por Spellfire, aprendendo a canalizar energia mágica rara.",
+      "en": "Touched by Spellfire, learning to channel a rare and volatile magic."
+    },
+    "WAYFARER": {
+      "pt": "Vive na estrada, habituado a estradas longas, pousadas e encontros inesperados.",
+      "en": "Lives on the road, used to long routes, inns, and unexpected encounters."
+    },
+    "ZHENTARIM_MERCENARY": {
+      "pt": "Trabalhou para os Zhentarim, aceitando missões discretas e acordos lucrativos.",
+      "en": "Worked for the Zhentarim, taking discreet jobs and lucrative deals."
+    }
   }
 }
