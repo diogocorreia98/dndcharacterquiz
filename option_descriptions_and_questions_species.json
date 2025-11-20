@@ -4,6 +4,10 @@
       "pt": "Como se apresenta a tua personagem em termos de género?",
       "en": "How does your character present in terms of gender?"
     },
+    "q_height_preference": {
+      "pt": "Preferes ter mais de 120 cm ou menos?",
+      "en": "Do you prefer to be taller than 120 cm or shorter?"
+    },
     "q_height": {
       "pt": "Em que faixa de alturas se encaixa a tua personagem?",
       "en": "Which height range fits your character?"

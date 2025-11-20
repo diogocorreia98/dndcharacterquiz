@@ -15,7 +15,7 @@
               "value": "A"
             }
           ],
-          "next": "q_height"
+          "next": "q_height_preference"
         },
         {
           "value": "B",
@@ -26,7 +26,7 @@
               "value": "B"
             }
           ],
-          "next": "q_height"
+          "next": "q_height_preference"
         },
         {
           "value": "C",
@@ -35,6 +35,35 @@
               "var": "gender",
               "op": "set",
               "value": "C"
+            }
+          ],
+          "next": "q_height_preference"
+        }
+      ]
+    },
+    "q_height_preference": {
+      "type": "question",
+      "section": "species",
+      "question": "Preferes ter mais de 120 cm ou menos?",
+      "options": [
+        {
+          "value": "more",
+          "set": [
+            {
+              "var": "height_preference",
+              "op": "set",
+              "value": "more"
+            }
+          ],
+          "next": "q_height"
+        },
+        {
+          "value": "less",
+          "set": [
+            {
+              "var": "height_preference",
+              "op": "set",
+              "value": "less"
             }
           ],
           "next": "q_height"
@@ -48,6 +77,11 @@
       "options": [
         {
           "value": "A",
+          "when": {
+            "var": "height_preference",
+            "op": "eq",
+            "value": "less"
+          },
           "set": [
             {
               "var": "height",
@@ -59,6 +93,11 @@
         },
         {
           "value": "B",
+          "when": {
+            "var": "height_preference",
+            "op": "eq",
+            "value": "less"
+          },
           "set": [
             {
               "var": "height",
@@ -70,6 +109,11 @@
         },
         {
           "value": "C",
+          "when": {
+            "var": "height_preference",
+            "op": "eq",
+            "value": "more"
+          },
           "set": [
             {
               "var": "height",
@@ -81,6 +125,11 @@
         },
         {
           "value": "D",
+          "when": {
+            "var": "height_preference",
+            "op": "eq",
+            "value": "more"
+          },
           "set": [
             {
               "var": "height",
