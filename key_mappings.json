@@ -1430,15 +1430,15 @@
         "code": "S003",
         "pt": "Bicho-papão",
         "en": "Bugbear",
+        "animal_likeness": [
+          "A"
+        ],
         "species_commonality": [
           "C"
         ],
         "height": [
           "C",
           "D"
-        ],
-        "animal_likeness": [
-          "A"
         ]
       },
       {
