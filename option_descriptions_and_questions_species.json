@@ -1,69 +1,69 @@
 {
   "question_texts": {
     "q_gender": {
-      "pt": "Como se apresenta a tua personagem em termos de género?",
+      "pt": "A minha personagem apresenta-se",
       "en": "How does your character present in terms of gender?"
     },
     "q_height_preference": {
-      "pt": "Preferes ter mais de 120 cm ou menos?",
+      "pt": "A minha personagem mede...",
       "en": "Do you prefer to be taller than 120 cm or shorter?"
     },
     "q_height": {
-      "pt": "Em que faixa de alturas se encaixa a tua personagem?",
+      "pt": "A minha personagem mede entre...",
       "en": "Which height range fits your character?"
     },
     "q_species_exoticness": {
-      "pt": "Quão exótica pretendes que a espécie da tua personagem seja?",
+      "pt": "A minha personagem parece...",
       "en": "How exotic do you want your character's species to be?"
     },
     "q_species_animal_likeness": {
-      "pt": "A tua personagem tem traços de animal?",
+      "pt": "A minha personagem tem caraterísticas...",
       "en": "Does your character have animal traits?"
     },
     "q_species_pick": {
-      "pt": "Que espécie preferes jogar?",
+      "pt": "A minha personagem é uma criatura...",
       "en": "Which species do you want to play?"
     },
     "q_dragonborn_ancestry_type": {
-      "pt": "Que tipo de ancestralidade dracónica define a tua personagem?",
+      "pt": "A minha personagem é um Draconato com...",
       "en": "Which type of draconic ancestry defines your character?"
     },
     "q_goliath_power_type": {
-      "pt": "Que tipo de poder de ancestralidade gigante melhor descreve a tua personagem?",
+      "pt": "A minha personagem herdou poderes de Gigante do tipo...",
       "en": "Which kind of giant ancestry power best fits your character?"
     },
     "q_subspecies_pick": {
-      "pt": "Que subespécie prefere a tua personagem?",
+      "pt": "A minha personagem é...?",
       "en": "Which sub-species does your character prefer?"
     },
     "q_subsubspecies_pick": {
-      "pt": "Qual é a variação específica da subespécie?",
+      "pt": "Quando a minha personagem usa o seu teletransporte feérico ela...",
       "en": "What is the specific variation of the sub-species?"
     }
   },
   "species_descriptions": {
     "S001": {
-      "pt": "Sentinelas aladas dos céus, com garras afiadas e sentidos atentos ideais para reconhecimento e ataques rápidos.",
+      "pt": "uma ave de rapina humanoide, com asas possantes, garras afiadas e afinidade com o vento.",
       "en": "Winged sky sentinels whose talons and keen senses excel at scouting and hit-and-run strikes."
     },
     "S002": {
-      "pt": "Herdeiros de energia celestial que irradiam luz curativa e protegem aliados com presença inspiradora.",
+      "pt": "um meio-anjo que irradia luz curativa, resiste a ataques das trevas e da luz e consegue brevemente voar, queimar ou aterrorizar.",
       "en": "Celestial-blooded heirs who shine with radiant healing and inspire allies with their presence."
     },
     "S003": {
-      "pt": "Goblinoides enormes que atacam das sombras, combinando furtividade com força bruta surpreendente.",
+      "pt": "um misto entre um urso e um duende, grande porte, membros compridos e pronto a esconder-se e saltar ao ataque dos cantos mais sombrios e diminutos.",
       "en": "Massive goblinoids who lunge from the dark, blending stealth with startling brute force."
     },
     "S004": {
-      "pt": "Metade cavalo metade humano, correm com velocidade desértica enquanto carregam sabedoria tribal ancestral.",
+      "pt": "um torso humano em corpo de cavalo, veloz, feroz, de grande porte e cascos perigosos ",
       "en": "Half horse and half human, they gallop with desert speed while carrying deep ancestral lore."
     },
     "S005": {
-      "pt": "Metamorfo mutável capaz de alterar aparência à vontade, perfeito para infiltradores e mestres do disfarce.",
+      "pt": "um ser pálido mas destituído de feições vincadas que prefere espelhar na sua cara o rosto de outras pessoas.",
       "en": "A mutable changeling who reshapes their visage at will, perfect for infiltrators and masters of disguise."
     },
     "S006": {
-      "pt": "Linhagem personalizada feita sob medida, definindo traços e talentos conforme a história que quiser contar.",
+      "pt": "uma espécie quase nunca antes vista",
       "en": "A custom lineage built to taste, letting you define traits and talents that match your story."
     },
     "S007": {
@@ -331,7 +331,7 @@
     "SS034": {
       "pt": "Golias das nuvens treina saltos colossais e golpes de raio inspirados em trovões.",
       "en": "Cloud goliath practices colossal leaps and thunder-inspired strikes."
-    },
+    },	
     "SS035": {
       "pt": "Golias do fogo canaliza calor vulcânico em armações ardentes.",
       "en": "Fire goliath channels volcanic heat into blazing offense."
