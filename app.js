@@ -1626,6 +1626,22 @@ class QuizApp {
       }
     }
 
+    if (variableName === 'subspecies') {
+      const dataset = this.quizData.metadata?.datasets?.subspecies ?? [];
+      const match = dataset.find((entry) => entry.code === rawValue);
+      if (match) {
+        return match[localeKey] ?? match.pt ?? rawValue;
+      }
+    }
+
+    if (variableName === 'subsubspecies') {
+      const dataset = this.quizData.metadata?.datasets?.subsubspecies ?? [];
+      const match = dataset.find((entry) => entry.code === rawValue);
+      if (match) {
+        return match[localeKey] ?? match.pt ?? rawValue;
+      }
+    }
+
     if (variableName === 'subclass') {
       const dataset = this.quizData.metadata?.datasets?.subclasses ?? [];
       const match = dataset.find((entry) => entry.code === rawValue);
