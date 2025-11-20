@@ -536,6 +536,7 @@ const GOLIATH_POWER_LABELS = {
 
 const BACKGROUND_DESCRIPTION_LABELS = {
   abilities: withTranslations('Atributos em destaque', 'Highlighted abilities'),
+  path: withTranslations('estilo de vida e passado da personagem', "your character's past and lifestyle"),
 };
 
 const SUBCLASS_DESCRIPTION_LABELS = {
@@ -683,80 +684,64 @@ const buildSubsubspeciesDescription = function (option) {
 
 const buildBackgroundDescription = function (option) {
   const entry = option?.datasetEntry;
-  if (!entry) {
-    return null;
+  const backgroundSummaries = this.quizData.descriptionGroups?.background_summaries;
+  if (entry && backgroundSummaries) {
+    const summary = backgroundSummaries[entry.code] ?? backgroundSummaries[option.value];
+    if (summary) {
+      return summary;
+    }
   }
+  const label = this.getOptionLabel('q_background_preference', option);
   return buildLocalizedText((lang) => {
-    const abilities = Array.isArray(entry.ability_increases)
-      ? entry.ability_increases
-          .map((code) => ABILITY_LABELS[code]?.[lang] ?? ABILITY_LABELS[code]?.[DEFAULT_LANGUAGE] ?? code)
-          .join(', ')
-      : '';
-    if (!abilities) {
+    if (!label) {
       return '';
     }
-    return `${BACKGROUND_DESCRIPTION_LABELS.abilities[lang]}: ${abilities}`;
+    return `${label}: ${BACKGROUND_DESCRIPTION_LABELS.path[lang]}`;
   });
 };
 
-const buildSubclassDescription = function (option) {
+const buildSubclassDescription = function (option, nodeId) {
   const entry = option?.datasetEntry;
-  if (!entry) {
+  const metadata = this.quizData.metadata ?? {};
+  const subclassCode = entry?.code ?? option?.value;
+
+  if (!subclassCode) {
     return null;
   }
-  const metadata = this.quizData.metadata ?? {};
-  const variants = this.getVariantEntries(entry.class, entry.code);
+
+  const subclassSummaries = this.quizData.descriptionGroups?.subclass_summaries;
+  if (subclassSummaries && subclassSummaries[subclassCode]) {
+    return subclassSummaries[subclassCode];
+  }
+
+  const variants = entry ? this.getVariantEntries(entry.class, entry.code) : [];
+  const classCode = entry?.class ?? variants[0]?.class ?? null;
+  const classSummaries = this.quizData.descriptionGroups?.class_summaries ?? {};
+
   return buildLocalizedText((lang) => {
-    const parts = [];
-    const classMap = metadata.value_map?.class;
-    const classLabel = classMap?.[entry.class]?.[lang] ?? classMap?.[entry.class]?.[DEFAULT_LANGUAGE] ?? entry.class;
+    const subclassName = this.getOptionLabel(nodeId, option);
+    const classLabel = classCode
+      ? metadata.value_map?.class?.[classCode]?.[lang] ??
+        metadata.value_map?.class?.[classCode]?.[DEFAULT_LANGUAGE] ??
+        classCode
+      : '';
+    const classSummary = classCode
+      ? classSummaries[classCode]?.[lang] ?? classSummaries[classCode]?.[DEFAULT_LANGUAGE] ?? ''
+      : '';
+
+    if (!subclassName && !classLabel) {
+      return '';
+    }
+
+    if (classSummary) {
+      return `${subclassName}: ${classSummary}`;
+    }
+
     if (classLabel) {
-      parts.push(`${SUBCLASS_DESCRIPTION_LABELS.class[lang]}: ${classLabel}`);
+      return `${subclassName}: subclasse de ${classLabel}.`;
     }
-    const groupMap = metadata.value_map?.subclass_group;
-    const groupLabel = groupMap?.[entry.group]?.[lang] ?? groupMap?.[entry.group]?.[DEFAULT_LANGUAGE] ?? entry.group;
-    if (groupLabel) {
-      parts.push(`${SUBCLASS_DESCRIPTION_LABELS.group[lang]}: ${groupLabel}`);
-    }
-    if (variants.length) {
-      const variantNames = Array.from(new Set(variants.map((item) => item.variant).filter(Boolean)));
-      if (variantNames.length) {
-        parts.push(`${SUBCLASS_DESCRIPTION_LABELS.variants[lang]}: ${variantNames.join(', ')}`);
-      }
-      const abilityCombos = Array.from(
-        new Set(
-          variants
-            .map((item) => (Array.isArray(item.abilityCombo) && item.abilityCombo.length ? item.abilityCombo : null))
-            .filter(Boolean)
-            .map((combo) => combo.map((code) => ABILITY_LABELS[code]?.[lang] ?? ABILITY_LABELS[code]?.[DEFAULT_LANGUAGE] ?? code).join(' / '))
-        )
-      );
-      if (abilityCombos.length) {
-        parts.push(`${SUBCLASS_DESCRIPTION_LABELS.abilities[lang]}: ${abilityCombos.join('; ')}`);
-      } else {
-        const preferred = Array.from(new Set(variants.map((item) => item.ability).filter(Boolean))).map(
-          (code) => ABILITY_LABELS[code]?.[lang] ?? ABILITY_LABELS[code]?.[DEFAULT_LANGUAGE] ?? code
-        );
-        if (preferred.length) {
-          parts.push(`${SUBCLASS_DESCRIPTION_LABELS.abilities[lang]}: ${preferred.join(', ')}`);
-        }
-      }
-      const armors = Array.from(new Set(variants.map((item) => item.armor).filter((value) => value)));
-      if (armors.length) {
-        parts.push(`${SUBCLASS_DESCRIPTION_LABELS.armor[lang]}: ${armors.join(', ')}`);
-      }
-      const gear = Array.from(
-        new Set(
-          variants
-            .flatMap((item) => item.hands ?? [])
-            .filter((value) => typeof value === 'string' && value.trim().length)
-        )
-      );
-      if (gear.length) {
-        parts.push(`${SUBCLASS_DESCRIPTION_LABELS.gear[lang]}: ${gear.join(', ')}`);
-      }
-    }
-    return parts.join(' · ');
+
+    return subclassName ?? '';
   });
 };
 
@@ -2694,7 +2679,7 @@ const fetchJson = async (url, description) => {
   return response.json();
 };
 
-const applyOptionLabelTranslations = (nodes, labelMap) => {
+const applyOptionLabelTranslations = (nodes, labelMap, ptOverrides = null) => {
   if (!nodes || !labelMap) {
     return;
   }
@@ -2717,6 +2702,14 @@ const applyOptionLabelTranslations = (nodes, labelMap) => {
       const translation = nodeLabels[option.value];
       if (translation && typeof translation === 'object') {
         const { description, ...labelTranslations } = translation;
+        const englishLabel = labelTranslations?.en;
+        if (
+          ptOverrides &&
+          typeof englishLabel === 'string' &&
+          Object.prototype.hasOwnProperty.call(ptOverrides, englishLabel)
+        ) {
+          labelTranslations.pt = ptOverrides[englishLabel];
+        }
         if (Object.keys(labelTranslations).length) {
           option.label_translations = { ...labelTranslations };
         }
@@ -2758,6 +2751,13 @@ const loadQuizData = async (manifestUrl) => {
   }
 
   let optionLabels = {};
+  let ptOverrides = null;
+
+  try {
+    ptOverrides = await fetchJson('translations/pt_overrides.json', 'as traduções pt-PT');
+  } catch (error) {
+    // Continua sem overrides se o ficheiro não estiver disponível.
+  }
   const labelEntries = Object.entries(manifest.option_label_files ?? {});
   if (labelEntries.length) {
     const labelPayloads = await Promise.all(
@@ -2788,7 +2788,7 @@ const loadQuizData = async (manifestUrl) => {
   }
 
   if (Object.keys(optionLabels).length) {
-    applyOptionLabelTranslations(nodes, optionLabels);
+    applyOptionLabelTranslations(nodes, optionLabels, ptOverrides);
   }
 
   let metadata = manifest.metadata ?? {};
