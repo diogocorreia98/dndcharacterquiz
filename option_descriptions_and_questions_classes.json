@@ -1,4 +1,118 @@
 {
+  "question_texts": {
+    "q_primary_roles": {
+      "pt": "Que papel preferes em combate (seleciona até 2 opções)?",
+      "en": "Which combat role do you prefer (select up to 2 options)?"
+    },
+    "q_healer_support_preference": {
+      "pt": "Qual preferes?",
+      "en": "Which do you prefer?"
+    },
+    "q_secondary_roles": {
+      "pt": "Há mais algum papel que precisas que a tua personagem sirva (Seleciona 0, 1 ou 2 opções)?",
+      "en": "Do you need your character to fill any other roles (select 0, 1, or 2 options)?"
+    },
+    "q_class_complexity": {
+      "pt": "Com que nível de complexidade te sentes confortável?",
+      "en": "What level of class complexity are you comfortable with?"
+    },
+    "q_class_simple_choice": {
+      "pt": "Que classe preferes jogar?",
+      "en": "Which class would you like to play?"
+    },
+    "q_class_medium_choice": {
+      "pt": "Que classe preferes jogar?",
+      "en": "Which class would you like to play?"
+    },
+    "q_class_high_choice": {
+      "pt": "Que classe preferes jogar?",
+      "en": "Which class would you like to play?"
+    },
+    "q_subclass_group": {
+      "pt": "Preferes explorar subclasses principais ou especializadas?",
+      "en": "Do you want to explore core or specialized subclasses?"
+    },
+    "q_subclass_choice": {
+      "pt": "Qual destas subclasses chama mais por ti?",
+      "en": "Which of these subclasses appeals to you most?"
+    },
+    "q_find_familiar_use": {
+      "pt": "Pretendes usar o feitiço Find Familiar e ter uma companhia animal mágica?",
+      "en": "Do you plan to use the Find Familiar spell and have a magical animal companion?"
+    },
+    "q_familiar_habitat": {
+      "pt": "O teu familiar ideal vive...?",
+      "en": "Where does your ideal familiar live?"
+    },
+    "q_familiar_creature_sky": {
+      "pt": "Qual destas criaturas aéreas te acompanha?",
+      "en": "Which of these aerial creatures accompanies you?"
+    },
+    "q_familiar_creature_land": {
+      "pt": "Qual destes animais terrestres partilha a tua jornada?",
+      "en": "Which of these land animals joins your journey?"
+    },
+    "q_familiar_creature_water": {
+      "pt": "Qual destas criaturas aquáticas é tua aliada?",
+      "en": "Which of these aquatic creatures is your ally?"
+    },
+    "q_class_adjustment_cleric": {
+      "pt": "Que Divine Order pretendes escolher?",
+      "en": "Which Divine Order do you want to choose?"
+    },
+    "q_class_adjustment_druid": {
+      "pt": "Que Primal Order pretendes escolher?",
+      "en": "Which Primal Order do you want to choose?"
+    },
+    "q_class_adjustment_warlock": {
+      "pt": "Que Pact Boon Invocation pretendes escolher?",
+      "en": "Which Pact Boon Invocation do you want to choose?"
+    },
+    "q_warlock_familiar_type": {
+      "pt": "Que tipo de familiar mágico te acompanha nas tuas aventuras?",
+      "en": "What type of magical familiar accompanies you on your adventures?"
+    },
+    "q_warlock_familiar_style": {
+      "pt": "Preferes que o teu familiar tenha...?",
+      "en": "Do you prefer your familiar to have...?"
+    },
+    "q_warlock_familiar_dark": {
+      "pt": "Qual destes seres das trevas preferes como familiar?",
+      "en": "Which dark creature do you prefer as a familiar?"
+    },
+    "q_warlock_familiar_mystic": {
+      "pt": "Qual destas criaturas mágicas e fascinantes escolhes?",
+      "en": "Which of these magical and fascinating creatures do you choose?"
+    },
+    "q_warlock_familiar_habitat": {
+      "pt": "O teu familiar ideal vive...?",
+      "en": "Where does your ideal familiar live?"
+    },
+    "q_warlock_familiar_creature_sky": {
+      "pt": "Qual destas criaturas aéreas te acompanha?",
+      "en": "Which of these aerial creatures accompanies you?"
+    },
+    "q_warlock_familiar_creature_land": {
+      "pt": "Qual destas criaturas terrestres te acompanha?",
+      "en": "Which of these land creatures accompanies you?"
+    },
+    "q_warlock_familiar_creature_water": {
+      "pt": "Qual destas criaturas aquáticas te acompanha?",
+      "en": "Which of these aquatic creatures accompanies you?"
+    },
+    "q_class_adjustment_fighter": {
+      "pt": "Que Estilo de Luta preferes aprender?",
+      "en": "Which Fighting Style would you like to learn?"
+    },
+    "q_class_adjustment_ranger": {
+      "pt": "Que Estilo de Luta preferes aprender?",
+      "en": "Which Fighting Style would you like to learn?"
+    },
+    "q_class_adjustment_paladin": {
+      "pt": "Que Estilo de Luta preferes aprender?",
+      "en": "Which Fighting Style would you like to learn?"
+    }
+  },
   "class_summaries": {
     "ARTIFICER": {
       "pt": "Inventor arcano que combina magia com engenhocas adaptáveis e suporte criativo.",
