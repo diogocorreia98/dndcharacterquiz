@@ -30,6 +30,13 @@
         "C"
       ]
     },
+    "height_preference": {
+      "type": "enum",
+      "symbols": [
+        "more",
+        "less"
+      ]
+    },
     "height": {
       "type": "enum",
       "symbols": [

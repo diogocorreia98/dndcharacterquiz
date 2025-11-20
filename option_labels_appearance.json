@@ -13,6 +13,24 @@
       "en": "Androgynous"
     }
   },
+  "q_height_preference": {
+    "more": {
+      "pt": "Mais",
+      "en": "More",
+      "description": {
+        "pt": "Podes agarrar e empurrar criaturas Grandes, ser difícil de arrastar para inimigos Grandes, saltar mais alto, não ser atrapalhado por pequenos obstáculos e terminar o turno no espaço de criaturas Pequenas sem perder o equilíbrio.",
+        "en": "You can grapple and shove Large creatures, be harder for Large foes to drag, leap higher, ignore small obstacles, and end your turn in Small creatures' spaces without losing balance."
+      }
+    },
+    "less": {
+      "pt": "Menos",
+      "en": "Less",
+      "description": {
+        "pt": "Podes passar por baixo de inimigos Grandes, atravessar passagens estreitas sem esforço, ter cobertura com mais facilidade, e ter mais opções de cavalgadura.",
+        "en": "You can slip beneath Large enemies, move through narrow passages with ease, gain cover more readily, and have more mounting options."
+      }
+    }
+  },
   "q_height": {
     "A": {
       "pt": "Minúscula — 0,6–0,9 m",
