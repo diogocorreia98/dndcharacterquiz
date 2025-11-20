@@ -14,8 +14,8 @@
     "profession": "option_labels_profession.json"
   },
   "option_description_files": [
-    "option_descriptions_classes.json",
-    "option_descriptions_species.json",
-    "option_descriptions_misc.json"
+    "option_descriptions_and_questions_classes.json",
+    "option_descriptions_and_questions_species.json",
+    "option_descriptions_and_questions_misc.json"
   ]
 }

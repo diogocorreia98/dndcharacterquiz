@@ -1,4 +1,22 @@
 {
+  "question_texts": {
+    "q_physical_ability_preference": {
+      "pt": "Preferes destacar a Destreza (DEX) ou a Força (STR) da tua personagem?",
+      "en": "Would you rather highlight your character's Dexterity (DEX) or Strength (STR)?"
+    },
+    "q_background_preference": {
+      "pt": "Que tipo de vida levou a tua personagem?",
+      "en": "What kind of life has your character led?"
+    },
+    "q_dark_gift_presence": {
+      "pt": "A tua personagem carrega uma maldição?",
+      "en": "Does your character carry a curse?"
+    },
+    "q_dark_gift_type": {
+      "pt": "Que tipo de maldição ela tem?",
+      "en": "What kind of curse do they bear?"
+    }
+  },
   "role_primary": {
     "DEFENDER": {
       "pt": "Forma a linha da frente e absorve os golpes inimigos.",
