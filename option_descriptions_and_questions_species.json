@@ -197,6 +197,18 @@
     "S039": {
       "pt": "Renascidos regressam da morte com memórias fragmentadas e corpos remendados, movidos por propósito misterioso.",
       "en": "Reborn come back from death with patchwork bodies and fractured memories driving mysterious purpose."
+    },
+    "S040": {
+      "pt": "Kalashtar unem mentes psiónicas a espíritos quori, cultivando serenidade, disciplina e poderes mentais.",
+      "en": "Kalashtar bond psionic minds with quori spirits, channeling calm focus and potent mental gifts."
+    },
+    "S041": {
+      "pt": "Khoravar, meio-elfos de Aerenal, combinam versatilidade humana com graça élfica e sensibilidade feérica.",
+      "en": "Khoravar half-elves blend human adaptability with elven grace and a subtle touch of fey insight."
+    },
+    "S042": {
+      "pt": "Warforged são construtos sencientes, moldados para a guerra mas ansiosos por encontrar propósito próprio.",
+      "en": "Warforged are sentient constructs forged for battle who seek personal purpose beyond the forge."
     }
   },
   "subspecies_descriptions": {
