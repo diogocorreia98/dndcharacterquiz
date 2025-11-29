@@ -2251,7 +2251,7 @@
               "value": "DEX"
             }
           ],
-          "next": "q_background_preference"
+          "next": "q_eberron_background_origin"
         },
         {
           "value": "STR",
@@ -2262,10 +2262,90 @@
               "value": "STR"
             }
           ],
+          "next": "q_eberron_background_origin"
+        }
+      ],
+      "next": "q_eberron_background_origin"
+    },
+    "q_eberron_background_origin": {
+      "type": "question",
+      "section": "background",
+      "question": "A tua personagem provêm de e está em Eberron?",
+      "when": {
+        "var": "class_ability_combo",
+        "op": "is_set"
+      },
+      "options": [
+        {
+          "value": "EBERRON_NO",
+          "set": [
+            {
+              "var": "background",
+              "op": "set",
+              "value": null
+            }
+          ],
           "next": "q_background_preference"
+        },
+        {
+          "value": "EBERRON_YES",
+          "next": "q_background_preference_eberron"
         }
       ],
       "next": "q_background_preference"
+    },
+    "q_background_preference_eberron": {
+      "type": "question",
+      "section": "background",
+      "question": "Que herdeiro das Casas de Dragomarca é a tua personagem?",
+      "when": {
+        "var": "class_ability_combo",
+        "op": "is_set"
+      },
+      "options_source": {
+        "type": "inline",
+        "dataset": "backgrounds_eberron",
+        "label_field": "pt",
+        "value_field": "code"
+      },
+      "extra_options": [
+        {
+          "value": "EBERRON_BACKGROUND_NONE",
+          "label_translations": {
+            "pt": "Nenhum destes",
+            "en": "None of these"
+          },
+          "set": [
+            {
+              "var": "background",
+              "op": "set",
+              "value": null
+            }
+          ],
+          "skip_node_on_select": true,
+          "skip_ability_overlap_filter": true,
+          "next": "q_background_preference"
+        }
+      ],
+      "ability_overlap_filter": {
+        "variable": "_class_ability_combo_codes",
+        "entry_field": "ability_increases",
+        "min_overlap": 2,
+        "face_role_variable": "secondary_roles",
+        "face_requires_cha": true
+      },
+      "on_select": [
+        {
+          "var": "background",
+          "op": "set",
+          "value_from_option": true
+        }
+      ],
+      "skip_if_no_options": {
+        "next": "q_background_preference"
+      },
+      "auto_select_if_single_option": true,
+      "next": "q_dark_gift_presence"
     },
     "q_background_preference": {
       "type": "question",

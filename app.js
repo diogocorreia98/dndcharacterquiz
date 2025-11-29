@@ -907,7 +907,9 @@ class QuizApp {
 
     const stateBefore = this.cloneValue(this.state.variables);
     this.applyActions(option.set, { option });
-    this.applyActions(node.on_select, { option });
+    if (!option.skip_node_on_select) {
+      this.applyActions(node.on_select, { option });
+    }
 
     this.state.history.push({
       nodeId,
@@ -1142,7 +1144,16 @@ class QuizApp {
       options.push(option);
     }
 
-    return options.filter((option) => !option.when || this.evaluateCondition(option.when));
+    const extraOptions = Array.isArray(node.extra_options)
+      ? node.extra_options
+          .map((opt, index) => ({
+            ...opt,
+            index: options.length + index,
+          }))
+          .filter((option) => !option.when || this.evaluateCondition(option.when))
+      : [];
+
+    return [...options, ...extraOptions].filter((option) => !option.when || this.evaluateCondition(option.when));
   }
 
   pruneZeroViableOptions(node, options) {
@@ -1893,6 +1904,10 @@ class QuizApp {
     const minOverlap = typeof rule.min_overlap === 'number' ? rule.min_overlap : 1;
 
     return options.filter((option) => {
+      if (option.skip_ability_overlap_filter) {
+        return true;
+      }
+
       const entry = option.datasetEntry;
       if (!entry) {
         return false;
