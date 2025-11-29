@@ -552,6 +552,10 @@
       "pt": "Artilheiro",
       "en": "Artillerist"
     },
+    "ARTIFICER_CARTOGRAPHER": {
+      "pt": "Cartógrafo",
+      "en": "Cartographer"
+    },
     "ARTIFICER_BATTLE_SMITH": {
       "pt": "Ferreiro de Batalha",
       "en": "Battle Smith"

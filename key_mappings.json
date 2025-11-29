@@ -217,6 +217,7 @@
         "ARTIFICER_ALCHEMIST",
         "ARTIFICER_ARMORER",
         "ARTIFICER_ARTILLERIST",
+        "ARTIFICER_CARTOGRAPHER",
         "ARTIFICER_BATTLE_SMITH",
         "BARBARIAN_PATH_OF_THE_BERSERKER",
         "BARBARIAN_PATH_OF_THE_WILD_HEART",
@@ -3030,6 +3031,13 @@
         "en": "Artillerist"
       },
       {
+        "code": "ARTIFICER_CARTOGRAPHER",
+        "class": "ARTIFICER",
+        "group": "CORE",
+        "pt": "Cartógrafo",
+        "en": "Cartographer"
+      },
+      {
         "code": "ARTIFICER_BATTLE_SMITH",
         "class": "ARTIFICER",
         "group": "CORE",
@@ -4359,6 +4367,7 @@
     "blaster": {
       "Artificer": {
         "core_subclasses": [
+          "Alchemist",
           "Artillerist"
         ]
       },
@@ -4498,7 +4507,9 @@
     "controller": {
       "Artificer": {
         "core_subclasses": [
-          "Artillerist"
+          "Armorer",
+          "Artillerist",
+          "Cartographer"
         ]
       },
       "Barbarian": {
@@ -4888,7 +4899,8 @@
           "Alchemist",
           "Armorer",
           "Artillerist",
-          "Battle Smith"
+          "Battle Smith",
+          "Cartographer"
         ]
       },
       "Barbarian": {
@@ -5000,7 +5012,8 @@
           "Alchemist",
           "Armorer",
           "Artillerist",
-          "Battle Smith"
+          "Battle Smith",
+          "Cartographer"
         ]
       },
       "Bard": {
@@ -5085,6 +5098,11 @@
       }
     },
     "scout": {
+      "Artificer": {
+        "core_subclasses": [
+          "Cartographer"
+        ]
+      },
       "Blood Hunter": {
         "core_subclasses": [
           "Order of the Lycan",
@@ -5368,7 +5386,8 @@
           "Alchemist",
           "Armorer",
           "Artillerist",
-          "Battle Smith"
+          "Battle Smith",
+          "Cartographer"
         ]
       },
       "Barbarian": {
@@ -5522,7 +5541,8 @@
           "Alchemist",
           "Armorer",
           "Artillerist",
-          "Battle Smith"
+          "Battle Smith",
+          "Cartographer"
         ]
       },
       "Bard": {
