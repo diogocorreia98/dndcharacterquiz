@@ -61,6 +61,22 @@
   },
   {
     "class": "ARTIFICER",
+    "subclass": "ARTIFICER_CARTOGRAPHER",
+    "variant": "Core",
+    "required_adjustment": null,
+    "preferred_ability": "DEX",
+    "ability_combo": [
+      "INT",
+      "DEX",
+      "CON"
+    ],
+    "armor": "Studded Leather Armor",
+    "hands": [
+      "Arcane Surveyor's Tools"
+    ]
+  },
+  {
+    "class": "ARTIFICER",
     "subclass": "ARTIFICER_BATTLE_SMITH",
     "variant": "Melee",
     "required_adjustment": null,
