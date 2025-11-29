@@ -178,6 +178,10 @@
       "pt": "Cresceu ao serviço de um templo, habituado a rituais e deveres religiosos.",
       "en": "Raised in service to a temple, versed in rituals and sacred duties."
     },
+    "ARCHAEOLOGIST": {
+      "pt": "Explora ruínas antigas e descobre artefactos, sobrevivendo a armadilhas e enigmas.",
+      "en": "Explores ancient ruins and uncovers relics, surviving traps and puzzles."
+    },
     "ARTISAN": {
       "pt": "Passou anos a aperfeiçoar um ofício, conhecendo ferramentas e guildas.",
       "en": "Spent years perfecting a craft, knowing tools, markets, and guild ties."
@@ -234,6 +238,10 @@
       "pt": "Agente dos Harpers, habituado a operar discretamente em prol do bem.",
       "en": "Harper agent used to working quietly in the name of the greater good."
     },
+    "HOUSE_AGENT": {
+      "pt": "Serve uma casa patronal, negociando favores e missões em nome da organização.",
+      "en": "Serves a patron house, brokering favors and missions on the organization's behalf."
+    },
     "HERMIT": {
       "pt": "Viveu isolado, com tempo para meditar, estudar e desconfiar de estranhos.",
       "en": "Lived in isolation, with time to meditate, study, and eye outsiders warily."
@@ -241,6 +249,10 @@
     "ICE_FISHER": {
       "pt": "Aprendeu a sobreviver em climas gelados, pescando e viajando no gelo.",
       "en": "Learned to survive frozen climates, fishing and traveling across the ice."
+    },
+    "INQUISITIVE": {
+      "pt": "Investiga mistérios com olhar atento, ligando pistas e interrogando suspeitos.",
+      "en": "Probes mysteries with a keen eye, connecting clues and questioning suspects."
     },
     "KNIGHT_OF_THE_GAUNTLET": {
       "pt": "Jurou proteger os inocentes como Cavaleiro da Manopla, obedecendo a códigos rígidos.",

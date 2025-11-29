@@ -4015,6 +4015,16 @@
         ]
       },
       {
+        "code": "ARCHAEOLOGIST",
+        "pt": "Arqueólogo",
+        "en": "Archaeologist",
+        "ability_increases": [
+          "DEX",
+          "INT",
+          "WIS"
+        ]
+      },
+      {
         "code": "ARTISAN",
         "pt": "Artesão",
         "en": "Artisan",
@@ -4155,6 +4165,16 @@
         ]
       },
       {
+        "code": "HOUSE_AGENT",
+        "pt": "Agente da Casa",
+        "en": "House Agent",
+        "ability_increases": [
+          "STR",
+          "INT",
+          "CHA"
+        ]
+      },
+      {
         "code": "HERMIT",
         "pt": "Eremita",
         "en": "Hermit",
@@ -4172,6 +4192,16 @@
           "STR",
           "DEX",
           "CON"
+        ]
+      },
+      {
+        "code": "INQUISITIVE",
+        "pt": "Inquisitivo",
+        "en": "Inquisitive",
+        "ability_increases": [
+          "CON",
+          "INT",
+          "CHA"
         ]
       },
       {
