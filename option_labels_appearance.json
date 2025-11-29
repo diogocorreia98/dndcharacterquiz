@@ -257,6 +257,18 @@
     "S039": {
       "pt": "Renascido",
       "en": "Reborn"
+    },
+    "S040": {
+      "pt": "Kalashtar",
+      "en": "Kalashtar"
+    },
+    "S041": {
+      "pt": "Khoravar",
+      "en": "Khoravar"
+    },
+    "S042": {
+      "pt": "Warforged",
+      "en": "Warforged"
     }
   },
   "q_subspecies_pick": {

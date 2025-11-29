@@ -104,7 +104,10 @@
         "S036",
         "S037",
         "S038",
-        "S039"
+        "S039",
+        "S040",
+        "S041",
+        "S042"
       ]
     },
     "subspecies": {
@@ -1843,6 +1846,8 @@
           "D"
         ],
         "height": [
+          "A",
+          "B",
           "C",
           "D"
         ],
@@ -1983,6 +1988,53 @@
         "code": "S039",
         "pt": "Renascido",
         "en": "Reborn",
+        "species_commonality": [
+          "D"
+        ],
+        "height": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "animal_likeness": [
+          "B"
+        ]
+      },
+      {
+        "code": "S040",
+        "pt": "Kalashtar",
+        "en": "Kalashtar",
+        "species_commonality": [
+          "D"
+        ],
+        "height": [
+          "C"
+        ],
+        "animal_likeness": [
+          "B"
+        ]
+      },
+      {
+        "code": "S041",
+        "pt": "Khoravar",
+        "en": "Khoravar",
+        "species_commonality": [
+          "C"
+        ],
+        "height": [
+          "A",
+          "B",
+          "C"
+        ],
+        "animal_likeness": [
+          "B"
+        ]
+      },
+      {
+        "code": "S042",
+        "pt": "Warforged",
+        "en": "Warforged",
         "species_commonality": [
           "D"
         ],
