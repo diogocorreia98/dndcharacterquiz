@@ -4374,6 +4374,148 @@
           "CHA"
         ]
       }
+    ],
+    "backgrounds_eberron": [
+      {
+        "code": "ABERRANT_HEIR",
+        "pt": "Aberrant Heir",
+        "en": "Aberrant Heir",
+        "ability_increases": [
+          "STR",
+          "CON",
+          "CHA"
+        ]
+      },
+      {
+        "code": "HOUSE_CANNITH_HEIR",
+        "pt": "House Cannith Heir",
+        "en": "House Cannith Heir",
+        "ability_increases": [
+          "STR",
+          "DEX",
+          "INT"
+        ]
+      },
+      {
+        "code": "HOUSE_DENEITH_HEIR",
+        "pt": "House Deneith Heir",
+        "en": "House Deneith Heir",
+        "ability_increases": [
+          "STR",
+          "CON",
+          "WIS"
+        ]
+      },
+      {
+        "code": "HOUSE_GHALLANDA_HEIR",
+        "pt": "House Ghallanda Heir",
+        "en": "House Ghallanda Heir",
+        "ability_increases": [
+          "DEX",
+          "WIS",
+          "CHA"
+        ]
+      },
+      {
+        "code": "HOUSE_JORASCO_HEIR",
+        "pt": "House Jorasco Heir",
+        "en": "House Jorasco Heir",
+        "ability_increases": [
+          "DEX",
+          "CON",
+          "WIS"
+        ]
+      },
+      {
+        "code": "HOUSE_KUNDARAK_HEIR",
+        "pt": "House Kundarak Heir",
+        "en": "House Kundarak Heir",
+        "ability_increases": [
+          "STR",
+          "CON",
+          "INT"
+        ]
+      },
+      {
+        "code": "HOUSE_LYRANDAR_HEIR",
+        "pt": "House Lyrandar Heir",
+        "en": "House Lyrandar Heir",
+        "ability_increases": [
+          "STR",
+          "DEX",
+          "CHA"
+        ]
+      },
+      {
+        "code": "HOUSE_MEDANI_HEIR",
+        "pt": "House Medani Heir",
+        "en": "House Medani Heir",
+        "ability_increases": [
+          "DEX",
+          "INT",
+          "WIS"
+        ]
+      },
+      {
+        "code": "HOUSE_ORIEN_HEIR",
+        "pt": "House Orien Heir",
+        "en": "House Orien Heir",
+        "ability_increases": [
+          "DEX",
+          "CON",
+          "INT"
+        ]
+      },
+      {
+        "code": "HOUSE_PHIARLAN_HEIR",
+        "pt": "House Phiarlan Heir",
+        "en": "House Phiarlan Heir",
+        "ability_increases": [
+          "DEX",
+          "WIS",
+          "CHA"
+        ]
+      },
+      {
+        "code": "HOUSE_SIVIS_HEIR",
+        "pt": "House Sivis Heir",
+        "en": "House Sivis Heir",
+        "ability_increases": [
+          "INT",
+          "WIS",
+          "CHA"
+        ]
+      },
+      {
+        "code": "HOUSE_THARASHK_HEIR",
+        "pt": "House Tharashk Heir",
+        "en": "House Tharashk Heir",
+        "ability_increases": [
+          "CON",
+          "INT",
+          "WIS"
+        ]
+      },
+      {
+        "code": "HOUSE_THURANNI_HEIR",
+        "pt": "House Thuranni Heir",
+        "en": "House Thuranni Heir",
+        "ability_increases": [
+          "DEX",
+          "INT",
+          "CHA"
+        ]
+      },
+      {
+        "code": "HOUSE_VADALIS_HEIR",
+        "pt": "House Vadalis Heir",
+        "en": "House Vadalis Heir",
+        "ability_increases": [
+          "CON",
+          "WIS",
+          "CHA"
+        ]
+      }
     ]
   },
   "supported_locales": [
