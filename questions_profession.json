@@ -2270,7 +2270,7 @@
     "q_eberron_background_origin": {
       "type": "question",
       "section": "background",
-      "question": "A tua personagem provêm de e está em Eberron?",
+      "question": "Estás a jogar uma campanha em Eberron?",
       "when": {
         "var": "class_ability_combo",
         "op": "is_set"
