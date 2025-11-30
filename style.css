@@ -53,6 +53,38 @@ body {
   gap: 0.5rem;
 }
 
+.app__status {
+  margin: 0 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--card) 90%, transparent);
+  color: var(--text);
+  font-weight: 600;
+  box-shadow: 0 12px 28px rgba(32, 27, 58, 0.08);
+}
+
+.app__status[data-tone='error'] {
+  border-color: rgba(218, 85, 89, 0.2);
+  background: color-mix(in srgb, #ffeef0 80%, transparent);
+  color: #8c1c21;
+}
+
+@media (prefers-color-scheme: dark) {
+  .app__status {
+    background: color-mix(in srgb, var(--card-dark) 92%, transparent);
+    border-color: var(--border-dark);
+    color: var(--text-dark);
+    box-shadow: 0 12px 28px rgba(15, 12, 30, 0.5);
+  }
+
+  .app__status[data-tone='error'] {
+    border-color: rgba(255, 129, 133, 0.4);
+    background: color-mix(in srgb, #351317 85%, transparent);
+    color: #ffc5c7;
+  }
+}
+
 .language-switcher {
   display: flex;
   align-items: center;

@@ -66,6 +66,24 @@ const UI_TEXT = {
   },
 };
 
+const setAppStatus = (text, tone = 'info') => {
+  const statusElement = document.getElementById('app-status');
+  if (!statusElement) {
+    return;
+  }
+
+  if (!text) {
+    statusElement.textContent = '';
+    statusElement.removeAttribute('data-tone');
+    statusElement.hidden = true;
+    return;
+  }
+
+  statusElement.textContent = text;
+  statusElement.dataset.tone = tone;
+  statusElement.hidden = false;
+};
+
 const SUBCLASS_COMPLEXITY = {
   ARTIFICER_ALCHEMIST: 'HIGH',
   ARTIFICER_ARMORER: 'HIGH',
@@ -2645,14 +2663,18 @@ const loadQuizData = async (manifestUrl) => {
 
 const bootstrap = async () => {
   const loadingMessage = UI_TEXT.loading?.[DEFAULT_LANGUAGE] ?? 'A carregar questionário…';
+  setAppStatus(loadingMessage);
   const questionElement = document.getElementById('question-text');
   if (questionElement) {
     questionElement.textContent = loadingMessage;
   }
   try {
     const data = await loadQuizData('dnd_2024_questionario.json');
+    setAppStatus('');
     new QuizApp(data);
   } catch (error) {
+    setAppStatus(UI_TEXT.loadError?.[DEFAULT_LANGUAGE] ??
+      'Não foi possível carregar o questionário. Atualiza a página ou verifica o servidor.', 'error');
     const message = document.createElement('p');
     message.className = 'options__empty';
     message.textContent = UI_TEXT.loadError?.[DEFAULT_LANGUAGE] ??
