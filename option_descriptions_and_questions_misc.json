@@ -4,6 +4,14 @@
       "pt": "Preferes destacar a Destreza (DEX) ou a Força (STR) da tua personagem?",
       "en": "Would you rather highlight your character's Dexterity (DEX) or Strength (STR)?"
     },
+    "q_background_world_origin": {
+      "pt": "A minha personagem é natural do mundo de Eberron?",
+      "en": "Is my character from the world of Eberron?"
+    },
+    "q_background_eberron_choice": {
+      "pt": "A minha personagem…",
+      "en": "My character…"
+    },
     "q_background_preference": {
       "pt": "Que tipo de vida levou a tua personagem?",
       "en": "What kind of life has your character led?"
