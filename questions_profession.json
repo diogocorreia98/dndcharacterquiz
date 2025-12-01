@@ -2275,7 +2275,7 @@
               "value": "DEX"
             }
           ],
-          "next": "q_background_preference"
+          "next": "q_eberron_origin"
         },
         {
           "value": "STR",
@@ -2286,10 +2286,10 @@
               "value": "STR"
             }
           ],
-          "next": "q_background_preference"
+          "next": "q_eberron_origin"
         }
       ],
-      "next": "q_background_preference"
+      "next": "q_eberron_origin"
     }
   }
 }
