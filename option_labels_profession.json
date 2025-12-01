@@ -1049,6 +1049,78 @@
       "en": "Bladesinger"
     }
   },
+  "q_background_world_origin": {
+    "YES": {
+      "pt": "Sim",
+      "en": "Yes"
+    },
+    "NO": {
+      "pt": "Não/Não sei",
+      "en": "No/Not sure"
+    }
+  },
+  "q_background_eberron_choice": {
+    "ABERRANT_HEIR": {
+      "pt": "Aberrant Heir",
+      "en": "Aberrant Heir"
+    },
+    "HOUSE_CANNITH_HEIR": {
+      "pt": "House Cannith Heir",
+      "en": "House Cannith Heir"
+    },
+    "HOUSE_DENEITH_HEIR": {
+      "pt": "House Deneith Heir",
+      "en": "House Deneith Heir"
+    },
+    "HOUSE_GHALLANDA_HEIR": {
+      "pt": "House Ghallanda Heir",
+      "en": "House Ghallanda Heir"
+    },
+    "HOUSE_JORASCO_HEIR": {
+      "pt": "House Jorasco Heir",
+      "en": "House Jorasco Heir"
+    },
+    "HOUSE_KUNDARAK_HEIR": {
+      "pt": "House Kundarak Heir",
+      "en": "House Kundarak Heir"
+    },
+    "HOUSE_LYRANDAR_HEIR": {
+      "pt": "House Lyrandar Heir",
+      "en": "House Lyrandar Heir"
+    },
+    "HOUSE_MEDANI_HEIR": {
+      "pt": "House Medani Heir",
+      "en": "House Medani Heir"
+    },
+    "HOUSE_ORIEN_HEIR": {
+      "pt": "House Orien Heir",
+      "en": "House Orien Heir"
+    },
+    "HOUSE_PHIARLAN_HEIR": {
+      "pt": "House Phiarlan Heir",
+      "en": "House Phiarlan Heir"
+    },
+    "HOUSE_SIVIS_HEIR": {
+      "pt": "House Sivis Heir",
+      "en": "House Sivis Heir"
+    },
+    "HOUSE_THARASHK_HEIR": {
+      "pt": "House Tharashk Heir",
+      "en": "House Tharashk Heir"
+    },
+    "HOUSE_THURANNI_HEIR": {
+      "pt": "House Thuranni Heir",
+      "en": "House Thuranni Heir"
+    },
+    "HOUSE_VADALIS_HEIR": {
+      "pt": "House Vadalis Heir",
+      "en": "House Vadalis Heir"
+    },
+    "NO_DRAGONMARK": {
+      "pt": "Não herdou uma Marca Dracónica",
+      "en": "Did not inherit a Dragonmark"
+    }
+  },
   "q_background_preference": {
     "ACOLYTE": {
       "pt": "Acólito",

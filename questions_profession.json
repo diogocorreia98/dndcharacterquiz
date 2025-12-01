@@ -2275,7 +2275,7 @@
               "value": "DEX"
             }
           ],
-          "next": "q_background_preference"
+          "next": "q_background_world_origin"
         },
         {
           "value": "STR",
@@ -2286,10 +2286,349 @@
               "value": "STR"
             }
           ],
+          "next": "q_background_world_origin"
+        }
+      ],
+      "next": "q_background_world_origin"
+    },
+    "q_background_world_origin": {
+      "type": "question",
+      "section": "background",
+      "question": "A minha personagem é natural do mundo de Eberron?",
+      "when": {
+        "var": "class_ability_combo",
+        "op": "is_set"
+      },
+      "options": [
+        {
+          "value": "YES",
+          "set": [
+            {
+              "var": "background_world",
+              "op": "set",
+              "value": "EBERRON"
+            }
+          ],
+          "next": "q_background_eberron_choice"
+        },
+        {
+          "value": "NO",
+          "set": [
+            {
+              "var": "background_world",
+              "op": "set",
+              "value": "OTHER"
+            }
+          ],
           "next": "q_background_preference"
         }
       ],
       "next": "q_background_preference"
+    },
+    "q_background_eberron_choice": {
+      "type": "question",
+      "section": "background",
+      "question": "A minha personagem…",
+      "when": {
+        "var": "background_world",
+        "op": "eq",
+        "value": "EBERRON"
+      },
+      "options": [
+        {
+          "value": "ABERRANT_HEIR",
+          "datasetEntry": {
+            "code": "ABERRANT_HEIR",
+            "ability_increases": [
+              "STR",
+              "CON",
+              "CHA"
+            ]
+          },
+          "set": [
+            {
+              "var": "background",
+              "op": "set",
+              "value_from_option": true
+            }
+          ],
+          "next": "q_dark_gift_presence"
+        },
+        {
+          "value": "HOUSE_CANNITH_HEIR",
+          "datasetEntry": {
+            "code": "HOUSE_CANNITH_HEIR",
+            "ability_increases": [
+              "STR",
+              "DEX",
+              "INT"
+            ]
+          },
+          "set": [
+            {
+              "var": "background",
+              "op": "set",
+              "value_from_option": true
+            }
+          ],
+          "next": "q_dark_gift_presence"
+        },
+        {
+          "value": "HOUSE_DENEITH_HEIR",
+          "datasetEntry": {
+            "code": "HOUSE_DENEITH_HEIR",
+            "ability_increases": [
+              "STR",
+              "CON",
+              "WIS"
+            ]
+          },
+          "set": [
+            {
+              "var": "background",
+              "op": "set",
+              "value_from_option": true
+            }
+          ],
+          "next": "q_dark_gift_presence"
+        },
+        {
+          "value": "HOUSE_GHALLANDA_HEIR",
+          "datasetEntry": {
+            "code": "HOUSE_GHALLANDA_HEIR",
+            "ability_increases": [
+              "DEX",
+              "WIS",
+              "CHA"
+            ]
+          },
+          "set": [
+            {
+              "var": "background",
+              "op": "set",
+              "value_from_option": true
+            }
+          ],
+          "next": "q_dark_gift_presence"
+        },
+        {
+          "value": "HOUSE_JORASCO_HEIR",
+          "datasetEntry": {
+            "code": "HOUSE_JORASCO_HEIR",
+            "ability_increases": [
+              "DEX",
+              "CON",
+              "WIS"
+            ]
+          },
+          "set": [
+            {
+              "var": "background",
+              "op": "set",
+              "value_from_option": true
+            }
+          ],
+          "next": "q_dark_gift_presence"
+        },
+        {
+          "value": "HOUSE_KUNDARAK_HEIR",
+          "datasetEntry": {
+            "code": "HOUSE_KUNDARAK_HEIR",
+            "ability_increases": [
+              "STR",
+              "CON",
+              "INT"
+            ]
+          },
+          "set": [
+            {
+              "var": "background",
+              "op": "set",
+              "value_from_option": true
+            }
+          ],
+          "next": "q_dark_gift_presence"
+        },
+        {
+          "value": "HOUSE_LYRANDAR_HEIR",
+          "datasetEntry": {
+            "code": "HOUSE_LYRANDAR_HEIR",
+            "ability_increases": [
+              "STR",
+              "DEX",
+              "CHA"
+            ]
+          },
+          "set": [
+            {
+              "var": "background",
+              "op": "set",
+              "value_from_option": true
+            }
+          ],
+          "next": "q_dark_gift_presence"
+        },
+        {
+          "value": "HOUSE_MEDANI_HEIR",
+          "datasetEntry": {
+            "code": "HOUSE_MEDANI_HEIR",
+            "ability_increases": [
+              "DEX",
+              "INT",
+              "WIS"
+            ]
+          },
+          "set": [
+            {
+              "var": "background",
+              "op": "set",
+              "value_from_option": true
+            }
+          ],
+          "next": "q_dark_gift_presence"
+        },
+        {
+          "value": "HOUSE_ORIEN_HEIR",
+          "datasetEntry": {
+            "code": "HOUSE_ORIEN_HEIR",
+            "ability_increases": [
+              "DEX",
+              "CON",
+              "INT"
+            ]
+          },
+          "set": [
+            {
+              "var": "background",
+              "op": "set",
+              "value_from_option": true
+            }
+          ],
+          "next": "q_dark_gift_presence"
+        },
+        {
+          "value": "HOUSE_PHIARLAN_HEIR",
+          "datasetEntry": {
+            "code": "HOUSE_PHIARLAN_HEIR",
+            "ability_increases": [
+              "DEX",
+              "WIS",
+              "CHA"
+            ]
+          },
+          "set": [
+            {
+              "var": "background",
+              "op": "set",
+              "value_from_option": true
+            }
+          ],
+          "next": "q_dark_gift_presence"
+        },
+        {
+          "value": "HOUSE_SIVIS_HEIR",
+          "datasetEntry": {
+            "code": "HOUSE_SIVIS_HEIR",
+            "ability_increases": [
+              "INT",
+              "WIS",
+              "CHA"
+            ]
+          },
+          "set": [
+            {
+              "var": "background",
+              "op": "set",
+              "value_from_option": true
+            }
+          ],
+          "next": "q_dark_gift_presence"
+        },
+        {
+          "value": "HOUSE_THARASHK_HEIR",
+          "datasetEntry": {
+            "code": "HOUSE_THARASHK_HEIR",
+            "ability_increases": [
+              "CON",
+              "INT",
+              "WIS"
+            ]
+          },
+          "set": [
+            {
+              "var": "background",
+              "op": "set",
+              "value_from_option": true
+            }
+          ],
+          "next": "q_dark_gift_presence"
+        },
+        {
+          "value": "HOUSE_THURANNI_HEIR",
+          "datasetEntry": {
+            "code": "HOUSE_THURANNI_HEIR",
+            "ability_increases": [
+              "DEX",
+              "INT",
+              "CHA"
+            ]
+          },
+          "set": [
+            {
+              "var": "background",
+              "op": "set",
+              "value_from_option": true
+            }
+          ],
+          "next": "q_dark_gift_presence"
+        },
+        {
+          "value": "HOUSE_VADALIS_HEIR",
+          "datasetEntry": {
+            "code": "HOUSE_VADALIS_HEIR",
+            "ability_increases": [
+              "CON",
+              "WIS",
+              "CHA"
+            ]
+          },
+          "set": [
+            {
+              "var": "background",
+              "op": "set",
+              "value_from_option": true
+            }
+          ],
+          "next": "q_dark_gift_presence"
+        },
+        {
+          "value": "NO_DRAGONMARK",
+          "datasetEntry": {
+            "code": "NO_DRAGONMARK",
+            "ability_increases": [
+              "STR",
+              "DEX",
+              "CON",
+              "INT",
+              "WIS",
+              "CHA"
+            ]
+          },
+          "next": "q_background_preference"
+        }
+      ],
+      "ability_overlap_filter": {
+        "variable": "_class_ability_combo_codes",
+        "entry_field": "ability_increases",
+        "min_overlap": 2,
+        "face_role_variable": "secondary_roles",
+        "face_requires_cha": true
+      },
+      "skip_if_no_options": {
+        "next": "q_background_preference"
+      },
+      "auto_select_if_single_option": true,
+      "next": "q_dark_gift_presence"
     },
     "q_background_preference": {
       "type": "question",
