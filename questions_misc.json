@@ -1,5 +1,47 @@
 {
   "nodes": {
+    "q_eberron_origin": {
+      "type": "question",
+      "section": "background",
+      "question": "A tua personagem é de Eberron?",
+      "when": {
+        "var": "class_ability_combo",
+        "op": "is_set"
+      },
+      "options": [
+        {
+          "value": "YES",
+          "label_translations": {
+            "pt": "Sim",
+            "en": "Yes"
+          },
+          "set": [
+            {
+              "var": "is_eberron_character",
+              "op": "set",
+              "value": true
+            }
+          ],
+          "next": "q_background_preference"
+        },
+        {
+          "value": "NO",
+          "label_translations": {
+            "pt": "Não",
+            "en": "No"
+          },
+          "set": [
+            {
+              "var": "is_eberron_character",
+              "op": "set",
+              "value": false
+            }
+          ],
+          "next": "q_background_preference"
+        }
+      ],
+      "next": "q_background_preference"
+    },
     "q_background_preference": {
       "type": "question",
       "section": "background",
