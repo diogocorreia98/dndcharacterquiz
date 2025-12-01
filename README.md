@@ -35,4 +35,5 @@ Aplicação web simples para percorrer o questionário de Dungeons & Dragons 202
 * `option_descriptions_and_questions_classes.json`, `option_descriptions_and_questions_species.json` e `option_descriptions_and_questions_misc.json` – descrições em texto livre e enunciados das perguntas, agrupados por classes/subclasses, espécies (e variações) e restantes opções estáticas.
 * `questions_appearance.json` – perguntas até à secção de classe.
 * `questions_profession.json` – perguntas da secção de classe.
+* `questions_misc.json` – perguntas pós-classe (antecedente e dark gift).
 * `key_mappings.json` – mapeamentos de variáveis, valores e datasets.
