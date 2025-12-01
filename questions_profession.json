@@ -2614,7 +2614,14 @@
               "CHA"
             ]
           },
-          "next": "q_background_preference"
+          "set": [
+            {
+              "var": "background",
+              "op": "set",
+              "value_from_option": true
+            }
+          ],
+          "next": "q_dark_gift_presence"
         }
       ],
       "ability_overlap_filter": {
@@ -2635,8 +2642,17 @@
       "section": "background",
       "question": "Que tipo de vida levou a tua personagem?",
       "when": {
-        "var": "class_ability_combo",
-        "op": "is_set"
+        "and": [
+          {
+            "var": "class_ability_combo",
+            "op": "is_set"
+          },
+          {
+            "var": "background_world",
+            "op": "eq",
+            "value": "OTHER"
+          }
+        ]
       },
       "options_source": {
         "type": "inline",
