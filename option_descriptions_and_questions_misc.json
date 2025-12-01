@@ -4,6 +4,14 @@
       "pt": "Preferes destacar a Destreza (DEX) ou a Força (STR) da tua personagem?",
       "en": "Would you rather highlight your character's Dexterity (DEX) or Strength (STR)?"
     },
+    "q_eberron_background_origin": {
+      "pt": "Estás a jogar uma campanha em Eberron?",
+      "en": "Are you playing a campaign in Eberron?"
+    },
+    "q_background_preference_eberron": {
+      "pt": "Que herdeiro das Casas de Dragomarca é a tua personagem?",
+      "en": "Which Dragonmarked House heir is your character?"
+    },
     "q_background_preference": {
       "pt": "Que tipo de vida levou a tua personagem?",
       "en": "What kind of life has your character led?"
