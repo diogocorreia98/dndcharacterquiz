@@ -946,6 +946,12 @@
             "var": "subclass_group",
             "op": "eq",
             "optional": false
+          },
+          {
+            "field": "banned_species",
+            "var": "species",
+            "op": "not_contains",
+            "optional": true
           }
         ]
       },
@@ -966,6 +972,12 @@
             "var": "subclass_group",
             "op": "eq",
             "optional": false
+          },
+          {
+            "field": "banned_species",
+            "var": "species",
+            "op": "not_contains",
+            "optional": true
           }
         ],
         "value_field": "code",
@@ -1364,6 +1376,18 @@
       "options": [
         {
           "value": "CLERIC_PROTECTOR",
+          "when": {
+            "none": [
+              {
+                "var": "species",
+                "op": "in",
+                "value": [
+                  "S001",
+                  "S010"
+                ]
+              }
+            ]
+          },
           "set": [
             {
               "var": "class_adjustment",

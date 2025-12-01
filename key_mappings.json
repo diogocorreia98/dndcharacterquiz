@@ -3021,7 +3021,11 @@
         "class": "ARTIFICER",
         "group": "CORE",
         "pt": "Armeiro",
-        "en": "Armorer"
+        "en": "Armorer",
+        "banned_species": [
+          "S001",
+          "S010"
+        ]
       },
       {
         "code": "ARTIFICER_ARTILLERIST",
@@ -3133,7 +3137,11 @@
         "class": "BARD",
         "group": "CORE",
         "pt": "do Colégio da Bravura",
-        "en": "College of Valor"
+        "en": "College of Valor",
+        "banned_species": [
+          "S001",
+          "S010"
+        ]
       },
       {
         "code": "BARD_COLLEGE_OF_CREATION",
@@ -3209,6 +3217,10 @@
         "en": "Forge Domain",
         "niche_roles": [
           "OTHER"
+        ],
+        "banned_species": [
+          "S001",
+          "S010"
         ]
       },
       {
@@ -3246,6 +3258,10 @@
         "en": "Order Domain",
         "niche_roles": [
           "FACE"
+        ],
+        "banned_species": [
+          "S001",
+          "S010"
         ]
       },
       {
@@ -3266,6 +3282,10 @@
         "en": "Tempest Domain",
         "niche_roles": [
           "CONTROLLER"
+        ],
+        "banned_species": [
+          "S001",
+          "S010"
         ]
       },
       {
@@ -3276,6 +3296,10 @@
         "en": "Twilight Domain",
         "niche_roles": [
           "SCOUT"
+        ],
+        "banned_species": [
+          "S001",
+          "S010"
         ]
       },
       {

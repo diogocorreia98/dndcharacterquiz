@@ -1253,6 +1253,12 @@ class QuizApp {
           }
           return entryValue.includes(variableValue);
         }
+        case 'not_contains': {
+          if (!Array.isArray(entryValue)) {
+            return true;
+          }
+          return !entryValue.includes(variableValue);
+        }
         case 'in': {
           if (!Array.isArray(variableValue)) {
             return false;
