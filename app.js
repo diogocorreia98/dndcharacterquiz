@@ -31,6 +31,9 @@ class QuizApp {
     this.sectionVariables = this.buildSectionVariables();
     this.currentOptions = [];
     this.selectedValue = null;
+    this.isShowingBackgroundPrompt = false;
+    this.backgroundPromptTarget = null;
+    this.backgroundPromptSkipNodeId = null;
     this.attachEventListeners();
     this.start();
   }
@@ -75,6 +78,18 @@ class QuizApp {
       return;
     }
 
+    if (this.isShowingBackgroundPrompt) {
+      const wantsBackground = this.selectedValue === 'BACKGROUND_PROMPT_YES';
+      const targetNodeId = wantsBackground ? this.backgroundPromptTarget : this.backgroundPromptSkipNodeId;
+
+      this.isShowingBackgroundPrompt = false;
+      this.backgroundPromptTarget = null;
+      this.backgroundPromptSkipNodeId = null;
+
+      this.showQuestion(targetNodeId, { skipBackgroundPrompt: wantsBackground });
+      return;
+    }
+
     const nodeId = this.state.currentNodeId;
     const node = this.quizData.nodes[nodeId];
     const option = this.currentOptions.find((opt) => opt.value === this.selectedValue);
@@ -97,7 +112,7 @@ class QuizApp {
     this.showQuestion(nextNodeId);
   }
 
-  showQuestion(startNodeId, { preselect = null, fromHistory = false } = {}) {
+  showQuestion(startNodeId, { preselect = null, fromHistory = false, skipBackgroundPrompt = false } = {}) {
     const resolution = this.resolveNextQuestion(startNodeId);
     if (!resolution) {
       this.showResults();
@@ -105,6 +120,13 @@ class QuizApp {
     }
 
     const { nodeId, node, options } = resolution;
+
+    if (node.section === 'background' && !skipBackgroundPrompt) {
+      this.renderBackgroundPrompt({ nodeId, node });
+      return;
+    }
+
+    this.isShowingBackgroundPrompt = false;
     this.state.currentNodeId = nodeId;
     this.currentOptions = options;
     this.selectedValue = preselect;
@@ -766,6 +788,36 @@ class QuizApp {
     }
 
     return true;
+  }
+
+  renderBackgroundPrompt({ nodeId, node }) {
+    const promptQuestion =
+      this.language === 'pt'
+        ? 'Queres escolher um background?'
+        : 'Do you want to pick a background?';
+    const yesLabel = this.language === 'pt' ? 'Sim, mostrar opções de background' : 'Yes, show the background question';
+    const noLabel = this.language === 'pt' ? 'Não, continuar sem escolher' : 'No, skip this for now';
+
+    this.isShowingBackgroundPrompt = true;
+    this.backgroundPromptTarget = nodeId;
+    this.backgroundPromptSkipNodeId = node.next ?? null;
+    this.state.currentNodeId = nodeId;
+    this.currentOptions = [
+      { label: yesLabel, value: 'BACKGROUND_PROMPT_YES' },
+      { label: noLabel, value: 'BACKGROUND_PROMPT_NO' },
+    ];
+    this.selectedValue = null;
+
+    this.dom.progress.textContent = `Pergunta ${this.state.history.length + 1}`;
+    this.dom.questionText.textContent = promptQuestion;
+
+    this.renderOptions(this.currentOptions, null);
+    this.dom.noOptionsMessage.hidden = true;
+    this.dom.nextButton.disabled = true;
+    this.dom.backButton.disabled = this.state.history.length === 0;
+
+    this.renderStatusSummary();
+    this.dom.optionsForm.focus?.();
   }
 }
 
