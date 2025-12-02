@@ -434,24 +434,6 @@ const buildSubsubspeciesDescription = function (option) {
   });
 };
 
-const buildBackgroundDescription = function (option) {
-  const entry = option?.datasetEntry;
-  const backgroundSummaries = this.quizData.descriptionGroups?.background_summaries;
-  if (entry && backgroundSummaries) {
-    const summary = backgroundSummaries[entry.code] ?? backgroundSummaries[option.value];
-    if (summary) {
-      return summary;
-    }
-  }
-  const label = this.getOptionLabel('q_background_preference', option);
-  return buildLocalizedText((lang) => {
-    if (!label) {
-      return '';
-    }
-    return `${label}: ${BACKGROUND_DESCRIPTION_LABELS.path[lang]}`;
-  });
-};
-
 const buildSubclassDescription = function (option, nodeId) {
   const entry = option?.datasetEntry;
   const metadata = this.quizData.metadata ?? {};
@@ -513,7 +495,6 @@ const AUTO_DESCRIPTION_BUILDERS = {
   q_species_pick: buildSpeciesDescription,
   q_subspecies_pick: buildSubspeciesDescription,
   q_subsubspecies_pick: buildSubsubspeciesDescription,
-  q_background_preference: buildBackgroundDescription,
   q_subclass_choice: buildSubclassDescription,
   q_class_adjustment_fighter: buildFightingStyleDescription,
   q_class_adjustment_ranger: buildFightingStyleDescription,
@@ -559,7 +540,6 @@ class QuizApp {
 
     this.sectionVariables = this.buildSectionVariables();
     this.darkGiftQuestionId = this.findDarkGiftQuestionId();
-    this.backgroundQuestionId = this.findBackgroundQuestionId();
     this.roleData = this.prepareRoleData();
     this.complexityData = this.prepareComplexityData();
     this.variantData = this.prepareVariantData();
@@ -1046,16 +1026,6 @@ class QuizApp {
 
     if (!this.darkGiftQuestionId || this.state.currentNodeId === this.darkGiftQuestionId) {
       return null;
-    }
-
-    const backgroundNotChosen = !this.hasValue(variables.background);
-    const abilityComboDefined = this.hasValue(variables.class_ability_combo);
-
-    if (this.backgroundQuestionId && backgroundNotChosen && abilityComboDefined) {
-      const resolution = this.resolveNextQuestion(this.backgroundQuestionId);
-      if (resolution) {
-        return resolution;
-      }
     }
 
     return this.resolveNextQuestion(this.darkGiftQuestionId);
@@ -1747,26 +1717,6 @@ class QuizApp {
       );
 
       if (resetsDarkGift) {
-        return nodeId;
-      }
-    }
-
-    return null;
-  }
-
-  findBackgroundQuestionId() {
-    const entries = Object.entries(this.quizData.nodes ?? {});
-    for (const [nodeId, node] of entries) {
-      if (!node || node.type !== 'question' || node.section !== 'background') {
-        continue;
-      }
-
-      const usesBackgroundDataset = node.options_source?.dataset === 'backgrounds';
-      const setsBackgroundVariable = Array.isArray(node.on_select)
-        ? node.on_select.some((action) => action?.var === 'background')
-        : false;
-
-      if (usesBackgroundDataset || setsBackgroundVariable) {
         return nodeId;
       }
     }
