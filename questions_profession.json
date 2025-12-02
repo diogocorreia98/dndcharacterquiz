@@ -994,6 +994,7 @@
       "type": "question",
       "section": "talent",
       "question": "Pretendes usar o feitiço Find Familiar e ter uma companhia animal mágica?",
+      "next": "q_physical_ability_preference",
       "when": {
         "any": [
           {
