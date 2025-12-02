@@ -3,7 +3,7 @@
   "nodes": {
     "q_primary_roles": {
       "type": "question",
-      "section": "class",
+      "section": "talent",
       "question": "Que papel preferes em combate (seleciona até 2 opções)?",
       "selection": {
         "mode": "multiple",
@@ -51,7 +51,7 @@
     },
     "q_healer_support_preference": {
       "type": "question",
-      "section": "class",
+      "section": "talent",
       "question": "Qual preferes?",
       "when": {
         "var": "_pending_healer_support",
@@ -119,7 +119,7 @@
     },
     "q_secondary_roles": {
       "type": "question",
-      "section": "class",
+      "section": "talent",
       "question": "Há mais algum papel que precisas que a tua personagem sirva (Seleciona 0, 1 ou 2 opções)?",
       "selection": {
         "mode": "multiple",
@@ -151,7 +151,7 @@
     },
     "q_class_complexity": {
       "type": "question",
-      "section": "class",
+      "section": "talent",
       "question": "Com que nível de complexidade te sentes confortável?",
       "options": [
         {
@@ -191,7 +191,7 @@
     },
     "q_class_simple_choice": {
       "type": "question",
-      "section": "class",
+      "section": "talent",
       "question": "Que classe preferes jogar?",
       "options": [
         {
@@ -292,7 +292,7 @@
     },
     "q_class_medium_choice": {
       "type": "question",
-      "section": "class",
+      "section": "talent",
       "question": "Que classe preferes jogar?",
       "options": [
         {
@@ -497,7 +497,7 @@
     },
     "q_class_high_choice": {
       "type": "question",
-      "section": "class",
+      "section": "talent",
       "question": "Que classe preferes jogar?",
       "options": [
         {
@@ -884,7 +884,7 @@
     },
     "q_subclass_group": {
       "type": "question",
-      "section": "class",
+      "section": "talent",
       "question": "Preferes explorar subclasses principais ou especializadas?",
       "options": [
         {
@@ -927,7 +927,7 @@
     },
     "q_subclass_choice": {
       "type": "question",
-      "section": "class",
+      "section": "talent",
       "question": "Qual destas subclasses chama mais por ti?",
       "options_source": {
         "type": "inline",
@@ -992,7 +992,7 @@
     },
     "q_find_familiar_use": {
       "type": "question",
-      "section": "class",
+      "section": "talent",
       "question": "Pretendes usar o feitiço Find Familiar e ter uma companhia animal mágica?",
       "when": {
         "any": [
@@ -1078,7 +1078,7 @@
     },
     "q_familiar_habitat": {
       "type": "question",
-      "section": "class",
+      "section": "talent",
       "question": "O teu familiar ideal vive...?",
       "when": {
         "all": [
@@ -1142,7 +1142,7 @@
     },
     "q_familiar_creature_sky": {
       "type": "question",
-      "section": "class",
+      "section": "talent",
       "question": "Qual destas criaturas aéreas te acompanha?",
       "when": {
         "all": [
@@ -1218,7 +1218,7 @@
     },
     "q_familiar_creature_land": {
       "type": "question",
-      "section": "class",
+      "section": "talent",
       "question": "Qual destes animais terrestres partilha a tua jornada?",
       "when": {
         "all": [
@@ -1305,7 +1305,7 @@
     },
     "q_familiar_creature_water": {
       "type": "question",
-      "section": "class",
+      "section": "talent",
       "question": "Qual destas criaturas aquáticas é tua aliada?",
       "when": {
         "all": [
@@ -1359,7 +1359,7 @@
     },
     "q_class_adjustment_cleric": {
       "type": "question",
-      "section": "class",
+      "section": "talent",
       "question": "Que Divine Order pretendes escolher?",
       "options": [
         {
@@ -1388,7 +1388,7 @@
     },
     "q_class_adjustment_druid": {
       "type": "question",
-      "section": "class",
+      "section": "talent",
       "question": "Que Primal Order pretendes escolher?",
       "options": [
         {
@@ -1417,7 +1417,7 @@
     },
     "q_class_adjustment_warlock": {
       "type": "question",
-      "section": "class",
+      "section": "talent",
       "question": "Que Pact Boon Invocation pretendes escolher?",
       "options": [
         {
@@ -1509,7 +1509,7 @@
     },
     "q_warlock_familiar_type": {
       "type": "question",
-      "section": "class",
+      "section": "talent",
       "question": "Que tipo de familiar mágico te acompanha nas tuas aventuras?",
       "when": {
         "all": [
@@ -1572,7 +1572,7 @@
     },
     "q_warlock_familiar_style": {
       "type": "question",
-      "section": "class",
+      "section": "talent",
       "question": "Preferes que o teu familiar tenha...?",
       "when": {
         "all": [
@@ -1601,7 +1601,7 @@
     },
     "q_warlock_familiar_dark": {
       "type": "question",
-      "section": "class",
+      "section": "talent",
       "question": "Qual destes seres das trevas preferes como familiar?",
       "when": {
         "all": [
@@ -1666,7 +1666,7 @@
     },
     "q_warlock_familiar_mystic": {
       "type": "question",
-      "section": "class",
+      "section": "talent",
       "question": "Qual destas criaturas mágicas e fascinantes escolhes?",
       "when": {
         "all": [
@@ -1731,7 +1731,7 @@
     },
     "q_warlock_familiar_habitat": {
       "type": "question",
-      "section": "class",
+      "section": "talent",
       "question": "O teu familiar ideal vive...?",
       "when": {
         "all": [
@@ -1805,7 +1805,7 @@
     },
     "q_warlock_familiar_creature_sky": {
       "type": "question",
-      "section": "class",
+      "section": "talent",
       "question": "Qual destas criaturas aéreas te acompanha?",
       "when": {
         "all": [
@@ -1886,7 +1886,7 @@
     },
     "q_warlock_familiar_creature_land": {
       "type": "question",
-      "section": "class",
+      "section": "talent",
       "question": "Qual destas criaturas terrestres te acompanha?",
       "when": {
         "all": [
@@ -1978,7 +1978,7 @@
     },
     "q_warlock_familiar_creature_water": {
       "type": "question",
-      "section": "class",
+      "section": "talent",
       "question": "Qual destas criaturas aquáticas te acompanha?",
       "when": {
         "all": [
@@ -2037,7 +2037,7 @@
     },
     "q_class_adjustment_fighter": {
       "type": "question",
-      "section": "class",
+      "section": "talent",
       "question": "Que Estilo de Luta preferes aprender?",
       "options": [
         {
@@ -2092,7 +2092,7 @@
     },
     "q_class_adjustment_ranger": {
       "type": "question",
-      "section": "class",
+      "section": "talent",
       "question": "Que Estilo de Luta preferes aprender?",
       "options": [
         {
@@ -2163,7 +2163,7 @@
     },
     "q_class_adjustment_paladin": {
       "type": "question",
-      "section": "class",
+      "section": "talent",
       "question": "Que Estilo de Luta preferes aprender?",
       "options": [
         {
@@ -2234,7 +2234,7 @@
     },
     "q_physical_ability_preference": {
       "type": "question",
-      "section": "class",
+      "section": "talent",
       "question": "Preferes destacar a Destreza (DEX) ou a Força (STR) da tua personagem?",
       "when": {
         "var": "variant_requires_physical_preference",
@@ -2251,7 +2251,7 @@
               "value": "DEX"
             }
           ],
-          "next": "q_dark_gift_presence"
+          "next": "q_origin_eberron"
         },
         {
           "value": "STR",
@@ -2262,14 +2262,137 @@
               "value": "STR"
             }
           ],
-          "next": "q_dark_gift_presence"
+          "next": "q_origin_eberron"
+        }
+      ],
+      "next": "q_origin_eberron"
+    },
+    "q_origin_eberron": {
+      "type": "question",
+      "section": "origin",
+      "question": {
+        "pt": "A minha personagem é natural do mundo de Eberron?",
+        "en": "Is my character from the world of Eberron?"
+      },
+      "options": [
+        {
+          "value": "YES",
+          "label_translations": {
+            "pt": "Sim",
+            "en": "Yes"
+          },
+          "set": [
+            {
+              "var": "is_from_eberron",
+              "op": "set",
+              "value": "YES"
+            },
+            {
+              "var": "background",
+              "op": "set",
+              "value": null
+            }
+          ],
+          "next": "q_eberron_backgrounds"
+        },
+        {
+          "value": "NO",
+          "label_translations": {
+            "pt": "Não/Não sei",
+            "en": "No/Not sure"
+          },
+          "set": [
+            {
+              "var": "is_from_eberron",
+              "op": "set",
+              "value": "NO"
+            },
+            {
+              "var": "background",
+              "op": "set",
+              "value": null
+            }
+          ],
+          "next": "q_background_general"
+        }
+      ]
+    },
+    "q_eberron_backgrounds": {
+      "type": "question",
+      "section": "origin",
+      "question": {
+        "pt": "Qual é o meu Background de Eberron?",
+        "en": "What is my Eberron Background?"
+      },
+      "options_source": {
+        "type": "inline",
+        "dataset": "eberron_backgrounds",
+        "label_field": "pt",
+        "value_field": "code",
+        "next_field": "next",
+        "filters": [
+          {
+            "field": "ability_increases",
+            "var": "_class_ability_combo_codes",
+            "op": "in",
+            "optional": true
+          }
+        ]
+      },
+      "ability_overlap_filter": {
+        "variable": "_class_ability_combo_codes",
+        "entry_field": "ability_increases",
+        "optional_when_missing": true,
+        "min_overlap": 2
+      },
+      "on_select": [
+        {
+          "var": "background",
+          "op": "set",
+          "value_from_option": true
+        }
+      ],
+      "next": "q_dark_gift_presence"
+    },
+    "q_background_general": {
+      "type": "question",
+      "section": "origin",
+      "question": {
+        "pt": "Qual é o meu Background?",
+        "en": "What is my Background?"
+      },
+      "options_source": {
+        "type": "inline",
+        "dataset": "backgrounds",
+        "label_field": "pt",
+        "value_field": "code",
+        "filters": [
+          {
+            "field": "ability_increases",
+            "var": "_class_ability_combo_codes",
+            "op": "in",
+            "optional": true
+          }
+        ]
+      },
+      "ability_overlap_filter": {
+        "variable": "_class_ability_combo_codes",
+        "entry_field": "ability_increases",
+        "optional_when_missing": true,
+        "min_overlap": 2
+      },
+      "on_select": [
+        {
+          "var": "background",
+          "op": "set",
+          "value_from_option": true
         }
       ],
       "next": "q_dark_gift_presence"
     },
     "q_dark_gift_presence": {
       "type": "question",
-      "section": "dark_gift",
+      "section": "origin",
       "question": "A tua personagem carrega uma maldição?",
       "options": [
         {
@@ -2298,7 +2421,7 @@
     },
     "q_dark_gift_type": {
       "type": "question",
-      "section": "dark_gift",
+      "section": "origin",
       "question": "Que tipo de maldição ela tem?",
       "options": [
         {

@@ -1,24 +1,16 @@
 {
   "sections": {
-    "gender": {
-      "pt": "Género",
-      "en": "Gender"
+    "appearance": {
+      "pt": "Aparência",
+      "en": "Appearance"
     },
-    "species": {
-      "pt": "Espécie",
-      "en": "Species"
+    "talent": {
+      "pt": "Talento",
+      "en": "Talent"
     },
-    "class": {
-      "pt": "Classe",
-      "en": "Class"
-    },
-    "dark_gift": {
-      "pt": "Dom Sombrio",
-      "en": "Dark Gift"
-    },
-    "background": {
-      "pt": "Antecedente",
-      "en": "Background"
+    "origin": {
+      "pt": "Origem",
+      "en": "Origin"
     }
   },
   "variables": {
@@ -454,9 +446,31 @@
         "WATCHERS"
       ]
     },
+    "is_from_eberron": {
+      "type": "enum",
+      "symbols": [
+        "YES",
+        "NO"
+      ]
+    },
     "background": {
       "type": "enum",
       "symbols": [
+        "ABERRANT_HEIR",
+        "HOUSE_CANNITH_HEIR",
+        "HOUSE_DENEITH_HEIR",
+        "HOUSE_GHALLANDA_HEIR",
+        "HOUSE_JORASCO_HEIR",
+        "HOUSE_KUNDARAK_HEIR",
+        "HOUSE_LYRANDAR_HEIR",
+        "HOUSE_MEDANI_HEIR",
+        "HOUSE_ORIEN_HEIR",
+        "HOUSE_PHIARLAN_HEIR",
+        "HOUSE_SIVIS_HEIR",
+        "HOUSE_THARASHK_HEIR",
+        "HOUSE_THURANNI_HEIR",
+        "HOUSE_VADALIS_HEIR",
+        "NO_DRAGONMARK",
         "ACOLYTE",
         "ARTISAN",
         "CHARLATAN",
@@ -1259,10 +1273,80 @@
         "en": "Watchers"
       }
     },
+    "is_from_eberron": {
+      "YES": {
+        "pt": "Sim",
+        "en": "Yes"
+      },
+      "NO": {
+        "pt": "Não/Não sei",
+        "en": "No/Not sure"
+      }
+    },
     "background": {
+      "ABERRANT_HEIR": {
+        "pt": "Herdeiro Aberrante",
+        "en": "Aberrant Heir"
+      },
       "ACOLYTE": {
         "pt": "Acólito",
         "en": "Acolyte"
+      },
+      "HOUSE_CANNITH_HEIR": {
+        "pt": "Herdeiro da Casa Cannith",
+        "en": "House Cannith Heir"
+      },
+      "HOUSE_DENEITH_HEIR": {
+        "pt": "Herdeiro da Casa Deneith",
+        "en": "House Deneith Heir"
+      },
+      "HOUSE_GHALLANDA_HEIR": {
+        "pt": "Herdeiro da Casa Ghallanda",
+        "en": "House Ghallanda Heir"
+      },
+      "HOUSE_JORASCO_HEIR": {
+        "pt": "Herdeiro da Casa Jorasco",
+        "en": "House Jorasco Heir"
+      },
+      "HOUSE_KUNDARAK_HEIR": {
+        "pt": "Herdeiro da Casa Kundarak",
+        "en": "House Kundarak Heir"
+      },
+      "HOUSE_LYRANDAR_HEIR": {
+        "pt": "Herdeiro da Casa Lyrandar",
+        "en": "House Lyrandar Heir"
+      },
+      "HOUSE_MEDANI_HEIR": {
+        "pt": "Herdeiro da Casa Medani",
+        "en": "House Medani Heir"
+      },
+      "HOUSE_ORIEN_HEIR": {
+        "pt": "Herdeiro da Casa Orien",
+        "en": "House Orien Heir"
+      },
+      "HOUSE_PHIARLAN_HEIR": {
+        "pt": "Herdeiro da Casa Phiarlan",
+        "en": "House Phiarlan Heir"
+      },
+      "HOUSE_SIVIS_HEIR": {
+        "pt": "Herdeiro da Casa Sivis",
+        "en": "House Sivis Heir"
+      },
+      "HOUSE_THARASHK_HEIR": {
+        "pt": "Herdeiro da Casa Tharashk",
+        "en": "House Tharashk Heir"
+      },
+      "HOUSE_THURANNI_HEIR": {
+        "pt": "Herdeiro da Casa Thuranni",
+        "en": "House Thuranni Heir"
+      },
+      "HOUSE_VADALIS_HEIR": {
+        "pt": "Herdeiro da Casa Vadalis",
+        "en": "House Vadalis Heir"
+      },
+      "NO_DRAGONMARK": {
+        "pt": "Sem Marca Dracónica",
+        "en": "No Dragonmark"
       },
       "ARTISAN": {
         "pt": "Artesão",
@@ -4003,6 +4087,176 @@
         "en": "The Undead"
       }
     ],
+    "eberron_backgrounds": [
+      {
+        "code": "ABERRANT_HEIR",
+        "pt": "Herdeiro Aberrante",
+        "en": "Aberrant Heir",
+        "ability_increases": [
+          "STR",
+          "CON",
+          "CHA"
+        ],
+        "next": "q_dark_gift_presence"
+      },
+      {
+        "code": "HOUSE_CANNITH_HEIR",
+        "pt": "Herdeiro da Casa Cannith",
+        "en": "House Cannith Heir",
+        "ability_increases": [
+          "STR",
+          "DEX",
+          "INT"
+        ],
+        "next": "q_dark_gift_presence"
+      },
+      {
+        "code": "HOUSE_DENEITH_HEIR",
+        "pt": "Herdeiro da Casa Deneith",
+        "en": "House Deneith Heir",
+        "ability_increases": [
+          "STR",
+          "CON",
+          "WIS"
+        ],
+        "next": "q_dark_gift_presence"
+      },
+      {
+        "code": "HOUSE_GHALLANDA_HEIR",
+        "pt": "Herdeiro da Casa Ghallanda",
+        "en": "House Ghallanda Heir",
+        "ability_increases": [
+          "DEX",
+          "WIS",
+          "CHA"
+        ],
+        "next": "q_dark_gift_presence"
+      },
+      {
+        "code": "HOUSE_JORASCO_HEIR",
+        "pt": "Herdeiro da Casa Jorasco",
+        "en": "House Jorasco Heir",
+        "ability_increases": [
+          "DEX",
+          "CON",
+          "WIS"
+        ],
+        "next": "q_dark_gift_presence"
+      },
+      {
+        "code": "HOUSE_KUNDARAK_HEIR",
+        "pt": "Herdeiro da Casa Kundarak",
+        "en": "House Kundarak Heir",
+        "ability_increases": [
+          "STR",
+          "CON",
+          "INT"
+        ],
+        "next": "q_dark_gift_presence"
+      },
+      {
+        "code": "HOUSE_LYRANDAR_HEIR",
+        "pt": "Herdeiro da Casa Lyrandar",
+        "en": "House Lyrandar Heir",
+        "ability_increases": [
+          "STR",
+          "DEX",
+          "CHA"
+        ],
+        "next": "q_dark_gift_presence"
+      },
+      {
+        "code": "HOUSE_MEDANI_HEIR",
+        "pt": "Herdeiro da Casa Medani",
+        "en": "House Medani Heir",
+        "ability_increases": [
+          "DEX",
+          "INT",
+          "WIS"
+        ],
+        "next": "q_dark_gift_presence"
+      },
+      {
+        "code": "HOUSE_ORIEN_HEIR",
+        "pt": "Herdeiro da Casa Orien",
+        "en": "House Orien Heir",
+        "ability_increases": [
+          "DEX",
+          "CON",
+          "INT"
+        ],
+        "next": "q_dark_gift_presence"
+      },
+      {
+        "code": "HOUSE_PHIARLAN_HEIR",
+        "pt": "Herdeiro da Casa Phiarlan",
+        "en": "House Phiarlan Heir",
+        "ability_increases": [
+          "DEX",
+          "WIS",
+          "CHA"
+        ],
+        "next": "q_dark_gift_presence"
+      },
+      {
+        "code": "HOUSE_SIVIS_HEIR",
+        "pt": "Herdeiro da Casa Sivis",
+        "en": "House Sivis Heir",
+        "ability_increases": [
+          "INT",
+          "WIS",
+          "CHA"
+        ],
+        "next": "q_dark_gift_presence"
+      },
+      {
+        "code": "HOUSE_THARASHK_HEIR",
+        "pt": "Herdeiro da Casa Tharashk",
+        "en": "House Tharashk Heir",
+        "ability_increases": [
+          "CON",
+          "INT",
+          "WIS"
+        ],
+        "next": "q_dark_gift_presence"
+      },
+      {
+        "code": "HOUSE_THURANNI_HEIR",
+        "pt": "Herdeiro da Casa Thuranni",
+        "en": "House Thuranni Heir",
+        "ability_increases": [
+          "DEX",
+          "INT",
+          "CHA"
+        ],
+        "next": "q_dark_gift_presence"
+      },
+      {
+        "code": "HOUSE_VADALIS_HEIR",
+        "pt": "Herdeiro da Casa Vadalis",
+        "en": "House Vadalis Heir",
+        "ability_increases": [
+          "CON",
+          "WIS",
+          "CHA"
+        ],
+        "next": "q_dark_gift_presence"
+      },
+      {
+        "code": "NO_DRAGONMARK",
+        "pt": "Sem Marca Dracónica",
+        "en": "No Dragonmark",
+        "ability_increases": [
+          "STR",
+          "DEX",
+          "CON",
+          "INT",
+          "WIS",
+          "CHA"
+        ],
+        "next": "q_background_general"
+      }
+    ],
     "backgrounds": [
       {
         "code": "ACOLYTE",
@@ -4384,6 +4638,7 @@
     "primary_roles": [],
     "secondary_roles": [],
     "dark_gift": null,
+    "is_from_eberron": null,
     "preferred_physical_ability": null,
     "class_ability_combo": null,
     "class_armor": null,
