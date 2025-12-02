@@ -32,6 +32,10 @@ const UI_TEXT = {
     pt: 'Começar questionário',
     en: 'Start quiz',
   },
+  backgroundPrompt: {
+    pt: 'Queres escolher um antecedente?',
+    en: 'Do you want to choose a background?',
+  },
   navPrevious: {
     pt: 'Anterior',
     en: 'Previous',
@@ -532,6 +536,7 @@ class QuizApp {
       variables: this.cloneValue(quizData.metadata?.initial_state ?? {}),
       currentNodeId: null,
       history: [],
+      backgroundDeclined: false,
     };
 
     this.dom = {
@@ -685,7 +690,11 @@ class QuizApp {
         selection.mode === 'multiple'
           ? Array.from(this.selectedValues ?? [])
           : this.selectedValue;
-      this.showQuestion(this.state.currentNodeId, { preselect, fromHistory: true });
+      this.showQuestion(this.state.currentNodeId, {
+        preselect,
+        fromHistory: true,
+        skipBackgroundPrompt: true,
+      });
       return;
     }
 
@@ -815,9 +824,44 @@ class QuizApp {
     this.state.currentNodeId = null;
     this.state.history = [];
     this.state.variables = this.cloneValue(this.quizData.metadata?.initial_state ?? {});
+    this.state.backgroundDeclined = false;
     this.lastVariantSignature = null;
     this.syncClassVariantAttributes();
     this.showQuestion(this.quizData.root);
+  }
+
+  maybePromptForBackground(resolution, { skipBackgroundPrompt = false } = {}) {
+    if (!resolution || skipBackgroundPrompt) {
+      return { resolution };
+    }
+
+    const { node } = resolution;
+    if (!node || node.section !== 'background') {
+      return { resolution };
+    }
+
+    const wantsBackground = this.confirmBackgroundChoice();
+
+    if (wantsBackground) {
+      this.state.backgroundDeclined = false;
+      return { resolution };
+    }
+
+    this.state.backgroundDeclined = true;
+    const nextNodeId = node.next ?? null;
+    this.showQuestion(nextNodeId, { preselect: null });
+    return { handled: true };
+  }
+
+  confirmBackgroundChoice() {
+    if (typeof window === 'undefined' || typeof window.confirm !== 'function') {
+      return true;
+    }
+    try {
+      return window.confirm(this.getText('backgroundPrompt'));
+    } catch {
+      return true;
+    }
   }
 
   restart() {
@@ -919,8 +963,13 @@ class QuizApp {
     this.showQuestion(nextNodeId);
   }
 
-  showQuestion(startNodeId, { preselect = null, fromHistory = false } = {}) {
+  showQuestion(startNodeId, { preselect = null, fromHistory = false, skipBackgroundPrompt = false } = {}) {
     let resolution = this.resolveNextQuestion(startNodeId);
+    const backgroundOutcome = this.maybePromptForBackground(resolution, { skipBackgroundPrompt });
+    if (backgroundOutcome.handled) {
+      return;
+    }
+    resolution = backgroundOutcome.resolution;
     if (!resolution) {
       resolution = this.resolveDarkGiftFallback();
       if (!resolution) {
@@ -1051,7 +1100,7 @@ class QuizApp {
     const backgroundNotChosen = !this.hasValue(variables.background);
     const abilityComboDefined = this.hasValue(variables.class_ability_combo);
 
-    if (this.backgroundQuestionId && backgroundNotChosen && abilityComboDefined) {
+    if (this.backgroundQuestionId && backgroundNotChosen && abilityComboDefined && !this.state.backgroundDeclined) {
       const resolution = this.resolveNextQuestion(this.backgroundQuestionId);
       if (resolution) {
         return resolution;
