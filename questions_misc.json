@@ -5,7 +5,7 @@
       "section": "background",
       "question": "A tua personagem é de Eberron?",
       "when": {
-        "var": "class_ability_combo",
+        "var": "_class_ability_combo_codes",
         "op": "is_set"
       },
       "options": [
