@@ -216,14 +216,13 @@ const VARIABLE_LABELS = {
   class_handheld_gear: { pt: 'Equipamento empunhado', en: 'Handheld gear' },
   fighting_style_choice: { pt: 'Estilo de Luta', en: 'Fighting Style' },
   background: { pt: 'Antecedente', en: 'Background' },
+  is_from_eberron: { pt: 'É de Eberron?', en: 'From Eberron?' },
 };
 
 const SECTION_FALLBACK = {
-  gender: { pt: 'Género', en: 'Gender' },
-  species: { pt: 'Espécie', en: 'Species' },
-  class: { pt: 'Classe', en: 'Class' },
-  dark_gift: { pt: 'Dark Gift', en: 'Dark Gift' },
-  background: { pt: 'Antecedente', en: 'Background' },
+  appearance: { pt: 'Aparência', en: 'Appearance' },
+  talent: { pt: 'Talento', en: 'Talent' },
+  origin: { pt: 'Origem', en: 'Origin' },
 };
 
 const withTranslations = (pt, en) => ({ pt, en });
@@ -1105,6 +1104,10 @@ class QuizApp {
         value,
       };
 
+      if (source.next_field && entry[source.next_field]) {
+        option.next = entry[source.next_field];
+      }
+
       if (includeDatasetEntry) {
         option.datasetEntry = entry;
       }
@@ -1688,7 +1691,7 @@ class QuizApp {
       }
     });
 
-    const classSection = ensureSection('class');
+    const classSection = ensureSection('talent');
     ['class_ability_combo', 'class_armor', 'class_handheld_gear'].forEach((variable) => {
       classSection.add(variable);
     });
@@ -1699,7 +1702,7 @@ class QuizApp {
   findDarkGiftQuestionId() {
     const entries = Object.entries(this.quizData.nodes ?? {});
     for (const [nodeId, node] of entries) {
-      if (!node || node.type !== 'question' || node.section !== 'dark_gift') {
+      if (!node || node.type !== 'question') {
         continue;
       }
 
@@ -1822,6 +1825,9 @@ class QuizApp {
     }
 
     const abilityValues = this.state.variables?.[rule.variable];
+    if ((!Array.isArray(abilityValues) || !abilityValues.length) && rule.optional_when_missing) {
+      return options;
+    }
     if (!Array.isArray(abilityValues) || !abilityValues.length) {
       return [];
     }

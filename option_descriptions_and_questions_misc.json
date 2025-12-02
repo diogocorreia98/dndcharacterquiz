@@ -170,6 +170,66 @@
     }
   },
   "background_summaries": {
+    "ABERRANT_HEIR": {
+      "pt": "Uma marca aberrante desperta em ti, combinando poder bruto e presença intensa.",
+      "en": "An aberrant dragonmark stirs within you, blending raw power with bold presence."
+    },
+    "HOUSE_CANNITH_HEIR": {
+      "pt": "Crês com engenho e força entre artífices da Casa Cannith.",
+      "en": "Raised among House Cannith artisans, pairing brawn with invention."
+    },
+    "HOUSE_DENEITH_HEIR": {
+      "pt": "Formado em guarda e disciplina marcial ao serviço da Casa Deneith.",
+      "en": "Trained in guard work and martial discipline for House Deneith."
+    },
+    "HOUSE_GHALLANDA_HEIR": {
+      "pt": "A hospitalidade da Casa Ghallanda deu-te tato social e reflexos rápidos.",
+      "en": "House Ghallanda hospitality honed your charm and quick reflexes."
+    },
+    "HOUSE_JORASCO_HEIR": {
+      "pt": "Aprendeste cura e resistência ao lado dos curandeiros da Casa Jorasco.",
+      "en": "You learned healing and resilience beside House Jorasco medics."
+    },
+    "HOUSE_KUNDARAK_HEIR": {
+      "pt": "Guardas e fechaduras de Kundarak ensinaram-te força e mente analítica.",
+      "en": "Kundarak vaults taught you fortitude and an analytical mind."
+    },
+    "HOUSE_LYRANDAR_HEIR": {
+      "pt": "Os navios e tempestades de Lyrandar deram-te vigor e carisma aventureiro.",
+      "en": "Lyrandar airships and storms bred vigor and daring charisma."
+    },
+    "HOUSE_MEDANI_HEIR": {
+      "pt": "Intuição e atenção aos detalhes definem os sentinelas da Casa Medani.",
+      "en": "House Medani sentinels prize keen insight and careful detail."
+    },
+    "HOUSE_ORIEN_HEIR": {
+      "pt": "Mensagens rápidas exigem destreza, resistência e mente ágil em Orien.",
+      "en": "Swift couriers of House Orien rely on speed, grit, and a quick mind."
+    },
+    "HOUSE_PHIARLAN_HEIR": {
+      "pt": "Artes cênicas de Phiarlan misturam graça, astúcia e charme discreto.",
+      "en": "Phiarlan performers blend grace, cunning, and subtle charm."
+    },
+    "HOUSE_SIVIS_HEIR": {
+      "pt": "Scribes de Sivis cultivam mente afiada, diplomacia e sigilo.",
+      "en": "Sivis scribes cultivate sharp minds, diplomacy, and secrecy."
+    },
+    "HOUSE_THARASHK_HEIR": {
+      "pt": "Caçadores de Tharashk combinam resistência, intuição e estudo.",
+      "en": "Tharashk hunters mix endurance, intuition, and study."
+    },
+    "HOUSE_THURANNI_HEIR": {
+      "pt": "Intrigas de Thuranni exigem agilidade, inteligência e charme frio.",
+      "en": "Thuranni intrigues demand agility, intellect, and cool charm."
+    },
+    "HOUSE_VADALIS_HEIR": {
+      "pt": "Cuidar de bestas Vadalis deu-te robustez, sabedoria e empatia.",
+      "en": "Tending Vadalis beasts granted you toughness, wisdom, and empathy."
+    },
+    "NO_DRAGONMARK": {
+      "pt": "Sem marca dracónica, deixas o destino aberto para outros caminhos.",
+      "en": "Without a dragonmark, your destiny stays open to other paths."
+    },
     "ACOLYTE": {
       "pt": "Cresceu ao serviço de um templo, habituado a rituais e deveres religiosos.",
       "en": "Raised in service to a temple, versed in rituals and sacred duties."

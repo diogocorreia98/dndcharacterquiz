@@ -3,7 +3,7 @@
   "nodes": {
     "q_gender": {
       "type": "question",
-      "section": "gender",
+      "section": "appearance",
       "question": "Como se apresenta a tua personagem em termos de género?",
       "options": [
         {
@@ -43,7 +43,7 @@
     },
     "q_height_preference": {
       "type": "question",
-      "section": "species",
+      "section": "appearance",
       "question": "Preferes ter mais de 120 cm ou menos?",
       "options": [
         {
@@ -72,7 +72,7 @@
     },
     "q_height": {
       "type": "question",
-      "section": "species",
+      "section": "appearance",
       "question": "Em que faixa de alturas se encaixa a tua personagem?",
       "options": [
         {
@@ -143,7 +143,7 @@
     },
     "q_species_exoticness": {
       "type": "question",
-      "section": "species",
+      "section": "appearance",
       "question": "Quão exótica pretendes que a espécie da tua personagem seja?",
       "prune_zero_viable_options": {
         "dataset": "species",
@@ -214,7 +214,7 @@
     },
     "q_species_animal_likeness": {
       "type": "question",
-      "section": "species",
+      "section": "appearance",
       "question": "A tua personagem tem traços de animal?",
       "prune_zero_viable_options": {
         "dataset": "species",
@@ -261,7 +261,7 @@
     },
     "q_species_pick": {
       "type": "question",
-      "section": "species",
+      "section": "appearance",
       "question": "Que espécie preferes jogar?",
       "options_source": {
         "type": "inline",
@@ -372,7 +372,7 @@
     },
     "q_dragonborn_ancestry_type": {
       "type": "question",
-      "section": "species",
+      "section": "appearance",
       "question": "Que tipo de ancestralidade dracónica define a tua personagem?",
       "when": {
         "var": "species",
@@ -407,7 +407,7 @@
     },
     "q_goliath_power_type": {
       "type": "question",
-      "section": "species",
+      "section": "appearance",
       "question": "Que tipo de poder de ancestralidade gigante melhor descreve a tua personagem?",
       "when": {
         "var": "species",
@@ -453,7 +453,7 @@
     },
     "q_subspecies_pick": {
       "type": "question",
-      "section": "species",
+      "section": "appearance",
       "question": "Que subespécie prefere a tua personagem?",
       "when": {
         "var": "species",
@@ -593,7 +593,7 @@
     },
     "q_subsubspecies_pick": {
       "type": "question",
-      "section": "species",
+      "section": "appearance",
       "question": "Qual é a variação específica da subespécie?",
       "options_source": {
         "type": "inline",
