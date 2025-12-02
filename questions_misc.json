@@ -3,36 +3,35 @@
     "q_background_preference": {
       "type": "question",
       "section": "background",
-      "question": "Que tipo de vida levou a tua personagem?",
+      "question": "A tua personagem está feliz?",
       "when": {
         "var": "class_ability_combo",
         "op": "is_set"
       },
-      "options_source": {
-        "type": "inline",
-        "dataset": "backgrounds",
-        "label_field": "pt",
-        "value_field": "code"
-      },
-      "ability_overlap_filter": {
-        "variable": "_class_ability_combo_codes",
-        "entry_field": "ability_increases",
-        "min_overlap": 2,
-        "face_role_variable": "secondary_roles",
-        "face_requires_cha": true
-      },
-      "on_select": [
+      "options": [
         {
-          "var": "background",
-          "op": "set",
-          "value_from_option": true
+          "value": "YES",
+          "set": [
+            {
+              "var": "background",
+              "op": "set",
+              "value": "YES"
+            }
+          ],
+          "next": "q_dark_gift_presence"
+        },
+        {
+          "value": "NO",
+          "set": [
+            {
+              "var": "background",
+              "op": "set",
+              "value": "NO"
+            }
+          ],
+          "next": "q_dark_gift_presence"
         }
-      ],
-      "skip_if_no_options": {
-        "next": "q_dark_gift_presence"
-      },
-      "auto_select_if_single_option": true,
-      "next": "q_dark_gift_presence"
+      ]
     },
     "q_dark_gift_presence": {
       "type": "question",

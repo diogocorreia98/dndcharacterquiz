@@ -288,7 +288,7 @@ const GOLIATH_POWER_LABELS = {
 
 const BACKGROUND_DESCRIPTION_LABELS = {
   abilities: withTranslations('Atributos em destaque', 'Highlighted abilities'),
-  path: withTranslations('estilo de vida e passado da personagem', "your character's past and lifestyle"),
+  path: withTranslations('Felicidade', 'Happiness'),
 };
 
 const SUBCLASS_DESCRIPTION_LABELS = {
@@ -448,7 +448,7 @@ const buildBackgroundDescription = function (option) {
     if (!label) {
       return '';
     }
-    return `${label}: ${BACKGROUND_DESCRIPTION_LABELS.path[lang]}`;
+    return `${BACKGROUND_DESCRIPTION_LABELS.path[lang]}: ${label}`;
   });
 };
 
