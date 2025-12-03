@@ -337,6 +337,8 @@ const DESCRIPTION_GROUP_MAP = {
   q_species_pick: 'species_descriptions',
   q_subspecies_pick: 'subspecies_descriptions',
   q_subsubspecies_pick: 'subsubspecies_descriptions',
+  q_eberron_backgrounds: 'background_summaries',
+  q_background_general: 'background_summaries',
 };
 
 const buildSpeciesDescription = function (option) {
