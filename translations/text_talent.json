@@ -111,6 +111,44 @@
     "q_class_adjustment_paladin": {
       "pt": "Que Estilo de Luta preferes aprender?",
       "en": "Which Fighting Style would you like to learn?"
+    },
+    "q_physical_ability_preference": {
+      "pt": "Preferes destacar a Destreza (DEX) ou a Força (STR) da tua personagem?",
+      "en": "Would you rather highlight your character's Dexterity (DEX) or Strength (STR)?"
+    }
+  },
+  "class_adjustments": {
+    "CLERIC_PROTECTOR": {
+      "pt": "Armadura pesada e foco em proteção divina constante.",
+      "en": "Heavy armor focus with steady defensive miracles."
+    },
+    "CLERIC_THAUMATURGE": {
+      "pt": "Favorece milagres ofensivos e canalizações arcanas.",
+      "en": "Leans into offensive miracles and arcane channeling."
+    },
+    "DRUID_WARDEN": {
+      "pt": "Mantém formas selvagens robustas e magia defensiva.",
+      "en": "Emphasizes sturdy Wild Shape forms and defensive magic."
+    },
+    "DRUID_MAGICIAN": {
+      "pt": "Expande a lista de feitiços e truques utilitários.",
+      "en": "Expands the spell list with extra utility tricks."
+    },
+    "WARLOCK_PACT_OF_THE_TOME": {
+      "pt": "Grimório repleto de truques versáteis e rituais.",
+      "en": "A grimoire packed with versatile tricks and rituals."
+    },
+    "WARLOCK_PACT_OF_THE_CHAIN": {
+      "pt": "Familiar poderoso que partilha sentidos e ações.",
+      "en": "Potent familiar that shares senses and actions."
+    },
+    "WARLOCK_PACT_OF_THE_BLADE": {
+      "pt": "Arma pactuada sempre à mão para combate híbrido.",
+      "en": "Bound weapon always ready for hybrid combat."
+    },
+    "WARLOCK_NONE": {
+      "pt": "Mantém o conjunto padrão de invocações sem ajuste extra.",
+      "en": "Keeps the default invocation suite without extra tweaks."
     }
   },
   "class_summaries": {
@@ -181,38 +219,126 @@
       "en": "Specialized option tailored to specific stories or tables."
     }
   },
-  "class_adjustments": {
-    "CLERIC_PROTECTOR": {
-      "pt": "Armadura pesada e foco em proteção divina constante.",
-      "en": "Heavy armor focus with steady defensive miracles."
+  "fighting_style_summaries": {
+    "CLASSIC": {
+      "pt": "Acede aos estilos tradicionais como Defesa, Arquearia ou Duelo.",
+      "en": "Access classic styles such as Defense, Archery, or Dueling."
     },
-    "CLERIC_THAUMATURGE": {
-      "pt": "Favorece milagres ofensivos e canalizações arcanas.",
-      "en": "Leans into offensive miracles and arcane channeling."
+    "BLESSED_WARRIOR": {
+      "pt": "Aprende truques divinos para complementar ataques corpo a corpo.",
+      "en": "Learn divine cantrips to complement melee strikes."
     },
-    "DRUID_WARDEN": {
-      "pt": "Mantém formas selvagens robustas e magia defensiva.",
-      "en": "Emphasizes sturdy Wild Shape forms and defensive magic."
+    "DRUIDIC_WARRIOR": {
+      "pt": "Mistura magia druidica com combate à distância ou corpo a corpo.",
+      "en": "Blend druidic cantrips with ranged or melee combat."
     },
-    "DRUID_MAGICIAN": {
-      "pt": "Expande a lista de feitiços e truques utilitários.",
-      "en": "Expands the spell list with extra utility tricks."
+    "THROWN": {
+      "pt": "Especializa-se em armas de arremesso, conciliando longo alcançe com força bruta.",
+      "en": "Specializes in thrown weapons to merge range with raw strength."
     },
-    "WARLOCK_PACT_OF_THE_TOME": {
-      "pt": "Grimório repleto de truques versáteis e rituais.",
-      "en": "A grimoire packed with versatile tricks and rituals."
+    "UNARMED": {
+      "pt": "Transforma o corpo numa arma, útil mesmo sem equipamento.",
+      "en": "Turns your body into a weapon, useful even when disarmed."
+    }
+  },
+  "physical_abilities": {
+    "DEX": {
+      "pt": "Favorece esquiva, furtividade e ataques precisos com armas leves.",
+      "en": "Favors dodging, stealth, and precise attacks with light weapons."
     },
-    "WARLOCK_PACT_OF_THE_CHAIN": {
-      "pt": "Familiar poderoso que partilha sentidos e ações.",
-      "en": "Potent familiar that shares senses and actions."
+    "STR": {
+      "pt": "Prioriza golpes e armadura pesados e capacidade de carga.",
+      "en": "Prioritizes heavy hits, grapples, and carrying capacity."
+    }
+  },
+  "role_healer_preference": {
+    "HEALER": {
+      "pt": "Quero priorizar curas diretas durante o jogo.",
+      "en": "I want to prioritize direct healing during play."
     },
-    "WARLOCK_PACT_OF_THE_BLADE": {
-      "pt": "Arma pactuada sempre à mão para combate híbrido.",
-      "en": "Bound weapon always ready for hybrid combat."
+    "SUPPORT": {
+      "pt": "Prefiro inspirar ou proteger em vez de curar constantemente.",
+      "en": "I prefer to inspire or protect instead of constant healing."
     },
-    "WARLOCK_NONE": {
-      "pt": "Mantém o conjunto padrão de invocações sem ajuste extra.",
-      "en": "Keeps the default invocation suite without extra tweaks."
+    "BOTH": {
+      "pt": "Posso equilibrar curas e suporte conforme necessário.",
+      "en": "I can balance healing and support as needed."
+    }
+  },
+  "role_primary": {
+    "DEFENDER": {
+      "pt": "Forma a linha da frente e absorve os golpes inimigos.",
+      "en": "Holds the front line and soaks enemy hits."
+    },
+    "HEALER_SUPPORT": {
+      "pt": "Mantém aliados vivos com curas e buffs rápidos.",
+      "en": "Keeps allies alive with quick healing and buffs."
+    },
+    "CONTROLLER": {
+      "pt": "Manipula o campo de batalha com efeitos e condições.",
+      "en": "Manipulates the battlefield with effects and conditions."
+    },
+    "STRIKER": {
+      "pt": "Causa grandes quantidades de dano a alvos prioritários.",
+      "en": "Deals high damage to priority targets."
+    },
+    "SCOUT": {
+      "pt": "Explora, infiltra-se e alerta o grupo para perigos.",
+      "en": "Explores, infiltrates, and warns the party of danger."
+    }
+  },
+  "role_secondary": {
+    "BLASTER": {
+      "pt": "Especialista em feitiços ou ataques de área devastadores.",
+      "en": "Specialist in devastating area spells or attacks."
+    },
+    "FACE": {
+      "pt": "Brilha em testes sociais e negociações delicadas.",
+      "en": "Excels at social tests and delicate negotiations."
+    },
+    "SCHOLAR": {
+      "pt": "Resolve desafios com conhecimentos e perícias intelectuais.",
+      "en": "Solves challenges with lore and investigative skills."
+    },
+    "UTILITY_CASTER": {
+      "pt": "Disponibiliza magia de suporte, truques e versatilidade fora de combate.",
+      "en": "Provides utility magic, rituals, and out-of-combat versatility."
+    }
+  },
+  "warlock_familiar_dark": {
+    "IMP": {
+      "pt": "Espião invisível resistente a fogo.",
+      "en": "Invisible spy resistant to fire."
+    },
+    "QUASIT": {
+      "pt": "Demónio travesso que infunde medo e veneno.",
+      "en": "Mischievous demon that inflicts fear and poison."
+    },
+    "SKELETON": {
+      "pt": "Serviçal morto-vivo fácil de remendar.",
+      "en": "Undead minion that is easy to patch up."
+    },
+    "SLAAD_TADPOLE": {
+      "pt": "Aberração caótica com mordida corrosiva.",
+      "en": "Chaotic aberration with a caustic bite."
+    }
+  },
+  "warlock_familiar_mystic": {
+    "PSEUDODRAGON": {
+      "pt": "Companheiro leal com sentidos aguçados e veneno leve.",
+      "en": "Loyal companion with keen senses and mild poison."
+    },
+    "SPHINX_OF_WONDER": {
+      "pt": "Mascote enigmática cheia de charadas e clarividência.",
+      "en": "Enigmatic mascot brimming with riddles and insight."
+    },
+    "SPRITE": {
+      "pt": "Fada minúscula que detecta alinhamento e emoções.",
+      "en": "Tiny fey that reads alignment and emotions."
+    },
+    "VENOMOUS_SNAKE": {
+      "pt": "Ataques furtivos com veneno debilitante.",
+      "en": "Stealthy strikes with debilitating venom."
     }
   }
 }
