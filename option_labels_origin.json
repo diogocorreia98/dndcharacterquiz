@@ -1,0 +1,46 @@
+{
+  "q_dark_gift_presence": {
+    "YES": {
+      "pt": "Sim",
+      "en": "Yes"
+    },
+    "NO": {
+      "pt": "Não",
+      "en": "No"
+    }
+  },
+  "q_dark_gift_type": {
+    "ECHOING_SOUL": {
+      "pt": "Alma Ecoante",
+      "en": "Echoing Soul"
+    },
+    "GATHERED_WHISPERS": {
+      "pt": "Sussurros Recolhidos",
+      "en": "Gathered Whispers"
+    },
+    "LIVING_SHADOW": {
+      "pt": "Sombra Viva",
+      "en": "Living Shadow"
+    },
+    "MIST_WALKER": {
+      "pt": "Caminhante da Névoa",
+      "en": "Mist Walker"
+    },
+    "SECOND_SKIN": {
+      "pt": "Segunda Pele",
+      "en": "Second Skin"
+    },
+    "SYMBIOTIC_BEING": {
+      "pt": "Ser Simbiótico",
+      "en": "Symbiotic Being"
+    },
+    "TOUCH_OF_DEATH": {
+      "pt": "Toque da Morte",
+      "en": "Touch of Death"
+    },
+    "WATCHERS": {
+      "pt": "Observadores",
+      "en": "Watchers"
+    }
+  }
+}

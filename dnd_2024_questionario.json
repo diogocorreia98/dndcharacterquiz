@@ -11,11 +11,12 @@
   "class_variant_file": "class_variants.json",
   "option_label_files": {
     "appearance": "option_labels_appearance.json",
-    "profession": "option_labels_profession.json"
+    "talent": "option_labels_talent.json",
+    "origin": "option_labels_origin.json"
   },
   "option_description_files": [
-    "option_descriptions_and_questions_classes.json",
-    "option_descriptions_and_questions_species.json",
-    "option_descriptions_and_questions_misc.json"
+    "translations/text_appearance.json",
+    "translations/text_talent.json",
+    "translations/text_origin.json"
   ]
 }
