@@ -123,11 +123,11 @@
       "en": "Quick harengon with rabbit reflexes, ever ready for impulsive, chaotic adventures."
     },
     "S021": {
-      "pt": "um duende de estatura elevada e feições afiadas, com pele avermelhada e nariz brilhante, resistente a encantamentos e propenso a favorecer os aliados e obter sorte em grupos grandes.",
+      "pt": "um humanoide com orelhas e feições afiadas, com pele avermelhada e nariz brilhante, resistente a encantamentos e propenso a favorecer os aliados e obter sorte em grupos grandes.",
       "en": "Tactical, disciplined hobgoblins who channel martial magic inspired by the fey courts."
     },
     "S022": {
-      "pt": "um humano, heróico, habilidoso e versátil.",
+      "pt": "um humano, heróico, talentoso e versátil.",
       "en": "Versatile humans whose adaptability lets them fill any role and pick up talents quickly."
     },
     "S023": {
@@ -183,15 +183,16 @@
       "en": "Ever-changing verdan touched by fey chaos who grow, mutate, and face life with humor."
     },
     "S036": {
-      "pt": "Yuan-ti calculistas de sangue serpentino que manipulam venenos e magia hipnótica com precisão fria.",
+      "pt": "um humano com língua, olhos e presas de serpente, capaz de ver no escuro, evitar magias, resistir e cuspir veneno, encantar serpentes e, até certa medida, pessoas 
+.",
       "en": "Coldly calculating yuan-ti with serpentine blood who wield venom and hypnotic magic precisely."
     },
     "S037": {
-      "pt": "Dhampirs atormentados entre vida e morte, famintos por energia vital e dotados de agilidade sobrenatural.",
+      "pt": "um misto entre humano e vampiro, habilidoso, veloz, sem necessidade de ar para respirar ou luz para ver, capaz de escalar paredes ou de morder inimigos para absorver a sua vitalidade.",
       "en": "Dhampirs caught between life and death, hungry for vitality yet gifted with eerie agility."
     },
     "S038": {
-      "pt": "Sanguebruxas descendem de pactos feéricos ou hag, usando magia intuitiva e traços grotescos.",
+      "pt": "um humanoide com orelhas bifurcadas, pele acinzentada, cabelo sempre comprido e uma coroa óssea semelhante a chifres, habilidoso.",
       "en": "Hexbloods born from hags or fey bargains, wielding intuitive magic and eerie features."
     },
     "S039": {
