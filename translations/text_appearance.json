@@ -43,7 +43,7 @@
   },
   "species_descriptions": {
     "S001": {
-      "pt": "uma ave de rapina humanoide, com asas possantes, garras afiadas e afinidade com o vento.",
+      "pt": "uma ave de rapina humanoide, com asas possantes, garras afiadas e capacidade de repelir inimigos com o vento.",
       "en": "Winged sky sentinels whose talons and keen senses excel at scouting and hit-and-run strikes."
     },
     "S002": {
@@ -55,7 +55,7 @@
       "en": "Massive goblinoids who lunge from the dark, blending stealth with startling brute force."
     },
     "S004": {
-      "pt": "um torso humano em corpo de cavalo, veloz, feroz, de grande porte e cascos perigosos ",
+      "pt": "um humano com um corpo de cavalo no lugar das pernas, veloz, feroz, de grande porte e cascos perigosos ",
       "en": "Half horse and half human, they gallop with desert speed while carrying deep ancestral lore."
     },
     "S005": {
@@ -63,7 +63,7 @@
       "en": "A mutable changeling who reshapes their visage at will, perfect for infiltrators and masters of disguise."
     },
     "S006": {
-      "pt": "uma espécie nunca antes documentada.",
+      "pt": "uma espécie nunca antes documentada, com visão noturna ou outro talento, altamente especializada.",
       "en": "A custom lineage built to taste, letting you define traits and talents that match your story."
     },
     "S007": {
@@ -199,15 +199,15 @@
       "en": "Reborn come back from death with patchwork bodies and fractured memories driving mysterious purpose."
     },
     "S040": {
-      "pt": "um humano de feições simétricas e angulares com olhos brilhantes, recétaculo de um espírito do plano dos sonhos que lhe confere conhecimento, telepatia limitada e resistência a encantamentos, ataques psíquicos e invasões de sonhos.",
+      "pt": "um humano de feições simétricas e angulares com olhos brilhantes, recétaculo de um espírito do plano dos sonhos que lhe confere conhecimento, telepatia limitada e resistência a certos tipos de magia, ataques psíquicos e invasões de sonhos.",
       "en": "Kalashtar bond psionic minds with quori spirits, channeling calm focus and potent mental gifts."
     },
     "S041": {
-      "pt": "Khoravar, meio-elfos de Aerenal, combinam versatilidade humana com graça élfica e sensibilidade feérica.",
+      "pt": "um humano de orelhas pontiagudas e feições esbeltas, com visão noturna, resiste e distribui encantos, não sai do combate com facilidade, e conhece um talento e truque mágico que pode trocar diariamente.",
       "en": "Khoravar half-elves blend human adaptability with elven grace and a subtle touch of fey insight."
     },
     "S042": {
-      "pt": "Warforged são construtos sencientes, moldados para a guerra mas ansiosos por encontrar propósito próprio.",
+      "pt": "um autómato humanoide feito de metal, madeira e raízes e animado por magia, sem necessidade de comer, beber, respirar ou dormir como as pessoas, talentoso e hábil, capaz de absorver e reforçar a tua armadura e resistir a veneno.",
       "en": "Warforged are sentient constructs forged for battle who seek personal purpose beyond the forge."
     }
   },
