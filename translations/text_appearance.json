@@ -47,19 +47,19 @@
       "en": "Winged sky sentinels whose talons and keen senses excel at scouting and hit-and-run strikes."
     },
     "S002": {
-      "pt": "um humanoide com traços angélicos como uma auréola, olhos brilhantes, pele cor da prata cobre ou opal ou sardas metálicas, que irradia luz curativa, vê no escuro, resiste a ataques das trevas e da luz e consegue brevemente voar, queimar ou aterrorizar.",
+      "pt": "um humanoide com traços angélicos como uma auréola, olhos brilhantes, ou uma cor de pele metálica e reluzente, capazes de iluminar, curar, vê no escuro, resistir a ataques das trevas e da luz e, por rbeves momentos, voar, queimar ou aterrorizar.",
       "en": "Celestial-blooded heirs who shine with radiant healing and inspire allies with their presence."
     },
     "S003": {
-      "pt": "um gigante peludo com presas, sobrancelhas compridas, e orelhas muito afiadas, membros compridos que esticam ligeiramente, visão noturna, resistente a encantos e pronto a esconder-se e saltar ao ataque dos cantos mais sombrios e diminutos.",
+      "pt": "um humanoide grande e peludo com presas, sobrancelhas compridas, e orelhas muito afiadas, membros compridos que esticam ligeiramente, visão noturna, resistente a encantos e pronto a esconder-se e saltar ao ataque dos cantos mais sombrios e diminutos.",
       "en": "Massive goblinoids who lunge from the dark, blending stealth with startling brute force."
     },
     "S004": {
-      "pt": "um humano com um corpo de cavalo em lugar das pernas, veloz, feroz, de grande porte e cascos perigosos, habituado ao meio selvagem e imune a magias específicas. ",
+      "pt": "um humano com um corpo de cavalo em lugar das pernas, veloz, feroz, de grande porte e cascos perigosos, habituado ao meio selvagem e imune a certos encantamentos. ",
       "en": "Half horse and half human, they gallop with desert speed while carrying deep ancestral lore."
     },
     "S005": {
-      "pt": "um humanoide pálido de orelhas pontiagudas mas de feições indistintas, capaz de (e propenso a) mudar de aparência e se fazer passar por outras pessoas, imune a magias específicas.",
+      "pt": "um humanoide pálido de orelhas pontiagudas mas de feições indistintas, capaz de (e propenso a) mudar de aparência e se fazer passar por outras pessoas, imune a certos encantamentos.",
       "en": "A mutable changeling who reshapes their visage at will, perfect for infiltrators and masters of disguise."
     },
     "S006": {
@@ -71,7 +71,7 @@
       "en": "Proud dragonborn who wield elemental breath and the storied honor of legendary dragons."
     },
     "S008": {
-      "pt": "um humano entroncado, baixo e extremamente resiliente, frequentemente barbudo, capaz de extensa visão no escuro, resistir a veneno e até de sentir pelas pedras.",
+      "pt": "um humano entroncado, baixo e extremamente resiliente, frequentemente barbudo, capaz de extensa visão no escuro, resistir a veneno e até de sentir o que caminha pelas pedras.",
       "en": "Stout dwarves who excel at stonecraft, runic magic, and unyielding martial discipline."
     },
     "S009": {
@@ -79,11 +79,11 @@
       "en": "Graceful elves tied to fey magic, blending keen senses with millennia of martial mastery."
     },
     "S010": {
-      "pt": "um humano minúsculo de asas insectoides, com afinidade com a natureza e capaz de voar e aumentar ou diminuir criaturas e objetos, imune a magias específicas.",
+      "pt": "um humano minúsculo de asas insectoides, com afinidade com a natureza e capaz de voar e aumentar ou diminuir criaturas e objetos, imune a certos encantamentos.",
       "en": "Tiny, clever fairies who flit on iridescent wings and toss out playful enchantments."
     },
     "S011": {
-      "pt": "um gigante peludo de membros grossos, nariz e orelhas bovinas, habituado à floresta, capaz de detetar magia, desaparecer e mudar a sua aparência, assim como encantar animais e plantas.",
+      "pt": "um humanoide grande e peludo de membros grossos, nariz e orelhas bovinas, habituado à floresta, capaz de detetar magia, desaparecer e mudar a sua aparência, assim como encantar animais e plantas.",
       "en": "Gentle giant firbolgs who guard forests in silence with innate nature magic."
     },
     "S012": {
@@ -91,7 +91,7 @@
       "en": "Elemental genasi whose planar blood shapes body and temperament with inner storms."
     },
     "S013": {
-      "pt": "um brinquedo vivo sem necessidade de comida bebida ar ou sono e muito útil em combate dado a sua constituição inorgânica, imune a magias específicas.",
+      "pt": "um brinquedo vivo sem necessidade de comida bebida ar ou sono e muito útil em combate dado a sua constituição inorgânica, imune a certos encantamentos.",
       "en": "Magic-awakened geppettin, living dolls who explore mortal emotions with bright curiosity."
     },
     "S014": {
@@ -107,7 +107,7 @@
       "en": "Quick-footed goblins who mix city cunning with sudden strikes and impish humor."
     },
     "S017": {
-      "pt": "um misto entre humano e gigante capaz de grande atleticismo e de aumentar de tamanho, capaz de manifestar um poder elemental mais ofensivo, defensivo ou mobilizador.",
+      "pt": "um gigante em miniatura capaz de grande atleticismo e de aumentar de tamanho, capaz de manifestar um poder elemental mais ofensivo, defensivo ou mobilizador.",
       "en": "Mountain-born goliaths with colossal frames who constantly chase new physical trials."
     },
     "S018": {
