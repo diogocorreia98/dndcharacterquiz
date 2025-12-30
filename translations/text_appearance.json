@@ -71,11 +71,11 @@
       "en": "Proud dragonborn who wield elemental breath and the storied honor of legendary dragons."
     },
     "S008": {
-      "pt": "um humano entroncado, baixo e extremamente resiliente, frequentemente barbudo, capaz de extensa visão no escuro, resistir a veneno e até de sentir o que caminha pelas pedras.",
+      "pt": "um humano entroncado, baixo, frequentemente barbudo, capaz de extensa visão no escuro, resistir a veneno e outras habilidades conforme o habitat de origem.",
       "en": "Stout dwarves who excel at stonecraft, runic magic, and unyielding martial discipline."
     },
     "S009": {
-      "pt": "um humanoide elegante de orelhas pontiagudas e sem pelo facial ou corporal, nunca dorme, resiste encantos, vê no escuro, possui sentidos aguçados e magia nativa do seu ambiente.",
+      "pt": "um humanoide elegante de orelhas pontiagudas e sem pelo facial ou corporal, nunca dorme, resiste encantos, vê no escuro, possui sentidos aguçados e magia nativa do habitat de origem.",
       "en": "Graceful elves tied to fey magic, blending keen senses with millennia of martial mastery."
     },
     "S010": {
@@ -261,11 +261,11 @@
       "en": "Savage white dragonborn built for tundras, exhaling brutal frost."
     },
     "SS013": {
-      "pt": "um anão de tons cinzentos ou roxos com cabelos esbranquiçados, capaz de aumentar ou diminuir de tamanho  .",
+      "pt": "um anão de tons cinzentos ou roxos com cabelos esbranquiçados, capaz de resistir encantamentos e estonteamentos, aumentar ou diminuir de tamanho e até ficar invisível.",
       "en": "Grim duergar from the deep who enlarge themselves and fade into gloom."
     },
     "SS014": {
-      "pt": "Anão comum disciplinado, com tradições clanicas e resistência lendária.",
+      "pt": "um anão de cores normais com grande vitalidade e capacidade de sentir através das pedras.",
       "en": "Stalwart common dwarf with clan traditions and legendary endurance."
     },
     "SS016": {
