@@ -1,4 +1,4 @@
-{
+n{
   "question_texts": {
     "q_gender": {
       "pt": "A minha personagem apresenta-se...",
@@ -59,7 +59,7 @@
       "en": "Half horse and half human, they gallop with desert speed while carrying deep ancestral lore."
     },
     "S005": {
-      "pt": "um humanoide pálido de orelhas pontiagudas mas de feições indistintas, capaz de (e propenso a) mudar de aparência e se fazer passar por outras pessoas, imune a certos encantamentos.",
+      "pt": "um humanoide pálido de orelhas pontiagudas mas de feições indistintas, capaz de (e propenso a) mudar de aparência e se fazer passar por outras pessoas adquirindo grande poder de influência, imune a certos encantamentos.",
       "en": "A mutable changeling who reshapes their visage at will, perfect for infiltrators and masters of disguise."
     },
     "S006": {
@@ -91,7 +91,7 @@
       "en": "Elemental genasi whose planar blood shapes body and temperament with inner storms."
     },
     "S013": {
-      "pt": "um brinquedo vivo sem necessidade de comida bebida ar ou sono e muito útil em combate dado a sua constituição inorgânica, imune a certos encantamentos.",
+      "pt": "um brinquedo vivo sem necessidade de comida bebida ar ou sono e muito útil em combate dado a sua constituição inorgânica, dotado de visão noturna e imune a certos encantamentos.",
       "en": "Magic-awakened geppettin, living dolls who explore mortal emotions with bright curiosity."
     },
     "S014": {
@@ -143,7 +143,7 @@
       "en": "Pragmatic lizardfolk with reptilian instincts focused on cold survival and bonecraft."
     },
     "S026": {
-      "pt": "uma árvore viva capaz de fazer a fotossíntese, de atacar com ramos encantados, de produzir bagas curativas, enrigecer a sua casca, e prender inimigos com vinhas que produzem um efeito especial sazonal.",
+      "pt": "uma árvore viva capaz de fazer a fotossíntese, de atacar com ramos encantados, de produzir bagas curativas, enrigecer a sua casca, prender inimigos com vinhas que produzem um efeito especial sazonal e evitar certos encantamentos.",
       "en": "Seasonal mandrakes born of the fey, shifting mood and magic with the turning year."
     },
     "S027": {
@@ -159,7 +159,7 @@
       "en": "Revel-loving satyrs led by music and impulse, always ready for charms, mischief, and dance."
     },
     "S030": {
-      "pt": "um humanoide com diversos traços animais como caninos, pelo, olhos grandes e adaptados ao escuro, instintos afiados, e capaz de acentuar a sua natureza animal com mais resistência e outra melhoria dependente do seu antepassado licantropo.",
+      "pt": "um humanoide repleto de traços animais como caninos, pelo, olhos grandes e adaptados ao escuro, instintos afiados, e capaz de acentuar a sua natureza animal com mais resistência e outra melhoria dependente do seu antepassado licantropo.",
       "en": "Shifting lycanthropes who unleash inner beasts, adapting for the hunt, chase, or escape."
     },
     "S031": {
@@ -167,7 +167,7 @@
       "en": "Feline tabaxi who hoard tales, agile explorers driven by endless curiosity."
     },
     "S032": {
-      "pt": "um humanoide com chifres, cauda e outros traços provenientes de criaturas do submundo como diabos ou demónios, herdeiros de resistências e magias correspondentes ao plano dos seus antepassados e capazes de ver no escuro e manifestar pequenos assombros mágicos.",
+      "pt": "um humanoide com chifres demoníacos, cauda, olhos de cor forte e pele de cores variadas, herdeiros de resistências e magias correspondentes ao plano dos seus antepassados do submundo e capazes de ver no escuro e manifestar pequenos assombros mágicos.",
       "en": "Infernal-marked tieflings with smoldering magic and the drive to defy fate."
     },
     "S033": {
@@ -187,11 +187,11 @@
       "en": "Coldly calculating yuan-ti with serpentine blood who wield venom and hypnotic magic precisely."
     },
     "S037": {
-      "pt": "um misto entre humano e vampiro, habilidoso, veloz, sem necessidade de ar para respirar ou luz para ver, capaz de escalar paredes ou de morder inimigos para absorver a sua vitalidade.",
+      "pt": "um humano pálido com presas vampíricas, habilidoso, veloz, sem necessidade de ar para respirar ou luz para ver, capaz de escalar paredes ou de morder inimigos para absorver a sua vitalidade.",
       "en": "Dhampirs caught between life and death, hungry for vitality yet gifted with eerie agility."
     },
     "S038": {
-      "pt": "um humanoide com orelhas bifurcadas, pele acinzentada, cabelo sempre comprido e uma coroa óssea semelhante a chifres, habilidoso, capaz de ver no escuro, mudar de aparência, lançar pequenas maldições e usar um pedaço de si para comunicar ou vigiar remotamente.",
+      "pt": "um humanoide com orelhas bifurcadas, pele acinzentada, cabelo sempre longo e chifres em forma de coroa, habilidoso, capaz de ver no escuro, mudar de aparência, lançar pequenas maldições, evitar certos encantamentos, e usar um pedaço de si para comunicar ou vigiar remotamente.",
       "en": "Hexbloods born from hags or fey bargains, wielding intuitive magic and eerie features."
     },
     "S039": {
@@ -207,7 +207,7 @@
       "en": "Khoravar half-elves blend human adaptability with elven grace and a subtle touch of fey insight."
     },
     "S042": {
-      "pt": "um autómato humanoide feito de metal, madeira e raízes e animado por magia, sem necessidade de comer, beber, respirar ou dormir como as pessoas, talentoso e hábil, capaz de absorver e reforçar a tua armadura e resistir a veneno.",
+      "pt": "um autómato humanoide feito de metal, madeira e raízes e animado por magia, sem necessidade de comer, beber, respirar ou dormir como as pessoas, talentoso e hábil, capaz de absorver e reforçar a tua armadura, evitar certos encantamentos e resistir a veneno.",
       "en": "Warforged are sentient constructs forged for battle who seek personal purpose beyond the forge."
     }
   },
